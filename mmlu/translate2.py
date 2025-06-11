@@ -31,7 +31,7 @@ def is_number(s):
     except (SympifyError, TypeError):
         return False
     
-def call_deepseek_api(question, temperature=0.2):
+def call_deepseek_api(question, temperature=0):
     """
     调用 DeepSeek API 并获取答案。
     :param question: 需要发送到 API 的完整问题
@@ -52,7 +52,7 @@ def call_deepseek_api(question, temperature=0.2):
         print(f"调用 DeepSeek API 时出错: {e}")
         return "API 调用失败"
 
-def call_gpt_api(question, temperature=0.2):
+def call_gpt_api(question, temperature=0):
     """
     调用 gpt API 并获取答案。
     :param question: 需要发送到 API 的完整问题
@@ -85,20 +85,8 @@ def get_output_filename(input_name, language):
 
 def parse_translation(translation):
     # 匹配每一部分
-    question_keywords = {
-        "chinese": r"问题",
-        "spanish": r"pregunta",
-        "hindi": r"प्रश्न",
-        "arabic": r"سؤال",
-        "bengali": r"প্রশ্ন",
-        "portuguese": r"pergunta",
-        "russian": r"вопрос",
-        "japanese": r"問題",
-        "french": r"question",
-    }
-    q_kw = question_keywords.get(args.language, r"question")
     pattern = re.compile(
-        rf"{q_kw}\s*[:：]\s*(.*?)\s*\nA\s*[:：]\s*(.*?)\s*\nB\s*[:：]\s*(.*?)\s*\nC\s*[:：]\s*(.*?)\s*\nD\s*[:：]\s*(.*)",
+        r"question\s*[:：]\s*(.*?)\s*\nA\s*[:：]\s*(.*?)\s*\nB\s*[:：]\s*(.*?)\s*\nC\s*[:：]\s*(.*?)\s*\nD\s*[:：]\s*(.*)",
         re.DOTALL | re.IGNORECASE
     )
     m = pattern.match(translation.strip())
@@ -125,7 +113,7 @@ def translate(args):
                 f"D: {row[4]}"
             )
 
-            prompt = f"Please translate the following content into {args.language}. Do not translate the word 'question' at the beginning. Only translate, do not return anything else: \n{text}"
+            prompt = f"Please translate the following content into {args.language}. Do not translate the word 'question' at the beginning, and do not translate the four options A, B, C, D; keep them in English. Only translate, do not return anything else: \n{text}"
             translation = call_gpt_api(prompt, temperature=args.temperature)
             print(f"原文:\n{text}\n翻译:\n{translation}\n")
             parsed = parse_translation(translation)

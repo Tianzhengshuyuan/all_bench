@@ -1,0 +1,10 @@
+Sélectionnez la meilleure traduction en logique des prédicats : Aucune personne ne conduit sur Mars.,~Pd,(∀x)(Px ∨ ~Dx),(∀x)(Px ⊃ ~Dx),~Dp,C
+Sélectionnez la meilleure traduction en logique des prédicats. George emprunte la tondeuse à gazon d'Hector. (g : George ; h : Hector ; l : la tondeuse à gazon d'Hector ; Bxyz : x emprunte y à z),Blgh,Bhlg,Bglh,Bghl,C
+"Sélectionnez la meilleure interprétation en anglais des arguments donnés en logique des prédicats.
+Dm
+(∀x)(Wx ⊃ ~Dx)
+(∀x)Wx ∨ Ag	/ (∃x)Ax","Marina est danseuse. Certains faibles ne sont pas danseurs. Soit tout est faible, soit Georgia joue au volleyball. Donc, quelque chose joue au volleyball.","Marina est danseuse. Aucun faible n'est danseur. Tout est soit un faible, soit joue au volleyball. Donc, quelque chose joue au volleyball.","Marina est danseuse. Certains faibles ne sont pas danseurs. Tout est soit un faible, soit joue au volleyball. Donc, quelque chose joue au volleyball.","Marina est danseuse. Aucun faible n'est danseur. Soit tout est faible, soit Georgia joue au volleyball. Donc, quelque chose joue au volleyball.",D
+"Construisez une table de vérité complète pour les paires de propositions suivantes. Ensuite, en utilisant les tables de vérité, déterminez si les déclarations sont logiquement équivalentes ou contradictoires. Si aucune des deux, déterminez si elles sont cohérentes ou incohérentes. Justifiez vos réponses.
+E ⊃ (F · E) et ~E · F",Logiquement équivalentes,Contradictoires,"Ni logiquement équivalentes ni contradictoires, mais cohérentes",Incohérentes,C
+"Quelle est la meilleure symbolisation de la phrase suivante en utilisant les formules de PL données ?
+Les tortues vivent longtemps et sont des créatures heureuses, à moins qu'elles ne soient blessées.",(L • H) ≡ I,(L • H) ∨ I,L • (H ∨ I),L • (H ⊃ R),B

@@ -1,0 +1,8 @@
+"Seja V o conjunto de todos os polinômios reais p(x). Definam-se as transformações T, S em V por T:p(x) -> xp(x) e S:p(x) -> p'(x) = d/dx p(x), e interprete (ST)(p(x)) como S(T(p(x))). Qual das seguintes afirmações é verdadeira?",ST = 0,ST = T,ST = TS,ST - TS é o mapa identidade de V em si mesmo.,D
+"Um tanque inicialmente contém uma solução salina de 3 gramas de sal dissolvidos em 100 litros de água. Uma solução salina contendo 0,02 gramas de sal por litro de água é pulverizada no tanque a uma taxa de 4 litros por minuto. A solução pulverizada é continuamente misturada com a solução salina no tanque, e a mistura flui para fora do tanque à taxa de 4 litros por minuto. Se a mistura é instantânea, quantos gramas de sal estão no tanque após 100 minutos?",2,2 - e^-2,2 + e^-2,2 + e^-4,D
+"Seja A uma matriz real 2x2. Qual das seguintes afirmações deve ser verdadeira?
+I. Todas as entradas de A^2 são não negativas.
+II. O determinante de A^2 é não negativo.
+III. Se A tem dois autovalores distintos, então A^2 tem dois autovalores distintos.",I only,II only,III only,II and III only,B
+"Suponha que f(1 + x) = f(x) para todos os x reais. Se f é um polinômio e f(5) = 11, então f(15/2)",-11,0,11,33/2,C
+"Seja A o conjunto de todos os pares ordenados de inteiros (m, n) tais que 7m + 12n = 22. Qual é o maior número negativo no conjunto B = {m + n : (m, n) \in A}?",-5,-4,-3,-2,B

@@ -1,0 +1,2673 @@
+原文:
+question: The population of the city where Michelle was born is 145,826. What is the value of the 5 in the number 145,826?
+A: 5 thousands
+B: 5 hundreds
+C: 5 tens
+D: 5 ones
+翻译:
+question: Michelle 出生的城市人口为 145,826。数字 145,826 中的 5 代表什么值？
+A: 5 thousands
+B: 5 hundreds
+C: 5 tens
+D: 5 ones
+
+原文:
+question: Olivia used the rule "Add 11" to create the number pattern shown below. 10, 21, 32, 43, 54 Which statement about the number pattern is true?
+A: The 10th number in the pattern will be an even number.
+B: The number pattern will never have two even numbers next to each other.
+C: The next two numbers in the pattern will be an even number then an odd number.
+D: If the number pattern started with an odd number then the pattern would have only odd numbers in it.
+翻译:
+question: Olivia 使用了“加 11”的规则来创建下面显示的数字模式。10, 21, 32, 43, 54 关于数字模式的哪个陈述是正确的？
+A: 模式中的第10个数字将是一个偶数。
+B: 数字模式永远不会有两个偶数相邻。
+C: 模式中的接下来两个数字将是一个偶数后跟一个奇数。
+D: 如果数字模式以一个奇数开始，那么该模式将只包含奇数。
+
+原文:
+question: A total of 30 players will play basketball at a park. There will be exactly 5 players on each team. Which statement correctly explains how to find the number of teams needed?
+A: Add 5 to 30 to find 35 teams.
+B: Divide 30 by 5 to find 6 teams.
+C: Multiply 30 and 5 to find 150 teams.
+D: Subtract 5 from 30 to find 25 teams.
+翻译:
+question: 公园里将有30名球员打篮球。每个队将有5名球员。哪个陈述正确地解释了如何找到所需的队伍数量？
+A: 将5加到30上，得到35个队。
+B: 将30除以5，得到6个队。
+C: 将30和5相乘，得到150个队。
+D: 从30中减去5，得到25个队。
+
+原文:
+question: A store sells 107 different colors of paint. They have 25 cans of each color in storage. The number of cans of paint the store has in storage can be found using the expression below. 107 × 25. How many cans of paint does the store have in storage?
+A: 749
+B: 2,675
+C: 2,945
+D: 4,250
+翻译:
+question: 一家商店出售107种不同颜色的油漆。他们每种颜色的库存中有25罐。商店库存中的油漆罐数可以使用下面的表达式来找到。107 × 25。商店库存中有多少罐油漆？
+A: 749
+B: 2,675
+C: 2,945
+D: 4,250
+
+原文:
+question: Which expression is equivalent to 5 x 9?
+A: (5 x 4) x (6 x 5)
+B: (5 x 5) + (5 x 4)
+C: (5 x 5) + (5 x 9)
+D: (5 x 9) x (6 x 9)
+翻译:
+question: 哪个表达式等同于 5 x 9？
+A: (5 x 4) x (6 x 5)
+B: (5 x 5) + (5 x 4)
+C: (5 x 5) + (5 x 9)
+D: (5 x 9) x (6 x 9)
+
+翻译结果已保存到: elementary_mathematics_dev_chinese.csv
+原文:
+question: Find all c in Z_3 such that Z_3[x]/(x^2 + c) is a field.
+A: 0
+B: 1
+C: 2
+D: 3
+翻译:
+question: 找出所有的 c 属于 Z_3 使得 Z_3[x]/(x^2 + c) 是一个域。
+A: 0
+B: 1
+C: 2
+D: 3
+
+原文:
+question: Statement 1 | If aH is an element of a factor group, then |aH| divides |a|. Statement 2 | If H and K are subgroups of G then HK is a subgroup of G.
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+翻译:
+question: 声明 1 | 如果 aH 是一个因子群的元素，那么 |aH| 整除 |a|。声明 2 | 如果 H 和 K 是 G 的子群，那么 HK 是 G 的子群。
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+
+原文:
+question: Statement 1 | Every element of a group generates a cyclic subgroup of the group. Statement 2 | The symmetric group S_10 has 10 elements.
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+翻译:
+question: 声明 1 | 群的每个元素都生成该群的一个循环子群。声明 2 | 对称群 S_10 有 10 个元素。
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+
+原文:
+question: Statement 1| Every function from a finite set onto itself must be one to one. Statement 2 | Every subgroup of an abelian group is abelian.
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+翻译:
+question: 声明1| 每个从有限集合到其自身的函数必须是一对一的。声明2 | 每个阿贝尔群的子群都是阿贝尔群。
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+
+原文:
+question: Find the characteristic of the ring 2Z.
+A: 0
+B: 3
+C: 12
+D: 30
+翻译:
+question: 找出环2Z的特征。
+A: 0
+B: 3
+C: 12
+D: 30
+
+原文:
+question: 找出所有在 Z_3 中的 c，使得 Z_3[x]/(x^2 + c) 构成一个域。
+A: 0
+B: 1
+C: 2
+D: 3
+翻译:
+question: 找出所有在 Z_3 中的 c，使得 Z_3[x]/(x^2 + c) 构成一个域。
+A: 0
+B: 1
+C: 2
+D: 3
+
+翻译结果已保存到: abstract_algebra_dev_chinese.csv
+原文:
+question:  Select the best translation into predicate logic: No people drive on Mars.
+A: ~Pd
+B: (∀x)(Px ∨ ~Dx)
+C: (∀x)(Px ⊃ ~Dx)
+D: ~Dp
+翻译:
+question: 选择最佳谓词逻辑翻译：没有人在火星上开车。
+A: ~Pd
+B: (∀x)(Px ∨ ~Dx)
+C: (∀x)(Px ⊃ ~Dx)
+D: ~Dp
+
+原文:
+question: Select the best translation into predicate logic.George borrows Hector's lawnmower. (g: George; h: Hector; l: Hector's lawnmower; Bxyx: x borrows y from z)
+A: Blgh
+B: Bhlg
+C: Bglh
+D: Bghl
+翻译:
+question: 选择最佳谓词逻辑翻译。乔治借了赫克托的割草机。（g: 乔治；h: 赫克托；l: 赫克托的割草机；Bxyz: x 从 z 借 y）
+A: Blgh
+B: Bhlg
+C: Bglh
+D: Bghl
+
+原文:
+question:  Select the best English interpretation of the given arguments in predicate logic.
+Dm
+(∀x)(Wx ⊃ ~Dx)
+(∀x)Wx ∨ Ag	/ (∃x)Ax
+A: Marina is a dancer. Some weaklings are not dancers. Either everything is a weakling or Georgia plays volleyball. So something plays volleyball.
+B: Marina is a dancer. No weakling is a dancer. Everything is either a weakling or plays volleyball. So something plays volleyball.
+C: Marina is a dancer. Some weaklings are not dancers. Everything is either a weakling or plays volleyball. So something plays volleyball.
+D: Marina is a dancer. No weakling is a dancer. Either everything is a weakling or Georgia plays volleyball. So something plays volleyball.
+翻译:
+question: 选择给定谓词逻辑论证的最佳英语解释。
+Dm
+(∀x)(Wx ⊃ ~Dx)
+(∀x)Wx ∨ Ag	/ (∃x)Ax
+A: Marina 是一名舞者。有些弱者不是舞者。要么每个人都是弱者，要么Georgia打排球。所以有些东西在打排球。
+B: Marina 是一名舞者。没有弱者是舞者。每个人要么是弱者，要么在打排球。所以有些东西在打排球。
+C: Marina 是一名舞者。有些弱者不是舞者。每个人要么是弱者，要么在打排球。所以有些东西在打排球。
+D: Marina 是一名舞者。没有弱者是舞者。要么每个人都是弱者，要么Georgia打排球。所以有些东西在打排球。
+
+原文:
+question:  Construct a complete truth table for the following pairs of propositions. Then, using the truth tables, determine whether the statements are logically equivalent or contradictory. If neither, determine whether they are consistent or inconsistent. Justify your answers.
+E ⊃ (F · E) and ~E · F
+A: Logically equivalent
+B: Contradictory
+C: Neither logically equivalent nor contradictory, but consistent
+D: Inconsistent
+翻译:
+question: 为以下命题对构建完整的真值表。然后，使用真值表来确定这些陈述是逻辑等价还是矛盾的。如果都不是，确定它们是一致的还是不一致的。并对你的答案进行论证。
+E ⊃ (F · E) 和 ~E · F
+A: Logically equivalent
+B: Contradictory
+C: Neither logically equivalent nor contradictory, but consistent
+D: Inconsistent
+
+原文:
+question:  Which of the given formulas of PL is the best symbolization of the following sentence?
+Turtles live long lives and are happy creatures, unless they are injured.
+A: (L • H) ≡ I
+B: (L • H) ∨ I
+C: L • (H ∨ I)
+D: L • (H ⊃ R)
+翻译:
+question: 以下哪个PL公式最好地符号化了这句话？
+乌龟寿命长且是快乐的生物，除非它们受到了伤害。
+A: (L • H) ≡ I
+B: (L • H) ∨ I
+C: L • (H ∨ I)
+D: L • (H ⊃ R)
+
+翻译结果已保存到: formal_logic_dev_chinese.csv
+原文:
+question: Let V be the set of all real polynomials p(x). Let transformations T, S be defined on V by T:p(x) -> xp(x) and S:p(x) -> p'(x) = d/dx p(x), and interpret (ST)(p(x)) as S(T(p(x))). Which of the following is true?
+A: ST = 0
+B: ST = T
+C: ST = TS
+D: ST - TS is the identity map of V onto itself.
+翻译:
+question: 设 V 为所有实系数多项式 p(x) 的集合。定义变换 T 和 S 在 V 上为 T:p(x) -> xp(x) 和 S:p(x) -> p'(x) = d/dx p(x)，并解释 (ST)(p(x)) 为 S(T(p(x)))。以下哪项是正确的？
+A: ST = 0
+B: ST = T
+C: ST = TS
+D: ST - TS 是 V 到其自身的恒等映射。
+
+原文:
+question: A tank initially contains a salt solution of 3 grams of salt dissolved in 100 liters of water. A salt solution containing 0.02 grams of salt per liter of water is sprayed into the tank at a rate of 4 liters per minute. The sprayed solution is continually mixed with the salt solution in the tank, and the mixture flows out of the tank at a rate of 4 liters per minute. If the mixing is instantaneous, how many grams of salt are in the tank after 100 minutes have elapsed?
+A: 2
+B: 2 - e^-2
+C: 2 + e^-2
+D: 2 + e^-4
+翻译:
+question: 一个水箱最初含有3克盐溶解在100升水中。每升水含0.02克盐的盐水以每分钟4升的速度喷入水箱。喷入的溶液与水箱中的盐水持续混合，混合物以每分钟4升的速度从水箱流出。如果混合是瞬时的，那么100分钟后水箱中有多少克盐？
+A: 2
+B: 2 - e^-2
+C: 2 + e^-2
+D: 2 + e^-4
+
+原文:
+question: Let A be a real 2x2 matrix. Which of the following statements must be true?
+I. All of the entries of A^2 are nonnegative.
+II. The determinant of A^2 is nonnegative.
+III. If A has two distinct eigenvalues, then A^2 has two distinct eigenvalues.
+A: I only
+B: II only
+C: III only
+D: II and III only
+翻译:
+question: 设 A 为一个实数 2x2 矩阵。以下哪个陈述必定为真？
+I. A^2 的所有元素都非负。
+II. A^2 的行列式非负。
+III. 如果 A 有两个不同的特征值，则 A^2 也有两个不同的特征值。
+A: 仅 I
+B: 仅 II
+C: 仅 III
+D: 仅 II 和 III
+
+原文:
+question: Suppose that f(1 + x) = f(x) for all real x. If f is a polynomial and f(5) = 11, then f(15/2)
+A: -11
+B: 0
+C: 11
+D: 33/2
+翻译:
+question: 假设对于所有实数x，有f(1 + x) = f(x)。如果f是一个多项式，并且f(5) = 11，那么f(15/2)的值是多少？
+A: -11
+B: 0
+C: 11
+D: 33/2
+
+原文:
+question: Let A be the set of all ordered pairs of integers (m, n) such that 7m + 12n = 22. What is the greatest negative number in the set B = {m + n : (m, n) \in A}?
+A: -5
+B: -4
+C: -3
+D: -2
+翻译:
+question: 设 A 是所有整数有序对 (m, n) 的集合，使得 7m + 12n = 22。集合 B = {m + n : (m, n) ∈ A} 中最大的负数是多少？
+A: -5
+B: -4
+C: -3
+D: -2
+
+翻译结果已保存到: college_mathematics_dev_chinese.csv
+原文:
+question: The population of the city where Michelle was born is 145,826. What is the value of the 5 in the number 145,826?
+A: 5 thousands
+B: 5 hundreds
+C: 5 tens
+D: 5 ones
+翻译:
+question: La población de la ciudad donde nació Michelle es de 145,826. ¿Cuál es el valor del 5 en el número 145,826?
+A: 5 thousands
+B: 5 hundreds
+C: 5 tens
+D: 5 ones
+
+原文:
+question: Olivia used the rule "Add 11" to create the number pattern shown below. 10, 21, 32, 43, 54 Which statement about the number pattern is true?
+A: The 10th number in the pattern will be an even number.
+B: The number pattern will never have two even numbers next to each other.
+C: The next two numbers in the pattern will be an even number then an odd number.
+D: If the number pattern started with an odd number then the pattern would have only odd numbers in it.
+翻译:
+question: Olivia utilizó la regla "Sumar 11" para crear la secuencia numérica que se muestra a continuación. 10, 21, 32, 43, 54 ¿Cuál afirmación sobre la secuencia numérica es verdadera?
+A: El décimo número en la secuencia será un número par.
+B: La secuencia numérica nunca tendrá dos números pares uno al lado del otro.
+C: Los siguientes dos números en la secuencia serán un número par seguido de un número impar.
+D: Si la secuencia numérica comenzara con un número impar, entonces la secuencia tendría solo números impares.
+
+原文:
+question: A total of 30 players will play basketball at a park. There will be exactly 5 players on each team. Which statement correctly explains how to find the number of teams needed?
+A: Add 5 to 30 to find 35 teams.
+B: Divide 30 by 5 to find 6 teams.
+C: Multiply 30 and 5 to find 150 teams.
+D: Subtract 5 from 30 to find 25 teams.
+翻译:
+question: Un total de 30 jugadores jugarán baloncesto en un parque. Habrá exactamente 5 jugadores en cada equipo. ¿Cuál afirmación explica correctamente cómo encontrar el número de equipos necesarios?
+A: Add 5 to 30 to find 35 teams.
+B: Divide 30 por 5 para encontrar 6 equipos.
+C: Multiply 30 and 5 to find 150 teams.
+D: Subtract 5 from 30 to find 25 teams.
+
+原文:
+question: A store sells 107 different colors of paint. They have 25 cans of each color in storage. The number of cans of paint the store has in storage can be found using the expression below. 107 × 25. How many cans of paint does the store have in storage?
+A: 749
+B: 2,675
+C: 2,945
+D: 4,250
+翻译:
+question: Una tienda vende 107 colores diferentes de pintura. Tienen 25 latas de cada color en almacenamiento. La cantidad de latas de pintura que la tienda tiene en almacenamiento se puede encontrar usando la expresión a continuación. 107 × 25. ¿Cuántas latas de pintura tiene la tienda en almacenamiento?
+A: 749
+B: 2,675
+C: 2,945
+D: 4,250
+
+原文:
+question: Which expression is equivalent to 5 x 9?
+A: (5 x 4) x (6 x 5)
+B: (5 x 5) + (5 x 4)
+C: (5 x 5) + (5 x 9)
+D: (5 x 9) x (6 x 9)
+翻译:
+question: ¿Cuál expresión es equivalente a 5 x 9?
+A: (5 x 4) x (6 x 5)
+B: (5 x 5) + (5 x 4)
+C: (5 x 5) + (5 x 9)
+D: (5 x 9) x (6 x 9)
+
+翻译结果已保存到: elementary_mathematics_dev_spanish.csv
+原文:
+question: Find all c in Z_3 such that Z_3[x]/(x^2 + c) is a field.
+A: 0
+B: 1
+C: 2
+D: 3
+翻译:
+question: Encuentra todos los c en Z_3 tales que Z_3[x]/(x^2 + c) es un campo.
+A: 0
+B: 1
+C: 2
+D: 3
+
+原文:
+question: Statement 1 | If aH is an element of a factor group, then |aH| divides |a|. Statement 2 | If H and K are subgroups of G then HK is a subgroup of G.
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+翻译:
+question: Declaración 1 | Si aH es un elemento de un grupo cociente, entonces |aH| divide a |a|. Declaración 2 | Si H y K son subgrupos de G, entonces HK es un subgrupo de G.
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+
+原文:
+question: Statement 1 | Every element of a group generates a cyclic subgroup of the group. Statement 2 | The symmetric group S_10 has 10 elements.
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+翻译:
+question: Declaración 1 | Cada elemento de un grupo genera un subgrupo cíclico del grupo. Declaración 2 | El grupo simétrico S_10 tiene 10 elementos.
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+
+原文:
+question: Statement 1| Every function from a finite set onto itself must be one to one. Statement 2 | Every subgroup of an abelian group is abelian.
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+翻译:
+question: Declaración 1| Toda función de un conjunto finito sobre sí mismo debe ser uno a uno. Declaración 2 | Todo subgrupo de un grupo abeliano es abeliano.
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+
+原文:
+question: Find the characteristic of the ring 2Z.
+A: 0
+B: 3
+C: 12
+D: 30
+翻译:
+question: Encuentra la característica del anillo 2Z.
+A: 0
+B: 3
+C: 12
+D: 30
+
+原文:
+question: 找出所有在 Z_3 中的 c，使得 Z_3[x]/(x^2 + c) 构成一个域。
+A: 0
+B: 1
+C: 2
+D: 3
+翻译:
+question: Encuentra todos los valores de c en Z_3 tales que Z_3[x]/(x^2 + c) forme un campo.
+A: 0
+B: 1
+C: 2
+D: 3
+
+翻译结果已保存到: abstract_algebra_dev_spanish.csv
+原文:
+question:  Select the best translation into predicate logic: No people drive on Mars.
+A: ~Pd
+B: (∀x)(Px ∨ ~Dx)
+C: (∀x)(Px ⊃ ~Dx)
+D: ~Dp
+翻译:
+question: Seleccione la mejor traducción a la lógica de predicados: Ninguna persona conduce en Marte.
+A: ~Pd
+B: (∀x)(Px ∨ ~Dx)
+C: (∀x)(Px ⊃ ~Dx)
+D: ~Dp
+
+原文:
+question: Select the best translation into predicate logic.George borrows Hector's lawnmower. (g: George; h: Hector; l: Hector's lawnmower; Bxyx: x borrows y from z)
+A: Blgh
+B: Bhlg
+C: Bglh
+D: Bghl
+翻译:
+question: Selecciona la mejor traducción a lógica de predicados. George toma prestado el cortacésped de Hector. (g: George; h: Hector; l: cortacésped de Hector; Bxyz: x toma prestado y de z)
+A: Blgh
+B: Bhlg
+C: Bglh
+D: Bghl
+
+原文:
+question:  Select the best English interpretation of the given arguments in predicate logic.
+Dm
+(∀x)(Wx ⊃ ~Dx)
+(∀x)Wx ∨ Ag	/ (∃x)Ax
+A: Marina is a dancer. Some weaklings are not dancers. Either everything is a weakling or Georgia plays volleyball. So something plays volleyball.
+B: Marina is a dancer. No weakling is a dancer. Everything is either a weakling or plays volleyball. So something plays volleyball.
+C: Marina is a dancer. Some weaklings are not dancers. Everything is either a weakling or plays volleyball. So something plays volleyball.
+D: Marina is a dancer. No weakling is a dancer. Either everything is a weakling or Georgia plays volleyball. So something plays volleyball.
+翻译:
+question: Seleccione la mejor interpretación en inglés de los siguientes argumentos en lógica de predicados.
+Dm
+(∀x)(Wx ⊃ ~Dx)
+(∀x)Wx ∨ Ag	/ (∃x)Ax
+A: Marina es bailarina. Algunos débiles no son bailarines. Todo es un débil o Georgia juega voleibol. Entonces, algo juega voleibol.
+B: Marina es bailarina. Ningún débil es bailarín. Todo es o un débil o juega al voleibol. Entonces, algo juega voleibol.
+C: Marina es bailarina. Algunos débiles no son bailarines. Todo es o un débil o juega al voleibol. Entonces, algo juega voleibol.
+D: Marina es bailarina. Ningún débil es bailarín. Todo es un débil o Georgia juega voleibol. Entonces, algo juega voleibol.
+
+原文:
+question:  Construct a complete truth table for the following pairs of propositions. Then, using the truth tables, determine whether the statements are logically equivalent or contradictory. If neither, determine whether they are consistent or inconsistent. Justify your answers.
+E ⊃ (F · E) and ~E · F
+A: Logically equivalent
+B: Contradictory
+C: Neither logically equivalent nor contradictory, but consistent
+D: Inconsistent
+翻译:
+question: Construye una tabla de verdad completa para los siguientes pares de proposiciones. Luego, utilizando las tablas de verdad, determina si las afirmaciones son lógicamente equivalentes o contradictorias. Si no es así, determina si son consistentes o inconsistentes. Justifica tus respuestas.
+E ⊃ (F · E) y ~E · F
+A: Logically equivalent
+B: Contradictory
+C: Neither logically equivalent nor contradictory, but consistent
+D: Inconsistent
+
+原文:
+question:  Which of the given formulas of PL is the best symbolization of the following sentence?
+Turtles live long lives and are happy creatures, unless they are injured.
+A: (L • H) ≡ I
+B: (L • H) ∨ I
+C: L • (H ∨ I)
+D: L • (H ⊃ R)
+翻译:
+question: ¿Cuál de las fórmulas dadas de PL simboliza mejor la siguiente oración?
+Las tortugas viven vidas largas y son criaturas felices, a menos que estén heridas.
+A: (L • H) ≡ I
+B: (L • H) ∨ I
+C: L • (H ∨ I)
+D: L • (H ⊃ R)
+
+翻译结果已保存到: formal_logic_dev_spanish.csv
+原文:
+question: Let V be the set of all real polynomials p(x). Let transformations T, S be defined on V by T:p(x) -> xp(x) and S:p(x) -> p'(x) = d/dx p(x), and interpret (ST)(p(x)) as S(T(p(x))). Which of the following is true?
+A: ST = 0
+B: ST = T
+C: ST = TS
+D: ST - TS is the identity map of V onto itself.
+翻译:
+question: Sea V el conjunto de todos los polinomios reales p(x). Definamos las transformaciones T, S en V por T:p(x) -> xp(x) y S:p(x) -> p'(x) = d/dx p(x), e interpretemos (ST)(p(x)) como S(T(p(x))). ¿Cuál de las siguientes afirmaciones es verdadera?
+A: ST = 0
+B: ST = T
+C: ST = TS
+D: ST - TS es la aplicación identidad de V en sí mismo.
+
+原文:
+question: A tank initially contains a salt solution of 3 grams of salt dissolved in 100 liters of water. A salt solution containing 0.02 grams of salt per liter of water is sprayed into the tank at a rate of 4 liters per minute. The sprayed solution is continually mixed with the salt solution in the tank, and the mixture flows out of the tank at a rate of 4 liters per minute. If the mixing is instantaneous, how many grams of salt are in the tank after 100 minutes have elapsed?
+A: 2
+B: 2 - e^-2
+C: 2 + e^-2
+D: 2 + e^-4
+翻译:
+question: Un tanque inicialmente contiene una solución salina de 3 gramos de sal disueltos en 100 litros de agua. Una solución salina que contiene 0.02 gramos de sal por litro de agua se rocía en el tanque a una tasa de 4 litros por minuto. La solución rociada se mezcla continuamente con la solución salina en el tanque, y la mezcla fluye fuera del tanque a una tasa de 4 litros por minuto. Si la mezcla es instantánea, ¿cuántos gramos de sal hay en el tanque después de que han transcurrido 100 minutos?
+A: 2
+B: 2 - e^-2
+C: 2 + e^-2
+D: 2 + e^-4
+
+原文:
+question: Let A be a real 2x2 matrix. Which of the following statements must be true?
+I. All of the entries of A^2 are nonnegative.
+II. The determinant of A^2 is nonnegative.
+III. If A has two distinct eigenvalues, then A^2 has two distinct eigenvalues.
+A: I only
+B: II only
+C: III only
+D: II and III only
+翻译:
+question: Sea A una matriz real de 2x2. ¿Cuál de las siguientes afirmaciones debe ser cierta?
+I. Todas las entradas de A^2 son no negativas.
+II. El determinante de A^2 es no negativo.
+III. Si A tiene dos autovalores distintos, entonces A^2 tiene dos autovalores distintos.
+A: Solo I
+B: Solo II
+C: Solo III
+D: Solo II y III
+
+原文:
+question: Suppose that f(1 + x) = f(x) for all real x. If f is a polynomial and f(5) = 11, then f(15/2)
+A: -11
+B: 0
+C: 11
+D: 33/2
+翻译:
+question: Supongamos que f(1 + x) = f(x) para todo x real. Si f es un polinomio y f(5) = 11, entonces f(15/2)
+A: -11
+B: 0
+C: 11
+D: 33/2
+
+原文:
+question: Let A be the set of all ordered pairs of integers (m, n) such that 7m + 12n = 22. What is the greatest negative number in the set B = {m + n : (m, n) \in A}?
+A: -5
+B: -4
+C: -3
+D: -2
+翻译:
+question: Sea A el conjunto de todos los pares ordenados de enteros (m, n) tales que 7m + 12n = 22. ¿Cuál es el número negativo más grande en el conjunto B = {m + n : (m, n) \in A}?
+A: -5
+B: -4
+C: -3
+D: -2
+
+翻译结果已保存到: college_mathematics_dev_spanish.csv
+原文:
+question: The population of the city where Michelle was born is 145,826. What is the value of the 5 in the number 145,826?
+A: 5 thousands
+B: 5 hundreds
+C: 5 tens
+D: 5 ones
+翻译:
+question: जिस शहर में मिशेल का जन्म हुआ था उसकी जनसंख्या 145,826 है। 145,826 संख्या में 5 का मान क्या है?
+A: 5 thousands
+B: 5 hundreds
+C: 5 tens
+D: 5 ones
+
+原文:
+question: Olivia used the rule "Add 11" to create the number pattern shown below. 10, 21, 32, 43, 54 Which statement about the number pattern is true?
+A: The 10th number in the pattern will be an even number.
+B: The number pattern will never have two even numbers next to each other.
+C: The next two numbers in the pattern will be an even number then an odd number.
+D: If the number pattern started with an odd number then the pattern would have only odd numbers in it.
+翻译:
+question: Olivia ने नीचे दिखाए गए नंबर पैटर्न को बनाने के लिए "11 जोड़ें" नियम का उपयोग किया। 10, 21, 32, 43, 54 इस नंबर पैटर्न के बारे में कौन सा कथन सत्य है?
+A: पैटर्न में 10वां नंबर एक सम नंबर होगा।
+B: नंबर पैटर्न में कभी भी दो सम नंबर एक साथ नहीं होंगे।
+C: पैटर्न में अगले दो नंबर एक सम नंबर फिर एक विषम नंबर होंगे।
+D: अगर नंबर पैटर्न एक विषम नंबर से शुरू होता तो पैटर्न में केवल विषम नंबर होते।
+
+原文:
+question: A total of 30 players will play basketball at a park. There will be exactly 5 players on each team. Which statement correctly explains how to find the number of teams needed?
+A: Add 5 to 30 to find 35 teams.
+B: Divide 30 by 5 to find 6 teams.
+C: Multiply 30 and 5 to find 150 teams.
+D: Subtract 5 from 30 to find 25 teams.
+翻译:
+question: एक पार्क में कुल 30 खिलाड़ी बास्केटबॉल खेलेंगे। प्रत्येक टीम में ठीक 5 खिलाड़ी होंगे। कौन सा कथन सही रूप से बताता है कि आवश्यक टीमों की संख्या कैसे ज्ञात की जा सकती है?
+A: 30 में 5 जोड़कर 35 टीमें पाएं।
+B: 30 को 5 से विभाजित करके 6 टीमें पाएं।
+C: 30 और 5 को गुणा करके 150 टीमें पाएं।
+D: 30 से 5 घटाकर 25 टीमें पाएं।
+
+原文:
+question: A store sells 107 different colors of paint. They have 25 cans of each color in storage. The number of cans of paint the store has in storage can be found using the expression below. 107 × 25. How many cans of paint does the store have in storage?
+A: 749
+B: 2,675
+C: 2,945
+D: 4,250
+翻译:
+question: एक दुकान में 107 विभिन्न रंगों के पेंट बिकते हैं। उनके पास प्रत्येक रंग के 25 कैन स्टोरेज में हैं। दुकान के पास स्टोरेज में मौजूद पेंट के कैनों की संख्या नीचे दिए गए व्यंजक का उपयोग करके पाई जा सकती है। 107 × 25। दुकान के पास स्टोरेज में कितने पेंट के कैन हैं?
+A: 749
+B: 2,675
+C: 2,945
+D: 4,250
+
+原文:
+question: Which expression is equivalent to 5 x 9?
+A: (5 x 4) x (6 x 5)
+B: (5 x 5) + (5 x 4)
+C: (5 x 5) + (5 x 9)
+D: (5 x 9) x (6 x 9)
+翻译:
+question: 5 x 9 के बराबर कौन सी अभिव्यक्ति है?
+A: (5 x 4) x (6 x 5)
+B: (5 x 5) + (5 x 4)
+C: (5 x 5) + (5 x 9)
+D: (5 x 9) x (6 x 9)
+
+翻译结果已保存到: elementary_mathematics_dev_hindi.csv
+原文:
+question: Find all c in Z_3 such that Z_3[x]/(x^2 + c) is a field.
+A: 0
+B: 1
+C: 2
+D: 3
+翻译:
+question: Z_3 में सभी c ज्ञात करें जिसके लिए Z_3[x]/(x^2 + c) एक क्षेत्र है।
+A: 0
+B: 1
+C: 2
+D: 3
+
+原文:
+question: Statement 1 | If aH is an element of a factor group, then |aH| divides |a|. Statement 2 | If H and K are subgroups of G then HK is a subgroup of G.
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+翻译:
+question: कथन 1 | यदि aH एक गुणक समूह का तत्व है, तो |aH|, |a| को विभाजित करता है। कथन 2 | यदि H और K G के उपसमूह हैं तो HK G का उपसमूह है।
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+
+原文:
+question: Statement 1 | Every element of a group generates a cyclic subgroup of the group. Statement 2 | The symmetric group S_10 has 10 elements.
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+翻译:
+question: कथन 1 | समूह का प्रत्येक तत्व समूह का एक चक्रीय उपसमूह उत्पन्न करता है। कथन 2 | सममित समूह S_10 में 10 तत्व होते हैं।
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+
+原文:
+question: Statement 1| Every function from a finite set onto itself must be one to one. Statement 2 | Every subgroup of an abelian group is abelian.
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+翻译:
+question: कथन 1| किसी सीमित समूह से अपने आप पर हर फ़ंक्शन एक-से-एक होना चाहिए। कथन 2 | किसी एबेलियन समूह का हर उपसमूह एबेलियन होता है।
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+
+原文:
+question: Find the characteristic of the ring 2Z.
+A: 0
+B: 3
+C: 12
+D: 30
+翻译:
+question: 2Z रिंग की विशेषता ज्ञात करें।
+A: 0
+B: 3
+C: 12
+D: 30
+
+原文:
+question: 找出所有在 Z_3 中的 c，使得 Z_3[x]/(x^2 + c) 构成一个域。
+A: 0
+B: 1
+C: 2
+D: 3
+翻译:
+question: Z_3 में सभी c का पता लगाएं जिसके लिए Z_3[x]/(x^2 + c) एक क्षेत्र बनाता है।
+A: 0
+B: 1
+C: 2
+D: 3
+
+翻译结果已保存到: abstract_algebra_dev_hindi.csv
+原文:
+question:  Select the best translation into predicate logic: No people drive on Mars.
+A: ~Pd
+B: (∀x)(Px ∨ ~Dx)
+C: (∀x)(Px ⊃ ~Dx)
+D: ~Dp
+翻译:
+question: प्रेडिकेट लॉजिक में सबसे अच्छा अनुवाद चुनें: मंगल पर कोई व्यक्ति गाड़ी नहीं चलाता।
+A: ~Pd
+B: (∀x)(Px ∨ ~Dx)
+C: (∀x)(Px ⊃ ~Dx)
+D: ~Dp
+
+原文:
+question: Select the best translation into predicate logic.George borrows Hector's lawnmower. (g: George; h: Hector; l: Hector's lawnmower; Bxyx: x borrows y from z)
+A: Blgh
+B: Bhlg
+C: Bglh
+D: Bghl
+翻译:
+question: प्रेडिकेट लॉजिक में सबसे अच्छा अनुवाद चुनें। जॉर्ज हेक्टर की लॉनमॉवर उधार लेता है। (g: जॉर्ज; h: हेक्टर; l: हेक्टर की लॉनमॉवर; Bxyz: x y को z से उधार लेता है)
+A: Blgh
+B: Bhlg
+C: Bglh
+D: Bghl
+
+原文:
+question:  Select the best English interpretation of the given arguments in predicate logic.
+Dm
+(∀x)(Wx ⊃ ~Dx)
+(∀x)Wx ∨ Ag	/ (∃x)Ax
+A: Marina is a dancer. Some weaklings are not dancers. Either everything is a weakling or Georgia plays volleyball. So something plays volleyball.
+B: Marina is a dancer. No weakling is a dancer. Everything is either a weakling or plays volleyball. So something plays volleyball.
+C: Marina is a dancer. Some weaklings are not dancers. Everything is either a weakling or plays volleyball. So something plays volleyball.
+D: Marina is a dancer. No weakling is a dancer. Either everything is a weakling or Georgia plays volleyball. So something plays volleyball.
+翻译:
+question: दी गई प्रेडिकेट लॉजिक के तर्कों का सर्वोत्तम अंग्रेजी अर्थ चुनें।
+Dm
+(∀x)(Wx ⊃ ~Dx)
+(∀x)Wx ∨ Ag	/ (∃x)Ax
+A: मरीना एक नर्तकी है। कुछ कमजोर लोग नर्तक नहीं हैं। या तो सब कुछ कमजोर है या जॉर्जिया वॉलीबॉल खेलती है। इसलिए कुछ वॉलीबॉल खेलता है।
+B: मरीना एक नर्तकी है। कोई भी कमजोर व्यक्ति नर्तक नहीं है। सब कुछ या तो कमजोर है या वॉलीबॉल खेलता है। इसलिए कुछ वॉलीबॉल खेलता है।
+C: मरीना एक नर्तकी है। कुछ कमजोर लोग नर्तक नहीं हैं। सब कुछ या तो कमजोर है या वॉलीबॉल खेलता है। इसलिए कुछ वॉलीबॉल खेलता है।
+D: मरीना एक नर्तकी है। कोई भी कमजोर व्यक्ति नर्तक नहीं है। या तो सब कुछ कमजोर है या जॉर्जिया वॉलीबॉल खेलती है। इसलिए कुछ वॉलीबॉल खेलता है।
+
+原文:
+question:  Construct a complete truth table for the following pairs of propositions. Then, using the truth tables, determine whether the statements are logically equivalent or contradictory. If neither, determine whether they are consistent or inconsistent. Justify your answers.
+E ⊃ (F · E) and ~E · F
+A: Logically equivalent
+B: Contradictory
+C: Neither logically equivalent nor contradictory, but consistent
+D: Inconsistent
+翻译:
+question: निम्नलिखित युग्मों के लिए पूर्ण सत्यता तालिका बनाएं। फिर, सत्यता तालिकाओं का उपयोग करके, यह निर्धारित करें कि कथन तार्किक रूप से समतुल्य हैं या विरोधाभासी हैं। यदि नहीं, तो यह निर्धारित करें कि वे सुसंगत हैं या असंगत हैं। अपने उत्तरों को औचित्य सिद्ध करें।
+E ⊃ (F · E) और ~E · F
+A: Logically equivalent
+B: Contradictory
+C: Neither logically equivalent nor contradictory, but consistent
+D: Inconsistent
+
+原文:
+question:  Which of the given formulas of PL is the best symbolization of the following sentence?
+Turtles live long lives and are happy creatures, unless they are injured.
+A: (L • H) ≡ I
+B: (L • H) ∨ I
+C: L • (H ∨ I)
+D: L • (H ⊃ R)
+翻译:
+question: निम्नलिखित वाक्य का सर्वोत्तम प्रतीकीकरण PL के दिए गए सूत्रों में से कौन सा है?
+कछुए लंबा जीवन जीते हैं और खुशहाल प्राणी होते हैं, जब तक कि वे घायल न हों।
+A: (L • H) ≡ I
+B: (L • H) ∨ I
+C: L • (H ∨ I)
+D: L • (H ⊃ R)
+
+翻译结果已保存到: formal_logic_dev_hindi.csv
+原文:
+question: Let V be the set of all real polynomials p(x). Let transformations T, S be defined on V by T:p(x) -> xp(x) and S:p(x) -> p'(x) = d/dx p(x), and interpret (ST)(p(x)) as S(T(p(x))). Which of the following is true?
+A: ST = 0
+B: ST = T
+C: ST = TS
+D: ST - TS is the identity map of V onto itself.
+翻译:
+question: V को सभी वास्तविक बहुपद p(x) का समूह मानें। परिवर्तन T, S को V पर परिभाषित किया गया है जहाँ T:p(x) -> xp(x) और S:p(x) -> p'(x) = d/dx p(x) है, और (ST)(p(x)) को S(T(p(x))) के रूप में व्याख्या करें। निम्नलिखित में से कौन सा सत्य है?
+A: ST = 0
+B: ST = T
+C: ST = TS
+D: ST - TS वी पर स्वयं की पहचान मानचित्र है।
+
+原文:
+question: A tank initially contains a salt solution of 3 grams of salt dissolved in 100 liters of water. A salt solution containing 0.02 grams of salt per liter of water is sprayed into the tank at a rate of 4 liters per minute. The sprayed solution is continually mixed with the salt solution in the tank, and the mixture flows out of the tank at a rate of 4 liters per minute. If the mixing is instantaneous, how many grams of salt are in the tank after 100 minutes have elapsed?
+A: 2
+B: 2 - e^-2
+C: 2 + e^-2
+D: 2 + e^-4
+翻译:
+question: एक टैंक में शुरुआती तौर पर 3 ग्राम नमक घुला हुआ 100 लीटर पानी में होता है। प्रति लीटर पानी में 0.02 ग्राम नमक युक्त नमकीन समाधान को 4 लीटर प्रति मिनट की दर से टैंक में छिड़का जाता है। छिड़के गए समाधान को लगातार टैंक में मौजूद नमकीन समाधान के साथ मिलाया जाता है, और मिश्रण टैंक से 4 लीटर प्रति मिनट की दर से बाहर निकलता है। यदि मिश्रण तात्कालिक है, तो 100 मिनट के बाद टैंक में कितने ग्राम नमक होंगे?
+A: 2
+B: 2 - e^-2
+C: 2 + e^-2
+D: 2 + e^-4
+
+原文:
+question: Let A be a real 2x2 matrix. Which of the following statements must be true?
+I. All of the entries of A^2 are nonnegative.
+II. The determinant of A^2 is nonnegative.
+III. If A has two distinct eigenvalues, then A^2 has two distinct eigenvalues.
+A: I only
+B: II only
+C: III only
+D: II and III only
+翻译:
+question: A ek vastavik 2x2 matrix hai. Nimn me se kaun sa kathan avashya hi sach hai?
+I. A^2 ke sabhi pravesh nonnegative hain.
+II. A^2 ka determinant nonnegative hai.
+III. Yadi A ke do bhinn eigenvalues hain, to A^2 ke bhi do bhinn eigenvalues honge.
+A: I only
+B: II only
+C: III only
+D: II and III only
+
+原文:
+question: Suppose that f(1 + x) = f(x) for all real x. If f is a polynomial and f(5) = 11, then f(15/2)
+A: -11
+B: 0
+C: 11
+D: 33/2
+翻译:
+question: मान लीजिए कि f(1 + x) = f(x) सभी वास्तविक x के लिए है। यदि f एक बहुपद है और f(5) = 11 है, तो f(15/2) का मान क्या होगा?
+A: -11
+B: 0
+C: 11
+D: 33/2
+
+原文:
+question: Let A be the set of all ordered pairs of integers (m, n) such that 7m + 12n = 22. What is the greatest negative number in the set B = {m + n : (m, n) \in A}?
+A: -5
+B: -4
+C: -3
+D: -2
+翻译:
+question: A वह समुच्चय है जिसमें सभी पूर्णांक युग्म (m, n) शामिल हैं जिसके लिए 7m + 12n = 22 है। B = {m + n : (m, n) ∈ A} में सबसे बड़ा नकारात्मक संख्या क्या है?
+A: -5
+B: -4
+C: -3
+D: -2
+
+翻译结果已保存到: college_mathematics_dev_hindi.csv
+原文:
+question: The population of the city where Michelle was born is 145,826. What is the value of the 5 in the number 145,826?
+A: 5 thousands
+B: 5 hundreds
+C: 5 tens
+D: 5 ones
+翻译:
+question: عدد سكان المدينة التي وُلدت فيها ميشيل هو 145,826. ما قيمة الرقم 5 في العدد 145,826؟
+A: 5 آلاف
+B: 5 مئات
+C: 5 عشرات
+D: 5 وحدات
+
+原文:
+question: Olivia used the rule "Add 11" to create the number pattern shown below. 10, 21, 32, 43, 54 Which statement about the number pattern is true?
+A: The 10th number in the pattern will be an even number.
+B: The number pattern will never have two even numbers next to each other.
+C: The next two numbers in the pattern will be an even number then an odd number.
+D: If the number pattern started with an odd number then the pattern would have only odd numbers in it.
+翻译:
+question: استخدمت أوليفيا قاعدة "أضف 11" لإنشاء نمط الأرقام الموضح أدناه. 10، 21، 32، 43، 54. أي من العبارات التالية حول نمط الأرقام صحيحة؟
+A: الرقم العاشر في النمط سيكون رقماً زوجياً.
+B: نمط الأرقام لن يحتوي أبداً على رقمين زوجيين متجاورين.
+C: الرقمان التاليان في النمط سيكونان رقماً زوجياً يليه رقماً فردياً.
+D: إذا بدأ نمط الأرقام برقم فردي، فإن النمط سيحتوي على أرقام فردية فقط.
+
+原文:
+question: A total of 30 players will play basketball at a park. There will be exactly 5 players on each team. Which statement correctly explains how to find the number of teams needed?
+A: Add 5 to 30 to find 35 teams.
+B: Divide 30 by 5 to find 6 teams.
+C: Multiply 30 and 5 to find 150 teams.
+D: Subtract 5 from 30 to find 25 teams.
+翻译:
+question: سيقوم مجموع 30 لاعبًا بلعب كرة السلة في حديقة. سيكون هناك بالضبط 5 لاعبين في كل فريق. أي من العبارات التالية تشرح بشكل صحيح كيفية معرفة عدد الفرق المطلوبة؟
+A: أضف 5 إلى 30 لتجد 35 فريقًا.
+B: اقسم 30 على 5 لتجد 6 فرق.
+C: اضرب 30 في 5 لتجد 150 فريقًا.
+D: اطرح 5 من 30 لتجد 25 فريقًا.
+
+原文:
+question: A store sells 107 different colors of paint. They have 25 cans of each color in storage. The number of cans of paint the store has in storage can be found using the expression below. 107 × 25. How many cans of paint does the store have in storage?
+A: 749
+B: 2,675
+C: 2,945
+D: 4,250
+翻译:
+question: يبيع المتجر 107 ألوان مختلفة من الدهان. لديهم 25 علبة لكل لون في المخزن. يمكن العثور على عدد علب الدهان التي يمتلكها المتجر في المخزن باستخدام التعبير التالي. 107 × 25. كم عدد علب الدهان التي يمتلكها المتجر في المخزن؟
+A: 749
+B: 2,675
+C: 2,945
+D: 4,250
+
+原文:
+question: Which expression is equivalent to 5 x 9?
+A: (5 x 4) x (6 x 5)
+B: (5 x 5) + (5 x 4)
+C: (5 x 5) + (5 x 9)
+D: (5 x 9) x (6 x 9)
+翻译:
+question: أي التعبيرات التالية يساوي 5 × 9؟
+A: (5 × 4) × (6 × 5)
+B: (5 × 5) + (5 × 4)
+C: (5 × 5) + (5 × 9)
+D: (5 × 9) × (6 × 9)
+
+翻译结果已保存到: elementary_mathematics_dev_arabic.csv
+原文:
+question: Find all c in Z_3 such that Z_3[x]/(x^2 + c) is a field.
+A: 0
+B: 1
+C: 2
+D: 3
+翻译:
+question: ابحث عن جميع القيم c في Z_3 بحيث أن Z_3[x]/(x^2 + c) يكون حقلاً.
+A: 0
+B: 1
+C: 2
+D: 3
+
+原文:
+question: Statement 1 | If aH is an element of a factor group, then |aH| divides |a|. Statement 2 | If H and K are subgroups of G then HK is a subgroup of G.
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+翻译:
+question: العبارة 1 | إذا كان aH عنصرًا في مجموعة عامل، فإن |aH| يقسم |a|. العبارة 2 | إذا كان H و K مجموعتين فرعيتين من G فإن HK هي مجموعة فرعية من G.
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+
+原文:
+question: Statement 1 | Every element of a group generates a cyclic subgroup of the group. Statement 2 | The symmetric group S_10 has 10 elements.
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+翻译:
+question: العبارة 1 | كل عنصر من مجموعة يولد مجموعة فرعية دائرية للمجموعة. العبارة 2 | المجموعة المتماثلة S_10 تحتوي على 10 عناصر.
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+
+原文:
+question: Statement 1| Every function from a finite set onto itself must be one to one. Statement 2 | Every subgroup of an abelian group is abelian.
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+翻译:
+question: العبارة 1| كل دالة من مجموعة محدودة إلى نفسها يجب أن تكون متبادلة القيم. العبارة 2 | كل مجموعة فرعية من مجموعة أبيلية هي أبيلية.
+A: صحيح، صحيح
+B: خطأ، خطأ
+C: صحيح، خطأ
+D: خطأ، صحيح
+
+原文:
+question: Find the characteristic of the ring 2Z.
+A: 0
+B: 3
+C: 12
+D: 30
+翻译:
+question: ابحث عن خاصية الحلقة 2Z.
+A: 0
+B: 3
+C: 12
+D: 30
+
+原文:
+question: 找出所有在 Z_3 中的 c，使得 Z_3[x]/(x^2 + c) 构成一个域。
+A: 0
+B: 1
+C: 2
+D: 3
+翻译:
+question: ابحث عن جميع القيم c في Z_3 التي تجعل Z_3[x]/(x^2 + c) يشكل حقلاً.
+A: 0
+B: 1
+C: 2
+D: 3
+
+翻译结果已保存到: abstract_algebra_dev_arabic.csv
+原文:
+question:  Select the best translation into predicate logic: No people drive on Mars.
+A: ~Pd
+B: (∀x)(Px ∨ ~Dx)
+C: (∀x)(Px ⊃ ~Dx)
+D: ~Dp
+翻译:
+question: اختر الترجمة الأفضل إلى منطق الحدس: لا يوجد أشخاص يقودون على المريخ.
+A: ~Pd
+B: (∀x)(Px ∨ ~Dx)
+C: (∀x)(Px ⊃ ~Dx)
+D: ~Dp
+
+原文:
+question: Select the best translation into predicate logic.George borrows Hector's lawnmower. (g: George; h: Hector; l: Hector's lawnmower; Bxyx: x borrows y from z)
+A: Blgh
+B: Bhlg
+C: Bglh
+D: Bghl
+翻译:
+question: اختر أفضل ترجمة إلى منطق الحدود. جورج يستعير جزازة العشب الخاصة بهيكتور. (g: جورج؛ h: هيكتور؛ l: جزازة العشب الخاصة بهيكتور؛ Bxyz: x يستعير y من z)
+A: Blgh
+B: Bhlg
+C: Bglh
+D: Bghl
+
+原文:
+question:  Select the best English interpretation of the given arguments in predicate logic.
+Dm
+(∀x)(Wx ⊃ ~Dx)
+(∀x)Wx ∨ Ag	/ (∃x)Ax
+A: Marina is a dancer. Some weaklings are not dancers. Either everything is a weakling or Georgia plays volleyball. So something plays volleyball.
+B: Marina is a dancer. No weakling is a dancer. Everything is either a weakling or plays volleyball. So something plays volleyball.
+C: Marina is a dancer. Some weaklings are not dancers. Everything is either a weakling or plays volleyball. So something plays volleyball.
+D: Marina is a dancer. No weakling is a dancer. Either everything is a weakling or Georgia plays volleyball. So something plays volleyball.
+翻译:
+question: حدد أفضل تفسير إنجليزي للحجج المعطاة في منطق المتناقضات.
+Dm
+(∀x)(Wx ⊃ ~Dx)
+(∀x)Wx ∨ Ag	/ (∃x)Ax
+A: مارينا راقصة. بعض الضعفاء ليسوا راقصين. إما أن كل شيء ضعيف أو جورجيا تلعب الكرة الطائرة. إذن، هناك شيء يلعب الكرة الطائرة.
+B: مارينا راقصة. لا يوجد ضعيف هو راقص. كل شيء إما ضعيف أو يلعب الكرة الطائرة. إذن، هناك شيء يلعب الكرة الطائرة.
+C: مارينا راقصة. بعض الضعفاء ليسوا راقصين. كل شيء إما ضعيف أو يلعب الكرة الطائرة. إذن، هناك شيء يلعب الكرة الطائرة.
+D: مارينا راقصة. لا يوجد ضعيف هو راقص. إما أن كل شيء ضعيف أو جورجيا تلعب الكرة الطائرة. إذن، هناك شيء يلعب الكرة الطائرة.
+
+原文:
+question:  Construct a complete truth table for the following pairs of propositions. Then, using the truth tables, determine whether the statements are logically equivalent or contradictory. If neither, determine whether they are consistent or inconsistent. Justify your answers.
+E ⊃ (F · E) and ~E · F
+A: Logically equivalent
+B: Contradictory
+C: Neither logically equivalent nor contradictory, but consistent
+D: Inconsistent
+翻译:
+question: قم بإنشاء جدول حقيقة كامل للأزواج التالية من الاقتراحات. ثم، باستخدام جداول الحقيقة، حدد ما إذا كانت العبارات متكافئة منطقيًا أو متناقضة. إذا لم يكن كذلك، حدد ما إذا كانت متسقة أو غير متسقة. قم بتبرير إجاباتك.
+E ⊃ (F · E) و ~E · F
+A: Logically equivalent
+B: Contradictory
+C: Neither logically equivalent nor contradictory, but consistent
+D: Inconsistent
+
+原文:
+question:  Which of the given formulas of PL is the best symbolization of the following sentence?
+Turtles live long lives and are happy creatures, unless they are injured.
+A: (L • H) ≡ I
+B: (L • H) ∨ I
+C: L • (H ∨ I)
+D: L • (H ⊃ R)
+翻译:
+question: أي من الصيغ المعطاة لـ PL هي أفضل رمز للجملة التالية؟
+السلاحف تعيش حياة طويلة وهي مخلوقات سعيدة، ما لم تكن مصابة.
+A: (L • H) ≡ I
+B: (L • H) ∨ I
+C: L • (H ∨ I)
+D: L • (H ⊃ R)
+
+翻译结果已保存到: formal_logic_dev_arabic.csv
+原文:
+question: Let V be the set of all real polynomials p(x). Let transformations T, S be defined on V by T:p(x) -> xp(x) and S:p(x) -> p'(x) = d/dx p(x), and interpret (ST)(p(x)) as S(T(p(x))). Which of the following is true?
+A: ST = 0
+B: ST = T
+C: ST = TS
+D: ST - TS is the identity map of V onto itself.
+翻译:
+question: لتكن V هي مجموعة جميع الدوال المتعددة الحدود الحقيقية p(x). ليتم تعريف التحويلات T، S على V بحيث T:p(x) -> xp(x) و S:p(x) -> p'(x) = d/dx p(x)، وتفسير (ST)(p(x)) كـ S(T(p(x))). أي مما يلي صحيح؟
+A: ST = 0
+B: ST = T
+C: ST = TS
+D: ST - TS هو التطبيق المتماثل لـ V على نفسها.
+
+原文:
+question: A tank initially contains a salt solution of 3 grams of salt dissolved in 100 liters of water. A salt solution containing 0.02 grams of salt per liter of water is sprayed into the tank at a rate of 4 liters per minute. The sprayed solution is continually mixed with the salt solution in the tank, and the mixture flows out of the tank at a rate of 4 liters per minute. If the mixing is instantaneous, how many grams of salt are in the tank after 100 minutes have elapsed?
+A: 2
+B: 2 - e^-2
+C: 2 + e^-2
+D: 2 + e^-4
+翻译:
+question: خزان يحتوي في البداية على محلول ملحي يحتوي على 3 جرامات من الملح مذابة في 100 لتر من الماء. يتم رش محلول ملحي يحتوي على 0.02 جرام من الملح لكل لتر من الماء في الخزان بمعدل 4 لترات في الدقيقة. يتم خلط المحلول المرشوش باستمرار مع المحلول الملحي في الخزان، ويتدفق الخليط خارج الخزان بمعدل 4 لترات في الدقيقة. إذا كان الخلط فوريًا، كم عدد جرامات الملح الموجودة في الخزان بعد مرور 100 دقيقة؟
+A: 2
+B: 2 - e^-2
+C: 2 + e^-2
+D: 2 + e^-4
+
+原文:
+question: Let A be a real 2x2 matrix. Which of the following statements must be true?
+I. All of the entries of A^2 are nonnegative.
+II. The determinant of A^2 is nonnegative.
+III. If A has two distinct eigenvalues, then A^2 has two distinct eigenvalues.
+A: I only
+B: II only
+C: III only
+D: II and III only
+翻译:
+question: لتكن A مصفوفة حقيقية من الرتبة 2x2. أي من العبارات التالية يجب أن تكون صحيحة؟
+I. جميع عناصر A^2 غير سالبة.
+II. محدد A^2 غير سالب.
+III. إذا كانت A تمتلك قيمتين ذاتيتين مختلفتين، فإن A^2 تمتلك قيمتين ذاتيتين مختلفتين.
+A: I فقط
+B: II فقط
+C: III فقط
+D: II و III فقط
+
+原文:
+question: Suppose that f(1 + x) = f(x) for all real x. If f is a polynomial and f(5) = 11, then f(15/2)
+A: -11
+B: 0
+C: 11
+D: 33/2
+翻译:
+question: لنفترض أن f(1 + x) = f(x) لجميع القيم الحقيقية x. إذا كانت f متعددة الحدود و f(5) = 11، فما هو قيمة f(15/2)؟
+A: -11
+B: 0
+C: 11
+D: 33/2
+
+原文:
+question: Let A be the set of all ordered pairs of integers (m, n) such that 7m + 12n = 22. What is the greatest negative number in the set B = {m + n : (m, n) \in A}?
+A: -5
+B: -4
+C: -3
+D: -2
+翻译:
+question: لتكن A هي مجموعة جميع الأزواج المرتبة من الأعداد الصحيحة (m, n) بحيث أن 7m + 12n = 22. ما هو أكبر عدد سالب في المجموعة B = {m + n : (m, n) ∈ A}؟
+A: -5
+B: -4
+C: -3
+D: -2
+
+翻译结果已保存到: college_mathematics_dev_arabic.csv
+原文:
+question: The population of the city where Michelle was born is 145,826. What is the value of the 5 in the number 145,826?
+A: 5 thousands
+B: 5 hundreds
+C: 5 tens
+D: 5 ones
+翻译:
+question: মিশেল যে শহরে জন্মেছিলেন সেই শহরের জনসংখ্যা ১৪৫,৮২৬। ১৪৫,৮২৬ সংখ্যাটিতে ৫ এর মান কত?
+A: ৫ হাজার
+B: ৫ শত
+C: ৫ দশক
+D: ৫ একক
+
+原文:
+question: Olivia used the rule "Add 11" to create the number pattern shown below. 10, 21, 32, 43, 54 Which statement about the number pattern is true?
+A: The 10th number in the pattern will be an even number.
+B: The number pattern will never have two even numbers next to each other.
+C: The next two numbers in the pattern will be an even number then an odd number.
+D: If the number pattern started with an odd number then the pattern would have only odd numbers in it.
+翻译:
+question: Olivia "11 যোগ করো" নিয়ম ব্যবহার করে নিচে দেখানো সংখ্যা ধারাটি তৈরি করেছে। 10, 21, 32, 43, 54 সংখ্যা ধারাটি সম্পর্কে কোন বিবৃতি সত্য?
+A: ধারার 10ম সংখ্যাটি একটি জোড় সংখ্যা হবে।
+B: সংখ্যা ধারাটি কখনও পরপর দুটি জোড় সংখ্যা থাকবে না।
+C: ধারার পরবর্তী দুটি সংখ্যা একটি জোড় সংখ্যা এবং তারপর একটি বিজোড় সংখ্যা হবে।
+D: যদি সংখ্যা ধারাটি একটি বিজোড় সংখ্যা দিয়ে শুরু হতো, তাহলে ধারাটিতে শুধুমাত্র বিজোড় সংখ্যাগুলি থাকত।
+
+原文:
+question: A total of 30 players will play basketball at a park. There will be exactly 5 players on each team. Which statement correctly explains how to find the number of teams needed?
+A: Add 5 to 30 to find 35 teams.
+B: Divide 30 by 5 to find 6 teams.
+C: Multiply 30 and 5 to find 150 teams.
+D: Subtract 5 from 30 to find 25 teams.
+翻译:
+question: একটি পার্কে মোট 30 জন খেলোয়াড় বাস্কেটবল খেলবে। প্রতিটি দলে ঠিক 5 জন খেলোয়াড় থাকবে। কোন বিবৃতি প্রয়োজনীয় দলের সংখ্যা বের করার সঠিক পদ্ধতি ব্যাখ্যা করে?
+A: 30 এর সাথে 5 যোগ করে 35 দল বের করুন।
+B: 30 কে 5 দিয়ে ভাগ করে 6 দল বের করুন।
+C: 30 এবং 5 গুণ করে 150 দল বের করুন।
+D: 30 থেকে 5 বিয়োগ করে 25 দল বের করুন।
+
+原文:
+question: A store sells 107 different colors of paint. They have 25 cans of each color in storage. The number of cans of paint the store has in storage can be found using the expression below. 107 × 25. How many cans of paint does the store have in storage?
+A: 749
+B: 2,675
+C: 2,945
+D: 4,250
+翻译:
+question: একটি দোকানে ১০৭ ভিন্ন ভিন্ন রঙের পেইন্ট বিক্রি হয়। প্রতিটি রঙের ২৫টি করে ক্যান তাদের গুদামে আছে। দোকানের গুদামে মোট কতটি পেইন্টের ক্যান আছে তা নিচের প্রকাশটি ব্যবহার করে বের করা যায়। ১০৭ × ২৫। দোকানের গুদামে মোট কতটি পেইন্টের ক্যান আছে?
+A: 749
+B: 2,675
+C: 2,945
+D: 4,250
+
+原文:
+question: Which expression is equivalent to 5 x 9?
+A: (5 x 4) x (6 x 5)
+B: (5 x 5) + (5 x 4)
+C: (5 x 5) + (5 x 9)
+D: (5 x 9) x (6 x 9)
+翻译:
+question: ৫ x ৯ এর সমতুল্য অভিব্যক্তি কোনটি?
+A: (৫ x ৪) x (৬ x ৫)
+B: (৫ x ৫) + (৫ x ৪)
+C: (৫ x ৫) + (৫ x ৯)
+D: (৫ x ৯) x (৬ x ৯)
+
+翻译结果已保存到: elementary_mathematics_dev_bengali.csv
+原文:
+question: Find all c in Z_3 such that Z_3[x]/(x^2 + c) is a field.
+A: 0
+B: 1
+C: 2
+D: 3
+翻译:
+question: Z_3 এ এমন সব c খুঁজুন যেন Z_3[x]/(x^2 + c) একটি ক্ষেত্র হয়।
+A: 0
+B: 1
+C: 2
+D: 3
+
+原文:
+question: Statement 1 | If aH is an element of a factor group, then |aH| divides |a|. Statement 2 | If H and K are subgroups of G then HK is a subgroup of G.
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+翻译:
+question: বিবৃতি ১ | যদি aH একটি গুণক গোষ্ঠীর উপাদান হয়, তাহলে |aH| দ্বারা |a| বিভাজ্য। বিবৃতি ২ | যদি H এবং K G-র উপগোষ্ঠী হয়, তাহলে HK G-র একটি উপগোষ্ঠী।
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+
+原文:
+question: Statement 1 | Every element of a group generates a cyclic subgroup of the group. Statement 2 | The symmetric group S_10 has 10 elements.
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+翻译:
+question: বিবৃতি ১ | একটি গ্রুপের প্রতিটি উপাদান গ্রুপের একটি চক্রীয় উপগোষ্ঠী উৎপন্ন করে। বিবৃতি ২ | সমমিতি গ্রুপ S_10 এর ১০টি উপাদান রয়েছে।
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+
+原文:
+question: Statement 1| Every function from a finite set onto itself must be one to one. Statement 2 | Every subgroup of an abelian group is abelian.
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+翻译:
+question: বিবৃতি ১| প্রতিটি ফাংশন যা একটি সীমিত সেট থেকে নিজের উপরে ম্যাপ করে তা অবশ্যই এক-একে হতে হবে। বিবৃতি ২ | প্রতিটি অ্যাবেলিয়ান গ্রুপের উপগ্রুপ অ্যাবেলিয়ান হয়।
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+
+原文:
+question: Find the characteristic of the ring 2Z.
+A: 0
+B: 3
+C: 12
+D: 30
+翻译:
+question: 2Z রিংয়ের বৈশিষ্ট্য খুঁজুন।
+A: 0
+B: 3
+C: 12
+D: 30
+
+原文:
+question: 找出所有在 Z_3 中的 c，使得 Z_3[x]/(x^2 + c) 构成一个域。
+A: 0
+B: 1
+C: 2
+D: 3
+翻译:
+question: Z_3 এ সমস্ত c খুঁজে বের কর, যাতে Z_3[x]/(x^2 + c) একটি ক্ষেত্র গঠন করে।
+A: 0
+B: 1
+C: 2
+D: 3
+
+翻译结果已保存到: abstract_algebra_dev_bengali.csv
+原文:
+question:  Select the best translation into predicate logic: No people drive on Mars.
+A: ~Pd
+B: (∀x)(Px ∨ ~Dx)
+C: (∀x)(Px ⊃ ~Dx)
+D: ~Dp
+翻译:
+question: প্রেডিকেট লজিকে সেরা অনুবাদ নির্বাচন করুন: মঙ্গল গ্রহে কোনো মানুষ গাড়ি চালায় না।
+A: ~Pd
+B: (∀x)(Px ∨ ~Dx)
+C: (∀x)(Px ⊃ ~Dx)
+D: ~Dp
+
+原文:
+question: Select the best translation into predicate logic.George borrows Hector's lawnmower. (g: George; h: Hector; l: Hector's lawnmower; Bxyx: x borrows y from z)
+A: Blgh
+B: Bhlg
+C: Bglh
+D: Bghl
+翻译:
+question: প্রেডিকেট লজিকে সেরা অনুবাদ নির্বাচন করুন। জর্জ হেক্টরের লনমোয়ার ধার করে। (g: জর্জ; h: হেক্টর; l: হেক্টরের লনমোয়ার; Bxyx: x y-কে z থেকে ধার করে)
+A: Blgh
+B: Bhlg
+C: Bglh
+D: Bghl
+
+原文:
+question:  Select the best English interpretation of the given arguments in predicate logic.
+Dm
+(∀x)(Wx ⊃ ~Dx)
+(∀x)Wx ∨ Ag	/ (∃x)Ax
+A: Marina is a dancer. Some weaklings are not dancers. Either everything is a weakling or Georgia plays volleyball. So something plays volleyball.
+B: Marina is a dancer. No weakling is a dancer. Everything is either a weakling or plays volleyball. So something plays volleyball.
+C: Marina is a dancer. Some weaklings are not dancers. Everything is either a weakling or plays volleyball. So something plays volleyball.
+D: Marina is a dancer. No weakling is a dancer. Either everything is a weakling or Georgia plays volleyball. So something plays volleyball.
+翻译:
+question: নির্দিষ্ট যুক্তিগুলির সেরা ইংরেজি ব্যাখ্যা নির্বাচন করুন।
+Dm
+(∀x)(Wx ⊃ ~Dx)
+(∀x)Wx ∨ Ag	/ (∃x)Ax
+A: Marina একজন নর্তকী। কিছু দুর্বল ব্যক্তি নর্তকী নন। প্রত্যেকটি হয় দুর্বল বা Georgia ভলিবল খেলে। তাই কিছু একটা ভলিবল খেলে।
+B: Marina একজন নর্তকী। কোনো দুর্বল ব্যক্তি নর্তকী নন। প্রত্যেকটি হয় দুর্বল বা ভলিবল খেলে। তাই কিছু একটা ভলিবল খেলে।
+C: Marina একজন নর্তকী। কিছু দুর্বল ব্যক্তি নর্তকী নন। প্রত্যেকটি হয় দুর্বল বা ভলিবল খেলে। তাই কিছু একটা ভলিবল খেলে।
+D: Marina একজন নর্তকী। কোনো দুর্বল ব্যক্তি নর্তকী নন। প্রত্যেকটি হয় দুর্বল বা Georgia ভলিবল খেলে। তাই কিছু একটা ভলিবল খেলে।
+
+原文:
+question:  Construct a complete truth table for the following pairs of propositions. Then, using the truth tables, determine whether the statements are logically equivalent or contradictory. If neither, determine whether they are consistent or inconsistent. Justify your answers.
+E ⊃ (F · E) and ~E · F
+A: Logically equivalent
+B: Contradictory
+C: Neither logically equivalent nor contradictory, but consistent
+D: Inconsistent
+翻译:
+question: নিম্নলিখিত প্রস্তাব জোড়ের জন্য একটি সম্পূর্ণ সত্য টেবিল তৈরি করুন। তারপর, সত্য টেবিলগুলি ব্যবহার করে, নির্ধারণ করুন যে বিবৃতিগুলি যুক্তিসঙ্গতভাবে সমতুল্য নাকি বিরোধী। যদি কোনটিই না হয়, তাহলে নির্ধারণ করুন যে তারা সামঞ্জস্যপূর্ণ নাকি অসামঞ্জস্যপূর্ণ। আপনার উত্তরগুলি যুক্তিসঙ্গত করে ব্যাখ্যা করুন।
+E ⊃ (F · E) এবং ~E · F
+A: Logically equivalent
+B: Contradictory
+C: Neither logically equivalent nor contradictory, but consistent
+D: Inconsistent
+
+原文:
+question:  Which of the given formulas of PL is the best symbolization of the following sentence?
+Turtles live long lives and are happy creatures, unless they are injured.
+A: (L • H) ≡ I
+B: (L • H) ∨ I
+C: L • (H ∨ I)
+D: L • (H ⊃ R)
+翻译:
+question: নিচের বাক্যটির সেরা প্রতীকীকরণ হিসেবে PL-এর দেওয়া সূত্রগুলির মধ্যে কোনটি?
+কচ্ছপরা দীর্ঘ জীবন যাপন করে এবং সুখী প্রাণী, যদি না তারা আহত হয়।
+A: (L • H) ≡ I
+B: (L • H) ∨ I
+C: L • (H ∨ I)
+D: L • (H ⊃ R)
+
+翻译结果已保存到: formal_logic_dev_bengali.csv
+原文:
+question: Let V be the set of all real polynomials p(x). Let transformations T, S be defined on V by T:p(x) -> xp(x) and S:p(x) -> p'(x) = d/dx p(x), and interpret (ST)(p(x)) as S(T(p(x))). Which of the following is true?
+A: ST = 0
+B: ST = T
+C: ST = TS
+D: ST - TS is the identity map of V onto itself.
+翻译:
+question: V হোক সমস্ত বাস্তব বহুপদী p(x) এর সেট। পরিবর্তনগুলি T, S কে V এ নির্ধারিত করা হোক T: p(x) -> xp(x) এবং S: p(x) -> p'(x) = d/dx p(x) হিসেবে, এবং (ST)(p(x)) কে S(T(p(x))) হিসেবে ব্যাখ্যা করুন। নিম্নলিখিত কোনটি সত্য?
+A: ST = 0
+B: ST = T
+C: ST = TS
+D: ST - TS হল V এর উপর নিজের পরিচয় মানচিত্র।
+
+原文:
+question: A tank initially contains a salt solution of 3 grams of salt dissolved in 100 liters of water. A salt solution containing 0.02 grams of salt per liter of water is sprayed into the tank at a rate of 4 liters per minute. The sprayed solution is continually mixed with the salt solution in the tank, and the mixture flows out of the tank at a rate of 4 liters per minute. If the mixing is instantaneous, how many grams of salt are in the tank after 100 minutes have elapsed?
+A: 2
+B: 2 - e^-2
+C: 2 + e^-2
+D: 2 + e^-4
+翻译:
+question: একটি ট্যাংকে প্রাথমিকভাবে ৩ গ্রাম লবণ দ্রবীভূত করা আছে ১০০ লিটার পানিতে। প্রতি লিটার পানিতে ০.০২ গ্রাম লবণ সমৃদ্ধ একটি লবণের দ্রবণ ৪ লিটার প্রতি মিনিটের হারে ট্যাংকে স্প্রে করা হয়। স্প্রে করা দ্রবণটি ট্যাংকের লবণের দ্রবণের সাথে ক্রমাগত মিশ্রিত হয়, এবং মিশ্রণটি ট্যাংক থেকে ৪ লিটার প্রতি মিনিটের হারে বের হয়। যদি মিশ্রণটি তাৎক্ষণিক হয়, তাহলে ১০০ মিনিট পরে ট্যাংকে কত গ্রাম লবণ থাকবে?
+A: 2
+B: 2 - e^-2
+C: 2 + e^-2
+D: 2 + e^-4
+
+原文:
+question: Let A be a real 2x2 matrix. Which of the following statements must be true?
+I. All of the entries of A^2 are nonnegative.
+II. The determinant of A^2 is nonnegative.
+III. If A has two distinct eigenvalues, then A^2 has two distinct eigenvalues.
+A: I only
+B: II only
+C: III only
+D: II and III only
+翻译:
+question: A একটি বাস্তব 2x2 ম্যাট্রিক্স হোক। নিচের কোন বিবৃতিটি অবশ্যই সত্য হতে হবে?
+I. A^2 এর সমস্ত উপাদান অ-নেগেটিভ।
+II. A^2 এর ডিটারমিন্যান্ট অ-নেগেটিভ।
+III. যদি A এর দুটি পৃথক আইগেনভ্যালু থাকে, তাহলে A^2 এরও দুটি পৃথক আইগেনভ্যালু থাকবে।
+A: I only
+B: II only
+C: III only
+D: II and III only
+
+原文:
+question: Suppose that f(1 + x) = f(x) for all real x. If f is a polynomial and f(5) = 11, then f(15/2)
+A: -11
+B: 0
+C: 11
+D: 33/2
+翻译:
+question: ধরা যাক f(1 + x) = f(x) সকল বাস্তব x এর জন্য। যদি f একটি বহুপদী হয় এবং f(5) = 11, তাহলে f(15/2)
+A: -11
+B: 0
+C: 11
+D: 33/2
+
+原文:
+question: Let A be the set of all ordered pairs of integers (m, n) such that 7m + 12n = 22. What is the greatest negative number in the set B = {m + n : (m, n) \in A}?
+A: -5
+B: -4
+C: -3
+D: -2
+翻译:
+question: A হোক সমস্ত পূর্ণসংখ্যার ক্রমানুসারে যুগল (m, n) এর সেট যেখানে 7m + 12n = 22। B = {m + n : (m, n) ∈ A} সেটের মধ্যে সর্বাধিক নেগেটিভ সংখ্যা কি?
+A: -5
+B: -4
+C: -3
+D: -2
+
+翻译结果已保存到: college_mathematics_dev_bengali.csv
+原文:
+question: The population of the city where Michelle was born is 145,826. What is the value of the 5 in the number 145,826?
+A: 5 thousands
+B: 5 hundreds
+C: 5 tens
+D: 5 ones
+翻译:
+question: A população da cidade onde Michelle nasceu é de 145.826. Qual é o valor do 5 no número 145.826?
+A: 5 milhares
+B: 5 centenas
+C: 5 dezenas
+D: 5 unidades
+
+原文:
+question: Olivia used the rule "Add 11" to create the number pattern shown below. 10, 21, 32, 43, 54 Which statement about the number pattern is true?
+A: The 10th number in the pattern will be an even number.
+B: The number pattern will never have two even numbers next to each other.
+C: The next two numbers in the pattern will be an even number then an odd number.
+D: If the number pattern started with an odd number then the pattern would have only odd numbers in it.
+翻译:
+question: Olivia usou a regra "Adicionar 11" para criar o padrão numérico mostrado abaixo. 10, 21, 32, 43, 54 Qual afirmação sobre o padrão numérico é verdadeira?
+A: O 10º número no padrão será um número par.
+B: O padrão numérico nunca terá dois números pares um ao lado do outro.
+C: Os próximos dois números no padrão serão um número par seguido de um número ímpar.
+D: Se o padrão numérico começasse com um número ímpar, então o padrão teria apenas números ímpares.
+
+原文:
+question: A total of 30 players will play basketball at a park. There will be exactly 5 players on each team. Which statement correctly explains how to find the number of teams needed?
+A: Add 5 to 30 to find 35 teams.
+B: Divide 30 by 5 to find 6 teams.
+C: Multiply 30 and 5 to find 150 teams.
+D: Subtract 5 from 30 to find 25 teams.
+翻译:
+question: Um total de 30 jogadores jogará basquete em um parque. Haverá exatamente 5 jogadores em cada equipe. Qual afirmação explica corretamente como encontrar o número de equipes necessário?
+A: Add 5 to 30 to find 35 teams.
+B: Divide 30 by 5 to find 6 teams.
+C: Multiply 30 and 5 to find 150 teams.
+D: Subtract 5 from 30 to find 25 teams.
+
+原文:
+question: A store sells 107 different colors of paint. They have 25 cans of each color in storage. The number of cans of paint the store has in storage can be found using the expression below. 107 × 25. How many cans of paint does the store have in storage?
+A: 749
+B: 2,675
+C: 2,945
+D: 4,250
+翻译:
+question: Uma loja vende 107 cores diferentes de tinta. Eles têm 25 latas de cada cor em estoque. O número de latas de tinta que a loja tem em estoque pode ser encontrado usando a expressão abaixo. 107 × 25. Quantas latas de tinta a loja tem em estoque?
+A: 749
+B: 2,675
+C: 2,945
+D: 4,250
+
+原文:
+question: Which expression is equivalent to 5 x 9?
+A: (5 x 4) x (6 x 5)
+B: (5 x 5) + (5 x 4)
+C: (5 x 5) + (5 x 9)
+D: (5 x 9) x (6 x 9)
+翻译:
+question: Qual expressão é equivalente a 5 x 9?
+A: (5 x 4) x (6 x 5)
+B: (5 x 5) + (5 x 4)
+C: (5 x 5) + (5 x 9)
+D: (5 x 9) x (6 x 9)
+
+翻译结果已保存到: elementary_mathematics_dev_portuguese.csv
+原文:
+question: Find all c in Z_3 such that Z_3[x]/(x^2 + c) is a field.
+A: 0
+B: 1
+C: 2
+D: 3
+翻译:
+question: Encontre todos os c em Z_3 tais que Z_3[x]/(x^2 + c) seja um campo.
+A: 0
+B: 1
+C: 2
+D: 3
+
+原文:
+question: Statement 1 | If aH is an element of a factor group, then |aH| divides |a|. Statement 2 | If H and K are subgroups of G then HK is a subgroup of G.
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+翻译:
+question: Declaração 1 | Se aH é um elemento de um grupo quociente, então |aH| divide |a|. Declaração 2 | Se H e K são subgrupos de G, então HK é um subgrupo de G.
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+
+原文:
+question: Statement 1 | Every element of a group generates a cyclic subgroup of the group. Statement 2 | The symmetric group S_10 has 10 elements.
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+翻译:
+question: Declaração 1 | Todo elemento de um grupo gera um subgrupo cíclico do grupo. Declaração 2 | O grupo simétrico S_10 possui 10 elementos.
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+
+原文:
+question: Statement 1| Every function from a finite set onto itself must be one to one. Statement 2 | Every subgroup of an abelian group is abelian.
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+翻译:
+question: Declaração 1| Toda função de um conjunto finito sobre si mesmo deve ser injetiva. Declaração 2 | Todo subgrupo de um grupo abeliano é abeliano.
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+
+原文:
+question: Find the characteristic of the ring 2Z.
+A: 0
+B: 3
+C: 12
+D: 30
+翻译:
+question: Encontre a característica do anel 2Z.
+A: 0
+B: 3
+C: 12
+D: 30
+
+原文:
+question: 找出所有在 Z_3 中的 c，使得 Z_3[x]/(x^2 + c) 构成一个域。
+A: 0
+B: 1
+C: 2
+D: 3
+翻译:
+question: Encontre todos os c em Z_3 tais que Z_3[x]/(x^2 + c) forme um campo.
+A: 0
+B: 1
+C: 2
+D: 3
+
+翻译结果已保存到: abstract_algebra_dev_portuguese.csv
+原文:
+question:  Select the best translation into predicate logic: No people drive on Mars.
+A: ~Pd
+B: (∀x)(Px ∨ ~Dx)
+C: (∀x)(Px ⊃ ~Dx)
+D: ~Dp
+翻译:
+question: Selecione a melhor tradução para lógica de predicados: Nenhuma pessoa dirige em Marte.
+A: ~Pd
+B: (∀x)(Px ∨ ~Dx)
+C: (∀x)(Px ⊃ ~Dx)
+D: ~Dp
+
+原文:
+question: Select the best translation into predicate logic.George borrows Hector's lawnmower. (g: George; h: Hector; l: Hector's lawnmower; Bxyx: x borrows y from z)
+A: Blgh
+B: Bhlg
+C: Bglh
+D: Bghl
+翻译:
+question: Selecione a melhor tradução para lógica de predicados. George pega emprestado o cortador de grama de Hector. (g: George; h: Hector; l: cortador de grama de Hector; Bxyz: x pega emprestado y de z)
+A: Blgh
+B: Bhlg
+C: Bglh
+D: Bghl
+
+原文:
+question:  Select the best English interpretation of the given arguments in predicate logic.
+Dm
+(∀x)(Wx ⊃ ~Dx)
+(∀x)Wx ∨ Ag	/ (∃x)Ax
+A: Marina is a dancer. Some weaklings are not dancers. Either everything is a weakling or Georgia plays volleyball. So something plays volleyball.
+B: Marina is a dancer. No weakling is a dancer. Everything is either a weakling or plays volleyball. So something plays volleyball.
+C: Marina is a dancer. Some weaklings are not dancers. Everything is either a weakling or plays volleyball. So something plays volleyball.
+D: Marina is a dancer. No weakling is a dancer. Either everything is a weakling or Georgia plays volleyball. So something plays volleyball.
+翻译:
+question: Selecione a melhor interpretação em inglês dos argumentos dados em lógica de predicados.
+Dm
+(∀x)(Wx ⊃ ~Dx)
+(∀x)Wx ∨ Ag	/ (∃x)Ax
+A: Marina é uma dançarina. Alguns fracos não são dançarinos. Ou tudo é fraco ou Georgia joga vôlei. Então, algo joga vôlei.
+B: Marina é uma dançarina. Nenhum fraco é dançarino. Tudo é ou fraco ou joga vôlei. Então, algo joga vôlei.
+C: Marina é uma dançarina. Alguns fracos não são dançarinos. Tudo é ou fraco ou joga vôlei. Então, algo joga vôlei.
+D: Marina é uma dançarina. Nenhum fraco é dançarino. Ou tudo é fraco ou Georgia joga vôlei. Então, algo joga vôlei.
+
+原文:
+question:  Construct a complete truth table for the following pairs of propositions. Then, using the truth tables, determine whether the statements are logically equivalent or contradictory. If neither, determine whether they are consistent or inconsistent. Justify your answers.
+E ⊃ (F · E) and ~E · F
+A: Logically equivalent
+B: Contradictory
+C: Neither logically equivalent nor contradictory, but consistent
+D: Inconsistent
+翻译:
+question: Construa uma tabela de verdade completa para os seguintes pares de proposições. Em seguida, usando as tabelas de verdade, determine se as declarações são logicamente equivalentes ou contraditórias. Se não forem, determine se são consistentes ou inconsistentes. Justifique suas respostas.
+E ⊃ (F · E) e ~E · F
+A: Logicamente equivalentes
+B: Contraditórias
+C: Nem logicamente equivalentes nem contraditórias, mas consistentes
+D: Inconsistentes
+
+原文:
+question:  Which of the given formulas of PL is the best symbolization of the following sentence?
+Turtles live long lives and are happy creatures, unless they are injured.
+A: (L • H) ≡ I
+B: (L • H) ∨ I
+C: L • (H ∨ I)
+D: L • (H ⊃ R)
+翻译:
+question: Qual das fórmulas de PL é a melhor simbolização da seguinte frase?
+As tartarugas vivem vidas longas e são criaturas felizes, a menos que estejam feridas.
+A: (L • H) ≡ I
+B: (L • H) ∨ I
+C: L • (H ∨ I)
+D: L • (H ⊃ R)
+
+翻译结果已保存到: formal_logic_dev_portuguese.csv
+原文:
+question: Let V be the set of all real polynomials p(x). Let transformations T, S be defined on V by T:p(x) -> xp(x) and S:p(x) -> p'(x) = d/dx p(x), and interpret (ST)(p(x)) as S(T(p(x))). Which of the following is true?
+A: ST = 0
+B: ST = T
+C: ST = TS
+D: ST - TS is the identity map of V onto itself.
+翻译:
+question: Seja V o conjunto de todos os polinômios reais p(x). Definam-se as transformações T, S em V por T:p(x) -> xp(x) e S:p(x) -> p'(x) = d/dx p(x), e interprete (ST)(p(x)) como S(T(p(x))). Qual das seguintes afirmações é verdadeira?
+A: ST = 0
+B: ST = T
+C: ST = TS
+D: ST - TS é o mapa identidade de V em si mesmo.
+
+原文:
+question: A tank initially contains a salt solution of 3 grams of salt dissolved in 100 liters of water. A salt solution containing 0.02 grams of salt per liter of water is sprayed into the tank at a rate of 4 liters per minute. The sprayed solution is continually mixed with the salt solution in the tank, and the mixture flows out of the tank at a rate of 4 liters per minute. If the mixing is instantaneous, how many grams of salt are in the tank after 100 minutes have elapsed?
+A: 2
+B: 2 - e^-2
+C: 2 + e^-2
+D: 2 + e^-4
+翻译:
+question: Um tanque inicialmente contém uma solução salina de 3 gramas de sal dissolvidos em 100 litros de água. Uma solução salina contendo 0,02 gramas de sal por litro de água é pulverizada no tanque a uma taxa de 4 litros por minuto. A solução pulverizada é continuamente misturada com a solução salina no tanque, e a mistura flui para fora do tanque à taxa de 4 litros por minuto. Se a mistura é instantânea, quantos gramas de sal estão no tanque após 100 minutos?
+A: 2
+B: 2 - e^-2
+C: 2 + e^-2
+D: 2 + e^-4
+
+原文:
+question: Let A be a real 2x2 matrix. Which of the following statements must be true?
+I. All of the entries of A^2 are nonnegative.
+II. The determinant of A^2 is nonnegative.
+III. If A has two distinct eigenvalues, then A^2 has two distinct eigenvalues.
+A: I only
+B: II only
+C: III only
+D: II and III only
+翻译:
+question: Seja A uma matriz real 2x2. Qual das seguintes afirmações deve ser verdadeira?
+I. Todas as entradas de A^2 são não negativas.
+II. O determinante de A^2 é não negativo.
+III. Se A tem dois autovalores distintos, então A^2 tem dois autovalores distintos.
+A: I only
+B: II only
+C: III only
+D: II and III only
+
+原文:
+question: Suppose that f(1 + x) = f(x) for all real x. If f is a polynomial and f(5) = 11, then f(15/2)
+A: -11
+B: 0
+C: 11
+D: 33/2
+翻译:
+question: Suponha que f(1 + x) = f(x) para todos os x reais. Se f é um polinômio e f(5) = 11, então f(15/2)
+A: -11
+B: 0
+C: 11
+D: 33/2
+
+原文:
+question: Let A be the set of all ordered pairs of integers (m, n) such that 7m + 12n = 22. What is the greatest negative number in the set B = {m + n : (m, n) \in A}?
+A: -5
+B: -4
+C: -3
+D: -2
+翻译:
+question: Seja A o conjunto de todos os pares ordenados de inteiros (m, n) tais que 7m + 12n = 22. Qual é o maior número negativo no conjunto B = {m + n : (m, n) \in A}?
+A: -5
+B: -4
+C: -3
+D: -2
+
+翻译结果已保存到: college_mathematics_dev_portuguese.csv
+原文:
+question: The population of the city where Michelle was born is 145,826. What is the value of the 5 in the number 145,826?
+A: 5 thousands
+B: 5 hundreds
+C: 5 tens
+D: 5 ones
+翻译:
+question: Население города, где родилась Мишель, составляет 145,826. Каково значение цифры 5 в числе 145,826?
+A: 5 тысяч
+B: 5 сотен
+C: 5 десятков
+D: 5 единиц
+
+原文:
+question: Olivia used the rule "Add 11" to create the number pattern shown below. 10, 21, 32, 43, 54 Which statement about the number pattern is true?
+A: The 10th number in the pattern will be an even number.
+B: The number pattern will never have two even numbers next to each other.
+C: The next two numbers in the pattern will be an even number then an odd number.
+D: If the number pattern started with an odd number then the pattern would have only odd numbers in it.
+翻译:
+question: Оливия использовала правило "Добавить 11", чтобы создать показанный ниже числовой ряд. 10, 21, 32, 43, 54. Какое утверждение о числовом ряде верно?
+A: Десятое число в ряду будет четным.
+B: В числовом ряду никогда не будет двух четных чисел подряд.
+C: Следующие два числа в ряду будут сначала четным, а затем нечетным.
+D: Если бы числовой ряд начинался с нечетного числа, то в ряду были бы только нечетные числа.
+
+原文:
+question: A total of 30 players will play basketball at a park. There will be exactly 5 players on each team. Which statement correctly explains how to find the number of teams needed?
+A: Add 5 to 30 to find 35 teams.
+B: Divide 30 by 5 to find 6 teams.
+C: Multiply 30 and 5 to find 150 teams.
+D: Subtract 5 from 30 to find 25 teams.
+翻译:
+question: В парке будут играть в баскетбол 30 игроков. В каждой команде будет ровно 5 игроков. Какое утверждение правильно объясняет, как найти необходимое количество команд?
+A: Add 5 to 30 to find 35 teams.
+B: Divide 30 by 5 to find 6 teams.
+C: Multiply 30 and 5 to find 150 teams.
+D: Subtract 5 from 30 to find 25 teams.
+
+原文:
+question: A store sells 107 different colors of paint. They have 25 cans of each color in storage. The number of cans of paint the store has in storage can be found using the expression below. 107 × 25. How many cans of paint does the store have in storage?
+A: 749
+B: 2,675
+C: 2,945
+D: 4,250
+翻译:
+question: Магазин продает 107 различных цветов краски. На складе имеется 25 банок каждого цвета. Количество банок краски на складе можно найти, используя следующее выражение: 107 × 25. Сколько банок краски есть на складе?
+A: 749
+B: 2,675
+C: 2,945
+D: 4,250
+
+原文:
+question: Which expression is equivalent to 5 x 9?
+A: (5 x 4) x (6 x 5)
+B: (5 x 5) + (5 x 4)
+C: (5 x 5) + (5 x 9)
+D: (5 x 9) x (6 x 9)
+翻译:
+question: Какое выражение эквивалентно 5 x 9?
+A: (5 x 4) x (6 x 5)
+B: (5 x 5) + (5 x 4)
+C: (5 x 5) + (5 x 9)
+D: (5 x 9) x (6 x 9)
+
+翻译结果已保存到: elementary_mathematics_dev_russian.csv
+原文:
+question: Find all c in Z_3 such that Z_3[x]/(x^2 + c) is a field.
+A: 0
+B: 1
+C: 2
+D: 3
+翻译:
+question: Найдите все c в Z_3 такие, что Z_3[x]/(x^2 + c) является полем.
+A: 0
+B: 1
+C: 2
+D: 3
+
+原文:
+question: Statement 1 | If aH is an element of a factor group, then |aH| divides |a|. Statement 2 | If H and K are subgroups of G then HK is a subgroup of G.
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+翻译:
+question: Утверждение 1 | Если aH является элементом факторгруппы, то |aH| делит |a|. Утверждение 2 | Если H и K являются подгруппами G, то HK является подгруппой G.
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+
+原文:
+question: Statement 1 | Every element of a group generates a cyclic subgroup of the group. Statement 2 | The symmetric group S_10 has 10 elements.
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+翻译:
+question: Утверждение 1 | Каждый элемент группы порождает циклическую подгруппу этой группы. Утверждение 2 | Симметрическая группа S_10 имеет 10 элементов.
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+
+原文:
+question: Statement 1| Every function from a finite set onto itself must be one to one. Statement 2 | Every subgroup of an abelian group is abelian.
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+翻译:
+question: Утверждение 1| Каждая функция из конечного множества на себя должна быть инъективной. Утверждение 2 | Каждая подгруппа абелевой группы является абелевой.
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+
+原文:
+question: Find the characteristic of the ring 2Z.
+A: 0
+B: 3
+C: 12
+D: 30
+翻译:
+question: Найдите характеристику кольца 2Z.
+A: 0
+B: 3
+C: 12
+D: 30
+
+原文:
+question: 找出所有在 Z_3 中的 c，使得 Z_3[x]/(x^2 + c) 构成一个域。
+A: 0
+B: 1
+C: 2
+D: 3
+翻译:
+question: Найдите все c в Z_3, для которых Z_3[x]/(x^2 + c) образует поле.
+A: 0
+B: 1
+C: 2
+D: 3
+
+翻译结果已保存到: abstract_algebra_dev_russian.csv
+原文:
+question:  Select the best translation into predicate logic: No people drive on Mars.
+A: ~Pd
+B: (∀x)(Px ∨ ~Dx)
+C: (∀x)(Px ⊃ ~Dx)
+D: ~Dp
+翻译:
+question: Выберите лучший перевод на язык предикатов: Никто не водит машину на Марсе.
+A: ~Pd
+B: (∀x)(Px ∨ ~Dx)
+C: (∀x)(Px ⊃ ~Dx)
+D: ~Dp
+
+原文:
+question: Select the best translation into predicate logic.George borrows Hector's lawnmower. (g: George; h: Hector; l: Hector's lawnmower; Bxyx: x borrows y from z)
+A: Blgh
+B: Bhlg
+C: Bglh
+D: Bghl
+翻译:
+question: Выберите лучший перевод на язык предикатов. Джордж берет в аренду газонокосилку Гектора. (g: Джордж; h: Гектор; l: газонокосилка Гектора; Bxyz: x берет в аренду y у z)
+A: Blgh
+B: Bhlg
+C: Bglh
+D: Bghl
+
+原文:
+question:  Select the best English interpretation of the given arguments in predicate logic.
+Dm
+(∀x)(Wx ⊃ ~Dx)
+(∀x)Wx ∨ Ag	/ (∃x)Ax
+A: Marina is a dancer. Some weaklings are not dancers. Either everything is a weakling or Georgia plays volleyball. So something plays volleyball.
+B: Marina is a dancer. No weakling is a dancer. Everything is either a weakling or plays volleyball. So something plays volleyball.
+C: Marina is a dancer. Some weaklings are not dancers. Everything is either a weakling or plays volleyball. So something plays volleyball.
+D: Marina is a dancer. No weakling is a dancer. Either everything is a weakling or Georgia plays volleyball. So something plays volleyball.
+翻译:
+question: Выберите лучший английский перевод предложенных аргументов в предикативной логике.
+Dm
+(∀x)(Wx ⊃ ~Dx)
+(∀x)Wx ∨ Ag	/ (∃x)Ax
+A: Марина танцовщица. Некоторые слабаки не танцоры. Либо все слабаки, либо Джорджия играет в волейбол. Значит, кто-то играет в волейбол.
+B: Марина танцовщица. Ни один слабак не является танцором. Все либо слабаки, либо играют в волейбол. Значит, кто-то играет в волейбол.
+C: Марина танцовщица. Некоторые слабаки не танцоры. Все либо слабаки, либо играют в волейбол. Значит, кто-то играет в волейбол.
+D: Марина танцовщица. Ни один слабак не является танцором. Либо все слабаки, либо Джорджия играет в волейбол. Значит, кто-то играет в волейбол.
+
+原文:
+question:  Construct a complete truth table for the following pairs of propositions. Then, using the truth tables, determine whether the statements are logically equivalent or contradictory. If neither, determine whether they are consistent or inconsistent. Justify your answers.
+E ⊃ (F · E) and ~E · F
+A: Logically equivalent
+B: Contradictory
+C: Neither logically equivalent nor contradictory, but consistent
+D: Inconsistent
+翻译:
+question: Постройте полную таблицу истинности для следующих пар высказываний. Затем, используя таблицы истинности, определите, являются ли утверждения логически эквивалентными или противоречивыми. Если ни то, ни другое, определите, являются ли они согласованными или несогласованными. Обоснуйте свои ответы.
+E ⊃ (F · E) и ~E · F
+A: Logically equivalent
+B: Contradictory
+C: Neither logically equivalent nor contradictory, but consistent
+D: Inconsistent
+
+原文:
+question:  Which of the given formulas of PL is the best symbolization of the following sentence?
+Turtles live long lives and are happy creatures, unless they are injured.
+A: (L • H) ≡ I
+B: (L • H) ∨ I
+C: L • (H ∨ I)
+D: L • (H ⊃ R)
+翻译:
+question: Какая из предложенных формул PL наилучшим образом символизирует следующее предложение?
+Черепахи живут долго и счастливы, если только они не пострадали.
+A: (L • H) ≡ I
+B: (L • H) ∨ I
+C: L • (H ∨ I)
+D: L • (H ⊃ R)
+
+翻译结果已保存到: formal_logic_dev_russian.csv
+原文:
+question: Let V be the set of all real polynomials p(x). Let transformations T, S be defined on V by T:p(x) -> xp(x) and S:p(x) -> p'(x) = d/dx p(x), and interpret (ST)(p(x)) as S(T(p(x))). Which of the following is true?
+A: ST = 0
+B: ST = T
+C: ST = TS
+D: ST - TS is the identity map of V onto itself.
+翻译:
+question: Пусть V - множество всех действительных полиномов p(x). Определим преобразования T, S на V так, что T:p(x) -> xp(x) и S:p(x) -> p'(x) = d/dx p(x), и интерпретируем (ST)(p(x)) как S(T(p(x))). Какое из следующих утверждений верно?
+A: ST = 0
+B: ST = T
+C: ST = TS
+D: ST - TS является тождественным отображением V на себя.
+
+原文:
+question: A tank initially contains a salt solution of 3 grams of salt dissolved in 100 liters of water. A salt solution containing 0.02 grams of salt per liter of water is sprayed into the tank at a rate of 4 liters per minute. The sprayed solution is continually mixed with the salt solution in the tank, and the mixture flows out of the tank at a rate of 4 liters per minute. If the mixing is instantaneous, how many grams of salt are in the tank after 100 minutes have elapsed?
+A: 2
+B: 2 - e^-2
+C: 2 + e^-2
+D: 2 + e^-4
+翻译:
+question: В баке изначально находится солевой раствор, содержащий 3 грамма соли, растворенной в 100 литрах воды. В бак распыляется солевой раствор, содержащий 0,02 грамма соли на литр воды, со скоростью 4 литра в минуту. Распыленный раствор непрерывно смешивается с солевым раствором в баке, и смесь вытекает из бака со скоростью 4 литра в минуту. Если смешивание мгновенное, сколько граммов соли будет в баке после того, как пройдет 100 минут?
+A: 2
+B: 2 - e^-2
+C: 2 + e^-2
+D: 2 + e^-4
+
+原文:
+question: Let A be a real 2x2 matrix. Which of the following statements must be true?
+I. All of the entries of A^2 are nonnegative.
+II. The determinant of A^2 is nonnegative.
+III. If A has two distinct eigenvalues, then A^2 has two distinct eigenvalues.
+A: I only
+B: II only
+C: III only
+D: II and III only
+翻译:
+question: Пусть A будет действительной матрицей 2x2. Какое из следующих утверждений обязательно верно?
+I. Все элементы матрицы A^2 неотрицательны.
+II. Определитель A^2 неотрицателен.
+III. Если у A есть два различных собственных значения, то у A^2 тоже будут два различных собственных значения.
+A: I only
+B: II only
+C: III only
+D: II and III only
+
+原文:
+question: Suppose that f(1 + x) = f(x) for all real x. If f is a polynomial and f(5) = 11, then f(15/2)
+A: -11
+B: 0
+C: 11
+D: 33/2
+翻译:
+question: Предположим, что f(1 + x) = f(x) для всех действительных x. Если f - полином и f(5) = 11, то f(15/2)
+A: -11
+B: 0
+C: 11
+D: 33/2
+
+原文:
+question: Let A be the set of all ordered pairs of integers (m, n) such that 7m + 12n = 22. What is the greatest negative number in the set B = {m + n : (m, n) \in A}?
+A: -5
+B: -4
+C: -3
+D: -2
+翻译:
+question: Пусть A будет множеством всех упорядоченных пар целых чисел (m, n), таких что 7m + 12n = 22. Какое наибольшее отрицательное число в множестве B = {m + n : (m, n) ∈ A}?
+A: -5
+B: -4
+C: -3
+D: -2
+
+翻译结果已保存到: college_mathematics_dev_russian.csv
+原文:
+question: The population of the city where Michelle was born is 145,826. What is the value of the 5 in the number 145,826?
+A: 5 thousands
+B: 5 hundreds
+C: 5 tens
+D: 5 ones
+翻译:
+question: ミシェルが生まれた街の人口は145,826人です。数字145,826の中の5の値は何ですか？
+A: 5 thousands
+B: 5 hundreds
+C: 5 tens
+D: 5 ones
+
+原文:
+question: Olivia used the rule "Add 11" to create the number pattern shown below. 10, 21, 32, 43, 54 Which statement about the number pattern is true?
+A: The 10th number in the pattern will be an even number.
+B: The number pattern will never have two even numbers next to each other.
+C: The next two numbers in the pattern will be an even number then an odd number.
+D: If the number pattern started with an odd number then the pattern would have only odd numbers in it.
+翻译:
+question: Oliviaが「11を足す」というルールを使って以下に示す数列を作りました。10, 21, 32, 43, 54 この数列についての正しい記述はどれですか？
+A: 数列の10番目の数字は偶数になります。
+B: 数列には二つの偶数が隣り合って現れることはありません。
+C: 数列の次の二つの数字は、偶数とその後に奇数です。
+D: 数列が奇数で始まった場合、その数列は奇数のみで構成されます。
+
+原文:
+question: A total of 30 players will play basketball at a park. There will be exactly 5 players on each team. Which statement correctly explains how to find the number of teams needed?
+A: Add 5 to 30 to find 35 teams.
+B: Divide 30 by 5 to find 6 teams.
+C: Multiply 30 and 5 to find 150 teams.
+D: Subtract 5 from 30 to find 25 teams.
+翻译:
+question: 公園でバスケットボールをする30人のプレイヤーがいます。各チームは正確に5人のプレイヤーで構成されます。必要なチーム数を見つける方法を正しく説明しているのはどの文ですか？
+A: 30に5を加えて35チームを見つけます。
+B: 30を5で割って6チームを見つけます。
+C: 30と5を掛けて150チームを見つけます。
+D: 30から5を引いて25チームを見つけます。
+
+原文:
+question: A store sells 107 different colors of paint. They have 25 cans of each color in storage. The number of cans of paint the store has in storage can be found using the expression below. 107 × 25. How many cans of paint does the store have in storage?
+A: 749
+B: 2,675
+C: 2,945
+D: 4,250
+翻译:
+question: ある店が107種類の異なる色のペンキを売っています。それぞれの色につき25缶ずつ在庫があります。店が在庫しているペンキの缶数は下記の式を使って求められます。107 × 25。この店には何缶のペンキが在庫されていますか？
+A: 749
+B: 2,675
+C: 2,945
+D: 4,250
+
+原文:
+question: Which expression is equivalent to 5 x 9?
+A: (5 x 4) x (6 x 5)
+B: (5 x 5) + (5 x 4)
+C: (5 x 5) + (5 x 9)
+D: (5 x 9) x (6 x 9)
+翻译:
+question: 5 x 9に等しい式はどれですか？
+A: (5 x 4) x (6 x 5)
+B: (5 x 5) + (5 x 4)
+C: (5 x 5) + (5 x 9)
+D: (5 x 9) x (6 x 9)
+
+翻译结果已保存到: elementary_mathematics_dev_japanese.csv
+原文:
+question: Find all c in Z_3 such that Z_3[x]/(x^2 + c) is a field.
+A: 0
+B: 1
+C: 2
+D: 3
+翻译:
+question: Z_3[x]/(x^2 + c) が体になるような Z_3 のすべての c を見つけなさい。
+A: 0
+B: 1
+C: 2
+D: 3
+
+原文:
+question: Statement 1 | If aH is an element of a factor group, then |aH| divides |a|. Statement 2 | If H and K are subgroups of G then HK is a subgroup of G.
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+翻译:
+question: ステートメント1 | もしaHが剰余群の元であれば、|aH|は|a|を割り切る。ステートメント2 | もしHとKがGの部分群であれば、HKはGの部分群である。
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+
+原文:
+question: Statement 1 | Every element of a group generates a cyclic subgroup of the group. Statement 2 | The symmetric group S_10 has 10 elements.
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+翻译:
+question: ステートメント1 | グループのすべての要素はそのグループの巡回部分群を生成します。ステートメント2 | 対称群 S_10 は10個の要素を持っています。
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+
+原文:
+question: Statement 1| Every function from a finite set onto itself must be one to one. Statement 2 | Every subgroup of an abelian group is abelian.
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+翻译:
+question: ステートメント1| 有限集合からそれ自身への全射関数は必ず単射である。ステートメント2 | アーベル群の任意の部分群はアーベル群である。
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+
+原文:
+question: Find the characteristic of the ring 2Z.
+A: 0
+B: 3
+C: 12
+D: 30
+翻译:
+question: 環2Zの特性を求めなさい。
+A: 0
+B: 3
+C: 12
+D: 30
+
+原文:
+question: 找出所有在 Z_3 中的 c，使得 Z_3[x]/(x^2 + c) 构成一个域。
+A: 0
+B: 1
+C: 2
+D: 3
+翻译:
+question: Z_3[x]/(x^2 + c) が体を形成するような Z_3 中のすべての c を見つけなさい。
+A: 0
+B: 1
+C: 2
+D: 3
+
+翻译结果已保存到: abstract_algebra_dev_japanese.csv
+原文:
+question:  Select the best translation into predicate logic: No people drive on Mars.
+A: ~Pd
+B: (∀x)(Px ∨ ~Dx)
+C: (∀x)(Px ⊃ ~Dx)
+D: ~Dp
+翻译:
+question: 述語論理に最も適した翻訳を選びなさい: 火星では誰も車を運転しない。
+A: ~Pd
+B: (∀x)(Px ∨ ~Dx)
+C: (∀x)(Px ⊃ ~Dx)
+D: ~Dp
+
+原文:
+question: Select the best translation into predicate logic.George borrows Hector's lawnmower. (g: George; h: Hector; l: Hector's lawnmower; Bxyx: x borrows y from z)
+A: Blgh
+B: Bhlg
+C: Bglh
+D: Bghl
+翻译:
+question: 述語論理に最も適した翻訳を選びなさい。ジョージがヘクターの芝刈り機を借りる。（g: ジョージ; h: ヘクター; l: ヘクターの芝刈り機; Bxyz: xがzからyを借りる）
+A: Blgh
+B: Bhlg
+C: Bglh
+D: Bghl
+
+原文:
+question:  Select the best English interpretation of the given arguments in predicate logic.
+Dm
+(∀x)(Wx ⊃ ~Dx)
+(∀x)Wx ∨ Ag	/ (∃x)Ax
+A: Marina is a dancer. Some weaklings are not dancers. Either everything is a weakling or Georgia plays volleyball. So something plays volleyball.
+B: Marina is a dancer. No weakling is a dancer. Everything is either a weakling or plays volleyball. So something plays volleyball.
+C: Marina is a dancer. Some weaklings are not dancers. Everything is either a weakling or plays volleyball. So something plays volleyball.
+D: Marina is a dancer. No weakling is a dancer. Either everything is a weakling or Georgia plays volleyball. So something plays volleyball.
+翻译:
+question: 与えられた述語論理の議論の最も適切な英語の解釈を選びなさい。
+Dm
+(∀x)(Wx ⊃ ~Dx)
+(∀x)Wx ∨ Ag	/ (∃x)Ax
+A: マリーナはダンサーです。いくつかの弱者はダンサーではありません。すべてが弱者であるか、またはジョージアがバレーボールをしています。したがって、何かがバレーボールをしています。
+B: マリーナはダンサーです。弱者はダンサーではありません。すべては弱者であるか、バレーボールをしています。したがって、何かがバレーボールをしています。
+C: マリーナはダンサーです。いくつかの弱者はダンサーではありません。すべては弱者であるか、バレーボールをしています。したがって、何かがバレーボールをしています。
+D: マリーナはダンサーです。弱者はダンサーではありません。すべてが弱者であるか、またはジョージアがバレーボールをしています。したがって、何かがバレーボールをしています。
+
+原文:
+question:  Construct a complete truth table for the following pairs of propositions. Then, using the truth tables, determine whether the statements are logically equivalent or contradictory. If neither, determine whether they are consistent or inconsistent. Justify your answers.
+E ⊃ (F · E) and ~E · F
+A: Logically equivalent
+B: Contradictory
+C: Neither logically equivalent nor contradictory, but consistent
+D: Inconsistent
+翻译:
+question: 次の命題のペアに対して完全な真理値表を作成します。その後、真理値表を使用して、これらの命題が論理的に等価か、矛盾しているかを判断します。どちらでもない場合は、一貫性があるかどうかを判断します。答えを正当化してください。
+E ⊃ (F · E) と ~E · F
+A: Logically equivalent
+B: Contradictory
+C: Neither logically equivalent nor contradictory, but consistent
+D: Inconsistent
+
+原文:
+question:  Which of the given formulas of PL is the best symbolization of the following sentence?
+Turtles live long lives and are happy creatures, unless they are injured.
+A: (L • H) ≡ I
+B: (L • H) ∨ I
+C: L • (H ∨ I)
+D: L • (H ⊃ R)
+翻译:
+question: 以下の文を最もよく表現しているPLの公式はどれですか？
+カメは長生きをし、幸せな生き物ですが、怪我をしていない限りです。
+A: (L • H) ≡ I
+B: (L • H) ∨ I
+C: L • (H ∨ I)
+D: L • (H ⊃ R)
+
+翻译结果已保存到: formal_logic_dev_japanese.csv
+原文:
+question: Let V be the set of all real polynomials p(x). Let transformations T, S be defined on V by T:p(x) -> xp(x) and S:p(x) -> p'(x) = d/dx p(x), and interpret (ST)(p(x)) as S(T(p(x))). Which of the following is true?
+A: ST = 0
+B: ST = T
+C: ST = TS
+D: ST - TS is the identity map of V onto itself.
+翻译:
+question: Vをすべての実数多項式p(x)の集合とする。変換T、SをV上で定義し、T:p(x) -> xp(x)、S:p(x) -> p'(x) = d/dx p(x)とする。そして、(ST)(p(x))をS(T(p(x)))と解釈する。次のうち正しいものはどれか？
+A: ST = 0
+B: ST = T
+C: ST = TS
+D: ST - TSはV自身への恒等写像である。
+
+原文:
+question: A tank initially contains a salt solution of 3 grams of salt dissolved in 100 liters of water. A salt solution containing 0.02 grams of salt per liter of water is sprayed into the tank at a rate of 4 liters per minute. The sprayed solution is continually mixed with the salt solution in the tank, and the mixture flows out of the tank at a rate of 4 liters per minute. If the mixing is instantaneous, how many grams of salt are in the tank after 100 minutes have elapsed?
+A: 2
+B: 2 - e^-2
+C: 2 + e^-2
+D: 2 + e^-4
+翻译:
+question: タンクには最初、100リットルの水に溶けた3グラムの塩の溶液が入っています。1リットルあたり0.02グラムの塩を含む塩水が毎分4リットルの割合でタンクに注がれます。注がれた溶液はタンク内の塩水と絶えず混ざり合い、その混合物は毎分4リットルの割合でタンクから流出します。混合が瞬時に行われる場合、100分後にタンクには何グラムの塩が残っていますか？
+A: 2
+B: 2 - e^-2
+C: 2 + e^-2
+D: 2 + e^-4
+
+原文:
+question: Let A be a real 2x2 matrix. Which of the following statements must be true?
+I. All of the entries of A^2 are nonnegative.
+II. The determinant of A^2 is nonnegative.
+III. If A has two distinct eigenvalues, then A^2 has two distinct eigenvalues.
+A: I only
+B: II only
+C: III only
+D: II and III only
+翻译:
+question: Aを実数の2x2行列とする。次のうち、必ず真であるのはどれか？
+I. A^2のすべての要素は非負である。
+II. A^2の行列式は非負である。
+III. Aが2つの異なる固有値を持つ場合、A^2も2つの異なる固有値を持つ。
+A: Iのみ
+B: IIのみ
+C: IIIのみ
+D: IIとIIIのみ
+
+原文:
+question: Suppose that f(1 + x) = f(x) for all real x. If f is a polynomial and f(5) = 11, then f(15/2)
+A: -11
+B: 0
+C: 11
+D: 33/2
+翻译:
+question: すべての実数xに対してf(1 + x) = f(x)とする。もしfが多項式で、f(5) = 11の場合、f(15/2)の値は？
+A: -11
+B: 0
+C: 11
+D: 33/2
+
+原文:
+question: Let A be the set of all ordered pairs of integers (m, n) such that 7m + 12n = 22. What is the greatest negative number in the set B = {m + n : (m, n) \in A}?
+A: -5
+B: -4
+C: -3
+D: -2
+翻译:
+question: 集合Aを整数の順序対(m, n)で、7m + 12n = 22を満たすものとする。集合B = {m + n : (m, n) ∈ A}において、最も大きい負の数は何か？
+A: -5
+B: -4
+C: -3
+D: -2
+
+翻译结果已保存到: college_mathematics_dev_japanese.csv
+原文:
+question: The population of the city where Michelle was born is 145,826. What is the value of the 5 in the number 145,826?
+A: 5 thousands
+B: 5 hundreds
+C: 5 tens
+D: 5 ones
+翻译:
+question: La population de la ville où Michelle est née est de 145 826. Quelle est la valeur du 5 dans le nombre 145 826 ?
+A: 5 thousands
+B: 5 hundreds
+C: 5 tens
+D: 5 ones
+
+原文:
+question: Olivia used the rule "Add 11" to create the number pattern shown below. 10, 21, 32, 43, 54 Which statement about the number pattern is true?
+A: The 10th number in the pattern will be an even number.
+B: The number pattern will never have two even numbers next to each other.
+C: The next two numbers in the pattern will be an even number then an odd number.
+D: If the number pattern started with an odd number then the pattern would have only odd numbers in it.
+翻译:
+question: Olivia a utilisé la règle "Ajouter 11" pour créer la suite numérique ci-dessous. 10, 21, 32, 43, 54 Quelle affirmation concernant la suite numérique est vraie ?
+A: Le 10ème nombre de la suite sera un nombre pair.
+B: La suite numérique n'aura jamais deux nombres pairs l'un à côté de l'autre.
+C: Les deux prochains nombres de la suite seront un nombre pair puis un nombre impair.
+D: Si la suite numérique avait commencé par un nombre impair, alors la suite n'aurait comporté que des nombres impairs.
+
+原文:
+question: A total of 30 players will play basketball at a park. There will be exactly 5 players on each team. Which statement correctly explains how to find the number of teams needed?
+A: Add 5 to 30 to find 35 teams.
+B: Divide 30 by 5 to find 6 teams.
+C: Multiply 30 and 5 to find 150 teams.
+D: Subtract 5 from 30 to find 25 teams.
+翻译:
+question: Un total de 30 joueurs vont jouer au basketball dans un parc. Il y aura exactement 5 joueurs dans chaque équipe. Quelle affirmation explique correctement comment trouver le nombre d'équipes nécessaires ?
+A: Add 5 to 30 to find 35 teams.
+B: Divide 30 by 5 to find 6 teams.
+C: Multiply 30 and 5 to find 150 teams.
+D: Subtract 5 from 30 to find 25 teams.
+
+原文:
+question: A store sells 107 different colors of paint. They have 25 cans of each color in storage. The number of cans of paint the store has in storage can be found using the expression below. 107 × 25. How many cans of paint does the store have in storage?
+A: 749
+B: 2,675
+C: 2,945
+D: 4,250
+翻译:
+question: Un magasin vend 107 couleurs différentes de peinture. Ils ont 25 boîtes de chaque couleur en stock. Le nombre de boîtes de peinture que le magasin a en stock peut être trouvé en utilisant l'expression ci-dessous. 107 × 25. Combien de boîtes de peinture le magasin a-t-il en stock ?
+A: 749
+B: 2,675
+C: 2,945
+D: 4,250
+
+原文:
+question: Which expression is equivalent to 5 x 9?
+A: (5 x 4) x (6 x 5)
+B: (5 x 5) + (5 x 4)
+C: (5 x 5) + (5 x 9)
+D: (5 x 9) x (6 x 9)
+翻译:
+question: Quelle expression est équivalente à 5 x 9 ?
+A: (5 x 4) x (6 x 5)
+B: (5 x 5) + (5 x 4)
+C: (5 x 5) + (5 x 9)
+D: (5 x 9) x (6 x 9)
+
+翻译结果已保存到: elementary_mathematics_dev_french.csv
+原文:
+question: Find all c in Z_3 such that Z_3[x]/(x^2 + c) is a field.
+A: 0
+B: 1
+C: 2
+D: 3
+翻译:
+question: Trouvez tous les c dans Z_3 tels que Z_3[x]/(x^2 + c) soit un corps.
+A: 0
+B: 1
+C: 2
+D: 3
+
+原文:
+question: Statement 1 | If aH is an element of a factor group, then |aH| divides |a|. Statement 2 | If H and K are subgroups of G then HK is a subgroup of G.
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+翻译:
+question: Énoncé 1 | Si aH est un élément d'un groupe quotient, alors |aH| divise |a|. Énoncé 2 | Si H et K sont des sous-groupes de G alors HK est un sous-groupe de G.
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+
+原文:
+question: Statement 1 | Every element of a group generates a cyclic subgroup of the group. Statement 2 | The symmetric group S_10 has 10 elements.
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+翻译:
+question: Énoncé 1 | Chaque élément d'un groupe génère un sous-groupe cyclique du groupe. Énoncé 2 | Le groupe symétrique S_10 a 10 éléments.
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+
+原文:
+question: Statement 1| Every function from a finite set onto itself must be one to one. Statement 2 | Every subgroup of an abelian group is abelian.
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+翻译:
+question: Énoncé 1 | Toute fonction d'un ensemble fini sur lui-même doit être injective. Énoncé 2 | Tout sous-groupe d'un groupe abélien est abélien.
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+
+原文:
+question: Find the characteristic of the ring 2Z.
+A: 0
+B: 3
+C: 12
+D: 30
+翻译:
+question: Trouvez la caractéristique de l'anneau 2Z.
+A: 0
+B: 3
+C: 12
+D: 30
+
+原文:
+question: 找出所有在 Z_3 中的 c，使得 Z_3[x]/(x^2 + c) 构成一个域。
+A: 0
+B: 1
+C: 2
+D: 3
+翻译:
+question: Trouvez tous les c dans Z_3 tels que Z_3[x]/(x^2 + c) forme un corps.
+A: 0
+B: 1
+C: 2
+D: 3
+
+翻译结果已保存到: abstract_algebra_dev_french.csv
+原文:
+question:  Select the best translation into predicate logic: No people drive on Mars.
+A: ~Pd
+B: (∀x)(Px ∨ ~Dx)
+C: (∀x)(Px ⊃ ~Dx)
+D: ~Dp
+翻译:
+question: Sélectionnez la meilleure traduction en logique des prédicats : Aucune personne ne conduit sur Mars.
+A: ~Pd
+B: (∀x)(Px ∨ ~Dx)
+C: (∀x)(Px ⊃ ~Dx)
+D: ~Dp
+
+原文:
+question: Select the best translation into predicate logic.George borrows Hector's lawnmower. (g: George; h: Hector; l: Hector's lawnmower; Bxyx: x borrows y from z)
+A: Blgh
+B: Bhlg
+C: Bglh
+D: Bghl
+翻译:
+question: Sélectionnez la meilleure traduction en logique des prédicats. George emprunte la tondeuse à gazon d'Hector. (g : George ; h : Hector ; l : la tondeuse à gazon d'Hector ; Bxyz : x emprunte y à z)
+A: Blgh
+B: Bhlg
+C: Bglh
+D: Bghl
+
+原文:
+question:  Select the best English interpretation of the given arguments in predicate logic.
+Dm
+(∀x)(Wx ⊃ ~Dx)
+(∀x)Wx ∨ Ag	/ (∃x)Ax
+A: Marina is a dancer. Some weaklings are not dancers. Either everything is a weakling or Georgia plays volleyball. So something plays volleyball.
+B: Marina is a dancer. No weakling is a dancer. Everything is either a weakling or plays volleyball. So something plays volleyball.
+C: Marina is a dancer. Some weaklings are not dancers. Everything is either a weakling or plays volleyball. So something plays volleyball.
+D: Marina is a dancer. No weakling is a dancer. Either everything is a weakling or Georgia plays volleyball. So something plays volleyball.
+翻译:
+question: Sélectionnez la meilleure interprétation en anglais des arguments donnés en logique des prédicats.
+Dm
+(∀x)(Wx ⊃ ~Dx)
+(∀x)Wx ∨ Ag	/ (∃x)Ax
+A: Marina est danseuse. Certains faibles ne sont pas danseurs. Soit tout est faible, soit Georgia joue au volleyball. Donc, quelque chose joue au volleyball.
+B: Marina est danseuse. Aucun faible n'est danseur. Tout est soit un faible, soit joue au volleyball. Donc, quelque chose joue au volleyball.
+C: Marina est danseuse. Certains faibles ne sont pas danseurs. Tout est soit un faible, soit joue au volleyball. Donc, quelque chose joue au volleyball.
+D: Marina est danseuse. Aucun faible n'est danseur. Soit tout est faible, soit Georgia joue au volleyball. Donc, quelque chose joue au volleyball.
+
+原文:
+question:  Construct a complete truth table for the following pairs of propositions. Then, using the truth tables, determine whether the statements are logically equivalent or contradictory. If neither, determine whether they are consistent or inconsistent. Justify your answers.
+E ⊃ (F · E) and ~E · F
+A: Logically equivalent
+B: Contradictory
+C: Neither logically equivalent nor contradictory, but consistent
+D: Inconsistent
+翻译:
+question: Construisez une table de vérité complète pour les paires de propositions suivantes. Ensuite, en utilisant les tables de vérité, déterminez si les déclarations sont logiquement équivalentes ou contradictoires. Si aucune des deux, déterminez si elles sont cohérentes ou incohérentes. Justifiez vos réponses.
+E ⊃ (F · E) et ~E · F
+A: Logiquement équivalentes
+B: Contradictoires
+C: Ni logiquement équivalentes ni contradictoires, mais cohérentes
+D: Incohérentes
+
+原文:
+question:  Which of the given formulas of PL is the best symbolization of the following sentence?
+Turtles live long lives and are happy creatures, unless they are injured.
+A: (L • H) ≡ I
+B: (L • H) ∨ I
+C: L • (H ∨ I)
+D: L • (H ⊃ R)
+翻译:
+question: Quelle est la meilleure symbolisation de la phrase suivante en utilisant les formules de PL données ?
+Les tortues vivent longtemps et sont des créatures heureuses, à moins qu'elles ne soient blessées.
+A: (L • H) ≡ I
+B: (L • H) ∨ I
+C: L • (H ∨ I)
+D: L • (H ⊃ R)
+
+翻译结果已保存到: formal_logic_dev_french.csv
+原文:
+question: Let V be the set of all real polynomials p(x). Let transformations T, S be defined on V by T:p(x) -> xp(x) and S:p(x) -> p'(x) = d/dx p(x), and interpret (ST)(p(x)) as S(T(p(x))). Which of the following is true?
+A: ST = 0
+B: ST = T
+C: ST = TS
+D: ST - TS is the identity map of V onto itself.
+翻译:
+question: Soit V l'ensemble de tous les polynômes réels p(x). Définissons les transformations T, S sur V par T : p(x) -> xp(x) et S : p(x) -> p'(x) = d/dx p(x), et interprétons (ST)(p(x)) comme S(T(p(x))). Lequel des énoncés suivants est vrai ?
+A: ST = 0
+B: ST = T
+C: ST = TS
+D: ST - TS est l'application identité de V sur lui-même.
+
+原文:
+question: A tank initially contains a salt solution of 3 grams of salt dissolved in 100 liters of water. A salt solution containing 0.02 grams of salt per liter of water is sprayed into the tank at a rate of 4 liters per minute. The sprayed solution is continually mixed with the salt solution in the tank, and the mixture flows out of the tank at a rate of 4 liters per minute. If the mixing is instantaneous, how many grams of salt are in the tank after 100 minutes have elapsed?
+A: 2
+B: 2 - e^-2
+C: 2 + e^-2
+D: 2 + e^-4
+翻译:
+question: Un réservoir contient initialement une solution saline de 3 grammes de sel dissous dans 100 litres d'eau. Une solution saline contenant 0,02 gramme de sel par litre d'eau est pulvérisée dans le réservoir à un débit de 4 litres par minute. La solution pulvérisée est continuellement mélangée avec la solution saline dans le réservoir, et le mélange s'écoule du réservoir à un débit de 4 litres par minute. Si le mélange est instantané, combien de grammes de sel se trouvent dans le réservoir après que 100 minutes se soient écoulées ?
+A: 2
+B: 2 - e^-2
+C: 2 + e^-2
+D: 2 + e^-4
+
+原文:
+question: Let A be a real 2x2 matrix. Which of the following statements must be true?
+I. All of the entries of A^2 are nonnegative.
+II. The determinant of A^2 is nonnegative.
+III. If A has two distinct eigenvalues, then A^2 has two distinct eigenvalues.
+A: I only
+B: II only
+C: III only
+D: II and III only
+翻译:
+question: Soit A une matrice réelle 2x2. Laquelle des affirmations suivantes doit être vraie ?
+I. Toutes les entrées de A^2 sont non négatives.
+II. Le déterminant de A^2 est non négatif.
+III. Si A a deux valeurs propres distinctes, alors A^2 a deux valeurs propres distinctes.
+A: I seulement
+B: II seulement
+C: III seulement
+D: II et III seulement
+
+原文:
+question: Suppose that f(1 + x) = f(x) for all real x. If f is a polynomial and f(5) = 11, then f(15/2)
+A: -11
+B: 0
+C: 11
+D: 33/2
+翻译:
+question: Supposons que f(1 + x) = f(x) pour tout x réel. Si f est un polynôme et f(5) = 11, alors f(15/2)
+A: -11
+B: 0
+C: 11
+D: 33/2
+
+原文:
+question: Let A be the set of all ordered pairs of integers (m, n) such that 7m + 12n = 22. What is the greatest negative number in the set B = {m + n : (m, n) \in A}?
+A: -5
+B: -4
+C: -3
+D: -2
+翻译:
+question: Soit A l'ensemble de toutes les paires ordonnées d'entiers (m, n) telles que 7m + 12n = 22. Quel est le plus grand nombre négatif dans l'ensemble B = {m + n : (m, n) \in A} ?
+A: -5
+B: -4
+C: -3
+D: -2
+
+翻译结果已保存到: college_mathematics_dev_french.csv
+Translating elementary_mathematics_dev.csv to 中文 (chinese)...
+Translating abstract_algebra_dev.csv to 中文 (chinese)...
+Translating formal_logic_dev.csv to 中文 (chinese)...
+Translating college_mathematics_dev.csv to 中文 (chinese)...
+Translating elementary_mathematics_dev.csv to 西班牙语 (spanish)...
+Translating abstract_algebra_dev.csv to 西班牙语 (spanish)...
+Translating formal_logic_dev.csv to 西班牙语 (spanish)...
+Translating college_mathematics_dev.csv to 西班牙语 (spanish)...
+Translating elementary_mathematics_dev.csv to 印地语 (hindi)...
+Translating abstract_algebra_dev.csv to 印地语 (hindi)...
+Translating formal_logic_dev.csv to 印地语 (hindi)...
+Translating college_mathematics_dev.csv to 印地语 (hindi)...
+Translating elementary_mathematics_dev.csv to 阿拉伯语 (arabic)...
+Translating abstract_algebra_dev.csv to 阿拉伯语 (arabic)...
+Translating formal_logic_dev.csv to 阿拉伯语 (arabic)...
+Translating college_mathematics_dev.csv to 阿拉伯语 (arabic)...
+Translating elementary_mathematics_dev.csv to 孟加拉语 (bengali)...
+Translating abstract_algebra_dev.csv to 孟加拉语 (bengali)...
+Translating formal_logic_dev.csv to 孟加拉语 (bengali)...
+Translating college_mathematics_dev.csv to 孟加拉语 (bengali)...
+Translating elementary_mathematics_dev.csv to 葡萄牙语 (portuguese)...
+Translating abstract_algebra_dev.csv to 葡萄牙语 (portuguese)...
+Translating formal_logic_dev.csv to 葡萄牙语 (portuguese)...
+Translating college_mathematics_dev.csv to 葡萄牙语 (portuguese)...
+Translating elementary_mathematics_dev.csv to 俄语 (russian)...
+Translating abstract_algebra_dev.csv to 俄语 (russian)...
+Translating formal_logic_dev.csv to 俄语 (russian)...
+Translating college_mathematics_dev.csv to 俄语 (russian)...
+Translating elementary_mathematics_dev.csv to 日语 (japanese)...
+Translating abstract_algebra_dev.csv to 日语 (japanese)...
+Translating formal_logic_dev.csv to 日语 (japanese)...
+Translating college_mathematics_dev.csv to 日语 (japanese)...
+Translating elementary_mathematics_dev.csv to 法语 (french)...
+Translating abstract_algebra_dev.csv to 法语 (french)...
+Translating formal_logic_dev.csv to 法语 (french)...
+Translating college_mathematics_dev.csv to 法语 (french)...

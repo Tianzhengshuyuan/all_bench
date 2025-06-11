@@ -1,0 +1,10 @@
+Seleccione la mejor traducción a la lógica de predicados: Ninguna persona conduce en Marte.,~Pd,(∀x)(Px ∨ ~Dx),(∀x)(Px ⊃ ~Dx),~Dp,C
+Selecciona la mejor traducción a lógica de predicados. George toma prestado el cortacésped de Hector. (g: George; h: Hector; l: cortacésped de Hector; Bxyz: x toma prestado y de z),Blgh,Bhlg,Bglh,Bghl,C
+"Seleccione la mejor interpretación en inglés de los siguientes argumentos en lógica de predicados.
+Dm
+(∀x)(Wx ⊃ ~Dx)
+(∀x)Wx ∨ Ag	/ (∃x)Ax","Marina es bailarina. Algunos débiles no son bailarines. Todo es un débil o Georgia juega voleibol. Entonces, algo juega voleibol.","Marina es bailarina. Ningún débil es bailarín. Todo es o un débil o juega al voleibol. Entonces, algo juega voleibol.","Marina es bailarina. Algunos débiles no son bailarines. Todo es o un débil o juega al voleibol. Entonces, algo juega voleibol.","Marina es bailarina. Ningún débil es bailarín. Todo es un débil o Georgia juega voleibol. Entonces, algo juega voleibol.",D
+"Construye una tabla de verdad completa para los siguientes pares de proposiciones. Luego, utilizando las tablas de verdad, determina si las afirmaciones son lógicamente equivalentes o contradictorias. Si no es así, determina si son consistentes o inconsistentes. Justifica tus respuestas.
+E ⊃ (F · E) y ~E · F",Logically equivalent,Contradictory,"Neither logically equivalent nor contradictory, but consistent",Inconsistent,C
+"¿Cuál de las fórmulas dadas de PL simboliza mejor la siguiente oración?
+Las tortugas viven vidas largas y son criaturas felices, a menos que estén heridas.",(L • H) ≡ I,(L • H) ∨ I,L • (H ∨ I),L • (H ⊃ R),B
