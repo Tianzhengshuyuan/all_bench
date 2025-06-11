@@ -1,0 +1,6 @@
+Encuentra todos los c en Z_3 tales que Z_3[x]/(x^2 + c) es un campo.,0,1,2,3,B
+"Afirmación 1 | Si aH es un elemento de un grupo cociente, entonces |aH| divide a |a|. Afirmación 2 | Si H y K son subgrupos de G entonces HK es un subgrupo de G.","Verdadero, Verdadero","Falso, Falso","Verdadero, Falso","Falso, Verdadero",B
+Afirmación 1 | Cada elemento de un grupo genera un subgrupo cíclico del grupo. Afirmación 2 | El grupo simétrico S_10 tiene 10 elementos.,"Verdadero, Verdadero","Falso, Falso","Verdadero, Falso","Falso, Verdadero",C
+Afirmación 1| Toda función de un conjunto finito en sí mismo debe ser uno a uno. Afirmación 2 | Todo subgrupo de un grupo abeliano es abeliano.,"Verdadero, Verdadero","Falso, Falso","Verdadero, Falso","Falso, Verdadero",A
+Encuentra la característica del anillo 2Z.,0,3,12,30,A
+Encuentra todos los valores de c en Z_3 tales que Z_3[x]/(x^2 + c) forme un campo.,0,1,2,3,B
