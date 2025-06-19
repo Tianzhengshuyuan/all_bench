@@ -4,19 +4,21 @@ import shutil
 import argparse
 
 languages = [
-    ("中文", "chinese"),
-    ("西班牙语", "spanish"),
-    ("印地语", "hindi"),
-    ("阿拉伯语", "arabic"),
-    ("孟加拉语", "bengali"),
-    ("葡萄牙语", "portuguese"),
-    ("俄语", "russian"),
-    ("日语", "japanese"),
-    ("法语", "french")
+    # ("中文", "chinese"),
+    # ("西班牙语", "spanish"),
+    # ("印地语", "hindi"),
+    # ("阿拉伯语", "arabic"),
+    # ("孟加拉语", "bengali"),
+    # ("葡萄牙语", "portuguese"),
+    # ("俄语", "russian"),
+    ("日语", "japanese")
+    # ("法语", "french")
 ]
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--dir', required=True, help="输入文件夹名")
+parser.add_argument('--model', type=str, default="gpt", help="使用的模型，如gpt、deepseek")
+
 args = parser.parse_args()
 
  
@@ -32,9 +34,10 @@ for lang_cn, lang_en in languages:
         print(f"Translating {filename} to {lang_cn} ({lang_en})...")
         # 调用翻译脚本
         subprocess.run([
-            "python", "translate2.py",
+            "python", "translate.py",
             "--input", filepath,
-            "--language", lang_en
+            "--language", lang_en,
+            "--model", args.model
         ])
         # 假设translate2.py输出文件名为：原文件名_语言名.csv
         base = os.path.splitext(os.path.basename(filename))[0]

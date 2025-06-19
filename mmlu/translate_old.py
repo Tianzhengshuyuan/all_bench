@@ -1,8 +1,6 @@
 import csv
 import argparse
 import os
-import re
-import openai
 from openai import OpenAI
 from fractions import Fraction
 from sympy import sympify, E
@@ -31,7 +29,7 @@ def is_number(s):
     except (SympifyError, TypeError):
         return False
     
-def call_deepseek_api(question, temperature=0):
+def call_deepseek_api(question, temperature=0.2):
     """
     调用 DeepSeek API 并获取答案。
     :param question: 需要发送到 API 的完整问题
@@ -52,30 +50,6 @@ def call_deepseek_api(question, temperature=0):
         print(f"调用 DeepSeek API 时出错: {e}")
         return "API 调用失败"
 
-def call_gpt_api(question, temperature=0):
-    """
-    调用 gpt API 并获取答案。
-    :param question: 需要发送到 API 的完整问题
-    :return: API 返回的答案
-    """
-    os.environ["HTTP_PROXY"] = "http://localhost:7890"
-    os.environ["HTTPS_PROXY"] = "http://localhost:7890"
-    try:
-        openai.api_key = os.getenv("OPENAI_API_KEY")
-        response = openai.chat.completions.create(
-            model="gpt-4-turbo",
-            messages=[
-                {"role": "system", "content": "You are a helpful assistant."},
-                {"role": "user", "content": question},
-            ],
-            temperature=temperature,
-            stream=False
-        )
-        return response.choices[0].message.content
-    except Exception as e:
-        print(f"调用 gpt API 时出错: {e}")
-        return "API 调用失败" 
-    
 def get_output_filename(input_name, language):
     # 获取不带扩展名的文件主名
     base = os.path.splitext(os.path.basename(input_name))[0]
@@ -83,16 +57,6 @@ def get_output_filename(input_name, language):
     lang = language.strip().replace(" ", "_").lower()
     return f"{base}_{lang}.csv"
 
-def parse_translation(translation):
-    # 匹配每一部分
-    pattern = re.compile(
-        r"question\s*[:：]\s*(.*?)\s*\nA\s*[:：]\s*(.*?)\s*\nB\s*[:：]\s*(.*?)\s*\nC\s*[:：]\s*(.*?)\s*\nD\s*[:：]\s*(.*)",
-        re.DOTALL | re.IGNORECASE
-    )
-    m = pattern.match(translation.strip())
-    if m:
-        return [m.group(i).strip() for i in range(1, 6)]
-    
 def translate(args):
     output_filename = get_output_filename(args.input, args.language)
     # 读取输入 CSV
@@ -100,25 +64,24 @@ def translate(args):
          open(output_filename, 'w', newline='', encoding='utf-8') as outfile:
         reader = csv.reader(infile)
         writer = csv.writer(outfile)
+        writer.writerow(['原文', f'翻译（{args.language}）'])  # 写表头
 
         for row in reader:
             if not row:  # 跳过空行
                 continue
-            # 拼接待翻译文本
-            text = (
-                f"question: {row[0]}\n"
-                f"A: {row[1]}\n"
-                f"B: {row[2]}\n"
-                f"C: {row[3]}\n"
-                f"D: {row[4]}"
-            )
-
-            prompt = f"Please translate the following content into {args.language}. Do not translate the word 'question' at the beginning, and do not translate the four options A, B, C, D; keep them in English. Only translate, do not return anything else: \n{text}"
-            translation = call_gpt_api(prompt, temperature=args.temperature)
-            print(f"原文:\n{text}\n翻译:\n{translation}\n")
-            parsed = parse_translation(translation)
-            parsed.append(row[5])   # 答案原样
-            writer.writerow(parsed)
+            translated_row = []
+            for i in range(5):  # 前5列
+                cell = row[i]
+                if is_number(cell):
+                    translated_row.append(cell)
+                else:
+                    prompt = f"请将以下内容翻译成{args.language}。只翻译，不要返回任何其他内容：\n{cell}"
+                    translation = call_deepseek_api(prompt, temperature=args.temperature)
+                    print(f"原文: {cell}\n翻译: {translation}\n")
+                    translated_row.append(translation)
+            # 保留第6列（答案）原样
+            translated_row.append(row[5])
+            writer.writerow(translated_row)
     print(f"翻译结果已保存到: {output_filename}")
 
 if __name__ == "__main__":

@@ -1,0 +1,42 @@
+"Identifica la conclusión del siguiente argumento. Es difícil no verificar en nuestros pares la misma inteligencia debilitada por las emociones que observamos en nuestros pacientes cotidianos. La arrogancia de nuestra conciencia, que en general, pertenece a los mecanismos de defensa más fuertes, bloquea los complejos inconscientes. Debido a esto, es difícil convencer a las personas sobre el inconsciente, y a su vez enseñarles lo que su conocimiento consciente contradice. (Sigmund Freud, El origen y desarrollo del psicoanálisis)",Es difícil no verificar en nuestros pares la misma inteligencia debilitada por las emociones que observamos en nuestros pacientes cotidianos.,"La arrogancia de nuestra conciencia, que en general, pertenece a los mecanismos de defensa más fuertes, bloquea los complejos inconscientes.","Debido a esto, es difícil convencer a las personas sobre el inconsciente, y a su vez enseñarles lo que su conocimiento consciente contradice.","Es difícil convencer a las personas sobre el inconsciente, y a su vez enseñarles lo que su conocimiento consciente contradice.",D
+Seleccione la mejor traducción a la lógica de predicados. David enseña a Chris. (c: Chris; d: David; Txy: x enseña a y),Tdc,Tcd,Tcc,dTc,A
+"Seleccione la mejor interpretación en inglés de la proposición dada, utilizando la siguiente clave de traducción: Ax: x es un apartamento Hx: x es una casa Lx: x es grande Bxy: x es más grande que y (∃x)[(Ax • Lx) • (∃y)(Hy • Bxy)]",Some large houses are bigger than some apartments.,Some houses are bigger than all large apartments.,Some large apartments are bigger than some houses.,Some houses are bigger than some large apartments.,C
+"Construye una tabla de verdad completa para el siguiente argumento. Luego, utilizando la tabla de verdad, determina si el argumento es válido o inválido. Si el argumento es inválido, elige una opción que presente un contraejemplo. (También puede haber otros contraejemplos.)
+~G ⊃ H
+~H / G",Válido,Inválido. Contraejemplo cuando G y H son verdaderos,Inválido. Contraejemplo cuando G es verdadero y H es falso,Inválido. Contraejemplo cuando H es verdadero y G es falso,A
+Utiliza la siguiente clave para traducir la fórmula dada de PL a oraciones naturales en inglés.,Marina lee un libro de Percy Jackson.,Izzy juega Minecraft.,Emily deja de trabajar.,"Russell prepara la cena.
+E: Ashleigh pasa por aquí.
+(~B • E) ⊃ D
+A: Si no es el caso que Izzy juegue Minecraft y Ashleigh pase por aquí, entonces Russell prepara la cena.
+B: Si no es el caso que Izzy juegue Minecraft y Ashleigh pase por aquí, entonces Russell prepara la cena.
+C: Que Izzy juegue Minecraft y Ashleigh pase por aquí implica que Russell prepare la cena.
+D: Que Russell prepare la cena es una condición suficiente para que Izzy no juegue Minecraft y Ashleigh pase por aquí.",B
+"Seleccione la mejor interpretación en inglés de la proposición dada, utilizando la siguiente clave de traducción: Ax: x es un apartamento Hx: x es una casa Lx: x es grande Bxy: x es más grande que y (∃x)[Hx • (∀y)(Ay ⊃ Bxy)]",Some houses are smaller than all apartments.,Every house is bigger than every apartment.,Some apartment is smaller than every house.,Some houses are bigger than every apartment.,D
+"Construye una tabla de verdad completa para el siguiente argumento. Luego, utilizando la tabla de verdad, determina si el argumento es válido o inválido. Si el argumento es inválido, elige una opción que presente un contraejemplo. (También puede haber otros contraejemplos.)
+~K ≡ L / (K · L) ∨ (K · ~L)",Válido,Inválido. Contraejemplo cuando K y L son verdaderos,Inválido. Contraejemplo cuando K es verdadero y L es falso,Inválido. Contraejemplo cuando L es verdadero y K es falso,D
+"Identifica el antecedente de la siguiente proposición condicional: Si la universidad no aumenta la ayuda financiera, o el presidente no lo aprueba o el consejo de administración lo impide.",The university increases financial aid.,The university does not increase financial aid.,The board of trustees prevents it.,The president fails to approve it.,B
+"¿Cuál de las siguientes proposiciones es una consecuencia inmediata (de un solo paso) en PL de las premisas dadas?
+~E ⊃ ~F
+G ⊃ F
+H ∨ ~E
+H ⊃ I
+~I",E ⊃ F,F ⊃ G,H ⊃ ~E,~H,D
+"¿Cuál de las fórmulas dadas de PL es la mejor simbolización de la siguiente oración?
+Todos aman a Raymond, o no.",L,~L,L • ~L,L ∨ ~L,D
+Seleccione la mejor traducción a lógica de predicados. Todos los reyes son más afortunados que todos los mendigos. (Kx: x es un rey; Px: x es un mendigo; Lxy: x tiene más suerte que y),(∀x)[Kx ⊃ (∀y)(Py ⊃ Lxy)],(∀x)[Kx ⊃ (∀y)(Lxy ⊃ Py)],(∀x)(∀y)[(Kx • Py) ⊃ Lyx],(∀x)[(Kx • (∀y)(Py)) ⊃ Lxy],A
+"Construye una tabla de verdad completa para los siguientes pares de proposiciones. Luego, utilizando las tablas de verdad, determina si las declaraciones son lógicamente equivalentes o contradictorias. Si no es así, determina si son consistentes o inconsistentes. Justifica tus respuestas.
+(~M ⊃ ~N) ∨ (O ≡ N) y (~M · N) · [(~O ∨ ~N) · (O ∨ N)]",Logically equivalent,Contradictory,"Neither logically equivalent nor contradictory, but consistent",Inconsistent,B
+"¿Cuál de las siguientes proposiciones es una consecuencia inmediata (de un solo paso) en PL de las premisas dadas?
+E ⊃ ~F
+~F ⊃ G
+~G",E ⊃ F,F ⊃ G,G ⊃ E,~~F,D
+"Utiliza tablas de verdad indirectas para determinar si el siguiente argumento es válido. Si el argumento es inválido, elige una opción que presente un contraejemplo. (También puede haber otros contraejemplos.)
+E ⊃ (F ∨ ~G)
+F ⊃ (~E ∨ ~G) / ~(E ≡ F)",Válido,"Inválido. Contraejemplo cuando E, F y G son verdaderos",Inválido. Contraejemplo cuando E y F son verdaderos y G es falso,"Inválido. Contraejemplo cuando E, F y G son falsos",C
+"Utiliza tablas de verdad indirectas para determinar si el siguiente argumento es válido. Si el argumento es inválido, elige una opción que presente un contraejemplo. (Puede haber otros contraejemplos también.)
+H ≡ (~I ∨ J)
+H ∨ ~J / ~I",Válido,"Inválido. Contraejemplo cuando H, I y J son falsos",Inválido. Contraejemplo cuando H e I son verdaderos y J es falso,Inválido. Contraejemplo cuando I es verdadero y H y J son falsos,D
+Seleccione la mejor traducción a la lógica de predicados. Algunos bomberos rescatan a víctimas del peligro. (Dx: x es peligro; Fx: x es bombero; Vx: x es víctima; Rxyz: x rescata a y de z),(∃x){Fx • (∀y)[Dy ⊃ (∃z)(Vz • Rxyz)]},(∃x){Fx • (∃y)[Vy • (∃z)(Dz • Rxyz)]},(∃x){Fx • (∃y)(∃z)[(Vy • Dz) • Rxzy]},(∀x){Fx ⊃ (∃y)[Vy . (∃z)(Dz • Rxyz)]},B
+"Identifica el antecedente de la siguiente proposición condicional: La universidad aumenta la matrícula si, y solo si, tanto el gobernador lo aprueba como el consejo de administración lo recomienda.",The university raises tuition.,The governor approves of it.,The board of trustees recommends it.,None of the above.,D
+Seleccione la mejor traducción a la lógica de predicados. Todos los planetas son más pequeños que Júpiter. (j: Júpiter; Px: x es un planeta; Sxy: x es más pequeño que y),(∃x)(Px • Sxj),(∀x)(Px • Sxj),(∀x)(Px ⊃ Sjx),(∀x)(Px ⊃ Sxj),D
+Seleccione la mejor traducción a lógica de predicados. José presenta a Wilma a Kevin. (j: José; k: Kevin; w: Wilma; Ixyz: x presenta a y a z),Iwkj,Ijwk,Iwjk,Ijkw,B

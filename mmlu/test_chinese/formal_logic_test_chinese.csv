@@ -1,0 +1,15 @@
+请识别以下论证的结论。我们很难不在同伴身上验证那种我们在日常患者中观察到的因情绪而削弱的智力。我们意识的傲慢，通常属于最强大的防御机制之一，会阻碍无意识情结。正因如此，难以让人们相信无意识的存在，进而教导他们那些与其有意识认知相悖的内容。（西格蒙德·弗洛伊德，《精神分析的起源与发展》）,我们很难不在同伴身上验证那种我们在日常患者中观察到的因情绪而削弱的智力。,我们意识的傲慢，通常属于最强大的防御机制之一，会阻碍无意识情结。,正因如此，难以让人们相信无意识的存在，进而教导他们那些与其有意识认知相悖的内容。,难以让人们相信无意识的存在，进而教导他们那些与其有意识认知相悖的内容。,D
+找出以下条件命题的前件：如果蜜蜂队没有赢得他们的首场比赛，那么土豚队和花栗鼠队都会赢得他们的首场比赛。,The Aardvarks win their first game.,The Bees don't win their first game.,The Chipmunks win their first game.,Both the Aardvarks and the Chipmunks win their first games.,B
+找出下列条件命题的前件：如果州长批准且董事会推荐，那么大学将提高学费。,The university raises tuition.,The governor approves of it.,The board of trustees recommends it.,The governor approves of it and the board of trustees recommends it.,D
+识别以下论证的结论。有些人使用谓词变量；这些变量的值是属性。无论是否有属性可供指称，所有句子中都需要谓词。通常出于说明目的，会需要虚拟谓词“F”。如果我们要对属性进行量化并加以指称，那么使用可识别的变量和独特的名称来实现这一目的，并且不将这些与谓词混淆，将有助于清晰性。（奎因，《逻辑哲学》）,有些人使用谓词变量；这些变量的值是属性。,无论是否有属性可供指称，所有句子中都需要谓词。,通常出于说明目的，会需要虚拟谓词“F”。,如果我们要对属性进行量化并加以指称，那么使用可识别的变量和独特的名称来实现这一目的，并且不将这些与谓词混淆，将有助于清晰性。,D
+使用以下关键信息将给定的命题逻辑公式转化为自然的英语句子。,玛丽娜在读一本珀西·杰克逊的书。,伊兹在玩《我的世界》。,艾米莉停止工作。,"拉塞尔做晚餐。
+E: 阿什莉顺道来访。
+(A ∨ ~E) ≡ (D • ~B)
+A: 玛丽娜在读一本珀西·杰克逊的书或阿什莉没有顺道来访，是拉塞尔做晚餐且伊兹不在玩《我的世界》的必要条件。
+B: 玛丽娜在读一本珀西·杰克逊的书或阿什莉没有顺道来访，是拉塞尔做晚餐且伊兹在玩《我的世界》的充分必要条件。
+C: 当且仅当拉塞尔做晚餐且伊兹不在玩《我的世界》时，玛丽娜在读一本珀西·杰克逊的书，除非阿什莉顺道来访。
+D: 当且仅当拉塞尔做晚餐且伊兹不在玩《我的世界》时，玛丽娜在读一本珀西·杰克逊的书或阿什莉没有顺道来访。",D
+找出以下条件命题的前件：大学提高学费的条件是，只有当州长批准且董事会推荐时才会这样做。,The university raises tuition.,The governor approves of it.,The board of trustees recommends it.,The governor approves of it and the board of trustees recommends it.,A
+找出以下条件命题的前件：当大学提高学费时，要么州长批准，要么董事会不阻止。,The university raises tuition.,The governor approves of it.,The board of trustees prevents it.,The board of trustees doesn't prevent it.,A
+识别以下论证的结论。一个词项的意义理应决定其所指。但所指可以在思维毫无差异的情况下发生变化。因此，词项的意义也必然能在思维不变的情况下发生变动。由此可见，我们的思维并不决定我们词项的含义；意义不在头脑之中。（希拉里·普特南）,The sense of a term is supposed to determine its reference.,But reference can vary without any difference in thought.,Reference can vary without any difference in thought.,Our thoughts do not determine the meanings of our terms; meanings are not in the head.,D
+请识别以下论证的结论。我们不应废除死刑。若废除，监狱将更加拥挤。监狱若更拥挤，我们就得建造更多监狱。而我们并不希望建造更多监狱。,We shouldn't abolish capital punishment.,"If we do, prisons will become more crowded.","If prisons become more crowded, then we will have to build more prisons.",We will have to build more prisons.,A

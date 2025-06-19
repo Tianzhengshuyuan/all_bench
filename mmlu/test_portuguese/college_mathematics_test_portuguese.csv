@@ -1,0 +1,144 @@
+"Seja k o número de soluções reais da equação e^x + x - 2 = 0 no intervalo [0, 1], e seja n o número de soluções reais que não estão em [0, 1]. Qual das seguintes afirmações é verdadeira?",k = 0 and n = 1,k = 1 and n = 0,k = n = 1,k > 1,B
+"A menos de isomorfismo, quantos grupos abelianos aditivos G de ordem 16 têm a propriedade de que x + x + x + x = 0 para cada x em G?",0,1,2,3,D
+"Suponha que P é o conjunto de polinômios com coeficientes em Z_5 e grau menor ou igual a 7. Se o operador D envia p(x) em P para sua derivada p′(x), quais são as dimensões do espaço nulo n e da imagem r de D?",n = 1 and r = 6,n = 1 and r = 7,n = 2 and r = 5,n = 2 and r = 6,D
+A menor distância da curva xy = 8 até a origem é,4,8,16,2sqrt(2),A
+"Há 25 malas, das quais 5 estão danificadas. Três malas são selecionadas aleatoriamente. Qual é a probabilidade de exatamente 2 estarem danificadas?",2/69,1/30,2/23,12/125,C
+"Seja (Z_{10}, +, x) o anel dos inteiros módulo 10, e seja S o subconjunto de Z_{10} representado por {0, 2, 4, 6, 8}. Qual das seguintes afirmações é FALSA?","(S, +, x) é fechado sob adição módulo 10.","(S, +, x) é fechado sob multiplicação módulo 10.","(S, +, x) possui uma identidade sob adição módulo 10.","(S, +, x) não possui uma identidade sob multiplicação módulo 10.",D
+"Uma escada de 9 metros de comprimento está apoiada em uma parede vertical em um terreno plano. Conforme a extremidade inferior da escada é afastada da parede a uma taxa constante de 2 metros por segundo, a extremidade superior desliza para baixo ao longo da parede. Quão rápido, em metros por segundo, a extremidade superior da escada estará deslizando para baixo no momento em que a extremidade superior estiver a 3 metros acima do solo?",12*sqrt(2),6*sqrt(2),4*sqrt(2),1/(2*sqrt(2)),C
+Considere um segmento de comprimento 10. Os pontos A e B são escolhidos aleatoriamente de modo que A e B dividem o segmento em três segmentos menores. Qual é a probabilidade de que os três segmentos menores possam formar os lados de um triângulo?,0,10%,25%,50%,C
+"Seja V um espaço vetorial real de dimensão finita e seja P uma transformação linear de V tal que P^2 = P. Qual das seguintes afirmações deve ser verdadeira?
+I. P é invertível.
+II. P é diagonalizável.
+III. P é a transformação identidade ou a transformação nula.",None,I only,II only,III only,C
+Qual das seguintes afirmações é verdadeira?,Every compact space is complete,Every complete space is compact,Neither (a) nor (b).,Both (a) and (b).,A
+Um grafo discreto é completo se existir uma aresta conectando qualquer par de vértices. Quantas arestas tem um grafo completo com 10 vértices?,10,20,25,45,D
+"Suponha que X é uma variável aleatória discreta no conjunto dos números inteiros positivos, de modo que, para cada número inteiro positivo n, a probabilidade de X = n é 1/2^n. Se Y é uma variável aleatória com a mesma distribuição de probabilidade e X e Y são independentes, qual é a probabilidade de que o valor de pelo menos uma das variáveis X e Y seja maior que 3?",1/64,15/64,1/4,3/8,B
+Sejam V e W subespaços de 4 dimensões de um espaço vetorial X de 7 dimensões. Qual das seguintes opções NÃO PODE ser a dimensão da interseção dos subespaços V e W?,0,1,2,3,A
+"Uma grande turma deve ser dividida em equipes e cada aluno deve ser membro de exatamente uma equipe. No entanto, cada aluno não gosta de três de seus colegas. A aversão entre os alunos não precisa ser mútua. Se as equipes não precisam ter tamanhos iguais, quantas devem ser criadas para que nenhum aluno seja colega de equipe de alguém que ele não gosta?",4,7,10,13,B
+Sofia e Tess vão cada uma escolher aleatoriamente um dos 10 números inteiros de 1 a 10. Qual é a probabilidade de que nenhum dos números escolhidos seja o quadrado do outro?,0.64,0.72,0.81,0.95,D
+"Seja K um subconjunto não vazio de R^n, onde n > 1. Qual das seguintes afirmações deve ser verdadeira?
+I. Se K é compacto, então toda função real contínua definida em K é limitada.
+II. Se toda função real contínua definida em K é limitada, então K é compacto.
+III. Se K é compacto, então K é conexo.",I only,II only,III only,I and II only,D
+"Suponha que V é um espaço vetorial real de dimensão finita n. Chamamos o conjunto das matrizes de V em si mesmo de M(V). Seja T um elemento de M(V). Considere os dois subespaços U = {X ∈ M(V) : TX = XT} e W = {TX − XT : X ∈ M(V)}. Qual das seguintes afirmações deve ser VERDADEIRA?
+I. Se V tem uma base contendo apenas autovetores de T, então U = M(V).
+II. dim (U) + dim (W) = n^2
+III. dim (U) < n",I only,II only,III only,I and II only,B
+"Seja F uma força unitária constante que é paralela ao vetor (-1, 0, 1) no espaço xyz. Qual é o trabalho realizado por F sobre uma partícula que se move ao longo do caminho dado por (t, t^2, t^3) entre o tempo t=0 e o tempo t=1?",-1/4,-1/(4sqrt(2)),0,sqrt(2),C
+"Seja X um espaço topológico, e sejam A, B e C subconjuntos não vazios de X tais que A c B c C; ou seja, A é um subconjunto próprio de B, e B é um subconjunto próprio de C. Qual(is) das seguintes afirmações é(são) verdadeira(s)?
+I. Se A e C são conexos, então B é conexo.
+II. Se A e C são compactos, então B é compacto.
+III. Se A e C são Hausdorff, então B é Hausdorff.",I and II only,III only,I and III only,"I, II, and III",D
+"Seja x_1 = 1 e x_(n+1) = sqrt(3+2x_n) para todos os inteiros positivos n. Se assumirmos que {x_n} converge, então lim x_n =",3,e,sqrt(5),0,A
+"Se v é um autovetor de uma matriz invertível A, então qual das seguintes afirmações I é necessariamente verdadeira?
+I. v também é um autovetor de 2A.
+II. v também é um autovetor de A^2.
+III. v também é um autovetor de A^(-1).",I only,II only,III only,"I, II, and III",D
+Para quantos números inteiros positivos k a representação decimal ordinária do número inteiro k! termina exatamente em 99 zeros?,None,One,Four,Five,D
+"Seja R um anel com uma identidade multiplicativa. Se U é um subgrupo aditivo de R tal que ur está em U para todo u em U e para todo r em R, então U é dito um ideal à direita de R. Se R tem exatamente dois ideais à direita, qual das seguintes afirmações deve ser verdadeira?
+I. R é comutativo.
+II. R é um anel de divisão (ou seja, todos os elementos, exceto a identidade aditiva, têm inversos multiplicativos).
+III. R é infinito.",I only,II only,III only,I and II only,B
+"Um dado de seis lados (cujas faces são numeradas de 1 a 6, como de costume) é conhecido por ser falsificado: A probabilidade de rolar qualquer número par é o dobro da probabilidade de rolar qualquer número ímpar. Qual é a probabilidade de que, se este dado for lançado duas vezes, o primeiro lançamento seja um 5 e o segundo lançamento seja um 6?",2/81,1/18,2/27,1/9,A
+Afirmação 1 | Suponha que {s_n} e {t_n} são sequências de números complexos tais que lim_n→∞ s_n = s e lim_n→∞ t_n = t. lim_n→∞ s_nt_n = st. Afirmação 2 | Existe uma sequência limitada de números reais sem subsequência convergente.,"True, True","True, False","False, True","False, False",B
+"Defina uma operação binária em Z, o conjunto dos números inteiros, pela equação m • n = m + n + mn. Qual(is) das seguintes afirmações é(são) verdadeira(s) sobre a estrutura binária (Z, • )?
+I. Esta estrutura não é um grupo, pois a operação não é associativa.
+II. Esta estrutura não é um grupo, pois não há elemento identidade.
+III. Esta estrutura não é um grupo, pois nem todos os elementos têm um inverso.
+IV. Esta estrutura é um grupo.",I and II only,I and III only,II and III only,III only,D
+"Kate leva k dias para escrever um teste de prática de matemática do GRE. John leva j dias para escrever um teste de prática de matemática do GRE. Se Kate e John trabalharem em um teste de prática em turnos alternados de 2 dias, leva 10 dias quando Kate começa e 10,5 dias quando John começa. Quanto tempo levaria para os dois completarem um teste de prática se Kate e John trabalhassem simultaneamente?",9/2 days,5 days,41/8 days,36/7 days,D
+Qual é a maior área possível de uma região triangular com um vértice no centro de um círculo de raio 1 e os outros dois vértices no círculo?,1/2,1,sqrt(2),pi,A
+"Seja f(x,y) = x^2 - 2xy + y^3 para todos os reais x e y. Qual das seguintes afirmações é verdadeira?",f tem todos os seus extremos relativos na linha x = y.,f tem todos os seus extremos relativos na parábola x = y^2.,"f tem um mínimo relativo em (0, 0).","f tem um mínimo absoluto em (2/3, 2/3).",A
+Qual é a maior ordem de um elemento no grupo de permutações de 5 objetos?,5,6,12,15,B
+"S(n) é uma afirmação sobre números inteiros positivos n tal que sempre que S(k) for verdadeira, S(k + 1) também deve ser verdadeira. Além disso, existe algum número inteiro positivo n0 tal que S(n0) não é verdadeira. Das opções a seguir, qual é a conclusão mais forte que pode ser tirada?",S(n0 + 1) is not true.,S(n0 - 1) is not true.,S(n) is not true for any n <= n0,S(n) is not true for any n >= n0,C
+"No espaço xyz, quais são as coordenadas do ponto no plano 2x + y + 3z = 3 que está mais próximo da origem?","(0, 0, 1)","(3/7, 3/14, 9/14)","(7/15, 8/15, 1/15)","(5/6, 1/3, 1/3)",B
+"Para quais inteiros n, tal que 3 <= n <= 11, existe apenas um grupo de ordem n (a menos de isomorfismo)?",For no such integer n,"For 3, 5, 7, and 11 only","For 3, 5, 7, 9, and 11 only","For 4, 6, 8, and 10 only",B
+Uma árvore é um grafo conexo sem ciclos. Quantas árvores não isomórficas com 5 vértices existem?,1,2,3,4,C
+"Suponha que A e B são matrizes invertíveis n x n, onde n > 1, e I é a matriz identidade n x n. Se A e B são matrizes semelhantes, qual das seguintes afirmações deve ser verdadeira? I. A - 2I e B - 2I são matrizes semelhantes. II. A e B têm o mesmo traço. III. A^-1 e B^-1 são matrizes semelhantes.",I only,II only,III only,"I, II, and III",D
+"Seja C o círculo no plano yz cuja equação é (y - 3)^2 + z^2 = 1. Se C for girado em torno do eixo z, a superfície gerada é um toro. Qual é a equação desse toro?",x^2 + y^2 + z^2 + 8 = 6y,(x^2 + y^2 + z^2)^2 = 8 + 36(x^2 + z^2),(x^2 + y^2 + z^2 + 8)^2 = 36(x^2 + z^2),(x^2 + y^2 + z^2 + 8)^2 = 36(x^2 + y^2),D
+Qual das seguintes é a equação da linha tangente ao gráfico de y = x + e^x em x = 0 ?,y = 2x + 1,y = 2x,y = x + 2,y = x + 1,A
+"Seja V o espaço vetorial real de todas as matrizes reais 2 x 3, e seja W o espaço vetorial real de todos os vetores coluna reais 4 x 1. Se T é uma transformação linear de V sobre W, qual é a dimensão do subespaço núcleo de T?",2,3,4,5,A
+"Afirmação 1 | Suponha que ∑|a_i| diverge e ∑ a_i = 2. Existe um rearranjo a_i_k dos termos tal que ∑ a_i_k = 4. Afirmação 2 | Existem espaços métricos X e Y com X fechado e limitado e um mapeamento contínuo f : X → Y tal que f(X) NÃO é ""fechado e limitado"".","True, True","True, False","False, True","False, False",A
+O número máximo de ângulos agudos em um decágono convexo no plano euclidiano é,1,2,3,4,C
+"Se f(z) é uma função analítica que mapeia todo o plano complexo finito no eixo real, então o eixo imaginário deve ser mapeado em",the entire real axis,a point,a ray,an open finite interval,B
+"Um grupo G em que (ab)^2 = a^2b^2 para todos a, b em G é necessariamente",finite,cyclic,of order two,abelian,D
+"Se f é uma função real continuamente diferenciável definida no intervalo aberto (-1, 4) tal que f(3) = 5 e f'(x) ≥ -1 para todo x, qual é o maior valor possível de f(0)?",3,4,5,8,D
+"Suponha que A e B são matrizes n × n com entradas reais. Quais das seguintes afirmações são VERDADEIRAS?
+I. O traço de A^2 é não negativo.
+II. Se A^2 = A, então o traço de A é não negativo.
+III. O traço de AB é o produto dos traços de A e B.",II only,III only,I and II only,II and III only,A
+Qual é o algarismo das unidades na expansão decimal padrão do número 7^25?,1,3,5,7,D
+"Afirmação 1 | f : X → Y é contínua e X é compacto. f deve ser uniformemente contínua. Afirmação 2 | Se f(x), g(x) : R → R são diferenciáveis em todos os pontos, f(g(x)) deve ser diferenciável em todos os pontos.","True, True","True, False","False, True","False, False",A
+A região delimitada pelas curvas y = x e y = x^2 no primeiro quadrante do plano xy é girada em torno do eixo y. O volume do sólido de revolução resultante é,π/12,π/6,π/3,2π/3,B
+"No plano xy, a curva com equações paramétricas x = cos t e y = sin t, 0 <= t <= pi, tem comprimento",3,pi,3pi,3/2,B
+"Quais dos seguintes são intervalos válidos de convergência para uma série de potências?
+(I) [−1, 3)
+(II) (−∞, 0]
+(III) [2, 2] ∪ [3, 3]
+(IV) (−∞,∞)",Only (II),Only (IV ),(I) and (IV ),(II) and (III),C
+"Se f: R -> R é uma função limitada que é integrável no sentido de Lebesgue, então qual das seguintes afirmações deve ser verdadeira?",f é integrável no sentido de Riemann.,Não existe um conjunto E infinito enumerável de R tal que f é não diferenciável em todo x \in E.,Não existe um subconjunto E não enumerável de R tal que f é não diferenciável em todo x \in E.,None of the above.,D
+"No plano xy, o gráfico de x^(log y) = y^log x é",the open first quadrant,a closed curve,a ray in the open first quadrant,a single point,A
+Para qual p a norma ||x||_p pode ser expressa como um produto interno?,1,2,p >= 1,infinity,B
+"Seja S um espaço topológico compacto, seja T um espaço topológico e seja f uma função de S sobre T. Das seguintes condições em f, qual é a condição mais fraca suficiente para garantir a compacidade de T?",f is a homeomorphism.,f is continuous and one-to-one,f is continuous.,f is one-to-one,C
+Qual é a área de um triângulo equilátero cujo círculo inscrito tem raio 2?,12,16,12*sqrt(3),16*sqrt(3),C
+Para qual valor de n existem exatamente dois grupos abelianos de ordem n até isomorfismo?,4,7,8,12,A
+"Qual das seguintes afirmações nem sempre é verdadeira para x, y, z ∈ R^k?",|x| ≥ 0,|x · y| ≤ |x||y|,|x| = 0 se e somente se x = 0,|x + y| = |x| + |y|,D
+"Seja V o espaço vetorial, sob as operações usuais, dos polinômios reais de grau no máximo 3. Seja W o subespaço de todos os polinômios p(x) em V tais que p(0) = p(1) = p(-1) = 0. Então dim V + dim W é",4,5,6,7,B
+"Se V e W são subespaços de 2 dimensões de R^4, quais são as dimensões possíveis para o subespaço V interseção W?",1 only,2 only,0 and 1 only,"0, 1, and 2 only",D
+"As curvas y = (sen x + cos x)^4 e y = (sen x - cos x)^4 se interceptam em x = 0. Se a é o menor valor positivo de x em que essas curvas se interceptam novamente, determine a área entre essas curvas de x = 0 a x = a.",2,π,4,3π/2,C
+"Se f é uma transformação linear do plano para os números reais e se f(1, 1) = 1 e f(-1, 0) = 2, então f(3, 5) =",9,8,0,-5,A
+Quantas raízes reais tem o polinômio 2x^5 + 8x - 7?,None,One,Two,Three,B
+"O departamento de matemática de uma universidade tem 10 professores e oferecerá 20 cursos diferentes no próximo semestre. Cada professor será designado para lecionar exatamente 2 dos cursos, e cada curso terá exatamente um professor designado para lecioná-lo. Se qualquer professor pode ser designado para lecionar qualquer curso, quantas atribuições completas diferentes dos 10 professores para os 20 cursos são possíveis?",20!/2^(10),10!/2^9,10^(20) - 2^(10),10^(20) - 100,A
+Qual das seguintes afirmações é verdadeira:,"É possível definir uma relação de ordem linear ≤ nos números complexos C tal que (C, +, ×, ≤) não seja um corpo ordenado.","É possível definir uma relação de ordem linear nos números complexos C que faça (C, +, ×, ≤) um corpo ordenado.",Nem (a) nem (b),Ambos (a) e (b).,A
+"Em um jogo, dois jogadores se alternam lançando uma moeda justa; o vencedor é o primeiro a obter uma cara. A probabilidade de que o jogador que faz o primeiro lançamento vença o jogo é",1/4,1/3,1/2,2/3,D
+Qual das seguintes opções NÃO é um grupo?,The integers under addition,The nonzero integers under multiplication,The nonzero real numbers under multiplication,The complex numbers under addition,B
+Sejam x e y inteiros positivos tais que 3x + 7y é divisível por 11. Qual das seguintes opções também deve ser divisível por 11?,4x + 6y,x + y + 5,9x + 4y,4x - 9y,D
+"Qual é o valor mínimo da expressão x + 4z como uma função definida em R^3, sujeita à restrição x^2 + y^2 + z^2 <= 2?",0,-2,-sqrt(34),-sqrt(35),C
+"Seja R um anel e sejam U e V ideais (bilaterais) de R. Quais das seguintes opções também devem ser ideais de R?
+
+I. {u + v : u ∈ U e v ∈ V}
+II. {uv : u ∈ U e v ∈ V}
+III. {x : x ∈ U e x ∈ V}",II only,III only,I and II only,I and III only,D
+A região delimitada pelo eixo x e pela função f(x) = x/(1 + x^3) é girada em torno do eixo x. Qual é o volume do sólido gerado?,π/3,π/4,π,2π,A
+Suponha que hoje seja quarta-feira. Que dia da semana será daqui a 10^(10^(10)) dias?,Sunday,Monday,Tuesday,Wednesday,A
+"A água escorre por um furo no vértice de um cone invertido a uma taxa de 3 cm³ por minuto. A altura e o raio do cone são 2 cm e 1 cm, respectivamente. A que taxa a altura da água muda quando o nível da água está meio centímetro abaixo do topo do cone? O volume de um cone é V = (π/3)*r²*h, onde r é o raio e h é a altura do cone.",−48/π cm/min,−4/(3π) cm/min,−8/(3π) cm/min,−16/(3π) cm/min,D
+"Considere o sistema de equações lineares
+w + 3x + 2y + 2z = 0
+w + 4x + y = 0
+3w + 5x + 10 y + 14z = 0
+2w + 5x + 5y + 6z = 0
+com soluções da forma (w, x, y, z), onde w, x, y e z são reais. Qual das seguintes afirmações é FALSA?",The system is consistent.,The system has infinitely many solutions.,The sum of any two solutions is a solution.,"Every solution is a scalar multiple of (-5, 1, 1, 0).",D
+"Se c > 0 e f(x) = e^x - cx para todos os números reais x, então o valor mínimo de f é",f(c),f(e^c),f(1/c),f(log c),D
+"Suponha que A é uma matriz 3 × 3 tal que det(A − λI) = −λ^3 + 3λ^2 + λ − 3, onde I é a matriz identidade 3 × 3. Quais das seguintes afirmações são VERDADEIRAS sobre A?
+I. O traço de A é 3.
+II. O determinante de A é −3.
+III. A matriz A tem autovalores −3 e 1.",I only,II only,III only,I and II only,D
+Seja y = f(x) uma solução da equação diferencial x dy + (y - xe^x) dx = 0 tal que y = 0 quando x = 1. Qual é o valor de f(2)?,1/(2e),1/e,e^2/2,2e,C
+"Uma moeda justa será lançada 100 vezes, com cada lançamento resultando em cara ou coroa. Se H é o número total de caras e T é o número total de coroas, qual dos seguintes eventos tem a maior probabilidade?",H = 50,T >= 60,51 <= H <= 55,H >= 48 e T >= 48,D
+"Afirmação 1 | Suponha que f : [a, b] é uma função e suponha que f tem um máximo local. f'(x) deve existir e ser igual a 0? Afirmação 2 | Existem mapas contínuos não constantes de R para Q.","True, True","True, False","False, True","False, False",D
+"Seja I != A != -I, onde I é a matriz identidade e A é uma matriz real 2 x 2. Se A = A^(-1), então o traço de A é",2,1,0,-1,C
+"Um total de x pés de cerca deve formar três lados de um quintal retangular nivelado. Qual é a área máxima possível do quintal, em termos de x?",x^2/9,x^2/8,x^2/4,x^2,B
+"Afirmação 1 | Se A é conexo, o fecho de A deve ser conexo. Afirmação 2 | Toda função contínua f : (0, 1) → (0, 1) tem um ponto fixo.","True, True","True, False","False, True","False, False",B
+Qual dos seguintes conjuntos tem a maior cardinalidade?,R,O conjunto de todas as funções de Z para Z,"O conjunto de todas as funções de R para {0, 1}",O conjunto de todos os subconjuntos finitos de R,C
+"Seja f(x) uma função cujo gráfico passa pela origem. Se f(2n) = n^2 + f[2(n - 1)] para todo inteiro n, qual é o valor de f(8)?",24,30,32,36,B
+Quantos grupos abelianos estruturalmente distintos têm ordem 72?,4,6,8,9,B
+"Se o grupo finito G contém um subgrupo de ordem sete, mas nenhum elemento (além da identidade) é seu próprio inverso, então a ordem de G poderia ser",27,28,35,37,C
+"Seja f(x, y) = x^3 + y^3 + 3xy para todos os reais x e y. Então existem pontos distintos P e Q tais que f tem um",local maximum at P and at Q,saddle point at P and at Q,local maximum at P and a saddle point at Q,local minimum at P and a saddle point at Q,C
+"Se A é um subconjunto da reta real R e A contém cada número racional, qual das seguintes afirmações deve ser verdadeira?","If A is open, then A = R.","If A is closed, then A = R.","If A is uncountable, then A = R.","If A is uncountable, then A is open.",B
+Seja M uma matriz real 5 x 5. Exatamente quatro das cinco condições a seguir sobre M são equivalentes entre si. Qual das cinco condições NÃO é equivalente a nenhuma das outras quatro?,"Para quaisquer dois vetores coluna distintos u e v de M, o conjunto {u, v} é linearmente independente.",O sistema homogêneo Mx = 0 tem apenas a solução trivial.,O sistema de equações Mx = b tem uma única solução para cada vetor coluna real 5 x 1 b.,O determinante de M é diferente de zero.,A
+Quantos números positivos x satisfazem a equação cos(97x) = x?,1,15,31,49,C
+Para qual dos seguintes anéis é possível que o produto de dois elementos não nulos seja zero?,The ring of complex numbers,The ring of integers modulo 11,"The ring of continuous real-valued functions on [0, 1]",The ring {a + b * sqrt(2) : a and b are rational numbers},C
+O mapa x -> axa^2 de um grupo G em si mesmo é um homomorfismo se e somente se,G is abelian,G = {e},a^3 = e,a^2 = a,C
+"Se A é a matriz 2 por 2 cujo elemento (i, j) é igual a i + j, e B é a matriz 3 por 3 cujo elemento (i, j) é igual a i + j, encontre o valor da soma detA + detB.",-2,-1,0,2,B
+"Se f : (0, 1) → (0, 1], então qual das seguintes opções pode ser VERDADEIRA?
+I. f é injetora e sobrejetora.
+II. A imagem de f é compacta.
+III. f é contínua, injetora e sobrejetora.",I only,II only,I and II only,I and III only,C
+"Se um número real x for escolhido aleatoriamente no intervalo [0, 3] e um número real y for escolhido aleatoriamente no intervalo [0, 4], qual é a probabilidade de que x < y?",1/2,7/12,5/8,2/3,C
+"A probabilidade de que um ponto (x, y) em R^2 seja escolhido segue uma distribuição aleatória uniforme dentro da região descrita pela desigualdade 0 < |x| + |y| < 1. Qual é a probabilidade de que 2(x + y) > 1?",0,1/4,sqrt(2)/4,1/sqrt(2),B
+(1+i)^10 =,1,i,32,32i,D
+"Se U e V são subespaços tridimensionais de R^5, quais são as dimensões possíveis para U ∩ V?",0,1,0 or 1,"1, 2, or 3",D
+"Seja S o subconjunto de R^2 consistindo de todos os pontos (x, y) no quadrado unitário [0, 1] × [0, 1] para os quais x ou y, ou ambos, são irracionais. Em relação à topologia padrão em R^2, S é",closed,open,connected,totally disconnected,C
+Qual dos seguintes círculos tem o maior número de pontos de interseção com a parábola x^2 = y + 4?,x^2 + y^2 = 1,x^2 + y^2 = 2,x^2 + y^2 = 9,x^2 + y^2 = 16,C
+X é um conjunto finito com a seguinte propriedade: O número de subconjuntos de X que contêm exatamente 3 elementos é 14 a mais que o número de subconjuntos de X que contêm exatamente 2 elementos. Quantos subconjuntos de X contêm exatamente 4 elementos?,24,25,28,35,D
+"Seja T: R^2 -> R^2 a transformação linear que mapeia o ponto (1, 2) para (2, 3) e o ponto (-1, 2) para (2, -3). Então T mapeia o ponto (2, 1) para","(1, 6)","(-1, 4)","(3, 2)","(-4, 3)",A

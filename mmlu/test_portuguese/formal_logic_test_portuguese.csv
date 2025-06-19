@@ -1,0 +1,128 @@
+"Identifique a conclusão do seguinte argumento. É difícil não verificar em nossos pares a mesma inteligência enfraquecida devido às emoções que observamos em nossos pacientes cotidianos. A arrogância da nossa consciência, que em geral pertence aos mecanismos de defesa mais fortes, bloqueia os complexos inconscientes. Por causa disso, é difícil convencer as pessoas do inconsciente e, por sua vez, ensinar-lhes o que seu conhecimento consciente contradiz. (Sigmund Freud, A Origem e o Desenvolvimento da Psicanálise)",It is hard not to verify in our peers the same weakened intelligence due to emotions that we observe in our everyday patients.,"The arrogance of our consciousness, which in general, belongs to the strongest defense mechanisms, blocks the unconscious complexes.","Because of this, it is difficult to convince people of the unconscious, and in turn to teach them what their conscious knowledge contradicts.","It is difficult to convince people of the unconscious, and in turn to teach them what their conscious knowledge contradicts.",D
+Selecione a melhor tradução para a lógica de predicados. David ensina Chris. (c: Chris; d: David; Txy: x ensina y),Tdc,Tcd,Tcc,dTc,A
+"Selecione a melhor interpretação em inglês da proposição dada, usando a seguinte chave de tradução: Ax: x é um apartamento Hx: x é uma casa Lx: x é grande Bxy: x é maior que y (∃x)[(Ax • Lx) • (∃y)(Hy • Bxy)]",Some large houses are bigger than some apartments.,Some houses are bigger than all large apartments.,Some large apartments are bigger than some houses.,Some houses are bigger thatn some large apartments.,C
+"Construa uma tabela verdade completa para o seguinte argumento. Em seguida, usando a tabela verdade, determine se o argumento é válido ou inválido. Se o argumento for inválido, escolha uma opção que apresente um contraexemplo. (Pode haver outros contraexemplos também.)
+~G ⊃ H
+~H / G",Valid,Invalid. Counterexample when G and H are true,Invalid. Counterexample when G is true and H is false,Invalid. Counterexample when H is true and G is false,A
+Use a seguinte chave para traduzir a fórmula dada de PL para sentenças naturais em inglês.,Marina lê um livro de Percy Jackson.,Izzy joga Minecraft.,Emily para de trabalhar.,"Russell faz o jantar.
+E: Ashleigh passa para visitar.
+(~B • E) ⊃ D
+A: Se não for o caso que tanto Izzy joga Minecraft quanto Ashleigh passa para visitar, então Russell faz o jantar.
+B: Se for tanto o caso que Izzy não joga Minecraft quanto Ashleigh passa para visitar, então Russell faz o jantar.
+C: Izzy jogar Minecraft e Ashleigh passar para visitar implica que Russell faz o jantar.
+D: Russell fazer o jantar é uma condição suficiente para Izzy não jogar Minecraft e Ashleigh passar para visitar.",B
+"Selecione a melhor interpretação em inglês da proposição dada, usando a seguinte chave de tradução: Ax: x é um apartamento Hx: x é uma casa Lx: x é grande Bxy: x é maior que y (∃x)[Hx • (∀y)(Ay ⊃ Bxy)]",Some houses are smaller than all apartments.,Every house is bigger than every apartment.,Some apartment is smaller than every house.,Some houses are bigger than every apartment.,D
+"Construa uma tabela verdade completa para o seguinte argumento. Em seguida, usando a tabela verdade, determine se o argumento é válido ou inválido. Se o argumento for inválido, escolha uma opção que apresente um contraexemplo. (Pode haver outros contraexemplos também.)
+~K ≡ L / (K · L) ∨ (K · ~L)",Valid,Invalid. Counterexample when K and L are true,Invalid. Counterexample when K is true and L is false,Invalid. Counterexample when L is true and K is false,D
+"Identifique o antecedente da seguinte proposição condicional: Se a universidade não aumentar a ajuda financeira, ou o presidente não a aprova ou o conselho de curadores a impede.",The university increases financial aid.,The university does not increase financial aid.,The board of trustees prevents it.,The president fails to approve it.,B
+"Qual das seguintes proposições é uma consequência imediata (em um passo) na Lógica Proposicional (PL) das premissas dadas?
+~E ⊃ ~F
+G ⊃ F
+H ∨ ~E
+H ⊃ I
+~I",E ⊃ F,F ⊃ G,H ⊃ ~E,~H,D
+"Qual das fórmulas fornecidas de PL é a melhor simbolização da seguinte frase?
+Todo mundo ama Raymond, ou não.",L,~L,L • ~L,L ∨ ~L,D
+Selecione a melhor tradução para a lógica de predicados. Todos os reis são mais sortudos que todos os pobres. (Kx: x é um rei; Px: x é um pobre; Lxy: x é mais sortudo que y),(∀x)[Kx ⊃ (∀y)(Py ⊃ Lxy)],(∀x)[Kx ⊃ (∀y)(Lxy ⊃ Py)],(∀x)(∀y)[(Kx • Py) ⊃ Lyx],(∀x)[(Kx • (∀y)(Py)) ⊃ Lxy],A
+"Construa uma tabela verdade completa para os seguintes pares de proposições. Em seguida, usando as tabelas verdade, determine se as afirmações são logicamente equivalentes ou contraditórias. Se não forem nem uma coisa nem outra, determine se são consistentes ou inconsistentes. Justifique suas respostas.
+(~M ⊃ ~N) ∨ (O ≡ N) e (~M · N) · [(~O ∨ ~N) · (O ∨ N)]",Logically equivalent,Contradictory,"Neither logically equivalent nor contradictory, but consistent",Inconsistent,B
+"Qual das seguintes proposições é uma consequência imediata (em um passo) em PL das premissas dadas?
+E ⊃ ~F
+~F ⊃ G
+~G",E ⊃ F,F ⊃ G,G ⊃ E,~~F,D
+"Use tabelas de verdade indiretas para determinar se o seguinte argumento é válido. Se o argumento for inválido, escolha uma opção que apresente um contraexemplo. (Pode haver outros contraexemplos também.)
+E ⊃ (F ∨ ~G)
+F ⊃ (~E ∨ ~G) / ~(E ≡ F)",Valid,"Invalid. Counterexample when E, F, and G are true",Invalid. Counterexample when E and F are true and G is false,"Invalid. Counterexample when E, F, and G are false",C
+"Use tabelas de verdade indiretas para determinar se o seguinte argumento é válido. Se o argumento for inválido, escolha uma opção que apresente um contraexemplo. (Pode haver outros contraexemplos também.)
+H ≡ (~I ∨ J)
+H ∨ ~J / ~I",Valid,"Invalid. Counterexample when H, I, and J are false",Invalid. Counterexample when H and I are true and J is false,Invalid. Counterexample when I is true and H and J are false,D
+Selecione a melhor tradução para a lógica de predicados. Alguns bombeiros resgatam vítimas do perigo. (Dx: x é perigo; Fx: x é um bombeiro; Vx: x é uma vítima; Rxyz: x resgata y de z),(∃x){Fx • (∀y)[Dy ⊃ (∃z)(Vz • Rxyz)]},(∃x){Fx • (∃y)[Vy • (∃z)(Dz • Rxyz)]},(∃x){Fx • (∃y)(∃z)[(Vy • Dz) • Rxzy]},(∀x){Fx ⊃ (∃y)[Vy . (∃z)(Dz • Rxyz)]},B
+"Identifique o antecedente da seguinte proposição condicional: A universidade aumenta as mensalidades se, e somente se, tanto o governador aprovar quanto o conselho de curadores recomendar.",The university raises tuition.,The governor approves of it.,The board of trustees recommends it.,None of the above,D
+Selecione a melhor tradução para a lógica de predicados. Todos os planetas são menores que Júpiter. (j: Júpiter; Px: x é um planeta; Sxy: x é menor que y),(∃x)(Px • Sxj),(∀x)(Px • Sxj),(∀x)(Px ⊃ Sjx),(∀x)(Px ⊃ Sxj),D
+Selecione a melhor tradução para a lógica de predicados. José apresenta Wilma a Kevin. (j: José; k: Kevin; w: Wilma; Ixyz: x apresenta y a z),Iwkj,Ijwk,Iwjk,Ijkw,B
+Selecione a melhor tradução para a lógica de predicados: Nenhum artefato é pessoa.,~Pa,(∀x)(Ax ⊃ ~Px),~Ap,(∀x)(Ax • ~Px),B
+"Construa uma tabela verdade completa para o seguinte argumento. Em seguida, usando a tabela verdade, determine se o argumento é válido ou inválido. Se o argumento for inválido, escolha uma opção que apresente um contraexemplo. (Pode haver outros contraexemplos também.)
+P ⊃ Q
+Q · R / ~P · R",Valid,"Invalid. Counterexample when P, R, and Q are true",Invalid. Counterexample when P and Q are true and R is false,Invalid. Counterexample when R and Q are true and P is false,B
+Selecione a melhor tradução para a lógica de predicados. Marco se muda da Itália para a Espanha. (i: Itália; m: Marco; s: Espanha; Mxyz: x se muda para y a partir de z),Msim,Mmis,Mims,Mmsi,D
+"Selecione a melhor interpretação em inglês da proposição dada, usando a seguinte chave de tradução: Ax: x é um apartamento Hx: x é uma casa Lx: x é grande Bxy: x é maior que y (∀x){Ax ⊃ (∀y)[(Hy • Ly) ⊃ ∼Bxy]}",All apartments are not bigger than some large house.,No apartment is bigger than any large house.,All large houses are not bigger than some apartment.,No large house is bigger than all apartments.,B
+"Construa uma tabela verdade completa para o seguinte argumento. Em seguida, usando a tabela verdade, determine se o argumento é válido ou inválido. Se o argumento for inválido, escolha uma opção que apresenta um contraexemplo. (Pode haver outros contraexemplos também.)
+J ≡ ~K
+J ∨ L
+~K / L",Valid,Invalid. Counterexample when J and K are true and L is false,Invalid. Counterexample when J is true and K and L are false,Invalid. Counterexample when K is true and J and L are false,C
+"Qual das fórmulas fornecidas de PL é a melhor simbolização da seguinte frase?
+Pablo irá à loja se, e somente se, seu irmão o levar e pagar pela gasolina.",(P ≡ D) ≡ G,(D • G) ⊃ P,P ⊃ (D • G),P ≡ (D • G),D
+"Use tabelas de verdade indiretas para determinar se cada conjunto de proposições é consistente. Se o conjunto for consistente, escolha uma opção com uma valoração consistente. (Pode haver outras valorações consistentes.)
+D ≡ E
+F ∨ D
+~E · ~F",Inconsistent,"Consistent. Consistent valuation when D, E, and F are true",Consistent. Consistent valuation when D and E are true and F is false,Consistent. Consistent valuation when D and F are true and E is false,A
+"Qual das fórmulas fornecidas de PL é a melhor simbolização da seguinte frase?
+O restaurante serve torta ou cheesecake ou sorvete de sobremesa.",P ∨ (C ∨ I),(P ∨ C) ∨ I,P ∨ C ∨ I,Options A and B,D
+"Qual das fórmulas fornecidas de PL é a melhor simbolização da seguinte frase?
+Se Beth anda de bicicleta, ela chega ao trabalho mais cedo.",B ⊃ W,W ⊃ B,B ≡ W,Both A and B,A
+Selecione a melhor tradução para a lógica de predicados: Ou Taylor ou Eric é um menino do latte.,Lt ∨ Le,Lx ∨ Ly,tL ∨ eL,Tl ⊃ El,A
+"Use tabelas de verdade indiretas para determinar se o seguinte argumento é válido. Se o argumento for inválido, escolha uma opção que apresente um contraexemplo. (Pode haver outros contraexemplos também.)
+E ⊃ F
+G ⊃ ~F / ~G ∨ ~E",Valid,"Invalid. Counterexample when E, F, and G are true",Invalid. Counterexample when E and G are true and F is false,Invalid. Counterexample when F and G are true and E is false,A
+"Use tabelas de verdade indiretas para determinar se cada conjunto de proposições é consistente. Se o conjunto for consistente, escolha uma opção com uma valoração consistente. (Pode haver outras valorações consistentes.)
+A ⊃ (~B ∨ C)
+C ⊃ D
+A ∨ (B · ~D)
+A ≡ (B ⊃ D)",Inconsistent,Consistent. Consistent valuation when A and D are true and B and C are false,"Consistent. Consistent valuation when A, B, and D are true and C is false",Consistent. Consistent valuation when C and D are true and A and B are false,B
+"Construa uma tabela verdade completa para o seguinte argumento. Em seguida, usando a tabela verdade, determine se o argumento é válido ou inválido. Se o argumento for inválido, escolha uma opção que apresente um contraexemplo. (Pode haver outros contraexemplos também.)
+M ∨ N
+~M · O / N",Valid,Invalid. Counterexample when M and O are true and N is false,Invalid. Counterexample when M is true and O and N are false,Invalid. Counterexample when O is true and M and N are false,A
+"Qual das seguintes proposições é uma consequência imediata (em um passo) em PL das premissas dadas?
+U ⊃ W
+W ⊃ (X ≡ ~Y)
+(X ≡ ~Y) ⊃ Z
+~Z",U ⊃ Z,U ∨ W,~W,~(X ≡ ~Y),D
+"Identifique o antecedente da seguinte proposição condicional: Se os Bees não vencerem seu primeiro jogo, então tanto os Aardvarks quanto os Chipmunks vencem seus primeiros jogos.",The Aardvarks win their first game.,The Bees don't win their first game.,The Chipmunks win their first game.,Both the Aardvarks and the Chipmunks win their first games.,B
+Selecione a melhor tradução para a lógica de predicados. Holly ama Frances. (f: Frances; h: Holly; Lxy: x ama y),hLf,fLh,Lfh,Lhf,D
+"Use tabelas de verdade indiretas para determinar se o seguinte argumento é válido. Se o argumento for inválido, escolha uma opção que apresente um contraexemplo. (Pode haver outros contraexemplos também.)
+P ⊃ (Q ∨ R)
+(Q · S) ⊃ ~P
+~(~Q ∨ R) / ~P",Valid,"Invalid. Counterexample when P, Q, R, and S are true",Invalid. Counterexample when P and Q are true and R and S are false,"Invalid. Counterexample when P, R, and S are true and Q is false",C
+"Construa uma tabela verdade completa para o seguinte argumento. Em seguida, usando a tabela verdade, determine se o argumento é válido ou inválido. Se o argumento for inválido, escolha uma opção que apresente um contraexemplo. (Pode haver outros contraexemplos também.)
+T ∨ U
+W · T / U",Valid,Invalid. Counterexample when T and W are true and U is false,Invalid. Counterexample when T is true and W and U are false,Invalid. Counterexample when W is true and T and U are false,B
+Identifique o antecedente da seguinte proposição condicional: A universidade aumenta a mensalidade se tanto o governador aprovar quanto o conselho de curadores recomendar.,The university raises tuition.,The governor approves of it.,The board of trustees recommends it.,The governor approves of it and the board of trustees recommends it.,D
+"Identifique o antecedente da seguinte proposição condicional: O restaurante não tem ervilhas, então em vez disso eles servem milho e batatas.",The restaurant has peas.,The restaurant does not have peas.,The restaurant serves corn.,The restaurant serves potatoes.,B
+Selecione a melhor tradução para a lógica de predicados. Todos os jujubas são mais doces que todas as frutas. (Fx: x é uma fruta; Jx: x é uma jujuba; Sxy: x é mais doce que y),(∀x)[Fx ⊃ (∀y)(Jy ⊃ Sxy)],(∀x)(∀y)[(Fx • Jy) • Sxy],(∀x)(∀y)[Sxy ⊃ (Fy • Jx)],(∀x)[Jx ⊃ (∀y)(Fy ⊃ Sxy)],D
+"Identifique a conclusão do seguinte argumento. Que o mundo é minha ideia é uma verdade válida para toda criatura viva, embora apenas o homem possa contemplá-la. Ao fazê-lo, ele alcança a sabedoria filosófica. Nenhuma verdade é mais absolutamente certa do que aquela de que tudo o que existe para o conhecimento e, portanto, este mundo é apenas objeto em relação ao sujeito, percepção de um percipiente. O mundo é uma ideia. (Arthur Schopenhauer, O Mundo como Vontade e Representação)",The world is an idea.,"That the world is my idea is a truth valid for every living creature, though only man can contemplate it.","In doing so, he attains philosophical wisdom.","No truth is more absolutely certain than that all that exists for knowledge and therefore this world is only object in relation to subject, perception of a perceiver.",A
+Selecione a melhor tradução para a lógica de predicados. Leo é mais alto que Cathy. (c: Cathy; l: Leo; Txy: x é mais alto que y),Tlc,Tcl,lTc,cTl,A
+"Construa uma tabela verdade completa para os seguintes pares de proposições. Em seguida, usando as tabelas verdade, determine se as afirmações são logicamente equivalentes ou contraditórias. Se não forem nenhum dos dois, determine se são consistentes ou inconsistentes. Justifique suas respostas.
+C ⊃ (D ∨ C) e C · ~D",Logically equivalent,Contradictory,"Neither logically equivalent nor contradictory, but consistent",Inconsistent,C
+"Construa uma tabela-verdade completa para os seguintes pares de proposições. Em seguida, usando as tabelas-verdade, determine se as afirmações são logicamente equivalentes ou contraditórias. Se não forem nenhum dos dois, determine se são consistentes ou inconsistentes. Justifique suas respostas.
+~O ⊃ P e O ∨ P",Logically equivalent,Contradictory,"Neither logically equivalent nor contradictory, but consistent",Inconsistent,A
+"Use tabelas de verdade indiretas para determinar se o seguinte argumento é válido. Se o argumento for inválido, escolha uma opção que apresente um contraexemplo. (Pode haver outros contraexemplos também.)
+(T · ~U) ⊃ ~W
+~W ⊃ X
+~Z ⊃ W
+~(X · Z) / T ⊃ U",Valid,"Invalid. Counterexample when T, X, and Z are true and U and W are false","Invalid. Counterexample when T and X are true and U, W, and Z are false","Invalid. Counterexample when T, W, and Z are true and U and X are false",A
+"Selecione a melhor tradução para a lógica de predicados: Cecília parte meu coração se, e somente se, Maria é um problema ou uma garota.",Bc ≡ (Pm ∨ Gm),Bc ≡ (Pm • Gm),Bc ⊃ (Pm ∨ Gm),Cb ⊃ (Pm • Gm),A
+"Selecione a melhor tradução para a lógica de predicados: Se Delilah está em Nova York, então Juana está em Bogotá ou Layla está em San Juan.",Nd ⊃ (Bj • Sl),Dn ≡ (Bx • Ly),Nd ≡ (Bj • Sl),Nd ⊃ (Bj ∨ Sl),D
+Use a seguinte chave para traduzir a fórmula dada de PL para frases naturais em inglês.,Marina lê um livro de Percy Jackson.,Izzy joga Minecraft.,Emily para de trabalhar.,"Russell faz o jantar.  
+E: Ashleigh passa por aqui.  
+~(A ⊃ B) • (B ⊃ ~E)  
+A: Não é o caso que Marina ler um livro de Percy Jackson implica que Izzy joga Minecraft, mas Izzy jogar Minecraft implica que Ashleigh não passa por aqui.  
+B: Se Marina não lê um livro de Percy Jackson, então Izzy joga Minecraft, o que implica que Ashleigh não passa por aqui.  
+C: Marina ler um livro de Percy Jackson não implica que Izzy joga Minecraft, mas Izzy joga Minecraft desde que Ashleigh não passe por aqui.  
+D: Não é verdade que Marina lê um livro de Percy Jackson apenas quando Izzy joga Minecraft, mas Izzy joga Minecraft apenas quando Ashleigh passa por aqui.",A
+"Use tabelas de verdade indiretas para determinar se o seguinte argumento é válido. Se o argumento for inválido, escolha uma opção que apresente um contraexemplo. (Pode haver outros contraexemplos também.)
+(A ∨ B) ⊃ C
+C ⊃ ~D / D ⊃ A",Valid,"Invalid. Counterexample when B, C, and D are true and A is false",Invalid. Counterexample when B and D are true and A and C are false,"Invalid. Counterexample when A, B, and C are false and D is true",D
+"Selecione a melhor interpretação em inglês dos argumentos dados na lógica de predicados.
+Dh ⊃ ~Pt
+(∀x)Px ∨ (∀x)Mx
+~Mb	/ ~Dh","If my headache is dualist state, then your tickle is a physical state. Either everything is physical or everything is mental. But my broken toe is not a mental state. So my headache is not a dualist state.","If my headache is dualist state, then your tickle is not a physical state. Either everything is physical or everything is mental. But my broken toe is not a mental state. So my headache is not a dualist state.","If my headache is dualist state, then your tickle is not a physical state. If everything is physical then everything is mental. But my broken toe is not a mental state. So my headache is not a dualist state.","If my headache is dualist state, then your tickle is not a physical state. Everything is either physical or mental. But my broken toe is not a mental state. So my headache is not a dualist state.",B
+"Qual das seguintes proposições é uma consequência imediata (em um passo) na Lógica Proposicional (PL) das premissas dadas?
+A ⊃ (B • C)
+~(B • C)
+A ∨ (D ∨ B)",A,~A,B,~B,B
+"Qual das seguintes proposições é uma consequência imediata (em um passo) em PL das premissas dadas?  
+(N ⊃ ~O) ⊃ (O ∨ Q)  
+P ⊃ (N ⊃ ~O)  
+N ⊃ P",P,N ⊃ ~O,O ∨ Q,~P,A
+Selecione a melhor tradução para a lógica de predicados. A Terra não é maior que Júpiter. (e: Terra; j: Júpiter; Bxy: x é maior que y),~Bje,Bej,Bje~,~Bej,D
+Identifique o antecedente da seguinte proposição condicional: Os Bees vencerem seu primeiro jogo é necessário para que os Aardvarks ou os Chipmunks não vençam seu primeiro jogo.,The Aardvarks do not win their first game.,The Bees win their first game.,The Chipmunks do not win their first game.,Either the Aardvarks or the Chipmunks do not win their first game.,D

@@ -1,0 +1,281 @@
+"Identifiez la conclusion de l'argument suivant. Il est difficile de ne pas constater chez nos pairs la même intelligence affaiblie par les émotions que nous observons chez nos patients quotidiens. L'arrogance de notre conscience, qui en général appartient aux mécanismes de défense les plus puissants, bloque les complexes inconscients. À cause de cela, il est difficile de convaincre les gens de l'inconscient, et par conséquent de leur enseigner ce que leur savoir conscient contredit. (Sigmund Freud, The Origin and Development of Psychoanalysis)",It is hard not to verify in our peers the same weakened intelligence due to emotions that we observe in our everyday patients.,"The arrogance of our consciousness, which in general, belongs to the strongest defense mechanisms, blocks the unconscious complexes.","Because of this, it is difficult to convince people of the unconscious, and in turn to teach them what their conscious knowledge contradicts.","It is difficult to convince people of the unconscious, and in turn to teach them what their conscious knowledge contradicts.",D
+Sélectionnez la meilleure traduction en logique des prédicats. David enseigne à Chris. (c : Chris ; d : David ; Txy : x enseigne à y),Tdc,Tcd,Tcc,dTc,A
+"Sélectionnez la meilleure interprétation en anglais de la proposition donnée, en utilisant la clé de traduction suivante : Ax : x est un appartement Hx : x est une maison Lx : x est grand Bxy : x est plus grand que y (∃x)[(Ax • Lx) • (∃y)(Hy • Bxy)]",Some large houses are bigger than some apartments.,Some houses are bigger than all large apartments.,Some large apartments are bigger than some houses.,Some houses are bigger thatn some large apartments.,C
+"Construisez une table de vérité complète pour l'argument suivant. Ensuite, en utilisant la table de vérité, déterminez si l'argument est valide ou invalide. Si l'argument est invalide, choisissez une option qui présente un contre-exemple. (Il peut y avoir d'autres contre-exemples également.)
+~G ⊃ H
+~H / G",Valid,Invalid. Counterexample when G and H are true,Invalid. Counterexample when G is true and H is false,Invalid. Counterexample when H is true and G is false,A
+Utilisez la clé suivante pour traduire la formule donnée de PL en phrases naturelles en anglais.,Marina lit un livre de Percy Jackson.,Izzy joue à Minecraft.,Emily arrête de travailler.,"Russell prépare le dîner.
+E: Ashleigh passe.
+(~B • E) ⊃ D
+A: Si ce n'est pas le cas qu'à la fois Izzy joue à Minecraft et Ashleigh passe alors Russell prépare le dîner.
+B: Si c'est à la fois le cas qu'Izzy ne joue pas à Minecraft et Ashleigh passe alors Russell prépare le dîner.
+C: Izzy jouant à Minecraft et Ashleigh passant implique que Russell prépare le dîner.
+D: Russell préparant le dîner est une condition suffisante pour qu'Izzy ne joue pas à Minecraft et qu'Ashleigh passe.",B
+"Sélectionnez la meilleure interprétation en anglais de la proposition donnée, en utilis la clé de traduction suivante : Ax : x est un appartement Hx : x est une maison Lx : x est grand Bxy : x est plus grand que y (∃x)[Hx • (∀y)(Ay ⊃ Bxy)]",Some houses are smaller than all apartments.,Every house is bigger than every apartment.,Some apartment is smaller than every house.,Some houses are bigger than every apartment.,D
+"Construisez une table de vérité complète pour l'argument suivant. Ensuite, en utilisant la table de vérité, déterminez si l'argument est valide ou invalide. Si l'argument est invalide, choisissez une option qui présente un contre-exemple. (Il peut y avoir d'autres contre-exemples également.)
+~K ≡ L / (K · L) ∨ (K · ~L)",Valid,Invalid. Counterexample when K and L are true,Invalid. Counterexample when K is true and L is false,Invalid. Counterexample when L is true and K is false,D
+"Identifiez l'antécédent de la proposition conditionnelle suivante : Si l'université n'augmente pas l'aide financière, soit le président ne l'approuve pas, soit le conseil d'administration l'empêche.",The university increases financial aid.,The university does not increase financial aid.,The board of trustees prevents it.,The president fails to approve it.,B
+"Laquelle des propositions suivantes est une conséquence immédiate (en une étape) en PL des prémisses données ?
+~E ⊃ ~F
+G ⊃ F
+H ∨ ~E
+H ⊃ I
+~I",E ⊃ F,F ⊃ G,H ⊃ ~E,~H,D
+"Quelle formule de logique propositionnelle (PL) symbolise le mieux la phrase suivante ?
+Tout le monde aime Raymond, ou pas.",L,~L,L • ~L,L ∨ ~L,D
+Sélectionnez la meilleure traduction en logique des prédicats. Tous les rois sont plus chanceux que tous les gueux. (Kx : x est un roi ; Px : x est un gueux ; Lxy : x est plus chanceux que y),(∀x)[Kx ⊃ (∀y)(Py ⊃ Lxy)],(∀x)[Kx ⊃ (∀y)(Lxy ⊃ Py)],(∀x)(∀y)[(Kx • Py) ⊃ Lyx],(∀x)[(Kx • (∀y)(Py)) ⊃ Lxy],A
+"Construisez une table de vérité complète pour les paires de propositions suivantes. Ensuite, en utilisant les tables de vérité, déterminez si les énoncés sont logiquement équivalents ou contradictoires. Si ce n'est ni l'un ni l'autre, déterminez s'ils sont cohérents ou incohérents. Justifiez vos réponses.
+(~M ⊃ ~N) ∨ (O ≡ N) et (~M · N) · [(~O ∨ ~N) · (O ∨ N)]",Logically equivalent,Contradictory,"Neither logically equivalent nor contradictory, but consistent",Inconsistent,B
+"Laquelle des propositions suivantes est une conséquence immédiate (en une étape) en LP des prémisses données ?
+E ⊃ ~F
+~F ⊃ G
+~G",E ⊃ F,F ⊃ G,G ⊃ E,~~F,D
+"Utilisez des tables de vérité indirectes pour déterminer si l'argument suivant est valide. Si l'argument est invalide, choisissez une option qui présente un contre-exemple. (Il peut y avoir d'autres contre-exemples également.)
+E ⊃ (F ∨ ~G)
+F ⊃ (~E ∨ ~G) / ~(E ≡ F)",Valid,"Invalid. Counterexample when E, F, and G are true",Invalid. Counterexample when E and F are true and G is false,"Invalid. Counterexample when E, F, and G are false",C
+"Utilisez des tables de vérité indirectes pour déterminer si l'argument suivant est valide. Si l'argument est invalide, choisissez une option qui présente un contre-exemple. (Il peut y avoir d'autres contre-exemples également.)
+H ≡ (~I ∨ J)
+H ∨ ~J / ~I",Valid,"Invalid. Counterexample when H, I, and J are false",Invalid. Counterexample when H and I are true and J is false,Invalid. Counterexample when I is true and H and J are false,D
+Sélectionnez la meilleure traduction en logique des prédicats. Certains pompiers sauvent des victimes du danger. (Dx : x est un danger ; Fx : x est un pompier ; Vx : x est une victime ; Rxyz : x sauve y de z),(∃x){Fx • (∀y)[Dy ⊃ (∃z)(Vz • Rxyz)]},(∃x){Fx • (∃y)[Vy • (∃z)(Dz • Rxyz)]},(∃x){Fx • (∃y)(∃z)[(Vy • Dz) • Rxzy]},(∀x){Fx ⊃ (∃y)[Vy . (∃z)(Dz • Rxyz)]},B
+"Identifiez l'antécédent de la proposition conditionnelle suivante : L'université augmente les frais de scolarité si, et seulement si, le gouverneur l'approuve et le conseil d'administration le recommande.",The university raises tuition.,The governor approves of it.,The board of trustees recommends it.,None of the above,D
+Sélectionnez la meilleure traduction en logique des prédicats. Toutes les planètes sont plus petites que Jupiter. (j : Jupiter ; Px : x est une planète ; Sxy : x est plus petit que y),(∃x)(Px • Sxj),(∀x)(Px • Sxj),(∀x)(Px ⊃ Sjx),(∀x)(Px ⊃ Sxj),D
+Sélectionnez la meilleure traduction en logique des prédicats. José présente Wilma à Kevin. (j : José ; k : Kevin ; w : Wilma ; Ixyz : x présente y à z),Iwkj,Ijwk,Iwjk,Ijkw,B
+Sélectionnez la meilleure traduction en logique des prédicats : Aucun artefact n'est une personne.,~Pa,(∀x)(Ax ⊃ ~Px),~Ap,(∀x)(Ax • ~Px),B
+"Construisez une table de vérité complète pour l'argument suivant. Ensuite, en utilisant la table de vérité, déterminez si l'argument est valide ou invalide. Si l'argument est invalide, choisissez une option qui présente un contre-exemple. (Il peut y avoir d'autres contre-exemples également.)
+P ⊃ Q
+Q · R / ~P · R",Valid,"Invalid. Counterexample when P, R, and Q are true",Invalid. Counterexample when P and Q are true and R is false,Invalid. Counterexample when R and Q are true and P is false,B
+Sélectionnez la meilleure traduction en logique des prédicats. Marco déménage de l'Italie vers l'Espagne. (i: Italie ; m: Marco ; s: Espagne ; Mxyz: x déménage vers y depuis z),Msim,Mmis,Mims,Mmsi,D
+"Sélectionnez la meilleure interprétation en anglais de la proposition donnée, en utilisant la clé de traduction suivante : Ax : x est un appartement Hx : x est une maison Lx : x est grand Bxy : x est plus grand que y (∀x){Ax ⊃ (∀y)[(Hy • Ly) ⊃ ∼Bxy]}",All apartments are not bigger than some large house.,No apartment is bigger than any large house.,All large houses are not bigger than some apartment.,No large house is bigger than all apartments.,B
+"Construisez une table de vérité complète pour l'argument suivant. Ensuite, en utilisant la table de vérité, déterminez si l'argument est valide ou invalide. Si l'argument est invalide, choisissez une option qui présente un contre-exemple. (Il peut y avoir d'autres contre-exemples également.)
+J ≡ ~K
+J ∨ L
+~K / L",Valid,Invalid. Counterexample when J and K are true and L is false,Invalid. Counterexample when J is true and K and L are false,Invalid. Counterexample when K is true and J and L are false,C
+"Laquelle des formules données de LP est la meilleure symbolisation de la phrase suivante ?
+Pablo ira au magasin si, et seulement si, son frère le conduit et paie l'essence.",(P ≡ D) ≡ G,(D • G) ⊃ P,P ⊃ (D • G),P ≡ (D • G),D
+"Utilisez des tables de vérité indirectes pour déterminer si chaque ensemble de propositions est cohérent. Si l'ensemble est cohérent, choisissez une option avec une valuation cohérente. (Il peut y avoir d'autres valuations cohérentes.)
+D ≡ E
+F ∨ D
+~E · ~F",Inconsistent,"Consistent. Consistent valuation when D, E, and F are true",Consistent. Consistent valuation when D and E are true and F is false,Consistent. Consistent valuation when D and F are true and E is false,A
+"Laquelle des formules données de LP est la meilleure symbolisation de la phrase suivante ?
+Le restaurant sert de la tarte ou du cheesecake ou de la glace en dessert.",P ∨ (C ∨ I),(P ∨ C) ∨ I,P ∨ C ∨ I,Options A and B,D
+"Parmi les formules données en LP, laquelle est la meilleure symbolisation de la phrase suivante ?
+Si Beth prend son vélo, elle arrive plus tôt au travail.",B ⊃ W,W ⊃ B,B ≡ W,Both A and B,A
+"Utilisez des tables de vérité indirectes pour déterminer si l'argument suivant est valide. Si l'argument est invalide, choisissez une option qui présente un contre-exemple. (Il peut y avoir d'autres contre-exemples également.)
+E ⊃ F
+G ⊃ ~F / ~G ∨ ~E",Valid,"Invalid. Counterexample when E, F, and G are true",Invalid. Counterexample when E and G are true and F is false,Invalid. Counterexample when F and G are true and E is false,A
+"Utilisez des tables de vérité indirectes pour déterminer si chaque ensemble de propositions est cohérent. Si l'ensemble est cohérent, choisissez une option avec une valuation cohérente. (Il peut y avoir d'autres valuations cohérentes.)
+A ⊃ (~B ∨ C)
+C ⊃ D
+A ∨ (B · ~D)
+A ≡ (B ⊃ D)",Inconsistent,Consistent. Consistent valuation when A and D are true and B and C are false,"Consistent. Consistent valuation when A, B, and D are true and C is false",Consistent. Consistent valuation when C and D are true and A and B are false,B
+"Construisez une table de vérité complète pour l'argument suivant. Ensuite, en utilisant la table de vérité, déterminez si l'argument est valide ou invalide. Si l'argument est invalide, choisissez une option qui présente un contre-exemple. (Il peut y avoir d'autres contre-exemples également.)
+M ∨ N
+~M · O / N",Valid,Invalid. Counterexample when M and O are true and N is false,Invalid. Counterexample when M is true and O and N are false,Invalid. Counterexample when O is true and M and N are false,A
+"Laquelle des propositions suivantes est une conséquence immédiate (en une étape) en LP des prémisses données ?
+U ⊃ W
+W ⊃ (X ≡ ~Y)
+(X ≡ ~Y) ⊃ Z
+~Z",U ⊃ Z,U ∨ W,~W,~(X ≡ ~Y),D
+"Identifiez l'antécédent de la proposition conditionnelle suivante : Si les Bees ne gagnent pas leur premier match, alors à la fois les Aardvarks et les Chipmunks gagnent leur premier match.",The Aardvarks win their first game.,The Bees don't win their first game.,The Chipmunks win their first game.,Both the Aardvarks and the Chipmunks win their first games.,B
+Sélectionnez la meilleure traduction en logique des prédicats. Holly aime Frances. (f : Frances ; h : Holly ; Lxy : x aime y),hLf,fLh,Lfh,Lhf,D
+"Utilisez des tables de vérité indirectes pour déterminer si l'argument suivant est valide. Si l'argument est invalide, choisissez une option qui présente un contre-exemple. (Il peut y avoir d'autres contre-exemples également.)
+P ⊃ (Q ∨ R)
+(Q · S) ⊃ ~P
+~(~Q ∨ R) / ~P",Valid,"Invalid. Counterexample when P, Q, R, and S are true",Invalid. Counterexample when P and Q are true and R and S are false,"Invalid. Counterexample when P, R, and S are true and Q is false",C
+"Construisez une table de vérité complète pour l'argument suivant. Ensuite, en utilisant la table de vérité, déterminez si l'argument est valide ou invalide. Si l'argument est invalide, choisissez une option qui présente un contre-exemple. (Il peut y avoir d'autres contre-exemples également.)
+T ∨ U
+W · T / U",Valid,Invalid. Counterexample when T and W are true and U is false,Invalid. Counterexample when T is true and W and U are false,Invalid. Counterexample when W is true and T and U are false,B
+Identifiez l'antécédent de la proposition conditionnelle suivante : L'université augmente les frais de scolarité si le gouverneur l'approuve et que le conseil d'administration le recommande.,The university raises tuition.,The governor approves of it.,The board of trustees recommends it.,The governor approves of it and the board of trustees recommends it.,D
+"Identifiez l'antécédent de la proposition conditionnelle suivante : Le restaurant n'a pas de pois, donc ils servent plutôt du maïs et des pommes de terre.",The restaurant has peas.,The restaurant does not have peas.,The restaurant serves corn.,The restaurant serves potatoes.,B
+Sélectionnez la meilleure traduction en logique des prédicats. Toutes les jellybeans sont plus sucrées que tous les fruits. (Fx : x est un fruit ; Jx : x est une jellybean ; Sxy : x est plus sucré que y),(∀x)[Fx ⊃ (∀y)(Jy ⊃ Sxy)],(∀x)(∀y)[(Fx • Jy) • Sxy],(∀x)(∀y)[Sxy ⊃ (Fy • Jx)],(∀x)[Jx ⊃ (∀y)(Fy ⊃ Sxy)],D
+"Identifiez la conclusion de l'argument suivant. Que le monde est mon idée est une vérité valable pour toute créature vivante, bien que seul l'homme puisse la contempler. En le faisant, il atteint la sagesse philosophique. Aucune vérité n'est plus absolument certaine que celle que tout ce qui existe pour la connaissance et donc ce monde n'est qu'objet par rapport au sujet, perception d'un percevant. Le monde est une idée. (Arthur Schopenhauer, Le monde comme volonté et comme représentation)",The world is an idea.,"That the world is my idea is a truth valid for every living creature, though only man can contemplate it.","In doing so, he attains philosophical wisdom.","No truth is more absolutely certain than that all that exists for knowledge and therefore this world is only object in relation to subject, perception of a perceiver.",A
+Sélectionnez la meilleure traduction en logique des prédicats. Léo est plus grand que Cathy. (c : Cathy ; l : Léo ; Txy : x est plus grand que y),Tlc,Tcl,lTc,cTl,A
+"Construisez une table de vérité complète pour les paires de propositions suivantes. Ensuite, en utilisant les tables de vérité, déterminez si les énoncés sont logiquement équivalents ou contradictoires. Si ce n'est ni l'un ni l'autre, déterminez s'ils sont cohérents ou incohérents. Justifiez vos réponses.
+C ⊃ (D ∨ C) et C · ~D",Logically equivalent,Contradictory,"Neither logically equivalent nor contradictory, but consistent",Inconsistent,C
+"Construisez une table de vérité complète pour les paires de propositions suivantes. Ensuite, en utilisant les tables de vérité, déterminez si les énoncés sont logiquement équivalents ou contradictoires. Si ce n'est ni l'un ni l'autre, déterminez s'ils sont cohérents ou incohérents. Justifiez vos réponses.  
+~O ⊃ P et O ∨ P",Logically equivalent,Contradictory,"Neither logically equivalent nor contradictory, but consistent",Inconsistent,A
+"Utilisez des tables de vérité indirectes pour déterminer si l'argument suivant est valide. Si l'argument est invalide, choisissez une option qui présente un contre-exemple. (Il peut y avoir d'autres contre-exemples également.)
+(T · ~U) ⊃ ~W
+~W ⊃ X
+~Z ⊃ W
+~(X · Z) / T ⊃ U",Valid,"Invalid. Counterexample when T, X, and Z are true and U and W are false","Invalid. Counterexample when T and X are true and U, W, and Z are false","Invalid. Counterexample when T, W, and Z are true and U and X are false",A
+"Sélectionnez la meilleure traduction en logique des prédicats : Cécilia me brise le cœur si, et seulement si, Maria est soit un problème soit une fille.",Bc ≡ (Pm ∨ Gm),Bc ≡ (Pm • Gm),Bc ⊃ (Pm ∨ Gm),Cb ⊃ (Pm • Gm),A
+"Sélectionnez la meilleure traduction en logique des prédicats : Si Delilah est à New York, alors Juana est à Bogota ou Layla est à San Juan.",Nd ⊃ (Bj • Sl),Dn ≡ (Bx • Ly),Nd ≡ (Bj • Sl),Nd ⊃ (Bj ∨ Sl),D
+Utilisez la clé suivante pour traduire la formule donnée de PL en phrases naturelles en anglais.,Marina lit un livre de Percy Jackson.,Izzy joue à Minecraft.,Emily arrête de travailler.,"Russell prépare le dîner.
+E: Ashleigh passe voir.
+
+~(A ⊃ B) • (B ⊃ ~E)
+A: Ce n'est pas le cas que le fait que Marina lise un livre de Percy Jackson implique qu'Izzy joue à Minecraft, mais le fait qu'Izzy joue à Minecraft implique qu'Ashleigh ne passe pas voir.
+B: Si Marina ne lit pas un livre de Percy Jackson, alors Izzy joue à Minecraft, ce qui implique qu'Ashleigh ne passe pas voir.
+C: Le fait que Marina lise un livre de Percy Jackson n'implique pas qu'Izzy joue à Minecraft, mais Izzy joue à Minecraft à condition qu'Ashleigh ne passe pas voir.
+D: Il n'est pas vrai que Marina lit un livre de Percy Jackson seulement quand Izzy joue à Minecraft, mais Izzy joue à Minecraft seulement quand Ashleigh passe voir.",A
+"Utilisez des tables de vérité indirectes pour déterminer si l'argument suivant est valide. Si l'argument est invalide, choisissez une option qui présente un contre-exemple. (Il peut y avoir d'autres contre-exemples également.)
+(A ∨ B) ⊃ C
+C ⊃ ~D / D ⊃ A",Valid,"Invalid. Counterexample when B, C, and D are true and A is false",Invalid. Counterexample when B and D are true and A and C are false,"Invalid. Counterexample when A, B, and C are false and D is true",D
+"Sélectionnez la meilleure interprétation en anglais des arguments donnés en logique des prédicats.
+Dh ⊃ ~Pt
+(∀x)Px ∨ (∀x)Mx
+~Mb / ~Dh","If my headache is dualist state, then your tickle is a physical state. Either everything is physical or everything is mental. But my broken toe is not a mental state. So my headache is not a dualist state.","If my headache is dualist state, then your tickle is not a physical state. Either everything is physical or everything is mental. But my broken toe is not a mental state. So my headache is not a dualist state.","If my headache is dualist state, then your tickle is not a physical state. If everything is physical then everything is mental. But my broken toe is not a mental state. So my headache is not a dualist state.","If my headache is dualist state, then your tickle is not a physical state. Everything is either physical or mental. But my broken toe is not a mental state. So my headache is not a dualist state.",B
+"Laquelle des propositions suivantes est une conséquence immédiate (en une étape) en PL des prémisses données ?
+A ⊃ (B • C)
+~(B • C)
+A ∨ (D ∨ B)",A,~A,B,~B,B
+"Laquelle des propositions suivantes est une conséquence immédiate (en une étape) en LP des prémisses données ?
+(N ⊃ ~O) ⊃ (O ∨ Q)
+P ⊃ (N ⊃ ~O)
+N ⊃ P",P,N ⊃ ~O,O ∨ Q,~P,A
+Sélectionnez la meilleure traduction en logique des prédicats. La Terre n'est pas plus grande que Jupiter. (e : Terre ; j : Jupiter ; Bxy : x est plus grand que y),~Bje,Bej,Bje~,~Bej,D
+Identifiez l'antécédent de la proposition conditionnelle suivante : Que les Bees gagnent leur premier match est nécessaire pour que soit les Aardvarks soit les Chipmunks ne gagnent pas leur premier match.,The Aardvarks do not win their first game.,The Bees win their first game.,The Chipmunks do not win their first game.,Either the Aardvarks or the Chipmunks do not win their first game.,D
+Identifiez l'antécédent de la proposition conditionnelle suivante : Les Bees gagnent leur premier match seulement si soit les Aardvarks soit les Chipmunks ne gagnent pas leur premier match.,The Aardvarks do not win their first game.,The Bees win their first game.,The Chipmunks do not win their first game.,Either the Aardvarks or the Chipmunks do not win their first games.,B
+Sélectionnez la meilleure traduction en logique des prédicats : Certains athlètes ne se blessent pas.,~Ia,(∃x)(Ax • ~Ix),~Ai,(∃x)(Ix ∨ ~Ax),B
+"Construisez une table de vérité complète pour les paires de propositions suivantes. Ensuite, en utilisant les tables de vérité, déterminez si les énoncés sont logiquement équivalents ou contradictoires. Si ce n'est ni l'un ni l'autre, déterminez s'ils sont cohérents ou incohérents. Justifiez vos réponses.
+I ≡ ~H et ~(~I ≡ H)",Logically equivalent,Contradictory,"Neither logically equivalent nor contradictory, but consistent",Inconsistent,B
+"Utilisez des tables de vérité indirectes pour déterminer si chaque ensemble de propositions est cohérent. Si l'ensemble est cohérent, choisissez une option avec une valuation cohérente. (Il peut y avoir d'autres valuations cohérentes.)
+(T ⊃ U) ⊃ (W ⊃ U)
+T ⊃ ~(U ⊃ X)
+(T ⊃ ~X) ⊃ W",Inconsistent,"Consistent. Consistent valuation when U, W, and X are true and T is false",Consistent. Consistent valuation when W and X are true and T and U are false,Consistent. Consistent valuation when T and U are true and W and X are false,B
+"Sélectionnez la meilleure traduction en logique des prédicats : Caroline est gentille si, et seulement si, Janet est fiancée à Brad.",Cs ⊃ Ej,Sc ≡ Ej,sC ≡ eJ,Sx ≡ Jy,B
+"Laquelle des formules données de PL est la meilleure symbolisation de la phrase suivante ?
+Soit l'importation de bœuf par l'Angleterre est une condition suffisante pour que la France subventionne l'agriculture, soit la Chine ne promeut pas les droits de l'homme si et seulement si l'Afrique du Sud fournit des diamants.",(E ⊃ F) ∨ (~C ⊃ S),(F ⊃ E) ∨ (S ⊃ ~C,(E ⊃ F) ∨ ~(S ≡ C),(E ⊃ F) ∨ (~C ≡ S),D
+Utilisez la clé suivante pour traduire la formule donnée de PL en phrases naturelles en anglais.,Marina lit un livre de Percy Jackson.,Izzy joue à Minecraft.,Emily arrête de travailler.,"Russell prépare le dîner.
+E: Ashleigh passe.
+(~A ∨ ~B) ⊃ C
+A: Si ni Marina ne lit un livre de Percy Jackson ni Izzy ne joue à Minecraft, alors Emily arrête de travailler.
+B: S'il n'est pas vrai que Marina lit un livre de Percy Jackson et que Izzy joue à Minecraft, alors Emily arrête de travailler.
+C: Soit Marina ne lit pas un livre de Percy Jackson, soit Izzy ne joue pas à Minecraft, ce qui implique qu'Emily arrête de travailler.
+D: Emily qui arrête de travailler est une condition suffisante pour que Marina ne lise pas un livre de Percy Jackson ou qu'Izzy ne joue pas à Minecraft.",C
+"Identifiez la conclusion de l'argument suivant. Certains utilisent des variables prédicatives ; les valeurs de ces variables sont des attributs. Les prédicats sont nécessaires dans toutes les phrases, qu'il y ait ou non des attributs auxquels se référer. Le prédicat factice 'F' est généralement utile à des fins d'exposition. Si nous devons quantifier les attributs et y faire référence, alors la clarté est servie en utilisant des variables reconnaissables et des noms distinctifs à ces fins, et en ne les mélangeant pas avec les prédicats. (Quine, Philosophy of Logic)",There are those who use predicate variables; the values of these variables are attributes.,Predicates are wanted in all sentences regardless of whether there are attributes to refer to.,The dummy predicate 'F' is wanted generally for expository purposes.,"If we are going to quantify over attributes and refer to them, then clarity is served by using recognizable variables and distinctive names for the purposes, and not mixing these up with the predicates.",D
+Utilisez la clé suivante pour traduire la formule donnée de PL en phrases naturelles en anglais.,Marina lit un livre de Percy Jackson.,Izzy joue à Minecraft.,Emily arrête de travailler.,"Russell prépare le dîner.
+E: Ashleigh passe voir.
+~C ∨ D
+A: Si Emily n'arrête pas de travailler alors Russell prépare le dîner.
+B: Emily arrête de travailler à moins que Russell ne prépare le dîner.
+C: Emily arrête de travailler à moins que Russell ne prépare pas le dîner.
+D: Emily n'arrête pas de travailler à moins que Russell ne prépare le dîner.",D
+Sélectionnez la meilleure traduction en logique des prédicats : Sheena est une punk rockeuse.,Sx,xS,sP,Ps,D
+Sélectionnez la meilleure traduction en logique des prédicats. Kevin est présenté à José par Wilma. (j : José ; k : Kevin ; w : Wilma ; Ixyz : x présente y à z),Iwjk,Ijkw,Ikjw,Iwkj,D
+Sélectionnez la meilleure traduction en logique des prédicats : Si Eileen joue du violon alors Sherri chante.,Fe ∨ Ss,eF ⊃ Ss,Fe ∨ Es,Fe ⊃ Ss,D
+"Construisez une table de vérité complète pour l'argument suivant. Ensuite, en utilisant la table de vérité, déterminez si l'argument est valide ou invalide. Si l'argument est invalide, choisissez une option qui présente un contre-exemple. (Il peut y avoir d'autres contre-exemples également.)
+~C ⊃ D
+D ⊃ C / C",Valid,Invalid. Counterexample when C and D are true,Invalid. Counterexample when C is true and D is false,Invalid. Counterexample when D is true and C is false,A
+Sélectionnez la meilleure traduction en logique des prédicats : Certains hérons bleus migrent.,(∀x)[(Hx • Bx) • Mx],(∃x)[(Hx • Bx) ⊃ Mx],(∀x)[(Hx • Bx) ⊃ Mx],(∃x)[(Hx • Bx) • Mx],D
+"Sélectionnez la meilleure interprétation en anglais des arguments donnés en logique des prédicats.
+(∃x)(Cx • Ox)
+(∀x)[(~Cx ⊃ ~Bx) ⊃ ~Og]	/ ~Og","Some cookies have oatmeal. If something's not being a cookie entails that it doesn't have chocolate chips, then this cookie doesn't have oatmeal. So this cookie doesn't have oatmeal.","Some cookies have oatmeal. If something is not a cookie and does not have chocolate chips, it doesn't have oatmeal. So this cookie doesn't have oatmeal.","Some cookies have oatmeal. If something doesn't have oatmeal, then it is not a cookie and it doesn't have chocolate chips. So this cookie doesn't have oatmeal.","Some cookies have oatmeal. If something's not having chocolate chips entails that it is not a cookie, then it doesn't have oatmeal. So this cookie doesn't have oatmeal.",A
+"Identifiez la conclusion de l'argument suivant. Toute la psychologie s'est enlisée dans des préjugés et des craintes morales. Personne n'est parvenu à la comprendre comme le développement de la volonté de puissance. Cependant, si une personne commence même à considérer les effets de la haine, de l'envie, de la convoitise et de la soif de domination comme des conditions de la vie et, de plus, comme des facteurs essentiels à l'économie générale de la vie, elle commencera à avoir le mal de mer. À ce stade, elle commence à se perdre et à naviguer au-delà de la moralité. Ainsi, la psychologie redevient le chemin vers les problèmes fondamentaux. (Friedrich Nietzsche, Par-delà bien et mal)",All of psychology has gotten stuck in moral prejudices and fears.,No one has come close to understanding it as the development of the will to power.,"If a person even begins to regard the effects of hatred, envy, covetousness, and the lust to rule as conditions of life and furthermore, as factors essential to the general economy of life, he will begin to get seasick.",Psychology becomes again the path to fundamental problems.,D
+"Utilisez des tables de vérité indirectes pour déterminer si chaque ensemble de propositions est cohérent. Si l'ensemble est cohérent, choisissez une option avec une valuation cohérente. (Il peut y avoir d'autres valuations cohérentes.)
+~N ≡ (O · P)
+~O ⊃ Q
+N · ~Q",Inconsistent,"Consistent. Consistent valuation when N, O, and P are true and Q is false",Consistent. Consistent valuation when N and O are true and P and Q are false,Consistent. Consistent valuation when N and P are true and O and Q are false,C
+"Quelle est parmi les formules données de PL la meilleure symbolisation de la phrase suivante ?
+Une personne est considérée comme ayant vécu avec vous pendant toute l'année en cours si la personne est née ou est décédée dans l'année en cours et que votre domicile a été celui de cette personne pendant toute la durée de sa vie.",[(B ∨ D) • H] ⊃ L,[L ⊃ (B ∨ D)] • H,L ⊃ [(B ∨ D) • H],(B ∨ D • H) ⊃ L,A
+"Construisez une table de vérité complète pour l'argument suivant. Ensuite, en utilisant la table de vérité, déterminez si l'argument est valide ou invalide. Si l'argument est invalide, choisissez une option qui présente un contre-exemple. (Il peut y avoir d'autres contre-exemples également.)
+(O ≡ P) ∨ P / P ∨ ~O",Valid,Invalid. Counterexample when O and P are true,Invalid. Counterexample when O is true and P is false,Invalid. Counterexample when P is true and O is false,A
+Sélectionnez la meilleure traduction en logique des prédicats : Leroy est mauvais seulement si DJ Khaled crie son nom.,Sk ≡ Bl,Bl ≡ Sk,Bx ⊃ Sy,Bl ⊃ Sk,D
+"Laquelle des formules données de PL est la meilleure symbolisation de la phrase suivante ?
+Si soit George s'inscrit, soit Harry s'inscrit, alors Ira ne s'inscrit pas.",(G ⊃ H) ∨ I,(G ∨ H) ⊃ I,(G ⊃ H) ∨ ~I,(G ∨ H) ⊃ ~I,D
+"Sélectionnez la meilleure traduction en logique des prédicats : Mme Jackson m'a prêté du sucre, mais ni Janet ni Latoya ne l'ont fait.",Lm ∨ ~(Jl ∨ Ll),Lm • ~(Lj • Ll),Lm • ~(Lj ∨ Ll),Lm ∨ ~(Lj • Ll),C
+Sélectionnez la meilleure traduction en logique des prédicats. Certains animaux sont négligés par des personnes cruelles. (Ax : x est un animal ; Cx : x est cruel ; Px : x est une personne ; Nxy : x néglige y),(∃x)[(Ax • Cx) • (∃y)(Py • Nyx)],(∃x)[(Cx • Px) • (∃y)(Ay • Nxy)],(∃x)[(Ax • Px) • (∃y)(Cy • Nxy)],(∃x)(∃y){[(Ax • Cy) • Py] • Nxy)]},B
+"Utilisez des tables de vérité indirectes pour déterminer si chaque ensemble de propositions est cohérent. Si l'ensemble est cohérent, choisissez une option avec une valuation cohérente. (Il peut y avoir d'autres valuations cohérentes.)
+(E ⊃ F) ⊃ G
+(~E ∨ F) ≡ (H ∨ I)
+I ⊃ (J ⊃ ~H)
+~G ⊃ ~J",Inconsistent,"Consistent. Consistent valuation when E is true and F, G, H, I, and J are false","Consistent. Consistent valuation when E and H are true and F, G, I, and J are false","Consistent. Consistent valuation when E and I are true and F, G, H, and J are false",B
+Sélectionnez la meilleure traduction en logique des prédicats : Certains étudiants travaillent dur.,(∃x)(Wx ∨ Sx),(∃x)(Sx ∨ Wx),(∃x)(Sx • Wx),(∃x)(Sx ⊃ Wx),C
+"Laquelle des formules données de PL est la meilleure symbolisation de la phrase suivante ?
+Soit l'importation de bœuf par l'Angleterre n'est pas une condition nécessaire pour que la France subventionne l'agriculture, soit la Chine promeut les droits de l'homme si l'Afrique du Sud fournit des diamants.",(~F ⊃ E) ∨ (C ≡ ~S),(~E ⊃ F) ∨ (C ⊃ S),(~F ⊃ E) ∨ (C ≡ S),~(F ⊃ E) ∨ (S ⊃ C),D
+"Construisez une table de vérité complète pour l'argument suivant. Ensuite, en utilisant la table de vérité, déterminez si l'argument est valide ou invalide. Si l'argument est invalide, choisissez une option qui présente un contre-exemple. (Il peut y avoir d'autres contre-exemples également.)
+~A · ~B
+(A ∨ C) ∨ B / C",Valid,Invalid. Counterexample when A and B are true and C is false,Invalid. Counterexample when A is true and B and C are false,Invalid. Counterexample when B is true and A and C are false,A
+Sélectionnez la meilleure traduction en logique des prédicats. Tous les oiseaux vivent dans un nid. (Bx : x est un oiseau ; Nx : x est un nid ; Lxy : x vit dans y),(∀x)(∀y)[(Bx • Ny) ⊃ Lxy],(∀x)[Bx ⊃ (∃y)(Ny • Lxy)],(∀x)[(∃y)(Ny • Bx) ⊃ Lxy],(∀x)(∃y)[(Bx • Ny) ⊃ Lxy],B
+"Identifiez la conclusion de l'argument suivant. La théorie utilitariste est embarrassée par la possibilité des ""monstres d'utilité"". Un monstre d'utilité obtient des gains énormes en utilité, supérieurs à l'utilité perdue par les sacrifices des autres. Les sacrifices d'un grand nombre d'autres personnes sont surpassés par les gains du monstre d'utilité. La théorie semble exiger que nous soyons tous sacrifiés dans la gueule du monstre afin d'augmenter l'utilité totale. (Robert Nozick, Anarchy, State, and Utopia)",Utilitarian theory is embarrassed by the possibility of utility monsters.,A utility monster gets enormous gains in utility.,A utility monster gets gains in utility greater than the utility lost by the sacrifices of others.,The sacrifices of even large numbers of other people are outweighed by the gains of the utility monster.,A
+Utilisez la clé suivante pour traduire la formule donnée de PL en phrases naturelles en anglais.,Marina lit un livre de Percy Jackson.,Izzy joue à Minecraft.,Emily arrête de travailler.,"Russell prépare le dîner.
+E: Ashleigh passe.
+(A ∨ ~E) ≡ (D • ~B)
+A: Soit Marina lit un livre de Percy Jackson, soit Ashleigh ne passe pas, est une condition nécessaire à la fois pour que Russell prépare le dîner et qu'Izzy ne joue pas à Minecraft.
+B: Soit Marina lit un livre de Percy Jackson, soit Ashleigh ne passe pas, est une condition nécessaire et suffisante pour que Russell prépare le dîner et qu'Izzy joue à Minecraft.
+C: Marina lit un livre de Percy Jackson à moins qu'Ashleigh ne passe si, et seulement si, Russell prépare le dîner et qu'Izzy ne joue pas à Minecraft.
+D: Soit Marina lit un livre de Percy Jackson, soit Ashleigh ne passe pas, exactement dans le cas où Russell prépare le dîner et qu'Izzy ne joue pas à Minecraft.",D
+"Quelle formule de LP est la meilleure symbolisation de la phrase suivante ?
+Brittany aime les poissons et les lézards, mais pas les chats.",F • L • ~C,(F • L) • ~C,(F • L) ∨ ~C,C • (F • L),B
+"Laquelle des formules données de PL est la meilleure symbolisation de la phrase suivante ?
+Si soit Harry s'inscrit, soit George ne s'inscrit pas, alors Jim s'inscrit.",H ∨ (~G ⊃ J),~(H ∨ G) ⊃ J,(H ∨ ~G) ⊃ J,(H ⊃ ~G) ∨ J,C
+"Construisez une table de vérité complète pour l'argument suivant. Ensuite, en utilisant la table de vérité, déterminez si l'argument est valide ou invalide. Si l'argument est invalide, choisissez une option qui présente un contre-exemple. (Il peut y avoir d'autres contre-exemples également.)
+~X ⊃ Y
+Y ⊃ Z
+~Z / ~X",Valid,"Invalid. Counterexample when X, Y, and Z are true",Invalid. Counterexample when Y and Z are true and Z is false,Invalid. Counterexample when X is true and Y and Z are false,D
+Sélectionnez la meilleure traduction en logique des prédicats. Certaines personnes gentilles aident certaines espèces en danger. (Ex : x est en danger ; Kx : x est gentil ; Px : x est une personne ; Sx : x est une espèce ; Hxy : x aide y),(∃x){(Kx • Px) • (∃y)[(Ey • Sy) • Hxy]},(∃x)(∃y){[(Kx • Sx) • (Ey • Py)] • Hxy},(∃x)(∃y){[(Kx • Sx) • (Ey • Py)] • Hyx},(∃x)(∃y){[(Kx • Px) • (Ey • Sy)] ⊃ Hxy},A
+"Sélectionnez la meilleure interprétation en anglais de la proposition donnée, en utilisant la clé de traduction suivante : Ax : x est un appartement Hx : x est une maison Lx : x est grand Bxy : x est plus grand que y (∀x)[Ax ⊃ (∃y)(Hy • Bxy)]",Every apartment is bigger than some house.,Every house is bigger than all apartments.,Every house is bigger than some apartment.,Some house is bigger than every apartment.,A
+"Construisez une table de vérité complète pour l'argument suivant. Ensuite, en utilisant la table de vérité, déterminez si l'argument est valide ou invalide. Si l'argument est invalide, choisissez une option qui présente un contre-exemple. (Il peut y avoir d'autres contre-exemples également.)
+Q ≡ R
+~(S ∨ Q) / R",Valid,Invalid. Counterexample when Q and S are true and R is false,Invalid. Counterexample when Q is true and S and R are false,"Invalid. Counterexample when Q, S, and R are false",D
+Identifiez l'antécédent de la proposition conditionnelle suivante : L'université augmente les frais de scolarité seulement si le gouverneur l'approuve et que le conseil d'administration le recommande.,The university raises tuition.,The governor approves of it.,The board of trustees recommends it.,The governor approves of it and the board of trustees recommends it.,A
+"Laquelle des propositions suivantes est une conséquence immédiate (en une étape) en LP des prémisses données ?
+(A ∨ B) ⊃ (C ∨ D)
+A ∨ B
+~C",~A ∨ ~B,~~C,C ∨ D,(A ∨ B) ⊃ D,C
+"Identifiez l'antécédent de la proposition conditionnelle suivante : Lorsque l'université augmente les frais de scolarité, alors soit le gouverneur l'approuve, soit le conseil d'administration ne l'empêche pas.",The university raises tuition.,The governor approves of it.,The board of trustees prevents it.,The board of trustees doesn't prevent it.,A
+Sélectionnez la meilleure traduction en logique des prédicats. Marco ne déménage pas de l'Espagne vers l'Italie. (i : Italie ; m : Marco ; s : Espagne ; Mxyz : x déménage vers y depuis z),~Mmsi,M~mis,~Mmis,M~msi,C
+"Construisez une table de vérité complète pour l'argument suivant. Ensuite, en utilisant la table de vérité, déterminez si l'argument est valide ou invalide. Si l'argument est invalide, choisissez une option qui présente un contre-exemple. (Il peut y avoir d'autres contre-exemples également.)
+~S ∨ T
+~S · U
+~T ∨ U / T · U",Valid,"Invalid. Counterexample when S, T, and U are true",Invalid. Counterexample when S and U are true and T is false,Invalid. Counterexample when U is true and S and T are false,D
+"Quelle formule de PL symbolise le mieux la phrase suivante ?
+Les médecins sont serviables à moins que leurs patients ne soient grossiers.",H ≡ R,H • R,H ∨ ~R,H ∨ R,D
+"Utilisez des tables de vérité indirectes pour déterminer si l'argument suivant est valide. Si l'argument est invalide, choisissez une option qui présente un contre-exemple. (Il peut y avoir d'autres contre-exemples également.)
+L ⊃ [(M ∨ ~N) ⊃ O]
+(N ⊃ O) ⊃ (~P ⊃ Q)
+R ⊃ ~Q / L ⊃ (R ⊃ P)",Valid,"Invalid. Counterexample when L, M, O, Q, and R are true and N and P are false","Invalid. Counterexample when L, N, O, Q, and R are true and M and P are false","Invalid. Counterexample when L, N, and R are true and M, O, P, and Q are false",D
+"Identifiez la conclusion de l'argument suivant. Le sens d'un terme est censé déterminer sa référence. Mais la référence peut varier sans aucune différence dans la pensée. Donc, les sens des termes doivent pouvoir varier sans variation dans la pensée. Ainsi, nos pensées ne déterminent pas les significations de nos termes ; les significations ne sont pas dans la tête. (Hilary Putnam)",The sense of a term is supposed to determine its reference.,But reference can vary without any difference in thought.,Reference can vary without any difference in thought.,Our thoughts do not determine the meanings of our terms; meanings are not in the head.,D
+"Construisez une table de vérité complète pour les paires de propositions suivantes. Ensuite, en utilisant les tables de vérité, déterminez si les énoncés sont logiquement équivalents ou contradictoires. Si ce n'est ni l'un ni l'autre, déterminez s'ils sont cohérents ou incohérents. Justifiez vos réponses.  
+(G ∨ ~H) ⊃ G et ~G ≡ (~H · G)",Logically equivalent,Contradictory,"Neither logically equivalent nor contradictory, but consistent",Inconsistent,C
+"Laquelle des formules données de LP est la meilleure symbolisation de la phrase suivante ?
+Soit l'importation de bœuf par l'Angleterre est une condition nécessaire pour que la France subventionne l'agriculture, soit la promotion des droits de l'homme par la Chine n'est pas une condition suffisante pour que l'Afrique du Sud fournisse des diamants.",(E ≡ F) ∨ ~(C ≡ S),(E ≡ F) ∨ (~C ⊃ S),(E ⊃ F) ∨ ~(C ⊃ S),(F ⊃ E) ∨ ~(C ⊃ S),D
+"Sélectionnez la meilleure interprétation en anglais des arguments donnés en logique des prédicats.
+Wn ∨ Wm
+(∀x)[Lx ⊃ (Dx ⊃ ~Wx)]
+Ln • Dn	/ ~(∀x)~Wx",Either Nancy or Marvin are at work. All lawyers are not at work if they are out to dinner. Nancy is a lawyer and out to dinner. So not everything is not at work.,Either Nancy or Marvin are at work. All lawyers are out to dinner if they are not at work. Nancy is a lawyer and out to dinner. So not everything is not at work.,Either Nancy or Marvin are at work. All lawyers are out to dinner if they are not at work. Nancy is a lawyer and out to dinner. So not everything is at work.,Either Nancy or Marvin are at work. All lawyers are not at work if they are out to dinner. Nancy is a lawyer and out to dinner. So not everything is at work.,A
+"Identifiez la conclusion de l'argument suivant. N'oubliez pas de supprimer tout indicateur de conclusion. Il est mal que la société tue un meurtrier. Cela découle du fait que si un meurtrier a tort de tuer sa victime, alors la société a également tort de tuer le meurtrier. Et un meurtrier a tort de tuer sa victime.",It is wrong for society to kill a murderer.,"This follows for the reason that if a murderer is wrong in killing his victim, then society is also wrong in killing the murderer.","If a murderer is wrong in killing his victim, then society is also wrong in killing the murderer.",And a murderer is wrong in killing his victim.,A
+"Laquelle des propositions suivantes n'est pas une conséquence immédiate (en une étape) en PL des prémisses données ?
+I ⊃ (J ≡ K)
+(J ≡ K) ⊃ (L ∨ M)
+I ⊃ ~L",~L,J ≡ K,I ⊃ (L ∨ M),~L ⊃ (J ≡ K),D
+"Construisez une table de vérité complète pour l'argument suivant. Ensuite, en utilisant la table de vérité, déterminez si l'argument est valide ou invalide. Si l'argument est invalide, choisissez une option qui présente un contre-exemple. (Il peut y avoir d'autres contre-exemples également.)
+I ≡ ~J
+I ∨ J / I",Valid,Invalid. Counterexample when I and J are true,Invalid. Counterexample when I is true and J is false,Invalid. Counterexample when J is true and I is false,D
+Sélectionnez la meilleure traduction en logique des prédicats : Certaines personnes ont de la chance.,(∃x)(Fx • Lx),Fl,Lf,(∀x)(Fx • Lx),A
+Sélectionnez la meilleure traduction en logique des prédicats. Alexis est salué par Ben. (a : Alexis ; b : Ben ; Gxy : x salue y),Gab,~Gba,aGb,Gba,D
+Sélectionnez la meilleure traduction en logique des prédicats : Tous les homards ne sont pas rouges.,~(∀x)(Lx ⊃ Rx),~(∃x)(Lx ⊃ Rx),~(∃x)(Lx • Rx),~(∀x)(Lx • Rx),A
+"Utilisez des tables de vérité indirectes pour déterminer si l'argument suivant est valide. Si l'argument est invalide, choisissez une option qui présente un contre-exemple. (Il peut y avoir d'autres contre-exemples également.)
+H ≡ (I · ~J)
+K ≡ ~H
+~(K ⊃ J) / I ≡ J",Valid,"Invalid. Counterexample when I, H, and K are true and J is false",Invalid. Counterexample when I and H are true and J and K are false,"Invalid. Counterexample when K is true and I, H, and J are false",A
+"Construisez une table de vérité complète pour les paires de propositions suivantes. Ensuite, en utilisant les tables de vérité, déterminez si les énoncés sont logiquement équivalents ou contradictoires. Si ce n'est ni l'un ni l'autre, déterminez s'ils sont cohérents ou incohérents. Justifiez vos réponses.
+~(J ∨ K) · L et (L ⊃ J) · K",Logically equivalent,Contradictory,"Neither logically equivalent nor contradictory, but consistent",Inconsistent,D
+Sélectionnez la meilleure traduction en logique des prédicats : Johnny est arrivé en retard.,jL,Lj,Cj ∨ Lj,Lx,B
+Sélectionnez la meilleure traduction en logique des prédicats : Aucun senior ne diplôme sans une majeure.,(∀x)(Sx ⊃ ~Gx),~(∀x)(Sx ⊃ Gx),(∀x)( ~Sx ⊃ ~Gx),(∀x) ~(Sx ⊃ ~Gx),A
+"Identifiez la conclusion de l'argument suivant. D'un point de vue historique, la génétique est une science jeune. Les principes qui régissent les traits héréditaires ont été décrits il y a moins de 150 ans. De plus, autour du tournant du vingtième siècle, les lois de l'hérédité ont été redécouvertes. Mais même à cette époque, l'importance de l'ADN n'a été vraiment comprise que dans les années 1950.","But even then, the importance of DNA was not really understood until the 1950s.",The importance of DNA was not really understood until the 1950s.,"From a historical point of view, genetics is a young science.",The principles that govern inheritance traits were described less than 150 years ago.,C
+"Laquelle des formules données de PL est la meilleure symbolisation de la phrase suivante ?
+Soit l'importation de bœuf par l'Angleterre est une condition nécessaire pour que la France subventionne l'agriculture, soit la Chine promeut les droits de l'homme étant donné que l'Afrique du Sud ne fournit pas de diamants.",(E ⊃ F) ∨ (C ≡ ~S),(F ⊃ E) ∨ (~S ≡ C),(E ⊃ F) ∨ (S ⊃~C),(F ⊃ E) ∨ (~S ⊃ C),D
+"Laquelle des formules données de LP est la meilleure symbolisation de la phrase suivante ?
+Soit l'importation de bœuf par l'Angleterre est une condition suffisante pour que la France subventionne l'agriculture, soit la promotion des droits de l'homme par la Chine est une condition nécessaire pour que l'Afrique du Sud fournisse des diamants.",(E ⊃ F) ∨ (S ⊃ C),(F ⊃ E) ∨ (C ⊃ S),(E ⊃ F) ∨ (C ⊃ S),(F ⊃ E) ∨ (S ⊃ C),A
+"Quelle formule de PL symbolise le mieux la phrase suivante ?
+Dylan n'aime ni les mathématiques ni les sciences.",M ∨ S,~(M • S),~(M ∨ S),~M ∨ ~S,C
+Sélectionnez la meilleure traduction en logique des prédicats : Tous les robots sont des artefacts.,(∀x)(Ax ∨ Rx),(∀x)(Ax • Rx),(∀x)(Rx ⊃ Ax),(∀x)(Rx • Ax),C
+"Parmi les formules données en LP, laquelle est la meilleure symbolisation de la phrase suivante ?
+Comme l'université a augmenté les frais de scolarité, le président l'a approuvé et le conseil ne l'a pas empêché.",(P • ~B) ⊃ U,(U ⊃ P) • B,U ⊃ (P • ~B),U ⊃ (P ∨ ~B),C
+"Identifiez la conclusion de l'argument suivant. Nous ne devrions pas abolir la peine capitale. Si nous le faisons, les prisons deviendront plus surpeuplées. Si les prisons deviennent plus surpeuplées, alors nous devrons construire plus de prisons. Et nous ne voulons pas construire plus de prisons.",We shouldn't abolish capital punishment.,"If we do, prisons will become more crowded.","If prisons become more crowded, then we will have to build more prisons.",We will have to build more prisons.,A
+"Laquelle des formules données de PL est la meilleure symbolisation de la phrase suivante ?
+Soit le fait que l'Angleterre n'importe pas de boeuf est une condition nécessaire pour que la France subventionne l'agriculture, soit la Chine promeut les droits de l'homme si et seulement si l'Afrique du Sud ne fournit pas de diamants.",(F ⊃ ~E) ∨ (C ≡ ~S),(~E ⊃ F) ∨ (C ⊃ ~S),~(F ⊃ E) ∨ (~S ⊃ C),(F ⊃ E) ∨ (C ≡ ~S),A
+"Utilisez des tables de vérité indirectes pour déterminer si l'argument suivant est valide. Si l'argument est invalide, choisissez une option qui présente un contre-exemple. (Il peut y avoir d'autres contre-exemples également.)
+(K · L) ⊃ M
+N ⊃ ~M
+N ∨ K / L ⊃ K",Valid,"Invalid. Counterexample when L, M, and N are true and K is false",Invalid. Counterexample when L and M are true and K and N are false,Invalid. Counterexample when L and N are true and K and M are false,D
+"Construisez une table de vérité complète pour l'argument suivant. Ensuite, en utilisant la table de vérité, déterminez si l'argument est valide ou invalide. Si l'argument est invalide, choisissez une option qui présente un contre-exemple. (Il peut y avoir d'autres contre-exemples également.)
+(G ≡ H) · ~I
+~G ∨ (~H ∨ I) / G",Valid,Invalid. Counterexample when H and I are true and G is false,Invalid. Counterexample when H is true and I and G are false,"Invalid. Counterexample when H, I, and G are false",D
+"Construisez une table de vérité complète pour l'argument suivant. Ensuite, en utilisant la table de vérité, déterminez si l'argument est valide ou invalide. Si l'argument est invalide, choisissez une option qui présente un contre-exemple. (Il peut y avoir d'autres contre-exemples également.)
+~(M ≡ ~N)
+M / N",Valid,Invalid. Counterexample when M and N are true,Invalid. Counterexample when M is true and N is false,Invalid. Counterexample when N is true and M is false,A
+Sélectionnez la meilleure traduction en logique des prédicats. Certains PDG sont plus riches que tout le monde. (Cx : x est un PDG ; Px : x est une personne ; Wxy : x est plus riche que y),(∃x)[Cx • (∀y)(Py • Wxy)],(∃x)[Cx ⊃ (∀y)(Py ⊃ Wxy)],(∃x)[Cx • (∀y)(Py ⊃ Wxy)],(∀x)[Px ⊃ (∃y)(Cy ⊃ Wxy)],C
+Sélectionnez la meilleure traduction en logique des prédicats. Tous les enfants vont à une école. (Cx : x est un enfant ; Sx : x est une école ; Gxy : x va à y),(∀x)(∃y)[(Cx • Sy) • Gxy),(∀x)[Sx ⊃ (∃y)(Cy • Gxy)],(∀x)[Cx ⊃ (∃y)(Sy • Gxy)],(∀x)[Sx • (∃y)(Cy • Gxy)],C

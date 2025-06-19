@@ -1,0 +1,7960 @@
+题目:
+question: 次の議論の結論を特定してください。私たちが日常の患者で観察するのと同じ、感情によって弱まった知性を私たちの仲間にも確認するのは難しいことではありません。意識の傲慢さは、一般的に最も強力な防御機制に属しており、無意識の複合体を遮断します。このため、人々に無意識を納得させること、そしてそれによって彼らの意識的な知識と矛盾することを教えることが困難です。（ジグムント・フロイト、精神分析の起源と発展）
+A: 私たちが日常の患者で観察するのと同じ、感情によって弱まった知性を私たちの仲間にも確認するのは難しいことではありません。
+B: 意識の傲慢さは、一般的に最も強力な防御機制に属しており、無意識の複合体を遮断します。
+C: このため、人々に無意識を納得させること、そしてそれによって彼らの意識的な知識と矛盾することを教えることが困難です。
+D: 人々に無意識を納得させること、そしてそれによって彼らの意識的な知識と矛盾することを教えることが困難です。
+
+deepseek回答:
+answer: C， 
+正确答案是: D
+
+题目:
+question: 述語論理に最も適した翻訳を選びなさい。DavidがChrisを教える。（c: Chris; d: David; Txy: xがyを教える）
+A: Tdc
+B: Tcd
+C: Tcc
+D: dTc
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 次の翻訳キーを使用して、与えられた命題の最も適切な英語の解釈を選択してください: Ax: xはアパートです Hx: xは家です Lx: xは大きいです Bxy: xはyより大きいです (∃x)[(Ax • Lx) • (∃y)(Hy • Bxy)]
+A: Some large houses are bigger than some apartments.
+B: Some houses are bigger than all large apartments.
+C: Some large apartments are bigger than some houses.
+D: Some houses are bigger than some large apartments.
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 次の論証の完全な真理値表を作成してください。その後、真理値表を使用して、論証が有効か無効かを判断してください。もし論証が無効な場合は、反例を示すオプションを選んでください。（他にも反例が存在する可能性があります。）
+~G ⊃ H
+~H / G
+A: 有効
+B: 無効。GとHが真の場合の反例
+C: 無効。Gが真でHが偽の場合の反例
+D: 無効。Hが真でGが偽の場合の反例
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 次のキーを使用して、与えられたPLの式を自然な英語の文に翻訳してください。
+A: Marina reads a Percy Jackson book.
+B: Izzy plays Minecraft.
+C: Emily stops working.
+D: Russell makes dinner.
+E: Ashleigh stops by.
+(~B • E) ⊃ D
+A: イジーがMinecraftをプレイしておらず、アシュリーが立ち寄る場合、それが成立しないならば、ラッセルが夕食を作ります。
+B: イジーがMinecraftをプレイしておらず、アシュリーが立ち寄るという両方の条件が成立しない場合、ラッセルが夕食を作ります。
+C: イジーがMinecraftをプレイし、アシュリーが立ち寄ることが、ラッセルが夕食を作ることを必要とします。
+D: ラッセルが夕食を作ることは、イジーがMinecraftをプレイしないこととアシュリーが立ち寄ることの十分条件です。
+
+deepseek回答:
+answer: A， 
+正确答案是: B
+
+题目:
+question: 与えられた命題の最良の英語解釈を次の翻訳キーを使用して選択してください: Ax: xはアパートです Hx: xは家です Lx: xは大きいです Bxy: xはyより大きいです (∃x)[Hx • (∀y)(Ay ⊃ Bxy)]
+A: Some houses are smaller than all apartments.
+B: Every house is bigger than every apartment.
+C: Some apartment is smaller than every house.
+D: Some houses are bigger than every apartment.
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 次の論証に対して完全な真理値表を作成してください。その後、真理値表を使用して、その論証が有効か無効かを判断してください。もし論証が無効な場合、反例を示す選択肢を選んでください。（他にも反例が存在する可能性があります。）
+~K ≡ L / (K · L) ∨ (K · ~L)
+A: Valid
+B: Invalid. Counterexample when K and L are true
+C: Invalid. Counterexample when K is true and L is false
+D: Invalid. Counterexample when L is true and K is false
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 次の条件命題の先行詞を特定しなさい: 大学が財政援助を増やさない場合、大統領が承認しないか、理事会がそれを阻止します。
+A: The university increases financial aid.
+B: The university does not increase financial aid.
+C: The board of trustees prevents it.
+D: The president fails to approve it.
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 以下のうち、与えられた前提からPLで直接（一段階で）導かれる命題はどれですか？
+~E ⊃ ~F
+G ⊃ F
+H ∨ ~E
+H ⊃ I
+~I
+A: E ⊃ F
+B: F ⊃ G
+C: H ⊃ ~E
+D: ~H
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 以下の文を最もよく象徴するPLの公式はどれですか？
+誰もがレイモンドを愛している、またはそうでない。
+A: L
+B: ~L
+C: L • ~L
+D: L ∨ ~L
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 述語論理への最良の翻訳を選びなさい。すべての王はすべての乞食よりも幸運です。（Kx: xは王です；Px: xは乞食です；Lxy: xはyより幸運です）
+A: (∀x)[Kx ⊃ (∀y)(Py ⊃ Lxy)]
+B: (∀x)[Kx ⊃ (∀y)(Lxy ⊃ Py)]
+C: (∀x)(∀y)[(Kx • Py) ⊃ Lyx]
+D: (∀x)[(Kx • (∀y)(Py)) ⊃ Lxy]
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 次の命題のペアに対して完全な真理値表を作成します。その後、真理値表を使用して、命題が論理的に同値か矛盾しているかを判断します。どちらでもない場合は、一貫性があるかどうかを判断します。答えを正当化してください。
+(~M ⊃ ~N) ∨ (O ≡ N) と (~M · N) · [(~O ∨ ~N) · (O ∨ N)]
+A: Logically equivalent
+B: Contradictory
+C: Neither logically equivalent nor contradictory, but consistent
+D: Inconsistent
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 以下のうち、与えられた前提からPLで直接（一ステップで）導かれる命題はどれですか？
+E ⊃ ~F
+~F ⊃ G
+~G
+A: E ⊃ F
+B: F ⊃ G
+C: G ⊃ E
+D: ~~F
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 間接的真理値表を使用して、次の論証が有効かどうかを判断します。論証が無効である場合、反例を示すオプションを選択してください。（他にも反例が存在する可能性があります。）
+E ⊃ (F ∨ ~G)
+F ⊃ (~E ∨ ~G) / ~(E ≡ F)
+A: Valid
+B: Invalid. Counterexample when E, F, and G are true
+C: Invalid. Counterexample when E and F are true and G is false
+D: Invalid. Counterexample when E, F, and G are false
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 間接的真理値表を使用して、以下の論証が妥当であるかどうかを判断します。論証が無効である場合、反例を示すオプションを選択してください。（他にも反例が存在する可能性があります。）
+H ≡ (~I ∨ J)
+H ∨ ~J / ~I
+A: Valid
+B: Invalid. Counterexample when H, I, and J are false
+C: Invalid. Counterexample when H and I are true and J is false
+D: Invalid. Counterexample when I is true and H and J are false
+
+deepseek回答:
+answer: C， 
+正确答案是: D
+
+题目:
+question: 述語論理における最適な翻訳を選びなさい。いくつかの消防士が危険から犠牲者を救助します。(Dx: xは危険です; Fx: xは消防士です; Vx: xは犠牲者です; Rxyz: xはyをzから救助します)
+A: (∃x){Fx • (∀y)[Dy ⊃ (∃z)(Vz • Rxyz)]}
+B: (∃x){Fx • (∃y)[Vy • (∃z)(Dz • Rxyz)]}
+C: (∃x){Fx • (∃y)(∃z)[(Vy • Dz) • Rxzy]}
+D: (∀x){Fx ⊃ (∃y)[Vy . (∃z)(Dz • Rxyz)]}
+
+deepseek回答:
+answer: C， 
+正确答案是: B
+
+题目:
+question: 次の条件命題の先行詞を特定しなさい: 大学が授業料を上げるのは、州知事がそれを承認し、かつ、評議員会がそれを推薦する場合に限る。
+A: The university raises tuition.
+B: The governor approves of it.
+C: The board of trustees recommends it.
+D: None of the above
+
+deepseek回答:
+answer: A， 
+正确答案是: D
+
+题目:
+question: 述語論理に最も適した翻訳を選びなさい。すべての惑星は木星より小さいです。(j: 木星; Px: xは惑星である; Sxy: xはyより小さい)
+A: (∃x)(Px • Sxj)
+B: (∀x)(Px • Sxj)
+C: (∀x)(Px ⊃ Sjx)
+D: (∀x)(Px ⊃ Sxj)
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 述語論理に最も適した翻訳を選びなさい。ホセがウィルマをケビンに紹介する。（j: ホセ; k: ケビン; w: ウィルマ; Ixyz: xがyをzに紹介する）
+A: Iwkj
+B: Ijwk
+C: Iwjk
+D: Ijkw
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 述語論理に最も適した翻訳を選びなさい: 人工物は人間ではない。
+A: ~Pa
+B: (∀x)(Ax ⊃ ~Px)
+C: ~Ap
+D: (∀x)(Ax • ~Px)
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 次の論証に対して完全な真理値表を作成し、その真理値表を使用して論証が有効か無効かを判断してください。もし論証が無効な場合は、反例を示すオプションを選んでください。（他にも反例が存在する可能性があります。）
+P ⊃ Q
+Q · R / ~P · R
+A: Valid
+B: Invalid. Counterexample when P, R, and Q are true
+C: Invalid. Counterexample when P and Q are true and R is false
+D: Invalid. Counterexample when R and Q are true and P is false
+
+deepseek回答:
+answer: D， 
+正确答案是: B
+
+题目:
+question: 述語論理に最も適切な翻訳を選びなさい。マルコはイタリアからスペインへ移動します。(i: イタリア; m: マルコ; s: スペイン; Mxyz: xはzからyへ移動する)
+A: Msim
+B: Mmis
+C: Mims
+D: Mmsi
+
+deepseek回答:
+answer: B， 
+正确答案是: D
+
+题目:
+question: 与えられた命題の最良の英語解釈を次の翻訳キーを使用して選択してください: Ax: xはアパートです Hx: xは家です Lx: xは大きいです Bxy: xはyより大きいです (∀x){Ax ⊃ (∀y)[(Hy • Ly) ⊃ ∼Bxy]}
+A: All apartments are not bigger than some large house.
+B: No apartment is bigger than any large house.
+C: All large houses are not bigger than some apartment.
+D: No large house is bigger than all apartments.
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 次の論証に対して完全な真理値表を作成し、その真理値表を使用して論証が有効か無効かを判断してください。もし論証が無効な場合、反例を示すオプションを選んでください。（他にも反例が存在する可能性があります。）
+J ≡ ~K
+J ∨ L
+~K / L
+A: 有効
+B: 無効。J と K が真で、L が偽の場合の反例
+C: 無効。J が真で、K と L が偽の場合の反例
+D: 無効。K が真で、J と L が偽の場合の反例
+
+deepseek回答:
+answer: A， 
+正确答案是: C
+
+题目:
+question: 次の文を最もよく表すPLの公式はどれですか？
+Pabloは、彼の兄が運転してガソリン代を払う場合に限り、店に行きます。
+A: (P ≡ D) ≡ G
+B: (D • G) ⊃ P
+C: P ⊃ (D • G)
+D: P ≡ (D • G)
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 間接的な真理値表を使用して、各命題のセットが一貫しているかどうかを判断します。セットが一貫している場合は、一貫した評価を持つオプションを選択します。（他にも一貫した評価が存在する可能性があります。）
+D ≡ E
+F ∨ D
+~E · ~F
+A: 矛盾している
+B: 一貫している。D、E、Fが真の場合の一貫した評価
+C: 一貫している。DとEが真でFが偽の場合の一貫した評価
+D: 一貫している。DとFが真でEが偽の場合の一貫した評価
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 以下の文を最もよく表すPLの公式はどれですか？
+レストランはデザートにパイかチーズケーキかアイスクリームを提供します。
+A: P ∨ (C ∨ I)
+B: (P ∨ C) ∨ I
+C: P ∨ C ∨ I
+D: Options A and B
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 以下の文を最もよく象徴するPLの公式はどれですか？
+もしベスが自転車に乗るなら、彼女は仕事に早く着く。
+A: B ⊃ W
+B: W ⊃ B
+C: B ≡ W
+D: Both A and B
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 述語論理に最も適した翻訳を選びなさい：テイラーかエリックのどちらかがラテボーイです。
+A: Lt ∨ Le
+B: Lx ∨ Ly
+C: tL ∨ eL
+D: Tl ⊃ El
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 間接的真理値表を使用して、以下の論証が妥当であるかどうかを判断しなさい。もし論証が無効である場合、反例を示す選択肢を選びなさい。（他にも反例が存在する可能性があります。）
+E ⊃ F
+G ⊃ ~F / ~G ∨ ~E
+A: Valid
+B: Invalid. Counterexample when E, F, and G are true
+C: Invalid. Counterexample when E and G are true and F is false
+D: Invalid. Counterexample when F and G are true and E is false
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 間接的真理値表を使用して、命題の各セットが一貫しているかどうかを判断します。セットが一貫している場合は、一貫した評価を持つオプションを選択します。（他にも一貫した評価が存在する可能性があります。）
+A ⊃ (~B ∨ C)
+C ⊃ D
+A ∨ (B · ~D)
+A ≡ (B ⊃ D)
+A: 一貫性がない
+B: 一貫性がある。AとDが真で、BとCが偽の場合の一貫した評価
+C: 一貫性がある。A、B、Dが真で、Cが偽の場合の一貫した評価
+D: 一貫性がある。CとDが真で、AとBが偽の場合の一貫した評価
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 次の論証に対して完全な真理値表を作成し、その真理値表を使用して論証が有効か無効かを判断してください。もし論証が無効な場合、反例を示すオプションを選んでください。（他にも反例が存在する可能性があります。）
+M ∨ N
+~M · O / N
+A: 有効
+B: 無効。MとOが真で、Nが偽の場合の反例
+C: 無効。Mが真で、OとNが偽の場合の反例
+D: 無効。Oが真で、MとNが偽の場合の反例
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 以下のうち、与えられた前提からPLで直接（一ステップで）導かれる命題はどれですか？
+U ⊃ W
+W ⊃ (X ≡ ~Y)
+(X ≡ ~Y) ⊃ Z
+~Z
+A: U ⊃ Z
+B: U ∨ W
+C: ~W
+D: ~(X ≡ ~Y)
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 次の条件命題の先行詞を特定してください：もしビーズが最初の試合に勝たなければ、アードバークスとチップマンクスはそれぞれ最初の試合に勝つ。
+A: The Aardvarks win their first game.
+B: The Bees don't win their first game.
+C: The Chipmunks win their first game.
+D: Both the Aardvarks and the Chipmunks win their first games.
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 述語論理に最も適した翻訳を選びなさい。HollyはFrancesを愛しています。(f: Frances; h: Holly; Lxy: xはyを愛する)
+A: hLf
+B: fLh
+C: Lfh
+D: Lhf
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 間接的真理値表を使用して、以下の論証が有効かどうかを判断します。もし論証が無効である場合、反例を示す選択肢を選んでください。（他にも反例が存在する可能性があります。）
+P ⊃ (Q ∨ R)
+(Q · S) ⊃ ~P
+~(~Q ∨ R) / ~P
+A: Valid
+B: Invalid. Counterexample when P, Q, R, and S are true
+C: Invalid. Counterexample when P and Q are true and R and S are false
+D: Invalid. Counterexample when P, R, and S are true and Q is false
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 次の論証に対して完全な真理値表を作成してください。その後、真理値表を使用して、論証が有効か無効かを判断してください。もし論証が無効な場合、反例を示すオプションを選んでください。（他にも反例が存在する可能性があります。）
+T ∨ U
+W · T / U
+A: 有効
+B: 無効。TとWが真で、Uが偽の場合の反例
+C: 無効。Tが真で、WとUが偽の場合の反例
+D: 無効。Wが真で、TとUが偽の場合の反例
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 次の条件命題の先行詞を特定しなさい: 州知事がそれを承認し、かつ評議員会が推薦する場合、大学は授業料を上げる。
+A: The university raises tuition.
+B: The governor approves of it.
+C: The board of trustees recommends it.
+D: The governor approves of it and the board of trustees recommends it.
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 次の条件命題の先行詞を特定しなさい: レストランにはエンドウ豆がないので、代わりにトウモロコシとジャガイモを提供しています。
+A: レストランにはエンドウ豆があります。
+B: レストランにはエンドウ豆がありません。
+C: レストランはトウモロコシを提供します。
+D: レストランはジャガイモを提供します。
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 述語論理における最適な翻訳を選びなさい。全てのゼリービーンズは全ての果物より甘いです。(Fx: xは果物です; Jx: xはゼリービーンズです; Sxy: xはyより甘いです)
+A: (∀x)[Fx ⊃ (∀y)(Jy ⊃ Sxy)]
+B: (∀x)(∀y)[(Fx • Jy) • Sxy]
+C: (∀x)(∀y)[Sxy ⊃ (Fy • Jx)]
+D: (∀x)[Jx ⊃ (∀y)(Fy ⊃ Sxy)]
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 次の議論の結論を特定しなさい。世界が私のアイデアであるというのは、すべての生き物にとって有効な真実であるが、それを考えることができるのは人間だけである。そうすることで、彼は哲学的な知恵を得る。知識のために存在するすべてのものよりも絶対に確かな真実はなく、したがってこの世界は主体に対する対象、知覚者の知覚である。世界はアイデアである。（アルトゥール・ショーペンハウアー、「意志としての世界とアイデアとしての世界」）
+A: The world is an idea.
+B: That the world is my idea is a truth valid for every living creature, though only man can contemplate it.
+C: In doing so, he attains philosophical wisdom.
+D: No truth is more absolutely certain than that all that exists for knowledge and therefore this world is only object in relation to subject, perception of a perceiver.
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 述語論理に最も適した翻訳を選びなさい。レオはキャシーより背が高いです。(c: キャシー; l: レオ; Txy: xはyより背が高い)
+A: Tlc
+B: Tcl
+C: lTc
+D: cTl
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 次の命題のペアに対して完全な真理値表を作成します。その後、真理値表を使用して、これらの文が論理的に等価か、矛盾しているかを判断します。どちらでもない場合は、一貫性があるかどうかを判断します。答えを正当化してください。
+C ⊃ (D ∨ C) と C · ~D
+A: Logically equivalent
+B: Contradictory
+C: Neither logically equivalent nor contradictory, but consistent
+D: Inconsistent
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 次の命題のペアに対して完全な真理値表を作成します。その後、真理値表を使用して、これらの命題が論理的に等価か、矛盾しているかを判断します。どちらでもない場合は、一貫性があるかどうかを判断します。答えを正当化してください。
+~O ⊃ P と O ∨ P
+A: Logically equivalent
+B: Contradictory
+C: Neither logically equivalent nor contradictory, but consistent
+D: Inconsistent
+
+deepseek回答:
+answer: C， 
+正确答案是: A
+
+题目:
+question: 間接的真理値表を使用して、次の論証が有効かどうかを判断します。もし論証が無効である場合、反例を示す選択肢を選んでください。（他にも反例が存在する可能性があります。）
+(T · ~U) ⊃ ~W
+~W ⊃ X
+~Z ⊃ W
+~(X · Z) / T ⊃ U
+A: Valid
+B: Invalid. Counterexample when T, X, and Z are true and U and W are false
+C: Invalid. Counterexample when T and X are true and U, W, and Z are false
+D: Invalid. Counterexample when T, W, and Z are true and U and X are false
+
+deepseek回答:
+answer: B， 
+正确答案是: A
+
+题目:
+question: 命題論理において最も適切な翻訳を選びなさい: セシリアは、マリアが問題であるか、または女の子である場合に限り、私の心を壊します。
+A: Bc ≡ (Pm ∨ Gm)
+B: Bc ≡ (Pm • Gm)
+C: Bc ⊃ (Pm ∨ Gm)
+D: Cb ⊃ (Pm • Gm)
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 述語論理に最も適した翻訳を選びなさい: デライラがニューヨーク市にいるならば、フアナはボゴタにいるか、またはレイラはサンフアンにいる。
+A: Nd ⊃ (Bj • Sl)
+B: Dn ≡ (Bx • Ly)
+C: Nd ≡ (Bj • Sl)
+D: Nd ⊃ (Bj ∨ Sl)
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 次のキーを使用して、与えられたPLの式を自然な英語の文に翻訳してください。
+A: Marina reads a Percy Jackson book.
+B: Izzy plays Minecraft.
+C: Emily stops working.
+D: Russell makes dinner.
+E: Ashleigh stops by.
+~(A ⊃ B) • (B ⊃ ~E)
+A: マリーナがパーシー・ジャクソンの本を読むことがイジーがマインクラフトをすることを必然とするわけではないが、イジーがマインクラフトをすることはアシュリーが立ち寄らないことを必然とする。
+B: マリーナがパーシー・ジャクソンの本を読まなければ、イジーはマインクラフトをすることになり、それはアシュリーが立ち寄らないことを意味する。
+C: マリーナがパーシー・ジャクソンの本を読むことはイジーがマインクラフトをすることを必然としないが、アシュリーが立ち寄らない場合に限りイジーはマインクラフトをする。
+D: マリーナがパーシー・ジャクソンの本を読むのはイジーがマインクラフトをするときだけではないが、イジーがマインクラフトをするのはアシュリーが立ち寄るときだけである。
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 間接真理値表を使用して、次の論証が有効かどうかを判断します。論証が無効である場合、反例を示すオプションを選択してください。（他にも反例が存在する可能性があります。）
+(A ∨ B) ⊃ C
+C ⊃ ~D / D ⊃ A
+A: 有効
+B: 無効。B、C、Dが真でAが偽の場合の反例
+C: 無効。BとDが真でAとCが偽の場合の反例
+D: 無効。A、B、Cが偽でDが真の場合の反例
+
+deepseek回答:
+answer: B， 
+正确答案是: D
+
+题目:
+question: 与えられた述語論理の議論の最も適切な英語の解釈を選択してください。
+Dh ⊃ ~Pt
+(∀x)Px ∨ (∀x)Mx
+~Mb	/ ~Dh
+A: もし私の頭痛が二元論的状態なら、あなたのくすぐりは物理的状態です。全てが物理的であるか、全てが精神的です。しかし、私の折れたつま先は精神的状態ではありません。だから私の頭痛は二元論的状態ではありません。
+B: もし私の頭痛が二元論的状態なら、あなたのくすぐりは物理的状態ではありません。全てが物理的であるか、全てが精神的です。しかし、私の折れたつま先は精神的状態ではありません。だから私の頭痛は二元論的状態ではありません。
+C: もし私の頭痛が二元論的状態なら、あなたのくすぐりは物理的状態ではありません。もし全てが物理的なら、全てが精神的です。しかし、私の折れたつま先は精神的状態ではありません。だから私の頭痛は二元論的状態ではありません。
+D: もし私の頭痛が二元論的状態なら、あなたのくすぐりは物理的状態ではありません。全ては物理的か精神的です。しかし、私の折れたつま先は精神的状態ではありません。だから私の頭痛は二元論的状態ではありません。
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 以下の命題のうち、与えられた前提からPLで直接（一ステップで）導かれるものはどれですか？
+A ⊃ (B • C)
+~(B • C)
+A ∨ (D ∨ B)
+A: A
+B: ~A
+C: B
+D: ~B
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 以下の命題のうち、与えられた前提からPLで直接（一段階で）導かれるものはどれですか？
+(N ⊃ ~O) ⊃ (O ∨ Q)
+P ⊃ (N ⊃ ~O)
+N ⊃ P
+A: P
+B: N ⊃ ~O
+C: O ∨ Q
+D: ~P
+
+deepseek回答:
+answer: B， 
+正确答案是: A
+
+题目:
+question: 述語論理に最も適した翻訳を選びなさい。地球は木星より大きくない。(e: 地球; j: 木星; Bxy: xはyより大きい)
+A: ~Bje
+B: Bej
+C: Bje~
+D: ~Bej
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 次の条件命題の先行詞を特定してください：ビーズが最初の試合に勝つことは、アードバークスまたはチップマンクスが最初の試合に勝たないことが必要です。
+A: The Aardvarks do not win their first game.
+B: The Bees win their first game.
+C: The Chipmunks do not win their first game.
+D: Either the Aardvarks or the Chipmunks do not win their first game.
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 次の条件命題の先行詞を特定しなさい: ビーズが最初の試合に勝つのは、アードバークスかチップマンクスのどちらかが最初の試合に勝たない場合のみです。
+A: アードバークスが最初の試合に勝たない。
+B: ビーズが最初の試合に勝つ。
+C: チップマンクスが最初の試合に勝たない。
+D: アードバークスかチップマンクスのどちらかが最初の試合に勝たない。
+
+deepseek回答:
+answer: D， 
+正确答案是: B
+
+题目:
+question: 述語論理に最も適した翻訳を選びなさい: 一部のアスリートは怪我をしない。
+A: ~Ia
+B: (∃x)(Ax • ~Ix)
+C: ~Ai
+D: (∃x)(Ix ∨ ~Ax)
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 次の命題のペアに対して完全な真理値表を作成します。その後、真理値表を使用して、これらの命題が論理的に等価か、矛盾しているかを判断します。どちらでもない場合は、一貫性があるかどうかを判断します。答えを正当化してください。
+I ≡ ~H および ~(~I ≡ H)
+A: Logically equivalent
+B: Contradictory
+C: Neither logically equivalent nor contradictory, but consistent
+D: Inconsistent
+
+deepseek回答:
+answer: A， 
+正确答案是: B
+
+题目:
+question: 間接的真理値表を使用して、命題の各セットが一貫性があるかどうかを判断します。セットが一貫している場合は、一貫した評価を持つオプションを選択します。（他にも一貫した評価が存在する可能性があります。）
+(T ⊃ U) ⊃ (W ⊃ U)
+T ⊃ ~(U ⊃ X)
+(T ⊃ ~X) ⊃ W
+A: Inconsistent
+B: Consistent. U、W、Xが真でTが偽の場合の一貫した評価
+C: Consistent. WとXが真でTとUが偽の場合の一貫した評価
+D: Consistent. TとUが真でWとXが偽の場合の一貫した評価
+
+deepseek回答:
+answer: D， 
+正确答案是: B
+
+题目:
+question: 述語論理に最も適した翻訳を選びなさい: キャロラインが優しいのは、ジャネットがブラッドと婚約している場合に限る。
+A: Cs ⊃ Ej
+B: Sc ≡ Ej
+C: sC ≡ eJ
+D: Sx ≡ Jy
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 与えられたPLの公式のうち、次の文を最もよく表すものはどれですか？
+イギリスが牛肉を輸入することはフランスが農業を補助するための十分条件であるか、または中国が人権を推進しないのは南アフリカがダイヤモンドを供給するとき、そしてそのときに限る。
+A: (E ⊃ F) ∨ (~C ⊃ S)
+B: (F ⊃ E) ∨ (S ⊃ ~C)
+C: (E ⊃ F) ∨ ~(S ≡ C)
+D: (E ⊃ F) ∨ (~C ≡ S)
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 次のキーを使用して、与えられたPLの式を自然な英語の文に翻訳してください。
+A: Marina reads a Percy Jackson book.
+B: Izzy plays Minecraft.
+C: Emily stops working.
+D: Russell makes dinner.
+E: Ashleigh stops by.
+(~A ∨ ~B) ⊃ C
+A: マリーナがパーシー・ジャクソンの本を読まないし、イジーがマインクラフトをしない場合、エミリーは仕事をやめます。
+B: マリーナがパーシー・ジャクソンの本を読んでいて、イジーがマインクラフトをしていないということではない場合、エミリーは仕事をやめます。
+C: マリーナがパーシー・ジャクソンの本を読まないか、イジーがマインクラフトをしないことが、エミリーが仕事をやめることを意味します。
+D: エミリーが仕事をやめることは、マリーナがパーシー・ジャクソンの本を読まないか、イジーがマインクラフトをしないという条件に十分です。
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 次の議論の結論を特定しなさい。述語変数を使用する人々がいます。これらの変数の値は属性です。属性を参照するかどうかにかかわらず、すべての文で述語が必要です。ダミー述語「F」は一般的に説明の目的で必要とされます。属性を量化して参照する場合、目的のために認識可能な変数と特徴的な名前を使用し、これらを述語と混同しないことで、明確さが保たれます。（クワイン、論理学の哲学）
+A: There are those who use predicate variables; the values of these variables are attributes.
+B: Predicates are wanted in all sentences regardless of whether there are attributes to refer to.
+C: The dummy predicate 'F' is wanted generally for expository purposes.
+D: If we are going to quantify over attributes and refer to them, then clarity is served by using recognizable variables and distinctive names for the purposes, and not mixing these up with the predicates.
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 次のキーを使用して、与えられたPLの公式を自然な英語の文に翻訳してください。
+A: Marina reads a Percy Jackson book.
+B: Izzy plays Minecraft.
+C: Emily stops working.
+D: Russell makes dinner.
+E: Ashleigh stops by.
+~C ∨ D
+A: エミリーが仕事をやめなければ、ラッセルが夕食を作ります。
+B: エミリーはラッセルが夕食を作る限り、仕事をやめます。
+C: エミリーはラッセルが夕食を作らない限り、仕事をやめます。
+D: エミリーはラッセルが夕食を作る限り、仕事をやめません。
+
+deepseek回答:
+answer: A， 
+正确答案是: D
+
+题目:
+question: 述語論理に最も適した翻訳を選びなさい: アブドゥルとクレオパトラはエジプト人です。
+A: Ea • Ec
+B: Ea • c
+C: Ae ∨ Ce
+D: Ex • Ey
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 述語論理に最も適した翻訳を選びなさい: Sheenaはパンクロッカーです。
+A: Sx
+B: xS
+C: sP
+D: Ps
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 述語論理に最も適した翻訳を選びなさい。ケビンはウィルマによってホセに紹介されました。(j: ホセ; k: ケビン; w: ウィルマ; Ixyz: xはyをzに紹介する)
+A: Iwjk
+B: Ijkw
+C: Ikjw
+D: Iwkj
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 述語論理に最も適した翻訳を選びなさい: アイリーンがフィドルを弾くならば、シェリーは歌う。
+A: Fe ∨ Ss
+B: eF ⊃ Ss
+C: Fe ∨ Es
+D: Fe ⊃ Ss
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 次の論証の完全な真理値表を作成してください。その後、真理値表を使用して、論証が有効か無効かを判断してください。論証が無効の場合、反例を示すオプションを選択してください。（他にも反例が存在する可能性があります。）
+~C ⊃ D
+D ⊃ C / C
+A: 有効
+B: 無効。CとDが真の場合の反例
+C: 無効。Cが真でDが偽の場合の反例
+D: 無効。Dが真でCが偽の場合の反例
+
+deepseek回答:
+answer: D， 
+正确答案是: A
+
+题目:
+question: 述語論理に最も適切な翻訳を選びなさい：いくつかの青いサギは渡りをする。
+A: (∀x)[(Hx • Bx) • Mx]
+B: (∃x)[(Hx • Bx) ⊃ Mx]
+C: (∀x)[(Hx • Bx) ⊃ Mx]
+D: (∃x)[(Hx • Bx) • Mx]
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 与えられた述語論理の議論の最も適切な英語の解釈を選択してください。
+(∃x)(Cx • Ox)
+(∀x)[(~Cx ⊃ ~Bx) ⊃ ~Og]	/ ~Og
+A: いくつかのクッキーにはオートミールが含まれています。クッキーでないことがチョコレートチップがないことを意味する場合、このクッキーにはオートミールがありません。したがって、このクッキーにはオートミールがありません。
+B: いくつかのクッキーにはオートミールが含まれています。何かがクッキーではなく、チョコレートチップがない場合、それにはオートミールがありません。したがって、このクッキーにはオートミールがありません。
+C: いくつかのクッキーにはオートミールが含まれています。何かがオートミールを持っていない場合、それはクッキーではなく、チョコレートチップもありません。したがって、このクッキーにはオートミールがありません。
+D: いくつかのクッキーにはオートミールが含まれています。何かがチョコレートチップを持っていないことが、それがクッキーでないことを意味する場合、それにはオートミールがありません。したがって、このクッキーにはオートミールがありません。
+
+deepseek回答:
+answer: D， 
+正确答案是: A
+
+题目:
+question: 次の議論の結論を特定してください。心理学全体が道徳的な偏見と恐怖に陥っています。誰もそれを権力への意志の発展として理解に近づいていません。しかし、もし人が憎しみ、嫉妬、貪欲、支配欲の効果を生命の条件として、さらには生命の一般的な経済の必要な要因として考慮し始めた場合、彼は船酔いを感じ始めます。この時点で、彼は自分自身を失い始め、道徳を超えて航海します。こうして、心理学は再び根本的な問題への道となります。（フリードリヒ・ニーチェ、善悪の彼岸）
+A: All of psychology has gotten stuck in moral prejudices and fears.
+B: No one has come close to understanding it as the development of the will to power.
+C: If a person even begins to regard the effects of hatred, envy, covetousness, and the lust to rule as conditions of life and furthermore, as factors essential to the general economy of life, he will begin to get seasick.
+D: Psychology becomes again the path to fundamental problems.
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 間接的な真理値表を使用して、命題の各セットが一貫性があるかどうかを判断します。セットが一貫している場合は、一貫した評価を持つオプションを選択します。（他にも一貫した評価が存在する可能性があります。）
+~N ≡ (O · P)
+~O ⊃ Q
+N · ~Q
+A: Inconsistent
+B: Consistent. N、O、Pが真でQが偽の場合の一貫した評価
+C: Consistent. NとOが真でPとQが偽の場合の一貫した評価
+D: Consistent. NとPが真でOとQが偽の場合の一貫した評価
+
+deepseek回答:
+answer: D， 
+正确答案是: C
+
+题目:
+question: 以下の文を最もよく象徴するPLの公式はどれですか？
+A person is considered to have lived with you for all of the present year if the person was born or died in the present year and your home was this person's home for the entire time this person was alive.
+A: [(B ∨ D) • H] ⊃ L
+B: [L ⊃ (B ∨ D)] • H
+C: L ⊃ [(B ∨ D) • H]
+D: (B ∨ D • H) ⊃ L
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 次の論証に対して完全な真理値表を作成し、その真理値表を使用して論証が有効か無効かを判断してください。もし論証が無効である場合、反例を示す選択肢を選んでください。（他にも反例が存在する可能性があります。）
+(O ≡ P) ∨ P / P ∨ ~O
+A: Valid
+B: Invalid. Counterexample when O and P are true
+C: Invalid. Counterexample when O is true and P is false
+D: Invalid. Counterexample when P is true and O is false
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 述語論理に最も適した翻訳を選びなさい: Leroyが悪いのはDJ Khaledが彼の名前を叫ぶ場合のみです。
+A: Sk ≡ Bl
+B: Bl ≡ Sk
+C: Bx ⊃ Sy
+D: Bl ⊃ Sk
+
+deepseek回答:
+answer: B， 
+正确答案是: D
+
+题目:
+question: 以下の文を最もよく表すPLの公式はどれですか？
+もしジョージが登録するかハリーが登録するならば、イラは登録しない。
+A: (G ⊃ H) ∨ I
+B: (G ∨ H) ⊃ I
+C: (G ⊃ H) ∨ ~I
+D: (G ∨ H) ⊃ ~I
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 述語論理に最も適した翻訳を選びなさい: ジャクソンさんは私に砂糖を貸してくれましたが、ジャネットもラトーヤも貸してくれませんでした。
+A: Lm ∨ ~(Jl ∨ Ll)
+B: Lm • ~(Lj • Ll)
+C: Lm • ~(Lj ∨ Ll)
+D: Lm ∨ ~(Lj • Ll)
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 残酷な人々によって無視される動物がいるという命題論理に最も適切な翻訳を選びなさい。(Ax: xは動物である; Cx: xは残酷である; Px: xは人である; Nxy: xはyを無視する)
+A: (∃x)[(Ax • Cx) • (∃y)(Py • Nyx)]
+B: (∃x)[(Cx • Px) • (∃y)(Ay • Nxy)]
+C: (∃x)[(Ax • Px) • (∃y)(Cy • Nxy)]
+D: (∃x)(∃y){[(Ax • Cy) • Py] • Nxy)]}
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 間接的真理値表を使用して、各命題のセットが一貫しているかどうかを判断します。セットが一貫している場合は、一貫した評価を持つオプションを選択します。（他にも一貫した評価が存在する可能性があります。）
+(E ⊃ F) ⊃ G
+(~E ∨ F) ≡ (H ∨ I)
+I ⊃ (J ⊃ ~H)
+~G ⊃ ~J
+A: Inconsistent
+B: Consistent. Eが真で、F, G, H, I, Jが偽の場合の一貫した評価
+C: Consistent. EとHが真で、F, G, I, Jが偽の場合の一貫した評価
+D: Consistent. EとIが真で、F, G, H, Jが偽の場合の一貫した評価
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 述語論理に最も適した翻訳を選びなさい: 何人かの学生は一生懸命働いている。
+A: (∃x)(Wx ∨ Sx)
+B: (∃x)(Sx ∨ Wx)
+C: (∃x)(Sx • Wx)
+D: (∃x)(Sx ⊃ Wx)
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 次の文を最もよく象徴するPLの公式はどれですか？
+イングランドが牛肉を輸入することはフランスが農業を補助するための必要条件ではない、または、南アフリカがダイヤモンドを供給する場合、中国は人権を促進する。
+A: (~F ⊃ E) ∨ (C ≡ ~S)
+B: (~E ⊃ F) ∨ (C ⊃ S)
+C: (~F ⊃ E) ∨ (C ≡ S)
+D: ~(F ⊃ E) ∨ (S ⊃ C)
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 次の論証に対して完全な真理値表を作成し、その真理値表を使用して論証が有効か無効かを判断してください。もし論証が無効な場合は、反例を示すオプションを選択してください。（他にも反例が存在する可能性があります。）
+~A · ~B
+(A ∨ C) ∨ B / C
+A: 有効
+B: 無効。AとBが真でCが偽の場合の反例
+C: 無効。Aが真でBとCが偽の場合の反例
+D: 無効。Bが真でAとCが偽の場合の反例
+
+deepseek回答:
+answer: C， 
+正确答案是: A
+
+题目:
+question: 述語論理に最も適切な翻訳を選びなさい。全ての鳥は何らかの巣に住んでいます。（Bx: xは鳥です；Nx: xは巣です；Lxy: xはyに住んでいます）
+A: (∀x)(∀y)[(Bx • Ny) ⊃ Lxy]
+B: (∀x)[Bx ⊃ (∃y)(Ny • Lxy)]
+C: (∀x)[(∃y)(Ny • Bx) ⊃ Lxy]
+D: (∀x)(∃y)[(Bx • Ny) ⊃ Lxy]
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 次の議論の結論を特定してください。功利主義理論は、効用の怪物の可能性によって困惑しています。効用の怪物は、他者の犠牲によって失われた効用よりも大きな効用の利益を得ます。多くの他人の犠牲でさえ、効用の怪物の利益によって上回られます。この理論は、総効用を増加させるために、私たち全員が怪物の口に犠牲にされることを要求するようです。（ロバート・ノージック、無政府、国家、ユートピア）
+A: 功利主義理論は、効用の怪物の可能性によって困惑しています。
+B: 効用の怪物は莫大な効用の利益を得ます。
+C: 効用の怪物は、他者の犠牲によって失われた効用よりも大きな効用の利益を得ます。
+D: 多くの他人の犠牲でさえ、効用の怪物の利益によって上回られます。
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 次のキーを使用して、与えられたPLの式を自然な英語の文に翻訳してください。
+A: マリーナはパーシー・ジャクソンの本を読んでいます。
+B: イジーはマインクラフトをしています。
+C: エミリーは仕事をやめます。
+D: ラッセルが夕食を作ります。
+E: アシュリーが立ち寄ります。
+(A ∨ ~E) ≡ (D • ~B)
+A: マリーナがパーシー・ジャクソンの本を読むか、アシュリーが立ち寄らないことは、ラッセルが夕食を作り、イジーがマインクラフトをしないことの必要条件です。
+B: マリーナがパーシー・ジャクソンの本を読むか、アシュリーが立ち寄らないことは、ラッセルが夕食を作り、イジーがマインクラフトをすることの必要十分条件です。
+C: マリーナがパーシー・ジャクソンの本を読むのは、アシュリーが立ち寄る場合を除き、ラッセルが夕食を作り、イジーがマインクラフトをしない場合に限ります。
+D: マリーナがパーシー・ジャクソンの本を読むか、アシュリーが立ち寄らないのは、ラッセルが夕食を作り、イジーがマインクラフトをしない場合だけです。
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 与えられたPLの公式のうち、次の文を最もよく象徴しているのはどれですか？
+Brittanyは魚とトカゲが好きですが、猫は好きではありません。
+A: F • L • ~C
+B: (F • L) • ~C
+C: (F • L) ∨ ~C
+D: C • (F • L)
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 次の文を最もよく表すPLの公式はどれですか？
+もしハリーが登録するか、ジョージが登録しないならば、ジムが登録する。
+A: H ∨ (~G ⊃ J)
+B: ~(H ∨ G) ⊃ J
+C: (H ∨ ~G) ⊃ J
+D: (H ⊃ ~G) ∨ J
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 次の論証に対して完全な真理値表を作成してください。その後、真理値表を使用して、その論証が妥当か無効かを判断してください。もし論証が無効である場合、反例を示す選択肢を選んでください。（他にも反例が存在する可能性があります。）
+~X ⊃ Y
+Y ⊃ Z
+~Z / ~X
+A: Valid
+B: Invalid. Counterexample when X, Y, and Z are true
+C: Invalid. Counterexample when Y and Z are true and Z is false
+D: Invalid. Counterexample when X is true and Y and Z are false
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 述語論理に最も適切な翻訳を選びなさい。優しい人々が絶滜種を助けます。(Ex: xは絶滅している; Kx: xは親切です; Px: xは人です; Sx: xは種です; Hxy: xはyを助けます)
+A: (∃x){(Kx • Px) • (∃y)[(Ey • Sy) • Hxy]}
+B: (∃x)(∃y){[(Kx • Sx) • (Ey • Py)] • Hxy}
+C: (∃x)(∃y){[(Kx • Sx) • (Ey • Py)] • Hyx}
+D: (∃x)(∃y){[(Kx • Px) • (Ey • Sy)] ⊃ Hxy}
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 次の翻訳キーを使用して、与えられた命題の最良の英語解釈を選択してください: Ax: xはアパートです Hx: xは家です Lx: xは大きいです Bxy: xはyより大きいです (∀x)[Ax ⊃ (∃y)(Hy • Bxy)]
+A: Every apartment is bigger than some house.
+B: Every house is bigger than all apartments.
+C: Every house is bigger than some apartment.
+D: Some house is bigger than every apartment.
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 次の論証に対して完全な真理値表を作成してください。その後、真理値表を使用して、その論証が妥当か無効かを判断してください。もし論証が無効な場合、反例を示す選択肢を選んでください。（他にも反例が存在する可能性があります。）
+Q ≡ R
+~(S ∨ Q) / R
+A: Valid
+B: Invalid. Counterexample when Q and S are true and R is false
+C: Invalid. Counterexample when Q is true and S and R are false
+D: Invalid. Counterexample when Q, S, and R are false
+
+deepseek回答:
+answer: C， 
+正确答案是: D
+
+题目:
+question: 次の条件命題の先行詞を特定しなさい: 大学が授業料を上げるのは、知事がそれを承認し、かつ評議員会が推薦する場合のみです。
+A: The university raises tuition.
+B: The governor approves of it.
+C: The board of trustees recommends it.
+D: The governor approves of it and the board of trustees recommends it.
+
+deepseek回答:
+answer: D， 
+正确答案是: A
+
+题目:
+question: 次のうち、与えられた前提からPLで直接（一ステップで）導かれる命題はどれですか？
+(A ∨ B) ⊃ (C ∨ D)
+A ∨ B
+~C
+A: ~A ∨ ~B
+B: ~~C
+C: C ∨ D
+D: (A ∨ B) ⊃ D
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 次の条件命題の先行詞を特定しなさい：大学が授業料を上げるとき、そのときは知事がそれを承認するか、または評議員会がそれを阻止しない。
+A: The university raises tuition.
+B: The governor approves of it.
+C: The board of trustees prevents it.
+D: The board of trustees doesn't prevent it.
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 述語論理に最も適した翻訳を選びなさい。マルコはスペインからイタリアへ移動しない。(i: イタリア; m: マルコ; s: スペイン; Mxyz: xはzからyへ移動する)
+A: ~Mmsi
+B: M~mis
+C: ~Mmis
+D: M~msi
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 次の論証に対して完全な真理値表を作成し、その真理値表を使用して論証が妥当か無効かを判断してください。もし論証が無効な場合、反例を示すオプションを選択してください。（他にも反例が存在する可能性があります。）
+~S ∨ T
+~S · U
+~T ∨ U / T · U
+A: Valid
+B: Invalid. Counterexample when S, T, and U are true
+C: Invalid. Counterexample when S and U are true and T is false
+D: Invalid. Counterexample when U is true and S and T are false
+
+deepseek回答:
+answer: A， 
+正确答案是: D
+
+题目:
+question: 以下の文の最も適切な記号化は、PLの与えられた公式のうちどれですか？
+医者は、その患者が無礼でない限り、役に立ちます。
+A: H ≡ R
+B: H • R
+C: H ∨ ~R
+D: H ∨ R
+
+deepseek回答:
+answer: C， 
+正确答案是: D
+
+题目:
+question: 間接的真理値表を使用して、以下の論証が妥当かどうかを判断します。もし論証が無効である場合、反例を示す選択肢を選んでください。（他の反例も存在する可能性があります。）
+L ⊃ [(M ∨ ~N) ⊃ O]
+(N ⊃ O) ⊃ (~P ⊃ Q)
+R ⊃ ~Q / L ⊃ (R ⊃ P)
+A: Valid
+B: Invalid. Counterexample when L, M, O, Q, and R are true and N and P are false
+C: Invalid. Counterexample when L, N, O, Q, and R are true and M and P are false
+D: Invalid. Counterexample when L, N, and R are true and M, O, P, and Q are false
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 次の議論の結論を特定しなさい。用語の意味はその参照を決定することになっています。しかし、思考に違いがなくても参照は変わることがあります。したがって、用語の意味は思考の変化なしに変わることができる必要があります。したがって、私たちの思考は用語の意味を決定しません。意味は頭の中にはありません。（ヒラリー・パトナム）
+A: The sense of a term is supposed to determine its reference.
+B: But reference can vary without any difference in thought.
+C: Reference can vary without any difference in thought.
+D: Our thoughts do not determine the meanings of our terms; meanings are not in the head.
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 次の命題のペアに対して完全な真理値表を作成します。その後、真理値表を使用して、これらの文が論理的に等価か、矛盾しているかを判断します。どちらでもない場合は、一貫性があるかどうかを判断します。答えを正当化してください。
+(G ∨ ~H) ⊃ G と ~G ≡ (~H · G)
+A: Logically equivalent
+B: Contradictory
+C: Neither logically equivalent nor contradictory, but consistent
+D: Inconsistent
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 次の文を最もよく象徴するPLの公式はどれですか？
+イギリスが牛肉を輸入することはフランスが農業を補助するための必要条件であるか、または中国が人権を推進することは南アフリカがダイヤモンドを供給するための十分条件ではない。
+A: (E ≡ F) ∨ ~(C ≡ S)
+B: (E ≡ F) ∨ (~C ⊃ S)
+C: (E ⊃ F) ∨ ~(C ⊃ S)
+D: (F ⊃ E) ∨ ~(C ⊃ S)
+
+deepseek回答:
+answer: C， 
+正确答案是: D
+
+题目:
+question: 与えられた述語論理の議論の最も適切な英語の解釈を選択してください。
+Wn ∨ Wm
+(∀x)[Lx ⊃ (Dx ⊃ ~Wx)]
+Ln • Dn	/ ~(∀x)~Wx
+A: ナンシーかマービンのどちらかが仕事にいます。全ての弁護士は夕食に出かけている場合、仕事にはいません。ナンシーは弁護士で夕食に出かけています。したがって、全てが仕事にいないわけではありません。
+B: ナンシーかマービンのどちらかが仕事にいます。全ての弁護士は仕事にいない場合、夕食に出かけています。ナンシーは弁護士で夕食に出かけています。したがって、全てが仕事にいないわけではありません。
+C: ナンシーかマービンのどちらかが仕事にいます。全ての弁護士は仕事にいない場合、夕食に出かけています。ナンシーは弁護士で夕食に出かけています。したがって、全てが仕事にいるわけではありません。
+D: ナンシーかマービンのどちらかが仕事にいます。全ての弁護士は夕食に出かけている場合、仕事にはいません。ナンシーは弁護士で夕食に出かけています。したがって、全てが仕事にいるわけではありません。
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 次の議論の結論を特定してください。結論を示す指標は取り除いてください。社会が殺人犯を殺すことは間違っています。これは、殺人犯が被害者を殺すことが間違っているならば、社会が殺人犯を殺すことも間違っているという理由からです。そして、殺人犯が被害者を殺すことは間違っています。
+A: It is wrong for society to kill a murderer.
+B: This follows for the reason that if a murderer is wrong in killing his victim, then society is also wrong in killing the murderer.
+C: If a murderer is wrong in killing his victim, then society is also wrong in killing the murderer.
+D: And a murderer is wrong in killing his victim.
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 以下の命題のうち、与えられた前提からPLで直接（一段階で）導かれないものはどれですか？
+I ⊃ (J ≡ K)
+(J ≡ K) ⊃ (L ∨ M)
+I ⊃ ~L
+A: ~L
+B: J ≡ K
+C: I ⊃ (L ∨ M)
+D: ~L ⊃ (J ≡ K)
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 次の論証に対して完全な真理値表を作成し、その真理値表を使用して論証が有効か無効かを判断してください。もし論証が無効な場合、反例を示す選択肢を選んでください。（他にも反例が存在する可能性があります。）
+I ≡ ~J
+I ∨ J / I
+A: Valid
+B: Invalid. Counterexample when I and J are true
+C: Invalid. Counterexample when I is true and J is false
+D: Invalid. Counterexample when J is true and I is false
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 述語論理に最も適した翻訳を選びなさい: 何人かの人々は幸運です。
+A: (∃x)(Fx • Lx)
+B: Fl
+C: Lf
+D: (∀x)(Fx • Lx)
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 述語論理に最も適した翻訳を選びなさい。アレクシスはベンによって挨拶されます。(a: アレクシス; b: ベン; Gxy: xがyを挨拶する)
+A: Gab
+B: ~Gba
+C: aGb
+D: Gba
+
+deepseek回答:
+D: Gba， 
+正确答案是: D
+
+题目:
+question: 述語論理に最も適切な翻訳を選びなさい: すべてのロブスターが赤いわけではない。
+A: ~(∀x)(Lx ⊃ Rx)
+B: ~(∃x)(Lx ⊃ Rx)
+C: ~(∃x)(Lx • Rx)
+D: ~(∀x)(Lx • Rx)
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 間接的真理値表を使用して、以下の論証が妥当かどうかを判断します。論証が無効である場合、反例を示すオプションを選択してください。（他にも反例が存在する可能性があります。）
+H ≡ (I · ~J)
+K ≡ ~H
+~(K ⊃ J) / I ≡ J
+A: Valid
+B: Invalid. Counterexample when I, H, and K are true and J is false
+C: Invalid. Counterexample when I and H are true and J and K are false
+D: Invalid. Counterexample when K is true and I, H, and J are false
+
+deepseek回答:
+answer: B， 
+正确答案是: A
+
+题目:
+question: 次の命題のペアに対して完全な真理値表を作成します。その後、真理値表を使用して、これらの命題が論理的に等価か、矛盾しているかを判断します。どちらでもない場合は、一貫性があるかどうかを判断します。答えを正当化してください。
+~(J ∨ K) · L と (L ⊃ J) · K
+A: Logically equivalent
+B: Contradictory
+C: Neither logically equivalent nor contradictory, but consistent
+D: Inconsistent
+
+deepseek回答:
+answer: C， 
+正确答案是: D
+
+题目:
+question: 述語論理に最も適した翻訳を選びなさい: 全ての一年生が水泳テストを受ける。
+A: (∀x)(Sx ⊃ Fx)
+B: (∀x)(Fx ⊃ Sx)
+C: (∀x)(Fx ∨ Sx)
+D: (∀x)(Fx ≡ Sx)
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 述語論理に最も適した翻訳を選びなさい: ジョニーは遅れてきた。
+A: jL
+B: Lj
+C: Cj ∨ Lj
+D: Lx
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 述語論理に最も適した翻訳を選びなさい: どの高年生も専攻なしには卒業しない。
+A: (∀x)(Sx ⊃ ~Gx)
+B: ~(∀x)(Sx ⊃ Gx)
+C: (∀x)( ~Sx ⊃ ~Gx)
+D: (∀x) ~(Sx ⊃ ~Gx)
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 次の議論の結論を特定してください。歴史的な観点から見ると、遺伝学は若い科学です。遺伝特性を支配する原則は150年未満前に記述されました。さらに、20世紀の変わり目に遺伝の法則が再発見されました。しかし、その時でさえ、DNAの重要性が1950年代まで本当に理解されなかった。
+A: But even then, the importance of DNA was not really understood until the 1950s.
+B: The importance of DNA was not really understood until the 1950s.
+C: From a historical point of view, genetics is a young science.
+D: The principles that govern inheritance traits were described less than 150 years ago.
+
+deepseek回答:
+answer: B， 
+正确答案是: C
+
+题目:
+question: 以下の文の最も適切な記号化は、PLの与えられた公式のうちどれですか？
+イギリスが牛肉を輸入することはフランスが農業を補助するための必要条件であるか、または南アフリカがダイヤモンドを供給しない場合、中国が人権を促進する。
+A: (E ⊃ F) ∨ (C ≡ ~S)
+B: (F ⊃ E) ∨ (~S ≡ C)
+C: (E ⊃ F) ∨ (S ⊃~C)
+D: (F ⊃ E) ∨ (~S ⊃ C)
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 以下の文を最もよく象徴するPLの公式はどれですか？
+イギリスが牛肉を輸入することはフランスが農業を補助するための十分条件であるか、または中国が人権を推進することは南アフリカがダイヤモンドを供給するための必要条件である。
+A: (E ⊃ F) ∨ (S ⊃ C)
+B: (F ⊃ E) ∨ (C ⊃ S)
+C: (E ⊃ F) ∨ (C ⊃ S)
+D: (F ⊃ E) ∨ (S ⊃ C)
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 以下の文を最もよく表すPLの公式はどれですか？
+Dylanは数学も科学も好きではありません。
+A: M ∨ S
+B: ~(M • S)
+C: ~(M ∨ S)
+D: ~M ∨ ~S
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 述語論理に最も適した翻訳を選びなさい: すべてのロボットは人工物である。
+A: (∀x)(Ax ∨ Rx)
+B: (∀x)(Ax • Rx)
+C: (∀x)(Rx ⊃ Ax)
+D: (∀x)(Rx • Ax)
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 与えられたPLの公式のうち、次の文を最もよく象徴しているものはどれですか？
+大学が授業料を上げたので、学長はそれを承認し、理事会はそれを阻止しなかった。
+A: (P • ~B) ⊃ U
+B: (U ⊃ P) • B
+C: U ⊃ (P • ~B)
+D: U ⊃ (P ∨ ~B)
+
+deepseek回答:
+answer: A， 
+正确答案是: C
+
+题目:
+question: 次の議論の結論を特定してください。死刑を廃止すべきではありません。もし廃止すると、刑務所がより混雑するでしょう。刑務所が混雑すれば、新しい刑務所を建設しなければならなくなります。そして、私たちは新しい刑務所を建設したくありません。
+A: We shouldn't abolish capital punishment.
+B: If we do, prisons will become more crowded.
+C: If prisons become more crowded, then we will have to build more prisons.
+D: We will have to build more prisons.
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 次の文の最良の記号化は、PLの与えられた公式のうちどれですか？
+イギリスが牛肉を輸入しないことはフランスが農業を補助するための必要条件であるか、または中国が人権を推進するのは南アフリカがダイヤモンドを供給しない場合に限る。
+A: (F ⊃ ~E) ∨ (C ≡ ~S)
+B: (~E ⊃ F) ∨ (C ⊃ ~S)
+C: ~(F ⊃ E) ∨ (~S ⊃ C)
+D: (F ⊃ E) ∨ (C ≡ ~S)
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 間接真理値表を使用して、以下の論証が妥当かどうかを判断します。論証が無効である場合、反例を示すオプションを選択してください。（他にも反例が存在する可能性があります。）
+(K · L) ⊃ M
+N ⊃ ~M
+N ∨ K / L ⊃ K
+A: Valid
+B: Invalid. Counterexample when L, M, and N are true and K is false
+C: Invalid. Counterexample when L and M are true and K and N are false
+D: Invalid. Counterexample when L and N are true and K and M are false
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 次の論証に対して完全な真理値表を作成し、その真理値表を使用して論証が妥当か無効かを判断してください。もし論証が無効な場合、反例を示すオプションを選んでください。（他にも反例が存在する可能性があります。）
+(G ≡ H) · ~I
+~G ∨ (~H ∨ I) / G
+A: Valid
+B: Invalid. Counterexample when H and I are true and G is false
+C: Invalid. Counterexample when H is true and I and G are false
+D: Invalid. Counterexample when H, I, and G are false
+
+deepseek回答:
+answer: B， 
+正确答案是: D
+
+题目:
+question: 次の論証に対して完全な真理値表を作成してください。その後、真理値表を使用して、その論証が妥当か無効かを判断してください。もし論証が無効である場合、反例を示す選択肢を選んでください。（他にも反例が存在する可能性があります。）
+~(M ≡ ~N)
+M / N
+A: Valid
+B: Invalid. Counterexample when M and N are true
+C: Invalid. Counterexample when M is true and N is false
+D: Invalid. Counterexample when N is true and M is false
+
+deepseek回答:
+answer: C， 
+正确答案是: A
+
+题目:
+question: 述語論理に最も適切な翻訳を選びなさい。あるCEOはすべての人よりも裕福です。 (Cx: xはCEOです; Px: xは人です; Wxy: xはyより裕福です)
+A: (∃x)[Cx • (∀y)(Py • Wxy)]
+B: (∃x)[Cx ⊃ (∀y)(Py ⊃ Wxy)]
+C: (∃x)[Cx • (∀y)(Py ⊃ Wxy)]
+D: (∀x)[Px ⊃ (∃y)(Cy ⊃ Wxy)]
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 述語論理に最も適した翻訳を選びなさい。全ての子供は何らかの学校に通っています。（Cx: xは子供です；Sx: xは学校です；Gxy: xはyに通っています）
+A: (∀x)(∃y)[(Cx • Sy) • Gxy)
+B: (∀x)[Sx ⊃ (∃y)(Cy • Gxy)]
+C: (∀x)[Cx ⊃ (∃y)(Sy • Gxy)]
+D: (∀x)[Sx • (∃y)(Cy • Gxy)]
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+总题数: 126, 正确答案数: 93, 正确率: 73.81%
+题目:
+question: 24 = 2p のとき、p の値は何ですか？
+A: p = 4
+B: p = 8
+C: p = 12
+D: p = 24
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: ペレスさんは5日間で合計40マイルを運転しました。彼女は毎日同じ数のマイルを運転しました。ペレスさんは一日に何マイル運転しましたか？
+A: 5
+B: 7
+C: 8
+D: 9
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: −40 ÷ (−8) の商を求めなさい。
+A: 1 over 5
+B: −5
+C: −1 over 5
+D: 5
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: サッカーチームはサッカーボールを購入するために90ドルを持っています。もし1つのサッカーボールの値段が15.60ドルだとしたら、チームは最大で何個のサッカーボールを買うことができますか？
+A: 4
+B: 5
+C: 6
+D: 7
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: あなたと3人の友人がコンサートに行きます。4枚のチケットの合計費用は112ドルです。1枚のチケットの費用 t を求めるための方程式を立てて解いてください。
+A: 4t = 112; $448
+B: 4t = 112; $28
+C: t over 4 = 112; $448
+D: t over 4 = 112; $28
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 下の式を使って質問に答えてください。3 × [(2 × 6 – 5) + (8 ÷ 4)] – 1 この式の値は何ですか？
+A: 9
+B: 11
+C: 26
+D: 32
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 1と1/11を最も簡単な形の整数または帯分数で表しなさい。
+A: 1.1 over 11
+B: 11 over 11
+C: 12 over 11
+D: 11 over 12
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 2.16 ÷ 0.06 の商を求めなさい。
+A: 3.6
+B: 36
+C: 0.01272
+D: 12.72
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 142.76 - 16.5 の差を求めなさい。
+A: 159.26
+B: 2.224
+C: 14,111
+D: 126.26
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 5.04を0.7で割った商を求めなさい。
+A: 0.72
+B: 0.702
+C: 10.0571
+D: 7.2
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: ジミーとキマは旅行に出かけます。彼らは3日間運転します。最初の日には182マイル運転します。2日目には439マイル運転します。3日目には217マイル運転します。ジミーとキマが旅行で運転するマイル数の最も近い見積もりはどの表現ですか？
+A: 150 + 400 + 200
+B: 200 + 400 + 200
+C: 200 + 450 + 200
+D: 200 + 500 + 200
+
+deepseek回答:
+answer: B， 
+正确答案是: C
+
+题目:
+question: 21を7で割ったときの余りは何ですか？
+A: 21
+B: 7
+C: 1
+D: None of these
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: Maddieは7日間で合計56マイル自転車に乗ります。彼女は毎日同じ数のマイルを走ります。Maddieが毎日走るマイル数は合計何マイルですか？
+A: 8
+B: 9
+C: 49
+D: 63
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 48分の88が11分の何に等しいか、その数を見つけなさい。
+A: 6
+B: 11
+C: 8
+D: 5
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: どれが一番お買い得ですか？
+A: 10 bars of soap for $23.20
+B: 16 bars of soap for $36.48
+C: 13 bars of soap for $29.51
+D: 12 bars of soap for $27.60
+
+deepseek回答:
+answer: D， 
+正确答案是: C
+
+题目:
+question: トリッシュの安静時の心拍数は1分間に50拍です。運動するごとに心拍数は1分間に5拍増加します。彼女の心拍数が120拍に達するまでにどれくらいの時間がかかりますか？
+A: 5 minutes
+B: 14 minutes
+C: 34 minutes
+D: 70 minutes
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: データセット23、13、18、29、32、25の中央値を求めなさい。
+A: 18
+B: 24
+C: 25
+D: 29
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: ジャックはリンゴの木から60個のリンゴを摘み取ります。そのうち12個をリンゴソース作りに使います。残りのリンゴを6つのギフトバスケットに均等に分けます。ジャックが各ギフトバスケットに入れるリンゴの数、aを求めるために使える方程式はどれですか？
+A: (60/6)—12=a
+B: (60—12)/6=a
+C: (60-6)-12=a
+D: (60+12)/6=a
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: ある地図は1インチが25マイルに相当する縮尺を使用しています。この地図上で5インチは何マイルに相当しますか？
+A: 5
+B: 25
+C: 50
+D: 125
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: (2 + 5)^2 − 42 を簡単にしなさい。
+A: 7
+B: 16
+C: 30
+D: 33
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 4 ÷ 2 • 2 + 8 − 4 の値を求めなさい。
+A: −12
+B: 12
+C: 8
+D: 16
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: コーチは陸上競技会のランナーの数を最も近い10の数に丸めました。丸められたランナーの数は400です。実際のランナーの数として考えられるのはどれですか？
+A: 382
+B: 397
+C: 406
+D: 447
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: −4 + (−3) =
+A: −7
+B: −1
+C: 1
+D: 7
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: マークは切手を集めています。彩は日本から22枚、カナダから34枚、メキシコから17枚の切手を持っています。彼は全部で何枚の切手を持っていますか？
+A: 53
+B: 63
+C: 73
+D: 83
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 方程式 x + 2.7 = 8.4 の解を与えられた数字から特定しなさい。
+A: 11.1
+B: 5.7
+C: 3.7
+D: 22.68
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 次の文が正しいようにする数字を見つけてください：0.32 g = _ cg。
+A: 32
+B: 3.2
+C: 3,200
+D: 320
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 分配法則を使って、5.7(8)の積を頭の中で計算しなさい。
+A: 46.4
+B: 456
+C: 4.56
+D: 45.6
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 式 2,314 / 4 の商は何ですか？
+A: 508
+B: 508 r2
+C: 578
+D: 578 r2
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 今月、ローザは合計100マイルを走る目標を持っています。彼女が走った日は、毎日5マイル走りました。d日間走った後、残り何マイル走る必要があるかを計算するためにローザが使用できる式はどれですか？
+A: 100 - 5d
+B: 5d + 100
+C: 100 / 5d
+D: 5d
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 次の言葉のフレーズに合う代数式を特定してください: トムが集めた缶の4倍。
+A: 4t
+B: t over 4
+C: t − 4
+D: t + 4
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: アンドリューは黒板に186,425という数字を書きました。次のうち、6の値がアンドリューが書いた数字の6の値のちょうど10倍になっている数字はどれですか？
+A: 681,452
+B: 462,017
+C: 246,412
+D: 125,655
+
+deepseek回答:
+answer: A， 
+正确答案是: B
+
+题目:
+question: 123を8で割った時の商と余りは何ですか？
+A: 15 余り 7
+B: 15 余り 3
+C: 16 余り 5
+D: 16 余り 1
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 8と2/4を最も簡単な形の仮分数で書きなさい。
+A: 17 over 2
+B: 34 over 4
+C: 17 over 4
+D: 19 over 2
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 270,240を展開形式で表すときに使える表現は何ですか？
+A: 200,000 + 7,000 + 200 + 4
+B: 200,000 + 7,000 + 200 + 40
+C: 200,000 + 70,000 + 200 + 40
+D: 200,000 + 70,000 + 2,000 + 40
+
+deepseek回答:
+answer: B， 
+正确答案是: C
+
+题目:
+question: 組み立てラインで働く労働者が22部品を生産するのに7時間かかります。その割合で彼女は35時間で何個の部品を生産できますか？
+A: 220 parts
+B: 770 parts
+C: 4 parts
+D: 110 parts
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: アベはこの数字のリストの平均と中央値を求めました。1, 3, 3 もし数字の6がリストに加えられた場合、
+A: 平均は増加するだろう。
+B: 平均は減少するだろう。
+C: 中央値は増加するだろう。
+D: 中央値は減少するだろう。
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: n = 11 のとき、10 - (n + 6) の値は何ですか？
+A: –7
+B: 5
+C: 7
+D: 27
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 下記のフレーズを表す式はどれですか？ 数値pより3少ない
+A: 3-p
+B: p+3
+C: 3/p
+D: p-3
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 劇場は映画のチケット1枚につき6ドルを集めました。劇場は映画のために500枚のチケットを売りました。以下の式は、チケットのために劇場が集めた金額を見つけるために使うことができます。6 × 500 どの式もチケットのために劇場が集めた金額を見つけるために使うことができますか？
+A: 30 × 10^1
+B: 30 × 10^3
+C: (6 × 5) × 10^2
+D: (6 × 5) × 10^3
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 12-9+c=12とする。cのどの値が方程式を成立させるか？
+A: 0
+B: 3
+C: 9
+D: 12
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: ソジャーン家族が休暇に出かけました。彼らは2000ドルから始めました。もし彼らが毎日150ドル使った場合、x日後にどれくらいのお金が残っているかを表す式はどれですか？
+A: 1850x
+B: 2000 −150x
+C: 150x
+D: 2000 +150x
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 棚には4冊の本があります。棚にある4冊の本の重さはそれぞれ2.5ポンド、3.2ポンド、2.7ポンド、2.3ポンドです。棚から選んだ任意の本の重さwを表す不等式はどれですか？
+A: w > 2.3
+B: w < 2.4
+C: w > 3.2
+D: w < 3.3
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 絶対値が5より大きい数はどれですか？
+A: -6
+B: -5
+C: 0
+D: 5
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 式 2(3(4^2 + 1)) - 2^3 の値は何ですか？
+A: 156
+B: 110
+C: 94
+D: 48
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: Gwenは紙に以下の数列を書きました。1, 5, 9, 13 Gwenのパターンの次の2つの項は何ですか？
+A: 15, 17
+B: 15, 19
+C: 17, 19
+D: 17, 21
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: もし3缶の洋ナシが$2.37なら、$9.48で何缶の洋ナシが買えますか？
+A: 3 cans
+B: 12 cans
+C: 36 cans
+D: 13 cans
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 最大から最小の順に並べなさい: 3, 3と1/8, 3.8, 3.18。
+A: 3.18, 3と1/8, 3.8, 3
+B: 3, 3と1/8, 3.18, 3
+C: 3.8, 3と1/8, 3.18, 3
+D: 3.8, 3.18, 3と1/8, 3
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 22 / 2 + 9 を計算しなさい。
+A: 10
+B: 11
+C: 20
+D: 2
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: ある都市の人口は836,527人です。この都市の人口を最も近い万単位で丸めるといくつですか？
+A: 800,000
+B: 830,000
+C: 836,000
+D: 840,000
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 5 • (−9) の積を求めなさい。
+A: 14
+B: −4
+C: 45
+D: −45
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 恵子は一日中鳥観察をして、午前中に午後よりも34羽多く鳥を数えました。合計で76羽の鳥を数えた場合、午後には何羽の鳥を数えましたか？
+A: 21 birds
+B: 40 birds
+C: 42 birds
+D: 84 birds
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 5 + 2 • 15 + (12 • 4) の値は何ですか？
+A: 78
+B: 83
+C: 131
+D: 153
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 20/8の分数が表す状況はどれですか？
+A: レスリーは店で20ドル8セント使いました。レスリーが使った金額を分数でどのように表しますか？
+B: クレイマー氏の8人の孫が20枚のクラッカーを均等に分けました。一人当たり何枚のクラッカーをもらいましたか？
+C: ミッチは植物店で20個の花の入った容器を買いました。各容器には8つの花が入っていました。ミッチは合計で何個の花を買いましたか？
+D: 切手は20枚のブックレットで売られています。ドナはパーティーの招待状を送るために8枚の切手を使いました。ドナは招待状を送るために何冊の切手ブックレットを使いましたか？
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 貨物列車が時速20マイルで6時間走行した場合、どれだけの距離を走行しますか？
+A: 120 miles
+B: 80 miles
+C: 26 miles
+D: 12 miles
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 6a = 72 の中で a の値をどのように見つけるか説明しているステップはどれですか？
+A: 両側に6を加える
+B: 両側を6で割る
+C: 両側に6を掛ける
+D: 両側から6を引く
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: ウー監督は合計で30個のサッカーボールを持っています。そのうち9個が白色です。残りのサッカーボールは3つの異なる色（青、ピンク、緑）のいずれかです。青、ピンク、緑のボールはそれぞれ同じ数です。ウー監督の緑のサッカーボールはいくつありますか？
+A: 7
+B: 10
+C: 21
+D: 39
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 午後6時から午後10時の間に気温が11°F下がりました。午後10時の気温は84°Fでした。午後6時の気温tを求めるための方程式を立てて解いてください。
+A: 84 − 11 = t; 73°F
+B: t − 84 = 11; 95°F
+C: 84 − t = 11; 73°F
+D: t − 11 = 84; 95°F
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: テレサは72個のビー玉を持っていました。彼女はビー玉を9つの等しいグループに分けました。それぞれのグループにテレサが入れたビー玉の数を求める数式はどれですか？
+A: 72 ÷ 9 = 8
+B: 72 - 9 = 63
+C: 9 + 72 = 81
+D: 9 ÷ 72 = 0.125
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: ロブは彼の猫に餌をやるために、5日に1箱のキャットフードを使います。おおよそ彼は1ヶ月に何箱のキャットフードを使いますか？
+A: 2 boxes
+B: 4 boxes
+C: 5 boxes
+D: 6 boxes
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 4と10の最小公倍数は何ですか？
+A: 14
+B: 20
+C: 40
+D: 60
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: \( \frac{4}{7} + \frac{2}{7} \) を求めなさい。
+A: \( \frac{6}{14} \)
+B: \( \frac{8}{49} \)
+C: \( \frac{14}{28} \)
+D: \( \frac{6}{7} \)
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 10年は何年ですか？
+A: 5
+B: 10
+C: 15
+D: 20
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 1月は31日あります。ミシェルはその月の毎日45回の腕立て伏せをしました。彼女は以下の式を使って1月にした腕立て伏せの数を求めました。31 × 45 1月にミシェルは何回の腕立て伏せをしましたか？
+A: 125 push-ups
+B: 279 push-ups
+C: 1,395 push-ups
+D: 1,406 push-ups
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 2つの整数の最小公倍数は60です。それぞれの数は12以下です。2つの数の最大公約数は2です。これら2つの数は何ですか？
+A: 6 and 10
+B: 5 and 12
+C: 10 and 12
+D: 12 and 15
+
+deepseek回答:
+answer: A， 
+正确答案是: C
+
+题目:
+question: \( x = 2 \) のとき、\(-2(x - 3)\) を評価しなさい。
+A: −4
+B: −2
+C: 10
+D: 2
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: ある種類のアイスクリーム4オンスには230カロリー含まれています。そのアイスクリーム6オンスには何カロリー含まれていますか？
+A: 232
+B: 236
+C: 345
+D: 460
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 711 + 497 を見積もります。合計はどの数字の間ですか？
+A: 50 and 400
+B: 450 and 700
+C: 750 and 1,000
+D: 1,050 and 1,300
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: コールバーグ氏は花屋を経営しています。その日の始めに彼は152本のバラを持っていました。コールバーグ氏は96本のバラを売り、残りのバラを8つの花瓶に均等に分けたいと考えました。各花瓶には合計何本のバラが入りますか？
+A: 7
+B: 12
+C: 48
+D: 56
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 32 x 68 を推定しなさい。その積はどの数字の間にありますか？
+A: 18 and 28
+B: 180 and 280
+C: 1,800 and 2,800
+D: 18,000 and 28,000
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 77の素因数分解を書きなさい。可能な場合は指数を使用してください。
+A: 7 • 11^2 • 13
+B: 7^2 • 11
+C: 7 • 11 • 13
+D: 7 • 11
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: オールドタウンニューススタンドで、雑誌は一冊$2.99、本は一冊$6.99です。4冊の雑誌と3冊の本の合計費用はいくらですか？
+A: $20.93
+B: $28.93
+C: $32.93
+D: $48.93
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: Umiは次の数に同じ量を加えることで以下の数のパターンを作りました。20、40、60、80、... このパターンの8番目の数は何になりますか？
+A: 160
+B: 240
+C: 320
+D: 640
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 33分の7を小数で表しなさい。
+A: 0.021 repeating
+B: 0.21 Repeating
+C: 0.22 Repeating
+D: 0.2121
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: Westview Schoolは新しいバスケットボールユニフォームを購入しています。各ユニフォームの価格は46ドルです。学校は12着のユニフォームを購入します。ユニフォームの総コストを見つける方法を示す方程式はどれですか？
+A: (40 × 10) + (6 × 2) = 400 + 12
+B: (40 × 6) + (10 × 2) = 240 + 20
+C: (40 × 12) + (6 × 12) = 480 + 72
+D: (40 × 12) + (60 × 12) = 480 + 720
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: マヌエルは6,049ドルで中古車を購入しました。マヌエルが購入した中古車のコストを数字で表すといくらですか？
+A: $649
+B: $6,049
+C: $6,409
+D: $6,490
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 昨日、ミカは偶数個のイチゴを食べました。彼はまた奇数個のリンゴを食べました。昨日ミカが食べたイチゴ、S、とリンゴ、A、を表すグループはどれですか？
+A: SSSSS; AAA
+B: SSSSS; AAAA
+C: SSSSSSSS; AAAA
+D: SSSSSSSS; A
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 猫の餌は1ポンドあたり47セントです。6ポンドの袋はいくらですか？
+A: $2.82
+B: $2.97
+C: $6.47
+D: $12.77
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 60を72で割った最も簡単な形を書きなさい。
+A: 4 over 6
+B: 10 over 12
+C: 15 over 17
+D: 5 over 6
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 2カップと3クォートの比を最も簡単な形の分数で書きなさい。
+A: 3 over 2
+B: 2 over 3
+C: 2 over 12
+D: 1 over 6
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: ミルズ図書館には1,007,199冊の本があります。スプリングベール図書館には907,082冊の本があります。以下のうち、ミルズ図書館がスプリングベール図書館よりどれだけ多くの本を持っているかの最も良い見積もりはどれですか？
+A: 100,000 books
+B: 80,000 books
+C: 10,000 books
+D: 8,000 books
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: Patが30秒でバスケットボールを25回バウンドします。この割合で、150秒でPatはおおよそ何回ボールをバウンドしますか？
+A: 120
+B: 125
+C: 144
+D: 145
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 数直線を使って、−9 + (−8) の和を求めなさい。
+A: −17
+B: 1
+C: −1
+D: 17
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 方程式 y/4 = 8 で、y の値は何ですか？
+A: 2
+B: 4
+C: 12
+D: 32
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 4と4/5を仮分数で書きなさい。
+A: 28 over 5
+B: 4 over 5
+C: 24 over 5
+D: 20 over 5
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 月における物体の重さ m は、地球上の物体の重さ e の約 q です。月における物体の重さを地球上の重さの観点から表す方程式はどれですか？
+A: m = 1/6 + e
+B: m = e/6
+C: m = 6+e
+D: m = 6e
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 8 + 8 ÷ 2 + 2 =
+A: 4
+B: 8
+C: 10
+D: 14
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: y + 2.9 = 11 が成り立つような y の値は何ですか？
+A: 8.1
+B: 8.9
+C: 9.1
+D: 13.9
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 40°の角の補角は何度ですか？
+A: 50°
+B: 130°
+C: 140°
+D: 220°
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: ケリーは4つの異なるレースで同じ距離を走りました。彼女のタイムは18.04秒、21.39秒、12.99秒、14.14秒でした。個々のタイムを最も近い0.1秒に丸めた場合、4つのレースの合計時間の見積もりは何秒ですか？
+A: 66.6 seconds
+B: 66.5 seconds
+C: 66 seconds
+D: 65.5 seconds
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 3分の4掛けるxが24になるように解いてください。
+A: 18
+B: 32
+C: 72
+D: 96
+
+deepseek回答:
+answer: A， 
+正确答案是: B
+
+题目:
+question: 正確な答えを見つけなさい: 110 + 70
+A: 18
+B: 81
+C: 180
+D: 810
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 動物園にはトウカンが15羽、オウムが60羽います。この動物園のトウカンの数とオウムの数の比率は何ですか？
+A: 1:04
+B: 1:05
+C: 4:01
+D: 4:05
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 36と90の最大公約数は何ですか？
+A: 6
+B: 18
+C: 36
+D: 180
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 6 • 24 ÷ (8 − 5) の値を求めなさい。
+A: 48
+B: 13
+C: −13
+D: 54
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 42と84の最大公約数は何ですか？
+A: 7
+B: 21
+C: 42
+D: 84
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: グティエレス先生は、32人の生徒がいる体育のクラス用にロープを注文する必要があります。各生徒には5フィート8インチのロープが渡されます。グティエレス先生がクラス用に注文する必要があるロープの合計長さはどれくらいですか？
+A: 106 feet 8 inches
+B: 154 feet 8 inches
+C: 160 feet 8 inches
+D: 181 feet 4 inches
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 12月に、あるおもちゃ屋が934個のパズルを売りました。各パズルの価格は税込みで6ドルです。税込みで売れたパズルの総額はいくらでしたか？
+A: $5,434
+B: $5,484
+C: $5,604
+D: $5,684
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 円の1/360に相当する角度は何度ですか？
+A: 1
+B: 90
+C: 180
+D: 360
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 次の数値を見つけなさい：26.1 mm = _ dm。
+A: 0.261
+B: 261
+C: 2.61
+D: 2,610
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: サラダドレッシングは、酢2部に対して油5部を混ぜて作られます。9オンスの酢には何オンスの油を混ぜるべきですか？
+A: 2
+B: 3.6
+C: 22.5
+D: 63
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: キムは9週間で自転車で135マイルを走り、毎週同じ距離を走りました。エリックは6週間で自転車で102マイルを走り、毎週同じ距離を走りました。彼らが1週間に走ったマイル数を正しく比較したのはどの記述ですか？
+A: Eric rode 2 more miles per week than Kim rode.
+B: Kim rode 3 more miles per week than Eric rode.
+C: Kim rode 11 more miles per week than Eric rode.
+D: Eric rode 17 more miles per week than Kim rode.
+
+deepseek回答:
+answer: B， 
+正确答案是: A
+
+题目:
+question: 方程式 5x − 5 = −10 の解を与えられた数字から特定しなさい。
+A: −1
+B: −6
+C: −4
+D: −3
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 公園の模型が1.5センチメートルを50メートルのスケールで作られました。公園内の二つの木の間の距離が150メートルの場合、模型上のこの距離はどれくらいですか？
+A: 0.5 centimeter
+B: 4.5 centimeters
+C: 75 centimeters
+D: 225 centimeters
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: エリザベスはいくつかのステッカーを持っています。彼女はそのステッカーを自分と二人の友達に均等に分けました。一人当たり4枚のステッカーをもらいます。合計のステッカーの数、sを表す方程式はどれですか？
+A: s + 3=4
+B: s - 3=4
+C: s/3 = 4
+D: 3s = 4
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: ステファニーはロサンゼルスからニューヨークシティまで2,448マイル飛行しました。ステファニーが飛行したマイル数を最も近い千に丸めるといくつですか？
+A: 2,000
+B: 2,400
+C: 2,500
+D: 3,000
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: どの比のペアが比例を形成することができますか？
+A: 2 over 5 and 8 over 10
+B: 2 over 5 and 10 over 15
+C: 2 over 5 and 4 over 25
+D: 2 over 5 and 6 over 15
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 大学では、約5人に2人のシニアが大学院に進学します。その大学に750人のシニアがいる場合、何人が大学院に進学すると予想されますか？
+A: 75 seniors
+B: 107 seniors
+C: 300 seniors
+D: 400 seniors
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 数字のパターン5, 9, 13, 17, 21, 25, 29を考えると、どのルールが使われた可能性がありますか？
+A: 0から始めて、次の数を得るために毎回4を加える。
+B: 0から始めて、次の数を得るために毎回5を加える。
+C: 5から始めて、次の数を得るために毎回4を加える。
+D: 5から始めて、次の数を得るために毎回5を加える。
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: マックスとジョナサンはイチゴを摘んでいました。マックスは187個のイチゴを摘みました。ジョナサンは223個のイチゴを摘みました。二人でイチゴを26個食べました。マックスとジョナサンが残したイチゴの総数を求める方法を示す式はどれですか？
+A: 190 + 220 – 30 + 4
+B: 185 + 225 – 25 + 1
+C: 200 + 200 – 30 – 4
+D: 200 + 200 – 25 – 1
+
+deepseek回答:
+answer: D， 
+正确答案是: A
+
+题目:
+question: ウェスト小学校では、女の子が男の子より20人多いです。女の子が180人いる場合、男の子の数はどうやって見つけますか？
+A: add 20 to 180
+B: subtract 20 from 180
+C: multiply 180 by 20
+D: divide 180 by 20
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: ある機械が200本のソーダボトルを12分で満たします。この割合で、500本のボトルを満たすのに何分かかりますか？
+A: 25 minutes
+B: 28 minutes
+C: 30 minutes
+D: 40 minutes
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 先週、あるレストランが231個の卵を使用しました。そのうち46個が茶色で、残りの卵は白色でした。先週使用された白い卵の数を表す w を求めるために使用できる方程式はどれですか？
+A: 231 + 46w = 0
+B: 46 + w = 231
+C: w = 231 + 46
+D: 231 = 46w
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 店長が倉庫からシャツを注文します。シャツは箱に詰められて店舗に送られます。以下のように説明されています。81枚のシャツが注文されました。各配送箱には9枚のシャツが入ります。注文されたすべてのシャツに必要な配送箱の数はいくつですか？
+A: 8
+B: 9
+C: 72
+D: 90
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 引き算をしてください。2,396 - 1,709
+A: 687
+B: 687
+C: 1,493
+D: 1,695
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: ジェリーは200ページの本を10時間で読みました。このペースで、320ページの本を読むのにどれくらい時間がかかりますか？
+A: 16 hours
+B: 18 hours
+C: 24 hours
+D: 32 hours
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 4倍すると36になる数は何ですか？
+A: 6
+B: 7
+C: 8
+D: 9
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 34 L 18 cLをリットルに変換しなさい。
+A: 34.18 L
+B: 35.8 L
+C: 34.018 L
+D: 214 L
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 水槽は50ガロンを保持します。20秒でタンクを満たすために必要な流量は、1秒あたり何ガロンですか？
+A: 0.4
+B: 2.5
+C: 16.7
+D: 70
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: タラは18分でフィルム2本を現像できます。このペースで、8本のフィルムを現像するのにどれくらい時間がかかりますか？
+A: 42 minutes
+B: 1 hour 12 minutes
+C: 1 hour 20 minutes
+D: 1 hour 44 minutes
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: ティシャが友達に次のなぞなぞを書きました：私は2つの顔を持っていて、頂点がなく、転がることができます。私は何でしょうか？このなぞなぞの答えは何ですか？
+A: cone
+B: cylinder
+C: sphere
+D: prism
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: ジョンの友人は、地元のコンサートでチラシを配ると49ドル稼げると彼に教えました。ジョンは時給を計算したいと考えています。合計3.5時間働いた場合、方程式 3.5x = 49 を使って彼の時給を求めることができます。ジョンの時給はドルでいくらになるでしょうか？
+A: $1.40
+B: $14.00
+C: $45.50
+D: $171.50
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 24,513の数字5の値は357の数字5の値の何倍ですか？
+A: 10
+B: 100
+C: 1,000
+D: 10,000
+
+deepseek回答:
+answer: B， 
+正确答案是: A
+
+题目:
+question: 5(4x + 3) - 2x に等しい式はどれですか？
+A: 18x+15
+B: 18x+3
+C: 7x+8
+D: 2x+8
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: ルッチ氏はペンの袋を5つ用意しました。彼はそれぞれの袋に黒のペン19本と赤のペン12本を入れました。以下のどの式が袋に入れたペンの合計数を示していますか？
+A: (5 × 19) + 12
+B: 5 × (19 + 12)
+C: 5 + (19 × 12)
+D: (5 + 19) × 12
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: ソニアとネギンは合わせて27ドルを持っています。ソニアは12.35ドルのシャツを買い、ネギンは10.11ドルのサンダルを買いました。残りのお金はいくらですか？
+A: $4.46
+B: $4.54
+C: $5.36
+D: $5.76
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: ある郵便局が1週間に18,096通の郵便物を配達しました。この郵便物の数を展開形式で書くとどうなりますか？
+A: 18 + 1,000 + 90 + 6
+B: 18 + 1,000 + 900 + 60
+C: 10,000 + 8,000 + 90 + 6
+D: 10,000 + 8,000 + 900 + 60
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 次のうち、3と3/4ガロンに相当しないものはどれですか？
+A: 60 c
+B: 15 qt
+C: 30 pt
+D: 13 qt
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: ジェスは前回のバスケットボールの試合で18点を取りました。彼女が決めた各バスケットは2点でした。彼女は何個のバスケットを決めましたか？
+A: 20
+B: 16
+C: 9
+D: 8
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: Tayshawnは56個のビー玉を余りが出ないように等しいグループに分けます。以下のどの記述がTayshawnが分けたビー玉のグループについて真実である可能性がありますか？
+A: 8個のビー玉が入った6つのグループがあります。
+B: 7個のビー玉が入った7つのグループがあります。
+C: 7個のビー玉が入った8つのグループがあります。
+D: 6個のビー玉が入った9つのグループがあります。
+
+deepseek回答:
+answer: B， 
+正确答案是: C
+
+题目:
+question: 式 2,816 x 7 の値は何ですか？
+A: 14,572
+B: 14,672
+C: 19,612
+D: 19,712
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: Miriamの家とDebbieの家の間の距離は444.44メートルです。それぞれの家の間の距離（メートル）における数字の値についてのどの記述が正しいですか？
+A: 小数第一位の4の値は、十の位の4の値の1/10です。
+B: 小数第二位の4の値は、一の位の4の値の1/10です。
+C: 百の位の4の値は、一の位の4の値の10倍です。
+D: 小数第一位の4の値は、小数第二位の4の値の10倍です。
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 4時間で308kmを運転する単位レートを書きなさい。必要であれば、最も近い百分の一まで四捨五入しなさい。
+A: 82 km/h
+B: 74 km/h
+C: 72 km/h
+D: 77 km/h
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 市営プールの長さのもっとも合理的な推定値は何ですか？
+A: 1 meter
+B: 25 meters
+C: 1 kilometer
+D: 25 kilometers
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 音楽ショーケースのスケジュールには、それぞれ20分のセットが3つと40分のセットが1つ含まれています。各セットの間には10分間の休憩があります。音楽ショーケースの合計時間は3(20 + 10) + 40分です。音楽ショーケースの合計時間は何分ですか？
+A: 73 minutes
+B: 110 minutes
+C: 130 minutes
+D: 210 minutes
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 24と36の最小公倍数を求めなさい。
+A: 96
+B: 144
+C: 72
+D: 120
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 昨年、チェサは学校のパーティーで1カップ分のスープを32個作りました。今年は昨年作ったスープの量の2倍を作る予定です。今年チェサは何ガロンのスープを作りますか？
+A: 64
+B: 16
+C: 4
+D: 2
+
+deepseek回答:
+answer: D， 
+正确答案是: C
+
+题目:
+question: エミールは、ホームチームとビジターチームの試合で最も人気のあるサッカーチームを知りたがっています。以下の方法のうち、最も正確な結果を得るのはどれですか？
+A: ホームチームのチアリーダーを調査する
+B: ビジターチームの帽子をかぶっている人々を調査する
+C: チケットの列に並んでいる人々を調査する
+D: ホームチームの都市に住んでいない人々を調査する
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: ある会社は、白い車3台に対して青い車を5台製造しています。もし会社が1日に白い車を15台製造する場合、青い車は何台製造されるでしょうか？
+A: 9
+B: 13
+C: 17
+D: 25
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: スティーブは彼の野球カードを収納するためのプラスチックケースを注文しました。各ケースの長さは12センチメートル、幅は6.5センチメートル、高さは1.25センチメートルです。1つの野球カードケースの体積は何立方センチメートルですか？
+A: 39.5
+B: 97.5
+C: 118.5
+D: 202.25
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: クリスは一束16.99ドルでバラを売っています。一日の終わりに彼は339.80ドルを集めました。彼は何束のバラを売りましたか？
+A: 22
+B: 18
+C: 20
+D: 16
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: あるアイスクリームショップは1日にバニラミルクシェイクを48個売りましたが、それはその日に売れたミルクシェイクの合計数の40％でした。その日にそのアイスクリームショップが売ったミルクシェイクの合計数はいくつですか？
+A: 60
+B: 72
+C: 100
+D: 120
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: \( (c^2 - b^2)^2 + a^2 \) を評価せよ。ただし、\( a = 5 \)、\( b = 3 \)、\( c = 2 \) とする。
+A: 194
+B: 18
+C: 50
+D: 0
+
+deepseek回答:
+answer: B， 
+正确答案是: C
+
+题目:
+question: もし x − 3 = 6 なら、x の値は何ですか？
+A: 2
+B: 3
+C: 6
+D: 9
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: ジョーとマイクは同じレースを走りました。ジョーはマイクより4分早くゴールしました。もしマイクが午後4時2分にレースを終えた場合、ジョーは何時にレースを終えたでしょうか？
+A: 3:58 p.m.
+B: 4:06 p.m.
+C: 8:02 p.m.
+D: 12:02 p.m.
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: リッチは一つのダンボールの幅を5/6フィートと測りました。二つ目のダンボールの幅は2/3フィートです。ダンボールの幅の合計を見積もってください。
+A: 2 ft
+B: 1と1/2 ft
+C: 1 ft
+D: 3 ft
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: ある図形は同じ大きさの直角三角形12個でできています。各直角三角形の底辺は4cm、高さは5cmです。この図形の総面積は何平方センチメートルですか？
+A: 10
+B: 60
+C: 120
+D: 240
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: Tranquility Innの週間ミルクオーダーには、低脂肪ミルクが40ガロン、チョコレートミルクが15ガロン含まれています。低脂肪ミルクのガロン数とチョコレートミルクのガロン数の比率は何ですか？
+A: 3:01
+B: 5:01
+C: 5:03
+D: 8:03
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: クラーク先生の4年生のクラスには20人の生徒がいます。クラーク先生のクラスの生徒数の5倍の生徒が4年生全体にいます。4年生全体の生徒数nを求めるために使える方程式はどれですか？
+A: 5xn= 20
+B: 5+20=n
+C: 20x5=n
+D: 20/n=5
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: x = 4 のとき、4x + 9 の値は何ですか？
+A: 13
+B: 17
+C: 25
+D: 52
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 分配法則を使って、式 4(3 + 2) を言い換えてください。単純化しないでください。
+A: 4(3) + 2
+B: 4(3) + 4(2)
+C: 20
+D: 3 + 4(2)
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 7枚の1セント硬貨の積み重ねが1センチメートルの高さです。ニックは4センチメートルの高さの1セント硬貨の積み重ねを持っています。ニックの硬貨の積み重ねにある硬貨の数、nを見つけるために使える方程式はどれですか？
+A: n =7+4
+B: n =7–4
+C: n =7×4
+D: n =7÷4
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 次のうち、4,286 × 390の最も良い見積もりはどれですか？
+A: 12,000,000
+B: 1,600,000
+C: 1,200,000
+D: 16,000
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 長さl、幅w、高さhの直方体の表面積Sは、公式S = 2(lw + wh + hl)を使用して求めることができます。長さが12インチ、幅が9インチ、高さが2インチの直方体の表面積は何平方インチですか？
+A: 300
+B: 258
+C: 150
+D: 92
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: ショッピングモールが、モールで買い物をする人々に対して調査を行いたいと考えています。最も代表的なサンプルを得るにはどれが最適でしょうか？
+A: 一つの靴屋で調査を行う
+B: 全ての靴屋で調査を行う
+C: モールの入口で調査を行う
+D: モールから1マイル離れた場所で調査を行う
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: ハイカーのグループがソルトフラット（標高−55フィート）からタロンブラフ（標高620フィート）まで登りました。タロンブラフとソルトフラットの標高差は何フィートですか？
+A: 565 feet
+B: 575 feet
+C: 665 feet
+D: 675 feet
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 授業の始まりに、クラスの生徒の半分が図書館に行きます。その後、残った生徒の半分がコンピューターラボに行きます。もしクラスに8人の生徒が残っていたら、元々クラスには何人の生徒がいましたか？
+A: 12 students
+B: 16 students
+C: 24 students
+D: 32 students
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 数字のパターンはスキップカウントのルールに従います。5, 20, 35, 50, 65... どの数字のパターンが同じルールに従いますか？
+A: 5, 20, 25, 30, 35...
+B: 13, 18, 23, 28, 33...
+C: 12, 27, 42, 57, 72...
+D: 15, 30, 40, 55, 65...
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 教師がステッカーのパッケージを3つ持っています。1つのパッケージには56枚のステッカーが、別のパッケージには48枚のステッカーが、3つ目のパッケージには58枚のステッカーが含まれています。教師がこれらのステッカーを27人の生徒に均等に分けた場合、各生徒は何枚のステッカーを受け取るでしょうか？
+A: 6 stickers
+B: 9 stickers
+C: 54 stickers
+D: 81 stickers
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 整数のセットが小さい順に並んでいるのはどれですか？
+A: −9, −6, −3, 7, 11
+B: −3, −6, 7, 11, –9
+C: 11, −9, 7, −6, −3
+D: 7, 11, −6, −3, −9
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 7%は何に等しいですか？
+A: 0.007
+B: 0.07
+C: 0.7
+D: 7
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 6分の9と比例する比率はどれですか？
+A: 8 over 12
+B: 9 over 6
+C: 2 over 6
+D: 24 over 27
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: ベラの写真は全部で8冊のフォトブックに入っています。各フォトブックには25枚の写真があります。ベラの写真の合計枚数を求める式はどれですか？
+A: 25 ÷ 8
+B: 25 - 8
+C: 25 + 8
+D: 25 × 8
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 32 x 67の積は何ですか？
+A: 1,824
+B: 1,934
+C: 2,044
+D: 2,144
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 18.5ドル/mガロン = 3.60ドル/7.5ガロンを解く。必要であれば、最も近い百分位まで四捨五入する。
+A: 8.86
+B: 42.25
+C: 32.54
+D: 38.44
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 互換性のある数字を使用して、117.83 ÷ 5.67 の商を推定しなさい。
+A: about 10
+B: about 20
+C: about 30
+D: about 40
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: マーガリートはこれまでの全てのスペリングテストで75点から89点の間の得点を獲得しました。次のテストで彼女は100点を獲得しました。次のうち正しいのはどれですか？
+A: 最頻値が増加する。
+B: 平均値が増加する。
+C: 平均値が減少する。
+D: 中央値が減少する。
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 153 + 44 を推定します。合計はどの数字の間ですか？
+A: 100 and 299
+B: 300 and 499
+C: 500 and 699
+D: 700 and 899
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: どのセットのすべての値が不等式 2x - 1 < 10 を満たしますか？
+A: {10, 15, 20}
+B: {5, 7, 9}
+C: {4, 6, 8}
+D: {2, 3, 4}
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: エリンは12パイントのジュースを作りました。彼女は毎日3カップのジュースを飲みます。エリンが作ったジュースを全部飲むのに何日かかりますか？
+A: 2 days
+B: 4 days
+C: 8 days
+D: 9 days
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: ジョンは4枚のクッキーを持っています。サラはジョンより2枚多くのクッキーを持っています。ダリウスはサラのクッキーの3倍を持っています。ダリウスは何枚のクッキーを持っていますか？
+A: 9
+B: 14
+C: 18
+D: 24
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: どの数字のグループが小さい順に並んでいますか？
+A: 0.25 1.6 1.0
+B: 1.0 0.25 1.6
+C: 0.25 1.0 1.6
+D: 1.6 1.0 0.25
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 数字の−7の反対を見つけなさい。
+A: 7
+B: −7
+C: 0.7
+D: −7.7
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: マイは放課後のアルバイトで時給$5.50を稼いでいます。$132を稼ぐためには何時間働く必要がありますか？
+A: 16
+B: 20
+C: 24
+D: 28
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 私は数字です。一の位が7です。80未満で70より大きいです。私の数字は何でしょう？
+A: 71
+B: 73
+C: 77
+D: 79
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: \( y = 8 \) のとき、\(-7(y - 6)\) を評価しなさい。
+A: −14
+B: 50
+C: −13
+D: −62
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: シカゴからニューヨークシティまでの距離は794マイルです。794を最も近い百に丸めるといくつですか？
+A: 700
+B: 794
+C: 800
+D: 894
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: ケイティは3週間の休暇に出かけます。彼女は休む仕事の日数を5×3で計算します。以下のどの式が、ケイティが休む仕事の日数を別の方法で見つける方法を示していますか？
+A: 3+5
+B: 3+3+3
+C: 5+5+5
+D: 5+5+5+5+5
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: どの式が720に等しいですか？
+A: 7x20
+B: 8x80
+C: 9x80
+D: 9x90
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 13分の14と7分の14を足しなさい。
+A: 1と7分の4
+B: 1と7分の3
+C: 1と14分の5
+D: 28分の20
+
+deepseek回答:
+answer: A， 
+正确答案是: B
+
+题目:
+question: 乗法の結合法則を使って 8 • (−7) • (−1) を簡単にしなさい。
+A: −63
+B: 56
+C: 48
+D: −56
+
+deepseek回答:
+answer: B， 
+正确答案是: A
+
+题目:
+question: パン屋が232個のマフィンを作りました。そのうち190個を地元のホテルに送りました。残りのマフィンは箱に入れます。各箱は6個のマフィンを入れることができます。パン屋が必要な箱の数を見つけるために使用できる方程式はどれですか？
+A: (232 - 190)/6=b
+B: (232 + 190)x6=b
+C: (232 - 190)x6=b
+D: (232 + 190)/6=b
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 30,000を10で割り、さらに10で割った場合、結果の数字は何になりますか？
+A: 3
+B: 30
+C: 300
+D: 3,000
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 正確な答えを見つけなさい: 145 + 281 + 62
+A: 426
+B: 488
+C: 946
+D: 1,046
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 車はガソリン1ガロンあたり24マイル走行します。144マイル走行するためには何ガロンのガソリンが必要ですか？
+A: 6.5 gallons
+B: 6 gallons
+C: 5.5 gallons
+D: 5 gallons
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 任意の変数の値がゼロより大きい場合、どの式のペアが等価ですか？
+A: 3(x+2) と 3x+2
+B: 4d+ 2e と 8d+e
+C: f+f+f+g と 3fg
+D: b+b+3c と 2b+ 3c
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: ウェストバレーの町には2,817軒の家があります。各家庭は平均して毎日380ガロンの水を使用します。下記の式を使用して、ウェストバレーの家庭が平均して毎日使用する水の総量を求めなさい。2,817 × 380 ウェストバレーの家庭が平均して毎日使用する水の総量は何ガロンですか？
+A: 860,460 gallons
+B: 870,460 gallons
+C: 1,060,460 gallons
+D: 1,070,460 gallons
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 野球場には3つの異なるセクションがあります。各セクションの座席数は以下の通りです。
+* 赤いセクションは200人が座れます
+* 青いセクションは赤いセクションより20人少ない
+* 緑のセクションは青いセクションの2倍の人が座れます
+野球場に座れる人の合計数はいくつですか？
+A: 260
+B: 380
+C: 640
+D: 740
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: バスケットボール選手が最初の試合で18点を獲得しました。これは彼が2回目の試合で獲得した点数より4点少ないです。2回目の試合で彼が獲得した点数 p を見つけるための方程式を立てて解いてください。
+A: 18 = p − 4; 14
+B: 18 = p − 4; 22
+C: 18 − 4 = p; 14
+D: 18 − p = 4; 22
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 方程式 −6x = −36 を解き、答えを確認しなさい。
+A: 1 over 6
+B: 6
+C: 1 over 216
+D: 216
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: データセット18, 9, 9, 10, 11, 14, 30, 19の平均を求めなさい。
+A: 9
+B: 15
+C: 30
+D: 11
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: ジョージア州には159の郡があり、面積は58,056平方マイルです。郡ごとの平均面積は何平方マイルですか？答えを最も近い整数に丸めてください。
+A: 274 square miles per county
+B: 159 square miles per county
+C: 318 square miles per county
+D: 365 square miles per county
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 火星の昼間の温度は27°Cに達し、夜は−125°Cになります。平均温度は何度ですか？
+A: 76°C
+B: −49°C
+C: 49°C
+D: −76°C
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 下記の方程式を使用して質問に答えなさい。 14 × 3 = 42 この式を正しく解釈する記述はどれですか？
+A: 14は42より3多い。
+B: 42は3より14多い。
+C: 14は42の3倍です。
+D: 42は14の3倍です。
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: −4 + 7 • 3^2 を簡単に計算しなさい。計算機、紙と鉛筆、または頭の中で計算してください。
+A: 437
+B: 27
+C: 289
+D: 59
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: ハイキングクラブのメンバーは1時間に2.5マイルの速度で2.4時間ハイキングしました。メンバーはどれくらいの距離をハイキングしましたか？
+A: 4.9 miles
+B: 5.8 miles
+C: 6.0 miles
+D: 6.3 miles
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: もしxの値が0.0051から0.038の間である場合、次のうちxになり得るのはどれですか？
+A: 0.0042
+B: 0.0261
+C: 0.049
+D: 0.052
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 獣医が猫を抱えて体重計に乗ると、体重計は157.8ポンドを示しました。獣医の体重だけで148.3ポンドです。猫の体重の最も良い推定はどれですか？
+A: Between 4 and 7 lb
+B: Between 8 and 11 lb
+C: Between 12 and 15 lb
+D: Between 16 and 19 lb
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: カーター先生の教室には30人の生徒がいます。彼女はそれらを5つの等しいグループに分けます。各グループの生徒数を求めるための式はどれですか？
+A: 30+5
+B: 30/5
+C: 30-5
+D: 30x5
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 数列の最初の数字は28です。規則は次の数を得るために14を加えることです。このパターンが続く場合、どの記述が真実ですか？
+A: All the numbers in the pattern can be divided equally by 10.
+B: All the numbers in the pattern can be divided equally by 4.
+C: All the numbers in the pattern can be divided equally by 8.
+D: All the numbers in the pattern can be divided equally by 7.
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 方程式 x − 10.5 = −11.6 を解け。
+A: −22.1
+B: 1.1
+C: 22.1
+D: −1.1
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 8対18と比例を形成できない比率はどれですか？
+A: 46 over 108
+B: 12 over 27
+C: 60 over 135
+D: 4 over 9
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: ある学期に、生徒が6回のテストで76点、80点、83点、71点、80点、78点のスコアを受け取りました。これら6つのテストの生徒の平均スコアは何ですか？
+A: 76
+B: 77
+C: 78
+D: 79
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 25と55の最大公約数を求めなさい。
+A: 5
+B: 11
+C: 50
+D: 275
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 30の60%は何ですか？
+A: 1.8
+B: 18
+C: 180
+D: 1800
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 数直線上に点Aと点Bが置かれています。点Aは-20に位置し、点Bは点Aより5少ないです。点Bについてのどの記述が真実ですか？
+A: -25に位置し、数直線上で点Aの右にあります。
+B: -15に位置し、数直線上で点Aの右にあります。
+C: -25に位置し、数直線上で点Aの左にあります。
+D: -15に位置し、数直線上で点Aの左にあります。
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 方程式 1.2 = 0.4y を頭の中で解いてください。
+A: 1.6
+B: −3
+C: 4
+D: 3
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: タイは特定の数の本を読むために12週間があります。彼は各本を読むのに2週間を費やします。タイが読むことになる本の総数を見つけるためにどの式を使うことができますか？
+A: 12 – 2
+B: 12 + 12
+C: 12 – 2 – 2 – 2
+D: 12 – 2 – 2 – 2 – 2 – 2 – 2
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 指数表記で書かれたどの数字が343に等しいですか？
+A: 3^7
+B: 7^3
+C: 7^49
+D: 294^49
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: コナーはストローで9つの形を作りました。各形には5本のストローが使われています。コナーはさらに形を作るために15本のストローを使いました。コナーがすべての形を作るのに使ったストローの総数は何本ですか？
+A: 20
+B: 29
+C: 45
+D: 60
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: −8 • (−4) の積を求めなさい。
+A: −4
+B: 4
+C: 32
+D: −32
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 3分の8と比例する比率はどれですか？
+A: 18 over 40
+B: 18 over 56
+C: 24 over 64
+D: 15 over 48
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: ミランダは写真を比例拡大しました。元の写真の幅は4cm、長さは6cmです。新しい、大きな写真の幅が10cmの場合、その長さはどれくらいですか？
+A: 8 cm
+B: 12 cm
+C: 15 cm
+D: 20 cm
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: どの数字が7の倍数ですか？
+A: 27
+B: 48
+C: 56
+D: 74
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: あるガソリンスタンドが1日に販売したガソリンは300.5849ガロンでした。最も近い百分の一まで四捨五入すると、ガソリンスタンドは何ガロンのガソリンを販売したでしょうか？
+A: 300
+B: 300.58
+C: 300.585
+D: 300.59
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: ピーターは週に38時間働いて、時給7.25ドルを稼いでいます。彼の雇用主は彼に昇給を与え、彼の週間の総給与を307.80ドルに増やしました。ピーターの週間の総給与の増加はいくらですか？
+A: $32.30
+B: $34.70
+C: $42.46
+D: $275.50
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 次の方程式を満たす数は何ですか？ 35 / ? = 7
+A: 5
+B: 6
+C: 7
+D: 8
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: マリアは仕事の日に毎日9ドルをランチに使います。5日間の仕事の週にランチに使う金額を知るために、5 × 9を計算します。5日間の仕事の週にマリアはランチにいくら使いますか？
+A: $40
+B: $45
+C: $50
+D: $59
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 方程式 −17.02 = −2.3y を解いて、答えを確認しなさい。
+A: 7.4
+B: −7.4
+C: −19.32
+D: 14.72
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 次のうち、鉛筆の重さを表すのに最も適切な単位はどれですか？
+A: pounds
+B: ounces
+C: quarts
+D: pints
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: リサは小さなビジネスを経営しています。月曜日には14ドルの損失があり、火曜日には18ドルの利益がありました。水曜日には6ドルの損失があり、木曜日には7ドルの利益がありました。合計の利益または損失を求めなさい。
+A: $15 profit
+B: $45 loss
+C: $5 profit
+D: $10 profit
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: あるパン屋がアップルパイを作ります。彼らはリンゴの箱を15箱持っています。各箱には18個のリンゴが入っています。一つのパイにリンゴ7個を使用します。パン屋が作ることができるアップルパイの総数は何個ですか？
+A: 33
+B: 38
+C: 39
+D: 40
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: ケリーは宿題に3時間を費やしました。彼女はすべての科目に同じ時間を費やしました。もしケリーが科学に1/2時間を費やした場合、彼女は何科目勉強しましたか？
+A: 4 subjects
+B: 2 subjects
+C: 6 subjects
+D: 5 subjects
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: ある野球チームが若者向けチケットを1枚3ドルで215枚売りました
+A: (215 × 3) – (467 × 7)
+B: (215 × 7) – (467 × 3)
+C: (467 × 3) – (215 × 7)
+D: (467 × 7) – (215 × 3)
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: マリクは240枚のCDを持っています。彼はそれらを12の等しいグループに分けました。各グループには何枚のCDがあるかを見つけるための式はどれですか？
+A: 240 ÷ 12
+B: 240 – 12
+C: 240 + 12
+D: 240 × 12
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 市全体のコンペティションで762人の生徒が6つの同じサイズのチームに分けられた場合、各チームには何人の生徒がいますか？
+A: 110
+B: 120
+C: 127
+D: 137
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 式の値を求めなさい −16 + 13 + (−33)。
+A: 4
+B: 62
+C: 36
+D: −36
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 友達のグループがランチに出かけます。d人がサラダを、p人がスープを購入します。各サラダの値段は$3.99、各スープの値段は$2.99です。スープとサラダの合計費用の式を書いてください。
+A: 3.99p + 2.99d
+B: 2.99p + 3.99d
+C: (2.99 + 3.99)(p + d)
+D: (3.99p + 2.99)d
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: ペーパータオルのパッケージには12ロールのペーパータオルが入っています。ケリー氏は4つの部屋にペーパータオルのロールを均等に分けたいと考えています。彼は各部屋に入れるペーパータオルのロール数、tを見つけるために以下の数式を使います。12 ÷ t = 4 ケリー氏が各部屋に入れるペーパータオルのロール数、tを見つけるための別の方法を示す数式はどれですか？
+A: 4 ÷ 12 = t
+B: 4 – t = 12
+C: 4 + 12 = t
+D: 4 × t = 12
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 方程式 −47 = g + 24 を解け。
+A: −71
+B: −23
+C: 23
+D: 71
+
+deepseek回答:
+answer: A， 
+正确答案是: B
+
+题目:
+question: 次の数式が成り立つような数を求めなさい: 48 m = Box mm。
+A: 48,000
+B: 480
+C: 4,800
+D: 5
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: バス停で、バスは朝6時から運行を開始します。2台のバスのスケジュールは以下の時間間隔に基づいています。
+* バスAは長いルートを走り、75分ごとに駅を出発します。
+* バスBは短いルートを走り、15分ごとに駅を出発します。
+バスAとバスBが次に同時にバス停を出発する時間はいつですか？
+A: 7:00 a.m.
+B: 7:15 a.m.
+C: 7:30 a.m.
+D: 8:30 a.m.
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 食料品店で5個入りのレモンの袋が2.00ドルで売られています。袋の中の一つのレモンの単価はいくらですか？
+A: $2.50
+B: $0.60
+C: $0.40
+D: $0.10
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 48の素因数分解を書きなさい。可能な場所では指数を使いなさい。
+A: 4 • 8
+B: 6 • 8
+C: 2^3 • 3^2
+D: 2^4 • 3
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: フェイ・イェンの犬は毎日8オンスのドッグフードを食べます。フェイ・イェンは28ポンドのドッグフードの袋を買いました。28ポンドのドッグフードの袋には8オンスの分量が何回分入っていますか？
+A: 14
+B: 56
+C: 224
+D: 448
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 16.1 ÷ 0.14 の商を求めなさい。
+A: 1.15
+B: 0.0115
+C: 11.5
+D: 115
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 学校の最後の3ヶ月間の降雨量は8.1インチ、4.2インチ、そして0.33インチでした。最も近い整数に丸めて、3ヶ月間の合計降雨量を推定してください。
+A: 11.9 in.
+B: 11 in.
+C: 45.0 in.
+D: 12 in.
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: どの比率が4：32に等しいですか？
+A: 2 : 96; 2 : 16
+B: 12 : 96; 2 : 16
+C: 12 : 96; 12 : 16
+D: 2 : 96; 12 : 16
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: サマンサは342枚の野球カードを持っています。ペリーは184枚の野球カードを持っています。サマンサはペリーより何枚多く野球カードを持っていますか？
+A: 158
+B: 168
+C: 258
+D: 268
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 割り算をしてください。7,285 ÷ 4
+A: 1,801
+B: 1,801 R1
+C: 1,821
+D: 1,821 R1
+
+deepseek回答:
+D: 1,821 R1， 
+正确答案是: D
+
+题目:
+question: ダイムの半径は約0.85 cmです。ダイムの円周に最も近いのはどの測定値ですか？
+A: 1.33 cm
+B: 1.70 cm
+C: 2.67 cm
+D: 5.34 cm
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: トーナメントには393人のプレイヤーがおり、各チームは3人です。トーナメントのチーム数を求める式はどれですか？
+A: 393 + 3
+B: 393 - 3
+C: 393 × 3
+D: 393 ÷ 3
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 方程式 14 = w + 23 を解け。
+A: −37
+B: −9
+C: 9
+D: 37
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: トンプソン先生の教室には、一列に7つの机が並んでいます。ヘクターはキムの右から2席に座っています。トーニャはヘクターの右から3席に座っています。トーニャの左から何席にキムは座っていますか？
+A: 2
+B: 3
+C: 5
+D: 12
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: ある店にはシャツの箱が3つあります。各箱にはそれぞれ7枚のシャツが入っている4つのパッケージがあります。式 3 × (4 × 7) でシャツの総数を求めることができます。シャツの総数を求めるためにも使用できる式はどれですか？
+A: 12 × 3
+B: 12 × 7
+C: 28 × 4
+D: 28 × 7
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: アビーは毎日、家と職場の間で往復18マイルを運転します。もし彼女の毎日の往復距離を最も近い5マイルに丸めた場合、以下のうち5日間で運転した総マイル数の最も良い見積もりはどれですか？
+A: 75 miles
+B: 100 miles
+C: 125 miles
+D: 180 miles
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 2010年にルイジアナ州の人口を最も近い10,000で丸めると4,530,000でした。2010年のルイジアナ州の実際の人口は次のうちどれでしょうか？
+A: 4,500,321
+B: 4,524,491
+C: 4,533,372
+D: 4,535,343
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: マーカスは自動車洗浄に3.25ドルを使いました。1クォーターで洗車機が60秒動作する場合、彼が車を洗うのにかかった時間はどれくらいですか？
+A: 10 minutes
+B: 13 minutes
+C: 16 minutes
+D: 32.5 minutes
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 27を36で割った最も簡単な形を書きなさい。
+A: 3 over 4
+B: 2 over 3
+C: 3 over 5
+D: 1 over 5
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 999 - 103 を推定せよ。その差は以下のどの数字の間にあるか？
+A: 1,300 and 1,500
+B: 1,000 and 1,200
+C: 700 and 900
+D: 400 and 600
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: どの表現が素因数分解を示していますか？
+A: 2 • 9 • 11
+B: 2.5 • 7 • 3
+C: 1 • 11 • 13
+D: 2 • 2 • 2 • 3 • 11
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: リンさんは自宅にちょうど4年間住んでいます。彼女は1年が12ヶ月であることを知っています。彼女は以下の数式を使って、自宅に住んでいた月数mを求めました。4 × 12 = m リンさんが自宅に住んでいた月数mを求めるための別の方法を示す数式はどれですか？
+A: 12 ÷ m = 4
+B: m × 4 = 12
+C: 12 – m = 4
+D: m ÷ 4 = 12
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 方程式 x + 71 = −22 を解け。
+A: −93
+B: −49
+C: 49
+D: 93
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: どの代数式が x より 22 少ない量の 4 倍を表していますか？
+A: 4(x – 22)
+B: (4 • 22) – x
+C: 4(22 – x)
+D: (x • 4) – 22
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 46,911 + 653,092 を足す。
+A: 699,903
+B: 700,003
+C: 913,203
+D: 1,122,202
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 5/8 * m = 6 を解け。
+A: 3 and 5 over 9
+B: 3 and 3 over 4
+C: 5 and 1 over 3
+D: 9 and 3 over 5
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: スポーツ用品店が通常$110.99のインラインスケートを10％割引で提供しています。割引後のインラインスケートの価格は税抜きでいくらですか？
+A: $99.89
+B: $99.99
+C: $100.99
+D: $109.88
+
+deepseek回答:
+answer: B， 
+正确答案是: A
+
+题目:
+question: アリスは8つのバケツを持っています。各バケツにはt個のテニスボールが入っています。バケツには合計で56個のテニスボールがあります。それぞれのバケツにあるテニスボールの数、tを見つけるための数式はどれですか？
+A: 8 ÷ t = 56
+B: 8 × t = 56
+C: t + 8 = 56
+D: t ÷ 8 = 56
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: フィッシャー先生は生徒のアートプロジェクトに必要なマーカーの総数を見つけるために、式 (6 × 8) × 12 を使用しました。フィッシャー先生が使用した式と等しい式はどれですか？
+A: 6 + (8 + 12)
+B: 6 + (8 × 12)
+C: 6 × (8 + 12)
+D: 6 × (8 × 12)
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: ある科学者が2種類のクジラの移動パターンを研究しました。ザトウクジラは28日間で2,240マイルを移動しました。ナガスクジラは32日間で2,368マイルを移動しました。もしザトウクジラが同じ速度で32日間移動していたら、ナガスクジラより何マイル多く移動していたでしょうか？
+A: 128
+B: 192
+C: 280
+D: 408
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 8 x 6を表す別の表現はどれですか？
+A: (24+4)+6
+B: (2+4)x6
+C: (2x4) + 6
+D: (2x4)x6
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: リリーは袋の中のすべてのキャンディを配るつもりです。彼女は5人、3人、または2人に等しくキャンディを配ることができます。リリーの袋にはどの数のキャンディが入っている可能性がありますか？
+A: 12
+B: 20
+C: 30
+D: 45
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 一辺の長さがsの立方体の体積Vは、公式V = s^3を使用して求めることができます。一辺の長さが2.3センチメートルの立方体の体積は何立方センチメートルですか？
+A: 5.29
+B: 6.9
+C: 8.027
+D: 12.167
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: マーシャルは授業が始まる前に英語のレポートのタイピングを終えたいと考えています。彼がまだ550語をタイプする必要があり、授業開始まで25分しかない場合、マーシャルはどのくらいの速さでタイピングをしなければならないでしょうか？
+A: 20 words per minute
+B: 21 words per minute
+C: 22 words per minute
+D: 25 words per minute
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: スーザンは1ページを3分で読む速度で本を読んでいます。彼女の読書速度が同じままの場合、18ページを読むのに必要な分数を求める方法はどれですか？
+A: 18と3を足す
+B: 18を3で割る
+C: 3に18を掛ける
+D: 18から3を引く
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 昨年、カールは合計18個のパイを焼きました。彼は家族のために6個のパイを焼き、4つの学校の募金活動のためにそれぞれp個のパイを焼きました。カールが各学校の募金活動のために焼いたパイの数、pを見つけるために使うことができる数式はどれですか？
+A: 6 × p – 18 = 4
+B: 18 – 6 × p = 4
+C: 4+6 × p = 18
+D: 6+4 × p = 18
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: ある数値が最も近い百に丸められました。その結果が500です。次のうち、丸められる前の数値としてあり得ないものはどれですか？
+A: 458
+B: 463
+C: 547
+D: 559
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 式の値を求めなさい 14 + (−71)。
+A: −85
+B: 57
+C: 85
+D: −57
+
+deepseek回答:
+answer: D， 
+正确答案是: B
+
+题目:
+question: 正確な答えを見つけなさい: 942 / 3
+A: 214
+B: 304
+C: 314
+D: 642
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 13/4 = x/7 を解け。
+A: 22.75
+B: 23.25
+C: 24.25
+D: none of these
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 数字の6、−1、8、−3、−4を最小から最大の順に並べなさい。
+A: 6, −1, 8, −3, −4
+B: −4, −3, −1, 6, 8
+C: −1, −3, −4, 6, 8
+D: −3, −4, 6, −1, 8
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: フラー氏は彼の長方形の庭にフェンスを設置したいと考えています。庭の幅は55フィート、長さは75フィートです。フラー氏は何フィートのフェンスが必要ですか？
+A: 130
+B: 260
+C: 3,905
+D: 4,125
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: どの測定値を最も適切に千単位にまるめるべきでしょうか？
+A: フットボールフィールドの長さ（ヤード）
+B: プロフットボール選手の身長（インチ）
+C: プロフットボールゲームの観客数
+D: プロフットボール選手の体重（ポンド）
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: シーラは20の算数問題を解くために5分間与えられました。時間内に終わらせるためにシーラができる最低の速度は何ですか？
+A: 1 problem per minute
+B: 2 problems per minute
+C: 4 problems per minute
+D: 5 problems per minute
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 先週の週末にサンジェイはそれぞれ30分間のテレビ番組を3つ観ました。また、90分間の映画を1本テレビで観ました。先週の週末にサンジェイがテレビを観た合計時間は何分ですか？
+A: 100
+B: 120
+C: 150
+D: 180
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 新しい自転車の元の価格は$138.00です。自転車が15％値下げされた場合、新しい価格はいくらですか？
+A: $20.70
+B: $117.30
+C: $123.00
+D: $153.00
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: ルーシーは2つずつ数えています。彼女は2から始めて50で止まります。ルーシーが数えない数字はどれですか？
+A: 11
+B: 22
+C: 34
+D: 48
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 最も近い100に丸めたときにどちらも1,500に丸められる2つの数字はどれですか？
+A: 1,399 and 1,599
+B: 1,449 and 1,549
+C: 1,457 and 1,547
+D: 1,489 and 1,589
+
+deepseek回答:
+answer: B， 
+正确答案是: C
+
+题目:
+question: 正確な答えを見つけなさい: 800 - 301
+A: 599
+B: 500
+C: 499
+D: 401
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: ゲイリーの農場には72頭の牛がいます。彼は馬の6倍の牛を持っています。以下の数式を使って、彼が持っている馬の数、hを求めることができます。72 ÷ h = 6 ゲイリーの馬の数、hはいくつですか？
+A: 12 horses
+B: 66 horses
+C: 78 horses
+D: 432 horses
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 営業副社長が顧客をランチに連れて行きました。ランチが44ドルで、彼女が20％のチップを渡した場合、彼女はランチにいくら使いましたか？
+A: $8.80
+B: $35.20
+C: $52.80
+D: $53.80
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 方程式 v − 26 = 68 を解け。
+A: −42
+B: 42
+C: 94
+D: 88
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 新聞社が1日に179,912部の新聞を売りました。この新聞の数を単語でどのように書きますか？
+A: one hundred seventy-nine thousand twelve
+B: one hundred seventy-nine nine hundred twelve
+C: one hundred seventy thousand nine hundred twelve
+D: one hundred seventy-nine thousand nine hundred twelve
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: タンクが三角柱の形をしています。三角形の底面の面積が116平方フィートで、タンクの高さが30フィートの場合、タンクがいっぱいの時にどれだけの水を含むことができますか？
+A: 1725 ft^3
+B: 1740 ft^3
+C: 3480 ft^3
+D: 6960 ft^3
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 教師が以下のリストにあるフォルダーを購入します。
+* 各箱に36個の赤いフォルダーが入った5箱
+* 各箱に32個の青いフォルダーが入った6箱
+教師が購入する赤と青のフォルダーの合計数に最も近い数はどれですか？
+A: 275
+B: 380
+C: 440
+D: 550
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: どの数字のリストが小さい順に並んでいますか？
+A: 167,213, 161,455, 17,400, 11,633
+B: 10,354, 10,600, 104,321, 106,213
+C: 160,233, 171,141, 11,645, 16,703
+D: 12,209, 12,902, 125,466, 125,464
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 袋の中に赤いチップが10枚、青いチップが5枚入っています。目をつぶって袋からチップを1枚取り出すとき、青いチップを取り出す確率は何ですか？
+A: 1 out of 5
+B: 2 out of 15
+C: 5 out of 10
+D: 5 out of 15
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 頭の中で計算して、11.7 + 3.4 + 6.3 の合計を求めなさい。
+A: 20.3
+B: 20.4
+C: 21.4
+D: 22.4
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 1/6 + 1/8 を計算しなさい。
+A: 7/24
+B: 2/14
+C: 1/7
+D: 1/4
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: アメリカの国旗は通常、幅と長さの比率が10対19で作られます。次のどの寸法が国旗の正しい比率ですか？
+A: 30 ft by 53 ft
+B: 27 ft by 53 ft
+C: 27 in. by 57 in.
+D: 30 in. by 57 in.
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: ステファニーはロサンゼルスからニューヨークシティまで2,448マイル飛行しました。ステファニーが飛行したマイル数を最も近い千に丸めるといくつですか？
+A: 2,000
+B: 2,400
+C: 2,500
+D: 3,000
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 次のうち、式 6 x 2 で表される状況はどれですか？
+A: ロッコは2日間で1日に6マイルずつハイキングしました。
+B: ロッコは6個の野球ボールを持っていて、そのうち2個をあげました。
+C: ロッコは2つの缶に合計6個のテニスボールを持っていました。
+D: ロッコは6マイル自転車に乗り、さらに2マイル続けました。
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 4.95を最も簡単な形の帯分数または分数で表しなさい。
+A: 4と20分の19
+B: 4と100分の19
+C: 4と20分の1
+D: 1000分の419
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: ロンの庭には42の植物があります。各行には7つの植物があります。ロンの庭の行数を求めるために使用できる式はどれですか？
+A: 42 ÷ 7
+B: 42 - 7
+C: 42 + 7
+D: 42 × 7
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: ある数を4で割ると、商は160で余りは2です。その数は何ですか？
+A: 38
+B: 42
+C: 638
+D: 642
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 0.3 × 427は何ですか？
+A: 0.1281
+B: 1.281
+C: 12.81
+D: 128.1
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 1,248を7で割った商は何ですか？
+A: 177 余り 9
+B: 168 余り 2
+C: 178 余り 2
+D: 178 余り 3
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 11 • 11 • 11 • 11 • 11 • 11 • 11 • 11 を指数を使って表記しなさい。
+A: 11 • 8
+B: 88^3
+C: 8^11
+D: 11^8
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 教師がキャビネットに工作用紙のパッケージを5つ入れました。各パッケージには紙が80枚入っています。教師がキャビネットに入れた工作用紙の総枚数は何枚ですか？
+A: 40
+B: 85
+C: 400
+D: 450
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 各階の高さが14.3フィートの建物があります。建物の高さが185.9フィートの場合、何階建てですか？
+A: 10
+B: 13
+C: 17
+D: 9
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 数字のリストを使用する: 22, 25, 14, 11, 23, 27, 46。最頻値は何ですか？
+A: 23
+B: 24
+C: 35
+D: 最頻値なし
+
+deepseek回答:
+D: 最頻値なし， 
+正确答案是: D
+
+题目:
+question: 1,224を9で割った商は何ですか？
+A: 135
+B: 136
+C: 1,215
+D: 1,360
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 下のどの式のペアが等価ですか？
+A: 7(2x) と 9x
+B: 3x + 5x と 15x
+C: 4(2x — 6) と 8x — 24
+D: x+x+x+x と x^4
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 週の初めにXYZ会社の株価は24.75ドルでした。次の5日間で、月曜日に2.50ドル上がり、火曜日に3.25ドル下がり、水曜日に0.75ドル下がり、木曜日に1.25ドル上がり、金曜日に4.75ドル上がりました。金曜日の終わりにその株の価格はいくらでしたか？
+A: $12.25
+B: $25.75
+C: $29.25
+D: $37.25
+
+deepseek回答:
+answer: B， 
+正确答案是: C
+
+题目:
+question: 2分の9 = 14分の何 が成り立つか、その数を求めなさい。
+A: 14
+B: 16
+C: 15
+D: 63
+
+deepseek回答:
+D: 63， 
+正确答案是: D
+
+题目:
+question: ゴルフ場の練習場では、40個のゴルフボールが入ったバケツが4ドルで販売されています。この料金で、100個のゴルフボールが入ったバケツはいくらになりますか？
+A: $10.00
+B: $10.50
+C: $13.50
+D: $16.00
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 96人のランナーと216人のスイマーの比を最も簡単な形で書きなさい。
+A: 96 over 216
+B: 16 over 36
+C: 4 over 9
+D: 9 over 4
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: ある畑は台形の形をしています。台形の短い底辺の長さは130ヤードで、長い底辺の長さは390ヤードです。二つの底辺の間の距離は75ヤードです。この畑の面積はどれくらいですか？
+A: 9,750 yards^2
+B: 19,500 yards^2
+C: 29,250 yards^2
+D: 39,000 yards^2
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 3 + p = 15 の場合、pは何に等しいですか？
+A: 3
+B: 5
+C: 12
+D: 18
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: Royaはオレンジジュースのカートン12個に48ドル支払いました。Royaが支払った1カートンあたりの単価はいくらですか？
+A: $3
+B: $4
+C: $6
+D: $12
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: Shodiは彼女のビデオゲームの最初のレベルで389ポイントを獲得しました。彼女はボーナスラウンドでさらに116ポイントを獲得しました。Shodiはビデオゲームの最初のレベルとボーナスラウンドで合計何ポイントを獲得しましたか？
+A: 405
+B: 495
+C: 505
+D: 4,915
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: モリーは25ドルで髪を切りましたが、15％のチップを残しました。モリーの最終的な費用はいくらでしたか？
+A: $25.15
+B: $26.50
+C: $27.50
+D: $28.75
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 学区が学年の日数を5％増やすことを提案しています。現在、学年は180日です。提案された増加で学年は何日になりますか？
+A: 181 days
+B: 183 days
+C: 185 days
+D: 189 days
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 5(6x + 3y)に等しい式はどれですか？
+A: 11x + 3y
+B: 11x + 8y
+C: 30x + 3y
+D: 30x + 15y
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: ダニは45個のビー玉を持っています。彼女はジョーが持っているビー玉の5倍を持っています。ジョーは何個のビー玉を持っていますか？
+A: 50
+B: 40
+C: 9
+D: 5
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: キニー夫人は生徒の科学実験のために4個入りのパックで電池を購入しました。彼女が購入した電池の総数として考えられるのは以下のうちどれですか？
+A: 22
+B: 26
+C: 28
+D: 30
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 836を最も近い10に丸めると何ですか？
+A: 800
+B: 830
+C: 840
+D: 870
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 完全な円を3/4回転する角度は何度ですか？
+A: 34°
+B: 43°
+C: 75°
+D: 270°
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: ある店にはそれぞれ40リットルの水が入った8つの魚タンクがあります。すべての魚タンクに入っている水の合計リットル数は何リットルですか？
+A: 5
+B: 48
+C: 280
+D: 320
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 地球上で最も低い点は海抜マイナス35,840フィートのマリアナ海溝の底です。地球上で最も高い点は海抜29,028フィートのエベレスト山の頂上です。次のうち、地球上で最も低い点と最も高い点の間の距離の最も良い推定値はどれですか？
+A: 6,000 feet
+B: 7,000 feet
+C: 64,000 feet
+D: 65,000 feet
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: あなたは朝に7/9マイル、午後に5/12マイル、犬を散歩しました。朝にどれだけ遠くまで犬を散歩させたのでしょうか？
+A: 13 over 36
+B: 12 over 21
+C: 2 over 3
+D: 35 over 108
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 0.07と5.8の積を求めなさい。
+A: 0.406
+B: 0.0406
+C: 4.06
+D: 40.6
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: ポールソン先生のクラスとヒューゴ先生のクラスの生徒が昼食に何を食べたかについての情報が以下に記載されています。ポールソン先生のクラスでは、生徒の0.5がピザを食べました。ヒューゴ先生のクラスでは、生徒の0.5がハンバーガーを食べました。ポールソン先生のクラスのピザを食べた0.5とヒューゴ先生のクラスのハンバーガーを食べた0.5を正しく比較するために、どのような情報が必要ですか、または必要ありませんか？
+A: 昼食が同じ日に食べられたかどうか
+B: 各教師のクラスの生徒の総数
+C: 各クラスが食べた分量が同じだったので何も必要ない
+D: その日に食べられたピザのスライスとハンバーガーの総数
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: ジーンはソフトボールを9フィート投げました。リーはジーンの3倍の距離をソフトボールを投げました。リーがボールを投げた距離dを求めるために使用できる方程式はどれですか？
+A: dx3=9
+B: d+3=9
+C: 3+9=d
+D: 3x9=d
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 小数第一位に四捨五入して、27.94 + 15.35 の合計を推定しなさい。
+A: 43.2
+B: 43.3
+C: 43.4
+D: 43.29
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: どの記述が正しいですか？
+A: 六角形はすべて三角形です。なぜなら、少なくとも3つの辺があるからです。
+B: 八角形はすべて多角形です。なぜなら、少なくとも3つの辺があるからです。
+C: すべての平行四辺形は長方形です。なぜなら、2組の平行な辺があるからです。
+D: すべての菱形は正方形です。なぜなら、4つの辺がすべて同じ長さだからです。
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: コナーは瓶の容量を測定しています。どの単位を使用できますか？
+A: Centimeter
+B: Cup
+C: Gram
+D: Pound
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: サーカスのイベントの一つに、人間大砲のガブリエラがいました。彼女は土曜日に4回のショーを行いました。彼女の飛距離は7.04メートル、18.81メートル、18.39メートル、19.94メートルでした。その日、ガブリエラが飛んだ総距離は何メートルでしたか？
+A: 64.18 m
+B: 74.18 m
+C: 57.14 m
+D: 59.24 m
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: ロランドの食器棚にあるスープの缶のうち、1/2がトマトで、2/5がチキンヌードルです。ロランドの食器棚にあるスープの缶のうち、トマトまたはチキンヌードルのいずれかである割合はどれくらいですか？
+A: 7-Mar
+B: 5-Mar
+C: 10-Jul
+D: 10-Sep
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: どの数字が小さい順に並んでいますか？
+A: 1 over 8, 0.75, 1 over 3, 5 over 6
+B: 5 over 6, 1 over 3, 0.75, 1 over 8
+C: 1 over 8, 1 over 3, 0.75, 5 over 6
+D: 5 over 6, 0.75, 1 over 3, 1 over 8
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 方程式 6.73 = z / 7.74 を解いて、答えを確認してください。
+A: 52.0902
+B: 1.0112
+C: −1.0102
+D: 51.5902
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: どの記述が誤りですか？
+A: 3 < 5
+B: 5 > 3
+C: −5 > −3
+D: −3 > −5
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: オフィスビルの床面積は300,000 + 5,000 + 600 + 10平方フィートです。標準形での床面積の平方フィートはいくつですか？
+A: 30,561
+B: 35,610
+C: 300,561
+D: 305,610
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: どの比のペアが比例を形成することができませんか？
+A: 4 over 5 and 24 over 30
+B: 4 over 5 and 20 over 25
+C: 36 over 45 and 4 over 5
+D: 4 over 5 and 20 over 30
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 式の値を求めなさい −25 − (−11)。
+A: −36
+B: −14
+C: 14
+D: 36
+
+deepseek回答:
+answer: B， 
+正确答案是: C
+
+题目:
+question: 100の三分の五は何ですか？
+A: 3
+B: 5
+C: 20
+D: 60
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 掲示板を隙間や重なりなく30枚の正方形の紙で完全に覆うことができます。各紙の一辺の長さが1フィートの場合、掲示板の総面積はどれくらいですか？
+A: 1 foot
+B: 30 feet
+C: 1 square foot
+D: 30 square feet
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 学生のグループが学校の周辺地図を作成しました。学校を（0, 0）の位置に置きます。最寄りの店は（-5, 7）の点に置かれました。この最寄りの店を表す点はどの象限にありますか？
+A: Quadrant I
+B: Quadrant II
+C: Quadrant III
+D: Quadrant IV
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: ドアの適切な高さはどれくらいですか？
+A: 2 km
+B: 2 cm
+C: 2 m
+D: 2 mm
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: どれが一番お買い得ですか？
+A: 3本のジュースで$6.72
+B: 11本のジュースで$24.86
+C: 9本のジュースで$20.25
+D: 16本のジュースで$35.68
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 52 + 6 * 2 を計算しなさい。
+A: 116
+B: 64
+C: 62
+D: 118
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: データセット $79.88, $21.88, $29.88, $19.88, $17.88 の中央値を求めなさい。
+A: $17.88
+B: $19.88
+C: $21.88
+D: $29.88
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 9(9m + 3t)に等しい式はどれですか？
+A: 18m + 3t
+B: 81m + 3t
+C: 18m + 12t
+D: 81m + 27t
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 12分の18が9分の何と等しいか、その数を求めなさい。
+A: 4
+B: 6
+C: 8
+D: 12
+
+deepseek回答:
+answer: D， 
+正确答案是: A
+
+题目:
+question: ジョーンズ氏が1、2、3、4、5、6の数字が書かれた六面体のサイコロを振ります。3が出る確率は何ですか？
+A: 6-Jan
+B: 5-Jan
+C: 3-Jan
+D: 2-Jan
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: バルーンは8個入りのパッケージで売られています。42個のバルーンが必要な場合、何パッケージ買うべきですか？
+A: 5
+B: 6
+C: 8
+D: 42
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: ケリーは謎の数字を選びました。彼女の謎の数字は38の因数です。ケリーの謎の数字として考えられるのはどれですか？
+A: 2
+B: 3
+C: 4
+D: 8
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: リタは手で120個の岩を運んで石の壁を作っています。hが一回の荷物で運べる岩の数を表すとき、全ての岩を運ぶために必要な荷物の総数を表す式はどれですか？
+A: 120 + h
+B: 120h
+C: 120 − h
+D: 120/h
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 放課後に生徒たちがバスケットボールの試合をしました。次のうち、式 7 x 2 を使って求められる合計はどれですか？
+A: ある選手が7回シュートをして、それぞれのシュートが2点だった場合の合計得点
+B: 7個のバスケットボールが古く、2個のバスケットボールが新しかった場合のバスケットボールの合計数
+C: ある選手が7点、別の選手が2点を得た場合の合計得点
+D: 7個のバスケットボールがあり、そのうち2個が使われなかった場合の使用されたバスケットボールの合計数
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: ラミが機械のダイヤルを回すたびに、ダイヤルは1度動きました。ラミはダイヤルを10回回しました。ダイヤルが動いた総度数は何度ですか？
+A: 10
+B: 90
+C: 110
+D: 360
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 最も近い千に丸められた数が47,000です。丸められた数は以下のうちどれでしょうか？
+A: 46,295
+B: 46,504
+C: 47,520
+D: 47,924
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 円形の木の幹の直径は8フィートです。木の幹の周りの距離をフィートで求めるために使用できる方程式はどれですか？
+A: C = 4π
+B: C = 8π
+C: C = 16π
+D: C = 64π
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: サムは18枚の切手に$8.28支払いました。この割合で、サムが12枚の切手を買うといくらかかりますか？
+A: $2.19
+B: $2.28
+C: $3.72
+D: $5.52
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 次のうち、2,329,500と2,598,100の間にある数はどれですか？
+A: 2,249,550
+B: 2,589,200
+C: 2,329,333
+D: 2,327,900
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: サファイアは卒業パーティーのために風船のブーケを作っています。彼女は179個の風船を持っており、各ブーケに7個の風船を入れる必要があります。サファイアは何個のブーケを作ることができますか？
+A: 32 bouquets
+B: 23 bouquets
+C: 25 bouquets
+D: 26 bouquets
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: ケンとタミはネックレスを作っています。ケンは25個のネックレスを作ります。タミはケンよりもm個多くネックレスを作ります。ケンとタミが作ったネックレスの合計数を表す式はどれですか？
+A: 25 + (25 + m)
+B: 25 + 25m
+C: 25 + m
+D: 25m
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: どの記述が正しいですか？
+A: 5 x 2 の積は偶数です。なぜなら、両方の因数が偶数だからです。
+B: 4 x 4 の積は奇数です。なぜなら、両方の因数が偶数だからです。
+C: 2 x 7 の積は偶数です。なぜなら、両方の因数が奇数だからです。
+D: 5 x 3 の積は奇数です。なぜなら、両方の因数が奇数だからです。
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: ある数 y から 36 を引いたものが 13 に等しい方程式はどれですか？
+A: y - 36 = 13
+B: 36 - y = 13
+C: 13 - y = 36
+D: 36 + y = –13
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 5^3を簡単に計算しなさい。計算機、紙と鉛筆、または頭の中で計算してください。
+A: 15
+B: 125
+C: 8
+D: 53
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 会議のために設置された椅子が6列ありました。各列には8つの椅子がありました。会議のために設置された椅子の合計数は何ですか？
+A: 14
+B: 36
+C: 48
+D: 64
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: ボランティアのチームがチャリティーコンサートでTシャツを販売し、合計で$5,144を集めました。各Tシャツは$8で売られました。ボランティアが売ったTシャツの総数は何枚でしたか？
+A: 632
+B: 643
+C: 655
+D: 668
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 結婚式には190人のゲストがいます。各テーブルがちょうど8人を収容する場合、すべてのゲストを座らせるために必要な円卓の最小数は何ですか？
+A: 22
+B: 23
+C: 24
+D: 25
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: ルーシーはギフトバスケットを作っています。彼女はそれぞれのギフトバスケットにリンゴを3個入れます。24個のリンゴでルーシーが作れるギフトバスケットの総数、bを見つけるための数式はどれですか？
+A: 24 + 3 = b
+B: 3 + b = 24
+C: 24 ÷ b = 3
+D: 3 × 24 = b
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 頭の中で計算して、8y = 56 を解いてください。
+A: 6
+B: 7
+C: 8
+D: 9
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 式28 x 42の値は何ですか？
+A: 420
+B: 816
+C: 1,166
+D: 1,176
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: サイモンはフルーツサラダを作るために梨3個とリンゴ9個を使いました。フルーツサラダの中で梨とリンゴの数の比率は何でしたか？
+A: 1:03
+B: 1:04
+C: 1:06
+D: 1:09
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: \( \frac{3}{4} - \frac{1}{8} \) を求めなさい。
+A: \( \frac{21}{32} \)
+B: 1
+C: \( \frac{5}{8} \)
+D: \( \frac{11}{16} \)
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 3匹の犬と5匹の犬の比を示す分数はどれですか？
+A: 5 over 3
+B: 3 over 8
+C: 2 over 5
+D: 3 over 5
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 方程式 18 + p = 29 を解け。
+A: −47
+B: −11
+C: 11
+D: 47
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 2m+7はどのフレーズの説明ですか？
+A: mの2倍に7を加えたもの
+B: mの7倍に2を加えたもの
+C: 7とmの合計の2倍
+D: 2とmの合計の7倍
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 生徒が3つのパズルを持っています。各パズルには1,250ピースがあります。パズルの総ピース数はいくつですか？
+A: 3,650
+B: 3,750
+C: 4,650
+D: 4,750
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: どの分数が2/5より大きいですか？
+A: 1/5
+B: 1/10
+C: 4/10
+D: 5/10
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 先週、ポールは5日間毎日2枚のクッキーを食べました。今週、彼は4日間毎日2枚のクッキーを食べました。これら2週間でポールが食べたクッキーの総数を表す式はどれですか？
+A: 2x (5x4)
+B: 2x (5+ 4)
+C: (2x5)x (2x4)
+D: (2+5)x(2+4)
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 正確な答えを見つけなさい: 365 + 56
+A: 300
+B: 309
+C: 311
+D: 421
+
+deepseek回答:
+answer: D， 
+正确答案是: B
+
+题目:
+question: ケイトはコインコレクションを持っています。彼女はそのコレクションの中の7枚のコインを箱に入れていますが、それは彼女のコレクション全体の5％に過ぎません。ケイトのコインコレクションの総数はいくつですか？
+A: 12
+B: 14
+C: 120
+D: 140
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: ダンスチームには72人の生徒がおり、そのうちの9分の4がタップダンスのレッスンを受けています。タップダンスのレッスンを受けている生徒は何人ですか？
+A: 32
+B: 49
+C: 63
+D: 68
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 1000人の登録有権者を対象にした調査で、次の選挙で候補者Aに投票すると答えた人が450人いました。選挙で220,000人が投票する場合、調査者は候補者Aがどれくらいの票を得ると予測していますか？
+A: 44,500
+B: 48,900
+C: 95,000
+D: 99,000
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: データセット13, 35, 26, 8, 24, 10, 22, 10, 32の中央値を求めなさい。
+A: 23
+B: 20
+C: 22
+D: 27
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: ピーターは25人のグループにいます。その25人全員でボートに乗って釣りに行きました。各ボートには5人ずつ乗っています。ピーターはグループが使ったボートの数をどのようにして見つけることができますか？
+A: Add 5 to 25
+B: Divide 25 by 5
+C: Multiply 25 by 5
+D: Subtract 5 from 25
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+总题数: 378, 正确答案数: 353, 正确率: 93.39%
+题目:
+question: 与えられた体拡大 Q(√2, √3, √18) に対する Q 上の次数を求めなさい。
+A: 0
+B: 4
+C: 2
+D: 6
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: p = (1, 2, 5, 4)(2, 3) が S_5 において、<p> の S_5 における指数を求めなさい。
+A: 8
+B: 2
+C: 24
+D: 120
+
+deepseek回答:
+answer: A， 
+正确答案是: C
+
+题目:
+question: 与えられた有限体内の係数を持つ多項式のすべての零点を見つけなさい。x^5 + 3x^3 + x^2 + 2x in Z_5
+A: 0
+B: 1
+C: 0,1
+D: 0,4
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: ステートメント1 | 非アーベル群の剰余群は非アーベルである。ステートメント2 | KがHの正規部分群であり、HがGの正規部分群である場合、KはGの正規部分群である。
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 与えられた多項式環で与えられた多項式の積を求めなさい。f(x) = 4x - 5, g(x) = 2x^2 - 4x + 2 in Z_8[x].
+A: 2x^2 + 5
+B: 6x^2 + 4x + 6
+C: 0
+D: x^2 + 1
+
+deepseek回答:
+answer: C， 
+正确答案是: B
+
+题目:
+question: ステートメント1 | もし群が位数15の元を持っているなら、少なくとも8つの位数15の元を持っていなければならない。ステートメント2 | もし群が8つ以上の位数15の元を持っているなら、少なくとも16つの位数15の元を持っていなければならない。
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: ステートメント1 | 群Gの全ての準同型像はGの剰余群と同型です。ステートメント2 | 群Gの準同型像はGの剰余群と同一です（同型を除いて）。
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+
+deepseek回答:
+answer: C， 
+正确答案是: A
+
+题目:
+question: ステートメント1 | 環準同型が1対1であるのは、核が{0}である場合に限ります。ステートメント2 | QはRのイデアルです。
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+
+deepseek回答:
+answer: C， 
+正确答案是: D
+
+题目:
+question: 与えられた体拡大 Q(√2 + √3) の次数を Q に対して求めなさい。
+A: 0
+B: 4
+C: 2
+D: 6
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 与えられた有限体内の指定された多項式のすべてのゼロを見つけなさい。その体の係数を持つ多項式 x^3 + 2x + 2 in Z_7
+A: 1
+B: 2
+C: 2,3
+D: 6
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: ステートメント1 | HがGの部分群であり、aがGに属している場合、|aH| = |Ha|です。 ステートメント2 | HがGの部分群であり、aとbがGに属している場合、aHとHbは同一であるか互いに素です。
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+
+deepseek回答:
+answer: A， 
+正确答案是: C
+
+题目:
+question: もし A = {1, 2, 3} であれば、関係 S = {(1, 1), (2, 2)} は
+A: 対称的のみ
+B: 反対称的のみ
+C: 対称的であり反対称的でもある
+D: 同値関係である
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 因子群 (Z_11 x Z_15)/(<1, 1>) の位数を求めなさい。
+A: 1
+B: 2
+C: 5
+D: 11
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 多項式 x^3 + 2x^2 + 2x + 1 は Z_7[x] で線形因子に因数分解することができます。この因数分解を求めなさい。
+A: (x − 2)(x + 2)(x − 1)
+B: (x + 1)(x + 4)(x − 2)
+C: (x + 1)(x − 4)(x − 2)
+D: (x - 1)(x − 4)(x − 2)
+
+deepseek回答:
+answer: B， 
+正确答案是: C
+
+题目:
+question: S_nでn=10のとき、要素の最大の可能な位数を求めなさい。
+A: 6
+B: 12
+C: 30
+D: 105
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: ステートメント1 | RはQ上のある多項式の分割体である。ステートメント2 | 60個の要素を持つ体が存在する。
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+
+deepseek回答:
+answer: C， 
+正确答案是: B
+
+题目:
+question: 乗法群 {1, -1, i, -i} における -i の逆元は
+A: 1
+B: -1
+C: i
+D: -i
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 与えられた環で積を計算しなさい。(2,3)(3,5) in Z_5 x Z_9
+A: (1,1)
+B: (3,1)
+C: (1,6)
+D: (3,6)
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 通常の乗算操作の下でのすべての実数の集合が群ではないのは、
+A: 乗算が二項演算ではない
+B: 乗算が結合的ではない
+C: 単位元が存在しない
+D: ゼロに逆元がない
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: ステートメント1| pが素数であるとき、位数p^2の任意の群はアーベル群である。ステートメント2 | 固定された素数pに対して、群Gのシローp部分群は、それがGの唯一のシローp部分群である場合に限り、Gの正規部分群である。
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: ステートメント1 | 有限群GとHにおいて、|G + H| = |G||H|です。（G + Hは内部直積です。）ステートメント2 | もしrがmを割り切り、sがnを割り切るならば、Z_m + Z_nはZ_r + Z_sと同型な部分群を持ちます。
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 与えられた多項式環で与えられた多項式の和を求めなさい。f(x) = 4x - 5, g(x) = 2x^2 - 4x + 2 in Z_8[x].
+A: 2x^2 + 5
+B: 6x^2 + 4x + 6
+C: 0
+D: x^2 + 1
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: ステートメント1 | R^2の任意の2つのベクトルの組は線形独立である。ステートメント2 | V = span(v1, ... , vk) で {v1, ... , vk} が線形独立である場合、dim(V) = k である。
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 複素数の乗算の下でのすべての n 次の単位根の集合は
+A: 半群であり、単位元を持つ
+B: 可換半群であり、単位元を持つ
+C: 群
+D: アーベル群
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: ステートメント1 | すべての極大イデアルは素イデアルです。ステートメント2 | Iが可換環Rの極大イデアルである場合、R/Iは体です。
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+
+deepseek回答:
+answer: A， 
+正确答案是: B
+
+题目:
+question: Gがすべてのn x n非特異行列で、その要素が有理数である集合を表すとする。その場合、乗算の下でGは
+A: subgroup
+B: finite abelian group
+C: infinite, non abelian group
+D: infinite, abelian
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: ステートメント1 | 42の位数を持つすべての群は、7の位数の正規部分群を持っています。ステートメント2 | 42の位数を持つすべての群は、8の位数の正規部分群を持っています。
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: Z[x]の多項式がQ上で既約であるかどうか、アイゼンシュタインの判定法を満たしているかを判断しなさい。8x^3 + 6x^2 - 9x + 24
+A: Yes, with p=2.
+B: Yes, with p=3.
+C: Yes, with p=5.
+D: No.
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: ステートメント1 | 6要素のグループの像がホモモルフィズムの下で12要素を持つことがあります。ステートメント2 | 6要素のあるグループから12要素のあるグループへのホモモルフィズムが存在します。
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: ステートメント 1 | 巡回群の準同型像は巡回群である。ステートメント 2 | アーベル群の準同型像はアーベル群である。
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: ステートメント1 | もしHが群Gの部分群であり、aがGに属しているならば、aH = Haです。ステートメント2 | もしHがGの正規部分群であり、aがGに属しているならば、全てのhに対してah = haです。
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: もし (G, .) がすべての a, b に対して (ab)^-1 = a^-1b^-1 となるような群である場合、G は以下のうちどれですか？
+A: commutative semi group
+B: abelian group
+C: non-abelian group
+D: None of these
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: ステートメント1 | 有限次元ベクトル空間では、すべての線形独立なベクトル集合は基底に含まれています。ステートメント2 | もしB_1とB_2が同じベクトル空間の基底であれば、|B_1| = |B_2|です。
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: ある群 (G, 0) がアーベル群であることが知られています。次のうち、Gについて真となるものはどれですか？
+A: すべての g に対して g = g^-1
+B: すべての g に対して g = g^2
+C: すべての g, h に対して (g o h)^2 = g^2 o h^2
+D: G は有限位数である
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: ステートメント1 | T: V -> W が線形変換で、dim(V) < dim(W) < 1 の場合、T は単射でなければならない。ステートメント2 | dim(V) = n とし、T: V -> V が線形であるとする。Tが単射であれば、それは全単射である。
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+
+deepseek回答:
+answer: D， 
+正确答案是: A
+
+题目:
+question: 与えられた体拡大 Q(√2, √3) の Q に対する次数を求めなさい。
+A: 0
+B: 4
+C: 2
+D: 6
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 与えられた環で積を計算しなさい。(20)(-8) in Z_26
+A: 0
+B: 1
+C: 11
+D: 22
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: Z[x]の多項式がQ上で既約であるかどうか、アイゼンシュタインの判定法を満たしているかを判断する。x^2 - 12
+A: Yes, with p=2.
+B: Yes, with p=3.
+C: Yes, with p=5.
+D: No.
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 有限体 Z_7 の生成元を求めなさい。
+A: 1
+B: 2
+C: 3
+D: 4
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: ステートメント1 | すべての順列はサイクルです。ステートメント2 | すべてのサイクルは順列です。
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 整数の集合Zにおいて、二項演算「*」が a*b = a + b + 1 と定義されている場合、Zは群です。この群の単位元は
+A: 0
+B: 1
+C: -1
+D: 12
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 環 Z_3 x 3Z の特性を求めなさい。
+A: 0
+B: 3
+C: 12
+D: 30
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: ステートメント1 | 位数45のアーベル群は位数10の部分群を持っています。ステートメント2 | 群Gの部分群Hが正規部分群であるのは、Hの左剰余類の数がHの右剰余類の数と等しい場合に限ります。
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+
+deepseek回答:
+answer: C， 
+正确答案是: B
+
+题目:
+question: ステートメント 1 | すべての特性が0の整域は無限です。ステートメント 2 | 素数特性を持つすべての整域は有限です。
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+
+deepseek回答:
+answer: B， 
+正确答案是: C
+
+题目:
+question: 集合AとBがあり、関数f: A -> Bおよび関数g: B -> Aがすべてのa \in Aに対してg(f(a)) = aを満たすとする。命題1 | 関数fは必ず単射でなければならない。命題2 | 関数fは必ず全射でなければならない。
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: ステートメント1 | 任意の二つの群GとG'について、GからG'への準同型が存在する。ステートメント2 | すべての準同型は一対一の写像である。
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+
+deepseek回答:
+answer: B， 
+正确答案是: C
+
+题目:
+question: ステートメント1 | 同型写像は空の核を持つことがある。ステートメント2 | ある有限群からある無限群への非自明な同型写像を持つことは不可能である。
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: Z_3[x]/(x^3 + x^2 + c) が体となるような Z_3 のすべての c を求めなさい。
+A: 0
+B: 2
+C: 1
+D: 3
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: ステートメント1 | Rが整域である場合、R[x]も整域である。ステートメント2 | Rが環であり、f(x)とg(x)がR[x]に属している場合、deg (f(x)g(x)) = deg f(x) + deg g(x)である。
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: Z_8 x Z_10 x Z_24 のある要素の最大可能な位数を求めなさい。
+A: 8
+B: 120
+C: 240
+D: 24
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: ステートメント1 | すべての可解群は素数のべき乗の位数を持つ。ステートメント2 | 素数のべき乗の位数を持つすべての群は可解である。
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: Z_3 において Z_3[x]/(x^3 + cx^2 + 1) が体となるような全ての c を求めなさい。
+A: 0
+B: 2
+C: 1
+D: 3
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 群 G = {2, 4, 6, 8} が10を法とする乗法において、単位元は
+A: 6
+B: 8
+C: 4
+D: 2
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: ステートメント1 | G、H、Kがそれぞれ4の位数を持つ群である場合、少なくとも2つは同型である。ステートメント2 | Z_r + Z_sが部分群Z_m + Z_nと同型である場合、rはmを割り切り、sはnを割り切る。
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+
+deepseek回答:
+answer: A， 
+正确答案是: C
+
+题目:
+question: 与えられた体拡大 Q(√2) に対して Q の上の次数を求めなさい。
+A: 0
+B: 2
+C: 1
+D: 3
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: ステートメント 1 | すべての自由アーベル群はトーションフリーです。ステートメント 2 | すべての有限生成トーションフリーアーベル群は自由アーベル群です。
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: ステートメント1 | 4x - 2はZ上で既約である。ステートメント2 | 4x - 2はQ上で既約である。
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+
+deepseek回答:
+answer: A， 
+正确答案是: D
+
+题目:
+question: 有限体 Z_11 の生成元を見つけなさい。
+A: 1
+B: 2
+C: 3
+D: 4
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: ステートメント1 | 159の位数を持つすべての群は巡回群です。ステートメント2 | 102の位数を持つすべての群は非自明な適切な正規部分群を持っています。
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: ステートメント1 | もしHとKがGの部分群で、HまたはKのどちらかがGの正規部分群である場合、HKはGの部分群です。ステートメント2 | pが素数である場合、位数p^2のすべての群はアーベル群です。
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: ステートメント 1 | 部分環の単位元は環の単位元と同じでなければなりません。ステートメント 2 | すべての体は整域です。
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: ステートメント1 | 整数のエントリを持ち、非ゼロの行列式を持つ2 x 2行列の集合は、行列の乗算の下で群です。ステートメント2 | 整数のエントリを持ち、行列式が1である2 x 2行列の集合は、行列の乗算の下で群です。
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: ステートメント1 | すべての可換環の商環は再び可換環である。ステートメント2 | 単位元1を持つ環RのイデアルNは、1がNに含まれる場合に限り、R全体である。
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+
+deepseek回答:
+answer: A， 
+正确答案是: C
+
+题目:
+question: もし A = (1, 2, 3, 4) で、~ = {(1, 2), (1, 3), (4, 2)} とすると、~ は
+A: 反対称ではない
+B: 推移的である
+C: 反射的である
+D: 対称的である
+
+deepseek回答:
+answer: A， 
+正确答案是: B
+
+题目:
+question: ZからZ_2への準同型写像はいくつありますか？
+A: 1
+B: 2
+C: 無限に多く
+D: 0
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: ステートメント 1 | すべての体は環でもある。ステートメント 2 | すべての環には乗法的単位元がある。
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: ステートメント1 | Rが環であり、f(x)とg(x)がR[x]に属している場合、deg (f(x)+g(x)) = max (deg f(x), deg g(x))です。ステートメント2 | Fが体である場合、F[x]のすべてのイデアルは主イデアルです。
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 集合 H が群 (G,*) の部分群であるための条件は
+A: a, b が H に属するならば a * b も H に属する
+B: a が H に属するならば a^-1 も H に属する
+C: a, b が H に属するならば a * b^-1 も H に属する
+D: H は単位元を含む
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 多項式 x^4 + 4 は Z_5[x] で線形因子に因数分解することができます。この因数分解を求めなさい。
+A: (x − 2)(x + 2)(x − 1)(x + 1)
+B: (x+1)^4
+C: (x-1)(x+1)^3
+D: (x-1)^3(x+1)
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: ステートメント1 | すべての正の整数のランクに対して自由アーベル群が存在します。ステートメント2 | ある生成集合の要素数とベッティ数が等しい場合、有限生成アーベル群は自由アーベル群です。
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: (Z,*) はすべての a, b に対して a*b = a+b+1 となる群です。a の逆元は
+A: 0
+B: -2
+C: a-2
+D: (2+a)*-1
+
+deepseek回答:
+answer: B， 
+正确答案是: D
+
+题目:
+question: 与えられた体拡大 Q(√2*√3) の次数を Q 上で求めなさい。
+A: 0
+B: 4
+C: 2
+D: 6
+
+deepseek回答:
+answer: B， 
+正确答案是: C
+
+题目:
+question: フェルマーの小定理を使用して、3^47を23で割った余りを求めなさい。
+A: 1
+B: 2
+C: 3
+D: 4
+
+deepseek回答:
+answer: A， 
+正确答案是: D
+
+题目:
+question: 環 Z_3 x Z_3 の特性を求めなさい。
+A: 0
+B: 3
+C: 12
+D: 30
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: ステートメント1 | もしaとbが群の要素であり、aがbと等しくない場合、a^2はb^2と等しくない。ステートメント2 | 二面体群の回転の集合は巡回部分群を形成する。
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: ステートメント 1 | 群において (ab)^{-2} = b^{-2}a^{-2}。ステートメント 2 | 群において (ab)^n = a^nb^n。
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+
+deepseek回答:
+answer: C， 
+正确答案是: B
+
+题目:
+question: ステートメント1 | S_nはn >= 3のすべてにおいて非アーベル群である。ステートメント2 | aがmサイクルの置換であり、bがnサイクルの置換である場合、|ab| = lcm(m,n)である。
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 環 Z x Z の特性を求めなさい。
+A: 0
+B: 3
+C: 12
+D: 30
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: ステートメント1 | n > 1 の場合、集合 {1,2, ..., n-1} は n による乗算のもとで群を形成します。ステートメント2 | ある整数 x が存在し、63x mod 100 = 1 となります。
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: ステートメント1 | Kが有限生成自由アーベル群の非ゼロ部分群である場合、Kは自由アーベルである。ステートメント2 | Kが有限生成自由アーベル群の非ゼロ部分群である場合、G / Kは自由アーベルである。
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: ステートメント 1 | 巡回群の外部直積は巡回群である。ステートメント 2 | D_3 と D_4 の外部直積は D_12 と同型である。
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: ステートメント1 | すべての非ゼロの自由アーベル群は無限個の基底を持つ。ステートメント2 | 階数が少なくとも2のすべての自由アーベル群は無限個の基底を持つ。
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: ステートメント1 | すべての正の整数nに対して、nの位数を持つ巡回群が存在します。ステートメント2 | すべての有限巡回群は、その群の位数を割り切るすべての位数の元を含んでいます。
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: ステートメント1 | グループに位数10の要素がある場合、位数1、2、5の要素があります。ステートメント2 | グループに位数2の要素と位数3の要素がある場合、位数6の要素があります。
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 集合AとBを考え、f: A -> B および g: B -> A が関数であるとする。すべての a \in A に対して g(f(a)) = a が成り立つとする。命題1 | 関数gは必ず単射である。命題2 | 関数gは必ず全射である。
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+
+deepseek回答:
+answer: A， 
+正确答案是: D
+
+题目:
+question: ステートメント1 | 同型写像が一対一であるのは、核が単位元のみから成る場合に限られます。ステートメント2 | 6要素の群のある同型写像の像は4要素を持つことがあります。
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: ステートメント1 | もしHとKが群Gの部分群であれば、|HK| = |H||K|/|H∩K|です。ステートメント2 | pが奇数の素数であるとき、2pの位数を持つ群は巡回群であるか、またはD_pと同型です。
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: T: Z x Z -> Z で、T(1, 0) = 3 および T(0, 1) = -5 のとき、T(-3,2) を求めなさい。
+A: -19
+B: -10
+C: 19
+D: 10
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 与えられた環で積を計算しなさい。(12)(16) in Z_24
+A: 0
+B: 1
+C: 4
+D: 6
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: ステートメント1 | すべての順列は1対1の関数です。ステートメント2 | すべての関数が順列であるのは、それが1対1である場合に限ります。
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+
+deepseek回答:
+answer: A， 
+正确答案是: C
+
+题目:
+question: ステートメント1 | 有限群の位数がnである場合、その群はnのすべての正の約数dに対して位数dの部分群を含む。ステートメント2 | aが有限群に属している場合、|a|は|G|を割り切る。
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 部分群 4Z の 2Z のすべての剰余類を見つけなさい。
+A: 4Z
+B: 4Z, 2 + 4Z
+C: 2Z
+D: Z
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 次のうち、正しい記述はどれですか？
+A: すべての同値関係は部分順序関係です。
+B: A = {x, y, z} から B = (1, 2) への関係の数は64です。
+C: 空の関係 _ は反射的です
+D: 関係が対称であることと非対称であることの特性は互いに否定的です。
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: S_n の要素の最大の可能な位数を求めなさい。n = 6 の場合。
+A: 6
+B: 12
+C: 30
+D: 105
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: ステートメント1 | QはZ_2の拡張体である。ステートメント2 | ある拡張体において、すべての非定数多項式はそのフィールド上でゼロを持つ。
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: ステートメント1 | HがGの部分群であり、aがGに属している場合、aHがGの部分群であるのはaがHに属している場合に限ります。ステートメント2 | HがGの部分群であり、aとbがGに属している場合、aH = bHであるのはabがHに属している場合に限ります。
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+
+deepseek回答:
+answer: D， 
+正确答案是: C
+
+题目:
+question: 与えられた有限体の中で、その体の係数を持つ与えられた多項式のすべてのゼロを見つけなさい。x^2 + 1 in Z_2
+A: 0
+B: 1
+C: 0,1
+D: 2
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 指定された巡回群の要素の数を求めなさい：25によって生成されるZ_30の巡回部分群。
+A: 25
+B: 5
+C: 6
+D: 30
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: Z_12 x Z_8 の要素 (4, 2) の位数は
+A: 4
+B: 8
+C: 12
+D: 6
+
+deepseek回答:
+answer: D， 
+正确答案是: C
+
+题目:
+question: ステートメント1 | すべての環のイデアルはその環の部分環です。ステートメント2 | すべての環のすべての部分環はその環のイデアルです。
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+总题数: 100, 正确答案数: 76, 正确率: 76.00%
+题目:
+question: 方程式 e^x + x - 2 = 0 の実数解の数を k とし、区間 [0, 1] にない実数解の数を n とする。次のうち正しいものはどれか？
+A: k = 0 かつ n = 1
+B: k = 1 かつ n = 0
+C: k = n = 1
+D: k > 1
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 同型を除いて、各xに対してx + x + x + x = 0となるような位数16の加法的アーベル群Gはいくつ存在するか？
+A: 0
+B: 1
+C: 2
+D: 3
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: PがZ_5の係数を持ち、次数が7以下の多項式の集合であるとする。演算子DがPのp(x)をその導関数p′(x)に送るとき、Dの零空間nと値域rの次元は何か？
+A: n = 1 and r = 6
+B: n = 1 and r = 7
+C: n = 2 and r = 5
+D: n = 2 and r = 6
+
+deepseek回答:
+answer: A， 
+正确答案是: D
+
+题目:
+question: 曲線 xy = 8 から原点までの最短距離は
+A: 4
+B: 8
+C: 16
+D: 2sqrt(2)
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 25個のスーツケースがあり、そのうち5個が損傷しています。無作為に3個のスーツケースを選ぶとき、ちょうど2個が損傷している確率は何ですか？
+A: 2/69
+B: 1/30
+C: 2/23
+D: 12/125
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: (Z_{10}, +, x) を整数のモジュロ10の環とし、S を Z_{10} の部分集合 {0, 2, 4, 6, 8} で表されるとする。次のうち、誤っている記述はどれか？
+A: (S, +, x) はモジュロ10の加算の下で閉じている。
+B: (S, +, x) はモジュロ10の乗算の下で閉じている。
+C: (S, +, x) はモジュロ10の加算の下で単位元を持っている。
+D: (S, +, x) はモジュロ10の乗算の下で単位元を持っていない。
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 9メートルの長さのはしごが水平な地面に対して垂直な壁に立てかけられています。はしごの下端が壁から秒速2メートルの一定の速度で離れると、上端は壁に沿って下に滑ります。上端が地面から3メートルの高さにある瞬間、上端は何メートル毎秒の速さで下に滑りますか？
+A: 12*sqrt(2)
+B: 6*sqrt(2)
+C: 4*sqrt(2)
+D: 1/(2*sqrt(2))
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 長さ10の線分を考えます。点Aと点Bがランダムに選ばれ、AとBが線分を3つの小さな線分に分割します。これら3つの小さな線分が三角形の辺を形成する確率は何ですか？
+A: 0
+B: 10%
+C: 25%
+D: 50%
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 有限次元の実ベクトル空間Vと、P^2 = Pを満たす線形変換Pについて考える。以下のうち、必ず真であるものはどれか？
+I. Pは可逆である。
+II. Pは対角化可能である。
+III. Pは恒等変換かゼロ変換のいずれかである。
+A: None
+B: I only
+C: II only
+D: III only
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 次のうち正しいものはどれですか？
+A: すべてのコンパクト空間は完備である
+B: すべての完備空間はコンパクトである
+C: (a) でも (b) でもない。
+D: (a) と (b) の両方。
+
+deepseek回答:
+answer: C， 
+正确答案是: A
+
+题目:
+question: 離散グラフが完全であるとは、任意の頂点のペアを結ぶ辺が存在することを意味します。10個の頂点を持つ完全グラフには何本の辺がありますか？
+A: 10
+B: 20
+C: 25
+D: 45
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: Xが正の整数の集合上の離散確率変数であり、各正の整数nに対してX = nとなる確率が1/2^nであると仮定します。Yが同じ確率分布を持つ確率変数であり、XとYが独立している場合、変数XまたはYの少なくとも一方の値が3より大きくなる確率は何ですか？
+A: 1/64
+B: 15/64
+C: 1/4
+D: 3/8
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: V と W が7次元ベクトル空間 X の4次元部分空間である場合、以下のうち V と W の交差部分の次元としてあり得ないものはどれですか？
+A: 0
+B: 1
+C: 2
+D: 3
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 大きなクラスをチームに分ける必要があり、各生徒は正確に1つのチームのメンバーでなければなりません。しかし、各生徒はクラスメートの3人が嫌いです。生徒間の嫌悪は必ずしも相互のものではありません。チームのサイズが等しくなくてもよい場合、嫌いな人とチームメイトにならないようにするために、いくつのチームを作成する必要がありますか？
+A: 4
+B: 7
+C: 10
+D: 13
+
+deepseek回答:
+answer: A， 
+正确答案是: B
+
+题目:
+question: SofiaとTessはそれぞれ1から10までの整数からランダムに1つずつ選びます。選ばれた2つの数が互いに他方の平方にならない確率は何ですか？
+A: 0.64
+B: 0.72
+C: 0.81
+D: 0.95
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: Kが空でないR^nの部分集合であるとする。ここで、n > 1である。次のうち、必ず真であると言えるのはどれか？
+I. Kがコンパクトであれば、K上で定義されたすべての連続実数値関数は有界である。
+II. K上で定義されたすべての連続実数値関数が有界であれば、Kはコンパクトである。
+III. Kがコンパクトであれば、Kは連結である。
+A: I only
+B: II only
+C: III only
+D: I and II only
+
+deepseek回答:
+answer: A， 
+正确答案是: D
+
+题目:
+question: Vが実数の有限次元nのベクトル空間であると仮定します。VからV自身への行列の集合をM(V)と呼びます。TがM(V)に属しているとします。次の二つの部分空間U = {X ∈ M(V) : TX = XT}とW = {TX − XT : X ∈ M(V)}を考えます。次のうち、必ず真であるものはどれですか？
+I. VがTの固有ベクトルのみを含む基底を持つ場合、U = M(V)です。
+II. dim(U) + dim(W) = n^2
+III. dim(U) < n
+A: I only
+B: II only
+C: III only
+D: I and II only
+
+deepseek回答:
+answer: D， 
+正确答案是: B
+
+题目:
+question: Fをxyz空間でベクトル(-1, 0, 1)に平行な一定の単位力とする。時間t=0からt=1の間に、(t, t^2, t^3)によって与えられる経路に沿って移動する粒子に対して、Fによってなされる仕事は何か？
+A: -1/4
+B: -1/(4sqrt(2))
+C: 0
+D: sqrt(2)
+
+deepseek回答:
+answer: A， 
+正确答案是: C
+
+题目:
+question: Xを位相空間とし、A、B、CをXの空でない部分集合とする。ここで、A c B c Cであり、つまりAはBの真部分集合であり、BはCの真部分集合である。次のうち、真となるのはどれか？
+I. AとCが連結であれば、Bも連結である。
+II. AとCがコンパクトであれば、Bもコンパクトである。
+III. AとCがハウスドルフであれば、Bもハウスドルフである。
+A: I and II only
+B: III only
+C: I and III only
+D: I, II, and III
+
+deepseek回答:
+answer: B， 
+正确答案是: D
+
+题目:
+question: x_1 = 1 とし、すべての正の整数 n に対して x_(n+1) = sqrt(3+2x_n) とする。{x_n} が収束すると仮定した場合、lim x_n =
+A: 3
+B: e
+C: sqrt(5)
+D: 0
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: もし v が可逆行列 A の固有ベクトルである場合、以下のうちどれが必ず真ですか？
+I. v は 2A の固有ベクトルでもあります。
+II. v は A^2 の固有ベクトルでもあります。
+III. v は A^(-1) の固有ベクトルでもあります。
+A: I のみ
+B: II のみ
+C: III のみ
+D: I, II, III 全て
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 正の整数 k に対して、整数 k! の通常の十進表記がちょうど99個のゼロで終わるのは何個の k が存在しますか？
+A: None
+B: One
+C: Four
+D: Five
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: Rを乗法的単位元を持つ環とする。UがRの加法部分群であり、すべてのu ∈ Uとすべてのr ∈ Rに対してur ∈ Uである場合、UはRの右イデアルと言われる。Rが正確に2つの右イデアルを持つ場合、次のうちどれが必ず真であるか？
+I. Rは可換である。
+II. Rは除法環である（つまり、加法的単位元を除くすべての元が乗法的逆元を持つ）。
+III. Rは無限である。
+A: I only
+B: II only
+C: III only
+D: I and II only
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 6面サイコロ（通常通り、面は1から6までの数字が振られている）が偽物であることがわかっています。偶数が出る確率は奇数が出る確率の2倍です。このサイコロを2回投げたとき、最初のロールで5が出て、次のロールで6が出る確率は何ですか？
+A: 2/81
+B: 1/18
+C: 2/27
+D: 1/9
+
+deepseek回答:
+answer: C， 
+正确答案是: A
+
+题目:
+question: ステートメント1 | {s_n} と {t_n} が複素数の数列であり、lim_n→∞ s_n = s および lim_n→∞ t_n = t であると仮定する。lim_n→∞ s_n t_n = st である。ステートメント2 | 収束する部分列を持たない有界な実数の数列が存在する。
+A: True, True
+B: True, False
+C: False, True
+D: False, False
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: Z、整数の集合に対して、m • n = m + n + mn の方程式によって二項演算を定義する。以下のうち、二項構造 (Z, • ) について真であるのはどれか？
+I. この構造は演算が結合的でないため、群ではない。
+II. この構造は単位元が存在しないため、群ではない。
+III. この構造はすべての要素が逆元を持たないため、群ではない。
+IV. この構造は群である。
+A: I and II only
+B: I and III only
+C: II and III only
+D: III only
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: ケイトがGRE数学模擬テストを書くのにk日かかります。ジョンがGRE数学模擬テストを書くのにj日かかります。ケイトとジョンが交互に2日間のシフトで模擬テストに取り組む場合、ケイトが始めると10日かかり、ジョンが始めると10.5日かかります。ケイトとジョンが同時に作業した場合、模擬テストを完成させるのにどれくらいの時間がかかりますか？
+A: 9/2 days
+B: 5 days
+C: 41/8 days
+D: 36/7 days
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 半径1の円の中心に一つの頂点を持ち、他の二つの頂点が円上にある三角形の領域の最大面積は何ですか？
+A: 1/2
+B: 1
+C: sqrt(2)
+D: pi
+
+deepseek回答:
+answer: B， 
+正确答案是: A
+
+题目:
+question: f(x,y) = x^2 - 2xy + y^3 とする。次のうち正しいものはどれか？
+A: fは相対極値をすべて直線 x = y 上に持つ。
+B: fは相対極値をすべて放物線 x = y^2 上に持つ。
+C: fは点 (0, 0) で相対的な最小値を持つ。
+D: fは点 (2/3, 2/3) で絶対的な最小値を持つ。
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 5つのオブジェクトの順列の群で、要素の最大の位数は何ですか？
+A: 5
+B: 6
+C: 12
+D: 15
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: S(n)は正の整数nに関する命題であり、S(k)が真である場合、S(k + 1)も真でなければならない。さらに、ある正の整数n0が存在し、S(n0)が真ではない。次のうち、最も強い結論はどれか？
+A: S(n0 + 1) は真ではない。
+B: S(n0 - 1) は真ではない。
+C: S(n) は n <= n0 に対して真ではない。
+D: S(n) は n >= n0 に対して真ではない。
+
+deepseek回答:
+answer: D， 
+正确答案是: C
+
+题目:
+question: xyz空間において、原点に最も近い平面2x + y + 3z = 3上の点の座標は何ですか？
+A: (0, 0, 1)
+B: (3/7, 3/14, 9/14)
+C: (7/15, 8/15, 1/15)
+D: (5/6, 1/3, 1/3)
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 整数 n で、3 ≦ n ≦ 11 の範囲で、同型を除いて位数 n の群が1つだけ存在するのはどの n か？
+A: そのような整数 n は存在しない
+B: 3, 5, 7, 11 のみ
+C: 3, 5, 7, 9, 11 のみ
+D: 4, 6, 8, 10 のみ
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 木とは、閉路のない連結グラフのことです。5つの頂点を持つ非同型の木はいくつ存在しますか？
+A: 1
+B: 2
+C: 3
+D: 4
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: AとBがn x nの可逆行列で、n > 1であり、Iがn x nの単位行列であるとします。AとBが相似行列である場合、次のうちどの命題が必ず真となりますか？ I. A - 2IとB - 2Iは相似行列です。 II. AとBは同じトレースを持ちます。 III. A^-1とB^-1は相似行列です。
+A: I only
+B: II only
+C: III only
+D: I, II, and III
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: yz平面にある円Cの方程式が(y - 3)^2 + z^2 = 1であるとする。Cがz軸の周りに回転すると、生成される表面はトーラスである。このトーラスの方程式は何か？
+A: x^2 + y^2 + z^2 + 8 = 6y
+B: (x^2 + y^2 + z^2)^2 = 8 + 36(x^2 + z^2)
+C: (x^2 + y^2 + z^2 + 8)^2 = 36(x^2 + z^2)
+D: (x^2 + y^2 + z^2 + 8)^2 = 36(x^2 + y^2)
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 次のうち、y = x + e^x のグラフにおいて x = 0 で接線となる方程式はどれですか？
+A: y = 2x + 1
+B: y = 2x
+C: y = x + 2
+D: y = x + 1
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: Vをすべての実数2 x 3行列の実ベクトル空間とし、Wをすべての実数4 x 1列ベクトルの実ベクトル空間とする。もしTがVからWへの線形変換で、全射である場合、Tの核の部分空間の次元は何か？
+A: 2
+B: 3
+C: 4
+D: 5
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: ステートメント 1 | ∑|a_i| が発散し、∑ a_i = 2 の場合、項の並べ替え a_i_k が存在し、∑ a_i_k = 4 となる。ステートメント 2 | 閉じられた有界な距離空間 X と Y が存在し、連続写像 f : X → Y によって f(X) が「閉じられた有界」でない。
+A: True, True
+B: True, False
+C: False, True
+D: False, False
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: ユークリッド平面上の凸10角形における鋭角の最大数は
+A: 1
+B: 2
+C: 3
+D: 4
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: もし f(z) が全ての有限複素平面を実軸に写像する解析関数である場合、虚軸はどこに写像される必要がありますか？
+A: the entire real axis
+B: a point
+C: a ray
+D: an open finite interval
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 群 G において、すべての a, b に対して (ab)^2 = a^2b^2 が成り立つ場合、G は必ず
+A: finite
+B: cyclic
+C: of order two
+D: abelian
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: もしfが開区間(-1, 4)で定義された連続的に微分可能な実数値関数で、f(3) = 5 かつ すべてのxに対して f'(x) ≥ -1 を満たす場合、f(0)の最大可能値は何か？
+A: 3
+B: 4
+C: 5
+D: 8
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: AとBが実数成分のn×n行列であると仮定します。次のうち真実なのはどれですか？
+I. A^2のトレースは非負です。
+II. A^2 = Aの場合、Aのトレースは非負です。
+III. ABのトレースはAとBのトレースの積です。
+A: II only
+B: III only
+C: I and II only
+D: II and III only
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 標準的な10進数展開で、数7^25の1の位は何ですか？
+A: 1
+B: 3
+C: 5
+D: 7
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: ステートメント1 | f : X → Y は連続であり、X はコンパクトである。f は一様連続でなければならない。ステートメント2 | f(x), g(x) : R → R がどこでも微分可能である場合、f(g(x)) もどこでも微分可能でなければならない。
+A: True, True
+B: True, False
+C: False, True
+D: False, False
+
+deepseek回答:
+answer: B， 
+正确答案是: A
+
+题目:
+question: xy平面の第一象限で、曲線 y = x と y = x^2 によって囲まれた領域がy軸の周りに回転します。その結果得られる回転体の体積は
+A: π/12
+B: π/6
+C: π/3
+D: 2π/3
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: xy平面において、パラメトリック方程式 x = cos t と y = sin t、0 <= t <= π で表される曲線の長さは
+A: 3
+B: pi
+C: 3pi
+D: 3/2
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 次のうち、冪級数の収束区間として正しいものはどれですか？
+(I) [−1, 3)
+(II) (−∞, 0]
+(III) [2, 2] ∪ [3, 3]
+(IV) (−∞,∞)
+A: Only (II)
+B: Only (IV )
+C: (I) and (IV )
+D: (II) and (III)
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: もし f: R -> R が有界関数であり、ルベーグ可積分である場合、次のうちどれが必ず真であるか？
+A: f はリーマン可積分である。
+B: R の可算無限集合 E で、すべての x \in E において f が微分不可能であるようなものは存在しない。
+C: R の非可算部分集合 E で、すべての x \in E において f が微分不可能であるようなものは存在しない。
+D: 上記のいずれでもない。
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: xy平面において、x^(log y) = y^(log x) のグラフは
+A: the open first quadrant
+B: a closed curve
+C: a ray in the open first quadrant
+D: a single point
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: どのpに対してノルム ||x||_p は内積として表現できるか？
+A: 1
+B: 2
+C: p >= 1
+D: infinity
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: Sをコンパクトな位相空間、Tを位相空間とし、fをSからTへの上への関数とする。以下のfの条件のうち、Tのコンパクト性を保証するために十分な最も弱い条件はどれか？
+A: fは同相写像である。
+B: fは連続かつ単射である。
+C: fは連続である。
+D: fは単射である。
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 正三角形の内接円の半径が2のとき、その面積は何ですか？
+A: 12
+B: 16
+C: 12*sqrt(3)
+D: 16*sqrt(3)
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: n の値が何のとき、同型を除いてちょうど2つのアーベル群が存在するか？
+A: 4
+B: 7
+C: 8
+D: 12
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 次のうち、x, y, z ∈ R^k に対して常に成り立たないものはどれですか？
+A: |x| ≥ 0
+B: |x · y| ≤ |x||y|
+C: |x| = 0 であることと x = 0 であることは同値である
+D: |x + y| = |x| + |y|
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: Vを、最大次数が3の実数係数多項式からなるベクトル空間とし、通常の演算の下で考える。WをVの部分空間であり、すべての多項式 p(x) が p(0) = p(1) = p(-1) = 0 を満たすものとする。このとき、dim V + dim W は
+A: 4
+B: 5
+C: 6
+D: 7
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: もしVとWがR^4の2次元の部分空間である場合、部分空間VとWの交差の可能な次元は何ですか？
+A: 1 only
+B: 2 only
+C: 0 and 1 only
+D: 0, 1, and 2 only
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 曲線 y = (sin x + cos x)^4 と y = (sin x - cos x)^4 は x = 0 で交差します。a がこれらの曲線が次に交差する最小の正の x の値である場合、x = 0 から x = a までのこれらの曲線の間の面積を求めなさい。
+A: 2
+B: π
+C: 4
+D: 3π/2
+
+deepseek回答:
+answer: A， 
+正确答案是: C
+
+题目:
+question: もし f が平面から実数への線形変換で、f(1, 1) = 1 で f(-1, 0) = 2 の場合、f(3, 5) はいくつになりますか？
+A: 9
+B: 8
+C: 0
+D: -5
+
+deepseek回答:
+answer: D， 
+正确答案是: A
+
+题目:
+question: 多項式 2x^5 + 8x - 7 には実数解がいくつありますか？
+A: None
+B: One
+C: Two
+D: Three
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 大学の数学科には10人の教授がおり、来学期には20の異なるコースを提供する予定です。各教授は正確に2つのコースを担当し、各コースには正確に1人の教授が割り当てられます。どの教授も任意のコースを担当することができる場合、10人の教授を20のコースに割り当てる異なる完全な割り当ては何通り可能でしょうか？
+A: 20!/2^(10)
+B: 10!/2^9
+C: 10^(20) - 2^(10)
+D: 10^(20) - 100
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 次のうち正しいものはどれですか:
+A: 複素数 C に線形順序関係 ≤ を置くことができ、その場合 (C, +, ×, ≤) は順序体にならない。
+B: 複素数 C に線形順序関係を置くことができ、それによって (C, +, ×, ≤) が順序体になる。
+C: (a) も (b) も正しくない。
+D: (a) と (b) の両方が正しい。
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: あるゲームで、二人のプレイヤーが交互に公正なコインを投げます。最初に表を出したプレイヤーが勝者となります。最初にコインを投げるプレイヤーがゲームに勝つ確率は
+A: 1/4
+B: 1/3
+C: 1/2
+D: 2/3
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 次のうち群ではないものはどれですか？
+A: The integers under addition
+B: The nonzero integers under multiplication
+C: The nonzero real numbers under multiplication
+D: The complex numbers under addition
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: x と y が正の整数で、3x + 7y が 11 で割り切れる場合、次のうちどれが必ず 11 で割り切れるか？
+A: 4x + 6y
+B: x + y + 5
+C: 9x + 4y
+D: 4x - 9y
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 式 x + 4z の最小値は、制約条件 x^2 + y^2 + z^2 <= 2 の下で R^3 上で定義された関数として何ですか？
+A: 0
+B: -2
+C: -sqrt(34)
+D: -sqrt(35)
+
+deepseek回答:
+answer: B， 
+正确答案是: C
+
+题目:
+question: Rを環とし、UとVをRの（両側）イデアルとする。次のうち、Rのイデアルでなければならないものはどれか？
+I. {u + v : u ∈ U かつ v ∈ V}
+II. {uv : u ∈ U かつ v ∈ V}
+III. {x : x ∈ U かつ x ∈ V}
+A: II only
+B: III only
+C: I and II only
+D: I and III only
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: x軸と関数 f(x) = x/(1 + x^3) によって囲まれた領域がx軸の周りに回転します。生成された立体の体積は何ですか？
+A: π/3
+B: π/4
+C: π
+D: 2π
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 今日が水曜日だと仮定します。10^(10^(10))日後は何曜日ですか？
+A: Sunday
+B: Monday
+C: Tuesday
+D: Wednesday
+
+deepseek回答:
+answer: B， 
+正确答案是: A
+
+题目:
+question: 逆さまの円錐の頂点にある穴から水が毎分3 cm³の割合で滴り落ちます。この円錐の高さは2 cm、半径は1 cmです。水位が円錐の頂上から半センチメートル下のとき、水の高さはどの割合で変化しますか？円錐の体積は V = (π/3)*r^2*h で、ここで r は半径、h は円錐の高さです。
+A: −48/π cm/min
+B: −4/(3π) cm/min
+C: −8/(3π) cm/min
+D: −16/(3π) cm/min
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 線形方程式のシステムを考える
+w + 3x + 2y + 2z = 0
+w + 4x + y = 0
+3w + 5x + 10y + 14z = 0
+2w + 5x + 5y + 6z = 0
+解の形が (w, x, y, z) で、w、x、y、z が実数である。次のうち、誤っている記述はどれか？
+A: このシステムは一貫性がある。
+B: このシステムには無限に多くの解がある。
+C: 任意の二つの解の和は解である。
+D: すべての解は (-5, 1, 1, 0) のスカラー倍である。
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: もし c > 0 で、すべての実数 x に対して f(x) = e^x - cx である場合、f の最小値は
+A: f(c)
+B: f(e^c)
+C: f(1/c)
+D: f(log c)
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: Aが3×3行列で、det(A − λI) = −λ^3 + 3λ^2 + λ − 3（ここでIは3×3の単位行列）であるとする。次のうち、Aについて真となるのはどれか？
+I. Aのトレースは3である。
+II. Aの行列式は−3である。
+III. 行列Aには固有値−3と1がある。
+A: I only
+B: II only
+C: III only
+D: I and II only
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: y = f(x) が微分方程式 x dy + (y - xe^x) dx = 0 の解であり、x = 1 のとき y = 0 であるとする。f(2) の値は何か？
+A: 1/(2e)
+B: 1/e
+C: e^2/2
+D: 2e
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 公正なコインを100回投げ、各投げで表か裏が出ます。Hが表の出た合計回数、Tが裏の出た合計回数とすると、以下のどの事象が最も確率が高いですか？
+A: H = 50
+B: T >= 60
+C: 51 <= H <= 55
+D: H >= 48 and T >= 48
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: ステートメント1 | 関数 f : [a, b] が局所的な最大値を持つと仮定します。f'(x) は存在し、0に等しい必要がありますか？ ステートメント2 | RからQへの非定数連続写像が存在します。
+A: True, True
+B: True, False
+C: False, True
+D: False, False
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: I ≠ A ≠ -I であり、I は単位行列、A は実数の 2 x 2 行列である場合、A = A^(-1) であれば、A のトレースは
+A: 2
+B: 1
+C: 0
+D: -1
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 合計xフィートのフェンスで平らな長方形の庭の3辺を形成します。xの項で表される庭の最大可能面積は何ですか？
+A: x^2/9
+B: x^2/8
+C: x^2/4
+D: x^2
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: ステートメント1 | もしAが連結であれば、Aの閉包も連結である必要があります。ステートメント2 | すべての連続関数 f : (0, 1) → (0, 1) は不動点を持つ。
+A: True, True
+B: True, False
+C: False, True
+D: False, False
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 次のうち、最も濃度が大きい集合はどれですか？
+A: R
+B: ZからZへのすべての関数の集合
+C: Rから{0, 1}へのすべての関数の集合
+D: Rのすべての有限部分集合の集合
+
+deepseek回答:
+answer: B， 
+正确答案是: C
+
+题目:
+question: f(x) が原点を通るグラフの関数であるとする。すべての整数 n に対して f(2n) = n^2 + f[2(n - 1)] が成り立つ場合、f(8) の値は何か？
+A: 24
+B: 30
+C: 32
+D: 36
+
+deepseek回答:
+answer: D， 
+正确答案是: B
+
+题目:
+question: 位数が72の構造的に異なるアーベル群はいくつありますか？
+A: 4
+B: 6
+C: 8
+D: 9
+
+deepseek回答:
+answer: D， 
+正确答案是: B
+
+题目:
+question: 有限群Gが位数7の部分群を含むが、単位元以外に自己逆元を持たない場合、Gの位数は次のうちどれか
+A: 27
+B: 28
+C: 35
+D: 37
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: f(x, y) = x^3 + y^3 + 3xy とする。すべての実数 x と y に対して、f は異なる点 P と Q において
+A: P と Q で局所最大
+B: P と Q で鞍点
+C: P で局所最大、Q で鞍点
+D: P で局所最小、Q で鞍点
+
+deepseek回答:
+answer: D， 
+正确答案是: C
+
+题目:
+question: もしAが実数直線Rの部分集合であり、すべての有理数を含む場合、以下のうちどれが必ず真であるか？
+A: Aが開集合であれば、A = Rである。
+B: Aが閉集合であれば、A = Rである。
+C: Aが非可算であれば、A = Rである。
+D: Aが非可算であれば、Aは開集合である。
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: Mを5 x 5の実行列とする。以下の5つの条件のうち、正確に4つが互いに等価である。5つの条件のうち、他の4つと等価でないものはどれか？
+A: Mの任意の2つの異なる列ベクトルuとvに対して、集合{u, v}は線形独立である。
+B: 斉次方程式Mx = 0は自明な解のみを持つ。
+C: 方程式Mx = bは、任意の実数5 x 1列ベクトルbに対して一意の解を持つ。
+D: Mの行列式は非ゼロである。
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 方程式 cos(97x) = x を満たす正の数 x はいくつありますか？
+A: 1
+B: 15
+C: 31
+D: 49
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 次のうち、非ゼロの要素の積がゼロになる可能性がある環はどれですか？
+A: The ring of complex numbers
+B: The ring of integers modulo 11
+C: The ring of continuous real-valued functions on [0, 1]
+D: The ring {a + b * sqrt(2) : a and b are rational numbers}
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 群 G の写像 x -> axa^2 が準同型であるのは次の場合に限ります
+A: G がアーベル群である
+B: G = {e}
+C: a^3 = e
+D: a^2 = a
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: もしAが2×2行列で、その(i, j)成分がi + jに等しいとし、Bが3×3行列で、その(i, j)成分がi + jに等しいとした場合、detA + detBの和の値を求めなさい。
+A: -2
+B: -1
+C: 0
+D: 2
+
+deepseek回答:
+answer: A， 
+正确答案是: B
+
+题目:
+question: もし f : (0, 1) → (0, 1] であるなら、次のうちどれが真である可能性がありますか？
+I. f は一対一で全射です。
+II. f の像はコンパクトです。
+III. f は連続で、一対一で全射です。
+A: I のみ
+B: II のみ
+C: I と II のみ
+D: I と III のみ
+
+deepseek回答:
+answer: A， 
+正确答案是: C
+
+题目:
+question: 実数 x が [0, 3] の区間でランダムに選ばれ、実数 y が [0, 4] の区間でランダムに選ばれた場合、x < y となる確率は何ですか？
+A: 1/2
+B: 7/12
+C: 5/8
+D: 2/3
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 点 (x, y) が R^2 内で選ばれる確率は、不等式 0 < |x| + |y| < 1 で記述される領域内で一様ランダム分布に従います。2(x + y) > 1 である確率は何ですか？
+A: 0
+B: 1/4
+C: sqrt(2)/4
+D: 1/sqrt(2)
+
+deepseek回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: (1+i)^10 =
+A: 1
+B: i
+C: 32
+D: 32i
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: もし U と V が R^5 の3次元の部分空間である場合、U ∩ V の可能な次元は何ですか？
+A: 0
+B: 1
+C: 0 または 1
+D: 1, 2, または 3
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: Sを、単位正方形 [0, 1] × [0, 1] 内のすべての点 (x, y) で、x または y、またはその両方が無理数であるような R^2 の部分集合とする。R^2 の標準位相に関して、Sは
+A: closed
+B: open
+C: connected
+D: totally disconnected
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 次のうち、放物線 x^2 = y + 4 と最も交点を持つ円はどれですか？
+A: x^2 + y^2 = 1
+B: x^2 + y^2 = 2
+C: x^2 + y^2 = 9
+D: x^2 + y^2 = 16
+
+deepseek回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: Xは有限集合で、次の性質を持っています：Xの部分集合でちょうど3つの要素を含むものの数は、Xの部分集合でちょうど2つの要素を含むものの数よりも14多いです。Xの部分集合でちょうど4つの要素を含むものはいくつありますか？
+A: 24
+B: 25
+C: 28
+D: 35
+
+deepseek回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 線形変換 T: R^2 -> R^2 は点 (1, 2) を (2, 3) に、点 (-1, 2) を (2, -3) に写像します。それでは、点 (2, 1) はどこに写像されますか？
+A: (1, 6)
+B: (-1, 4)
+C: (3, 2)
+D: (-4, 3)
+
+deepseek回答:
+answer: A， 
+正确答案是: A
+
+总题数: 100, 正确答案数: 79, 正确率: 79.00%
+
+全部统计: 总题数: 704, 正确答案数: 601, 正确率: 85.37%

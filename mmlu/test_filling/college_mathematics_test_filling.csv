@@ -1,0 +1,26 @@
+"Up to isomorphism, how many additive abelian groups G of order 16 have the property that x + x + x + x = 0 for each x in G ?",3
+"There are 25 suitcases, 5 of which are damaged. Three suitcases are selected at random. What is the probability that exactly 2 are damaged?",2/23
+A discrete graph is complete if there is an edge connecting any pair of vertices. How many edges does a complete graph with 10 vertices have?,45
+"Suppose X is a discrete random variable on the set of positive integers such that for each positive integer n, the probability that X = n is 1/2^n. If Y is a random variable with the same probability distribution and X and Y are independent, what is the probability that the value of at least one of the variables X and Y is greater than 3 ?",15/64
+Let V and W be 4-dimensional subspaces of a 7-dimensional vector space X. Which of the following CANNOT be the dimension of the subspace V intersect W?,0
+"A large class is to be divided into teams and each student must be a member of exactly one team. However, each student dislikes three of their classmates. Dislike between students need not be mutual. If the teams do not need to be equally sized, how many must be created so that no student is the teammate of someone they dislike?",7
+Sofia and Tess will each randomly choose one of the 10 integers from 1 to 10. What is the probability that neither integer chosen will be the square of the other?,0.95
+"A six-sided die (whose faces are numbered 1 through 6, as usual) is known to be counterfeit: The probability of rolling any even number is twice the probability of rolling any odd number. What is the probability that if this die is thrown twice, the first roll will be a 5 and the second roll will be a 6?",2/81
+What is the largest order of an element in the group of permutations of 5 objects?,6
+A tree is a connected graph with no cycles. How many nonisomorphic trees with 5 vertices exist?,3
+"Let V be the real vector space of all real 2 x 3 matrices, and let W be the real vector space of all real 4 x 1 column vectors. If T is a linear transformation from V onto W, what is the dimension of the subspace kernel of T?",2
+The maximum number of acute angles in a convex 10-gon in the Euclidean plane is,3
+"If f is a continuously differentiable real-valued function defined on the open interval (-1, 4) such that f(3) = 5 and f'(x) ≥ -1 for all x, what is the greatest possible value of f(0)?",8
+What is the units digit in the standard decimal expansion of the number 7^25?,7
+For which value of n are there exactly two abelian groups of order n up to isomorphism?,4
+"Let V be the vector space, under the usual operations, of real polynomials that are of degree at most 3. Let W be the subspace of all polynomials p (x) in V such that p (0) = p(1) = p(-1) = 0. Then dim V + dim W is",5
+"If f is a linear transformation from the plane to the real numbers and if f(1, 1) = 1 and f(-1, 0) = 2, then f(3, 5) =",9
+In a game two players take turns tossing a fair coin; the winner is the first one to toss a head. The probability that the player who makes the first toss wins the game is,2/3
+"Let I != A != -I, where I is the identity matrix and A is a real 2 x 2 matrix. If A = A^(-1), then the trace of A is",0
+"Let f(x) be a function whose graph passes through the origin. If f(2n) = n^2 + f[2(n - 1)] for every integer n, what is the value of f(8)?",30
+How many structurally distinct Abelian groups have order 72?,6
+"If the finite group G contains a subgroup of order seven but no element (other than the identity) is its own inverse, then the order of G could be",35
+How many positive numbers x satisfy the equation cos(97x) = x?,31
+"If A is the 2 by 2 matrix whose (i, j) entry is equal to i + j, and B is the 3 by 3 matrix whose (i, j) entry is equal to i + j, find the value of the sum detA + detB.",-1
+"If a real number x is chosen at random in the interval [0, 3] and a real number y is chosen at random in the interval [0, 4], what is the probability that x < y?",5/8
+X is a finite set with the following property: The number of subsets of X that contain exactly 3 elements is 14 more than the number of subsets of X that contain exactly 2 elements. How many subsets of X contain exactly 4 elements?,35
