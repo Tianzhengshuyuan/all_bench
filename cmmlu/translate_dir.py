@@ -4,7 +4,7 @@ import shutil
 import argparse
 
 languages = [
-    ("中文", "chinese"),
+    ("英语", "english"),
     ("西班牙语", "spanish"),
     ("印地语", "hindi"),
     ("阿拉伯语", "arabic"),

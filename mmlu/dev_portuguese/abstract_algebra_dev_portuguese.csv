@@ -1,6 +1,0 @@
-Encontre todos os c em Z_3 tais que Z_3[x]/(x^2 + c) seja um campo.,0,1,2,3,B
-"Declaração 1 | Se aH é um elemento de um grupo quociente, então |aH| divide |a|. Declaração 2 | Se H e K são subgrupos de G, então HK é um subgrupo de G.","True, True","False, False","True, False","False, True",B
-Declaração 1 | Todo elemento de um grupo gera um subgrupo cíclico do grupo. Declaração 2 | O grupo simétrico S_10 possui 10 elementos.,"True, True","False, False","True, False","False, True",C
-Declaração 1| Toda função de um conjunto finito sobre si mesmo deve ser injetiva. Declaração 2 | Todo subgrupo de um grupo abeliano é abeliano.,"True, True","False, False","True, False","False, True",A
-Encontre a característica do anel 2Z.,0,3,12,30,A
-Encontre todos os c em Z_3 tais que Z_3[x]/(x^2 + c) forme um campo.,0,1,2,3,B

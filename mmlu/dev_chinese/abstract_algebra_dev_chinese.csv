@@ -1,6 +1,0 @@
-找出所有的 c 属于 Z_3 使得 Z_3[x]/(x^2 + c) 是一个域。,0,1,2,3,B
-声明 1 | 如果 aH 是一个因子群的元素，那么 |aH| 整除 |a|。声明 2 | 如果 H 和 K 是 G 的子群，那么 HK 是 G 的子群。,"True, True","False, False","True, False","False, True",B
-声明 1 | 群的每个元素都生成该群的一个循环子群。声明 2 | 对称群 S_10 有 10 个元素。,"True, True","False, False","True, False","False, True",C
-声明1| 每个从有限集合到其自身的函数必须是一对一的。声明2 | 每个阿贝尔群的子群都是阿贝尔群。,"True, True","False, False","True, False","False, True",A
-找出环2Z的特征。,0,3,12,30,A
-找出所有在 Z_3 中的 c，使得 Z_3[x]/(x^2 + c) 构成一个域。,0,1,2,3,B

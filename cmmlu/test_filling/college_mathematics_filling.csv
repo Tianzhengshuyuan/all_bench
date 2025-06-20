@@ -1,0 +1,7 @@
+设 $f^{\prime}(-x)=x\left[f^{\prime}(x)-1\right]$， 则 $f(x)$ 极值点的个数为,2
+设 $\lim _{x \rightarrow 0} \frac{(1+x)(1+2 x)(1+3 x)+a}{x}=6$， 则 $a$ 的值为 ( ),-1
+记行列式 $\left|\begin{array}{cccc}x-2 & x-1 & x-2 & x-3 \\ 2 x-2 & 2 x-1 & 2 x-2 & 2 x-3 \\ 3 x-3 & 3 x-2 & 4 x-5 & 3 x-5 \\ 4 x & 4 x-3 & 5 x-7 & 4 x-3\end{array}\right|$ 为 $f(x)$， 则方程 $f(x)=0$ 的根的个数为,2
+设随机变量 $X， Y$ 相互独立， $X$ 服从标准正态分布 $N(0，1)， Y$ 的分布律为 $P\{Y=0\}=P\{Y=1\}=\frac{1}{2}$， 令 $Z=X Y$， 则 $Z$ 的分布函数的间断点个数为 ( ),1
+若 $D=\left|\begin{array}{cccc}3 & 0 & 4 & 0 \\ 1 & 1 & 1 & 1 \\ 0 & -1 & 0 & 0 \\ 5 & 3 & -2 & 2\end{array}\right|$， 则 $D$ 中第四行元素的余子式之和为 ( ).,-2
+设 $\lim _{x \rightarrow a} f(x)=A， \lim _{x \rightarrow a} g(x)$ 不存在， $\lim _{x \rightarrow a} h(x)$ 不存在， 则(1) $\lim _{x \rightarrow a}[f(x) \cdot g(x)]$ 不存在;(2) $\lim _{x \rightarrow a}[g(x)+h(x)]$ 不存在;(3) $\lim _{x \rightarrow a}[h(x) \cdot g(x)]$ 不存在;(4) $\lim _{x \rightarrow a}[g(x)+f(x)]$ 不存在;以上命题中正确的个数是,1
+设 $\lim _{x \rightarrow 0} \frac{(1+x)(1+2 x)(1+3 x)+a}{x}=6$， 则 $a$ 的值为 ().,-1
