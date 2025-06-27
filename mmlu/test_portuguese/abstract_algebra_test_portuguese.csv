@@ -1,70 +1,124 @@
-"Encontre o grau da extensão de campo dada Q(sqrt(2), sqrt(3), sqrt(18)) sobre Q.",0,4,2,6,B
+"Encontre o grau da extensão de corpo dada Q(sqrt(2), sqrt(3), sqrt(18)) sobre Q.",0,4,2,6,B
 "Seja p = (1, 2, 5, 4)(2, 3) em S_5. Encontre o índice de <p> em S_5.",8,2,24,120,C
-Encontre todos os zeros no corpo finito indicado do polinômio dado com coeficientes nesse corpo. x^5 + 3x^3 + x^2 + 2x em Z_5,0,1,"0,1","0,4",D
-"Afirmação 1 | Um grupo fator de um grupo não-Abeliano é não-Abeliano. Afirmação 2 | Se K é um subgrupo normal de H e H é um subgrupo normal de G, então K é um subgrupo normal de G.","True, True","False, False","True, False","False, True",B
-"Encontre o produto dos polinômios dados no anel de polinômios especificado. f(x) = 4x - 5, g(x) = 2x^2 - 4x + 2 em Z_8[x].",2x^2 + 5,6x^2 + 4x + 6,0,x^2 + 1,B
-"Afirmação 1 | Se um grupo tem um elemento de ordem 15, ele deve ter pelo menos 8 elementos de ordem 15. Afirmação 2 | Se um grupo tem mais de 8 elementos de ordem 15, ele deve ter pelo menos 16 elementos de ordem 15.","True, True","False, False","True, False","False, True",A
-Afirmação 1 | Toda imagem homomórfica de um grupo G é isomórfica a um grupo quociente de G. Afirmação 2 | As imagens homomórficas de um grupo G são as mesmas (a menos de isomorfismo) que os grupos quocientes de G.,"True, True","False, False","True, False","False, True",A
-Afirmação 1 | Um homomorfismo de anel é injetivo se e somente se o núcleo for {0}. Afirmação 2 | Q é um ideal em R.,"True, True","False, False","True, False","False, True",D
+Encontre todas as raízes no corpo finito indicado do polinômio dado com coeficientes nesse corpo. x^5 + 3x^3 + x^2 + 2x em Z_5,0,1,"0,1","0,4",D
+"Afirmação 1 | Um grupo fator de um grupo não abeliano é não abeliano. Afirmação 2 | Se K é um subgrupo normal de H e H é um subgrupo normal de G, então K é um subgrupo normal de G.","Verdadeiro, Verdadeiro","Falso, Falso","Verdadeiro, Falso","Falso, Verdadeiro",B
+"Encontre o produto dos polinômios dados no anel de polinômios indicado. f(x) = 4x - 5, g(x) = 2x^2 - 4x + 2 em Z_8[x].",2x^2 + 5,6x^2 + 4x + 6,0,x^2 + 1,B
+"Afirmação 1 | Se um grupo tem um elemento de ordem 15, ele deve ter pelo menos 8 elementos de ordem 15.  
+Afirmação 2 | Se um grupo tem mais de 8 elementos de ordem 15, ele deve ter pelo menos 16 elementos de ordem 15.","Verdadeiro, Verdadeiro","Falso, Falso","Verdadeiro, Falso","Falso, Verdadeiro",A
+Afirmação 1 | Toda imagem homomórfica de um grupo G é isomorfa a um grupo fator de G. Afirmação 2 | As imagens homomórficas de um grupo G são as mesmas (a menos de isomorfismo) que os grupos fatores de G.,"Verdadeiro, Verdadeiro","Falso, Falso","Verdadeiro, Falso","Falso, Verdadeiro",A
+Afirmação 1 | Um homomorfismo de anéis é injetivo se e somente se o núcleo é {0}. Afirmação 2 | Q é um ideal em R.,"True, True","False, False","True, False","False, True",D
 Encontre o grau da extensão de campo dada Q(sqrt(2) + sqrt(3)) sobre Q.,0,4,2,6,B
 Encontre todos os zeros no corpo finito indicado do polinômio dado com coeficientes nesse corpo. x^3 + 2x + 2 em Z_7,1,2,"2,3",6,C
-"Afirmação 1 | Se H é um subgrupo de G e a pertence a G, então |aH| = |Ha|. Afirmação 2 | Se H é um subgrupo de G e a e b pertencem a G, então aH e Hb são idênticos ou disjuntos.","True, True","False, False","True, False","False, True",C
-"Se A = {1, 2, 3} então a relação S = {(1, 1), (2, 2)} é",symmetric only,anti-symmetric only,both symmetric and anti-symmetric,an equivalence relation,C
-"Encontre a ordem do grupo fatorial (Z_11 x Z_15)/(<1, 1>)",1,2,5,11,A
+"Afirmação 1 | Se H é um subgrupo de G e a pertence a G, então |aH| = |Ha|.  
+Afirmação 2 | Se H é um subgrupo de G e a e b pertencem a G, então aH e Hb são idênticos ou disjuntos.","True, True","False, False","True, False","False, True",C
+"Se A = {1, 2, 3}, então a relação S = {(1, 1), (2, 2)} é",simétrica apenas,anti-simétrica apenas,tanto simétrica quanto anti-simétrica,uma relação de equivalência,C
+"Encontre a ordem do grupo fator (Z_11 x Z_15)/(<1, 1>)",1,2,5,11,A
 O polinômio x^3 + 2x^2 + 2x + 1 pode ser fatorado em fatores lineares em Z_7[x]. Encontre esta fatoração.,(x − 2)(x + 2)(x − 1),(x + 1)(x + 4)(x − 2),(x + 1)(x − 4)(x − 2),(x - 1)(x − 4)(x − 2),C
 Encontre a ordem máxima possível para um elemento de S_n para n = 10.,6,12,30,105,C
-Afirmação 1 | R é um corpo de decomposição de algum polinômio sobre Q. Afirmação 2 | Existe um corpo com 60 elementos.,"True, True","False, False","True, False","False, True",B
-"O inverso de -i no grupo multiplicativo {1, -1, i, -i} é",1,-1,i,-i,C
+"Afirmação 1 | R é um corpo de decomposição de algum polinômio sobre Q.  
+Afirmação 2 | Existe um corpo com 60 elementos.","Verdadeiro, Verdadeiro","Falso, Falso","Verdadeiro, Falso","Falso, Verdadeiro",B
+"O inverso de -i no grupo multiplicativo {1, -1, i , -i} é",1,-1,i,-i,C
 "Calcule o produto no anel dado. (2,3)(3,5) em Z_5 x Z_9","(1,1)","(3,1)","(1,6)","(3,6)",C
-O conjunto de todos os números reais sob a operação usual de multiplicação não é um grupo porque,multiplication is not a binary operation,multiplication is not associative,identity element does not exist,zero has no inverse,D
-"Afirmação 1| Todo grupo de ordem p^2, onde p é primo, é Abelian. Afirmação 2 | Para um primo fixo p, um p-subgrupo de Sylow de um grupo G é um subgrupo normal de G se e somente se for o único p-subgrupo de Sylow de G.","True, True","False, False","True, False","False, True",A
-"Afirmação 1 | Para grupos finitos G e H, |G + H| = |G||H|. (G + H é o produto direto interno.) Afirmação 2 | Se r divide m e s divide n, então Z_m + Z_n tem um subgrupo isomórfico a Z_r + Z_s.","True, True","False, False","True, False","False, True",A
-"Encontre a soma dos polinômios dados no anel de polinômios especificado. f(x) = 4x - 5, g(x) = 2x^2 - 4x + 2 em Z_8[x].",2x^2 + 5,6x^2 + 4x + 6,0,x^2 + 1,A
-"Afirmação 1 | Qualquer conjunto de dois vetores em R^2 é linearmente independente. Afirmação 2 | Se V = span(v1, ... , vk) e {v1, ... , vk} são linearmente independentes, então dim(V) = k.","True, True","False, False","True, False","False, True",D
-O conjunto de todas as raízes n-ésimas da unidade sob a multiplicação de números complexos forma um(a),semi group with identity,commutative semigroups with identity,group,abelian group,D
+"O conjunto de todos os números reais sob a operação usual de multiplicação não é um grupo, já que",multiplicação não é uma operação binária,multiplicação não é associativa,o elemento identidade não existe,zero não tem inverso,D
+"Afirmação 1 | Todo grupo de ordem p^2, onde p é um número primo, é abeliano. Afirmação 2 | Para um primo fixo p, um subgrupo de Sylow p de um grupo G é um subgrupo normal de G se e somente se for o único subgrupo de Sylow p de G.","True, True","False, False","True, False","False, True",A
+"Afirmação 1 | Para grupos finitos G e H, |G + H| = |G||H|. (G + H é o produto direto interno.)  
+Afirmação 2 | Se r divide m e s divide n, então Z_m + Z_n tem um subgrupo isomorfo a Z_r + Z_s.","True, True","False, False","True, False","False, True",A
+"Encontre a soma dos polinômios dados no anel de polinômios fornecido. f(x) = 4x - 5, g(x) = 2x^2 - 4x + 2 em Z_8[x].",2x^2 + 5,6x^2 + 4x + 6,0,x^2 + 1,A
+"Afirmação 1 | Qualquer conjunto com dois vetores em R^2 é linearmente independente. Afirmação 2 | Se V = span(v1, ... , vk) e {v1, ... , vk} são linearmente independentes, então dim(V) = k.","True, True","False, False","True, False","False, True",D
+O conjunto de todas as enésimas raízes da unidade sob multiplicação dos números complexos forma um/uma,semigrupo com identidade,semigrupo comutativo com identidade,grupo,grupo abeliano,D
 "Afirmação 1 | Todo ideal maximal é um ideal primo. Afirmação 2 | Se I é um ideal maximal de um anel comutativo R, então R/I é um corpo.","True, True","False, False","True, False","False, True",B
-"Seja G o conjunto de todas as matrizes n x n não singulares com entradas de números racionais. Então, sob multiplicação, G é um(a)",subgroup,finite abelian group,"infinite, non abelian group","infinite, abelian",C
+"Seja G o conjunto de todas as matrizes n x n não singulares com números racionais como entradas. Então, sob a multiplicação, G é um/uma",subgroup,finite abelian group,"infinite, non abelian group","infinite, abelian",C
 Afirmação 1 | Todo grupo de ordem 42 tem um subgrupo normal de ordem 7. Afirmação 2 | Todo grupo de ordem 42 tem um subgrupo normal de ordem 8.,"True, True","False, False","True, False","False, True",C
-Determine se o polinômio em Z[x] satisfaz o critério de Eisenstein para irredutibilidade sobre Q. 8x^3 + 6x^2 - 9x + 24,"Yes, with p=2.","Yes, with p=3.","Yes, with p=5.",No.,B
-Afirmação 1 | A imagem de um grupo de 6 elementos sob um homomorfismo pode ter 12 elementos. Afirmação 2 | Existe um homomorfismo de algum grupo de 6 elementos em algum grupo de 12 elementos.,"True, True","False, False","True, False","False, True",D
-Afirmação 1 | A imagem homomórfica de um grupo cíclico é cíclica. Afirmação 2 | A imagem homomórfica de um grupo Abelian é Abelian.,"True, True","False, False","True, False","False, True",A
-"Afirmação 1 | Se H é um subgrupo de um grupo G e a pertence a G, então aH = Ha. Afirmação 2 | Se H é normal em G e a pertence a G, então ah = ha para todo h em H.","True, True","False, False","True, False","False, True",B
-"Se (G, .) é um grupo tal que (ab)^-1 = a^-1b^-1, para todos a, b em G, então G é um(a)",commutative semi group,abelian group,non-abelian group,None of these,B
-"Afirmação 1 | Em um espaço vetorial de dimensão finita, todo conjunto linearmente independente de vetores está contido em uma base. Afirmação 2 | Se B_1 e B_2 são bases para o mesmo espaço vetorial, então |B_1| = |B_2|.","True, True","False, False","True, False","False, True",A
-"Sabe-se que algum grupo (G, 0) é abeliano. Então, qual das seguintes opções é VERDADEIRA para G?",g = g^-1 para todo g em G,g = g^2 para todo g em G,"(g o h)^2 = g^2 o h^2 para todo g,h em G",G é de ordem finita,C
-"Afirmação 1 | Se T: V -> W é uma transformação linear e dim(V) < dim(W) < 1, então T deve ser injetiva. Afirmação 2 | Seja dim(V) = n e suponha que T: V -> V é linear. Se T é injetiva, então é uma bijeção.","True, True","False, False","True, False","False, True",A
-"Encontre o grau da extensão de campo dada Q(sqrt(2), sqrt(3)) sobre Q.",0,4,2,6,B
-Calcule o produto no anel fornecido. (20)(-8) em Z_26,0,1,11,22,D
-Determine se o polinômio em Z[x] satisfaz o critério de Eisenstein para irredutibilidade sobre Q. x^2 - 12,"Yes, with p=2.","Yes, with p=3.","Yes, with p=5.",No.,B
+Determine se o polinômio em Z[x] satisfaz o critério de Eisenstein para irredutibilidade sobre Q. 8x³ + 6x² - 9x + 24,"Sim, com p=2.","Sim, com p=3.","Sim, com p=5.",Não.,B
+"Afirmação 1 | A imagem de um grupo de 6 elementos sob um homomorfismo pode ter 12 elementos.  
+Afirmação 2 | Existe um homomorfismo de algum grupo de 6 elementos para algum grupo de 12 elementos.","Verdadeiro, Verdadeiro","Falso, Falso","Verdadeiro, Falso","Falso, Verdadeiro",D
+Afirmação 1 | A imagem homomórfica de um grupo cíclico é cíclica. Afirmação 2 | A imagem homomórfica de um grupo abeliano é abeliana.,"Verdadeiro, Verdadeiro","Falso, Falso","Verdadeiro, Falso","Falso, Verdadeiro",A
+"Afirmação 1 | Se H é um subgrupo de um grupo G e a pertence a G, então aH = Ha. Afirmação 2 | Se H é normal em G e a pertence a G, então ah = ha para todo h em H.","Verdadeiro, Verdadeiro","Falso, Falso","Verdadeiro, Falso","Falso, Verdadeiro",B
+"Se (G, .) é um grupo tal que (ab)^-1 = a^-1b^-1, para todo a, b em G, então G é um",commutative semi group,abelian group,non-abelian group,None of these,B
+"Afirmação 1 | Em um espaço vetorial de dimensão finita, todo conjunto de vetores linearmente independente está contido em uma base. Afirmação 2 | Se B_1 e B_2 são bases para o mesmo espaço vetorial, então |B_1| = |B_2|.","True, True","False, False","True, False","False, True",A
+"Alguns grupos (G, 0) são conhecidos por serem abelianos. Então qual das seguintes afirmações é verdadeira para G?",g = g^-1 para todo g em G,g = g^2 para todo g em G,"(g o h)^2 = g^2 o h^2 para todo g,h em G",G é de ordem finita,C
+"Afirmação 1 | Se T: V -> W é uma transformação linear e dim(V ) < dim(W) < 1, então T deve ser injetiva. Afirmação 2 | Seja dim(V) = n e suponha que T: V -> V é linear. Se T é injetiva, então ela é uma bijeção.","True, True","False, False","True, False","False, True",A
+"Encontre o grau da extensão de corpo dada Q(sqrt(2), sqrt(3)) sobre Q.",0,4,2,6,B
+Calcule o produto no anel dado. (20)(-8) em Z_26,0,1,11,22,D
+Determine se o polinômio em Z[x] satisfaz o critério de Eisenstein para irredutibilidade sobre Q. x^2 - 12,"Sim, com p=2.","Sim, com p=3.","Sim, com p=5.",Não.,B
 Encontre o gerador para o corpo finito Z_7.,1,2,3,4,C
-Afirmação 1 | Toda permutação é um ciclo. Afirmação 2 | Todo ciclo é uma permutação.,"True, True","False, False","True, False","False, True",D
-"O conjunto de inteiros Z com a operação binária ""*"" definida como a*b = a + b + 1 para a, b em Z, é um grupo. O elemento identidade deste grupo é",0,1,-1,12,C
+Afirmação 1 | Toda permutação é um ciclo. Afirmação 2 | Todo ciclo é uma permutação.,"Verdadeiro, Verdadeiro","Falso, Falso","Verdadeiro, Falso","Falso, Verdadeiro",D
+"O conjunto dos números inteiros Z com a operação binária ""*"" definida como a*b = a + b + 1 para a, b em Z, é um grupo. O elemento identidade deste grupo é",0,1,-1,12,C
 Encontre a característica do anel Z_3 x 3Z.,0,3,12,30,A
-Afirmação 1 | Algum grupo abeliano de ordem 45 tem um subgrupo de ordem 10. Afirmação 2 | Um subgrupo H de um grupo G é um subgrupo normal se e somente se o número de classes laterais esquerdas de H for igual ao número de classes laterais direitas de H.,"True, True","False, False","True, False","False, True",B
-Afirmação 1 | Todo domínio de integridade com característica 0 é infinito. Afirmação 2 | Todo domínio de integridade com característica prima é finito.,"True, True","False, False","True, False","False, True",C
-"Sejam A e B conjuntos, f: A -> B e g: B -> A funções tais que para todo a \in A, g(f(a)) = a. Afirmação 1 | A função f deve necessariamente ser injetiva. Afirmação 2 | A função f deve necessariamente ser sobrejetiva.","True, True","False, False","True, False","False, True",C
-"Afirmação 1 | Para quaisquer dois grupos G e G', existe um homomorfismo de G em G'. Afirmação 2 | Todo homomorfismo é um mapa um-para-um.","True, True","False, False","True, False","False, True",C
-Afirmação 1 | Um homomorfismo pode ter um núcleo vazio. Afirmação 2 | Não é possível ter um homomorfismo não trivial de algum grupo finito em algum grupo infinito.,"True, True","False, False","True, False","False, True",B
-Encontre todos os c em Z_3 tais que Z_3[x]/(x^3 + x^2 + c) é um corpo.,0,2,1,3,B
-"Afirmação 1 | Se R é um domínio integral, então R[x] é um domínio integral. Afirmação 2 | Se R é um anel e f(x) e g(x) estão em R[x], então deg (f(x)g(x)) = deg f(x) + deg g(x).","True, True","False, False","True, False","False, True",C
+"Afirmação 1 | Algum grupo abeliano de ordem 45 tem um subgrupo de ordem 10.  
+Afirmação 2 | Um subgrupo H de um grupo G é um subgrupo normal se, e somente se, o número de classes laterais à esquerda de H é igual ao número de classes laterais à direita de H.","True, True","False, False","True, False","False, True",B
+Afirmação 1 | Todo domínio integral com característica 0 é infinito. Afirmação 2 | Todo domínio integral com característica prima é finito.,"True, True","False, False","True, False","False, True",C
+"Sejam A e B conjuntos, f: A -> B e g: B -> A funções tais que para todo a \in A, g(f(a)) = a.  
+Afirmação 1 | A função f deve necessariamente ser injetiva.  
+Afirmação 2 | A função f deve necessariamente ser sobrejetiva.","Verdadeiro, Verdadeiro","Falso, Falso","Verdadeiro, Falso","Falso, Verdadeiro",C
+"Afirmação 1 | Para quaisquer dois grupos G e G', existe um homomorfismo de G em G'.  
+Afirmação 2 | Todo homomorfismo é uma aplicação injetiva.","Verdadeiro, Verdadeiro","Falso, Falso","Verdadeiro, Falso","Falso, Verdadeiro",C
+"Afirmação 1 | Um homomorfismo pode ter um núcleo vazio.  
+Afirmação 2 | Não é possível ter um homomorfismo não trivial de algum grupo finito para algum grupo infinito.","Verdadeiro, Verdadeiro","Falso, Falso","Verdadeiro, Falso","Falso, Verdadeiro",B
+Encontre todos os c em Z_3 tais que Z_3[x]/(x^3 + x^2 + c) seja um corpo.,0,2,1,3,B
+"Afirmação 1 | Se R é um domínio de integridade, então R[x] é um domínio de integridade. Afirmação 2 | Se R é um anel e f(x) e g(x) estão em R[x], então grau (f(x)g(x)) = grau f(x) + grau g(x).","Verdadeiro, Verdadeiro","Falso, Falso","Verdadeiro, Falso","Falso, Verdadeiro",C
 Encontre a ordem máxima possível para algum elemento de Z_8 x Z_10 x Z_24.,8,120,240,24,B
-Afirmação 1 | Todo grupo solúvel é de ordem potência de primo. Afirmação 2 | Todo grupo de ordem potência de primo é solúvel.,"True, True","False, False","True, False","False, True",D
+"Afirmação 1 | Todo grupo solúvel tem ordem de potência prima.  
+Afirmação 2 | Todo grupo de ordem de potência prima é solúvel.","Verdadeiro, Verdadeiro","Falso, Falso","Verdadeiro, Falso","Falso, Verdadeiro",D
 Encontre todos os c em Z_3 tais que Z_3[x]/(x^3 + cx^2 + 1) seja um corpo.,0,2,1,3,B
 "No grupo G = {2, 4, 6, 8} sob multiplicação módulo 10, o elemento identidade é",6,8,4,2,A
-"Afirmação 1 | Se G, H e K são grupos de ordem 4, pelo menos dois deles são isomórficos. Afirmação 2 | Se Z_r + Z_s é isomórfico a um subgrupo Z_m + Z_n, então r divide m e s divide n.","True, True","False, False","True, False","False, True",C
+"Afirmação 1 | Se G, H e K são grupos de ordem 4, pelo menos dois deles são isomorfos.  
+Afirmação 2 | Se Z_r + Z_s é isomorfo a um subgrupo Z_m + Z_n, então r divide m e s divide n.","True, True","False, False","True, False","False, True",C
 Encontre o grau da extensão de campo dada Q(sqrt(2)) sobre Q.,0,2,1,3,B
-Afirmação 1 | Todo grupo abeliano livre é livre de torção. Afirmação 2 | Todo grupo abeliano finitamente gerado e livre de torção é um grupo abeliano livre.,"True, True","False, False","True, False","False, True",A
+Afirmação 1 | Todo grupo abeliano livre é sem torção. Afirmação 2 | Todo grupo abeliano finitamente gerado e sem torção é um grupo abeliano livre.,"True, True","False, False","True, False","False, True",A
 Afirmação 1 | 4x - 2 é irredutível sobre Z. Afirmação 2 | 4x - 2 é irredutível sobre Q.,"True, True","False, False","True, False","False, True",D
 Encontre o gerador para o corpo finito Z_11.,1,2,3,4,B
-Afirmação 1 | Todo grupo de ordem 159 é cíclico. Afirmação 2 | Todo grupo de ordem 102 tem um subgrupo normal próprio não trivial.,"True, True","False, False","True, False","False, True",A
-"Afirmação 1 | Se H e K são subgrupos de G e um de H ou K é subgrupo normal de G, então HK é um subgrupo de G. Afirmação 2 | Todos os grupos de ordem p^2, onde p é primo, são Abelianos.","True, True","False, False","True, False","False, True",A
-Afirmação 1 | A unidade de um subanel deve ser a mesma que a unidade do anel. Afirmação 2 | Todo corpo é um domínio de integridade.,"True, True","False, False","True, False","False, True",D
-Afirmação 1 | O conjunto de matrizes 2 x 2 com entradas inteiras e determinante diferente de zero é um grupo sob multiplicação de matrizes. Afirmação 2 | O conjunto de matrizes 2 x 2 com entradas inteiras e determinante 1 é um grupo sob multiplicação de matrizes.,"True, True","False, False","True, False","False, True",D
-Afirmação 1 | Todo anel quociente de todo anel comutativo é novamente um anel comutativo. Afirmação 2 | Um ideal N em um anel R com unidade 1 é todo de R se e somente se 1 estiver em N.,"True, True","False, False","True, False","False, True",C
-"Se A = (1, 2, 3, 4). Seja ~= {(1, 2), (1, 3), (4, 2)}. Então ~ é",not anti-symmetric,transitive,reflexive,symmetric,B
-Quantos homomorfismos existem de Z em Z_2?,1,2,infinitely many,0,B
-Afirmação 1 | Todo corpo também é um anel. Afirmação 2 | Todo anel tem uma identidade multiplicativa.,"True, True","False, False","True, False","False, True",C
-"Afirmação 1 | Se R é um anel e f(x) e g(x) estão em R[x], então deg (f(x)+g(x)) = máximo (deg f(x), deg g(x)). Afirmação 2 | Se F é um corpo, então todo ideal de F[x] é principal.","True, True","False, False","True, False","False, True",D
+Afirmação 1 | Todo grupo de ordem 159 é cíclico. Afirmação 2 | Todo grupo de ordem 102 tem um subgrupo normal próprio não trivial.,"Verdadeiro, Verdadeiro","Falso, Falso","Verdadeiro, Falso","Falso, Verdadeiro",A
+"Afirmação 1 | Se H e K são subgrupos de G e um de H ou K é um subgrupo normal de G, então HK é um subgrupo de G. Afirmação 2 | Todos os grupos de ordem p^2 onde p é um primo são abelianos.","Verdadeiro, Verdadeiro","Falso, Falso","Verdadeiro, Falso","Falso, Verdadeiro",A
+Afirmação 1 | A unidade de um subanel deve ser a mesma que a unidade do anel. Afirmação 2 | Todo corpo é um domínio integral.,"Verdadeiro, Verdadeiro","Falso, Falso","Verdadeiro, Falso","Falso, Verdadeiro",D
+"Afirmação 1 | O conjunto das matrizes 2 x 2 com entradas inteiras e determinante não nulo é um grupo sob a multiplicação de matrizes.  
+Afirmação 2 | O conjunto das matrizes 2 x 2 com entradas inteiras e determinante igual a 1 é um grupo sob a multiplicação de matrizes.","Verdadeiro, Verdadeiro","Falso, Falso","Verdadeiro, Falso","Falso, Verdadeiro",D
+Afirmação 1 | Cada anel quociente de cada anel comutativo é novamente um anel comutativo. Afirmação 2 | Um ideal N em um anel R com unidade 1 é igual a todo o R se e somente se 1 ∈ N.,"True, True","False, False","True, False","False, True",C
+"Se A = (1, 2, 3, 4). Seja ~ = {(1, 2), (1, 3), (4, 2)}. Então ~ é",não anti-simétrica,transitiva,reflexiva,simétrica,B
+Quantos homomorfismos existem de Z para Z_2?,1,2,infinitamente muitos,0,B
+Afirmação 1 | Todo campo também é um anel. Afirmação 2 | Todo anel tem uma identidade multiplicativa.,"Verdadeiro, Verdadeiro","Falso, Falso","Verdadeiro, Falso","Falso, Verdadeiro",C
+"Afirmação 1 | Se R é um anel e f(x) e g(x) estão em R[x], então grau (f(x)+g(x)) = máximo (grau de f(x), grau de g(x)). Afirmação 2 | Se F é um corpo, então todo ideal de F[x] é principal.","Verdadeiro, Verdadeiro","Falso, Falso","Verdadeiro, Falso","Falso, Verdadeiro",D
 "Um subconjunto H de um grupo (G,*) é um grupo se","a,b em H => a * b em H",a em H => a^-1 em H,"a,b em H => a * b^-1 em H",H contém o elemento identidade,C
-O polinômio x^4 + 4 pode ser fatorado em fatores lineares em Z_5[x]. Encontre essa fatoração.,(x − 2)(x + 2)(x − 1)(x + 1),(x+1)^4,(x-1)(x+1)^3,(x-1)^3(x+1),A
-Afirmação 1 | Existe um grupo abeliano livre para toda classificação de inteiro positivo. Afirmação 2 | Um grupo abeliano finitamente gerado é abeliano livre se seu número de Betti for igual ao número de elementos em algum conjunto gerador.,"True, True","False, False","True, False","False, True",A
+O polinômio x^4 + 4 pode ser fatorado em fatores lineares em Z_5[x]. Encontre esta fatoração.,(x − 2)(x + 2)(x − 1)(x + 1),(x+1)^4,(x-1)(x+1)^3,(x-1)^3(x+1),A
+"Afirmação 1 | Existe um grupo abeliano livre de cada número inteiro positivo como posto.  
+Afirmação 2 | Um grupo abeliano finitamente gerado é abeliano livre se seu número de Betti for igual ao número de elementos em algum conjunto gerador.","Verdadeiro, Verdadeiro","Falso, Falso","Verdadeiro, Falso","Falso, Verdadeiro",A
+"(Z,*) é um grupo com a*b = a+b+1 para todos a, b em Z. O inverso de a é",0,-2,a-2,(2+a)*-1,D
+Encontre o grau da extensão de campo dada Q(sqrt(2)*sqrt(3)) sobre Q.,0,4,2,6,C
+"Usando o teorema de Fermat, encontre o resto da divisão de 3^47 quando dividido por 23.",1,2,3,4,D
+Encontre a característica do anel Z_3 x Z_3.,0,3,12,30,B
+"Afirmação 1 | Se a e b são elementos de um grupo e a não é igual a b, então a² não é igual a b². Afirmação 2 | O conjunto das rotações em um grupo diédrico forma um subgrupo cíclico.","True, True","False, False","True, False","False, True",D
+"Afirmação 1 | Em um grupo, (ab)^{-2} = b^{-2}a^{-2}.  
+Afirmação 2 | Em um grupo, (ab)^n = a^nb^n.","Verdadeiro, Verdadeiro","Falso, Falso","Verdadeiro, Falso","Falso, Verdadeiro",B
+"Afirmação 1 | S_n é não abeliano para todo n >= 3.  
+Afirmação 2 | Se a é uma permutação que é um m-ciclo e b é uma permutação que é um n-ciclo, então |ab| = lcm(m,n).","True, True","False, False","True, False","False, True",C
+Encontre a característica do anel Z x Z.,0,3,12,30,A
+"Afirmação 1 | Para n > 1, o conjunto {1,2, ..., n-1} é um grupo sob multiplicação módulo n.  
+Afirmação 2 | Existe um inteiro x tal que 63x mod 100 = 1.","True, True","False, False","True, False","False, True",D
+"Afirmação 1 | Se K é um subgrupo não nulo de um grupo abeliano livre finitamente gerado, então K é abeliano livre.  
+Afirmação 2 | Se K é um subgrupo não nulo de um grupo abeliano livre finitamente gerado, então G / K é abeliano livre.","Verdadeiro, Verdadeiro","Falso, Falso","Verdadeiro, Falso","Falso, Verdadeiro",C
+Afirmação 1 | O produto direto externo de grupos cíclicos é cíclico. Afirmação 2 | O produto direto externo de D_3 e D_4 é isomórfico a D_12.,"True, True","False, False","True, False","False, True",B
+Afirmação 1 | Todo grupo abeliano livre não trivial tem um número infinito de bases. Afirmação 2 | Todo grupo abeliano livre de posto pelo menos 2 tem um número infinito de bases.,"Verdadeiro, Verdadeiro","Falso, Falso","Verdadeiro, Falso","Falso, Verdadeiro",D
+Afirmação 1 | Para cada inteiro positivo n existe um grupo cíclico de ordem n. Afirmação 2 | Todo grupo cíclico finito contém um elemento de cada ordem que divide a ordem do grupo.,"True, True","False, False","True, False","False, True",A
+"Afirmação 1 | Se um grupo tem um elemento de ordem 10, então ele tem elementos de ordens 1, 2 e 5. Afirmação 2 | Se um grupo tem um elemento de ordem 2 e um elemento de ordem 3, então ele tem um elemento de ordem 6.","True, True","False, False","True, False","False, True",C
+"Sejam A e B conjuntos, f: A -> B e g: B -> A funções tais que para todo a \in A, g(f(a)) = a.  
+Afirmação 1 | A função g deve necessariamente ser injetiva.  
+Afirmação 2 | A função g deve necessariamente ser sobrejetiva.","Verdadeiro, Verdadeiro","Falso, Falso","Verdadeiro, Falso","Falso, Verdadeiro",D
+"Afirmação 1 | Um homomorfismo é injetivo se e somente se o núcleo consistir apenas do elemento identidade.  
+Afirmação 2 | A imagem de um grupo com 6 elementos sob algum homomorfismo pode ter 4 elementos.","Verdadeiro, Verdadeiro","Falso, Falso","Verdadeiro, Falso","Falso, Verdadeiro",C
+"Afirmação 1 | Se H e K são subgrupos de um grupo G, então |HK| = |H||K|/|H ∩ K|. Afirmação 2 | Um grupo de ordem 2p em que p é um primo ímpar é cíclico ou isomorfo a D_p.","True, True","False, False","True, False","False, True",A
+"Para T: Z x Z -> Z onde T(1, 0) = 3 e T(0, 1) = -5, encontre T(-3,2).",-19,-10,19,10,A
+Calcule o produto no anel dado. (12)(16) em Z_24,0,1,4,6,A
+"Afirmação 1 | Toda permutação é uma função injetiva.  
+Afirmação 2 | Toda função é uma permutação se, e somente se, ela for injetiva.","True, True","False, False","True, False","False, True",C
+"Afirmação 1 | Se um grupo finito tem ordem n, então o grupo contém um subgrupo de ordem d para cada divisor positivo d de n.  
+Afirmação 2 | Se a pertence a um grupo finito então |a| divide |G|.","Verdadeiro, Verdadeiro","Falso, Falso","Verdadeiro, Falso","Falso, Verdadeiro",D
+Encontre todas as classes laterais do subgrupo 4Z de 2Z.,4Z,"4Z, 2 + 4Z",2Z,Z,B
+Qual das seguintes afirmações é verdadeira?,Toda relação de equivalência é uma relação de ordem parcial.,"O número de relações do conjunto A = {x, y, z} para B = {1, 2} é 64.",A relação vazia _ é reflexiva,As propriedades de uma relação ser simétrica e ser assimétrica são opostas uma da outra.,B
+Encontre a ordem máxima possível para um elemento de S_n para n = 6.,6,12,30,105,A
+Afirmação 1 | Q é uma extensão do corpo Z_2. Afirmação 2 | Todo polinômio não constante sobre um corpo tem uma raiz em alguma extensão do corpo.,"Verdadeiro, Verdadeiro","Falso, Falso","Verdadeiro, Falso","Falso, Verdadeiro",D
+"Afirmação 1 | Se H é um subgrupo de G e a pertence a G, então aH é um subgrupo de G se e somente se a está em H. Afirmação 2 | Se H é um subgrupo de G e a e b pertencem a G, então aH = bH se e somente se ab está em H.","Verdadeiro, Verdadeiro","Falso, Falso","Verdadeiro, Falso","Falso, Verdadeiro",C
+Encontre todas as raízes no corpo finito indicado do polinômio dado com coeficientes nesse corpo. x^2 + 1 em Z_2,0,1,"0,1",2,B
+Encontre o número de elementos no grupo cíclico indicado: O subgrupo cíclico de Z_30 gerado por 25.,25,5,6,30,C
+"O elemento (4, 2) de Z_12 x Z_8 tem ordem",4,8,12,6,C
+"Afirmação 1 | Todo ideal em um anel é um subanel do anel.  
+Afirmação 2 | Todo subanel de todo anel é um ideal do anel.","Verdadeiro, Verdadeiro","Falso, Falso","Verdadeiro, Falso","Falso, Verdadeiro",C

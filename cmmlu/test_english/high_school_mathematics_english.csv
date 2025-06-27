@@ -1,161 +1,165 @@
-"Let the sets $M=\left\{ -1,0,2,8 \right\},N=\left\{x|x\leqslant 2 \right\}$, then $M\cap N =$","{—1,0,1}","{0,1,2}","{0,1}","{—1,0,1,2}",D
+"Let the set $M=\left\{ -1,0,2,8 \right\}, N=\left\{x|x\leqslant 2 \right\}$, then $M\cap N =$","{—1,0,1}","{0,1,2}","{0,1}","{—1,0,1,2}",D
 "The converse of the proposition ""If a number is negative, then its square is positive"" is","""If the square of a number is positive, then it is negative""","""If a number is not negative, then its square is not positive""","""If a number is negative, then its square is not positive""","""If the square of a number is not positive, then it is not negative""",A
 "If the general term formula of the sequence ${a_n}$ is $a_n=2(n+1)+3$, then this sequence",is an arithmetic sequence with a common difference of 5,is not an arithmetic sequence,is an arithmetic sequence with a common difference of 2,is an arithmetic sequence with a common difference of 3,C
-"In △ABC, the sides a, b, c are opposite to angles A, B, C respectively, with a = 6, b = 8, and A = 30°. The number of possible triangles that satisfy these conditions is",infinitely many,1,0,2,D
-"Let the lengths of the sides opposite to angles A, B, C in triangle ABC be a, b, c respectively. If $a^{2}=b^{2}+c^{2}-bc$, then A=",$2\frac{\pi}{3}$,$\frac{\pi}{4}$,$\frac{\pi}{6}$,$\frac{\pi}{3}$,D
-Which of the following is correct,{0}=0,0 belongs to {0},None of the above,0 is a proper subset of {0},B
-"Let the sum of the first n terms of the geometric sequence {a_n} be S_n. If S_10:S_5 = 1:2, then S_15:S_5 equals",2:3,1:3,1:2,3:4,D
-"A certain college has three majors, A, B, and C, with a total of 1200 students. To investigate the work-study situation of these students, a stratified sampling method is planned to be used to select a sample of 120 students. It is known that the college's major A has 380 students, and major B has 420 students. The number of students to be sampled from major C in this college is",120,38,40,42,A
-"Given a=log_{2}0.2, b=2^0.2, c=0.2^0.3, then",a<b<c,c<a<b,b<c<a,a<c<b,D
-"A school currently has 210 students in grade one, 270 students in grade two, and 300 students in grade three. Using stratified sampling, n students are randomly selected from these three grades for a questionnaire survey. If it is known that 7 students are selected from grade one, then the number of students selected from grade three should be",9,26,25,10,D
-下列元素中属于集合{x|x=2k k是⾃然数}的是,-2,3,10,7,C
-"In $\triangle ABC$, $cos\frac{C}{2}=\frac{\sqrt{5}}{5}$, $BC=1$, $AC=5$, then AB equals",$2\sqrt{5}$,$4\sqrt{2}$,$\sqrt{29}$,$\sqrt{30}$,B
-"If x ∈ R, then ""x > 1"" is a ________ condition for ""|x| > 1"".",neither sufficient nor necessary,sufficient but not necessary,sufficient and necessary,necessary but not sufficient,B
-"In the set {1, 2, 3, 4, ..., 10}, an element is randomly selected. The probability that the selected element satisfies the equation cos(30°•x) = 1/2 is",1/5,1/4,1/6,1/3,A
-下列求导运算正确的是,(x^3)'=3x^2,(x^2 cos(x))'=-2xsin(x),(x^2+1)'=2x+1,(1/x)'=1/x^2,A
-"Given the function $f(3x)=\log_{2}\sqrt{(9x+1)/2}$, then the value of $f(1)$ is",1/2,2,1,log_{2}\sqrt{5},A
-函数$y=log(x^{2}-1)$的定义域是,"$[-1,1]$","$(-\infty ,-1]\cup[1,+\infty)$","$(-\infty ,-1)\cup(1,+\infty)$","$(-1,1)$",C
-"Given the set $A={x|y=\sqrt{4-x^4}}$ and the set $B={x|x>=a}$, a sufficient but not necessary condition for $A\subseteq B$ is","(-\inf,-2)","[2,+\inf)","(-\inf,-2]","(2,+?)",A
+"In △ABC, a, b, c are the sides opposite to angles A, B, C respectively, and given that a = 6, b = 8, A = 30°, the number of triangles satisfying these conditions is",infinitely many,1,0,2,D
+"Let the sides opposite to the internal angles A, B, C of $\bigtriangleup ABC$ be a, b, c respectively. If $a^{2}=b^{2}+c^{2}-bc$, then A=",$2\frac{\pi}{3}$,$\frac{\pi}{4}$,$\frac{\pi}{6}$,$\frac{\pi}{3}$,D
+The following correct one is,{0}=0,0 belongs to {0},None of the above is correct,0 is properly contained in {0},B
+"Let the sum of the first n terms of a geometric sequence {a_n} be S_n. If S_10:S_5 = 1:2, then S_15:S_5 equals",2:3,1:3,1:2,3:4,D
+"In a certain college, there are 1200 students in the three majors A, B, and C. In order to investigate the work-study situation of these students, it is planned to use stratified sampling to draw a sample size of 120. It is known that Major A in the college has 380 students, and Major B has 420 students. The number of students that should be drawn from Major C in the college is",120,38,40,42,A
+"Given that a=log_{2}0.2, b=2^0.2, c=0.2^0.3, then",a<b<c,c<a<b,b<c<a,a<c<b,D
+"A school has 210 freshmen, 270 sophomores, and 300 juniors. A random sample of n students is selected using stratified sampling from these three grades for a questionnaire survey. If it is known that the number of freshmen selected is 7, then the number of juniors selected should be",9,26,25,10,D
+The element that belongs to the set {x|x=2k k is a natural number} among the following is,-2,3,10,7,C
+"In $\bigtriangleup ABC$, $cos\frac{C}{2}=\frac{\sqrt{5}}{5}, BC=1, AC=5$. Then AB equals",$2\sqrt{5}$,$4\sqrt{2}$,$\sqrt{29}$,$\sqrt{30}$,B
+"If x\in R, then ""x>1"" is the",neither a sufficient nor a necessary condition,sufficient but not necessary condition,necessary and sufficient condition,necessary but not sufficient condition,B
+"A number is randomly selected from the set {1, 2, 3, 4, ..., 10}. The probability that the selected number exactly satisfies the equation cos(30°•x) = 1/2 is",1/5,1/4,1/6,1/3,A
+The following differentiation operations that are correct are,(x^3)'=3x^2,(x^2 cos(x))'=-2xsin(x),(x^2+1)'=2x+1,(1/x)'=1/x^2,A
+"Given the function $f(3x)=\log_{2}\sqrt{\frac{9x+1}{2}},$ find the value of $f(1)$.",1/2,2,1,$\log_{2}\sqrt{5}$,A
+The domain of the function $y=log(x^{2}-1)$ is,"$[-1,1]$","$(-\infty ,-1]\cup[1,+\infty)$","$(-\infty ,-1)\cup(1,+\infty)$","$(-1,1)$",C
+"Given the set $A={x|y=\sqrt{4-x^4}}$, and the set $B={x|x>=a}$, a sufficient but not necessary condition for $A\subseteq B$ is","(-\inf,-2)","[2,+\inf)","(-\inf,-2]","(2,+?)",A
 "In space, which of the following propositions is correct?",Two planes parallel to the same line are parallel,Two lines perpendicular to the same plane are parallel,Two lines parallel to the same plane are parallel,Two lines perpendicular to the same line are parallel,B
-"In the cube ABCD-A1B1C1D1, the cosine of the angle between BB1 and the plane ACD1 is",\sqrt{3}/2,2/3,\sqrt{2}/3,\sqrt{6}/3,D
-"If $\sin\alpha * \cos\alpha > 0$, then $\alpha$ is in the",first and fourth quadrants,first and second quadrants,first and third quadrants,second and fourth quadrants,C
-"When two fair coins are tossed simultaneously, the probability of both landing heads up is",$\frac{1}{8}$,$\frac{1}{4}$,$\frac{1}{2}$,$\frac{1}{3}$,B
+"In the cube ABCD-A1B2C1D1, the cosine of the angle formed by BB1 and the plane ACD1 is",\sqrt{3}/2,2/3,\sqrt{2}/3,\sqrt{6}/3,D
+The point on the circle x^2+y^2-2x-2y+1=0 that is at the greatest distance from the line x-y=2 is,1+2\sqrt{2},2,1+\sqrt{2}/2,1+\sqrt{2},D
+"If $\sin\alpha * \cos\alpha > 0$, then \alpha is in",First and fourth quadrants,First and second quadrants,First and third quadrants,Second and fourth quadrants,C
+"When two fair coins are tossed simultaneously, the probability of getting two heads is",$\frac{1}{8}$,$\frac{1}{4}$,$\frac{1}{2}$,$\frac{1}{3}$,B
 "In triangle ABC, sinA:sinB:sinC=3:2:4, then the value of cosC is",-2/3,-1/4,2/3,1/4,B
-"600 is the ___ term in the sequence 1*2, 2*3, 3*4, ...",25项,24项,30项,20项,B
-"Let $z=(3-i)/(1+2i)$, then |z|=",2,1,sqrt{3},sqrt{2},D
-"In triangle ABC, the lengths of the sides opposite to angles A, B, and C are a, b, and c respectively, and $f(A)=\sqrt{3}\sin A - \cos A + 2$. If $f(A)=3$, $a=\sqrt{6}$, and the area $S_{\triangle ABC}=\sqrt{3}$, then the perimeter of triangle ABC is",$3\sqrt{3}+\sqrt{6}$,$2\sqrt{2}+\sqrt{6}$,$3\sqrt{2}+\sqrt{6}$,$2\sqrt{3}+\sqrt{6}$,C
-"Given three points $A(0,1,0), M(\sqrt{2},1,0), N(0,3,\sqrt{2})$ in a spatial Cartesian coordinate system, with $O$ as the origin, the cosine of the angle between the lines OA and MN is",\frac{\sqrt{2}}{2},$\frac{\sqrt{6}+\sqrt{2}}{4}$,$\frac{\sqrt{3}}{2}$,0,A
-"$\cos{\alpha}=4/5$，α is in the fourth quadrant, then the value of $\tan{\alpha}$ is",-4/3,$\pm 4/3$,-3/4,$\pm 3/4$,C
-"In $\triangle ABC$, if c=1, $a=\sqrt{3}$, $\angle A=\frac{2\pi}{3}$, then b is",1,$\frac{\sqrt{10}}{2}$,$\sqrt{7}$,2,A
+"600 is the nth term of the sequence 1*2, 2*3, 3*4, ...",25th term,24th term,30th term,20th term,B
+"Let $z=(3-i)/(1+2i)$, then |z|=",2,1,\sqrt{3},\sqrt{2},D
+"Let the lengths of the sides opposite to the internal angles $ A $, $ B $, and $ C $ of $ \bigtriangleup ABC $ be $ a $, $ b $, and $ c $, respectively, and let $ f(A) = \sqrt{3} \sin A - \cos A + 2 $. If $ f(A) = 3 $, $ a = \sqrt{6} $, and $ S_{\bigtriangleup ABC} = \sqrt{3} $, then the perimeter of $ \bigtriangleup ABC $ is",$ 3\sqrt{3}+\sqrt{6} $,$ 2\sqrt{2}+\sqrt{6} $,$ 3\sqrt{2}+\sqrt{6} $,$ 2\sqrt{3}+\sqrt{6} $,C
+"In the rectangular coordinate system in space, there are three points $A(0,1,0),M(\sqrt{2},1,0),N(0,3,\sqrt{2})$, and $O$ is the origin. Then, the cosine of the angle formed by line OA and MN is",\frac{\sqrt{2}}{2},$\frac{\sqrt{6}+\sqrt{2}}{4}$,$\frac{\sqrt{3}}{2}$,0,A
+"$\cos{\alpha}=4/5$, $\alpha$ is an angle in the fourth quadrant, then the value of $\tan{\alpha}$ is",-4/3,$\pm 4/3$,-3/4,$\pm 3/4$,C
+"Given x>0, y>0, x+2y+2xy=8, the minimum value of x+2y is",5.5,3,4,4.5,C
+"In $\bigtriangleup ABC$, if c=1, $a=\sqrt{3}$, $\angle A=\frac{2\pi}{3}$, then b is",1,$\frac{\sqrt{10}}{2}$,$\sqrt{7}$,2,A
 The domain of the function $y=\sqrt{2x+1} + \sqrt{3-4x}$ is,"(-\infty, 1/2]","(-1/2, 3/4)","(1/2,0)\cup (0, \infty)","[-1/2, 3/4]",D
 $cos\frac{7}{6}\pi=$,$-\frac{1}{2}$,$\frac{1}{2}$,$-\frac{\sqrt{3}}{2}$,$\frac{\sqrt{3}}{2}$,C
 $\frac{1+2i}{1-2i}$ equals,$-\frac{3}{5}-\frac{4}{5}i$,$-\frac{4}{5}+\frac{3}{5}i$,$-\frac{3}{5}+\frac{4}{5}i$,$-\frac{4}{5}-\frac{3}{5}i$,C
-将函数y=sin(2x-pi/4)的图像向右平移pi/8，所得到的图像对应的函数为,非奇非偶函数,奇函数,偶函数,既是奇函数又是偶函数,C
-"Among the numbers 1, 2, 3, ..., 10, if three numbers are randomly selected, then the event ""the sum of these three numbers is greater than 6"" is",None of the above is correct,Certain event,Impossible event,Random event,D
-"在锐角三角形ABC中，a=1, B=2A，则边b的取值范围为","(sqrt(2),sqrt(3))","(1,2)","(2,3)","(1,3)",A
-"Among the following propositions, ① a polyhedron with two faces that are parallel and similar, and the remaining faces being trapezoids, is a prismoid; ② a hexahedron with two parallel faces and the remaining four faces being isosceles trapezoids is a prismoid; ③ a quadrilateral prism with all lateral faces being squares must be a cube; ④ rotating a rectangle around two unequal sides as axes of rotation results in two different cylinders. How many of these are correct?",2,1,4,3,B
-"Given {a_n} is a geometric sequence, a_2=2, a_3=1/4, then the common ratio q=",2,-2,-1/2,1/2,D
-"Chinese mathematician Chen Jingrun achieved world-leading results in the study of the Goldbach Conjecture. The Goldbach Conjecture states that ""every even number greater than 2 can be expressed as the sum of two prime numbers,"" such as 30 = 7 + 23. Among the prime numbers not exceeding 30, the probability of randomly selecting two distinct numbers whose sum equals 30 is",$\frac{1}{15}$,$\frac{1}{12}$,$\frac{1}{14}$,$\frac{1}{18}$,A
-"Set A={x|1<x<9}, B={2, 3, 4}, then the relationship between A and B is",A is a proper subset of B,Cannot be determined,B is a proper subset of A,B=A,C
-若sin(a)cos(a)=1/8，且pi/4<a<pi/2，则sin(a)-cos(a)=,-\sqrt{3}/2,3/4,-3/4,\sqrt{3}/2,D
-"In triangle $\bigtriangleup ABC$, the lengths of the sides opposite angles A, B, and C are a, b, and c respectively. Given that $\tan(A+B) = -2\sin C$, $c = 3$, the range of the perimeter of $\bigtriangleup ABC$ is","$(6,3+2\sqrt{3}]$","(6,9]","[6,9]","$[6,3+2\sqrt{3}]$",B
-"In a known arithmetic sequence, the common difference is 2, the nth term is 30, and the sum of the first n terms is 240. Find the value of n.",17,15,16,14,B
-若(a+i)/(1-i)(a∈R)是纯虚数，则|(a+i)/(1-i)|=,2,1,-i,i,B
-The smallest positive period of the function $y=\sin 2x \cos 2x$ is,$\frac{1}{2}\pi$,$\frac{1}{4}\pi$,$2\pi$,$6\pi$,A
-"In order to determine which of the two students, A or B, has more stable math exam scores this semester, it is usually necessary to know the math scores'",Variance,Mode,Frequency distribution,Mean,A
-"The area of triangle ABC is 1, AB=2, BC=√2, and angle B is obtuse. Then AC=",√10,√5,1,2,A
-"已知集合p={1,2,3,4},Q={-1,0,1}，则$P\cap Q$等于","{1,2}","{-1,0,1,2,3,4}",{1},"{3,4}",C
-"When two fair coins are tossed simultaneously, the probability of both landing heads up is",1/8,1/3,1/2,1/4,D
-"Let the third-order matrix $A=[A_{1},A_{2},A_{3}]$, where $a_{i}, i=1,2,3$ are the column vectors of A, and $|A|=2$. Then $|B|=|[a_{1}+3a_{2},a_{2},a_{3}]|=$",6,0,-2,2,D
-在等差数列中，a5=11，S12=186，则a8等于,18,20,21,22,B
-"From a batch of badminton products, the probability that a randomly selected one weighs less than 4.8g is 0.3, and the probability that it weighs less than 4.85g is 0.32. What is the probability that the weight falls within the range [4.8, 4.85)g?",0.68,0.38,0.02,0.62,C
-"In triangle ABC, the lengths of the sides opposite to angles A, B, and C are a, b, and c respectively, and $f(A)=\sqrt{3}\sin A - 2\cos^{2}\frac{A}{2} + 3$. When the function f(A) reaches its maximum, the shape of triangle ABC is",Indeterminate,Acute triangle,Obtuse triangle,Right triangle,C
-The interval in which the zero of the function $f(x)=\ln x-\frac{1}{x}$ lies is,"(2,3)","(3,4)","(1,2)","(0,1)",C
-"Given vectors a and b satisfying $|a|=1, a\cdot b=-1$, then $a\cdot(2a-b)$ equals",3,4,2,0,A
-"In $\triangle ABC$, $a=2\sqrt{2}, B=\frac{\pi}{4}, \angle A=\frac{\pi}{3}$, then b=",$\frac{5\sqrt{3}}{4}$,$\frac{4\sqrt{3}}{3}$,$\frac{5\sqrt{3}}{3}$,$\frac{3\sqrt{3}}{2}$,B
-若回归直线的方程为$\hat{y}=2-1.5x$，则变量x增加一个单位时,y average decreases by 2 units,y average increases by 1.5 units,y average increases by 2 units,y average decreases by 1.5 units,D
+The graph of the function y = sin(2x - π/4) is shifted to the right by π/8. The function corresponding to the resulting graph is,Neither odd nor even function,Odd function,Even function,Both odd and even function,C
+"Among the 10 numbers 1, 2, 3, ..., 10, if any 3 numbers are taken, then the event ""the sum of these three numbers is greater than 6"" is",None of the above options is correct,Certain event,Impossible event,Random event,D
+"In an acute triangle ABC, a=1, B=2A, then the range of side b is","(sqrt(2),sqrt(3))","(1,2)","(2,3)","(1,3)",A
+"Among the following propositions, ① A polyhedron with two faces that are parallel and similar, and all other faces being trapezoids, is a frustum of a pyramid; ② A hexahedron with two faces parallel to each other and the other four faces being isosceles trapezoids is a frustum of a pyramid; ③ A quadrangular prism with all lateral faces being squares must be a cube; ④ Rotating a rectangle around the lines containing two unequal sides as rotation axes results in two different cylinders. How many of these propositions are correct.",2,1,4,3,B
+"It is known that {a_n} is a geometric sequence, a_2=2, a_3=1/4, then the common ratio q=",2,-2,-1/2,1/2,D
+"Mathematician Chen Jingrun from our country achieved world-leading results in the study of the Goldbach Conjecture. The Goldbach Conjecture states that ""every even number greater than 2 can be expressed as the sum of two prime numbers,"" such as 30 = 7 + 23. Among the prime numbers not exceeding 30, if two different numbers are randomly selected, the probability that their sum equals 30 is",$\frac{1}{15}$,$\frac{1}{12}$,$\frac{1}{14}$,$\frac{1}{18}$,A
+"Set A = {x | 1 < x < 9}, B = {2, 3, 4}, then the relationship between A and B is",A is truly contained in B,Cannot be determined,B is truly contained in A,B = A,C
+"If sin(a)cos(a)=1/8, and pi/4<a<pi/2, then sin(a)-cos(a)=",-\sqrt{3}/2,3/4,-3/4,\sqrt{3}/2,D
+"Let the lengths of the sides opposite to the internal angles A, B, and C of $\bigtriangleup ABC$ be a, b, c respectively, tan(A+B)=-2sinC, c=3, the range of the perimeter of $\bigtriangleup ABC$ is","$(6,3+2\sqrt{3}]$","(6,9]","[6,9]","$[6,3+2\sqrt{3}]$",B
+"In an arithmetic sequence, the common difference is 2, the nth term equals 30, and the sum of the first n terms is 240. Then n equals",17,15,16,14,B
+"If $(a+i)/(1-i)$ ($a \in \mathbb{R}$) is a pure imaginary number, then $|(a+i)/(1-i)|=$",2,1,-i,i,B
+The smallest positive period of the function $y = \sin 2x \cos 2x$ is,$\frac{1}{2}\pi$,$\frac{1}{4}\pi$,$2\pi$,$6\pi$,A
+"In order to determine which of the two students, A or B, has more stable math exam scores this semester, we usually need to know the",variance,mode,frequency distribution,average,A
+"The area of triangle ABC is 1, AB = 2, BC = \sqrt{2}, and angle B is obtuse, then AC =",\sqrt{10},\sqrt{5},1,2,A
+"Let the set P={1,2,3,4}, Q={-1,0,1}, then $P\cap Q$ equals","{1,2}","{-1,0,1,2,3,4}",{1},"{3,4}",C
+"When two fair coins are tossed simultaneously, the probability of getting two heads is",1/8,1/3,1/2,1/4,D
+"Let the third-order equation $A=[A_{1},A_{2},A_{3}]$, where $a_{i}, i=1,2,3$ are the column vectors of A, and $|A|=2$, then $|B|=|[a_{1}+3a_{2},a_{2},a_{3}]|=$",6,0,-2,2,D
+"In an arithmetic sequence, a5=11, S12=186, then a8 equals",18,20,21,22,B
+"The probability that a badminton shuttlecock randomly selected from a batch has a weight less than 4.8g is 0.3, and the probability that it has a weight less than 4.85g is 0.32. Then, the probability that the weight is in the range [4.8, 4.85)g is",0.68,0.38,0.02,0.62,C
+"Let the lengths of the sides opposite to the internal angles A, B, C of $\bigtriangleup ABC$ be a, b, c respectively, and $f(A)=\sqrt{3}\sin A-2\cos^{2}\frac{A}{2}+3$. When the function f(A) reaches its maximum value, the shape of $\bigtriangleup ABC$ is",uncertain,acute triangle,obtuse triangle,right triangle,C
+The interval where the zero of the function $f(x)=lnx-\frac{1}{x}$ lies is,"(2,3)","(3,4)","(1,2)","(0,1)",C
+"Given vectors a, b satisfy $|a|=1, a\cdot b=-1$, then $a\cdot(2a-b)$ equals",3,4,2,0,A
+"In $\bigtriangleup ABC$, $a=2\sqrt{2}, B=\frac{\pi}{4}, \angle A=\frac{\pi}{3}$, then b=",$\frac{5\sqrt{3}}{4}$,$\frac{4\sqrt{3}}{3}$,$\frac{5\sqrt{3}}{3}$,$\frac{3\sqrt{3}}{2}$,B
+"If the equation of the regression line is $\hat{y}=2-1.5x$, then when the variable x increases by one unit,",y decreases on average by 2 units,y increases on average by 1.5 units,y increases on average by 2 units,y decreases on average by 1.5 units,D
 The solution set of the inequality $|x(x-2)|>x(x-2)$ is,"$(2,+\infty)$","$(-\infty,0)\cup(0,+\infty)$","$(-\infty,0)$","(0,2)",D
-"The total number of students in Class 16 Auto Repair (2) is 50. Among them, 21 like basketball, 19 like badminton, and 15 dislike both basketball and badminton. How many students like both basketball and badminton?",5人,6人,7人,4人,A
-在等差数列$\left\{ a_{n} \right\}$中，若$a_{3}+a_{5}+a_{7}=12$，那么$a_{1}+a_{2}+...+a_{9}$的值为,18,36,54,27,B
-"Given $tan\alpha=\frac{1}{4},tan(\alpha-\beta)=\frac{1}{3}$, then $tan\beta=$",$\frac{1}{13}$,$-\frac{1}{13}$,$-\frac{11}{7}$,$\frac{7}{11}$,B
-"Given the points (-4, 2) and (0, 0), the slope of the perpendicular bisector of the line segment is",1/2,-1/2,2,-2,C
-设A={x| x>1}，B={ x|x≥5}，那么$A\cup B=$,{x|x≥1},{x|x≥5},{x| x>1},{x| x>5},C
-"The regression equation between a person's age x and the percentage of body fat y is y=0.577x-0.448. If someone is 36 years old, then this person's fat percentage is",No reference data available,Must be 20.3%,More likely to be around 20.3%,None of the above explanations make sense,C
-"The slope of the line passing through points M(-2,m) and N(m,4) is equal to 1. The value of m is",1 or 3,1,4,1 or 4,B
-"The maximum value of the function $f(x)=x^3-3x^2+2$ on the interval [-1,1] is",4,1,0,2,D
-$x^2\neq y^2$ is the condition for $x\neq y$ and $x\neq -y$ to be,neither sufficient nor necessary,sufficient but not necessary,sufficient and necessary,necessary but not sufficient,C
-"In triangle $\bigtriangleup ABC$, the lengths of the sides opposite angles A, B, and C are a, b, and c, respectively. Given that $a=2\sqrt{2}, \cos A=\frac{\sqrt{6}}{3}, B=A+\frac{\pi}{2}$, the area of $\bigtriangleup ABC$ is",$\frac{4\sqrt{3}}{3}$,$\frac{4\sqrt{2}}{3}$,$\frac{2\sqrt{3}}{3}$,$\frac{2\sqrt{2}}{3}$,B
-袋中有5个⽩球，3个红球，从中任意抽取4个球恰好抽到3个⽩球的概率,4/5,3/4,3/7,1/2,C
-"Among the following geometric solids, the one whose cross-section through the axis must be a circular surface is",circular truncated cone,cylinder,cone,sphere,D
-"Given that the base of the pyramid S-ABCD is a square with center O, and SO is perpendicular to the base ABCD, with $SA=2\sqrt{3}$. When the volume of this pyramid is maximized, its height is",$\sqrt{3}$,1,2,3,C
-The interval in which the zero of the function $f(x)=\pi x +log_{2}x$ lies is,"[0,1/8]","[1/2, 1]","[1/8, 1/4]","[1/4, 1/2]",D
-"If the complex number m(m-2)+(m^2-3m+2)i is purely imaginary, then the real value of m is",0 or 2,0,2,1 or 2,B
-复数$(i(2+i)/(1-2i))$等于,-i,i,-1,1,C
-"Given two parallel lines l_1: 3x-4y+a=0 and l_2: 6x-8y+10=0, the distance between them is 2. Then the value of a is equal to","-5,15","10,5","-5,10","-15,5",A
-"If $\overrightarrow{a}=(x,3),\overrightarrow{b}=(x,-2)$, then ""$x=\sqrt{6}$"" is the condition for ""$\overrightarrow{a}\bot \overrightarrow{b}$"" being",neither sufficient nor necessary,necessary but not sufficient,sufficient and necessary,sufficient but not necessary,B
-"If the equation of the regression line is y=2-1.5x, then when the variable x increases by one unit",y increases by an average of 1.5 units,y decreases by an average of 2 units,y decreases by an average of 1.5 units,y increases by an average of 2 units,C
-"When three corners of a rectangular prism are cut off, how many faces does the resulting object have?",9,8,6,7,A
+"The total number of students in Class 16 Auto Repair (2) is 50, among them, 21 people like basketball, 19 people like badminton, 15 people like neither basketball nor badminton. So, how many people like both basketball and badminton?",5 people,6 people,7 people,4 people,A
+"In the arithmetic sequence $\left\{ a_{n} \right\}$, if $a_{3}+a_{5}+a_{7}=12$, then the value of $a_{1}+a_{2}+...+a_{9}$ is",18,36,54,27,B
+"Given $tan\alpha=\frac{1}{4}, tan(\alpha-\beta)=\frac{1}{3}$, then $tan\beta=$",$\frac{1}{13}$,$-\frac{1}{13}$,$-\frac{11}{7}$,$\frac{7}{11}$,B
+"Given the points (—4, 2) and (0, 0), the slope of the perpendicular bisector of the segment is",1/2,-1/2,2,-2,C
+"Let A={x| x>1}, B={x|x≥5}, then $A\cup B=$",{x|x≥1},{x|x≥5},{x| x>1},{x| x>5},C
+"The regression equation for a person's age \(x\) and the percentage of body fat content \(y\) is \(y = 0.577x - 0.448\). If a person is 36 years old, what is their body fat content?",No reference data at all,Definitely 20.3%,More likely to be around 20.3%,None of the above explanations make sense,C
+"The slope of the line passing through points M(-2,m) and N(m,4) equals 1, then the value of m is",1 or 3,1,4,1 or 4,B
+"The maximum value of $f(x)=x^3-3x^2+2$ on the interval [-1,1] is",4,1,0,2,D
+$x^2\neq y^2$ is the ________ of $x\neq y$ and $x\neq -y$,neither a sufficient nor a necessary condition,a sufficient but not necessary condition,a necessary and sufficient condition,a necessary but not sufficient condition,C
+"Let the lengths of the sides opposite to the internal angles A, B, and C of $\bigtriangleup ABC$ be a, b, and c respectively. It is known that $a=2\sqrt{2}, \cos A=\frac{\sqrt{6}}{3}, B=A+\frac{\pi}{2}$. Then the area of $\bigtriangleup ABC$ is",$\frac{4\sqrt{3}}{3}$,$\frac{4\sqrt{2}}{3}$,$\frac{2\sqrt{3}}{3}$,$\frac{2\sqrt{2}}{3}$,B
+A bag contains 5 white balls and 3 red balls. The probability of drawing exactly 3 white balls when randomly drawing 4 balls from it.,4/5,3/4,3/7,1/2,C
+"Among the following geometric bodies, the one that must have a circular cross-section along its axis is",Frustum of a cone,Cylinder,Cone,Sphere,D
+"It is known that the base of the quadrangular pyramid S-ABCD is a square centered at O, and SO is perpendicular to the base ABCD, with $SA=2\sqrt{3}$. What is the height of the pyramid when its volume is maximized?",$\sqrt{3}$,1,2,3,C
+The interval containing the zero of the function $f(x)=\pi x +log_{2}x$ is,"[0,1/8]","[1/2, 1]","[1/8, 1/4]","[1/4, 1/2]",D
+"If the complex number m(m-2)+(m^2-3m+2)i is a pure imaginary number, then the value of the real number m is",0 or 2,0,2,1 or 2,B
+The complex number $(i(2+i)/(1-2i))$ equals,-i,i,-1,1,C
+"Given that the distance between two parallel lines l_1: 3x-4y+a=0, l_2: 6x-8y+10=0 is 2, then a equals","-5,15","10,5","-5,10","-15,5",A
+"If $\overrightarrow{a}=(x,3),\overrightarrow{b}=(x,-2)$, then ""$x=\sqrt{6}$"" is a",neither sufficient nor necessary condition for,necessary but not sufficient condition for,sufficient and necessary condition for,"sufficient but not necessary condition for
+""$\overrightarrow{a}\bot \overrightarrow{b}$""",B
+"If the equation of the regression line is y = 2 - 1.5x, then when the variable x increases by one unit,",y on average increases by 1.5 units,y on average decreases by 2 units,y on average decreases by 1.5 units,y on average increases by 2 units,C
+"A rectangular prism has 3 corners cut off, how many faces does the resulting object have",9,8,6,7,A
 "Given $\tan\alpha=1/4$, $\tan(\alpha-\beta)=1/3$, then $\tan\beta=$",-1/13,1/13,-11/7,7/11,A
-"In an arithmetic sequence {a_N}, if $a_2 + a_3 = 4$ and $a_4 + a_5 = 6$, then $a_9 + a_{10} = $",11,12,10,9,A
-"In triangle ABC, the lengths of the sides opposite angles A, B, and C are a, b, and c respectively. Given that b=3, c=1, and A=2B, then a=",$\sqrt{3}$,$2\sqrt{3}$,2,$\sqrt{3}/2$,B
-"Condition p: (x-2)^2 ≤ 1, condition q: 2/(x-1) ≥ 1, then p is q's",necessary and sufficient condition,sufficient but not necessary condition,neither sufficient nor necessary condition,necessary but not sufficient condition,D
-"In triangle $\bigtriangleup ABC$, the lengths of the sides opposite angles A, B, and C are a, b, and c, respectively. If $\angle C=120^{\circ }, c=\sqrt{2}a$, then",The relationship between A and B cannot be determined,$A\gt B$,A=B,$A\lt B$,B
-The range of values for \( a \) that satisfies \( \log_{2}a > \log_{3}27 \) is,"(8, \inf)","(9, \inf)","(3, \inf)","(0, \inf)",A
-"Roll a die, let A be ""rolling a 2,"" and B be ""rolling an odd number,"" then P(A+B) =",1/6,5/6,2/3,1/3,C
-"If the focal length of the ellipse $x^2/m+y^2/8=1$ is 2, then the value of m is",7,9,9 or 16,9 or 7,D
-在展开式 $\left( x-\frac{2}{x} \right)^{5}$ 中，x的系数为,20,5,40,10,C
-"Given that the graph of the power function y=f(x) passes through the point $(-\frac{1}{2},-\frac{1}{8})$, the value of $log_{2}f(4)$ is",4,6,3,-6,B
-"Given $a\gt 0,a\neq 0$, then $a^{0}+log_{a}a=$",1,2,a,0,B
+"In the arithmetic sequence {a_N}, if $a_2+a_3=4$ and $a_4+a_5=6$, then $a_9+a_{10}=$",11,12,10,9,A
+"In triangle ABC, the side lengths opposite to angles A, B, and C are a, b, and c respectively. Given that b = 3, c = 1, and A = 2B, then a =",$\sqrt{3}$,$2\sqrt{3}$,2,$\sqrt{3}/2$,B
+"Condition p: $(x-2)^2 \leq 1$, condition q: $\frac{2}{x-1} \geq 1$, then p is",Sufficient and necessary condition,Sufficient but not necessary condition,Neither sufficient nor necessary condition,Necessary but not sufficient condition,D
+"Let the lengths of the sides opposite to the internal angles A, B, C of $\bigtriangleup ABC$ be a, b, c respectively. If $\angle C=120^{\circ }, c=\sqrt{2}a$, then",The relationship between the sizes of A and B cannot be determined,$A\gt B$,A=B,$A\lt B$,B
+The range of values for \(a\) that satisfies \(log_{2}a > log_{3}27\) is,"(8, \inf)","(9, \inf)","(3, \inf)","(0, \inf)",A
+"When rolling a die, let A be the event ""getting a 2"" and B be the event ""getting an odd number"". Then P(A+B)=",1/6,5/6,2/3,1/3,C
+"If the focal distance of the ellipse $x^2/m + y^2/8 = 1$ is 2, then the value of m is",7,9,9 or 16,9 or 7,D
+"In the expansion, the coefficient of x in $\left( x-\frac{2}{x} \right)^{5}$",20,5,40,10,C
+"It is known that the graph of the power function $ y = f(x) $ passes through the point $(-\frac{1}{2}, -\frac{1}{8})$. The value of $ log_{2}f(4) $ is",4,6,3,-6,B
+"Given $a\gt 0, a\neq 0$, then $a^{0}+\log_{a}a=$",1,2,a,0,B
 "In a geometric sequence, a1=8 and a2=64, then the common ratio q is",8,3,4,2,A
-"If the sequence {a_n} satisfies a_{s+1}=1-1/a_s, and a_1=2, then a_2010 equals",-1,1,3/2,1/2,A
-函数y=\sqrt{3-log_{2}x}的定义域为,"(0,9]","(-inf,27]","(0,27]","(-inf, 9]",C
-"已知集合A={1,2,3,4}，B={y|y=3x-5, x\in A}，则$A\cap B$ =","{1,2}","{1,4}","{2,4}","{3,4}",B
-函数y=sin(x)^(sin(π/2+x)) 的最小正周期是,2π,π/2,4π,π,D
+"If the sequence {a_n} satisfies a_{s+1}=1-1/a_s, and a_1=2, then a_2010 is equal to",-1,1,3/2,1/2,A
+The domain of the function y=\sqrt{3-log_{2}x} is,"(0,9]","(-inf,27]","(0,27]","(-inf, 9]",C
+"Given the set A={1,2,3,4} and B={y|y=3x-5, x ∈ A}, then $A\cap B$ =","{1,2}","{1,4}","{2,4}","{3,4}",B
+The smallest positive period of the function y = sin(x)^(sin(π/2 + x)) is,2π,π/2,4π,π,D
 "If A is similar to B, then",|A|=|B|,A and B are both similar to the same diagonal matrix,A and B have the same eigenvectors,$A-\lambda E=B-\lambda E$,A
-{语文，数学，英语，体育}$\cup${语文，数学，英语，历史，地理}是,{语文，数学，英语},空集,{历史，地理，体育},{语文，数学},A
-The solution set of the inequality $(x^2-x-6)/(x-1)>0$ is,(x|x<-2或x>3},{x|-2<x<1或x>3},{x|-2<x<1或1<x<3},{x|x<-2或1<x<3},B
-"In triangle $\bigtriangleup ABC$, the lengths of the sides opposite angles A, B, and C are a, b, and c respectively. Given that b=3, c=1, and A=2B, then a=",2,$\sqrt{3}$,$2\sqrt{3}$,\frac{\sqrt{3}}{2},C
-"Given that the complex number z satisfies (1-i)z=2, then z is",-1-i,1-i,-1+i,1+i,D
-"Let S_n denote the sum of the first n terms of the arithmetic sequence a_n. If a_2 = 3 and a_3 = 9, then S_6 is",32,28,24,36,D
-"Given the set $A=\left\{ (x,y)|x^{2}+y^{^{2}}\le 3,x\in Z,y\in Z \right\}$, the number of elements in A is",9,5,4,8,A
-复数$\frac{2i}{1-i}$,1+i,1-i,-1+i,-1-i,C
-"Two foreign tourists visiting Beijing want to take a group photo with the five mascots of the 2008 Olympics, the Fuwa. They need to line up in a row, with the two tourists standing next to each other but not at either end. How many different arrangements are possible?",720,480,1440,960,D
-"Given $\Omega=\left\{ (x,y)|x+y\le 8,x\ge 0,y\ge 0 \right\},A=\left\{ (x,y)|x\le 2,y\ge 0,3x-y\ge 0 \right\}$. If a point P is randomly dropped onto the region $\Omega$, the probability that point P falls into region A is",$\frac{7}{16}$,$\frac{3}{4}$,$\frac{3}{16}$,$\frac{1}{4}$,C
-"Given the sets A={x|x≥0}, B={0,1,2}, then",$A\cup B=B$,"$A={x|x\ge 0},B={0,1,2}$",$B\subsetneq A$,$AIB=\emptyset $,C
-The range of values for a that satisfies $log_{2}a>log_{3}27$ is,"$(3,+\infty )$","$(8,+\infty )$","$(0,+\infty )$","$(9,+\infty )$",B
-"Several rectangular blocks with edge lengths of 2, 3, and 5 are assembled in the same direction to form a cube with an edge length of 90. The number of small rectangular blocks traversed by a diagonal of the cube is",64,70,68,66,D
-函数f(x)=ln(x)-1/x的零点所在的区间为,"(2,3)","(1,2)","(0,1)","(3,4)",B
-Let A: x=1 B: $x^{2}-3x+2=0$,"A is a sufficient condition for B, but not a necessary condition for B","A is a necessary condition for B, but not a sufficient condition for B",A is a sufficient and necessary condition for B,A is neither a sufficient condition nor a necessary condition for B,A
-"If the sum of the maximum and minimum values of the function $f(x)=\log_{2}(1+x)-\log_{2}(1-x)$ on the interval [a, b] is exactly 0, then the real numbers a and b satisfy",-1<=a<b<=1 and a+b=0,-1<a<b<1 and a+b=0,a<b and a+b=0,a=b=0,C
-"In $\triangle ABC$, $a=2, b=\sqrt{2}, \angle A=\frac{\pi}{4}$, then $\angle B=$",$\frac{\pi}{6}$ or $\frac{5\pi}{6}$,$\frac{\pi}{3}$ or $\frac{2\pi}{3}$,$\frac{\pi}{6}$,$\frac{\pi}{3}$,C
-"In the rectangular prism $ABCD-A_{1}B_{1}C_{1}D_{1}$, $AB=BC=1$ and $CC_{1}=2$. Then, $AC_{1}=$",$\sqrt{6}$,$\sqrt{2}$,$\sqrt{5}$,2,A
+"{Chinese, Math, English, PE} $\cup$ {Chinese, Math, English, History, Geography} is","{Chinese, Math, English}",Empty set,"{History, Geography, PE}","{Chinese, Math}",A
+The solution set of the inequality $(x^2-x-6)/(x-1)>0$ is,(x|x<-2 or x>3},{x|-2<x<1 or x>3},{x|-2<x<1 or 1<x<3},{x|x<-2 or 1<x<3},B
+"Let the lengths of the sides opposite to the internal angles A, B, C of $\bigtriangleup ABC$ be a, b, c respectively, and given that b=3, c=1, A=2B, then a=",2,$\sqrt{3}$,$2\sqrt{3}$,\frac{\sqrt{3}}{2},C
+"It is known that the complex number z satisfies (1-i)z=2, then z is",-1-i,1-i,-1+i,1+i,D
+"Let S_n be the sum of the first n terms of the arithmetic sequence a_n. If a_2=3 and a_3=9, then S_6 is",32,28,24,36,D
+"Let the set $A=\left\{ (x,y)|x^{2}+y^{^{2}}\le 3,x\in Z,y\in Z \right\}$, then the number of elements in A is",9,5,4,8,A
+The complex number $\frac{2i}{1-i}$,1+i,1-i,-1+i,-1-i,C
+"Two foreign tourists visiting Beijing want to take a commemorative photo with the 2008 Olympic Games mascots, the Fuwa (5 of them). They are required to line up in a row, with the two tourists standing next to each other and not at either end. How many different arrangements are possible?",720,480,1440,960,D
+"Given $\Omega=\left\{ (x,y)|x+y\le 8,x\ge 0,y\ge 0 \right\},A=\left\{ (x,y)|x\le 2,y\ge 0,3x-y\ge 0 \right\}$, if a point P is randomly thrown onto the region $\Omega$, then the probability of point P falling into region A is",$\frac{7}{16}$,$\frac{3}{4}$,$\frac{3}{16}$,$\frac{1}{4}$,C
+"Given the set A={x|x\ge 0}, B={0,1,2}, then",$A\cup B=B$,"$A={x|x\ge 0},B={0,1,2}$",$B\subsetneq A$,$A\cap B=\emptyset$,C
+The range of values for \(a\) that satisfies \(log_{2}a > log_{3}27\) is,"$(3,+\infty )$","$(8,+\infty )$","$(0,+\infty )$","$(9,+\infty )$",B
+"Several rectangular prisms with edge lengths of 2, 3, and 5 are assembled in the same direction to form a cube with an edge length of 90. The number of small rectangular prisms that a diagonal of the cube passes through is",64,70,68,66,D
+The interval containing the zero of the function f(x)=ln(x)-1/x is,"(2,3)","(1,2)","(0,1)","(3,4)",B
+"Let A: x=1, B: $x^{2}-3x+2=0$","A is a sufficient condition for B, but not a necessary condition for B","A is a necessary condition for B, but not a sufficient condition for B",A is both a sufficient and necessary condition for B,A is neither a sufficient condition nor a necessary condition for B,A
+"If the function $f(x)=log_{2}(1+x)-log_{2}(1-x)$ has a sum of maximum and minimum values equal to 0 on [a,b], then the real numbers a, b satisfy",-1<=a<b<=1 and a+b=0,-1<a<b<1 and a+b=0,a<b and a+b=0,a=b=0,C
+"In $\bigtriangleup ABC$, $a=2, b=\sqrt{2}, \angle A=\frac{\pi}{4}$, then $\angle B=$",$\frac{\pi}{6}$ or $\frac{5\pi}{6}$,$\frac{\pi}{3}$ or $\frac{2\pi}{3}$,$\frac{\pi}{6}$,$\frac{\pi}{3}$,C
+"In the rectangular prism $ABCD-A_{1}B_{1}C_{1}D_{1}$, $AB=BC=1, CC_{1}=2$, then $AC_{1}=$",$\sqrt{6}$,$\sqrt{2}$,$\sqrt{5}$,2,A
 $cos(-19\pi/6)=$,-1/2,1/2,\sqrt{3}/2,-\sqrt{3}/2,D
-The coefficient of x^3 in the expansion of $(x-2/x)^7$ is,42,84,168,21,B
-Let A and B be invertible square matrices of the same order. Which of the following equations is incorrect?,|AB|=|A||B|,(A+B)-1=A-1+B-1,$(AB)^{T}=B^{T}A^{T}$,(AB)-1=(B-1)(A-1),B
-"已知集合A={0,1,2}，B={2,3}，则集合$A\cup B = $","{0,1,3}","{0,1,2,3}","{1,2,3}",{2},B
-"在三角形ABC中，$a=2\sqrt{2}$，$B=\pi /4$, $\angle = \pi /3$，则b=",$5\sqrt{3}/3$,$3\sqrt{3}/2$,$5\sqrt{3}/4$,$4\sqrt{3}/3$,D
-Which of the following objects cannot form a set?,Students in this class with relatively good math grades,All even numbers not less than 0,All points on the line y=2x-1,The complete set of solutions to the inequality x+2>0,A
-"Among the following functions, which one is both even and monotonically increasing on the interval $(0,+\infty)$?",$y=x^2-1$,$y=-x$,$y=\cos(x)$,$y=x^4$,A
-"Given a point M on the hyperbola $\frac{x^{2}}{4}-\frac{y^{2}}{12}=1$ with an abscissa of 3, the distance from point M to the left focus of the hyperbola is",4,$2(\sqrt{7}+1)$,$2(\sqrt{7}-1)$,8,D
-"In the geometric sequence $\left\{ a_{n} \right\}$, $a_{n}\gt 0(n\in N^{*})$ and $a_{4}=4,a_{6}=16$. The common ratio q of the sequence $\left\{ a_{n} \right\}$ is",2,1,4,3,A
+The coefficient of \(x^3\) in the expansion of \((x-2/x)^7\) is,42,84,168,21,B
+"Let A and B be invertible square matrices of the same order, then which of the following equations is incorrect:",|AB|=|A||B|,(A+B)-1=A-1+B-1,$(AB)^{T}=B^{T}A^{T}$,(AB)-1=(B-1)(A-1),B
+"Given the sets A={0,1,2} and B={2,3}, then the set $A\cup B = $","{0,1,3}","{0,1,2,3}","{1,2,3}",{2},B
+"In triangle ABC, $a=2\sqrt{2}$, $B=\pi /4$, $\angle = \pi /3$, then b=",$5\sqrt{3}/3$,$3\sqrt{3}/2$,$5\sqrt{3}/4$,$4\sqrt{3}/3$,D
+The following objects that cannot form a set are,Classmates who are good at math,All even numbers not less than 0,All points on the line y=2x-1,The solution set of the inequality x+2>0,A
+"Among the following functions, which one is both an even function and monotonically increasing in the interval $(0,+\inf)$?",$y=x^2-1$,$y=-x$,$y=\cos(x)$,$y=x^4$,A
+"Given that the x-coordinate of a point M on the hyperbola $\frac{x^{2}}{4}-\frac{y^{2}}{12}=1$ is 3, the distance from point M to the left focus of the hyperbola is",4,$2(\sqrt{7}+1)$,$2(\sqrt{7}-1)$,8,D
+"In the geometric sequence $\left\{ a_{n} \right\}$, $a_{n}\gt 0(n\in N^{*})$ and $a_{4}=4, a_{6}=16$, then the common ratio $q$ of the sequence $\left\{ a_{n} \right\}$ is",2,1,4,3,A
 "If the graph of the function f(x) passes through (0,-1), then the graph of the inverse function of y=f(x+4) passes through the point","(-1,-4)","(-4,-1)","(0,-1)","(1,-4)",A
-"Let $x, y \in R$, and x + y = 3, then the minimum value of 3^x + 3^y is",6\sqrt{3},18\sqrt{3},4\sqrt{3},0,A
-"During the random inspection of product dimensions, the dimensions are divided into several groups, [3.5, 6) being one of them. The frequency of the inspected items in this group is 0.2, and the height of the histogram for this group is h. Then h is",0.1,0.2,0.05,0.08,D
-"Among the following functions, the one with a period of $\pi$ and is decreasing on the interval $[0,\pi/2]$ is",$y=\sin(2x)$,$y=\cos(2x)$,$y=\sin(x+\pi/4)$,$y=\cos(x+\pi/4)$,B
-"In triangle ABC, the sides opposite to angles A, B, and C are a, b, and c respectively. If a^2 = b^2 + c^2 - bc, then A =",pi/3,pi/6,2pi/3,pi/4,A
+"Let $x, y \in R$, and $x+y=3$, then the minimum value of $3^x+3^y$ is",6\sqrt{3},18\sqrt{3},4\sqrt{3},0,A
+"During the process of checking the dimensions of products, the dimensions are divided into several groups, and [3.5, 6) is one of these groups. The frequency of the sampled individuals in this group is 0.2. If the height of the histogram for this group is h, then h is",0.1,0.2,0.05,0.08,D
+"Among the following functions, the one with a period of $\pi$ and is a decreasing function on $[0,\pi/2]$ is",$y=\sin(2x)$,$y=\cos(2x)$,$y=\sin(x+\pi/4)$,$y=\cos(x+\pi/4)$,B
+"Given $\tan\alpha=-3$, then $\sin2(\alpha+\pi/4)=$",3/5,-4/5,4/5,-3/5,B
+"In triangle ABC, the sides opposite to angles A, B, C are a, b, c respectively. If a^2 = b^2 + c^2 - bc, then A =",pi/3,pi/6,2pi/3,pi/4,A
 "The number of proper subsets of set A={1,2,3,4} is",15,10,11,14,C
-"Among the following vectors, the one that is orthogonal to a=(1,1,-1) is","$a_{2}=(-1,1,1)$","$a_{1}=(1,1,1)$","$a_{4}=(0,1,1)$","$a_{3}=(1,-1,1)$",C
-The solution set of the equation $x^2+2x-8=0$ expressed in roster form is,"{2,-4}","-4 ,2","{4,-2}","4,-2",A
-如果在等差数列{a_n}中，a_3+a_4+a_5=12，那么a_1+a_2+a_3+…+a_7=,28,21,14,36,A
-"在$\bigtriangleup ABC$中，若a=2, b+c=7, cosB=-1/4，则sinA=",$\frac{3}{4}$,$\frac{5}{8}$,$\frac{\sqrt{15}}{8}$,$\frac{\sqrt{5}}{4}$,C
-"Let l and m be two distinct straight lines, and $\alpha$ be a plane. Which of the following propositions is correct?","If $l//\alpha, m\subset \alpha$, then $l// m$","If $l//\alpha, m//\alpha$, then $l// m$","If $l\bot m, m\subset \alpha$, then $l\bot \alpha$","If $l\bot \alpha, l//m$, then $m\bot \alpha$",D
-"计算机执行 a=8, b=5, a=a+b, b=a-b, print a,b 程序段后，输出的结果为","8,5","13, 8","3, 13","13, 3",B
-下列函数中，为偶函数的是,$y=log_{3}{x}$,$y=3x^{2}-1$,$y=x^{3}-3$,$y=3^{x}$,B
-"The hyperbola $\frac{x^{2}}{a^{2}}-\frac{y^{2}}{b^{2}}=1 (a\gt 0, b\gt 0)$ has an eccentricity of $\sqrt{3}$. Then its asymptote equations are",$y=\pm \frac{\sqrt{2}}{2}$,$y=\pm \sqrt{2}x$,$y=\pm \sqrt{3}x$,$y=\pm \frac{\sqrt{3}}{2}$,B
-"若x>0,y>0，且1/x+9/y=1，则x+y的最小值是",16,13,12,20,A
+"The vector that is orthogonal to a=(1,1,-1) among the following vectors is","$a_{2}=(-1,1,1)$","$a_{1}=(1,1,1)$","$a_{4}=(0,1,1)$","$a_{3}=(1,-1,1)$",C
+"The solution set of the equation $x^2+2x-8=0$, expressed in roster form, is","{2,-4}","-4 ,2","{4,-2}","4,-2",A
+"If in the arithmetic sequence {a_n}, a_3+a_4+a_5=12, then a_1+a_2+a_3+…+a_7=",28,21,14,36,A
+"In $\bigtriangleup ABC$, if a=2, b+c=7, cosB=-1/4, then sinA=",$\frac{3}{4}$,$\frac{5}{8}$,$\frac{\sqrt{15}}{8}$,$\frac{\sqrt{5}}{4}$,C
+"Let $ l $ and $ m $ be two distinct lines, and $ \alpha $ a plane. Which of the following statements is correct?","If $ l // \alpha, m \subset \alpha $, then $ l // m $","If $ l // \alpha, m // \alpha $, then $ l // m $","If $ l \bot m, m \subset \alpha $, then $ l \bot \alpha $","If $ l \bot \alpha, l // m $, then $ m \bot \alpha $",D
+"After the computer executes the program segment a=8, b=5, a=a+b, b=a-b, print a,b, the output result is","8,5","13, 8","3, 13","13, 3",B
+"Among the following functions, which one is an even function?",$y=log_{3}{x}$,$y=3x^{2}-1$,$y=x^{3}-3$,$y=3^{x}$,B
+"For the hyperbola $\frac{x^{2}}{a^{2}}-\frac{y^{2}}{b^{2}}=1 (a\gt 0, b\gt 0)$ with eccentricity $\sqrt{3}$, the equations of its asymptotes are",$y=\pm \frac{\sqrt{2}}{2}$,$y=\pm \sqrt{2}x$,$y=\pm \sqrt{3}x$,$y=\pm \frac{\sqrt{3}}{2}$,B
+"If x > 0, y > 0, and 1/x + 9/y = 1, then the minimum value of x + y is",16,13,12,20,A
 The monotonically decreasing interval of y=log_{3}(6-x-x^2) is,"[-1/2,inf)","(-inf,-1/2]","(-3,1/2]","[-1/2,2)",D
-"Since the implementation of quality education in high schools across our province, student clubs have flourished. Five freshmen from a high school plan to join four clubs: ""Spring Light Literature Society,"" ""Fitness Club,"" ""Basketball Home,"" and ""Go Club."" Each club must have at least one student participating, and each student must join exactly one club. If student A does not join the ""Go Club,"" the number of different participation methods is",180,108,72,216,A
-过圆锥的⾼的三等分点作平⾏于底⾯的截⾯，它们把圆锥侧⾯分成的三部分的⾯积之⽐为,1：2：4,1：3：5,1：3：9,1：2：3,B
-"Set A={1, 2, 3, 4, 5}, set B={x| x²=9}, A∩B is","{ 2, 3, 5}",{3},"{ -3, 3, }","{ 1, 2, 3}",B
-"Given that \( f(x) \) is an odd function defined on the domain \( (-\infty, +\infty) \), satisfying \( f(1 - x) = f(1 + x) \). If \( f(1) = 2 \), then \( f(1) + f(2) + f(3) + \dots + f(50) \) equals",-50,0,2,50,C
-"Given an even function f(x) defined on R, satisfying f(4+x)=f(x), and increasing on the interval [0,2], then f(0)<0 is a condition for the function f(x) to have 3 zeros in the interval [0,6] as",sufficient but not necessary,neither sufficient nor necessary,necessary and sufficient,necessary but not sufficient,D
-"若向量 a=(1,m)，b=(-2,4) ，且 a*b=-10，则m=",-2,-4,4,1,A
-"In the cuboid $ABCD-A_{1}B_{1}C_{1}D_{1}$, AB=BC=1, $AA_{1}=\sqrt{3}$, then the cosine of the angle between the skew lines $AD_{1}$ and $DB_{1}$ is",$\frac{1}{5}$,$\frac{\sqrt{5}}{6}$,$\frac{\sqrt{2}}{2}$,$\frac{\sqrt{5}}{5}$,D
-"Given a point M on the hyperbola x²/4 - y²/12 = 1 with an abscissa of 3, the distance from point M to the left focus of the hyperbola is",4,2(√7 - 1),8,2(√7 + 1),C
-"If the function f(x) = cosx - sinx is decreasing on the interval [-a, a], then the maximum value of a is",$\frac{3\pi}{4}$,$\frac{2\pi}{2}$,$\frac{\pi}{4}$,$\frac{\pi}{2}$,C
-"In triangle $\bigtriangleup ABC$, the lengths of the sides opposite angles A, B, and C are a, b, and c, respectively. If $b \cos C + c \cos B = 2a \sin B$ and $a^{2} + c^{2} - b^{2} = 6$, then the area of $\bigtriangleup ABC$ is",$\frac{\sqrt{3}}{3}$,$\frac{4\sqrt{3}}{3}$,$\frac{8\sqrt{3}}{3}$,$\frac{\sqrt{3}}{2}$,D
-"Given that the graph of the power function y=f(x) passes through the point (-1/2, -1/8), the value of log2 f(4) is",-6,6,4,3,B
-"In space, which of the following propositions is correct?",Two lines parallel to the same plane are parallel,Two lines perpendicular to the same line are parallel,Two lines perpendicular to the same plane are parallel,Two planes parallel to the same line are parallel,C
-用性质描述法表示第一象限的所有点的集合,"{(x,y)|x<0,y>0}","{(x,y)|x<0.y<0}","{(x,y)|x>0,y>0}","{(x,y)|x>0,Y<0}",C
-椭圆x^2/4+y^2=1的焦点坐标为,"(0,\pm\sqrt(2))","(\pm\sqrt(3), 0)","(0, \pm\sqrt(3)/2)","(\pm\sqrt(3)/2, 0)",B
-Describe the set of all even numbers using the property method,{x|x=2k},{x|x=2k+1},"{x|x=2k, k is a natural number}","{x|x=2k, k is a positive integer}",C
-"If the line x + y + m = 0 is tangent to the circle $x^{2} + y^{2} = m$, then m =",2,$\sqrt{2}$,No solution,0 or 2,A
+"Since the implementation of quality education in our province's high schools, student clubs have experienced rapid development. Five freshmen from a high school plan to join four clubs: ""Chunhui Literature Society,"" ""Fitness Club,"" ""Basketball Home,"" and ""Weiqi Garden."" If each club must have at least one student, each student must join exactly one club, and student A does not join ""Weiqi Garden,"" then the number of different ways they can join is",180,108,72,216,A
+The sections parallel to the base are made through the points that trisect the height of a cone. The ratio of the areas of the three parts divided on the lateral surface of the cone is,1：2：4,1：3：5,1：3：9,1：2：3,B
+"Set A = {1, 2, 3, 4, 5}, Set B = {x | x² = 9}, A∩B is","{ 2, 3, 5}",{3},"{ -3, 3 }","{ 1, 2, 3}",B
+"Let $ f(x) $ be an odd function defined on $(-\infty, +\infty)$, satisfying $ f(1-x) = f(1+x) $. If $ f(1) = 2 $, then the value of $ f(1) + f(2) + f(3) + \ldots + f(50) $ is",-50,0,2,50,C
+"Let f(x) be an even function defined on R, satisfying f(4+x)=f(x), and is increasing in the interval [0,2]. Then f(0)<0 is a condition for the function f(x) to have 3 zeros in the interval [0,6].",Sufficient but not necessary condition,Neither sufficient nor necessary condition,Necessary and sufficient condition,Necessary but not sufficient condition,D
+"If vector a = (1, m), b = (-2, 4), and a*b = -10, then m =",-2,-4,4,1,A
+"In the rectangular prism $ABCD-A_{1}B_{1}C_{1}D_{1}$, AB=BC=1, $AA_{1}=\sqrt{3}$. The cosine of the angle formed by the skew lines $AD_{1}$ and $DB_{1}$ is",$\frac{1}{5}$,$\frac{\sqrt{5}}{6}$,$\frac{\sqrt{2}}{2}$,$\frac{\sqrt{5}}{5}$,D
+"Given that the x-coordinate of a point M on the hyperbola x^2/4 - y^2/12 = 1 is 3, the distance from point M to the left focus of the hyperbola is",4,2(\sqrt{7}-1),8,2(\sqrt{7}+1),C
+"If f(x) = cosx - sinx is a decreasing function on [-a, a], then the maximum value of a is",$\frac{3\pi}{4}$,$\frac{2\pi}{2}$,$\frac{\pi}{4}$,$\frac{\pi}{2}$,C
+"Let the lengths of the sides opposite to the internal angles A, B, C of $\bigtriangleup ABC$ be a, b, c respectively. If $b \cos C + c \cos B = 2a \sin B$ and $a^{2} + c^{2} - b^{2} = 6$, then the area of $\bigtriangleup ABC$ is",$\frac{\sqrt{3}}{3}$,$\frac{4\sqrt{3}}{3}$,$\frac{8\sqrt{3}}{3}$,$\frac{\sqrt{3}}{2}$,D
+"Given that the graph of the power function y = f(x) passes through the point (-1/2, -1/8), the value of log2 f(4) is",-6,6,4,3,B
+"In space, which of the following statements is correct?",Two lines parallel to the same plane are parallel,Two lines perpendicular to the same line are parallel,Two lines perpendicular to the same plane are parallel,Two planes parallel to the same line are parallel,C
+Use the property description method to represent the set of all points in the first quadrant,"{(x,y)|x<0,y>0}","{(x,y)|x<0,y<0}","{(x,y)|x>0,y>0}","{(x,y)|x>0,Y<0}",C
+The coordinates of the foci of the ellipse x^2/4 + y^2 = 1 are,"(0,\pm\sqrt(2))","(\pm\sqrt(3), 0)","(0, \pm\sqrt(3)/2)","(\pm\sqrt(3)/2, 0)",B
+Describe the set of all even numbers using the method of property description,{x|x=2k},{x|x=2k+1},"{x|x=2k, k is a natural number}","{x|x=2k, k is a positive integer}",C
+"If the line x+y+m=0 is tangent to the circle $x^{2}+y^{2}=m$, then m=",2,$\sqrt{2}$,No solution,0 or 2,A
 The distance from the focus to the directrix of the parabola y^2=10x is,15/2,10,5/2,5,D
-"Given the function $f(x)=\ln(x)+\ln(4-x)$, then","f(x) is monotonically decreasing on (0,4)",The graph of y=f(x) is symmetric about the line x=2,"f(x) is monotonically increasing on (0,4)","The graph of y=f(x) is symmetric about the point (2,0)",B
-"Let the area of $\triangle ABC$ be 1, with $AB=1$, $BC=\sqrt{2}$, and $\angle B$ being obtuse. Then, AC=",2,$\sqrt{10}$,$\sqrt{5}$,1,B
-对于任意实数a（a>0，a≠1），函数f(x)=a^{x-1}+3的图像必经过点,"(2,5)","(5,2)","(4,1)","(1,4)",D
-"Given the first term of an arithmetic sequence is 1 and the common difference is 3, the sum of the first 5 terms is",35,20,30,10,A
-"Two boys and three girls, a total of five students, are standing in a row. If boy A is not at either end, and among the three girls, exactly two are adjacent, then the total number of different arrangements is",42,36,60,48,D
-设全集U={a，b，c，d，e，f}，A={a，c，e}，那么CuA=,"{a,b,c,d,e,f}",空集,"{a,c,e}","{b,d,f}",D
+"Given the function $f(x)=ln(x)+ln(4-x)$, then","f(x) is monotonically decreasing in (0,4)",The graph of y=f(x) is symmetric about the line x=2,"f(x) is monotonically increasing in (0,4)","The graph of y=f(x) is symmetric about the point (2,0)",B
+"Let the area of $\bigtriangleup ABC$ be 1, $AB=1$, $BC=\sqrt{2}$, and $\angle B$ is an obtuse angle, then $AC=$",2,$\sqrt{10}$,$\sqrt{5}$,1,B
+"For any real number a (a>0, a\neq 1), the graph of the function f(x)=a^{x-1}+3 must pass through the point","(2,5)","(5,2)","(4,1)","(1,4)",D
+It is known that the first term of an arithmetic sequence is 1 and the common difference is 3. What is the sum of the first 5 terms of this sequence?,35,20,30,10,A
+"Two boys and three girls stand in a row. If boy A does not stand at either end, and among the three girls, only two girls are adjacent, then the total number of different arrangements is",42,36,60,48,D
+"Let the universal set U={a, b, c, d, e, f}, A={a, c, e}, then CuA=","{a,b,c,d,e,f}",empty set,"{a,c,e}","{b,d,f}",D
 "In triangle ABC, if a=2, b+c=7, cosB=-1/4, then sinA=",\sqrt{5}/4,\sqrt{15}/8,5/8,3/4,B
-"Given that the inequality |x - m| < 1 holds as a sufficient but not necessary condition for 1/4 < x < 1/2, the range of real number m is","[-1/2,5/4]","(-1/2,5/4)","[-5/4,1/2]","[5/4,+inf)",A
+"Given that the sufficient but not necessary condition for the inequality |x-m|<1 to hold is 1/4<x<1/2, then the range of real number m is","[-1/2,5/4]","(-1/2,5/4)","[-5/4,1/2]","[5/4,+inf)",A

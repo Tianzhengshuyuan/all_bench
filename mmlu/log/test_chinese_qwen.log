@@ -1,0 +1,8156 @@
+题目:
+question: 设k为方程e^x + x - 2 = 0在区间[0, 1]内的实数解的个数，n为不在区间[0, 1]内的实数解的个数。以下哪一项是正确的？
+A: k = 0 and n = 1
+B: k = 1 and n = 0
+C: k = n = 1
+D: k > 1
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 在同构意义下，有多少个阶为16的加法阿贝尔群 G 满足对每个 x 属于 G 都有 x + x + x + x = 0？
+A: 0
+B: 1
+C: 2
+D: 3
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 假设 P 是由模 5 整数环 Z_5 中的系数且次数小于等于 7 的多项式所组成的集合。若算子 D 将 P 中的多项式 p(x) 映射至它的导数 p′(x)，那么 D 的零空间（核）的维数 n 和值域（像）的维数 r 分别是多少？
+A: n = 1 和 r = 6
+B: n = 1 和 r = 7
+C: n = 2 和 r = 5
+D: n = 2 和 r = 6
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 曲线 xy = 8 到原点的最短距离是
+A: 4
+B: 8
+C: 16
+D: 2√2
+
+qwen回答:
+answer: D， 
+正确答案是: A
+
+题目:
+question: 这里有25个行李箱，其中5个是损坏的。随机选择3个行李箱。求恰好有2个是损坏的概率。
+A: 2/69
+B: 1/30
+C: 2/23
+D: 12/125
+
+qwen回答:
+answer: A， 
+正确答案是: C
+
+题目:
+question: 设(Z_{10}, +, x) 是模10的整数环，令 S 是 Z_{10} 中由 {0, 2, 4, 6, 8} 表示的子集。以下哪个陈述是错误的？
+A: (S, +, x) 在模10加法下是封闭的。
+B: (S, +, x) 在模10乘法下是封闭的。
+C: (S, +, x) 在模10加法下有一个加法单位元。
+D: (S, +, x) 在模10乘法下没有乘法单位元。
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 一个长为9米的梯子斜靠在垂直于地面的墙面上。当梯子底端以每秒2米的恒定速率远离墙面时，梯子顶端则沿着墙面下滑。当梯子顶端离地面3米高时，求其下滑的速度是多少米每秒？
+A: 12*sqrt(2)
+B: 6*sqrt(2)
+C: 4*sqrt(2)
+D: 1/(2*sqrt(2))
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 考虑一段长度为10的线段。随机选择两点A和B，使A和B将该线段分成三条更小的线段。这三条更小的线段能够构成三角形的边的概率是多少？
+A: 0
+B: 10%
+C: 25%
+D: 50%
+
+qwen回答:
+answer: D， 
+正确答案是: C
+
+题目:
+question: 设 V 是一个有限维实向量空间，P 是 V 的一个线性变换，且满足 P² = P。以下哪一项一定是正确的？  
+I. P 是可逆的。  
+II. P 是可对角化的。  
+III. P 要么是单位变换，要么是零变换。
+A: None
+B: I only
+C: II only
+D: III only
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 以下哪一项是正确的？
+A: 每个紧致空间都是完备的
+B: 每个完备空间都是紧致的
+C: (a) 和 (b) 都不对
+D: (a) 和 (b) 都对
+
+qwen回答:
+answer: C， 
+正确答案是: A
+
+题目:
+question: 一个离散图如果任意两个顶点之间都有一条边相连，则称这个图为完全图。那么一个具有10个顶点的完全图有多少条边？
+A: 10
+B: 20
+C: 25
+D: 45
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 假设 X 是定义在正整数集合上的离散随机变量，使得对于每一个正整数 n，X = n 的概率为 1/2^n。若 Y 是具有相同概率分布的随机变量，且 X 与 Y 相互独立，那么 X 和 Y 中至少有一个的值大于 3 的概率是多少？
+A: 1/64
+B: 15/64
+C: 1/4
+D: 3/8
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 设V和W是某个7维向量空间X的两个4维子空间。以下哪一项不可能是子空间V与W交集的维数？
+A: 0
+B: 1
+C: 2
+D: 3
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 一个大班要被分成若干个小组，每个学生必须恰好属于其中一个小组。然而，每个学生都会讨厌另外三个同学。学生之间的厌恶情绪不一定是相互的。如果并不要求每个小组的人数相同，那么最少需要划分出多少个小组，才能使得没有任何一个学生与他们所讨厌的人分到同一组？
+A: 4
+B: 7
+C: 10
+D: 13
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 索菲亚和泰丝将各自从1到10这10个整数中随机选择一个。两个所选整数中 neither 是对方的平方的概率是多少？
+A: 0.64
+B: 0.72
+C: 0.81
+D: 0.95
+
+qwen回答:
+answer: B， 
+正确答案是: D
+
+题目:
+question: 设 K 是 R^n 的一个非空子集，其中 n > 1。以下叙述中哪一个一定为真？
+
+I. 如果 K 是紧致的，则定义在 K 上的每个连续实值函数都是有界的。
+
+II. 如果定义在 K 上的每个连续实值函数都是有界的，则 K 是紧致的。
+
+III. 如果 K 是紧致的，则 K 是连通的。
+A: I 只有
+B: II 只有
+C: III 只有
+D: I 和 II 只有
+
+qwen回答:
+answer: A， 
+正确答案是: D
+
+题目:
+question: 假设 V 是一个有限维数为 n 的实向量空间。将从 V 到自身的矩阵集合记作 M(V)。设 T 属于 M(V)。考虑两个子空间：U = {X ∈ M(V) : TX = XT} 和 W = {TX − XT : X ∈ M(V)}。以下哪项一定是正确的？
+
+I. 如果 V 有一个仅由 T 的特征向量组成的基，则 U = M(V)。
+
+II. dim (U) + dim (W) = n^2
+
+III. dim (U) < n
+A: I 只有
+B: II 只有
+C: III 只有
+D: I 和 II 只有
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 设 F 是一个恒定的单位力，与 xyz 空间中的向量 (-1, 0, 1) 平行。当一个质点沿着路径 (t, t^2, t^3) 从时间 t=0 到 t=1 移动时，F 对该质点所做的功是多少？
+A: -1/4
+B: -1/(4sqrt(2))
+C: 0
+D: sqrt(2)
+
+qwen回答:
+answer: B， 
+正确答案是: C
+
+题目:
+question: 设 X 为一个拓扑空间，且令 A、B 和 C 为 X 的非空子集，使得 A c B c C；即 A 是 B 的真子集，B 是 C 的真子集。以下哪项陈述是正确的？
+
+I. 若 A 和 C 是连通的，则 B 是连通的。
+II. 若 A 和 C 是紧致的，则 B 是紧致的。
+III. 若 A 和 C 是豪斯多夫空间，则 B 是豪斯多夫空间。
+A: 只有 I 和 II
+B: 只有 III
+C: 只有 I 和 III
+D: I、II 和 III
+
+qwen回答:
+answer: B， 
+正确答案是: D
+
+题目:
+question: 设 x₁ = 1，且对所有正整数 n，有 xₙ₊₁ = √(3+2xₙ)。若假设 {xₙ} 收敛，则 lim xₙ =
+A: 3
+B: e
+C: √5
+D: 0
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 若 v 是可逆矩阵 A 的特征向量，则以下哪项或哪些项必定成立？
+
+I. v 也是 2A 的特征向量。  
+II. v 也是 A² 的特征向量。  
+III. v 也是 A⁻¹ 的特征向量。
+A: 只有 I
+B: 只有 II
+C: 只有 III
+D: I、II 和 III
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 有多少个正整数 k 使得 k! 的普通十进制表示末尾恰好有 99 个零？
+A: None
+B: One
+C: Four
+D: Five
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 设 R 是一个具有乘法单位元的环。如果 U 是 R 的加法子群，且对所有 U 中的 u 和 R 中的 r，都有 ur ∈ U，则称 U 为 R 的一个右理想。若 R 恰好有两个右理想，则以下哪项一定成立？
+
+I. R 是交换的。  
+II. R 是一个除环（即除了加法单位元外，所有元素都有乘法逆元）。  
+III. R 是无限的。
+A: I 只
+B: II 只
+C: III 只
+D: I 和 II 只
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 一个六面的骰子（其面上的数字通常为 1 到 6）被怀疑是假的：掷出任何偶数的概率是掷出任何奇数概率的两倍。如果这个骰子被掷两次，那么第一次掷出 5 并且第二次掷出 6 的概率是多少？
+A: 2/81
+B: 1/18
+C: 2/27
+D: 1/9
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 陈述1：假设{s_n}和{t_n}是复数序列，满足limₙ→∞ sₙ = s 和 limₙ→∞ tₙ = t，则limₙ→∞ sₙtₙ = st。  
+陈述2：存在一个没有收敛子序列的有界实数列。
+A: True, True
+B: True, False
+C: False, True
+D: False, False
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 在整数集合 Z 上定义一个二元运算，其方程为 m • n = m + n + mn。关于二元结构 (Z, •)，下列陈述哪一项（或哪些）是正确的？
+I. 此结构不是一个群，因为该运算不满足结合律。
+II. 此结构不是一个群，因为不存在单位元。
+III. 此结构不是一个群，因为并非所有元素都有逆元。
+IV. 此结构是一个群。
+A: 只有 I 和 II
+B: 只有 I 和 III
+C: 只有 II 和 III
+D: 只有 III
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 凯特写一套GRE数学练习测试需要k天。约翰写一套GRE数学练习测试需要j天。如果凯特和约翰以交替的2天轮班方式合作完成一个练习测试，当凯特先开始时，他们总共需要10天；而当约翰先开始时，总共需要10.5天。如果凯特和约翰同时一起工作，他们需要多长时间才能完成一个练习测试？
+A: 9/2 天
+B: 5 天
+C: 41/8 天
+D: 36/7 天
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 一个三角形区域的最大可能面积是多少？该三角形的一个顶点位于半径为1的圆的圆心，另外两个顶点在圆上。
+A: 1/2
+B: 1
+C: sqrt(2)
+D: pi
+
+qwen回答:
+answer: B， 
+正确答案是: A
+
+题目:
+question: 设 f(x, y) = x^2 - 2xy + y^3，其中 x 和 y 均为实数。以下哪一项是正确的？
+A: f 的所有相对极值均位于直线 x = y 上。
+B: f 的所有相对极值均位于抛物线 x = y^2 上。
+C: f 在点 (0, 0) 处有相对极小值。
+D: f 在点 (2/3, 2/3) 处有绝对极小值。
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 5个对象的置换群中元素的最大阶数是多少？
+A: 5
+B: 6
+C: 12
+D: 15
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: S(n) 是一个关于正整数 n 的命题，满足当 S(k) 为真时，S(k + 1) 也必定为真。此外，存在某个正整数 n0，使得 S(n0) 不成立。在以下选项中，哪一个是能够得出的最强结论？
+A: S(n0 + 1) 不成立。
+B: S(n0 - 1) 不成立。
+C: 对于所有 n <= n0，S(n) 都不成立。
+D: 对于所有 n >= n0，S(n) 都不成立。
+
+qwen回答:
+answer: B， 
+正确答案是: C
+
+题目:
+question: 在xyz空间中，平面2x + y + 3z = 3上距离原点最近的点的坐标是什么？
+A: (0, 0, 1)
+B: (3/7, 3/14, 9/14)
+C: (7/15, 8/15, 1/15)
+D: (5/6, 1/3, 1/3)
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 对于哪些满足 3 <= n <= 11 的整数，在同构意义下阶为 n 的群只有一个？
+A: 没有这样的整数 n
+B: 仅对于 3, 5, 7 和 11
+C: 仅对于 3, 5, 7, 9 和 11
+D: 仅对于 4, 6, 8 和 10
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 树是没有环路的连通图。有多少棵非同构的5个顶点的树存在？
+A: 1
+B: 2
+C: 3
+D: 4
+
+qwen回答:
+answer: D， 
+正确答案是: C
+
+题目:
+question: 假设 A 和 B 是 n x n 可逆矩阵，其中 n > 1，并且 I 是 n x n 单位矩阵。如果 A 和 B 是相似矩阵，那么以下哪项陈述一定为真？  
+I. A - 2I 和 B - 2I 是相似矩阵。  
+II. A 和 B 具有相同的迹。  
+III. A^-1 和 B^-1 是相似矩阵。
+A: I 只有
+B: II 只有
+C: III 只有
+D: I、II 和 III
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 设 C 是 yz 平面上的一个圆，其方程为 (y - 3)^2 + z^2 = 1。若将 C 绕 z 轴旋转一周，则生成的曲面是一个环面（圆环）。这个环面的方程是什么？
+A: x^2 + y^2 + z^2 + 8 = 6y
+B: (x^2 + y^2 + z^2)^2 = 8 + 36(x^2 + z^2)
+C: (x^2 + y^2 + z^2 + 8)^2 = 36(x^2 + z^2)
+D: (x^2 + y^2 + z^2 + 8)^2 = 36(x^2 + y^2)
+
+qwen回答:
+answer: C， 
+正确答案是: D
+
+题目:
+question: 以下哪一个选项是与函数 y = x + e^x 在 x = 0 处相切的直线方程？
+A: y = 2x + 1
+B: y = 2x
+C: y = x + 2
+D: y = x + 1
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 设 V 是所有实 2 x 3 矩阵构成的实向量空间，W 是所有实 4 x 1 列向量构成的实向量空间。如果 T 是从 V 到 W 的一个线性变换，那么子空间 kernel(T)（T 的核）的维数是多少？
+A: 2
+B: 3
+C: 4
+D: 5
+
+qwen回答:
+answer: C， 
+正确答案是: A
+
+题目:
+question: 陈述1：假设∑|a_i|发散且∑a_i = 2。则存在该级数项的一个重排a_i_k，使得∑a_i_k = 4。  
+陈述2：存在度量空间X和Y，其中X是闭合且有界的，且存在一个连续映射f : X → Y，使得f(X)不是“闭合且有界”。
+A: 正确，正确
+B: 正确，错误
+C: 错误，正确
+D: 错误，错误
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 在一个欧几里得平面上的凸十边形中，最多可以有的锐角个数是
+A: 1
+B: 2
+C: 3
+D: 4
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 若 f(z) 是一个将整个有限复平面映射到实轴上的解析函数，则虚轴必定被映射为：
+A: 整个实轴
+B: 一个点
+C: 一条射线
+D: 一个开的有限区间
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 一个群 G，若对所有 a, b ∈ G 都满足 (ab)^2 = a^2b^2，则该群必然是
+A: 有限
+B: 循环
+C: 二阶
+D: 阿贝尔
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 若 f 是定义在开区间 (-1, 4) 上的一个连续可导的实值函数，使得 f(3) = 5 且对所有 x 都有 f'(x) ≥ -1，那么 f(0) 的最大可能值是多少？
+A: 3
+B: 4
+C: 5
+D: 8
+
+qwen回答:
+answer: C， 
+正确答案是: D
+
+题目:
+question: 假设 A 和 B 是具有实数元素的 n × n 矩阵。以下哪项是正确的？  
+I. A² 的迹是非负的。  
+II. 如果 A² = A，则 A 的迹是非负的。  
+III. AB 的迹等于 A 的迹与 B 的迹的乘积。
+A: II only
+B: III only
+C: I and II only
+D: II and III only
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 在标准十进制展开中，数字7^25的个位数是什么？
+A: 1
+B: 3
+C: 5
+D: 7
+
+qwen回答:
+answer: B， 
+正确答案是: D
+
+题目:
+question: 陈述1：若函数 f : X → Y 是连续的且 X 是紧集，则 f 一定是一致连续的。  
+陈述2：若函数 f(x)、g(x) : R → R 处处可导，则 f(g(x)) 也必定处处可导。
+A: 正确，正确
+B: 正确，错误
+C: 错误，正确
+D: 错误，错误
+
+qwen回答:
+answer: D， 
+正确答案是: A
+
+题目:
+question: 由曲线 $ y = x $ 和 $ y = x^2 $ 在 $ xy $ 平面的第一象限内围成的区域绕 $ y $ 轴旋转。所得旋转体的体积为
+A: $ \pi/12 $
+B: $ \pi/6 $
+C: $ \pi/3 $
+D: $ 2\pi/3 $
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 在 xy 平面上，参数方程为 x = cos t 和 y = sin t，0 <= t <= pi 的曲线的长度为
+A: 3
+B: pi
+C: 3pi
+D: 3/2
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 以下哪一项或哪些是幂级数的有效收敛区间？
+(I) [−1, 3)
+(II) (−∞, 0]
+(III) [2, 2] ∪ [3, 3]
+(IV) (−∞,∞)
+A: 只有 (II)
+B: 只有 (IV)
+C: (I) 和 (IV)
+D: (II) 和 (III)
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 若函数 f: R -> R 是一个有界的 Lebesgue 可积函数，则以下哪一项必定成立？
+A: f 是 Riemann 可积的。
+B: 不存在一个可数无限的 R 的子集 E，使得 f 在 E 中每一点 x 处都不可导。
+C: 不存在一个不可数的 R 的子集 E，使得 f 在 E 中每一点 x 处都不可导。
+D: 以上都不是。
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 在 xy 平面上，方程 x^(log y) = y^(log x) 的图像为
+A: 第一象限（不包含坐标轴）
+B: 一条闭合曲线
+C: 位于第一象限（不包含坐标轴）内的一条射线
+D: 一个单独的点
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 哪个p使得范数||x||_p可以表示为内积？
+A: 1
+B: 2
+C: p >= 1
+D: 无穷大
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 设 S 为一个紧致的拓扑空间，T 为一个拓扑空间，f 是从 S 到 T 的一个满射函数。在下列关于 f 的条件中，哪一个是确保 T 紧致性的最弱充分条件？
+A: f 是一个同胚映射。
+B: f 是连续且一一对应的。
+C: f 是连续的。
+D: f 是一一对应的。
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 一个内切圆半径为2的等边三角形的面积是多少？
+A: 12
+B: 16
+C: 12*sqrt(3)
+D: 16*sqrt(3)
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 对于哪个n的值，恰好存在两个互不同构的阿贝尔群？
+A: 4
+B: 7
+C: 8
+D: 12
+
+qwen回答:
+answer: C， 
+正确答案是: A
+
+题目:
+question: 以下哪一个对于 x, y, z ∈ R^k 并非总是成立？
+A: |x| ≥ 0
+B: |x · y| ≤ |x||y|
+C: |x| = 0 当且仅当 x = 0
+D: |x + y| = |x| + |y|
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 设 V 是实系数多项式构成的向量空间，其最高次数不超过 3（在通常运算下）。令 W 是 V 的一个子空间，包含所有满足 p(0) = p(1) = p(-1) = 0 的多项式 p(x)。则 dim V + dim W 为
+A: 4
+B: 5
+C: 6
+D: 7
+
+qwen回答:
+answer: C， 
+正确答案是: B
+
+题目:
+question: 若V和W是R^4的二维子空间，则子空间V交W的可能维数是多少？
+A: 仅1
+B: 仅2
+C: 仅0和1
+D: 仅0、1和2
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 曲线 y = (sin x + cos x)^4 和 y = (sin x - cos x)^4 在 x = 0 处相交。若 a 是这些曲线再次相交的最小正 x 值，求从 x = 0 到 x = a 这两条曲线之间的面积。
+A: 2
+B: π
+C: 4
+D: 3π/2
+
+qwen回答:
+answer: B， 
+正确答案是: C
+
+题目:
+question: 如果 f 是从平面到实数的线性变换，并且已知 f(1, 1) = 1 以及 f(-1, 0) = 2，那么 f(3, 5) =
+A: 9
+B: 8
+C: 0
+D: -5
+
+qwen回答:
+answer: D， 
+正确答案是: A
+
+题目:
+question: 该多项式 2x^5 + 8x - 7 有多少个实数根？
+A: None
+B: One
+C: Two
+D: Three
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 一所大学的数学系有10位教授，下学期将开设20门不同的课程。每位教授将被分配讲授其中恰好2门课程，并且每门课程都恰好有一位教授负责。如果任何教授都可以被分配讲授任何课程，那么有多少种不同的完整分配方式？
+A: 20!/2^(10)
+B: 10!/2^9
+C: 10^(20) - 2^(10)
+D: 10^(20) - 100
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 以下哪些是正确的：
+A: 可以在线性序关系≤放置在复数集C上，使得(C, +, ×, ≤) 不是一个有序域。
+B: 可以将一个线性序关系≤放置在复数集C上，使得 (C, +, ×, ≤) 成为一个有序域。
+C: (a) 和 (b) 都不对
+D: (a) 和 (b) 都对
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 在一个游戏中，两位玩家轮流抛掷一枚均匀的硬币，先抛出正面的人获胜。首先抛掷的玩家赢得比赛的概率是
+A: 1/4
+B: 1/3
+C: 1/2
+D: 2/3
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 以下哪一个不是群？
+A: 整数在加法运算下
+B: 非零整数在乘法运算下
+C: 非零实数在乘法运算下
+D: 复数在加法运算下
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 设 x 和 y 是正整数，使得 3x + 7y 能被 11 整除。下列哪一个也一定能被 11 整除？
+A: 4x + 6y
+B: x + y + 5
+C: 9x + 4y
+D: 4x - 9y
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 在定义于 R³ 上的函数中，表达式 x + 4z 的最小值是多少，约束条件为 x² + y² + z² ≤ 2？
+A: 0
+B: -2
+C: -sqrt(34)
+D: -sqrt(35)
+
+qwen回答:
+answer: D， 
+正确答案是: C
+
+题目:
+question: 设 R 是一个环，U 和 V 是 R 的（双边）理想。以下哪些也一定是 R 的理想？
+
+I. {u + v : u ∈ U 且 v ∈ V}  
+II. {uv : u ∈ U 且 v ∈ V}  
+III. {x : x ∈ U 且 x ∈ V}
+A: II 只
+B: III 只
+C: I 和 II 只
+D: I 和 III 只
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 由x轴和函数 f(x) = x/(1 + x³) 所围成的区域绕x轴旋转。所产生的立体图形的体积是多少？
+A: π/3
+B: π/4
+C: π
+D: 2π
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 假设今天是星期三。那么从现在起再过10^(10^(10))天会是星期几？
+A: 星期日
+B: 星期一
+C: 星期二
+D: 星期三
+
+qwen回答:
+answer: D， 
+正确答案是: A
+
+题目:
+question: 水从倒置圆锥顶端的孔中以每分钟3立方厘米的速度滴出。该圆锥的高度和底面半径分别为2厘米和1厘米。当水面低于圆锥顶部半个厘米时，水面高度变化的速率是多少？圆锥体积公式为V = (π/3)*r^2*h，其中r为底面半径，h为圆锥高度。
+A: −48/π cm/min
+B: −4/(3π) cm/min
+C: −8/(3π) cm/min
+D: −16/(3π) cm/min
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 考虑如下线性方程组：
+
+w + 3x + 2y + 2z = 0  
+w + 4x + y = 0  
+3w + 5x + 10y + 14z = 0  
+2w + 5x + 5y + 6z = 0  
+
+其解的形式为 (w, x, y, z)，其中 w、x、y 和 z 是实数。以下叙述中哪一个是错误的？
+A: 方程组是相容的。
+B: 方程组有无穷多解。
+C: 任意两个解的和也是一个解。
+D: 每个解都是 (-5, 1, 1, 0) 的标量倍数。
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 若 c > 0 且 f(x) = e^x - cx 对所有实数 x 成立，则 f 的最小值为
+A: f(c)
+B: f(e^c)
+C: f(1/c)
+D: f(log c)
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 假设 A 是一个 3 × 3 的矩阵，使得 det(A − λI) = −λ^3 + 3λ^2 + λ − 3，其中 I 是 3 × 3 的单位矩阵。以下关于 A 的哪些说法是正确的？
+I. A 的迹（trace）为 3。
+II. A 的行列式（determinant）为 −3。
+III. 矩阵 A 有特征值（eigenvalues）−3 和 1。
+A: I 只有
+B: II 只有
+C: III 只有
+D: I 和 II 只有
+
+qwen回答:
+answer: A， 
+正确答案是: D
+
+题目:
+question: 设 y = f(x) 是微分方程 x dy + (y - xe^x) dx = 0 的一个解，且当 x = 1 时，y = 0。求 f(2) 的值。
+A: 1/(2e)
+B: 1/e
+C: e^2/2
+D: 2e
+
+qwen回答:
+answer: A， 
+正确答案是: C
+
+题目:
+question: 一枚公平的硬币将被投掷100次，每次投掷的结果为正面或反面。如果H代表正面出现的总次数，T代表反面出现的总次数，那么以下哪个事件的概率最大？
+A: H = 50
+B: T >= 60
+C: 51 <= H <= 55
+D: H >= 48 且 T >= 48
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 命题1：假设f : [a, b]是一个函数，并且f有一个局部最大值。则f'(x)一定存在并且等于0？  
+命题2：存在从R到Q的非常数连续映射。
+A: 对，对
+B: 对，错
+C: 错，对
+D: 错，错
+
+qwen回答:
+answer: C， 
+正确答案是: D
+
+题目:
+question: 设 I ≠ A ≠ -I，其中 I 是单位矩阵，A 是一个实数 2 x 2 矩阵。如果 A = A^(-1)，则 A 的迹是
+A: 2
+B: 1
+C: 0
+D: -1
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 总共有x英尺的篱笆用来围成一个水平矩形院子的三边。请问院子的最大可能面积是多少（用x表示）？
+A: x^2/9
+B: x^2/8
+C: x^2/4
+D: x^2
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 命题1：若A是连通的，则A的闭包也必然是连通的。  
+命题2：每一个连续函数f : (0, 1) → (0, 1)都有一个不动点。
+A: 正确，正确
+B: 正确，错误
+C: 错误，正确
+D: 错误，错误
+
+qwen回答:
+answer: A， 
+正确答案是: B
+
+题目:
+question: 下列哪个集合的势最大？
+A: 实数集 R
+B: 从整数集 Z 到 Z 的所有函数的集合
+C: 从实数集 R 到 {0, 1} 的所有函数的集合
+D: 实数集 R 的所有有限子集的集合
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 设 f(x) 是一个图像经过原点的函数。若对所有整数 n，都有 f(2n) = n² + f[2(n - 1)]，那么 f(8) 的值是多少？
+A: 24
+B: 30
+C: 32
+D: 36
+
+qwen回答:
+answer: D， 
+正确答案是: B
+
+题目:
+question: 72阶的互不同构的阿贝尔群有多少个？
+A: 4
+B: 6
+C: 8
+D: 9
+
+qwen回答:
+answer: D， 
+正确答案是: B
+
+题目:
+question: 如果有限群 G 中包含一个七阶子群，但没有任何元素（除了单位元外）是自身的逆元，那么 G 的阶数可能是
+A: 27
+B: 28
+C: 35
+D: 37
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 设 f(x, y) = x^3 + y^3 + 3xy，其中 x 和 y 均为实数。那么存在两个不同的点 P 和 Q，使得 f 满足以下情况之一：
+A: 在 P 点和 Q 点处均具有局部极大值
+B: 在 P 点和 Q 点处均为鞍点
+C: 在 P 点处具有局部极大值，在 Q 点处为鞍点
+D: 在 P 点处具有局部极小值，在 Q 点处为鞍点
+
+qwen回答:
+answer: D， 
+正确答案是: C
+
+题目:
+question: 若集合 A 是实数轴 R 的一个子集，并且 A 包含所有有理数，那么以下哪一项一定是正确的？
+A: 如果 A 是开集，那么 A = R。
+B: 如果 A 是闭集，那么 A = R。
+C: 如果 A 是不可数集，那么 A = R。
+D: 如果 A 是不可数集，那么 A 是开集。
+
+qwen回答:
+answer: A， 
+正确答案是: B
+
+题目:
+question: 设 M 是一个 5 x 5 的实矩阵。下面五个关于 M 的条件中，恰好有四个是彼此等价的。哪一个条件与其余四个都不等价？
+A: 对于 M 的任意两个不同的列向量 u 和 v，集合 {u, v} 都是线性无关的。
+B: 齐次方程组 Mx = 0 只有零解。
+C: 对于每个 5 x 1 的实列向量 b，方程组 Mx = b 都有唯一解。
+D: M 的行列式不为零。
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 有多少个正数 x 满足方程 cos(97x) = x？
+A: 1
+B: 15
+C: 31
+D: 49
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 以下哪一个环中，两个非零元素的乘积有可能为零？
+A: 复数环
+B: 模11的整数环
+C: 区间 [0, 1] 上的实值连续函数环
+D: 形如 {a + b * sqrt(2) : a 和 b 为有理数} 的环
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 映射 x → axa² 是群 G 到其自身的同态，当且仅当
+A: G 是阿贝尔群
+B: G = {e}
+C: a³ = e
+D: a² = a
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 若A是满足第(i, j)个元素等于i + j的2阶方阵，且B是满足第(i, j)个元素等于i + j的3阶方阵，求detA + detB的值。
+A: -2
+B: -1
+C: 0
+D: 2
+
+qwen回答:
+answer: C， 
+正确答案是: B
+
+题目:
+question: 若 f : (0, 1) → (0, 1]，则以下哪项可能为真？
+I. f 是一一对应且满射。
+II. f 的像是紧致的。
+III. f 是连续、一一对应且满射。
+A: 仅 I
+B: 仅 II
+C: 仅 I 和 II
+D: 仅 I 和 III
+
+qwen回答:
+answer: A， 
+正确答案是: C
+
+题目:
+question: 若实数 x 在区间 [0, 3] 内随机选择，而实数 y 在区间 [0, 4] 内随机选择，则 x < y 的概率是多少？
+A: 1/2
+B: 7/12
+C: 5/8
+D: 2/3
+
+qwen回答:
+answer: B， 
+正确答案是: C
+
+题目:
+question: 一个点 (x, y) 在 R^2 中被选中的概率服从在满足不等式 0 < |x| + |y| < 1 的区域内的均匀分布。那么 2(x + y) > 1 的概率是多少？
+A: 0
+B: 1/4
+C: sqrt(2)/4
+D: 1/sqrt(2)
+
+qwen回答:
+answer: C， 
+正确答案是: B
+
+题目:
+question: (1+i)^10 =
+A: 1
+B: i
+C: 32
+D: 32i
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 若 U 和 V 是 R^5 的三维子空间，则 U ∩ V 的可能维数是多少？
+A: 0
+B: 1
+C: 0 或 1
+D: 1、2 或 3
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 设 S 是 $ R^2 $ 中的子集，由单位正方形 $[0, 1] × [0, 1]$ 内所有满足 x 或 y（或者两者）为无理数的点 (x, y) 组成。关于 $ R^2 $ 上的标准拓扑，S 是
+A: closed（闭的）
+B: open（开的）
+C: connected（连通的）
+D: totally disconnected（完全不连通的）
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 以下哪个圆与抛物线 x² = y + 4 的交点数量最多？
+A: x² + y² = 1
+B: x² + y² = 2
+C: x² + y² = 9
+D: x² + y² = 16
+
+qwen回答:
+answer: D， 
+正确答案是: C
+
+题目:
+question: X 是一个有限集合，具有以下性质：X 中恰好包含3个元素的子集数量比X中恰好包含2个元素的子集数量多14个。那么，X 中恰好包含4个元素的子集有多少个？
+A: 24
+B: 25
+C: 28
+D: 35
+
+qwen回答:
+设集合 $ X $ 中有 $ n $ 个元素。
+
+题目给出的条件是：
+- 恰好包含 3 个元素的子集数量比恰好包含 2 个元素的子集数量多 14 个。
+
+组合数公式为：
+$$
+\binom{n}{k} = \frac{n!}{k!(n-k)!}
+$$
+
+根据题意，我们有：
+$$
+\binom{n}{3} - \binom{n}{2} = 14
+$$
+
+计算这两个组合数：
+$$
+\binom{n}{3} = \frac{n(n-1)(n-2)}{6}, \quad \binom{n}{2} = \frac{n(n-1)}{2}
+$$
+
+代入方程：
+$$
+\frac{n(n-1)(n-2)}{6} - \frac{n(n-1)}{2} = 14
+$$
+
+通分并化简：
+$$
+\frac{n(n-1)(n-2) - 3n(n-1)}{6} = 14
+$$
+
+提取公因式 $ n(n-1) $：
+$$
+\frac{n(n-1)[(n-2) - 3]}{6} = 14
+\Rightarrow \frac{n(n-1)(n-5)}{6} = 14
+$$
+
+解这个方程：
+
+尝试代入选项中的值：
+
+- 若 $ n = 7 $：
+$$
+\frac{7 \cdot 6 \cdot 2}{6} = 14 \quad \text{成立}
+$$
+
+所以 $ n = 7 $
+
+接下来求 $ \binom{7}{4} $：
+$$
+\binom{7}{4} = \binom{7}{3} = \frac{7 \cdot 6 \cdot 5}{3 \cdot 2 \cdot 1} = 35
+$$
+
+因此答案是：
+
+**D: 35**
+
+answer: D， 
+正确答案是: D
+
+题目:
+question: 设 T: R² → R² 是一个线性变换，它将点 (1, 2) 映射到 (2, 3)，将点 (-1, 2) 映射到 (2, -3)。那么 T 将点 (2, 1) 映射到
+A: (1, 6)
+B: (-1, 4)
+C: (3, 2)
+D: (-4, 3)
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+总题数: 100, 正确答案数: 65, 正确率: 65.00%, 耗时: 75.75秒
+题目:
+question: 求给定的域扩张 Q(sqrt(2), sqrt(3), sqrt(18)) 在 Q 上的次数。
+A: 0
+B: 4
+C: 2
+D: 6
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 设 p = (1, 2, 5, 4)(2, 3) 在 S_5 中。求 <p> 在 S_5 中的指数。
+A: 8
+B: 2
+C: 24
+D: 120
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 在给定的有限域中找到该多项式的所有零点，多项式的系数属于该域：x^5 + 3x^3 + x^2 + 2x，在 Z_5 中
+A: 0
+B: 1
+C: 0,1
+D: 0,4
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 陈述1：非阿贝尔群的因子群是非阿贝尔群。  
+陈述2：若K是H的正规子群且H是G的正规子群，则K是G的正规子群。
+A: 正确，正确
+B: 错误，错误
+C: 正确，错误
+D: 错误，正确
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 在给定的多项式环中求给定多项式的乘积。  
+f(x) = 4x - 5, g(x) = 2x^2 - 4x + 2 在 Z_8[x] 中。
+A: 2x^2 + 5
+B: 6x^2 + 4x + 6
+C: 0
+D: x^2 + 1
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 命题1：如果一个群有一个阶为15的元素，则它必须至少有8个阶为15的元素。  
+命题2：如果一个群有超过8个阶为15的元素，则它必须至少有16个阶为15的元素。
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 陈述1：群G的每个同态像都同构于G的一个商群。  
+陈述2：群G的同态像（在同构意义下）与G的商群相同。
+A: 正确，正确
+B: 错误，错误
+C: 正确，错误
+D: 错误，正确
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 陈述1：环同态是单射当且仅当其核为{0}。  
+陈述2：Q是R中的一个理想。
+A: 正确，正确
+B: 错误，错误
+C: 正确，错误
+D: 错误，正确
+
+qwen回答:
+answer: C， 
+正确答案是: D
+
+题目:
+question: 求给定的域扩张 Q(sqrt(2) + sqrt(3)) 在 Q 上的次数。
+A: 0
+B: 4
+C: 2
+D: 6
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 在给定的有限域中找出下列多项式的所有零点，该多项式的系数属于该域：x^3 + 2x + 2 在 Z_7 中
+A: 1
+B: 2
+C: 2,3
+D: 6
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 陈述1：如果H是G的一个子群且a属于G，则|aH| = |Ha|。  
+陈述2：如果H是G的一个子群且a和b属于G，则aH和Hb相同或者不相交。
+A: 正确，正确
+B: 错误，错误
+C: 正确，错误
+D: 错误，正确
+
+qwen回答:
+answer: A， 
+正确答案是: C
+
+题目:
+question: 若 A = {1, 2, 3}，则关系 S = {(1, 1), (2, 2)} 是
+A: 仅对称
+B: 仅反对称
+C: 既对称又反对称
+D: 等价关系
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 找出因子群 (Z_11 x Z_15)/(<1, 1>) 的阶
+A: 1
+B: 2
+C: 5
+D: 11
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 多项式 x^3 + 2x^2 + 2x + 1 在 Z_7[x] 中可以分解为一次因式的乘积。找出这个因式分解。
+A: (x − 2)(x + 2)(x − 1)
+B: (x + 1)(x + 4)(x − 2)
+C: (x + 1)(x − 4)(x − 2)
+D: (x - 1)(x − 4)(x − 2)
+
+qwen回答:
+answer: B， 
+正确答案是: C
+
+题目:
+question: 找出 S₁₀ 中元素的最大可能阶数。
+A: 6
+B: 12
+C: 30
+D: 105
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 陈述1：R 是 Q 上某个多项式的分裂域。  
+陈述2：存在一个包含60个元素的域。
+A: 正确，正确
+B: 错误，错误
+C: 正确，错误
+D: 错误，正确
+
+qwen回答:
+answer: A， 
+正确答案是: B
+
+题目:
+question: 在乘法群 {1, -1, i , -i} 中，-i 的逆元是
+A: 1
+B: -1
+C: i
+D: -i
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 计算在给定环中的乘积。(2,3)(3,5) 在 Z_5 × Z_9 中
+A: (1,1)
+B: (3,1)
+C: (1,6)
+D: (3,6)
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 所有实数在通常的乘法运算下不构成一个群，因为
+A: 乘法不是二元运算
+B: 乘法不满足结合律
+C: 不存在单位元
+D: 零没有逆元
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 陈述1：每个阶数为p²的群（其中p是素数）都是阿贝尔群。  
+陈述2：对于一个固定的素数p，一个群G的西洛p-子群是G的正规子群当且仅当它是G中唯一的西洛p-子群。
+A: 正确，正确
+B: 错误，错误
+C: 正确，错误
+D: 错误，正确
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 陈述1：对于有限群G和H，|G + H| = |G||H|。（G + H 是内部直积。）  
+陈述2：如果r整除m且s整除n，则Z_m + Z_n 有一个子群与 Z_r + Z_s 同构。
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 求给定多项式在多项式环中的和。f(x) = 4x - 5，g(x) = 2x^2 - 4x + 2，在 Z_8[x] 中。
+A: 2x^2 + 5
+B: 6x^2 + 4x + 6
+C: 0
+D: x^2 + 1
+
+qwen回答:
+answer: B， 
+正确答案是: A
+
+题目:
+question: 陈述1：R²中的任意两个向量都是线性无关的。  
+陈述2：若V = span(v₁, ..., vₖ)且{v₁, ..., vₖ}线性无关，则V的维数dim(V) = k。
+A: 正确，正确
+B: 错误，错误
+C: 正确，错误
+D: 错误，正确
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 所有单位的 n 次根在复数乘法下构成一个
+A: 有单位元的半群
+B: 有单位元的交换半群
+C: 群
+D: 阿贝尔群
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 陈述1：每个极大理想都是素理想。陈述2：如果I是交换环R的极大理想，那么R/I是一个域。
+A: 正确，正确
+B: 错误，错误
+C: 正确，错误
+D: 错误，正确
+
+qwen回答:
+answer: A， 
+正确答案是: B
+
+题目:
+question: 设 G 表示所有 n x n 非奇异矩阵组成的集合，且其元素为有理数。则在乘法运算下，G 是一个
+A: 子群
+B: 有限阿贝尔群
+C: 无限非阿贝尔群
+D: 无限阿贝尔群
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 命题1：每个42阶的群都有一个7阶的正规子群。  
+命题2：每个42阶的群都有一个8阶的正规子群。
+A: 正确，正确
+B: 错误，错误
+C: 正确，错误
+D: 错误，正确
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 判断多项式在Z[x]中是否满足艾森斯坦不可约性准则，从而在Q上不可约。8x^3 + 6x^2 - 9x + 24
+A: 是的，取p=2。
+B: 是的，取p=3。
+C: 是的，取p=5。
+D: 不满足。
+
+qwen回答:
+answer: A， 
+正确答案是: B
+
+题目:
+question: 陈述1：一个含有6个元素的群在同态下的像可能有12个元素。  
+陈述2：存在某个含有6个元素的群到某个含有12个元素的群的同态。
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 陈述1：循环群的同态像是循环的。  
+陈述2：交换群的同态像是交换的。
+A: 正确，正确
+B: 错误，错误
+C: 正确，错误
+D: 错误，正确
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 陈述1：如果H是群G的一个子群且a属于G，则aH = Ha。  
+陈述2：如果H是G的正规子群且a属于G，则对所有H中的h，有ah = ha。
+A: 正确，正确
+B: 错误，错误
+C: 正确，错误
+D: 错误，正确
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 若 (G, .) 是一个群，使得对所有 a, b ∈ G 都满足 (ab)^-1 = a^-1b^-1，则 G 是一个
+A: 交换半群
+B: 阿贝尔群
+C: 非阿贝尔群
+D: 以上都不是
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 陈述1：在有限维向量空间中，每一个线性无关的向量组都包含在一个基中。  
+陈述2：如果B_1和B_2是同一向量空间的两个基，则|B_1| = |B_2|。
+A: 正确，正确
+B: 错误，错误
+C: 正确，错误
+D: 错误，正确
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 已知某个群 (G, 0) 是阿贝尔群。那么对于 G 下列哪一项是正确的？
+A: 对于每个 g 属于 G，有 g = g⁻¹
+B: 对于每个 g 属于 G，有 g = g²
+C: 对于每个 g, h 属于 G，有 (g o h)² = g² o h²
+D: G 是有限阶的
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 陈述1：若T: V -> W是一个线性变换，且dim(V ) < dim(W) < 1，则T一定是单射。  
+陈述2：设dim(V) = n，并假设T: V -> V是线性的。如果T是单射，则它是一个双射。
+A: 正确，正确
+B: 错误，错误
+C: 正确，错误
+D: 错误，正确
+
+qwen回答:
+answer: D， 
+正确答案是: A
+
+题目:
+question: 求给定的域扩张 Q(sqrt(2), sqrt(3)) 相对于 Q 的次数。
+A: 0
+B: 4
+C: 2
+D: 6
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 计算在给定环中的乘积：(20)(-8) 在 Z_26 中
+A: 0
+B: 1
+C: 11
+D: 22
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 判断多项式在Z[x]中是否满足艾森斯坦不可约性准则从而在Q上不可约。x^2 - 12
+A: 是的，取p=2。
+B: 是的，取p=3。
+C: 是的，取p=5。
+D: 不满足。
+
+qwen回答:
+answer: D， 
+正确答案是: B
+
+题目:
+question: 找出有限域Z_7的生成元。
+A: 1
+B: 2
+C: 3
+D: 4
+
+qwen回答:
+answer: B， 
+正确答案是: C
+
+题目:
+question: 陈述1：每个排列都是一个循环。陈述2：每个循环都是一个排列。
+A: 正确，正确
+B: 错误，错误
+C: 正确，错误
+D: 错误，正确
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 在整数集 Z 上定义二元运算“*”，即对任意 a, b ∈ Z，有 a*b = a + b + 1，则该代数系统构成一个群。此群的单位元是
+A: 0
+B: 1
+C: -1
+D: 12
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 求环 Z_3 × 3Z 的特征。
+A: 0
+B: 3
+C: 12
+D: 30
+
+qwen回答:
+answer: B， 
+正确答案是: A
+
+题目:
+question: 陈述1：某些阶数为45的阿贝尔群具有阶数为10的子群。  
+陈述2：一个群G的子群H是正规子群，当且仅当H的左陪集个数等于H的右陪集个数。
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 陈述 1：每个具有0特征的整环都是无限的。  
+陈述 2：每个具有素数特征的整环都是有限的。
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 设 A 和 B 是集合，f: A -> B 以及 g: B -> A 是函数，满足对所有 a ∈ A，有 g(f(a)) = a。  
+命题 1 | 函数 f 必定是单射。  
+命题 2 | 函数 f 必定是满射。
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 陈述1：对于任意两个群G和G'，都存在一个从G到G'的同态映射。  
+陈述2：每个同态映射都是单射。
+A: 正确，正确
+B: 错误，错误
+C: 正确，错误
+D: 错误，正确
+
+qwen回答:
+answer: B， 
+正确答案是: C
+
+题目:
+question: 陈述1：一个同态可能具有空核。  
+陈述2：不可能将某个有限群非平凡地同态映射到某个无限群中。
+A: 正确，正确
+B: 错误，错误
+C: 正确，错误
+D: 错误，正确
+
+qwen回答:
+answer: C， 
+正确答案是: B
+
+题目:
+question: 找出所有在 Z_3 中的 c，使得 Z_3[x]/(x^3 + x^2 + c) 是一个域。
+A: 0
+B: 2
+C: 1
+D: 3
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 陈述1：如果R是一个整环，那么R[x]也是一个整环。  
+陈述2：如果R是一个环，且f(x)和g(x)属于R[x]，则deg(f(x)g(x)) = deg f(x) + deg g(x)。
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+
+qwen回答:
+answer: A， 
+正确答案是: C
+
+题目:
+question: 求Z₈ × Z₁₀ × Z₂₄中某个元素的最大可能阶数。
+A: 8
+B: 120
+C: 240
+D: 24
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 陈述1：每个可解群都是素数幂阶的。  
+陈述2：每个素数幂阶的群都是可解的。
+A: 正确，正确
+B: 错误，错误
+C: 正确，错误
+D: 错误，正确
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 找出所有 Z_3 中的 c，使得 Z_3[x]/(x^3 + cx^2 + 1) 是一个域。
+A: 0
+B: 2
+C: 1
+D: 3
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 在群 G = {2, 4, 6, 8} 下，模 10 乘法运算的单位元是
+A: 6
+B: 8
+C: 4
+D: 2
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 陈述1：如果 G、H 和 K 是阶为4的群，则其中至少有两个是同构的。  
+陈述2：如果 Z_r + Z_s 同构于子群 Z_m + Z_n，则 r 整除 m 且 s 整除 n。
+A: 正确，正确
+B: 错误，错误
+C: 正确，错误
+D: 错误，正确
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 求给定的域扩张 Q(sqrt(2)) 在 Q 上的次数。
+A: 0
+B: 2
+C: 1
+D: 3
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 陈述1：每个自由阿贝尔群都是无挠的。  
+陈述2：每个有限生成的无挠阿贝尔群都是自由阿贝尔群。
+A: 正确，正确
+B: 错误，错误
+C: 正确，错误
+D: 错误，正确
+
+qwen回答:
+answer: C， 
+正确答案是: A
+
+题目:
+question: 命题1：4x - 2在Z上不可约。命题2：4x - 2在Q上不可约。
+A: 正确，正确
+B: 错误，错误
+C: 正确，错误
+D: 错误，正确
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 找出有限域Z_11的生成元。
+A: 1
+B: 2
+C: 3
+D: 4
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 命题1：每个阶数为159的群都是循环群。  
+命题2：每个阶数为102的群都有一个非平凡的真正规子群。
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 陈述1：若H和K是G的子群，且H或K中有一个是G的正规子群，则HK是G的一个子群。  
+陈述2：所有阶数为p²（其中p为素数）的群都是阿贝尔群。
+A: 正确，正确
+B: 错误，错误
+C: 正确，错误
+D: 错误，正确
+
+qwen回答:
+answer: C， 
+正确答案是: A
+
+题目:
+question: 陈述1 | 子环的单位元必须与环的单位元相同。  
+陈述2 | 每个域都是一个整环。
+A: 正确，正确
+B: 错误，错误
+C: 正确，错误
+D: 错误，正确
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 陈述1：在矩阵乘法下，具有整数元素且行列式非零的2 x 2矩阵集合是一个群。  
+陈述2：在矩阵乘法下，具有整数元素且行列式为1的2 x 2矩阵集合是一个群。
+A: 正确，正确
+B: 错误，错误
+C: 正确，错误
+D: 错误，正确
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 陈述1：每个交换环的每个商环仍然是一个交换环。  
+陈述2：含单位元1的环R中的理想N等于整个R当且仅当1属于N。
+A: 正确，正确
+B: 错误，错误
+C: 正确，错误
+D: 错误，正确
+
+qwen回答:
+answer: A， 
+正确答案是: C
+
+题目:
+question: 若 A = (1, 2, 3, 4)，设 ~ = {(1, 2), (1, 3), (4, 2)}。则 ~ 是
+A: 不是反对称的
+B: 传递的
+C: 自反的
+D: 对称的
+
+qwen回答:
+answer: A， 
+正确答案是: B
+
+题目:
+question: 有多少个从Z到Z_2的同态？
+A: 1
+B: 2
+C: 无穷多个
+D: 0
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 陈述1：每个域也是一个环。  
+陈述2：每个环都有一个乘法单位元。
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 陈述1：如果R是一个环且f(x)和g(x)属于R[x]，那么deg (f(x)+g(x)) = maximum (deg f(x), deg g(x))。  
+陈述2：如果F是一个域，那么F[x]的每一个理想都是主理想。
+A: 正确，正确
+B: 错误，错误
+C: 正确，错误
+D: 错误，正确
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 群 (G,*) 的一个子集 H 构成群的条件是：
+A: a,b 属于 H ⇒ a * b 属于 H
+B: a 属于 H ⇒ a^-1 属于 H
+C: a,b 属于 H ⇒ a * b^-1 属于 H
+D: H 包含单位元
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 多项式 $x^4 + 4$ 可以在 $Z_5[x]$ 中分解为一次因式的乘积。请找出这个分解。
+A: $(x − 2)(x + 2)(x − 1)(x + 1)$
+B: $(x+1)^4$
+C: $(x-1)(x+1)^3$
+D: $(x-1)^3(x+1)$
+
+qwen回答:
+answer: B， 
+正确答案是: A
+
+题目:
+question: 陈述 1 | 每个正整数秩都存在一个自由阿贝尔群。  
+陈述 2 | 如果一个有限生成阿贝尔群的贝蒂数等于某个生成集中元素的数量，则该群是自由阿贝尔群。
+A: 正确，正确
+B: 错误，错误
+C: 正确，错误
+D: 错误，正确
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: (Z,*) 是一个群，其中对于所有的 a, b ∈ Z，有 a*b = a+b+1。则 a 的逆元是
+A: 0
+B: -2
+C: a-2
+D: (2+a)*-1
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 求给定的域扩张 Q(sqrt(2)*sqrt(3)) 关于 Q 的次数。
+A: 0
+B: 4
+C: 2
+D: 6
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 利用费马小定理，求 3^47 除以 23 的余数。
+A: 1
+B: 2
+C: 3
+D: 4
+
+qwen回答:
+answer: B， 
+正确答案是: D
+
+题目:
+question: 求环 Z₃ × Z₃ 的特征。
+A: 0
+B: 3
+C: 12
+D: 30
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 陈述1：如果a和b是一个群中的元素且a不等于b，那么a²不等于b²。  
+陈述2：二面体群中的旋转集合形成一个循环子群。
+A: 正确，正确
+B: 错误，错误
+C: 正确，错误
+D: 错误，正确
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 陈述1：在群中，(ab)^{-2} = b^{-2}a^{-2}。  
+陈述2：在群中，(ab)^n = a^nb^n。
+A: 正确，正确
+B: 错误，错误
+C: 正确，错误
+D: 错误，正确
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 陈述1：当n≥3时，Sₙ是非交换群。  
+陈述2：若a是一个m-循环置换，b是一个n-循环置换，则|ab|=lcm(m,n)。
+A: 正确，正确
+B: 错误，错误
+C: 正确，错误
+D: 错误，正确
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 求环 Z × Z 的特征。
+A: 0
+B: 3
+C: 12
+D: 30
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 陈述1：对于n > 1，集合{1,2, ..., n-1}在模n乘法下是一个群。  
+陈述2：存在整数x使得63x mod 100 = 1。
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 陈述1：若K是一个非零子群，属于一个有限生成的自由阿贝尔群，则K是自由阿贝尔群。  
+陈述2：若K是一个非零子群，属于一个有限生成的自由阿贝尔群，则G / K是自由阿贝尔群。
+A: 正确，正确
+B: 错误，错误
+C: 正确，错误
+D: 错误，正确
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 陈述1：循环群的外部直积是循环群。  
+陈述2：D_3 和 D_4 的外部直积与 D_12 同构。
+A: 正确，正确
+B: 错误，错误
+C: 正确，错误
+D: 错误，正确
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 陈述1：每个非零自由阿贝尔群都有无限多组基。  
+陈述2：每个秩至少为2的自由阿贝尔群都有无限多组基。
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 陈述1：对于每个正整数n，都存在一个阶为n的循环群。  
+陈述2：每个有限循环群都包含每个整除该群阶数的阶的元素。
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 陈述1：如果一个群有一个阶为10的元素，那么它有阶为1、2和5的元素。  
+陈述2：如果一个群有一个阶为2的元素和一个阶为3的元素，那么它有一个阶为6的元素。
+A: 正确，正确
+B: 错误，错误
+C: 正确，错误
+D: 错误，正确
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 设A和B是集合，f: A -> B 以及 g: B -> A 是函数，且对所有 a ∈ A，都有 g(f(a)) = a。  
+命题 1 | 函数 g 必定是单射（injective）。  
+命题 2 | 函数 g 必定是满射（surjective）。
+A: 正确，正确
+B: 错误，错误
+C: 正确，错误
+D: 错误，正确
+
+qwen回答:
+answer: A， 
+正确答案是: D
+
+题目:
+question: 陈述1：一个同态是一一的当且仅当核仅由单位元组成。  
+陈述2：某个具有6个元素的群在某个同态下的像可能有4个元素。
+A: 正确，正确
+B: 错误，错误
+C: 正确，错误
+D: 错误，正确
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 命题1：如果H和K是群G的子群，那么|HK| = |H||K|/|H ∩ K|。  
+命题2：一个阶为2p的群（其中p是奇素数）是循环群或者与D_p同构。
+A: 正确，正确
+B: 错误，错误
+C: 正确，错误
+D: 错误，正确
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 对于映射 T: Z x Z -> Z，其中 T(1, 0) = 3 且 T(0, 1) = -5，求 T(-3, 2)。
+A: -19
+B: -10
+C: 19
+D: 10
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 计算在给定环中的乘积。(12)(16) 在 Z_24 中
+A: 0
+B: 1
+C: 4
+D: 6
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 陈述1：每个排列都是单射函数。  
+陈述2：当且仅当一个函数是单射时，它才是排列。
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 陈述1：如果一个有限群的阶为n，那么对于n的每一个正因数d，该群都包含一个d阶的子群。  
+陈述2：如果a属于一个有限群，则|a|整除|G|。
+A: 正确，正确
+B: 错误，错误
+C: 正确，错误
+D: 错误，正确
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 找出子群4ℤ在2ℤ中的所有陪集。
+A: 4ℤ
+B: 4ℤ, 2 + 4ℤ
+C: 2ℤ
+D: ℤ
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 以下哪个陈述是正确的？
+A: 每个等价关系都是偏序关系。
+B: 从集合 A = {x, y, z} 到 B= (1, 2) 的关系数量是 64。
+C: 空关系 _ 是自反的
+D: 一个关系是对称的和非对称的，这两个性质互为否定。
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 找出 S₆ 的一个元素可能具有的最大阶数。
+A: 6
+B: 12
+C: 30
+D: 105
+
+qwen回答:
+answer: B， 
+正确答案是: A
+
+题目:
+question: 命题1：Q 是 Z₂ 的扩域。命题2：每个域上的非常数多项式在某个扩域中有一个根。
+A: 正确，正确
+B: 错误，错误
+C: 正确，错误
+D: 错误，正确
+
+qwen回答:
+answer: A， 
+正确答案是: D
+
+题目:
+question: 陈述1：若H是G的子群且a属于G，则aH是G的子群当且仅当a属于H。  
+陈述2：若H是G的子群且a、b属于G，则aH = bH当且仅当ab属于H。
+A: 正确，正确
+B: 错误，错误
+C: 正确，错误
+D: 错误，正确
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 找出以下有限域中给定多项式的所有零点，该多项式的系数在该域中：Z_2 域中的多项式 x^2 + 1
+A: 0
+B: 1
+C: 0,1
+D: 2
+
+qwen回答:
+answer: C， 
+正确答案是: B
+
+题目:
+question: 求所指循环群中的元素个数：由25生成的Z_30的循环子群。
+A: 25
+B: 5
+C: 6
+D: 30
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: Z_12 × Z_8 中元素 (4, 2) 的阶是
+A: 4
+B: 8
+C: 12
+D: 6
+
+qwen回答:
+answer: B， 
+正确答案是: C
+
+题目:
+question: 陈述1 | 环中的每个理想都是该环的一个子环。  
+陈述2 | 每个环的每个子环都是该环的一个理想。
+A: True, True
+B: False, False
+C: True, False
+D: False, True
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+总题数: 100, 正确答案数: 75, 正确率: 75.00%, 耗时: 56.29秒
+题目:
+question: 请指出以下论证的结论。我们很难不在同龄人身上验证到与我们在日常患者身上所观察到的相同的情绪导致智力减弱的现象。我们意识的傲慢，总的来说属于最强大的防御机制之一，它阻碍了无意识情结。因此，要说服人们相信无意识的存在是很困难的，并且进而教导他们那些与其有意识的知识相矛盾的内容也变得困难。（西格蒙德·弗洛伊德，《精神分析的起源和发展》）
+A: It is hard not to verify in our peers the same weakened intelligence due to emotions that we observe in our everyday patients.
+B: The arrogance of our consciousness, which in general, belongs to the strongest defense mechanisms, blocks the unconscious complexes.
+C: Because of this, it is difficult to convince people of the unconscious, and in turn to teach them what their conscious knowledge contradicts.
+D: It is difficult to convince people of the unconscious, and in turn to teach them what their conscious knowledge contradicts.
+
+qwen回答:
+answer: C， 
+正确答案是: D
+
+题目:
+question: 选择谓词逻辑的最佳翻译。David 教 Chris。（c：Chris；d：David；Txy：x 教 y）
+A: Tdc
+B: Tcd
+C: Tcc
+D: dTc
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 选择给出命题的最佳英文解释，使用以下翻译键：
+Ax：x 是一套公寓  
+Hx：x 是一所房子  
+Lx：x 是大的  
+Bxy：x 比 y 大  
+(∃x)[(Ax • Lx) • (∃y)(Hy • Bxy)]
+A: Some large houses are bigger than some apartments.
+B: Some houses are bigger than all large apartments.
+C: Some large apartments are bigger than some houses.
+D: Some houses are bigger thatn some large apartments.
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 请为以下论证构造一个完整的真值表。然后，利用该真值表判断该论证是有效的还是无效的。如果论证是无效的，请选择一个选项来展示一个反例。（可能还存在其他的反例。）
+~G ⊃ H  
+~H / G
+A: 有效
+B: 无效。当 G 和 H 都为真时是一个反例
+C: 无效。当 G 为真而 H 为假时是一个反例
+D: 无效。当 H 为真而 G 为假时是一个反例
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 请使用以下符号将给定的命题逻辑公式翻译成自然的英文句子：
+A: 玛丽娜读一本波西·杰克逊的书。
+B: 伊兹玩《我的世界》。
+C: 艾米丽停止工作。
+D: 拉塞尔做晚饭。  
+E：阿什莉顺道拜访。
+
+(~B • E) ⊃ D  
+
+A：如果并非（伊兹玩《我的世界》且阿什莉顺道拜访），那么拉塞尔做晚饭。  
+B：如果（伊兹不玩《我的世界》且阿什莉顺道拜访），那么拉塞尔做晚饭。  
+C：伊兹玩《我的世界》且阿什莉顺道拜访，这意味着拉塞尔做晚饭。  
+D：拉塞尔做晚饭是伊兹不玩《我的世界》且阿什莉顺道拜访的充分条件。
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 选择下列命题的最佳英文解释，使用以下翻译键：  
+Ax：x 是一套公寓  Hx：x 是一所房子  Lx：x 是大的  Bxy：x 比 y 大  (∃x)[Hx • (∀y)(Ay ⊃ Bxy)]
+A: Some houses are smaller than all apartments.
+B: Every house is bigger than every apartment.
+C: Some apartment is smaller than every house.
+D: Some houses are bigger than every apartment.
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 请为以下论证构造一个完整的真值表。然后，利用该真值表判断这个论证是有效的还是无效的。如果论证无效，请选择一个选项来展示一个反例。（可能还存在其他反例。）  
+~K ≡ L / (K · L) ∨ (K · ~L)
+A: 有效
+B: 无效。当 K 和 L 为真时是一个反例
+C: 无效。当 K 为真且 L 为假时是一个反例
+D: 无效。当 L 为真且 K 为假时是一个反例
+
+qwen回答:
+answer: A， 
+正确答案是: D
+
+题目:
+question: 找出下列条件命题的前件：如果大学不增加经济援助，那么要么校长未能批准它，要么董事会阻止了它。
+A: The university increases financial aid.
+B: The university does not increase financial aid.
+C: The board of trustees prevents it.
+D: The president fails to approve it.
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 以下哪一个命题是给定前提在命题逻辑中的直接（一步）结论？  
+~E ⊃ ~F  
+G ⊃ F  
+H ∨ ~E  
+H ⊃ I  
+~I
+A: E ⊃ F
+B: F ⊃ G
+C: H ⊃ ~E
+D: ~H
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 在给出的PL公式中，哪一个最能符号化以下句子？
+每个人都爱雷蒙德，或者不爱。
+A: L
+B: ~L
+C: L • ~L
+D: L ∨ ~L
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 请选择最合适的谓词逻辑翻译。所有国王都比所有贫民更幸运。（Kx：x 是一个国王；Px：x 是一个贫民；Lxy：x 比 y 更幸运）
+A: (∀x)[Kx ⊃ (∀y)(Py ⊃ Lxy)]
+B: (∀x)[Kx ⊃ (∀y)(Lxy ⊃ Py)]
+C: (∀x)(∀y)[(Kx • Py) ⊃ Lyx]
+D: (∀x)[(Kx • (∀y)(Py)) ⊃ Lxy]
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 请为以下命题对构造完整的真值表。然后，通过真值表判断这两个命题是逻辑等价还是矛盾。如果不是以上两种情况，请判断它们是否一致或不一致。并说明理由。
+(~M ⊃ ~N) ∨ (O ≡ N) 和 (~M · N) · [(~O ∨ ~N) · (O ∨ N)]
+A: 逻辑等价
+B: 矛盾
+C: 既不是逻辑等价也不是矛盾，但是一致
+D: 不一致
+
+qwen回答:
+answer: D， 
+正确答案是: B
+
+题目:
+question: 以下哪一个命题是给定前提在命题逻辑中的直接（一步）结论？  
+E ⊃ ~F  
+~F ⊃ G  
+~G
+A: E ⊃ F
+B: F ⊃ G
+C: G ⊃ E
+D: ~~F
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 用间接真值表来判断以下论证是否有效。如果论证无效，请选择一个选项给出反例。（可能还存在其他反例。）  
+E ⊃ (F ∨ ~G)  
+F ⊃ (~E ∨ ~G) / ~(E ≡ F)
+A: 有效
+B: 无效。当 E、F 和 G 都为真时是一个反例
+C: 无效。当 E 和 F 为真而 G 为假时是一个反例
+D: 无效。当 E、F 和 G 都为假时是一个反例
+
+qwen回答:
+answer: A， 
+正确答案是: C
+
+题目:
+question: 用间接真值表来判断以下论证是否有效。如果论证无效，请选择一个选项，该选项给出一个反例（可能还存在其他反例）：
+
+H ≡ (~I ∨ J)  
+H ∨ ~J / ~I
+A: 有效
+B: 无效。当 H、I 和 J 都为假时是一个反例
+C: 无效。当 H 和 I 为真且 J 为假时是一个反例
+D: 无效。当 I 为真且 H 和 J 都为假时是一个反例
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 请选择最合适的谓词逻辑翻译。有些消防员从危险中营救受害者。（Dx：x是危险；Fx：x是消防员；Vx：x是受害者；Rxyz：x从z中营救y）
+A: (∃x){Fx • (∀y)[Dy ⊃ (∃z)(Vz • Rxyz)]}
+B: (∃x){Fx • (∃y)[Vy • (∃z)(Dz • Rxyz)]}
+C: (∃x){Fx • (∃y)(∃z)[(Vy • Dz) • Rxzy]}
+D: (∀x){Fx ⊃ (∃y)[Vy • (∃z)(Dz • Rxyz)]}
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 找出下列条件命题的前件：大学提高学费当且仅当州长批准并且校董会推荐。
+A: 大学提高学费。
+B: 州长批准。
+C: 校董会推荐。
+D: 以上都不是
+
+qwen回答:
+answer: A， 
+正确答案是: D
+
+题目:
+question: 选择最合适的谓词逻辑翻译：所有行星都比木星小。（j：木星；Px：x 是一颗行星；Sxy：x 比 y 小）
+A: (∃x)(Px • Sxj)
+B: (∀x)(Px • Sxj)
+C: (∀x)(Px ⊃ Sjx)
+D: (∀x)(Px ⊃ Sxj)
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 选择最合适的谓词逻辑翻译：José 把 Wilma 介绍给 Kevin。（j: José；k: Kevin；w: Wilma；Ixyz: x 把 y 介绍给 z）
+A: Iwkj
+B: Ijwk
+C: Iwjk
+D: Ijkw
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 选择最合适的谓词逻辑翻译：没有物品是人。
+A: ~Pa
+B: (∀x)(Ax ⊃ ~Px)
+C: ~Ap
+D: (∀x)(Ax • ~Px)
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 请为以下论证构造一个完整的真值表，然后利用真值表判断该论证是有效的还是无效的。如果论证无效，请选择一个选项来展示反例。（可能还存在其他反例。）  
+
+P ⊃ Q  
+Q · R / ~P · R
+A: 有效
+B: 无效。当 P、R 和 Q 都为真时是一个反例
+C: 无效。当 P 和 Q 为真而 R 为假时是一个反例
+D: 无效。当 R 和 Q 为真而 P 为假时是一个反例
+
+qwen回答:
+answer: D， 
+正确答案是: B
+
+题目:
+question: 选择最合适的谓词逻辑翻译：Marco moves from Italy to Spain。（i: Italy；m: Marco；s: Spain；Mxyz: x 从 z 移动到 y）
+A: Msim
+B: Mmis
+C: Mims
+D: Mmsi
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 选择给出命题的最佳英文解释，使用以下翻译键：  
+Ax：x 是公寓   Hx：x 是房屋   Lx：x 是大的   Bxy：x 比 y 大  
+(∀x){Ax ⊃ (∀y)[(Hy • Ly) ⊃ ∼Bxy]}
+A: All apartments are not bigger than some large house.
+B: No apartment is bigger than any large house.
+C: All large houses are not bigger than some apartment.
+D: No large house is bigger than all apartments.
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 为以下论证构造一个完整的真值表。然后，利用该真值表判断该论证是有效的还是无效的。如果论证是无效的，请选择一个选项来展示一个反例。（可能还存在其他的反例。）  
+
+J ≡ ~K  
+J ∨ L  
+~K / L
+A: 有效
+B: 无效。当 J 和 K 为真且 L 为假时是一个反例
+C: 无效。当 J 为真且 K 和 L 为假时是一个反例
+D: 无效。当 K 为真且 J 和 L 为假时是一个反例
+
+qwen回答:
+answer: B， 
+正确答案是: C
+
+题目:
+question: 下面哪个给出的PL公式是对下列句子的最佳符号化表达？
+“Pablo将去商店，当且仅当他的兄弟开车送他并且支付油费。”
+A: (P ≡ D) ≡ G
+B: (D • G) ⊃ P
+C: P ⊃ (D • G)
+D: P ≡ (D • G)
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 使用间接真值表判断以下每组命题是否一致。如果该组命题是一致的，请选择一个具有一致性赋值的选项。（可能存在其他一致性赋值方式。）
+D ≡ E
+F ∨ D
+~E · ~F
+A: 不一致
+B: 一致。当 D、E 和 F 都为真时，具有相容的赋值
+C: 一致。当 D 和 E 为真且 F 为假时，具有相容的赋值
+D: 一致。当 D 和 F 为真且 E 为假时，具有相容的赋值
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 以下哪个PL公式是对下面句子的最佳符号化表达？
+餐厅的甜点供应派、芝士蛋糕或冰淇淋中的一种。
+A: P ∨ (C ∨ I)
+B: (P ∨ C) ∨ I
+C: P ∨ C ∨ I
+D: 选项 A 和 B
+
+qwen回答:
+answer: C， 
+正确答案是: D
+
+题目:
+question: 下面哪个PL公式是对下列句子的最佳符号化表达？
+如果Beth骑自行车，她就能更早到达工作地点。
+A: B ⊃ W
+B: W ⊃ B
+C: B ≡ W
+D: A和B都是
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 选择最合适的谓词逻辑翻译：Either Taylor or Eric is a latte boy.
+A: Lt ∨ Le
+B: Lx ∨ Ly
+C: tL ∨ eL
+D: Tl ⊃ El
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 用间接真值表来判断以下论证是否有效。如果论证无效，请选择一个选项作为反例。（可能还存在其他反例。）  
+E ⊃ F  
+G ⊃ ~F / ~G ∨ ~E
+A: 有效
+B: 无效。当 E、F 和 G 都为真时的反例
+C: 无效。当 E 和 G 为真而 F 为假时的反例
+D: 无效。当 F 和 G 为真而 E 为假时的反例
+
+qwen回答:
+answer: B， 
+正确答案是: A
+
+题目:
+question: 使用间接真值表判断以下每组命题是否一致。如果该组命题一致，请选择一个具有一致赋值的选项（可能有多个一致的赋值方式）：
+
+A ⊃ (~B ∨ C)  
+C ⊃ D  
+A ∨ (B · ~D)  
+A ≡ (B ⊃ D)
+A: 不一致
+B: 一致。当 A 和 D 为真且 B 和 C 为假时，是一致的赋值
+C: 一致。当 A、B 和 D 为真且 C 为假时，是一致的赋值
+D: 一致。当 C 和 D 为真且 A 和 B 为假时，是一致的赋值
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 请为以下论证构造一个完整的真值表。然后，利用该真值表判断这个论证是有效的还是无效的。如果论证无效，请选择一个选项来展示一个反例。（可能还存在其他反例。）  
+M ∨ N  
+~M · O / N
+A: 有效
+B: 无效。当 M 和 O 为真且 N 为假时是一个反例
+C: 无效。当 M 为真且 O 和 N 为假时是一个反例
+D: 无效。当 O 为真且 M 和 N 为假时是一个反例
+
+qwen回答:
+answer: D， 
+正确答案是: A
+
+题目:
+question: 以下哪一个命题是根据给定前提在命题逻辑中立即（一步）得出的结论？
+
+U ⊃ W  
+W ⊃ (X ≡ ~Y)  
+(X ≡ ~Y) ⊃ Z  
+~Z
+A: U ⊃ Z
+B: U ∨ W
+C: ~W
+D: ~(X ≡ ~Y)
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 找出下列条件命题的前件：如果蜜蜂队没有赢得他们的第一场比赛，那么食蚁兽队和花鼠队都将赢得他们的第一场比赛。
+A: 食蚁兽队赢得他们的第一场比赛。
+B: 蜜蜂队没有赢得他们的第一场比赛。
+C: 花鼠队赢得他们的第一场比赛。
+D: 食蚁兽队和花鼠队都赢得他们的第一场比赛。
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 选择谓词逻辑中的最佳翻译。霍莉爱弗朗西丝。（f：弗朗西丝；h：霍莉；Lxy：x 爱 y）
+A: hLf
+B: fLh
+C: Lfh
+D: Lhf
+
+qwen回答:
+answer: A， 
+正确答案是: D
+
+题目:
+question: 用间接真值表来判断以下论证是否有效。如果论证无效，请选择一个选项，该选项给出一个反例（可能还存在其他反例）：
+
+P ⊃ (Q ∨ R)  
+(Q · S) ⊃ ~P  
+~(~Q ∨ R) / ~P
+A: 有效
+B: 无效。当 P、Q、R 和 S 都为真时的反例
+C: 无效。当 P 和 Q 为真而 R 和 S 为假时的反例
+D: 无效。当 P、R 和 S 为真而 Q 为假时的反例
+
+qwen回答:
+answer: D， 
+正确答案是: C
+
+题目:
+question: 请为以下论证构造一个完整的真值表。然后，利用该真值表判断该论证是有效的还是无效的。如果论证是无效的，请选择一个选项来展示一个反例。（可能还存在其他的反例。）  
+
+T ∨ U  
+W · T / U
+A: 有效
+B: 无效。当 T 和 W 为真且 U 为假时是一个反例
+C: 无效。当 T 为真且 W 和 U 为假时是一个反例
+D: 无效。当 W 为真且 T 和 U 为假时是一个反例
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 请找出以下条件命题的前件：如果州长批准并且校董会推荐，那么大学就会提高学费。
+A: The university raises tuition.
+B: 州长批准。
+C: 校董会推荐。
+D: 州长批准并且校董会推荐。
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 找出下列条件命题的前件：餐厅没有豌豆，所以他们改供应玉米和土豆。
+A: 餐厅有豌豆。
+B: 餐厅没有豌豆。
+C: 餐厅供应玉米。
+D: 餐厅供应土豆。
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 选择谓词逻辑的最佳翻译：所有 jellybeans 都比所有水果更甜。（Fx：x 是水果；Jx：x 是 jellybean；Sxy：x 比 y 更甜）
+A: (∀x)[Fx ⊃ (∀y)(Jy ⊃ Sxy)]
+B: (∀x)(∀y)[(Fx • Jy) • Sxy]
+C: (∀x)(∀y)[Sxy ⊃ (Fy • Jx)]
+D: (∀x)[Jx ⊃ (∀y)(Fy ⊃ Sxy)]
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 请指出下列论证中的结论。世界是我的观念，这一真理对于每一种有生命的生物都是有效的，虽然只有人类才能沉思它。通过这样做，他获得了哲学智慧。没有哪一条真理比以下这条更为绝对确定：一切为知识而存在的东西，因此也就是这个世界，仅仅是相对于主体的客体，是感知者的知觉。世界是一个观念。（亚瑟·叔本华，《作为意志和表象的世界》）
+A: 世界是一个观念。
+B: 世界是我的观念，这一真理对于每一种有生命的生物都是有效的，虽然只有人类才能沉思它。
+C: 通过这样做，他获得了哲学智慧。
+D: 没有哪一条真理比以下这条更为绝对确定：一切为知识而存在的东西，因此也就是这个世界，仅仅是相对于主体的客体，是感知者的知觉。
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 选择谓词逻辑的最佳翻译。Leo 比 Cathy 高。（c：Cathy；l：Leo；Txy：x 比 y 高）
+A: Tlc
+B: Tcl
+C: lTc
+D: cTl
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 请为以下命题对构造完整的真值表。然后，通过真值表判断这两个命题是逻辑等值还是矛盾。如果不是以上两种情况，请判断它们是否一致或不一致。并说明理由：
+C ⊃ (D ∨ C) 和 C · ~D
+A: 逻辑等值
+B: 矛盾
+C: 既不是逻辑等值也不是矛盾，但是一致
+D: 不一致
+
+qwen回答:
+answer: D， 
+正确答案是: C
+
+题目:
+question: 为以下命题对构造完整的真值表。然后，通过真值表判断这些命题是逻辑等价还是矛盾。如果不是这样，请判断它们是否一致或不一致。请说明理由：
+~O ⊃ P 和 O ∨ P
+A: 逻辑等价
+B: 矛盾
+C: 既不是逻辑等价也不是矛盾，但是一致
+D: 不一致
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 用间接真值表来判断以下论证是否有效。如果论证无效，请选择一个给出反例的选项。（可能还存在其他反例。）  
+(T · ~U) ⊃ ~W  
+~W ⊃ X  
+~Z ⊃ W  
+~(X · Z) / T ⊃ U
+A: 有效
+B: 无效。当 T、X 和 Z 为真，而 U 和 W 为假时是一个反例
+C: 无效。当 T 和 X 为真，而 U、W 和 Z 都为假时是一个反例
+D: 无效。当 T 和 W 为真，而 U、X 和 Z 都为假时是一个反例
+
+qwen回答:
+answer: D， 
+正确答案是: A
+
+题目:
+question: 选择最合适的谓词逻辑翻译：Cecilia 打碎我的心当且仅当 Maria 要么是个问题，要么是个女孩。
+A: Bc ≡ (Pm ∨ Gm)
+B: Bc ≡ (Pm • Gm)
+C: Bc ⊃ (Pm ∨ Gm)
+D: Cb ⊃ (Pm • Gm)
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 选择最合适的谓词逻辑翻译：如果Delilah在纽约市，那么Juana在波哥大或Layla在圣胡安。
+A: Nd ⊃ (Bj • Sl)
+B: Dn ≡ (Bx • Ly)
+C: Nd ≡ (Bj • Sl)
+D: Nd ⊃ (Bj ∨ Sl)
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 请使用以下符号将给定的命题逻辑公式翻译成自然的英文句子。
+A: Marina读一本Percy Jackson书。
+B: Izzy玩Minecraft。
+C: Emily停止工作。
+D: Russell做晚饭。
+E：Ashleigh顺便来访。
+~(A ⊃ B) • (B ⊃ ~E)
+A: 并非 Marina 读 Percy Jackson 书就意味着 Izzy 玩 Minecraft，但 Izzy 玩 Minecraft 的确意味着 Ashleigh 不会顺便来访。
+B: 如果 Marina 没有读 Percy Jackson 书，那么 Izzy 会玩 Minecraft，这表明 Ashleigh 不会顺便来访。
+C: Marina 读 Percy Jackson 书并不意味着 Izzy 会玩 Minecraft，但只要 Ashleigh 不顺便来访，Izzy 就会玩 Minecraft。
+D: 并非只有当 Izzy 玩 Minecraft 时 Marina 才会读 Percy Jackson 书，但 Izzy 玩 Minecraft 只会在 Ashleigh 顺便来访的时候。
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 用间接真值表来判断以下论证是否有效。如果论证无效，请选择一个给出反例的选项（可能还有其他反例）：
+
+(A ∨ B) ⊃ C  
+C ⊃ ~D / D ⊃ A
+A: 有效
+B: 无效。当 B、C 和 D 为真而 A 为假时的反例
+C: 无效。当 B 和 D 为真而 A 和 C 为假时的反例
+D: 无效。当 A、B 和 C 为假而 D 为真时的反例
+
+qwen回答:
+answer: B， 
+正确答案是: D
+
+题目:
+question: 请选择谓词逻辑中给定论证的最佳英文解释。
+Dh ⊃ ~Pt
+(∀x)Px ∨ (∀x)Mx
+~Mb	/ ~Dh
+A: 如果我的头痛是二元论状态，那么你的痒是物理状态。要么一切都是物理的，要么一切都是心理的。但我的脚趾骨折不是心理状态。因此，我的头痛不是二元论状态。
+B: 如果我的头痛是二元论状态，那么你的痒不是物理状态。要么一切都是物理的，要么一切都是心理的。但我的脚趾骨折不是心理状态。因此，我的头痛不是二元论状态。
+C: 如果我的头痛是二元论状态，那么你的痒不是物理状态。如果一切都是物理的，则一切都是心理的。但我的脚趾骨折不是心理状态。因此，我的头痛不是二元论状态。
+D: 如果我的头痛是二元论状态，那么你的痒不是物理状态。一切都是物理的或心理的。但我的脚趾骨折不是心理状态。因此，我的头痛不是二元论状态。
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 以下哪一个命题是给定前提在命题逻辑中的一阶（单步）后承？  
+A ⊃ (B • C)  
+~(B • C)  
+A ∨ (D ∨ B)
+A: A
+B: ~A
+C: B
+D: ~B
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 以下哪一个命题是根据给定前提在命题逻辑中可推出的一阶（一步）结论？
+
+(N ⊃ ~O) ⊃ (O ∨ Q)  
+P ⊃ (N ⊃ ~O)  
+N ⊃ P
+A: P
+B: N ⊃ ~O
+C: O ∨ Q
+D: ~P
+
+qwen回答:
+answer: B， 
+正确答案是: A
+
+题目:
+question: 选择谓词逻辑中最佳的翻译。地球不比木星大。（e：地球；j：木星；Bxy：x 比 y 大）
+A: ~Bje
+B: Bej
+C: Bje~
+D: ~Bej
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 请找出以下条件命题中的前提：“只要要么甲骨文队要么花栗鼠队没有赢得他们的第一场比赛，那么蜜蜂队就必须赢得他们的第一场比赛。”
+A: 甲骨文队没有赢得他们的第一场比赛。
+B: 蜜蜂队赢得他们的第一场比赛。
+C: 花栗鼠队没有赢得他们的第一场比赛。
+D: 要么甲骨文队要么花栗鼠队没有赢得他们的第一场比赛。
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 找出下列条件命题的前件：只有当甲虫队或松鼠队没有赢得他们的第一场比赛时，蜜蜂队才能赢得他们的第一场比赛。
+A: 甲虫队没有赢得他们的第一场比赛。
+B: 蜜蜂队赢得他们的第一场比赛。
+C: 松鼠队没有赢得他们的第一场比赛。
+D: 要么甲虫队没有赢得他们的第一场比赛，要么松鼠队没有赢得他们的第一场比赛。
+
+qwen回答:
+answer: D， 
+正确答案是: B
+
+题目:
+question: 选择谓词逻辑中的最佳翻译：有些运动员没有受伤。
+A: ~Ia
+B: (∃x)(Ax • ~Ix)
+C: ~Ai
+D: (∃x)(Ix ∨ ~Ax)
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 为以下命题对构造完整的真值表。然后，利用真值表判断这些命题是逻辑等价还是矛盾。如果不是这两种情况，则判断它们是否是一致或不一致的。请对你的判断进行解释。
+
+I ≡ ~H 和 ~(~I ≡ H)
+A: 逻辑等价
+B: 矛盾
+C: 既不是逻辑等价也不是矛盾，但是一致
+D: 不一致
+
+qwen回答:
+answer: A， 
+正确答案是: B
+
+题目:
+question: 使用间接真值表判断以下每组命题是否一致。如果该组命题是一致的，请选择一个具有一致赋值的选项（可能有其他一致的赋值方式）：
+
+(T ⊃ U) ⊃ (W ⊃ U)
+T ⊃ ~(U ⊃ X)
+(T ⊃ ~X) ⊃ W
+A: 不一致
+B: 一致。当 U、W 和 X 为真且 T 为假时，赋值一致
+C: 一致。当 W 和 X 为真且 T 和 U 为假时，赋值一致
+D: 一致。当 T 和 U 为真且 W 和 X 为假时，赋值一致
+
+qwen回答:
+answer: C， 
+正确答案是: B
+
+题目:
+question: 选择谓词逻辑的最佳翻译：Caroline 是可爱的当且仅当 Janet 与 Brad 订婚。
+A: Cs ⊃ Ej
+B: Sc ≡ Ej
+C: sC ≡ eJ
+D: Sx ≡ Jy
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 下面哪个给出的PL公式是对下列句子的最佳符号化表达？
+要么英国进口牛肉是法国补贴农业的充分条件，要么中国在当且仅当南非提供钻石时不促进人权。
+A: (E ⊃ F) ∨ (~C ⊃ S)
+B: (F ⊃ E) ∨ (S ⊃ ~C
+C: (E ⊃ F) ∨ ~(S ≡ C)
+D: (E ⊃ F) ∨ (~C ≡ S)
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 请使用以下符号将给定的命题逻辑公式翻译成自然的英文句子：
+A: Marina读一本Percy Jackson的书。
+B: Izzy玩Minecraft。
+C: Emily停止工作。
+D: Russell做晚饭。
+E：Ashleigh顺便来访。
+
+(~A ∨ ~B) ⊃ C
+
+A：如果Marina不读Percy Jackson的书，且Izzy不玩Minecraft，那么Emily停止工作。
+B：如果Marina读Percy Jackson的书并且Izzy玩Minecraft的说法不成立，那么Emily停止工作。
+C：要么Marina不读Percy Jackson的书，或Izzy不玩Minecraft，这将导致Emily停止工作。
+D：Emily停止工作是导致Marina不读Percy Jackson的书或Izzy不玩Minecraft的充分条件。
+
+qwen回答:
+answer: B， 
+正确答案是: C
+
+题目:
+question: 请找出下述论证的结论。有些人使用谓词变量；这些变量的值是属性。无论是否存在可指称的属性，所有句子中都需要使用谓词。通常为了阐述的目的，普遍需要使用虚拟谓词“F”。如果我们打算对属性进行量化并加以指称，那么为了清晰起见，应当使用易于识别的变量和独特的名称分别用于上述目的，而不要将它们与谓词混淆。（奎因，《逻辑哲学》）
+A: 有些人使用谓词变量；这些变量的值是属性。
+B: 无论是否存在可指称的属性，所有句子中都需要使用谓词。
+C: 通常为了阐述的目的，普遍需要使用虚拟谓词“F”。
+D: 如果我们打算对属性进行量化并加以指称，那么为了清晰起见，应当使用易于识别的变量和独特的名称分别用于上述目的，而不要将它们与谓词混淆。
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 请使用以下键将给定的命题逻辑公式翻译成自然的英文句子。
+A: Marina读一本Percy Jackson的书。
+B: Izzy玩Minecraft。
+C: Emily停止工作。
+D: Russell做晚饭。
+E：Ashleigh顺便来访。
+~C ∨ D
+A：如果Emily不停止工作，那么Russell就做晚饭。
+B：Emily停止工作除非Russell做晚饭。
+C：Emily停止工作除非Russell不做晚饭。
+D：Emily不停止工作除非Russell做晚饭。
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 选择谓词逻辑的最佳翻译：阿卜杜勒和克利奥帕特拉都是埃及人。
+A: Ea • Ec
+B: Ea • c
+C: Ae ∨ Ce
+D: Ex • Ey
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 选择最合适的谓词逻辑翻译：Sheena 是一个朋克摇滚者。
+A: Sx
+B: xS
+C: sP
+D: Ps
+
+qwen回答:
+answer: C， 
+正确答案是: D
+
+题目:
+question: 选择最合适的谓词逻辑翻译。凯文由威尔玛介绍给何塞。（j：何塞；k：凯文；w：威尔玛；Ixyz：x 把 y 介绍给 z）
+A: Iwjk
+B: Ijkw
+C: Ikjw
+D: Iwkj
+
+qwen回答:
+answer: A， 
+正确答案是: D
+
+题目:
+question: 选择最合适的谓词逻辑翻译：如果Eileen拉小提琴，那么Sherri唱歌。
+A: Fe ∨ Ss
+B: eF ⊃ Ss
+C: Fe ∨ Es
+D: Fe ⊃ Ss
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 请为以下论证构造一个完整的真值表。然后，利用该真值表判断该论证是有效的还是无效的。如果论证是无效的，请选择一个选项来展示一个反例。（可能还存在其他的反例。）  
+~C ⊃ D  
+D ⊃ C / C
+A: 有效
+B: 无效。当 C 和 D 都为真时是一个反例
+C: 无效。当 C 为真而 D 为假时是一个反例
+D: 无效。当 D 为真而 C 为假时是一个反例
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 选择最合适的谓词逻辑翻译：一些蓝鹭迁徙。
+A: (∀x)[(Hx • Bx) • Mx]
+B: (∃x)[(Hx • Bx) ⊃ Mx]
+C: (∀x)[(Hx • Bx) ⊃ Mx]
+D: (∃x)[(Hx • Bx) • Mx]
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 请选择谓词逻辑中给定论证的最佳英文解释。
+(∃x)(Cx • Ox)
+(∀x)[(~Cx ⊃ ~Bx) ⊃ ~Og]	/ ~Og
+A: 一些饼干含有燕麦。如果某物不是饼干意味着它不含巧克力碎，那么这块饼干就没有燕麦。因此这块饼干没有燕麦。
+B: 一些饼干含有燕麦。如果某物不是饼干并且没有巧克力碎，那它就不会有燕麦。因此这块饼干没有燕麦。
+C: 一些饼干含有燕麦。如果某物没有燕麦，那么它就不是饼干，也不含巧克力碎。因此这块饼干没有燕麦。
+D: 一些饼干含有燕麦。如果某物不含巧克力碎意味着它不是饼干，那么它就没有燕麦。因此这块饼干没有燕麦。
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 请指出以下论证的结论。所有的心理学都陷入了道德偏见和恐惧之中。没有人真正理解它作为权力意志发展的本质。然而，如果一个人开始将仇恨、嫉妒、贪婪以及统治欲望的影响视为生命的基本条件，并进一步看作是生命总体经济中必不可少的因素时，他就会开始感到眩晕恶心。在这个时候，他开始迷失自我，漂离道德。因此，心理学再次成为通向根本问题的道路。（弗里德里希·尼采，《善恶的彼岸》）
+A: All of psychology has gotten stuck in moral prejudices and fears.
+B: No one has come close to understanding it as the development of the will to power.
+C: If a person even begins to regard the effects of hatred, envy, covetousness, and the lust to rule as conditions of life and furthermore, as factors essential to the general economy of life, he will begin to get seasick.
+D: Psychology becomes again the path to fundamental problems.
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 使用间接真值表判断以下每组命题是否一致。如果该命题集合是一致的，请选择一个具有一致赋值的选项（可能有多个一致的赋值）：
+
+~N ≡ (O · P)
+~O ⊃ Q
+N · ~Q
+A: 不一致
+B: 一致。当 N、O 和 P 为真且 Q 为假时，赋值一致
+C: 一致。当 N 和 O 为真且 P 和 Q 为假时，赋值一致
+D: 一致。当 N 和 P 为真且 O 和 Q 为假时，赋值一致
+
+qwen回答:
+answer: A， 
+正确答案是: C
+
+题目:
+question: 以下哪个给出的PL公式是对下面句子的最佳符号化表达？
+如果一个人是在今年出生或去世的，并且你的家在这人一生中始终是这人的家，那么这个人就被认为在今年全年都与你同住。
+A: [(B ∨ D) • H] ⊃ L
+B: [L ⊃ (B ∨ D)] • H
+C: L ⊃ [(B ∨ D) • H]
+D: (B ∨ D • H) ⊃ L
+
+qwen回答:
+answer: C， 
+正确答案是: A
+
+题目:
+question: 请为以下论证构造一个完整的真值表。然后，利用该真值表判断这个论证是有效的还是无效的。如果论证是无效的，请选择一个选项来展示一个反例。（可能还存在其他的反例。）
+(O ≡ P) ∨ P / P ∨ ~O
+A: 有效
+B: 无效。当 O 和 P 都为真时是一个反例
+C: 无效。当 O 为真而 P 为假时是一个反例
+D: 无效。当 P 为真而 O 为假时是一个反例
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 选择最合适的谓词逻辑翻译：Leroy 很坏，当且仅当 DJ Khaled 喊他的名字。
+A: Sk ≡ Bl
+B: Bl ≡ Sk
+C: Bx ⊃ Sy
+D: Bl ⊃ Sk
+
+qwen回答:
+answer: B， 
+正确答案是: D
+
+题目:
+question: 以下哪个给出的命题逻辑公式是对下列句子的最佳符号化表达？
+如果George或Harry注册，那么Ira不注册。
+A: (G ⊃ H) ∨ I
+B: (G ∨ H) ⊃ I
+C: (G ⊃ H) ∨ ~I
+D: (G ∨ H) ⊃ ~I
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 选择最合适的谓词逻辑翻译：杰克逊女士借给了我一些糖，但珍妮特和拉托娅都没有借给我。
+A: Lm ∨ ~(Jl ∨ Ll)
+B: Lm • ~(Lj • Ll)
+C: Lm • ~(Lj ∨ Ll)
+D: Lm ∨ ~(Lj • Ll)
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 选择最合适的谓词逻辑翻译：有些动物被残忍的人所忽视。（Ax：x 是动物；Cx：x 是残忍的；Px：x 是人；Nxy：x 忽视 y）
+A: (∃x)[(Ax • Cx) • (∃y)(Py • Nyx)]
+B: (∃x)[(Cx • Px) • (∃y)(Ay • Nxy)]
+C: (∃x)[(Ax • Px) • (∃y)(Cy • Nxy)]
+D: (∃x)(∃y){[(Ax • Cy) • Py] • Nxy)}
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 使用间接真值表来判断以下每组命题是否一致。如果该组命题是一致的，请选择一个具有一致赋值的选项（可能有其他一致的赋值）：
+
+(E ⊃ F) ⊃ G  
+(~E ∨ F) ≡ (H ∨ I)  
+I ⊃ (J ⊃ ~H)  
+~G ⊃ ~J
+A: 不一致
+B: 一致。当 E 为真且 F、G、H、I 和 J 都为假时，赋值一致
+C: 一致。当 E 和 H 为真且 F、G、I 和 J 都为假时，赋值一致
+D: 一致。当 E 和 I 为真且 F、G、H 和 J 都为假时，赋值一致
+
+qwen回答:
+answer: D， 
+正确答案是: B
+
+题目:
+question: 选择最合适的谓词逻辑翻译：有些学生努力学习。
+A: (∃x)(Wx ∨ Sx)
+B: (∃x)(Sx ∨ Wx)
+C: (∃x)(Sx • Wx)
+D: (∃x)(Sx ⊃ Wx)
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 以下哪个PL公式是对下面句子的最佳符号化表达？
+要么英国进口牛肉不是法国补贴农业的必要条件，要么南非供应钻石的话中国促进人权。
+A: (~F ⊃ E) ∨ (C ≡ ~S)
+B: (~E ⊃ F) ∨ (C ⊃ S)
+C: (~F ⊃ E) ∨ (C ≡ S)
+D: ~(F ⊃ E) ∨ (S ⊃ C)
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 请为以下论证构造一个完整的真值表。然后，利用该真值表判断这个论证是有效的还是无效的。如果论证是无效的，请选择一个选项来展示一个反例。（可能还存在其他的反例。）  
+
+~A · ~B  
+(A ∨ C) ∨ B / C
+A: 有效
+B: 无效。当 A 和 B 为真且 C 为假时是一个反例
+C: 无效。当 A 为真且 B 和 C 为假时是一个反例
+D: 无效。当 B 为真且 A 和 C 为假时是一个反例
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 选择最合适的谓词逻辑翻译：所有鸟都生活在某个巢里。（Bx：x 是一只鸟；Nx：x 是一个巢；Lxy：x 生活在 y 中）
+A: (∀x)(∀y)[(Bx • Ny) ⊃ Lxy]
+B: (∀x)[Bx ⊃ (∃y)(Ny • Lxy)]
+C: (∀x)[(∃y)(Ny • Bx) ⊃ Lxy]
+D: (∀x)(∃y)[(Bx • Ny) ⊃ Lxy]
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 请确认以下论证的结论。功利主义理论因效用怪兽（utility monsters）的可能性而陷入尴尬。一个效用怪兽会获得巨大的效用收益，其收益超过他人牺牲所导致的效用损失。即使有很多人做出牺牲，他们的损失也比不上效用怪兽所获得的收益。为了增加总效用，该理论似乎要求我们都应该被牺牲在怪兽的口中。（罗伯特·诺齐克，《无政府、国家与乌托邦》）
+A: 功利主义理论因效用怪兽的可能性而陷入尴尬。
+B: 一个效用怪兽会获得巨大的效用收益。
+C: 一个效用怪兽所获得的效用收益超过他人牺牲所导致的效用损失。
+D: 即使有很多人做出牺牲，他们的损失也比不上效用怪兽所获得的收益。
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 请使用以下符号将给定的命题逻辑公式翻译成自然的英文句子：
+A: Marina读一本Percy Jackson的书。
+B: Izzy玩Minecraft。
+C: Emily停止工作。
+D: Russell做晚饭。  
+E：Ashleigh顺便来访。  
+
+(A ∨ ~E) ≡ (D • ~B)  
+
+A：Marina读一本Percy Jackson的书或Ashleigh没有顺便来访，是Russell做晚饭且Izzy没有玩Minecraft的必要条件。  
+B：Marina读一本Percy Jackson的书或Ashleigh没有顺便来访，是Russell做晚饭且Izzy玩Minecraft的充分必要条件。  
+C：Marina读Percy Jackson的书除非Ashleigh顺便来访，当且仅当Russell做晚饭且Izzy不玩Minecraft。  
+D：Marina读一本Percy Jackson的书或Ashleigh没有顺便来访，当且仅当Russell做晚饭且Izzy不玩Minecraft。
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 以下哪个给出的命题逻辑公式是对下述句子的最佳符号化表达？
+布列塔尼喜欢鱼和蜥蜴，但不喜欢猫。
+A: F • L • ~C
+B: (F • L) • ~C
+C: (F • L) ∨ ~C
+D: C • (F • L)
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 以下哪个PL公式是对下面句子的最佳符号化表达？
+如果Harry入学或者George没有入学，那么Jim入学。
+A: H ∨ (~G ⊃ J)
+B: ~(H ∨ G) ⊃ J
+C: (H ∨ ~G) ⊃ J
+D: (H ⊃ ~G) ∨ J
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 请为以下论证构造一个完整的真值表。然后，利用该真值表判断这个论证是有效的还是无效的。如果论证是无效的，请选择一个选项来展示一个反例。（可能还存在其他反例。）  
+
+~X ⊃ Y  
+Y ⊃ Z  
+~Z / ~X
+A: 有效
+B: 无效。当 X、Y 和 Z 都为真时是一个反例
+C: 无效。当 Y 和 Z 为真而 Z 为假时是一个反例
+D: 无效。当 X 为真而 Y 和 Z 为假时是一个反例
+
+qwen回答:
+answer: A， 
+正确答案是: D
+
+题目:
+question: 请选择最合适的谓词逻辑翻译。有些好心人帮助某些濒危物种。（Ex：x是濒危的；Kx：x是善良的；Px：x是人；Sx：x是一个物种；Hxy：x帮助y）
+A: (∃x){(Kx • Px) • (∃y)[(Ey • Sy) • Hxy]}
+B: (∃x)(∃y){[(Kx • Sx) • (Ey • Py)] • Hxy}
+C: (∃x)(∃y){[(Kx • Sx) • (Ey • Py)] • Hyx}
+D: (∃x)(∃y){[(Kx • Px) • (Ey • Sy)] ⊃ Hxy}
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 请选择给定命题的最佳英文解释，使用以下翻译键：  
+Ax：x 是公寓  
+Hx：x 是房子  
+Lx：x 是大的  
+Bxy：x 比 y 大  
+(∀x)[Ax ⊃ (∃y)(Hy • Bxy)]
+A: Every apartment is bigger than some house.
+B: Every house is bigger than all apartments.
+C: Every house is bigger than some apartment.
+D: Some house is bigger than every apartment.
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 请为以下论证构造一个完整的真值表。然后，利用该真值表判断这个论证是有效的还是无效的。如果论证无效，请选择一个选项来展示一个反例。（可能还存在其他的反例。）  
+Q ≡ R  
+~(S ∨ Q) / R
+A: 有效
+B: 无效。当 Q 和 S 为真而 R 为假时是一个反例
+C: 无效。当 Q 为真而 S 和 R 为假时是一个反例
+D: 无效。当 Q、S 和 R 都为假时是一个反例
+
+qwen回答:
+answer: C， 
+正确答案是: D
+
+题目:
+question: 找出以下条件命题的前件：只有当州长批准并且校董会推荐时，大学才会提高学费。
+A: 大学提高了学费。
+B: 州长批准了。
+C: 校董会推荐了。
+D: 州长批准了并且校董会推荐了。
+
+qwen回答:
+answer: D， 
+正确答案是: A
+
+题目:
+question: 下列哪个命题是给定前提在命题逻辑中的直接（一步）结论？
+
+(A ∨ B) ⊃ (C ∨ D)
+A ∨ B
+~C
+A: ~A ∨ ~B
+B: ~~C
+C: C ∨ D
+D: (A ∨ B) ⊃ D
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 找出下列条件命题的前件：如果大学提高学费，那么要么州长同意此事，要么校董会没有阻止它。
+A: 大学提高学费。
+B: 州长同意此事。
+C: 校董会阻止它。
+D: 校董会没有阻止它。
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 选择最合适的谓词逻辑翻译：Marco 不是从西班牙搬到意大利。（i：意大利；m：Marco；s：西班牙；Mxyz：x 从 z 搬到 y）
+A: ~Mmsi
+B: M~mis
+C: ~Mmis
+D: M~msi
+
+qwen回答:
+answer: A， 
+正确答案是: C
+
+题目:
+question: 请为以下论证构造一个完整的真值表。然后，利用该真值表判断该论证是有效的还是无效的。如果论证无效，请选择一个选项来展示一个反例。（可能还存在其他反例。）
+~S ∨ T
+~S · U
+~T ∨ U / T · U
+A: 有效
+B: 无效。当 S、T 和 U 都为真时的反例
+C: 无效。当 S 和 U 为真而 T 为假时的反例
+D: 无效。当 U 为真而 S 和 T 都为假时的反例
+
+qwen回答:
+answer: C， 
+正确答案是: D
+
+题目:
+question: 下列哪个给出的命题逻辑公式是对以下句子的最佳符号化表达？
+医生们很乐于助人，除非他们的病人不礼貌。
+A: H ≡ R
+B: H • R
+C: H ∨ ~R
+D: H ∨ R
+
+qwen回答:
+answer: C， 
+正确答案是: D
+
+题目:
+question: 用间接真值表来判断以下论证是否有效。如果论证无效，请选择一个给出反例的选项（可能还存在其他反例）：  
+L ⊃ [(M ∨ ~N) ⊃ O]  
+(N ⊃ O) ⊃ (~P ⊃ Q)  
+R ⊃ ~Q / L ⊃ (R ⊃ P)
+A: 有效
+B: 无效。当 L、M、O、Q 和 R 为真且 N 与 P 为假时的反例
+C: 无效。当 L、N、O、Q 和 R 为真且 M 与 P 为假时的反例
+D: 无效。当 L、N 和 R 为真且 M、O、P 与 Q 为假时的反例
+
+qwen回答:
+answer: C， 
+正确答案是: D
+
+题目:
+question: 请确认以下论证的结论。一个词的意义应该决定它的指称。但指称可以在没有思想差异的情况下发生变化。因此，词语的感觉（sense）必定能够在思想不变的情况下发生变化。因此，我们的思想并不决定我们词语的意义；意义不在头脑之中。（希拉里·普特南）
+A: The sense of a term is supposed to determine its reference.
+B: But reference can vary without any difference in thought.
+C: Reference can vary without any difference in thought.
+D: Our thoughts do not determine the meanings of our terms; meanings are not in the head.
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 请为以下命题对构建完整的真值表。然后，通过真值表判断这些陈述在逻辑上是等值的还是矛盾的。如果既不是等值也不是矛盾，请判断它们是否一致或不一致。并说明理由。
+(G ∨ ~H) ⊃ G 和 ~G ≡ (~H · G)
+A: 逻辑等值
+B: 矛盾
+C: 既非逻辑等值也非矛盾，但是一致
+D: 不一致
+
+qwen回答:
+answer: D， 
+正确答案是: C
+
+题目:
+question: 下列哪个给定的命题逻辑公式是对以下句子的最佳符号化表达？
+要么英国进口牛肉是法国补贴农业的必要条件，要么中国促进人权不是南非供应钻石的充分条件。
+A: (E ≡ F) ∨ ~(C ≡ S)
+B: (E ≡ F) ∨ (~C ⊃ S)
+C: (E ⊃ F) ∨ ~(C ⊃ S)
+D: (F ⊃ E) ∨ ~(C ⊃ S)
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 请选择谓词逻辑中给定论证的最佳英文解释。
+Wn ∨ Wm
+(∀x)[Lx ⊃ (Dx ⊃ ~Wx]
+Ln • Dn	/ ~(∀x)~Wx
+A: 要么南希，要么马文在工作。所有律师如果外出吃饭就不在工作。南希是一名律师并且她外出吃饭了。因此，并非所有东西都不在工作。
+B: 要么南希，要么马文在工作。所有律师如果不在工作，他们就是在外出吃饭。南希是一名律师并且她外出吃饭了。因此，并非所有东西都不在工作。
+C: 要么南希，要么马文在工作。所有律师如果不在工作，他们就是在外出吃饭。南希是一名律师并且她外出吃饭了。因此，并非所有东西都在工作。
+D: 要么南希，要么马文在工作。所有律师如果外出吃饭就不在工作。南希是一名律师并且她外出吃饭了。因此，并非所有东西都在工作。
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 找出以下论证的结论。请记得去掉任何表示结论的指示词。社会杀死杀人犯是错误的。这是因为如果杀人犯杀害受害者是错误的，那么社会杀死杀人犯也是错误的。而且杀人犯杀害受害者确实是错误的。
+A: It is wrong for society to kill a murderer.
+B: This follows for the reason that if a murderer is wrong in killing his victim, then society is also wrong in killing the murderer.
+C: If a murderer is wrong in killing his victim, then society is also wrong in killing the murderer.
+D: And a murderer is wrong in killing his victim.
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 以下哪一个命题不是给定前提在命题逻辑（PL）中的直接（一步）结论？  
+I ⊃ (J ≡ K)  
+(J ≡ K) ⊃ (L ∨ M)  
+I ⊃ ~L
+A: ~L
+B: J ≡ K
+C: I ⊃ (L ∨ M)
+D: ~L ⊃ (J ≡ K)
+
+qwen回答:
+answer: A， 
+正确答案是: D
+
+题目:
+question: 请为以下论证构造一个完整的真值表。然后，利用该真值表判断这个论证是有效的还是无效的。如果论证无效，请选择一个选项来展示一个反例。（可能还存在其他反例。）  
+I ≡ ~J  
+I ∨ J / I
+A: 有效
+B: 无效。当 I 和 J 都为真时是一个反例
+C: 无效。当 I 为真而 J 为假时是一个反例
+D: 无效。当 J 为真而 I 为假时是一个反例
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 选择最合适的谓词逻辑翻译：有些人很幸运。
+A: (∃x)(Fx • Lx)
+B: Fl
+C: Lf
+D: (∀x)(Fx • Lx)
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 选择最合适的谓词逻辑翻译：Alexis 被 Ben 打招呼。（a: Alexis；b: Ben；Gxy: x 向 y 打招呼）
+A: Gab
+B: ~Gba
+C: aGb
+D: Gba
+
+qwen回答:
+answer: A， 
+正确答案是: D
+
+题目:
+question: 选择最合适的谓词逻辑翻译：并非所有的龙虾都是红色的。
+A: ~(∀x)(Lx ⊃ Rx)
+B: ~(∃x)(Lx ⊃ Rx)
+C: ~(∃x)(Lx • Rx)
+D: ~(∀x)(Lx • Rx)
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 用间接真值表来判断以下论证是否有效。如果论证无效，请选择一个选项作为反例。（可能还存在其他反例。）
+H ≡ (I · ~J)
+K ≡ ~H
+~(K ⊃ J) / I ≡ J
+A: 有效
+B: 无效。当 I、H 和 K 为真而 J 为假时的反例
+C: 无效。当 I 和 H 为真而 J 和 K 为假时的反例
+D: 无效。当 K 为真而 I、H 和 J 为假时的反例
+
+qwen回答:
+answer: B， 
+正确答案是: A
+
+题目:
+question: 为以下命题对构造完整的真值表。然后，通过真值表判断这些命题是逻辑等价还是矛盾。如果不是这两种情况，请判断它们是否一致或不一致。请说明理由。
+~(J ∨ K) · L 和 (L ⊃ J) · K
+A: 逻辑等价
+B: 矛盾
+C: 既不是逻辑等价也不是矛盾，但是一致
+D: 不一致
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 选择最合适的谓词逻辑翻译：所有一年级学生都参加游泳测试。
+A: (∀x)(Sx ⊃ Fx)
+B: (∀x)(Fx ⊃ Sx)
+C: (∀x)(Fx ∨ Sx)
+D: (∀x)(Fx ≡ Sx)
+
+qwen回答:
+answer: A， 
+正确答案是: B
+
+题目:
+question: 选择谓词逻辑的最佳翻译：Johnny came late.
+A: jL
+B: Lj
+C: Cj ∨ Lj
+D: Lx
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 选择最合适的谓词逻辑翻译：“没有一个大四学生在没有专业的情况下毕业”。
+A: (∀x)(Sx ⊃ ~Gx)
+B: ~(∀x)(Sx ⊃ Gx)
+C: (∀x)( ~Sx ⊃ ~Gx)
+D: (∀x) ~(Sx ⊃ ~Gx)
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 请找出以下论述中的结论。从历史角度来看，遗传学是一门年轻的科学。控制遗传性状的原理是在不到150年前才被描述出来的。此外，在二十世纪初，遗传定律被重新发现。但即使如此，DNA 的重要性直到20世纪50年代才真正被认识。
+A: 但即使如此，DNA 的重要性直到20世纪50年代才真正被认识。
+B: DNA 的重要性直到20世纪50年代才真正被认识。
+C: 从历史角度来看，遗传学是一门年轻的科学。
+D: 控制遗传性状的原理是在不到150年前才被描述出来的。
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 下面哪个给出的PL公式是对以下句子的最佳符号化表达？
+要么英国进口牛肉是法国补贴农业的必要条件，要么南非不供应钻石的情况下中国促进人权。
+A: (E ⊃ F) ∨ (C ≡ ~S)
+B: (F ⊃ E) ∨ (~S ≡ C)
+C: (E ⊃ F) ∨ (S ⊃~C)
+D: (F ⊃ E) ∨ (~S ⊃ C)
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 下列哪一个命题逻辑公式是对以下句子的最佳符号化表达？
+要么英国进口牛肉是法国补贴农业的充分条件，要么中国促进人权是南非供应钻石的必要条件。
+A: (E ⊃ F) ∨ (S ⊃ C)
+B: (F ⊃ E) ∨ (C ⊃ S)
+C: (E ⊃ F) ∨ (C ⊃ S)
+D: (F ⊃ E) ∨ (S ⊃ C)
+
+qwen回答:
+answer: D， 
+正确答案是: A
+
+题目:
+question: 以下哪一个命题逻辑公式是对给出的句子的最佳符号化表达？
+Dylan既不喜欢数学也不喜欢科学。
+A: M ∨ S
+B: ~(M • S)
+C: ~(M ∨ S)
+D: ~M ∨ ~S
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 选择最合适的谓词逻辑翻译：所有机器人都属于人工制品。
+A: (∀x)(Ax ∨ Rx)
+B: (∀x)(Ax • Rx)
+C: (∀x)(Rx ⊃ Ax)
+D: (∀x)(Rx • Ax)
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 以下哪个给出的命题逻辑公式最恰当地表达了下面这句话？
+
+自从大学提高了学费，校长批准了此事，而董事会没有阻止它。
+A: (P • ~B) ⊃ U
+B: (U ⊃ P) • B
+C: U ⊃ (P • ~B)
+D: U ⊃ (P ∨ ~B)
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 请找出以下论证的结论。我们不应该废除死刑。如果我们废除的话，监狱将会更加拥挤。如果监狱更加拥挤，我们就将不得不建造更多的监狱。而我们不想建造更多的监狱。
+A: 我们不应该废除死刑。
+B: 如果我们废除的话，监狱将会更加拥挤。
+C: 如果监狱更加拥挤，那么我们就将不得不建造更多的监狱。
+D: 我们将不得不要建造更多的监狱。
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 以下哪个给定的命题逻辑公式是对下列句子的最佳符号化表达？
+“要么英格兰不进口牛肉是法国补贴农业的必要条件，要么中国促进人权当且仅当南非不供应钻石。”
+A: (F ⊃ ~E) ∨ (C ≡ ~S)
+B: (~E ⊃ F) ∨ (C ⊃ ~S)
+C: ~(F ⊃ E) ∨ (~S ⊃ C)
+D: (F ⊃ E) ∨ (C ≡ ~S)
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 用间接真值表来判断以下论证是否有效。如果论证无效，请选择一个选项，该选项给出了一个反例。（可能还存在其他反例。）  
+(K · L) ⊃ M  
+N ⊃ ~M  
+N ∨ K / L ⊃ K
+A: 有效
+B: 无效。当 L、M 和 N 为真而 K 为假时的反例
+C: 无效。当 L 和 M 为真而 K 和 N 为假时的反例
+D: 无效。当 L 和 N 为真而 K 和 M 为假时的反例
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 请为以下论证构造一个完整的真值表。然后，利用该真值表判断该论证是有效的还是无效的。如果论证是无效的，请选择一个选项来展示一个反例。（可能还存在其他反例。）  
+(G ≡ H) · ~I  
+~G ∨ (~H ∨ I) / G
+A: 有效
+B: 无效。当 H 和 I 为真且 G 为假时是一个反例
+C: 无效。当 H 为真且 I 和 G 为假时是一个反例
+D: 无效。当 H、I 和 G 都为假时是一个反例
+
+qwen回答:
+answer: B， 
+正确答案是: D
+
+题目:
+question: 请为以下论证构造一个完整的真值表。然后，利用该真值表判断该论证是有效的还是无效的。如果论证是无效的，请选择一个选项来展示一个反例。（可能还存在其他的反例。）
+~(M ≡ ~N)
+M / N
+A: 有效
+B: 无效。当 M 和 N 都为真时是一个反例
+C: 无效。当 M 为真而 N 为假时是一个反例
+D: 无效。当 N 为真而 M 为假时是一个反例
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 选择谓词逻辑的最佳翻译：某个CEO比所有人都更富有。（Cx：x是一个CEO；Px：x是一个人；Wxy：x比y更富有）
+A: (∃x)[Cx • (∀y)(Py • Wxy)]
+B: (∃x)[Cx ⊃ (∀y)(Py ⊃ Wxy)]
+C: (∃x)[Cx • (∀y)(Py ⊃ Wxy)]
+D: (∀x)[Px ⊃ (∃y)(Cy ⊃ Wxy)]
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 请选择谓词逻辑中的最佳翻译。所有儿童都去某所学校。（Cx：x 是一个儿童；Sx：x 是一所学校；Gxy：x 去 y）
+A: (∀x)(∃y)[(Cx • Sy) • Gxy)
+B: (∀x)[Sx ⊃ (∃y)(Cy • Gxy)]
+C: (∀x)[Cx ⊃ (∃y)(Sy • Gxy)]
+D: (∀x)[Sx • (∃y)(Cy • Gxy)]
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+总题数: 126, 正确答案数: 86, 正确率: 68.25%, 耗时: 64.91秒
+题目:
+question: 在等式24 = 2p中，p的值是多少？
+A: p = 4
+B: p = 8
+C: p = 12
+D: p = 24
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: Ms. Perez 在5天内总共驾驶了40英里。她每天驾驶的英里数相同。Ms. Perez 每天驾驶了多少英里？
+A: 5
+B: 7
+C: 8
+D: 9
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 求 −40 ÷ (−8) 的商。
+A: 1/5
+B: −5
+C: −1/5
+D: 5
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 一支足球队有90美元来购买足球。如果每个足球的价格是15.60美元，那么这支队伍最多可以买多少个足球？
+A: 4
+B: 5
+C: 6
+D: 7
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 你和三个朋友一起去听音乐会。四张票的总费用是112美元。请写出并解一个方程来求出一张票的成本t。
+A: 4t = 112; 448美元
+B: 4t = 112; 28美元
+C: t除以4 = 112; 448美元
+D: t除以4 = 112; 28美元
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 用下面的算式回答问题。  
+3 × [(2 × 6 – 5) + (8 ÷ 4)] – 1  
+这个算式的值是多少？
+A: 9
+B: 11
+C: 26
+D: 32
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 将1又11分之1写成整数或带分数的最简形式。
+A: 1.1 分之 11
+B: 11 分之 11
+C: 12 分之 11
+D: 11 分之 12
+
+qwen回答:
+answer: D， 
+正确答案是: C
+
+题目:
+question: 求 2.16 ÷ 0.06 的商。
+A: 3.6
+B: 36
+C: 0.01272
+D: 12.72
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 计算 142.76 减去 16.5 的差。
+A: 159.26
+B: 2.224
+C: 14,111
+D: 126.26
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 求 5.04 ÷ 0.7 的商
+A: 0.72
+B: 0.702
+C: 10.0571
+D: 7.2
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 吉米和基玛要去旅行，他们将开车三天。第一天他们将驾驶182英里，第二天他们将驾驶439英里，第三天他们将驾驶217英里。哪一个算式最接近对他们此次旅行驾驶总里程的估算？
+A: 150 + 400 + 200
+B: 200 + 400 + 200
+C: 200 + 450 + 200
+D: 200 + 500 + 200
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 21除以7的余数是多少？
+A: 21
+B: 7
+C: 1
+D: None of these
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: Maddie 将在 7 天内总共骑自行车 56 英里。她每天骑的英里数相同。Maddie 每天将骑多少英里？
+A: 8
+B: 9
+C: 49
+D: 63
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 找出使等式 48/88 = ?/11 成立的数字。
+A: 6
+B: 11
+C: 8
+D: 5
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 哪一个是最好的购买？
+A: 10块肥皂23.20美元
+B: 16块肥皂36.48美元
+C: 13块肥皂29.51美元
+D: 12块肥皂27.60美元
+
+qwen回答:
+answer: D， 
+正确答案是: C
+
+题目:
+question: 特里什的静止心率是每分钟50次。每运动一分钟，她的心率就增加每分钟5次。那么她需要多长时间才能达到每分钟120次的心率？
+A: 5分钟
+B: 14分钟
+C: 34分钟
+D: 70分钟
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 找出数据集 23, 13, 18, 29, 32, 25 中的中位数。
+A: 18
+B: 24
+C: 25
+D: 29
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 杰克从一棵苹果树上摘了60个苹果。他用了12个苹果做苹果酱。他将剩下的苹果平均放入6个礼品篮中。哪一个方程可以用来确定杰克每个礼品篮中放置的苹果数量a？
+A: (60/6)—12=a
+B: (60—12)/6=a
+C: (60-6)-12=a
+D: (60+12)/6=a
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 一张地图采用的比例尺是1英寸等于25英里。那么在这张地图上，5英寸代表多少英里？
+A: 5
+B: 25
+C: 50
+D: 125
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 简化 (2 + 5)^2 − 42。
+A: 7
+B: 16
+C: 30
+D: 33
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 计算 4 ÷ 2 • 2 + 8 − 4 的值。
+A: −12
+B: 12
+C: 8
+D: 16
+
+qwen回答:
+answer: B， 
+正确答案是: C
+
+题目:
+question: 一名教练将田径比赛的跑步者人数四舍五入到最近的10位，得到的近似数是400。以下哪个数字可能是田径比赛的实际跑步者人数？
+A: 382
+B: 397
+C: 406
+D: 447
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: −4 + (−3) =
+A: −7
+B: −1
+C: 1
+D: 7
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 马克有一个邮票收藏。他有22张来自日本的邮票，34张来自加拿大，还有17张来自墨西哥。他一共有多少张邮票？
+A: 53
+B: 63
+C: 73
+D: 83
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 找出方程 x + 2.7 = 8.4 的解，从给定的数字中选择。
+A: 11.1
+B: 5.7
+C: 3.7
+D: 22.68
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 找出使以下陈述成立的数字：0.32 克 = _ 厘克
+A: 32
+B: 3.2
+C: 3,200
+D: 320
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 用分配律心算出 5.7(8) 的乘积。
+A: 46.4
+B: 456
+C: 4.56
+D: 45.6
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 这个表达式 2,314 ÷ 4 的商是多少？
+A: 508
+B: 508 余2
+C: 578
+D: 578 余2
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 罗莎的目标是本月总共跑完100英里。她每天跑步时都跑5英里。在跑了d天之后，罗莎可以用以下哪个表达式来确定自己还剩下多少英里需要跑？
+A: 100 — 5d
+B: 5d+ 100
+C: 100 / 5d
+D: 5d
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 找出与文字短语相匹配的代数表达式：4倍于Tom收集的罐头数量。
+A: 4t
+B: t 除以 4 (t/4)
+C: t − 4
+D: t + 4
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 安德鲁在黑板上写下了数字186,425。下面哪个数中6的数值是安德鲁所写数字中的6的数值的10倍？
+A: 681,452
+B: 462,017
+C: 246,412
+D: 125,655
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 123 除以 8 等于多少？
+A: 15 余 7
+B: 15 余 3
+C: 16 余 5
+D: 16 余 1
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 将8又2分之4写成最简分数形式的假分数。
+A: 17分之2
+B: 34分之4
+C: 17分之4
+D: 19分之2
+
+qwen回答:
+answer: C， 
+正确答案是: A
+
+题目:
+question: 哪个表达式可以用来表示将270,240写成展开形式？
+A: 200,000 + 7,000 + 200 + 4
+B: 200,000 + 7,000 + 200 + 40
+C: 200,000 + 70,000 + 200 + 40
+D: 200,000 + 70,000 + 2,000 + 40
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 一名装配线工人需要7个小时来生产22个零件。按照这个速度，她在35个小时内可以生产多少个零件？
+A: 220 个零件
+B: 770 个零件
+C: 4 个零件
+D: 110 个零件
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: Abe 找到了以下这组数字的平均数和中位数：1, 3, 3。如果将数字 6 加入列表中，那么
+A: 平均数会增加。
+B: 平均数会减少。
+C: 中位数会增加。
+D: 中位数会减少。
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 当 n = 11 时，10 – (n + 6) 的值是多少？
+A: –7
+B: 5
+C: 7
+D: 27
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 哪个表达式表示下面的短语？比一个数少3，p
+A: 3-p
+B: p+3
+C: 3/p
+D: p-3
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 一家剧院每售出一张电影票可获得6美元。这家剧院共售出了500张电影票。下面的表达式可用于计算剧院从门票销售中获得了多少钱：  
+6 × 500  
+以下哪个表达式也可以用来计算剧院从门票销售中获得了多少钱？
+A: 30 × 10^1
+B: 30 × 10^3
+C: (6 × 5) × 10^2
+D: (6 × 5) × 10^3
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 令 12 - 9 + c = 12。哪个值的 c 能使等式成立？
+A: 0
+B: 3
+C: 9
+D: 12
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: Sojourn一家去度假，他们一开始有2000美元。如果他们每天花费150美元，那么哪个表达式表示他们在x天后剩下的钱？
+A: 1850x
+B: 2000 −150x
+C: 150x
+D: 2000 +150x
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 书架上有四本书。书架上每本书的重量（单位为磅）分别为 2.5、3.2、2.7、2.3。哪一项不等式表示从书架上任选一本书的重量 w？
+A: w > 2.3
+B: w < 2.4
+C: w > 3.2
+D: w < 3.3
+
+qwen回答:
+answer: C， 
+正确答案是: D
+
+题目:
+question: 哪个数的绝对值大于5？
+A: -6
+B: -5
+C: 0
+D: 5
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 这个表达式的值是多少：2(3(4² + 1)) - 2³?
+A: 156
+B: 110
+C: 94
+D: 48
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 格温在一张纸上写了下面的数列。  
+1, 5, 9, 13  
+格温数列中的接下来两项是什么？
+A: 15, 17
+B: 15, 19
+C: 17, 19
+D: 17, 21
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 如果3罐梨的价格是2.37美元，那么花9.48美元可以买多少罐梨？
+A: 3罐
+B: 12罐
+C: 36罐
+D: 13罐
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 按从大到小的顺序排列：3，3又1/8，3.8，3.18。
+A: 3.18, 3又1/8, 3.8, 3
+B: 3, 3又1/8, 3.18, 3
+C: 3.8, 3又1/8, 3.18, 3
+D: 3.8, 3.18, 3又1/8, 3
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 计算 22 / 2 + 9。
+A: 10
+B: 11
+C: 20
+D: 2
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 某市的人口为836,527人。该市人口四舍五入到最接近的万位数是多少？
+A: 800,000
+B: 830,000
+C: 836,000
+D: 840,000
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 求 5 • (−9) 的积。
+A: 14
+B: −4
+C: 45
+D: −45
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 菊子花了一天的时间观鸟，早上比下午多数了34只鸟。如果她总共数了76只鸟，那么她在下午数了多少只鸟？
+A: 21 birds
+B: 40 birds
+C: 42 birds
+D: 84 birds
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 5 + 2 • 15 + (12 • 4) 的值是多少？
+A: 78
+B: 83
+C: 131
+D: 153
+
+qwen回答:
+answer: C， 
+正确答案是: B
+
+题目:
+question: 哪种情境可以用分数20/8表示？
+A: Leslie 在一家商店花了20美元和8美分。Leslie 花的钱数写成分数是什么？
+B: 克莱默先生的8个孙子孙女平分了20块饼干。每个孙子孙女分到多少块饼干？
+C: Mitch 在一家花店买了20盒花，每盒里有8朵花。Mitch 一共买了多少朵花？
+D: 邮票以每本20张的方式出售。Donna 用了8张邮票寄送聚会邀请函。Donna 寄送邀请函时用了多少本邮票？
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 如果一列货运火车以每小时20英里的速度行驶6小时，它将行驶多远？
+A: 120英里
+B: 80英里
+C: 26英里
+D: 12英里
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 哪一步说明了如何在6a = 72中求出a的值？
+A: 在等式两边加上6
+B: 将等式两边除以6
+C: 将等式两边乘以6
+D: 在等式两边减去6
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 吴教练一共有30个足球。其中有9个是白色的。剩下的足球是三种不同颜色中的一种（蓝色、粉色或绿色），且蓝色、粉色和绿色的足球数量相等。吴教练有多少个绿色的足球？
+A: 7
+B: 10
+C: 21
+D: 39
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 从下午6点到晚上10点，温度下降了11华氏度。晚上10点时是84华氏度。请写出并解一个方程来求出t，即下午6点时的温度。
+A: 84 − 11 = t; 73°F
+B: t − 84 = 11; 95°F
+C: 84 − t = 11; 73°F
+D: t − 11 = 84; 95°F
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 特蕾莎有一袋72颗弹珠。她将这些弹珠分成了9个相等的组。哪一个数字句子表示如何找出特蕾莎每组放入了多少颗弹珠？
+A: 72 ÷ 9 = 8
+B: 72 – 9 = 63
+C: 9 + 72 = 81
+D: 9 ÷ 72 = 0.125
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 罗布每5天使用1盒猫粮来喂养他的猫。他每个月大约使用多少盒猫粮？
+A: 2 boxes
+B: 4 boxes
+C: 5 boxes
+D: 6 boxes
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 4 和 10 的最小公倍数是多少？
+A: 14
+B: 20
+C: 40
+D: 60
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 计算 4/7 加 2/7 的结果。
+A: 6/14
+B: 8/49
+C: 14/28
+D: 6/7
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 一个十年中有多少年？
+A: 5
+B: 10
+C: 15
+D: 20
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 一月份有31天。米歇尔每天做了45个俯卧撑。她用下面的算式来计算她在一月份所做的俯卧撑数量。 31 × 45 米歇尔在一月份一共做了多少个俯卧撑？
+A: 125 个俯卧撑
+B: 279 个俯卧撑
+C: 1,395 个俯卧撑
+D: 1,406 个俯卧撑
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 两个整数的最小公倍数是60。每个数都不超过12。这两个数的最大公约数是2。这两个数是什么？
+A: 6 和 10
+B: 5 和 12
+C: 10 和 12
+D: 12 和 15
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 计算当 x = 2 时，−2(x − 3) 的值。
+A: −4
+B: −2
+C: 10
+D: 2
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 某种冰淇淋每4盎司含有230卡路里。那么6盎司这种冰淇淋含有多少卡路里？
+A: 232
+B: 236
+C: 345
+D: 460
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 估算 711 + 497 的和。这个和介于哪两个数之间？
+A: 50 和 400
+B: 450 和 700
+C: 750 和 1,000
+D: 1,050 和 1,300
+
+qwen回答:
+answer: C， 
+正确答案是: D
+
+题目:
+question: 科尔伯格先生经营着一家花店。早上开始时，他有152支玫瑰。科尔伯格先生卖出了96支玫瑰，然后想将剩下的玫瑰平均分到8个花瓶中。每个花瓶里将有多少支玫瑰？
+A: 7
+B: 12
+C: 48
+D: 56
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 估算 32 x 68。这个乘积在什么数字之间？
+A: 18 和 28
+B: 180 和 280
+C: 1,800 和 2,800
+D: 18,000 和 28,000
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 写出77的素因数分解。尽可能使用指数形式。
+A: 7 • 11^2 • 13
+B: 7^2 • 11
+C: 7 • 11 • 13
+D: 7 • 11
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 在老城报刊亭，每本杂志售价为2.99美元，每本书售价为6.99美元。4本杂志和3本书的总价是多少？
+A: $20.93
+B: $28.93
+C: $32.93
+D: $48.93
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: Umi 创建了一个数列，其规律是每次加上相同的数量得到下一个数。20, 40, 60, 80, ... 第八个数是多少？
+A: 160
+B: 240
+C: 320
+D: 640
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 将7除以33写成小数形式。
+A: 0.021 循环
+B: 0.21 循环
+C: 0.22 循环
+D: 0.2121
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 西景学校正在购买新的篮球制服。每套制服的价格是46美元，学校将购买12套。哪一道方程式表示了一种用来计算制服总费用的方法？
+A: (40 × 10) + (6 × 2) = 400 + 12
+B: (40 × 6) + (10 × 2) = 240 + 20
+C: (40 × 12) + (6 × 12) = 480 + 72
+D: (40 × 12) + (60 × 12) = 480 + 720
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: Manuel以六千零四十九美元的价格买了一辆二手车。Manuel买的这辆二手车的价格用数字表示是多少？
+A: $649
+B: $6,049
+C: $6,409
+D: $6,490
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 昨天，米卡吃了偶数个草莓，还吃了奇数个苹果。哪一组可能代表米卡昨天吃的草莓（S）和苹果（A）的数量？
+A: SSSSS; AAA
+B: SSSSS; AAAA
+C: SSSSSSSS; AAAA
+D: SSSSSSSS; A
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 猫粮的价格是0.47美元/磅。一个6磅重的袋子需要多少钱？
+A: $2.82
+B: $2.97
+C: $6.47
+D: $12.77
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 将60除以72的结果化为最简分数。
+A: 4 over 6
+B: 10 over 12
+C: 15 over 17
+D: 5 over 6
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 将2杯与3夸脱的比率写成最简分数形式。
+A: 3/2
+B: 2/3
+C: 2/12
+D: 1/6
+
+qwen回答:
+answer: B， 
+正确答案是: D
+
+题目:
+question: 米尔图书馆有1,007,199本书。斯普林维尔图书馆有907,082本书。以下哪一项最接近米尔图书馆比斯普林维尔图书馆多的书的数量？
+A: 100,000本书
+B: 80,000本书
+C: 10,000本书
+D: 8,000本书
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 帕特在30秒内弹跳篮球25次。按照这个速度，帕特在150秒内大约会弹跳多少次？
+A: 120
+B: 125
+C: 144
+D: 145
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 用数轴来计算 −9 + (−8) 的和。
+A: −17
+B: 1
+C: −1
+D: 17
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 方程 y/4 = 8 中 y 的值是多少？
+A: 2
+B: 4
+C: 12
+D: 32
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 将四又五分之四写成假分数。
+A: 28/5
+B: 4/5
+C: 24/5
+D: 20/5
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 一个物体在月球上的重量 m 大约是该物体在地球上的重量 e 的六分之一。哪一方程式表示了用地球上的重量来计算物体在月球上的重量的近似值？
+A: m = 1/6 + e
+B: m = e/6
+C: m = 6+e
+D: m = 6e
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 8 + 8 ÷ 2 + 2 =
+A: 4
+B: 8
+C: 10
+D: 14
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 什么y值能使 y + 2.9 = 11 成立？
+A: 8.1
+B: 8.9
+C: 9.1
+D: 13.9
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 40°角的补角是多少？
+A: 50°
+B: 130°
+C: 140°
+D: 220°
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 凯瑞在四次不同的比赛中跑了相同的距离。她的成绩分别是18.04秒、21.39秒、12.99秒和14.14秒。如果将个人成绩四舍五入到最接近的十分之一秒，凯瑞这四场比赛的总时间估计是多少？
+A: 66.6 seconds
+B: 66.5 seconds
+C: 66 seconds
+D: 65.5 seconds
+
+qwen回答:
+answer: A， 
+正确答案是: B
+
+题目:
+question: 解方程 3/4 * x = 24。
+A: 18
+B: 32
+C: 72
+D: 96
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 找出准确的答案：110 + 70
+A: 18
+B: 81
+C: 180
+D: 810
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 一个动物园有15只巨嘴鸟和60只鹦鹉。动物园里巨嘴鸟数量与鹦鹉数量的比值是多少？
+A: 1:04
+B: 1:05
+C: 4:01
+D: 4:05
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 36和90的最大公约数是多少？
+A: 6
+B: 18
+C: 36
+D: 180
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 计算 6 • 24 ÷ (8 − 5) 的值。
+A: 48
+B: 13
+C: −13
+D: 54
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 42和84的最大公约数是多少？
+A: 7
+B: 21
+C: 42
+D: 84
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: Gutierrez女士需要为她的32名学生订购绳子。每名学生将收到一段5英尺8英寸长的绳子。Gutierrez女士需要为她的班级订购的绳子总长度是多少？
+A: 106英尺8英寸
+B: 154英尺8英寸
+C: 160英尺8英寸
+D: 181英尺4英寸
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 十二月，一家玩具店售出了934个拼图。每个拼图的价格为6美元，含税。售出的拼图总费用（含税）是多少？
+A: $5,434
+B: $5,484
+C: $5,604
+D: $5,684
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 一个角的度数是多少，当它相当于圆的1/360时？
+A: 1
+B: 90
+C: 180
+D: 360
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 找出使下列等式成立的数字：26.1 毫米 = _ 分米
+A: 0.261
+B: 261
+C: 2.61
+D: 2,610
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 一种沙拉调味汁是通过将2份醋与5份油混合制成的。那么，应该将多少盎司的油与9盎司的醋混合？
+A: 2
+B: 3.6
+C: 22.5
+D: 63
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 金骑自行车在9周内共行驶了135英里，每周行驶相同的距离。埃里克在6周内骑自行车行驶了102英里，也是每周行驶相同的距离。哪一选项正确比较了他们每周行驶的英里数？
+A: 埃里克每周比金多骑2英里。
+B: 金每周比埃里克多骑3英里。
+C: 金每周比埃里克多骑11英里。
+D: 埃里克每周比金多骑17英里。
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 从给定的数中找出方程 5x − 5 = −10 的解。
+A: −1
+B: −6
+C: −4
+D: −3
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 一个公园的模型是按1.5厘米代表50米的比例建造的。如果公园中两棵树之间的距离是150米，那么在模型上这个距离是多少？
+A: 0.5 厘米
+B: 4.5 厘米
+C: 75 厘米
+D: 225 厘米
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 伊丽莎白有一些贴纸。她将这些贴纸平均分给自己和两位朋友。每个人得到了4张贴纸。哪一个方程式表示贴纸的总数s？
+A: s + 3=4
+B: s - 3=4
+C: s/3 = 4
+D: 3s = 4
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: Stephanie 从洛杉矶飞了 2,448 英里到纽约市。Stephanie 飞行的里程数四舍五入到最接近的千位是多少？
+A: 2,000
+B: 2,400
+C: 2,500
+D: 3,000
+
+qwen回答:
+answer: C， 
+正确答案是: A
+
+题目:
+question: 哪一对比例可以组成一个比例式？
+A: 2 除以 5 和 8 除以 10
+B: 2 除以 5 和 10 除以 15
+C: 2 除以 5 和 4 除以 25
+D: 2 除以 5 和 6 除以 15
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 在一所大学里，大约有2/5的毕业生继续攻读研究生。如果该大学有750名毕业生，预计有多少人会去读研？
+A: 75名毕业生
+B: 107名毕业生
+C: 300名毕业生
+D: 400名毕业生
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 考虑数列模式 5, 9, 13, 17, 21, 25, 29。可能是使用了以下哪条规则生成的？
+A: 从0开始，每次加4得到下一个数。
+B: 从0开始，每次加5得到下一个数。
+C: 从5开始，每次加4得到下一个数。
+D: 从5开始，每次加5得到下一个数。
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: Max 和 Jonathon 在摘草莓。Max 摘了 187 个草莓。Jonathon 摘了 223 个草莓。他们一起吃了其中的 26 个草莓。哪一道算式可以用来计算 Max 和 Jonathon 剩下的草莓总数？
+A: 190 + 220 – 30 + 4
+B: 185 + 225 – 25 + 1
+C: 200 + 200 – 30 – 4
+D: 200 + 200 – 25 – 1
+
+qwen回答:
+answer: C， 
+正确答案是: A
+
+题目:
+question: 在西小学，女生人数比男生多20人。如果女生有180人，你如何求出男生的人数？
+A: 将180加上20
+B: 从180中减去20
+C: 将180乘以20
+D: 将180除以20
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 一台机器需要12分钟来灌装200瓶苏打水。照这个速度，这台机器需要多少分钟来灌装500瓶苏打水？
+A: 25分钟
+B: 28分钟
+C: 30分钟
+D: 40分钟
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 一家餐馆上周使用了231个鸡蛋。其中，46个是棕色的。剩下的鸡蛋是白色的。哪一方程可以用来求解w，即上周使用的白鸡蛋的数量？
+A: 231+ 46w = 0
+B: 46+w= 231
+C: w= 231+ 46
+D: 231 = 46w
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 一位商店经理向仓库订购了一些衬衫。这些衬衫被打包成箱后运送到商店，如下所述。共订购了81件衬衫。每个运输箱子可以装9件衬衫。运送所有订购的衬衫需要多少个运输箱子？
+A: 8
+B: 9
+C: 72
+D: 90
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 减法。2,396 – 1,709
+A: 687
+B: 687
+C: 1,493
+D: 1,695
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 杰里读一本200页的书用了10小时。按照这个速度，他需要多长时间来读一本320页的书？
+A: 16小时
+B: 18小时
+C: 24小时
+D: 32小时
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 什么数乘以4等于36？
+A: 6
+B: 7
+C: 8
+D: 9
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 将34升18厘升换算成升。
+A: 34.18 升
+B: 35.8 升
+C: 34.018 升
+D: 214 升
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 一个水箱的容量为50加仑。要使该水箱在20秒内装满，所需的流量是多少（单位：加仑/秒）？
+A: 0.4
+B: 2.5
+C: 16.7
+D: 70
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: Tara 大约可以在 18 分钟内冲洗 2 卷胶卷。照这个速度，她需要多长时间才能冲洗 8 卷胶卷？
+A: 42 分钟
+B: 1 小时 12 分钟
+C: 1 小时 20 分钟
+D: 1 小时 44 分钟
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 提莎给她的朋友写了下面这个谜语：我有2个面，没有顶点，而且可以滚动。我是什么？这个谜语的答案是什么？
+A: 圆锥
+B: 圆柱
+C: 球体
+D: 棱柱
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 约翰的朋友告诉他，他在当地的一场音乐会上发放传单可以赚取49美元。约翰想计算他的时薪。如果他总共工作了3.5小时，可以用方程3.5x = 49来确定他的时薪。约翰的时薪是多少美元？
+A: $1.40
+B: $14.00
+C: $45.50
+D: $171.50
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 24,513中数字5的值是357中数字5的值的多少倍？
+A: 10
+B: 100
+C: 1,000
+D: 10,000
+
+qwen回答:
+answer: B， 
+正确答案是: A
+
+题目:
+question: 哪个表达式与 5(4x + 3) — 2x 相等？
+A: 18x+15
+B: 18x+3
+C: 7x+8
+D: 2x+8
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 卢奇先生准备了5袋钢笔。他在每个袋子中放了19支黑色钢笔和12支红色钢笔。哪一个表达式表示卢奇先生放入袋子的钢笔总数？
+A: (5 × 19) + 12
+B: 5 × (19 + 12)
+C: 5 + (19 × 12)
+D: (5 + 19) × 12
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 总之，索尼娅和纳金一共有27.00美元。索尼娅买了一件衬衫，花了12.35美元，纳金买了一双凉鞋，花了10.11美元。还剩下多少钱？
+A: $4.46
+B: $4.54
+C: $5.36
+D: $5.76
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 一家邮局一周内投递了18096件邮件。这个数字用展开式表示是什么？
+A: 18 + 1,000 + 90 + 6
+B: 18 + 1,000 + 900 + 60
+C: 10,000 + 8,000 + 90 + 6
+D: 10,000 + 8,000 + 900 + 60
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 以下哪一项不等价于3又3/4加仑？
+A: 60 杯
+B: 15 夸脱
+C: 30 品脱
+D: 13 夸脱
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 杰西在她上一场篮球比赛中得了18分。她投中的每个球都是2分。她投中了几个球？
+A: 20
+B: 16
+C: 9
+D: 8
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: Tayshawn 将 56 颗弹珠分成若干个相等的组，且没有剩余的弹珠。下列哪一项描述可能是 Tayshawn 分组情况的真实描述？
+A: 有 6 组弹珠，每组有 8 颗弹珠。
+B: 有 7 组弹珠，每组有 7 颗弹珠。
+C: 有 8 组弹珠，每组有 7 颗弹珠。
+D: 有 9 组弹珠，每组有 6 颗弹珠。
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 计算表达式 2,816 x 7 的值是多少？
+A: 14,572
+B: 14,672
+C: 19,612
+D: 19,712
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 米里亚姆家和黛比家之间的距离是444.44米。关于两家之间距离这个数值中各个数字的值，下面哪一项说法是正确的？
+A: 十分位上的4的值是十位上的4的值的1/10。
+B: 百分位上的4的值是个位上的4的值的1/10。
+C: 百位上的4的值是个位上的4的值的10倍。
+D: 十分位上的4的值是百分位上的4的值的10倍。
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 写出驾驶308公里用时4小时的单位速率。如有必要，四舍五入到百分位。
+A: 82 公里/小时
+B: 74 公里/小时
+C: 72 公里/小时
+D: 77 公里/小时
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 一个城市游泳池长度最合理的估计是多少？
+A: 1米
+B: 25米
+C: 1公里
+D: 25公里
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 音乐展示的时间安排包括3个各为20分钟的演出时段和1个为40分钟的演出时段。每两个演出时段之间有10分钟的休息时间。整个音乐展示的时长为3(20 + 10) + 40 分钟。请问这个音乐展示的总时长是多少？
+A: 73 minutes
+B: 110 minutes
+C: 130 minutes
+D: 210 minutes
+
+qwen回答:
+answer: B， 
+正确答案是: C
+
+题目:
+question: 找出24和36的最小公倍数。
+A: 96
+B: 144
+C: 72
+D: 120
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 去年，切萨为学校聚会制作了32份一杯装的汤。今年，她制作的汤的数量将是去年的两倍。今年切萨将制作多少加仑的汤？
+A: 64
+B: 16
+C: 4
+D: 2
+
+qwen回答:
+answer: A， 
+正确答案是: C
+
+题目:
+question: 埃米尔想知道在一场比赛中，主队和客队哪一支是最受欢迎的足球队。以下哪种方法能给他最准确的结果？
+A: 调查为主队加油的啦啦队员
+B: 调查佩戴客队帽子的人
+C: 调查排队买票的一群人
+D: 调查不住在主队所在城市的人
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 一家公司每生产3辆白色汽车，就会生产5辆蓝色汽车。如果该公司一天生产了15辆白色汽车，那么它会生产多少辆蓝色汽车？
+A: 9
+B: 13
+C: 17
+D: 25
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 史蒂夫订购了塑料盒来存放他的棒球卡。每个盒子的长度为12厘米，宽度为6.5厘米，高度为1.25厘米。一个棒球卡盒子的容积是多少立方厘米？
+A: 39.5
+B: 97.5
+C: 118.5
+D: 202.25
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 克里斯以每束16.99美元的价格出售玫瑰。到一天结束时，他共收入339.80美元。他卖出了多少束玫瑰？
+A: 22
+B: 18
+C: 20
+D: 16
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 一家冰淇淋店一天售出了48杯香草奶昔，占当天总奶昔销量的40%。那么这家冰淇淋店当天总共售出了多少杯奶昔？
+A: 60
+B: 72
+C: 100
+D: 120
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 计算 (c^2 − b^2)^2 + a^2，其中 a = 5，b = 3，c = 2。
+A: 194
+B: 18
+C: 50
+D: 0
+
+qwen回答:
+answer: A， 
+正确答案是: C
+
+题目:
+question: 若 x − 3 = 6，则 x 的值是多少？
+A: 2
+B: 3
+C: 6
+D: 9
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 乔和迈克参加了同一场比赛。乔比迈克早4分钟完成了比赛。如果迈克在下午4:02完成比赛，那么乔是什么时间完成比赛的？
+A: 3:58 p.m.
+B: 4:06 p.m.
+C: 8:02 p.m.
+D: 12:02 p.m.
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: Rich测量一条纸板条的宽度为5/6英尺。另一条纸板条宽2/3英尺。估算这两条纸板条的总宽度。
+A: 2 ft
+B: 1又1/2 ft
+C: 1 ft
+D: 3 ft
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 一个图形由12个大小相等的直角三角形组成。每个直角三角形的底为4厘米，高为5厘米。这个图形的总面积是多少平方厘米？
+A: 10
+B: 60
+C: 120
+D: 240
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 宁静酒店每周的牛奶订单包括40加仑脱脂牛奶和15加仑巧克力牛奶。宁静酒店每周牛奶订单中脱脂牛奶与巧克力牛奶的数量比例是多少？
+A: 3:01
+B: 5:01
+C: 5:03
+D: 8:03
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 在克拉克先生的四年级班级里有20名学生。整个四年级的学生人数是克拉克先生班级人数的5倍。哪一道方程可以用来确定整个四年级的学生人数n？
+A: 5xn= 20
+B: 5+20=n
+C: 20x5=n
+D: 20/n=5
+
+qwen回答:
+C: 20x5=n， 
+正确答案是: C
+
+题目:
+question: 当 x = 4 时，4x + 9 的值是多少？
+A: 13
+B: 17
+C: 25
+D: 52
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 用分配律重新表示表达式 4(3 + 2)。不要化简。
+A: 4(3) + 2
+B: 4(3) + 4(2)
+C: 20
+D: 3 + 4(2)
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 7枚1美分硬币叠起来的高度是1厘米。尼克有一堆高度为4厘米的1美分硬币。哪一个方程式可以用来计算尼克这堆硬币的数量，n？
+A: n =7+4
+B: n =7–4
+C: n =7×4
+D: n =7÷4
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 以下哪个选项是对4,286 × 390的最佳估算？
+A: 12,000,000
+B: 1,600,000
+C: 1,200,000
+D: 16,000
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 表面积为 S 的直立长方体，其长度为 l，宽度为 w，高度为 h，可以通过公式 S = 2(lw + wh + hl) 进行计算。一个长度为 12 英寸、宽度为 9 英寸、高度为 2 英寸的长方体的表面积是多少平方英寸？
+A: 300
+B: 258
+C: 150
+D: 92
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 一家购物中心想要对在该中心购物的人群进行一项调查。以下哪种方式能为他们提供最具代表性的样本？
+A: 在一家鞋店进行调查
+B: 在所有鞋店进行调查
+C: 在购物中心入口处进行调查
+D: 在距离购物中心一英里的地方进行调查
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 一群徒步旅行者从盐 flats（海拔−55英尺）攀登至塔隆悬崖（海拔620英尺）。塔隆悬崖与盐 flats之间的海拔差是多少？
+A: 565英尺
+B: 575英尺
+C: 665英尺
+D: 675英尺
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 在上课开始时，有一半的学生去了图书馆。随后，在这一节课期间，剩下的一半学生去了计算机实验室。如果最后班里还剩下8名学生，那么这个班原来有多少名学生？
+A: 12 名学生
+B: 16 名学生
+C: 24 名学生
+D: 32 名学生
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 数字序列遵循跳数规则。5, 20, 35, 50, 65... 哪个数字序列遵循相同的规则？
+A: 5, 20, 25, 30, 35...
+B: 13, 18, 23, 28, 33...
+C: 12, 27, 42, 57, 72...
+D: 15, 30, 40, 55, 65...
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 一位老师有三包贴纸。一包有56张贴纸，另一包有48张，第三包有58张贴纸。如果老师将所有贴纸平均分给27名学生，每名学生能获得多少张贴纸？
+A: 6张贴纸
+B: 9张贴纸
+C: 54张贴纸
+D: 81张贴纸
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 哪一组整数是按照从小到大的顺序排列的？
+A: −9, −6, −3, 7, 11
+B: −3, −6, 7, 11, –9
+C: 11, −9, 7, −6, −3
+D: 7, 11, −6, −3, −9
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 7% 等于多少？
+A: 0.007
+B: 0.07
+C: 0.7
+D: 7
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 哪一个比可以与6比9组成比例？
+A: 8比12
+B: 9比6
+C: 2比6
+D: 24比27
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 贝拉的所有照片都放在8本相册中。每本相册有25张照片。哪一个表达式显示了如何计算贝拉一共有多少张照片？
+A: 25 ÷ 8
+B: 25 – 8
+C: 25 + 8
+D: 25 × 8
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 32乘以67的积是多少？
+A: 1,824
+B: 1,934
+C: 2,044
+D: 2,144
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 解方程：18.5美元/ m加仑 = 3.60美元 / 7.5加仑。如有必要，四舍五入到百分位。
+A: 8.86
+B: 42.25
+C: 32.54
+D: 38.44
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 用相容数来估算商 117.83 ÷ 5.67。
+A: 大约 10
+B: 大约 20
+C: 大约 30
+D: 大约 40
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 玛格丽特在她以前的所有拼写测验中得分都在75到89之间。她在下一次测验中得了100分。以下哪项陈述是正确的？
+A: 众数会增加。
+B: 平均值会增加。
+C: 平均值会减少。
+D: 中位数会减少。
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 估算 153 + 44 的和。这个和在哪个选项的数值范围之间？
+A: 100 和 299
+B: 300 和 499
+C: 500 和 699
+D: 700 和 899
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 在哪个集合中，所有的值都满足不等式 2x — 1 < 10？
+A: {10, 15, 20}
+B: {5, 7, 9}
+C: {4, 6, 8}
+D: {2, 3, 4}
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 埃琳做了12品脱的果汁。她每天喝3杯果汁。埃琳需要多少天才能喝完她做的所有果汁？
+A: 2天
+B: 4天
+C: 8天
+D: 9天
+
+qwen回答:
+answer: B， 
+正确答案是: C
+
+题目:
+question: 约翰有4块饼干。萨拉比约翰多2块饼干。达柳斯的饼干数量是萨拉的3倍。达柳斯有多少块饼干？
+A: 9
+B: 14
+C: 18
+D: 24
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 哪一组数字是按从小到大的顺序排列的？
+A: 0.25 1.6 1.0
+B: 1.0 0.25 1.6
+C: 0.25 1.0 1.6
+D: 1.6 1.0 0.25
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 找出数字−7的相反数。
+A: 7
+B: −7
+C: 0.7
+D: −7.7
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 梅在她放学后的那份工作每小时挣5.50美元。她要工作多少小时才能赚到132美元？
+A: 16
+B: 20
+C: 24
+D: 28
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 我是一个数。我的个位是7。我比80小，但比70大。我的数是多少？
+A: 71
+B: 73
+C: 77
+D: 79
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 计算 −7(y − 6)，其中 y = 8。
+A: −14
+B: 50
+C: −13
+D: −62
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 从芝加哥到纽约市的距离是794英里。794按四舍五入到最近的百位是多少？
+A: 700
+B: 794
+C: 800
+D: 894
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 凯蒂要去度假3周。她通过计算5 × 3来找出她将错过的工作日天数。下面哪个算式表示了凯蒂找出工作日天数的另一种方法？
+A: 3+5
+B: 3+3+3
+C: 5+5+5
+D: 5+5+5+5+5
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 哪一个表达式等于720？
+A: 7x20
+B: 8x80
+C: 9x80
+D: 9x90
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 计算13分之14加7分之14。
+A: 1又4/7
+B: 1又3/7
+C: 1又5/14
+D: 20/28
+
+qwen回答:
+answer: A， 
+正确答案是: B
+
+题目:
+question: 利用乘法的结合律来简化 8 • (−7) • (−1)。
+A: −63
+B: 56
+C: 48
+D: −56
+
+qwen回答:
+answer: B， 
+正确答案是: A
+
+题目:
+question: 一位面包师做了232个松饼。他将190个松饼送到了当地一家酒店。剩下的松饼他将装进盒子里。每盒可以装6个松饼。哪一个方程式可用于求出所需的盒子数量b？
+A: (232 - 190)/6=b
+B: (232 + 190)x6=b
+C: (232 - 190)x6=b
+D: (232 + 190)/6=b
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 如果将30,000除以10，然后再除以10，结果是多少？
+A: 3
+B: 30
+C: 300
+D: 3,000
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 找出准确的答案：145 + 281 + 62
+A: 426
+B: 488
+C: 946
+D: 1,046
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 一辆汽车每加仑汽油可以行驶24英里（英里/加仑）。那么这辆汽车行驶144英里需要多少加仑的汽油？
+A: 6.5 gallons
+B: 6 gallons
+C: 5.5 gallons
+D: 5 gallons
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 哪一对表达式在任何变量值大于零的情况下都是等价的？
+A: 3(x+2) 和 3x+2
+B: 4d+2e 和 8d+e
+C: f+f+f+g 和 3fg
+D: b+b+3c 和 2b+3c
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 西谷镇共有2,817所住宅。每所住宅平均每天使用380加仑的水。用下面的算式计算西谷镇住宅平均每天总共使用的加仑水量。 2,817 × 380  
+请问西谷镇的住宅平均每天总共使用多少加仑的水？
+A: 860,460 gallons
+B: 870,460 gallons
+C: 1,060,460 gallons
+D: 1,070,460 gallons
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 棒球场有三个不同的座位区。每个区域可容纳的人数如下所述：
+* 红色区域可容纳200人
+* 蓝色区域比红色区域少容纳20人
+* 绿色区域的容量是蓝色区域的2倍
+
+棒球场总共可容纳多少人？
+A: 260
+B: 380
+C: 640
+D: 740
+
+qwen回答:
+蓝色区域容纳的人数为红色区域减去20人，即：
+
+蓝色区域 = 200 - 20 = 180人
+
+绿色区域的容量是蓝色区域的2倍，即：
+
+绿色区域 = 180 × 2 = 360人
+
+总容量为三个区域之和：
+
+总容量 = 红色区域 + 蓝色区域 + 绿色区域  
+总容量 = 200 + 180 + 360 = 740人
+
+answer: D， 
+正确答案是: D
+
+题目:
+question: 一位篮球运动员在他的第一场比赛中得了18分。这比他在第二场比赛中得分少了4分。写出一个方程并解这个方程，求出他在第二场比赛中所得的分数p。
+A: 18 = p − 4; 14
+B: 18 = p − 4; 22
+C: 18 − 4 = p; 14
+D: 18 − p = 4; 22
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 解方程 −6x = −36。检验你的答案。
+A: 1/6
+B: 6
+C: 1/216
+D: 216
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 找出以下数据集的平均值：18, 9, 9, 10, 11, 14, 30, 19。
+A: 9
+B: 15
+C: 30
+D: 11
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 佐治亚州有159个县，总面积为58056平方英里。每个县的平均面积是多少平方英里？将答案四舍五入到最近的整数。
+A: 274 平方英里每县
+B: 159 平方英里每县
+C: 318 平方英里每县
+D: 365 平方英里每县
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 火星的温度在白天可达27°C，夜晚可降至−125°C。平均温度是多少？
+A: 76°C
+B: −49°C
+C: 49°C
+D: −76°C
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 用下面的等式回答问题。14 × 3 = 42 哪个选项正确地解释了这个算式？
+A: 14 比 42 多 3。
+B: 42 比 3 多 14。
+C: 14 是 42 的 3 倍。
+D: 42 是 14 的 3 倍。
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 简化表达式：−4 + 7 • 3^2。可以使用计算器、纸笔或心算。
+A: 437
+B: 27
+C: 289
+D: 59
+
+qwen回答:
+answer: B， 
+正确答案是: D
+
+题目:
+question: 徒步俱乐部的成员们徒步旅行了2.4小时，每小时行进2.5英里。成员们徒步旅行了多远？
+A: 4.9 英里
+B: 5.8 英里
+C: 6.0 英里
+D: 6.3 英里
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 如果x的值在0.0051和0.038之间，以下哪个可能是x？
+A: 0.0042
+B: 0.0261
+C: 0.049
+D: 0.052
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 一位兽医抱着一只猫站在秤上，秤的读数是157.8磅。这位兽医独自的体重是148.3磅。下面哪个选项最接近这只猫的体重估计值？
+A: 介于4到7磅之间
+B: 介于8到11磅之间
+C: 介于12到15磅之间
+D: 介于16到19磅之间
+
+qwen回答:
+answer: A， 
+正确答案是: B
+
+题目:
+question: Ms. Carter 的教室里有 30 名学生。她将他们分成 5 个相等的小组。哪个表达式表示如何找出每个小组的学生人数？
+A: 30+5
+B: 30/5
+C: 30-5
+D: 30x5
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 数字模式中的第一个数字是28。该模式的规则是加上14来得到下一个数字。如果这个模式继续下去，下面哪一个说法是正确的？
+A: 模式中的所有数字都可以被10整除。
+B: 模式中的所有数字都可以被4整除。
+C: 模式中的所有数字都可以被8整除。
+D: 模式中的所有数字都可以被7整除。
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 解方程 x − 10.5 = −11.6。
+A: −22.1
+B: 1.1
+C: 22.1
+D: −1.1
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 哪个比例不能与 8/18 形成比例关系？
+A: 46 over 108
+B: 12 over 27
+C: 60 over 135
+D: 4 over 9
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 在一学期中，一名学生在六次测试中分别得到了76、80、83、71、80和78分。这六次测试中该学生的平均分是多少？
+A: 76
+B: 77
+C: 78
+D: 79
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 求25和55的最大公约数。
+A: 5
+B: 11
+C: 50
+D: 275
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 30的60%是多少？
+A: 1.8
+B: 18
+C: 180
+D: 1800
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 点A和点B位于数轴上。点A的位置是-20，点B比点A小5。关于点B，以下哪一项陈述是正确的？
+A: 它位于-25，在数轴上处于点A的右侧。
+B: 它位于-15，在数轴上处于点A的右侧。
+C: 它位于-25，在数轴上处于点A的左侧。
+D: 它位于-15，在数轴上处于点A的左侧。
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 用心算解方程 1.2 = 0.4y。
+A: 1.6
+B: −3
+C: 4
+D: 3
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 泰勒有12周的时间来读一定数量的书。他每读一本书需要花费2周时间。泰勒可以用以下哪个表达式来计算他将读多少本书？
+A: 12 – 2
+B: 12 + 12
+C: 12 – 2 – 2 – 2
+D: 12 – 2 – 2 – 2 – 2 – 2 – 2
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 哪个以指数形式表示的数等于343？
+A: 3^7
+B: 7^3
+C: 7^49
+D: 294^49
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 康纳用吸管做了9个图形。每个图形有5根吸管。康纳又用了15根吸管来做更多的图形。康纳一共用了多少根吸管来做所有图形？
+A: 20
+B: 29
+C: 45
+D: 60
+
+qwen回答:
+康纳一开始做了9个图形，每个图形用了5根吸管，总共用了 $9 \times 5 = 45$ 根吸管。他又用了15根吸管来做更多的图形，因此总共用了 $45 + 15 = 60$ 根吸管。
+
+answer: D， 
+正确答案是: D
+
+题目:
+question: 计算 −8 • (−4) 的乘积。
+A: −4
+B: 4
+C: 32
+D: −32
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 哪一个比例可以与3比8组成一个比例式？
+A: 18比40
+B: 18比56
+C: 24比64
+D: 15比48
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 米兰达按比例放大了一张图片。她原来的图片宽4厘米，长6厘米。如果新的、更大的图片宽10厘米，那么它的长度是多少？
+A: 8 厘米
+B: 12 厘米
+C: 15 厘米
+D: 20 厘米
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 哪个数是7的倍数？
+A: 27
+B: 48
+C: 56
+D: 74
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 一个加油站一天售出了300.5849加仑的汽油。这个加油站售出的汽油大约是多少加仑，四舍五入到百分位？
+A: 300
+B: 300.58
+C: 300.585
+D: 300.59
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 彼得每周工作38小时，每小时赚7.25美元。他的雇主给他加薪后，他的周工资涨到了307.80美元。彼得的周工资增加了多少？
+A: $32.30
+B: $34.70
+C: $42.46
+D: $275.50
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 什么数字能使方程 35 / ? = 7 成立？
+A: 5
+B: 6
+C: 7
+D: 8
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 玛丽亚每天上班时在午餐上花费9美元。为了计算她在为期5天的工作周内总共在午餐上花费多少钱，她用5乘以9。玛丽亚在一个5天的工作周期间在午餐上总共花费多少钱？
+A: $40
+B: $45
+C: $50
+D: $59
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 解方程：−17.02 = −2.3y。检验你的答案。
+A: 7.4
+B: −7.4
+C: −19.32
+D: 14.72
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 以下哪一项是表示铅笔重量的最合适单位？
+A: pounds
+B: ounces
+C: quarts
+D: pints
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 莉萨经营着一家小企业。周一亏损了14美元，周二盈利了18美元。周三亏损了6美元，周四盈利了7美元。求总利润或亏损。
+A: $15 profit
+B: $45 loss
+C: $5 profit
+D: $10 profit
+
+qwen回答:
+answer: A， 
+正确答案是: C
+
+题目:
+question: 一些面包师制作苹果派。他们有15箱苹果，每箱有18个苹果。每个派需要使用7个苹果。这些面包师总共可以制作多少个苹果派？
+A: 33
+B: 38
+C: 39
+D: 40
+
+qwen回答:
+answer: C， 
+正确答案是: B
+
+题目:
+question: 克里花了3个小时做家庭作业。她在所有科目上花费的时间相等。如果克里花了1/2小时在科学上，她一共学了几门科目？
+A: 4 门科目
+B: 2 门科目
+C: 6 门科目
+D: 5 门科目
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 一支棒球队售出了215张儿童票，每张3美元
+A: (215 × 3) – (467 × 7)
+B: (215 × 7) – (467 × 3)
+C: (467 × 3) – (215 × 7)
+D: (467 × 7) – (215 × 3)
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 马利克有240张CD。他把这些CD分成了12个相等的组。哪个算式表示了如何找出每组有多少张CD？
+A: 240 ÷ 12
+B: 240 – 12
+C: 240 + 12
+D: 240 × 12
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 如果将一个全市竞赛中的总共762名学生平均分成6个大小相同的学生队，每队有多少名学生？
+A: 110
+B: 120
+C: 127
+D: 137
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 计算表达式 −16 + 13 + (−33) 的值。
+A: 4
+B: 62
+C: 36
+D: −36
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 一群朋友出去吃午饭。有d个人买了沙拉，p个人买了汤。每份沙拉3.99美元，每份汤2.99美元。写出一个表达式表示沙拉和汤的总费用。
+A: 3.99p + 2.99d
+B: 2.99p + 3.99d
+C: (2.99 + 3.99)(p + d)
+D: (3.99p + 2.99)d
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 一包纸巾内含12卷纸巾。凯利先生想将这些纸巾平均分配到4个房间里。他使用下面的算式来计算每个房间应该放多少卷纸巾，t：12 ÷ t = 4。以下哪一个算式是凯利先生用来计算每个房间应放多少卷纸巾的另一种方法？
+A: 4 ÷ 12 = t
+B: 4 – t = 12
+C: 4 + 12 = t
+D: 4 × t = 12
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 解方程：−47 = g + 24。
+A: −71
+B: −23
+C: 23
+D: 71
+
+qwen回答:
+answer: A， 
+正确答案是: B
+
+题目:
+question: 找出使下列等式成立的数字：48 米 = 方框 毫米。
+A: 48,000
+B: 480
+C: 4,800
+D: 5
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 在一个公交车站，公交车从早上6:00开始发车。其中两条线路的发车时间安排如下：  
+* Bus A 路线较长，每 75 分钟发一班车。  
+* Bus B 路线较短，每 15 分钟发一班车。  
+
+Bus A 和 Bus B 下一次同时发车的时间是什么时候？
+A: 7:00 a.m.
+B: 7:15 a.m.
+C: 7:30 a.m.
+D: 8:30 a.m.
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 一家杂货店以2.00美元的价格出售一袋5个柠檬。这袋柠檬中每个柠檬的单价是多少？
+A: $2.50
+B: $0.60
+C: $0.40
+D: $0.10
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 写出48的素因数分解。尽可能使用指数形式。
+A: 4 • 8
+B: 6 • 8
+C: 2^3 • 3^2
+D: 2^4 • 3
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 飞燕的狗每天吃8盎司的狗粮。飞燕买了一袋28磅的狗粮。一袋28磅的狗粮共有多少份8盎司的狗粮？
+A: 14
+B: 56
+C: 224
+D: 448
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 求 16.1 ÷ 0.14 的商。
+A: 1.15
+B: 0.0115
+C: 11.5
+D: 115
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 学校过去三个月的降雨量分别为8.1英寸、4.2英寸和0.33英寸。通过四舍五入到最接近的整数来估算这三个月的总降雨量。
+A: 11.9 英寸
+B: 11 英寸
+C: 45.0 英寸
+D: 12 英寸
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 哪些比等于 4 : 32？
+A: 2 : 96; 2 : 16
+B: 12 : 96; 2 : 16
+C: 12 : 96; 12 : 16
+D: 2 : 96; 12 : 16
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 萨曼莎有342张棒球卡，佩里有184张棒球卡。萨曼莎比佩里多多少张棒球卡？
+A: 158
+B: 168
+C: 258
+D: 268
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 除法。7,285 ÷ 4
+A: 1,801
+B: 1,801 R1
+C: 1,821
+D: 1,821 R1
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 一枚硬币的半径约为0.85厘米。哪个测量值最接近一枚硬币的周长？
+A: 1.33 厘米
+B: 1.70 厘米
+C: 2.67 厘米
+D: 5.34 厘米
+
+qwen回答:
+answer: C， 
+正确答案是: D
+
+题目:
+question: 一个锦标赛有393名球员，每个队伍有3名球员。以下哪个表达式显示了如何计算锦标赛中的队伍数量？
+A: 393 + 3
+B: 393 – 3
+C: 393 × 3
+D: 393 ÷ 3
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 解方程 14 = w + 23。
+A: −37
+B: −9
+C: 9
+D: 37
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 在汤普森先生的教室里，一排有7张课桌。赫克托坐在金的右边第二个座位上。托尼娅坐在赫克托右边第三个座位上。金坐在托尼娅左边多少个座位的位置？
+A: 2
+B: 3
+C: 5
+D: 12
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 一家商店有3箱衬衫。每箱有4包，每包含7件衬衫。可以用算式3 × (4 × 7) 来计算衬衫的总数。下面哪个算式也可以用来计算衬衫的总数？
+A: 12 × 3
+B: 12 × 7
+C: 28 × 4
+D: 28 × 7
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: Abby每天往返于家和工作地点之间的路程是18英里。如果将她的每日往返路程四舍五入到最接近的5英里，以下哪一个选项最能估算她在5天内总共驾驶的英里数？
+A: 75 英里
+B: 100 英里
+C: 125 英里
+D: 180 英里
+
+qwen回答:
+Abby每天往返路程是18英里，将它四舍五入到最接近的5英里是20英里。  
+在5天内，她驾驶的估算总路程是 $ 20 \text{ 英里/天} \times 5 \text{ 天} = 100 \text{ 英里} $。
+
+answer: B， 
+正确答案是: B
+
+题目:
+question: 2010年，路易斯安那州的人口四舍五入到最接近的10,000后为4,530,000。以下哪个数字可能是2010年路易斯安那州的实际人口？
+A: 4,500,321
+B: 4,524,491
+C: 4,533,372
+D: 4,535,343
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 马库斯花了3.25美元洗车。如果一个25美分硬币可以让洗车机运行60秒，那么他用了多长时间来洗车？
+A: 10 分钟
+B: 13 分钟
+C: 16 分钟
+D: 32.5 分钟
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 将27除以36写成最简分数形式。
+A: 3 over 4
+B: 2 over 3
+C: 3 over 5
+D: 1 over 5
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 估算 999 - 103 的结果。这个差值在哪些数字之间？
+A: 1,300 和 1,500
+B: 1,000 和 1,200
+C: 700 和 900
+D: 400 和 600
+
+qwen回答:
+answer: B， 
+正确答案是: C
+
+题目:
+question: 哪个表达式展示了质因数分解？
+A: 2 • 9 • 11
+B: 2.5 • 7 • 3
+C: 1 • 11 • 13
+D: 2 • 2 • 2 • 3 • 11
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 凌女士已经在她的房子里居住了整整4年。她知道每一年都有12个月。她使用以下算式计算了自己居住的总月数 m：  
+4 × 12 = m  
+哪一个算式还能够用来计算凌女士已经居住的总月数 m？
+A: 12 ÷ m = 4
+B: m × 4 = 12
+C: 12 – m = 4
+D: m ÷ 4 = 12
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 解方程 x + 71 = −22。
+A: −93
+B: −49
+C: 49
+D: 93
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 哪个代数表达式表示x减去22的差的四倍？
+A: 4(x – 22)
+B: (4 • 22) – x
+C: 4(22 – x)
+D: (x • 4) – 22
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 加法。46,911 + 653,092
+A: 699,903
+B: 700,003
+C: 913,203
+D: 1,122,202
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 解方程 5/8 * m = 6。
+A: 3 又 5/9
+B: 3 又 3/4
+C: 5 又 1/3
+D: 9 又 3/5
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 一家体育用品商店正在对原价为110.99美元的直排轮滑鞋提供10%的折扣。不包括税的话，折扣后的轮滑鞋需要多少钱？
+A: $99.89
+B: $99.99
+C: $100.99
+D: $109.88
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 爱丽丝有8个桶，每个桶里有t个网球。这些桶中总共有56个网球。下面哪个数字句子表示如何求出每个桶中的网球数量t？
+A: 8 ÷ t = 56
+B: 8 × t = 56
+C: t + 8 = 56
+D: t ÷ 8 = 56
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 费舍尔女士用了表达式（6 × 8）× 12 来计算她的学生艺术项目所需的全部记号笔数量。下面哪一个表达式与费舍尔女士所用的表达式相等？
+A: 6 + (8 + 12)
+B: 6 + (8 × 12)
+C: 6 × (8 + 12)
+D: 6 × (8 × 12)
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 一位科学家研究了两种鲸鱼的迁徙模式。座头鲸在28天内游了2,240英里，灰鲸在32天内游了2,368英里。如果座头鲸以同样的速度继续游32天，它们将会比灰鲸多游多少英里？
+A: 128
+B: 192
+C: 280
+D: 408
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 哪种表达式是表示8乘以6的另一种方式？
+A: (24+4)+6
+B: (2+4)x6
+C: (2x4) + 6
+D: (2x4)x6
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 莉莉打算把一袋糖果全部分发完。她可以将这些糖果平均分给5个人、3个人或2个人。莉莉的袋子里可能有多少块糖果？
+A: 12
+B: 20
+C: 30
+D: 45
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 任何立方体的体积 V 与边长 s 的关系可以通过公式 V = s^3 来计算。求边长为 2.3 厘米的立方体的体积（单位：立方厘米）？
+A: 5.29
+B: 6.9
+C: 8.027
+D: 12.167
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: Marshall 想要在上课前完成他的英文论文的打字。如果他还有 550 个单词需要打，而上课还剩 25 分钟，为了按时完成论文，他每分钟至少需要打多少个字？
+A: 20 words per minute
+B: 21 words per minute
+C: 22 words per minute
+D: 25 words per minute
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 苏珊的阅读速度是每3分钟读1页。如果她的阅读速度保持不变，可以用以下哪种方法来计算她读完18页所需的时间？
+A: 将18和3相加
+B: 将18除以3
+C: 将3乘以18
+D: 从18中减去3
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 去年卡尔一共烤了18个派。他为自己的家人烤了6个派，另外为4个学校的筹款活动每个活动烤了p个派。哪一个数字算式可以用来求出卡尔为每个学校筹款活动烤了多少个派？
+A: 6 × p – 18 = 4
+B: 18 – 6 × p = 4
+C: 4+6 × p = 18
+D: 6+4 × p = 18
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 一个数被四舍五入到最近的百位，结果是500。以下哪个数不可能是四舍五入前的数？
+A: 458
+B: 463
+C: 547
+D: 559
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 计算表达式 14 + (−71) 的值。
+A: −85
+B: 57
+C: 85
+D: −57
+
+qwen回答:
+answer: D， 
+正确答案是: B
+
+题目:
+question: 找出准确的答案：942 / 3
+A: 214
+B: 304
+C: 314
+D: 642
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 解方程：13除以4等于x除以7。
+A: 22.75
+B: 23.25
+C: 24.25
+D: none of these
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 将数字 6、−1、8、−3、−4 按从小到大的顺序排列。
+A: 6, −1, 8, −3, −4
+B: −4, −3, −1, 6, 8
+C: −1, −3, −4, 6, 8
+D: −3, −4, 6, −1, 8
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 福勒先生想在他矩形形状的院子里安装围栏。院子的宽度是55英尺，长度是75英尺。福勒先生需要多少英尺的围栏？
+A: 130
+B: 260
+C: 3,905
+D: 4,125
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 哪个数值最适合四舍五入到最接近的千位？
+A: 足球场的长度（以码为单位）
+B: 职业足球运动员的身高（以英寸为单位）
+C: 参加职业足球比赛的人数
+D: 职业足球运动员的体重（以磅为单位）
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 希拉有5分钟时间解答20道算术题。为了按时完成，希拉解题的最低速度是多少？
+A: 每分钟1道题
+B: 每分钟2道题
+C: 每分钟4道题
+D: 每分钟5道题
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 上周末，桑杰观看了3部电视节目，每部都是30分钟。他还在电视上观看了一部90分钟的电影。桑杰上周末总共看了多少分钟的电视？
+A: 100
+B: 120
+C: 150
+D: 180
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 一辆新自行车的原价是138.00美元。如果该自行车降价15%，那么新的价格是多少？
+A: $20.70
+B: $117.30
+C: $123.00
+D: $153.00
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 露西正在两个两个地数数。她从数字2开始，到数字50时停止。下面哪个数字露西不会数到？
+A: 11
+B: 22
+C: 34
+D: 48
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 哪两个数在四舍五入到最近的百位时都约等于1,500？
+A: 1,399 和 1,599
+B: 1,449 和 1,549
+C: 1,457 和 1,547
+D: 1,489 和 1,589
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 找出准确的答案：800 - 301
+A: 599
+B: 500
+C: 499
+D: 401
+
+qwen回答:
+800 - 301 = 499  
+正确答案是选项 C。  
+
+answer: C， 
+正确答案是: C
+
+题目:
+question: 加里农场上有72头牛。他的牛的数量是马的数量的6倍。下面哪一个数字句子可以用来计算他有多少匹马（h）。72 ÷ h = 6 加里有多少匹马？
+A: 12 horses
+B: 66 horses
+C: 78 horses
+D: 432 horses
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 销售副总裁带一位客户去共进午餐。如果午餐费用是44美元，她给了20%的小费，那么她在午餐上总共花了多少钱？
+A: $8.80
+B: $35.20
+C: $52.80
+D: $53.80
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 解方程 v − 26 = 68。
+A: −42
+B: 42
+C: 94
+D: 88
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 一家报纸公司在一天内售出了179,912份报纸。这个数量用文字形式怎么表示？
+A: one hundred seventy-nine thousand twelve
+B: one hundred seventy-nine nine hundred twelve
+C: one hundred seventy thousand nine hundred twelve
+D: one hundred seventy-nine thousand nine hundred twelve
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 一个水箱的形状是一个三棱柱。如果三角形底面的面积是116平方英尺，并且水箱高30英尺，那么当水箱装满水时能容纳多少水？
+A: 1725 立方英尺
+B: 1740 立方英尺
+C: 3480 立方英尺
+D: 6960 立方英尺
+
+qwen回答:
+answer: B， 
+正确答案是: C
+
+题目:
+question: 一位老师购买了以下文件夹：
+* 5盒红色文件夹，每盒有36个
+* 6盒蓝色文件夹，每盒有32个
+
+下面哪个数字最接近这位老师购买的红色和蓝色文件夹总数？
+A: 275
+B: 380
+C: 440
+D: 550
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 以下哪组数字是按从小到大的顺序排列的？
+A: 167,213, 161,455, 17,400, 11,633
+B: 10,354, 10,600, 104,321, 106,213
+C: 160,233, 171,141, 11,645, 16,703
+D: 12,209, 12,902, 125,466, 125,464
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 袋子中有10个红筹码和5个蓝筹码。如果伸手到袋子里随机摸出一个筹码，摸到蓝筹码的可能性是多少？
+A: 1 out of 5
+B: 2 out of 15
+C: 5 out of 10
+D: 5 out of 15
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 用心算求出 11.7 + 3.4 + 6.3 的和。
+A: 20.3
+B: 20.4
+C: 21.4
+D: 22.4
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 计算 1/6 加 1/8。
+A: 7/24
+B: 2/14
+C: 1/7
+D: 1/4
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 美国国旗通常以其宽度和长度之比为10比19制作。以下哪个尺寸符合国旗的正确比例？
+A: 30 英尺 by 53 英尺
+B: 27 英尺 by 53 英尺
+C: 27 英寸 by 57 英寸
+D: 30 英寸 by 57 英寸
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: Stephanie 从洛杉矶飞了 2,448 英里到纽约市。Stephanie 飞行的里程数四舍五入到最接近的千位是多少？
+A: 2,000
+B: 2,400
+C: 2,500
+D: 3,000
+
+qwen回答:
+answer: D， 
+正确答案是: A
+
+题目:
+question: 哪种情境可以用算式 6 x 2 表示？
+A: Rocco 每天徒步六英里，持续了两天。
+B: Rocco 有六个棒球，送出了其中两个。
+C: Rocco 的两个罐子里共有六个网球。
+D: Rocco 骑自行车六英里，然后又骑了两英里。
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 将4.95写成带分数或最简分数形式。
+A: 4又19分之20
+B: 4又19分之100
+C: 4又1分之20
+D: 419分之1000
+
+qwen回答:
+answer: B， 
+正确答案是: A
+
+题目:
+question: 罗恩的花园有42株植物，每行有7株。哪一个表达式可以用来计算罗恩的花园中有多少行？
+A: 42 ÷ 7
+B: 42 – 7
+C: 42 + 7
+D: 42 × 7
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 当某个数被4除时，商是160，余数是2。这个数是多少？
+A: 38
+B: 42
+C: 638
+D: 642
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 0.3 × 427 等于多少？
+A: 0.1281
+B: 1.281
+C: 12.81
+D: 128.1
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 1248除以7的商是多少？
+A: 177余9
+B: 168余2
+C: 178余2
+D: 178余3
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 用指数形式表示：11 × 11 × 11 × 11 × 11 × 11 × 11 × 11
+A: 11 • 8
+B: 88^3
+C: 8^11
+D: 11^8
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 一位老师将5包手工纸放进了柜子里。每包纸有80张。老师放进柜子里的手工纸总共有多少张？
+A: 40
+B: 85
+C: 400
+D: 450
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 每层楼高14.3英尺。如果这座建筑物的总高度是185.9英尺，那么这座建筑物有多少层？
+A: 10
+B: 13
+C: 17
+D: 9
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 使用以下数字列表：22, 25, 14, 11, 23, 27, 46。众数是多少？
+A: 23
+B: 24
+C: 35
+D: 没有众数
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 1224除以9的商是多少？
+A: 135
+B: 136
+C: 1215
+D: 1360
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 下面哪一对表达式是等价的？
+A: 7(2x) 和 9x
+B: 3x + 5x 和 15x
+C: 4(2x — 6) 和 8x — 24
+D: x+x+x+x 和 x^4
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 在一周开始时，XYZ公司一股股票的价格为24.75美元。在接下来的五天里，该股票周一上涨了2.50美元，周二下跌了3.25美元，周三下跌了0.75美元，周四上涨了1.25美元，周五上涨了4.75美元。请问到周五结束时，该股的价格是多少？
+A: $12.25
+B: $25.75
+C: $29.25
+D: $37.25
+
+qwen回答:
+answer: D， 
+正确答案是: C
+
+题目:
+question: 找出使等式 2 比 9 = 14 比 ? 成立的数字。
+A: 14
+B: 16
+C: 15
+D: 63
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 高尔夫球场的练习场收费每桶40个高尔夫球4.00美元。按这个价格计算，一桶100个高尔夫球需要多少钱？
+A: $10.00
+B: $10.50
+C: $13.50
+D: $16.00
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 将96名跑步者与216名游泳者的比例以最简形式表示。
+A: 96 over 216
+B: 16 over 36
+C: 4 over 9
+D: 9 over 4
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 一块田地呈梯形。该梯形的较短底边长为130码，较长底边长为390码。两个底边之间的距离为75码。这块田地的面积是多少？
+A: 9,750 平方码
+B: 19,500 平方码
+C: 29,250 平方码
+D: 39,000 平方码
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 在等式 3 + p = 15 中，p 等于多少？
+A: 3
+B: 5
+C: 12
+D: 18
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 罗雅为12盒橙汁支付了48美元。罗雅每盒橙汁支付的单价是多少？
+A: $3
+B: $4
+C: $6
+D: $12
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 希奥迪在视频游戏的第一关获得了389分。她在奖励关卡中又额外获得了116分。希奥迪在第一关和奖励关卡中共计获得了多少分？
+A: 405
+B: 495
+C: 505
+D: 4,915
+
+qwen回答:
+answer: B， 
+正确答案是: C
+
+题目:
+question: 莫莉理发花了25美元，她还留下了一个15%的小费。莫莉的最终花费是多少？
+A: $25.15
+B: $26.50
+C: $27.50
+D: $28.75
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 一个学区提议将学年天数增加5%。目前，一个学年的天数为180天。按照提议的增加幅度，一个学年将是多少天？
+A: 181天
+B: 183天
+C: 185天
+D: 189天
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 哪个表达式与 5(6x + 3y) 等价？
+A: 11x + 3y
+B: 11x + 8y
+C: 30x + 3y
+D: 30x + 15y
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: Dani有45颗弹珠。她的弹珠数量是Joe的5倍。Joe有多少颗弹珠？
+A: 50
+B: 40
+C: 9
+D: 5
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 金尼夫人买了成包的电池供学生们做科学实验，每包有4节电池。她买的电池总数可能是下面四个选项中的哪一个？
+A: 22
+B: 26
+C: 28
+D: 30
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 836按四舍五入到最近的10位数是多少？
+A: 800
+B: 830
+C: 840
+D: 870
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 一个角旋转了完整圆周的3/4，这个角的度量是多少？
+A: 34°
+B: 43°
+C: 75°
+D: 270°
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 一家商店有8个鱼缸，每个鱼缸都有40升水。问所有鱼缸中共有多少升水？
+A: 5
+B: 48
+C: 280
+D: 320
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 地球上的最低点是马里亚纳海沟的底部，深度为海平面以下35,840英尺。地球上的最高点是珠穆朗玛峰的峰顶，高度为海平面以上29,028英尺。以下哪一项是对地球上最低点和最高点之间距离的最佳估算？
+A: 6,000 英尺
+B: 7,000 英尺
+C: 64,000 英尺
+D: 65,000 英尺
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 你早上遛狗走了7/9英里，下午遛狗走了5/12英里。早上比下午多走了多少英里？
+A: 13/36
+B: 12/21
+C: 2/3
+D: 35/108
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 计算 0.07 • 5.8 的积。
+A: 0.406
+B: 0.0406
+C: 4.06
+D: 40.6
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 关于保罗森老师班级和雨果老师班级的学生午餐吃了什么的信息如下所示。在保罗森老师的班级中，有0.5的学生午餐吃了披萨。在雨果老师的班级中，有0.5的学生午餐吃了汉堡包。若要正确比较保罗森老师班级中有0.5学生吃披萨的人数与雨果老师班级中有0.5学生吃汉堡包的人数，还需要以下哪项信息？
+A: 是否在同一天吃的午餐
+B: 每个老师班级的总学生人数
+C: 不需要其他信息，因为每个班级吃饭的比例相同
+D: 当天被吃掉的披萨片数和汉堡包总数
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 琼将一个垒球投掷了9英尺的距离。李投掷垒球的距离是琼的3倍。哪一个方程可以用来确定李投掷的距离d？
+A: dx3=9
+B: d+3=9
+C: 3+9=d
+D: 3x9=d
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 用四舍五入的方法将 27.94 + 15.35 的和估算到十分位。
+A: 43.2
+B: 43.3
+C: 43.4
+D: 43.29
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 哪一项陈述是正确的？
+A: 所有的六边形都是三角形，因为它们至少有3条边。
+B: 所有的八边形都是多边形，因为它们至少有3条边。
+C: 所有的平行四边形都是矩形，因为它们都有两组平行的边。
+D: 所有的菱形都是正方形，因为它们都有4条等长的边。
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 康纳正在测量一个罐子的容量。他可以使用以下哪种计量单位？
+A: 厘米
+B: 杯
+C: 克
+D: 磅
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 马戏团的一项表演节目是“人体炮弹”加布里埃拉。她在周六进行了四场演出，飞行距离分别达到7.04米、18.81米、18.39米和19.94米。请问加布里埃拉当天飞行的总距离是多少？
+A: 64.18 米
+B: 74.18 米
+C: 57.14 米
+D: 59.24 米
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 在 Rolando 的食品柜中，有1/2的汤罐头是番茄味的，2/5的是鸡肉面条味的。那么 Rolando 的食品柜中，有多少比例的汤罐头是番茄味或鸡肉面条味的？
+A: 7-Mar
+B: 5-Mar
+C: 10-Jul
+D: 10-Sep
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 哪些数字是按从小到大的顺序排列的？
+A: 1/8, 0.75, 1/3, 5/6
+B: 5/6, 1/3, 0.75, 1/8
+C: 1/8, 1/3, 0.75, 5/6
+D: 5/6, 0.75, 1/3, 1/8
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 解方程 6.73 = z 除以 7.74。检查你的答案。
+A: 52.0902
+B: 1.0112
+C: −1.0102
+D: 51.5902
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 哪一项是错误的？
+A: 3 < 5
+B: 5 > 3
+C: −5 > −3
+D: −3 > −5
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 一座办公楼拥有300,000 + 5,000 + 600 + 10平方英尺的建筑面积。请问，该楼的建筑面积以标准形式表示应为多少平方英尺？
+A: 30,561
+B: 35,610
+C: 300,561
+D: 305,610
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 哪一对比率不能组成比例？
+A: 4/5 和 24/30
+B: 4/5 和 20/25
+C: 36/45 和 4/5
+D: 4/5 和 20/30
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 计算表达式 −25 − (−11) 的值。
+A: −36
+B: −14
+C: 14
+D: 36
+
+qwen回答:
+answer: B， 
+正确答案是: C
+
+题目:
+question: 100的五分之三是多少？
+A: 3
+B: 5
+C: 20
+D: 60
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 一个布告栏可以被30张正方形纸片完全覆盖，没有任何间隙或重叠。如果每张纸片的边长为1英尺，那么这个布告栏的总面积是多少？
+A: 1 foot
+B: 30 feet
+C: 1 square foot
+D: 30 square feet
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 一组学生绘制了学校周围区域的地图。他们将学校的位置定为 (0, 0)，最近的商店位于点 (–5, 7)。代表最近商店的点位于哪个象限？
+A: 第一象限
+B: 第二象限
+C: 第三象限
+D: 第四象限
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 门的高度比较合理的是多少？
+A: 2 公里
+B: 2 厘米
+C: 2 米
+D: 2 毫米
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 哪一个是最好的购买？
+A: 3瓶果汁售价为6.72美元
+B: 11瓶果汁售价为24.86美元
+C: 9瓶果汁售价为20.25美元
+D: 16瓶果汁售价为35.68美元
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 计算 52 + 6 * 2。
+A: 116
+B: 64
+C: 62
+D: 118
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 找出以下数据集中的中位数：79.88美元，21.88美元，29.88美元，19.88美元，17.88美元。
+A: $17.88
+B: $19.88
+C: $21.88
+D: $29.88
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 哪个表达式与 9(9m + 3t) 等价？
+A: 18m + 3t
+B: 81m+3t
+C: 18m + 12t
+D: 81m + 27t
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 找出使等式 12/18 = ?/9 成立的数。
+A: 4
+B: 6
+C: 8
+D: 12
+
+qwen回答:
+answer: B， 
+正确答案是: A
+
+题目:
+question: 琼斯先生掷出一个六面的立方体，编号为1、2、3、4、5、6。他掷出数字三的概率是多少？
+A: 1/6
+B: 1/5
+C: 1/3
+D: 1/2
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 气球是每包8个。如果你需要42个气球，你应该买多少包？
+A: 5
+B: 6
+C: 8
+D: 42
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 凯莉选了一个神秘数字。她的神秘数字是38的一个因数。哪个数字可能是凯莉的神秘数字？
+A: 2
+B: 3
+C: 4
+D: 8
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: Rita正在用手搬运一堆共120块的石头去建一面石墙。如果h代表她每次能搬运的石头数量，那么哪一个表达式表示了搬运整堆石头所需的总次数？
+A: 120 +h
+B: 120h
+C: 120 −h
+D: 120/h
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 一群学生放学后进行了一场篮球比赛。哪一个总数可以用算式 7 x 2 来计算？
+A: 如果一名球员投进了7个球，每个球得2分，得分的总数
+B: 如果有7个旧篮球和2个新篮球，篮球总数
+C: 如果一名球员得了7分，另一名球员得了2分，得分的总数
+D: 如果一共有7个篮球，其中2个篮球没有被使用，所使用的篮球总数
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 每次Rami转动机器上的表盘时，表盘移动1度。Rami共转动了10次。表盘总共移动了多少度？
+A: 10
+B: 90
+C: 110
+D: 360
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 一个数四舍五入到千位后是47,000。哪个数可能是四舍五入前的数？
+A: 46,295
+B: 46,504
+C: 47,520
+D: 47,924
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 一个圆形树干的直径为8英尺。哪一项方程可以用来计算树干周围的距离（单位：英尺）？
+A: C = 4π
+B: C =8π
+C: C =16π
+D: C = 64π
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 萨姆用8.28美元买了18张邮票。按照这个价格，萨姆买12张邮票需要多少钱？
+A: $2.19
+B: $2.28
+C: $3.72
+D: $5.52
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 以下哪个数字在2,329,500和2,598,100之间？
+A: 2,249,550
+B: 2,589,200
+C: 2,329,333
+D: 2,327,900
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: Sapphire正在为一个毕业派对制作气球花束。她有179个气球，每个花束需要放入7个气球。Sapphire可以制作多少个花束？
+A: 32 bouquets
+B: 23 bouquets
+C: 25 bouquets
+D: 26 bouquets
+
+qwen回答:
+answer: D， 
+正确答案是: C
+
+题目:
+question: Ken和Tami正在制作项链。Ken制作了25条项链。Tami比Ken多制作了m条项链。哪一个表达式表示Ken和Tami一共制作的项链数量？
+A: 25 + (25+ m)
+B: 25 + 25m
+C: 25 + m
+D: 25m
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 哪一项陈述是正确的？
+A: 5乘2的积是偶数，因为两个因数都是偶数。
+B: 4乘4的积是奇数，因为两个因数都是偶数。
+C: 2乘7的积是偶数，因为两个因数都是奇数。
+D: 5乘3的积是奇数，因为两个因数都是奇数。
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 哪个方程表示一个数y减去36等于13？
+A: y - 36 = 13
+B: 36 - y = 13
+C: 13 - y = 36
+D: 36 + y = –13
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 简化表达式 5^3。可以使用计算器、纸笔或心算。
+A: 15
+B: 125
+C: 8
+D: 53
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 为会议布置的椅子有6排，每排有8把。请问会议共布置了多少把椅子？
+A: 14
+B: 36
+C: 48
+D: 64
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 志愿者团队在慈善音乐会上通过销售T恤衫共筹集了5,144美元。每件T恤售价为8美元。志愿者总共卖出了多少件T恤？
+A: 632
+B: 643
+C: 655
+D: 668
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 婚礼上有190位客人。如果每张圆桌恰好能坐8人，那么至少需要多少张圆桌才能坐下所有客人？
+A: 22
+B: 23
+C: 24
+D: 25
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 露西正在制作礼品篮。她在每个礼品篮中放入3个苹果。哪个数字算式表示了露西用24个苹果能制作的礼品篮总数$b$？
+A: 24 + 3 = b
+B: 3 + b = 24
+C: 24 ÷ b = 3
+D: 3 × 24 = b
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 用心算解 8y = 56。
+A: 6
+B: 7
+C: 8
+D: 9
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 表达式 28 x 42 的值是多少？
+A: 420
+B: 816
+C: 1,166
+D: 1,176
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 西蒙用了3个梨和9个苹果来做水果沙拉。水果沙拉中梨的数量与苹果的数量之比是多少？
+A: 1:03
+B: 1:04
+C: 1:06
+D: 1:09
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 找出 3/4 减去 1/8 的结果。
+A: 21/32
+B: 1
+C: 5/8
+D: 11/16
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 哪一分數表示3隻狗與5隻狗的比例？
+A: 5 over 3
+B: 3 over 8
+C: 2 over 5
+D: 3 over 5
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 解方程 18 + p = 29。
+A: −47
+B: −11
+C: 11
+D: 47
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 哪个短语是对2m+7的描述？
+A: 7比2乘以m多
+B: 2比7乘以m多
+C: 2乘以7和m的和
+D: 7乘以2和m的和
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 一个学生有3个拼图。每个拼图有1,250块。这些拼图总共有多少块？
+A: 3,650
+B: 3,750
+C: 4,650
+D: 4,750
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 哪个分数比2/5大？
+A: 1/5
+B: 1/10
+C: 4/10
+D: 5/10
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 上周，保罗每天吃2块饼干，共吃了5天。这周，他每天吃2块饼干，共吃了4天。哪一个表达式可以用来表示保罗在这两周内总共吃的饼干数量？
+A: 2×(5×4)
+B: 2×(5+4)
+C: (2×5)×(2×4)
+D: (2+5)×(2+4)
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+题目:
+question: 找出确切的答案：365 + 56
+A: 300
+B: 309
+C: 311
+D: 421
+
+qwen回答:
+answer: D， 
+正确答案是: B
+
+题目:
+question: 凯特有一个硬币收藏。她把其中的7枚硬币放在一个盒子里，这仅占她整个收藏的5%。凯特的硬币收藏总共有多少枚硬币？
+A: 12
+B: 14
+C: 120
+D: 140
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 舞蹈队有72名学生，其中4/9的学生学习踢踏舞。有多少名学生学习踢踏舞？
+A: 32
+B: 49
+C: 63
+D: 68
+
+qwen回答:
+answer: A， 
+正确答案是: A
+
+题目:
+question: 一项针对1000名注册选民的调查显示，其中有450人会投票给候选人A。如果选举中共有220,000人投票，调查人员会预测候选人A将获得多少票？
+A: 44,500
+B: 48,900
+C: 95,000
+D: 99,000
+
+qwen回答:
+answer: D， 
+正确答案是: D
+
+题目:
+question: 找出数据集 13, 35, 26, 8, 24, 10, 22, 10, 32 的中位数。
+A: 23
+B: 20
+C: 22
+D: 27
+
+qwen回答:
+answer: C， 
+正确答案是: C
+
+题目:
+question: 彼得在一个由25人组成的小组里。全部25人都去划船钓鱼了。每条船上坐了5人。彼得怎样才能算出这个小组用了多少条船？
+A: 将25加上5
+B: 将25除以5
+C: 将25乘以5
+D: 从25中减去5
+
+qwen回答:
+answer: B， 
+正确答案是: B
+
+总题数: 378, 正确答案数: 342, 正确率: 90.48%, 耗时: 225.87秒
+
+全部统计: 总题数: 704, 正确答案数: 568, 正确率: 80.68%

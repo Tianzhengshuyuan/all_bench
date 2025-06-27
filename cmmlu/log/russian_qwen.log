@@ -1,0 +1,7511 @@
+原文:
+设 A，B 为n阶矩阵， 则 $|-2(\begin{array}{cc}A^T & O \\ O & B^{-1}\end{array})|$ 等于()
+A: $-2|A^T||B|$
+B: $(-2)^{2n}|A||B|^{-1}$
+C: $(-2)^n|A||B|^{-1}$
+D: $-2|A||B|^{-1}$
+
+调用 Qwen API 进行翻译...
+翻译:
+Пусть A и B - матрицы n-го порядка, тогда $|-2(\begin{array}{cc}A^T & O \\ O & B^{-1}\end{array})|$ равно ()
+A: $-2|A^T||B|$
+B: $(-2)^{2n}|A||B|^{-1}$
+C: $(-2)^n|A||B|^{-1}$
+D: $-2|A||B|^{-1}$
+
+原文:
+设函数 $f(x)=\frac{1}{e^{\frac{x}{x-1}}-1}$， 则 ( )
+A: $x=0， x=1$ 都是 $f(x)$ 的第一类间断点;
+B: $x=0$ 是 $f(x)$ 的第一类间断点， $x=1$ 是 $f(x)$ 的第二类间断点;
+C: $x=0， x=1$ 都是 $f(x)$ 的第二类间断点;
+D: $x=0$ 是 $f(x)$ 的第二类间断点， $x=1$ 是 $f(x)$ 的第一类间断点
+
+调用 Qwen API 进行翻译...
+翻译:
+Пусть функция $f(x)=\frac{1}{e^{\frac{x}{x-1}}-1}$, тогда ( )
+A: $x=0$, $x=1$ являются точками первого рода для $f(x)$;
+B: $x=0$ является точкой первого рода для $f(x)$, $x=1$ является точкой второго рода для $f(x)$;
+C: $x=0$, $x=1$ являются точками второго рода для $f(x)$;
+D: $x=0$ является точкой второго рода для $f(x)$, $x=1$ является точкой первого рода для $f(x)$.
+
+原文:
+下列各对函数中， ( ) 是相同的.
+A: $f(x)=\ln x^3，g(x)=3 \ln x$
+B: $f(x)=\ln x^2， g(x)=2 \ln x$
+C: $f(x)=\sqrt{x^2}， g(x)=x$
+D: $f(x)=\frac{x^2-1}{x+1}， g(x)=x-1$
+
+调用 Qwen API 进行翻译...
+翻译:
+Среди следующих пар функций, ( ) являются одинаковыми.
+A: $f(x)=\ln x^3，g(x)=3 \ln x$
+B: $f(x)=\ln x^2， g(x)=2 \ln x$
+C: $f(x)=\sqrt{x^2}， g(x)=x$
+D: $f(x)=\frac{x^2-1}{x+1}， g(x)=x-1$
+
+原文:
+微分方程 $y^{\prime \prime}+2 y^{\prime}+2 y=\mathrm{e}^{-x} \sin x$ 的特解形式为 ( ).
+A: $\mathrm{e}^{-x}(a \cos x+b \sin x)$
+B: $\mathrm{e}^{-x}(a \cos x+b x \sin x)$
+C: $\mathrm{e}^{-x}(a x \cos x+b \sin x)$
+D: $x \mathrm{e}^{-x}(a \cos x+b \sin x)$
+
+调用 Qwen API 进行翻译...
+翻译:
+Особое решение дифференциального уравнения $y^{\prime \prime}+2 y^{\prime}+2 y=\mathrm{e}^{-x} \sin x$ имеет вид ( ).
+A: $\mathrm{e}^{-x}(a \cos x+b \sin x)$
+B: $\mathrm{e}^{-x}(a \cos x+b x \sin x)$
+C: $\mathrm{e}^{-x}(a x \cos x+b \sin x)$
+D: $x \mathrm{e}^{-x}(a \cos x+b \sin x)$
+
+原文:
+设A为n阶方阵， 且 $|A| \neq 0$， 则（）.
+A: 以上都不对
+B: 由AX=BA， 可得X=B
+C: 当$(A，E)$经有限次初等变换变为$(E，B)$时， 有$A^{-1}=B$
+D: A经初等列变换可变为单位阵$E$
+
+调用 Qwen API 进行翻译...
+翻译:
+Пусть A - квадратная матрица размера n, и $|A| \neq 0$, тогда ().
+A: None of the above
+B: From AX=BA, it follows that X=B
+C: When $(A,E)$ is transformed into $(E,B)$ by a finite number of elementary transformations, then $A^{-1}=B$
+D: A can be transformed into the identity matrix $E$ by elementary column operations
+
+原文:
+阶行列式 $D_4=\left|\begin{array}{cccc}a_1 & 0 & 0 & b_1 \\ 0 & a_2 & b_2 & 0 \\ 0 & b_3 & a_3 & 0 \\ b_4 & 0 & 0 & a_4\end{array}\right|$ 的值等于 ( ).
+A: $\left(a_1 a_2-b_1 b_2\right)\left(a_3 a_4-b_3 b_4\right)$;
+B: $\left(a_2 a_3-b_2 b_3\right)\left(a_1 a_4-b_1 b_4\right)$.
+C: $a_1 a_2 a_3 a_4+b_1 b_2 b_3 b_4$;
+D: $a_1 a_2 a_3 a_4-b_1 b_2 b_3 b_4$;
+
+调用 Qwen API 进行翻译...
+翻译:
+Определитель $D_4=\left|\begin{array}{cccc}a_1 & 0 & 0 & b_1 \\ 0 & a_2 & b_2 & 0 \\ 0 & b_3 & a_3 & 0 \\ b_4 & 0 & 0 & a_4\end{array}\right|$ равен ( ).
+A: $\left(a_1 a_2-b_1 b_2\right)\left(a_3 a_4-b_3 b_4\right)$;
+B: $\left(a_2 a_3-b_2 b_3\right)\left(a_1 a_4-b_1 b_4\right)$.
+C: $a_1 a_2 a_3 a_4+b_1 b_2 b_3 b_4$;
+D: $a_1 a_2 a_3 a_4-b_1 b_2 b_3 b_4$;
+
+原文:
+函数 $f(x)=\frac{x-x^3}{\sin \pi x}$ 的可去间断点个数为（）
+A: 2
+B: 无穷多个
+C: 1
+D: 3
+
+调用 Qwen API 进行翻译...
+翻译:
+Количество устранимых точек разрыва функции $f(x)=\frac{x-x^3}{\sin \pi x}$ равно ()
+A: 2
+B: бесконечно много
+C: 1
+D: 3
+
+原文:
+设 $A，B$ 为随机事件， $P(A)=P(B)=\frac{3}{4}$， 则 $P(A-B)=\frac{1}{4}$ 成立的一个充分条 件为 ( )
+A: $A=B$
+B: $A B=\varnothing$
+C: $A， B$ 相互独立
+D: $A \bigcup B=\Omega$
+
+调用 Qwen API 进行翻译...
+翻译:
+Пусть $A, B$ - случайные события, $P(A)=P(B)=\frac{3}{4}$, тогда условие, при котором $P(A-B)=\frac{1}{4}$, является ( )
+A: $A=B$
+B: $A B=\varnothing$
+C: $A, B$相互独立
+D: $A \bigcup B=\Omega$
+
+原文:
+设 $A，B$ 为n阶非零矩阵， 且AB=0$. 则A和B的秩
+A: 一个小于n，一个等于n
+B: 都小于n
+C: 都等于n
+D: 必有一个等于零
+
+调用 Qwen API 进行翻译...
+翻译:
+Пусть $A$ и $B$ — ненулевые матрицы размера n, и $AB = 0$. Тогда ранги $A$ и $B$:
+A: Один меньше n, другой равен n
+B: Оба меньше n
+C: Оба равны n
+D: Необходимо, чтобы один из них был равен нулю
+
+原文:
+具有特解 $y_1=e^{-x}， y_2=2xe^{-x}， y_3=3e^x$ 的三阶常系数齐次线性方程是 () .
+A: $y'''-2y''-y'+2y=0$
+B: $y'''+y''-y'-y=0$
+C: $y'''-y''-y'+y=0$
+D: $y'''-6y''+11y'-6y=0$
+
+调用 Qwen API 进行翻译...
+翻译:
+Трехмерное линейное дифференциальное уравнение с постоянными коэффициентами, имеющее частные решения $y_1=e^{-x}, y_2=2xe^{-x}, y_3=3e^x$, это () .
+A: $y'''-2y''-y'+2y=0$
+B: $y'''+y''-y'-y=0$
+C: $y'''-y''-y'+y=0$
+D: $y'''-6y''+11y'-6y=0$
+
+原文:
+设 $n$ 维向量组 ${\alpha}_1，{\alpha}_2，\cdots，{\alpha}_m(m<n)$ 线性无关， 则 $n$ 维列向量组 ${\beta}_1，{\beta}_2，\cdots，{\beta}_m$ 线性无关的充分必要条件为( )
+A: 向量组 ${\beta}_1，{\beta}_2，\cdots，{\beta}_m$ 可由向量组 ${\alpha}_1，{\alpha}_2，\cdots，{\alpha}_m$ 线性表示.
+B: 向量组 ${\alpha}_1，{\alpha}_2，\cdots，{\alpha}_m$ 与向量组 ${\beta}_1，{\beta}_2， \cdots， {\beta}_m$ 等价
+C: 矩阵 $A=({\alpha}_1，\cdots，{\alpha}_m)$ 与矩阵 $B=({\beta}_1，\cdots，{\beta}_m)$ 等价
+D: 向量组 ${\alpha}_1，{\alpha}_2，\cdots，{\alpha}_m$ 可由向量组 ${\beta}_1，{\beta}_2，\cdots，{\beta}_m$ 线性表示.
+
+调用 Qwen API 进行翻译...
+翻译:
+Пусть $n$-мерные векторы ${\alpha}_1, {\alpha}_2, \cdots, {\alpha}_m (m<n)$ линейно независимы, тогда необходимым и достаточным условием для того, чтобы $n$-мерные столбцы ${\beta}_1, {\beta}_2, \cdots, {\beta}_m$ были линейно независимы, является ( ).
+A: Векторная группа ${\beta}_1, {\beta}_2, \cdots, {\beta}_m$ может быть выражена через линейную комбинацию векторной группы ${\alpha}_1, {\alpha}_2, \cdots, {\alpha}_m$.
+B: Векторная группа ${\alpha}_1, {\alpha}_2, \cdots, {\alpha}_m$ эквивалентна векторной группе ${\beta}_1, {\beta}_2, \cdots, {\beta}_m$.
+C: Матрица $A=({\alpha}_1, \cdots, {\alpha}_m)$ эквивалентна матрице $B=({\beta}_1, \cdots, {\beta}_m)$.
+D: Векторная группа ${\alpha}_1, {\alpha}_2, \cdots, {\alpha}_m$ может быть выражена через линейную комбинацию векторной группы ${\beta}_1, {\beta}_2, \cdots, {\beta}_m$.
+
+原文:
+将一枚硬币独立的掷两次， 引进事件: $A_1={第一次出现正面}， A_2={第二次出现正面}， A_3={正、反面各出现一次}， A_4={出现两次正面}， 则事件
+A: $A_1， A_2， A_3$ 相互独立
+B: $A_1， A_2， A_3$ 两两独立
+C: $A_2， A_3， A_4$ 两两独立
+D: $A_2， A_3， A_4$ 相互独立
+
+调用 Qwen API 进行翻译...
+翻译:
+Бросают монету два раза независимо, вводятся события: $A_1={выпадение орла на первом броске}$, $A_2={выпадение орла на втором броске}$, $A_3={каждый из двух исходов появляется один раз}$, $A_4={орел выпадает дважды}$, тогда события:
+A: $A_1, A_2, A_3$相互独立
+B: $A_1, A_2, A_3$两两独立
+C: $A_2, A_3, A_4$两两独立
+D: $A_2, A_3, A_4$相互独立
+
+原文:
+函数 $f(x， y)=\left\{\begin{array}{lc}0， & x y=0， \\ x \sin \frac{1}{x}+y \sin \frac{1}{x}， & x y \neq 0，\end{array}\right.$ 则极限 $\lim _{\substack{x \rightarrow 0 \\ y \rightarrow 0}} f(x， y)()$.
+A: 等于 1
+B: 等于 0
+C: 等于 2
+D: 不存在
+
+调用 Qwen API 进行翻译...
+翻译:
+Функция $f(x, y) = \begin{cases} 0, & xy = 0, \\ x \sin \frac{1}{x} + y \sin \frac{1}{x}, & xy \neq 0, \end{cases}$ тогда предел $\lim_{\substack{x \to 0 \\ y \to 0}} f(x, y)()$.
+A: equals 1
+B: equals 0
+C: equals 2
+D: does not exist
+
+原文:
+函数 $f(x)=x \sin x$.
+A: 在 $(-\infty，+\infty)$ 内有界
+B: 当 $x \rightarrow \infty$ 时极限存在
+C: 当 $x \rightarrow \infty$ 时为无穷大
+D: 在 $(-\infty，+\infty)$ 内无界
+
+调用 Qwen API 进行翻译...
+翻译:
+Функция $f(x)=x \sin x$.
+A: В $(-\infty, +\infty)$ ограничена
+B: При $x \rightarrow \infty$ существует предел
+C: При $x \rightarrow \infty$ является бесконечной
+D: В $(-\infty, +\infty)$ неограничена
+
+原文:
+微分方程 $y^{\prime}+\frac{1}{y} \mathrm{e}^{y^2+3 x}=0$ 的通解 (其中 $C$ 为任意常数) 是 ( ).
+A: $\mathrm{e}^{3 x}-\mathrm{e}^{-y^2}=C$
+B: $2 \mathrm{e}^{3 x}+3 \mathrm{e}^{-y^2}=C$
+C: $2 \mathrm{e}^{3 x}+3 \mathrm{e}^{y^2}=C$
+D: $2 \mathrm{e}^{3 x}-3 \mathrm{e}^{-y^2}=C$
+
+调用 Qwen API 进行翻译...
+翻译:
+Общее решение дифференциального уравнения $y^{\prime}+\frac{1}{y} \mathrm{e}^{y^2+3 x}=0$ (где $C$ — произвольная постоянная) является ( ).
+A: $\mathrm{e}^{3 x}-\mathrm{e}^{-y^2}=C$
+B: $2 \mathrm{e}^{3 x}+3 \mathrm{e}^{-y^2}=C$
+C: $2 \mathrm{e}^{3 x}+3 \mathrm{e}^{y^2}=C$
+D: $2 \mathrm{e}^{3 x}-3 \mathrm{e}^{-y^2}=C$
+
+原文:
+若 $f(x)$ 在开区间 $(a， b)$ 内可导， 且 $x_1， x_2$ 是 $(a， b)$ 内任意两点， 则至少存在一点 $\xi$，使下列诸式成立的是
+A: $f\left(x_2\right)-f\left(x_1\right)=\left(x_2-x_1\right) f^{\prime}(\xi)， x_1<\xi<x_2$
+B: $f\left(x_1\right)-f\left(x_2\right)=\left(x_2-x_1\right) f^{\prime}(\xi)， x_1<\xi<x_2$
+C: $f\left(x_2\right)-f\left(x_1\right)=\left(x_1-x_2\right) f^{\prime}(\xi)， \xi \in(a， b)$
+D: $f\left(x_1\right)-f\left(x_2\right)=\left(x_1-x_2\right) f^{\prime}(\xi)， \xi$ 在 $x_1， x_2$ 之间
+
+调用 Qwen API 进行翻译...
+翻译:
+Если функция $f(x)$ дифференцируема на интервале $(a, b)$ и $x_1, x_2$ — любые две точки из этого интервала, то существует хотя бы одна точка $\xi$, для которой верно одно из следующих равенств:
+A: $f\left(x_2\right)-f\left(x_1\right)=\left(x_2-x_1\right) f^{\prime}(\xi), x_1<\xi<x_2$
+B: $f\left(x_1\right)-f\left(x_2\right)=\left(x_2-x_1\right) f^{\prime}(\xi), x_1<\xi<x_2$
+C: $f\left(x_2\right)-f\left(x_1\right)=\left(x_1-x_2\right) f^{\prime}(\xi), \xi \in(a, b)$
+D: $f\left(x_1\right)-f\left(x_2\right)=\left(x_1-x_2\right) f^{\prime}(\xi), \xi$ между $x_1, x_2$
+
+原文:
+设函数 $f(x)=x \tan x e^{\sin x}$， 则 $f(x)$ 是
+A: 周期函数
+B: 无界函数
+C: 偶函数
+D: 单调函数
+
+调用 Qwen API 进行翻译...
+翻译:
+Пусть функция $f(x)=x \tan x e^{\sin x}$, тогда $f(x)$ является
+A: periodic function
+B: unbounded function
+C: even function
+D: monotonic function
+
+原文:
+设函数 $f(x)$ 在 $x=0$ 处连续， 且 $\lim _{x \rightarrow 0} \frac{f(x^2)}{x^2}=1$， 则 ( ).
+A: $f(0)=0$ 且 $f_{+}^{\prime}(0)$ 存在
+B: $f(0)=1$ 且 $f_{+}^{\prime}(0)$ 存在
+C: $f(0)=0$ 且 $f_{-}^{\prime}(0)$ 存在
+D: $f(0)=1$ 且 $f_{-}^{\prime}(0)$ 存在
+
+调用 Qwen API 进行翻译...
+翻译:
+Пусть функция $f(x)$ непрерывна в точке $x=0$, и $\lim _{x \rightarrow 0} \frac{f(x^2)}{x^2}=1$, тогда ( ).
+A: $f(0)=0$ и $f_{+}^{\prime}(0)$ существует
+B: $f(0)=1$ и $f_{+}^{\prime}(0)$ существует
+C: $f(0)=0$ и $f_{-}^{\prime}(0)$ существует
+D: $f(0)=1$ и $f_{-}^{\prime}(0)$ существует
+
+原文:
+已知函数 $f(x)=\ln |x-1|$， 则 ( ).
+A: $f^{\prime}(x)=\frac{1}{x-1}$
+B: $f^{\prime}(x)= \begin{cases}\frac{1}{1-x}， & x>1， \\ \frac{1}{x-1}， & x<1\end{cases}$
+C: $f^{\prime}(x)=\frac{1}{1-x}$
+D: $f^{\prime}(x)=\frac{1}{|x-1|}$
+
+调用 Qwen API 进行翻译...
+翻译:
+Известно, что функция $f(x)=\ln |x-1|$, тогда ( ).
+A: $f^{\prime}(x)=\frac{1}{x-1}$
+B: $f^{\prime}(x)= \begin{cases}\frac{1}{1-x}, & x>1, \\ \frac{1}{x-1}, & x<1\end{cases}$
+C: $f^{\prime}(x)=\frac{1}{1-x}$
+D: $f^{\prime}(x)=\frac{1}{|x-1|}$
+
+原文:
+已知函数 $f(x， y)$ 在点 $(0，0)$ 的某个邻域内连续， 且 $\lim _{(x， y) \rightarrow(0，0)} \frac{f(x， y)-x y}{\left(x^2+y^2\right)^2}=1$， 则下述四个选项中正确的是 ( ) .
+A: 点 $(0，0)$ 是 $f(x， y)$ 的极小值点
+B: 点 $(0，0)$ 是 $f(x， y)$ 的极大值点
+C: 根据所给条件无法判断 $(0，0)$ 是否为 $f(x， y)$ 的极值点
+D: 点 $(0，0)$ 不是 $f(x， y)$ 的极值点
+
+调用 Qwen API 进行翻译...
+翻译:
+Известно, что функция \( f(x, y) \) непрерывна в некоторой окрестности точки \( (0, 0) \), причем \( \lim_{(x, y) \to (0, 0)} \frac{f(x, y) - xy}{(x^2 + y^2)^2} = 1 \). Тогда верным является следующее утверждение ( ).
+A: Точка \( (0, 0) \) является точкой локального минимума для \( f(x, y) \)
+B: Точка \( (0, 0) \) является точкой локального максимума для \( f(x, y) \)
+C: На основании данных условий невозможно определить, является ли \( (0, 0) \) точкой экстремума для \( f(x, y) \)
+D: Точка \( (0, 0) \) не является точкой экстремума для \( f(x, y) \)
+
+原文:
+设 $f(x)$ 在点 $x=a$ 的某个邻域内有定义， 则 $f(x)$ 在 $x=a$ 处可导的一个充分条件是
+A: $\lim _{h \rightarrow 0} \frac{f(a)-f(a-h)}{h}$
+B: $\lim _{h \rightarrow 0} \frac{f(a+h)-f(a-h)}{2 h}$
+C: $\lim _{h \rightarrow 0} \frac{f(a+2 h)-f(a+h)}{h}$
+D: $\lim _{h \rightarrow+\infty} h\left[f\left(a+\frac{1}{h}\right)-f(a)\right]$
+
+调用 Qwen API 进行翻译...
+翻译:
+Пусть функция \( f(x) \) определена в некоторой окрестности точки \( x = a \). Тогда достаточным условием дифференцируемости функции \( f(x) \) в точке \( x = a \) является:
+A: \(\lim _{h \rightarrow 0} \frac{f(a)-f(a-h)}{h}\)
+B: \(\lim _{h \rightarrow 0} \frac{f(a+h)-f(a-h)}{2 h}\)
+C: \(\lim _{h \rightarrow 0} \frac{f(a+2 h)-f(a+h)}{h}\)
+D: \(\lim _{h \rightarrow+\infty} h\left[f\left(a+\frac{1}{h}\right)-f(a)\right]\)
+
+原文:
+设 $f(x)=\left\{\begin{array}{ll}x^2， & x \leq 0， \\ x^2+x， & x>0，\end{array}\right.$ 则 $f(-x)=___ $.
+A: $\begin{cases}x^2， & x \leq 0 \\ x^2-x， & x>0\end{cases}$
+B: $\begin{cases}x^2-x， & x<0 \\ x^2， & x \geq 0\end{cases}$
+C: $\begin{cases}-\left(x^2+x\right)， & x<0 \\ -x^2， & x \geq 0\end{cases}$
+D: $\begin{cases}-x^2， & x \leq 0 \\ -\left(x^2+x\right)， & x>0\end{cases}$
+
+调用 Qwen API 进行翻译...
+翻译:
+Пусть $ f(x) = \begin{cases} x^2, & x \leq 0, \\ x^2 + x, & x > 0, \end{cases} $ тогда $ f(-x) = ___ $.
+A: $\begin{cases}x^2, & x \leq 0 \\ x^2-x, & x>0\end{cases}$
+B: $\begin{cases}x^2-x, & x<0 \\ x^2, & x \geq 0\end{cases}$
+C: $\begin{cases}-(x^2+x), & x<0 \\ -x^2, & x \geq 0\end{cases}$
+D: $\begin{cases}-x^2, & x \leq 0 \\ -(x^2+x), & x>0\end{cases}$
+
+原文:
+设 $f^{\prime}(-x)=x\left[f^{\prime}(x)-1\right]$， 则 $f(x)$ 极值点的个数为
+A: 1
+B: 4
+C: 3
+D: 2
+
+调用 Qwen API 进行翻译...
+翻译:
+Пусть $f^{\prime}(-x)=x\left[f^{\prime}(x)-1\right]$, тогда количество точек экстремума функции $f(x)$ равно 
+A: 1 
+B: 4 
+C: 3 
+D: 2
+
+原文:
+已知 $A， B， C$ 为随机事件， $A$ 与 $B$ 相互独立， $P(C)=1$， 则下列事件中不相互 独立的是 ( )
+A: $A， B， A C$
+B: $A， B， A-C$
+C: $A， B， \bar{A} \bar{C}$
+D: $A， B， A+C$
+
+调用 Qwen API 进行翻译...
+翻译:
+Известно, что $A$, $B$, $C$ — случайные события, $A$ и $B$ независимы, $P(C) = 1$. Тогда среди следующих событий не являются взаимно независимыми ( )
+A: $A, B, A C$
+B: $A, B, A-C$
+C: $A, B, \bar{A} \bar{C}$
+D: $A, B, A+C$
+
+原文:
+下列广义积分中收玫的是 ( ).
+A: $\int_e^{+\infty} \frac{\ln x}{x} \mathrm{~d} x$
+B: $\int_{\mathrm{e}}^{+\infty} \frac{\mathrm{d} x}{x \ln x}$
+C: $\int_{\mathrm{e}}^{+\infty} \frac{\mathrm{d} x}{x(\ln x)^{\frac{1}{2}}}$
+D: $\int_e^{+\infty} \frac{\mathrm{d} x}{x(\ln x)^2}$
+
+调用 Qwen API 进行翻译...
+翻译:
+Среди следующих несобственных интегралов сходится ( ).
+A: $\int_e^{+\infty} \frac{\ln x}{x} \mathrm{~d} x$
+B: $\int_{\mathrm{e}}^{+\infty} \frac{\mathrm{d} x}{x \ln x}$
+C: $\int_{\mathrm{e}}^{+\infty} \frac{\mathrm{d} x}{x(\ln x)^{\frac{1}{2}}}$
+D: $\int_e^{+\infty} \frac{\mathrm{d} x}{x(\ln x)^2}$
+
+原文:
+若 $\lim _{x \rightarrow 0} \frac{\sin 6 x+x f(x)}{x^3}=0$， 则 $\lim _{x \rightarrow 0} \frac{6+f(x)}{x^2}=($ ( )
+A: 6
+B: $\infty$
+C: 0
+D: 36
+
+调用 Qwen API 进行翻译...
+翻译:
+Если $\lim _{x \rightarrow 0} \frac{\sin 6x + x f(x)}{x^3}=0$, то $\lim _{x \rightarrow 0} \frac{6+f(x)}{x^2}=($ ( )
+A: 6
+B: $\infty$
+C: 0
+D: 36
+
+原文:
+若 $f(x)$ 在点 $x_0$ 可导， 则 $|f(x)|$ 在点 $x_0$ ( ).
+A: 不连续
+B: 一定不可导
+C: 连续， 但不一定可导
+D: 必可导
+
+调用 Qwen API 进行翻译...
+翻译:
+Если функция \( f(x) \) дифференцируема в точке \( x_0 \), то \( |f(x)| \) в точке \( x_0 \) ( ).
+A: не непрерывна
+B: обязательно недифференцируема
+C: непрерывна, но не обязательно дифференцируема
+D: обязательно дифференцируема
+
+原文:
+设 $I_1=\int_0^{\frac{\pi}{4}} \frac{\tan x}{x} dx$， $I_2=\int_0^{\frac{\pi}{4}} \frac{x}{\tan x} dx$ 则
+A: $1>I_1>I_2$
+B: $I_1>I_2>1$
+C: $1>I_2>I_1$
+D: $I_2>I_1>1$
+
+调用 Qwen API 进行翻译...
+翻译:
+Пусть \( I_1 = \int_0^{\frac{\pi}{4}} \frac{\tan x}{x} \, dx \), \( I_2 = \int_0^{\frac{\pi}{4}} \frac{x}{\tan x} \, dx \), тогда:
+A: \( 1 > I_1 > I_2 \)
+B: \( I_1 > I_2 > 1 \)
+C: \( 1 > I_2 > I_1 \)
+D: \( I_2 > I_1 > 1 \)
+
+原文:
+设当 $x \rightarrow 0$ 时， $\arctan x-(ax+bx^3)$ 是比 $x(1-\cos x)$ 高阶的无穷小量， 则（）
+A: $a=1， b=-\frac{1}{6}$
+B: $a=1， b=-\frac{1}{3}$
+C: $a=1， b=\frac{1}{3}$
+D: $a=1， b=\frac{1}{6}$
+
+调用 Qwen API 进行翻译...
+翻译:
+Пусть при $x \rightarrow 0$ выражение $\arctan x-(ax+bx^3)$ является бесконечно малой высшего порядка, чем $x(1-\cos x)$, тогда ( )
+A: $a=1, b=-\frac{1}{6}$
+B: $a=1, b=-\frac{1}{3}$
+C: $a=1, b=\frac{1}{3}$
+D: $a=1, b=\frac{1}{6}$
+
+原文:
+设A，B为n阶方阵，P，Q为n阶可逆矩阵，下列命题不正确的是( ).
+A: 若B=PA，则A的行向量组与B的行向量组等价
+B: 若B=AQ， 则A的列向量组与B的列向量组等价
+C: 若B=PAQ$，则A的行（列）向量组与B的行（列）向量组等价
+D: 若A的行 (列) 向量组与B的行 (列) 向量组等价，则A与B等价
+
+调用 Qwen API 进行翻译...
+翻译:
+Пусть A и B - квадратные матрицы n-го порядка, P и Q - обратимые матрицы n-го порядка. Ниже приведено утверждение, которое неверно ( ).
+A: Если B = PA, то набор векторов строк A эквивалентен набору векторов строк B
+B: Если B = AQ, то набор векторов столбцов A эквивалентен набору векторов столбцов B
+C: Если B = PAQ, то набор векторов строк (столбцов) A эквивалентен набору векторов строк (столбцов) B
+D: Если набор векторов строк (столбцов) A эквивалентен набору векторов строк (столбцов) B, то A эквивалентна B
+
+原文:
+设 $\lim _{x \rightarrow 0} \frac{(1+x)(1+2 x)(1+3 x)+a}{x}=6$， 则 $a$ 的值为 ( )
+A: 3
+B: -1
+C: 2
+D: 1
+
+调用 Qwen API 进行翻译...
+翻译:
+Пусть $\lim _{x \rightarrow 0} \frac{(1+x)(1+2x)(1+3x)+a}{x}=6$, тогда значение $a$ равно ( )
+A: 3
+B: -1
+C: 2
+D: 1
+
+原文:
+设A为n阶方阵，且|A|=0$，则 ( ) .
+A: A中至少有一行元素全为零
+B: A中任意一行为其它行的线性组合
+C: A中两行(列)对应元素成比例
+D: A中必有一行为其它行的线性组合
+
+调用 Qwen API 进行翻译...
+翻译:
+Пусть A - квадратная матрица порядка n, и |A| = 0, тогда ( ).
+A: В A хотя бы одна строка состоит полностью из нулей
+B: Любая строка в A является линейной комбинацией других строк
+C: В A две строки (столбца) имеют пропорциональные элементы
+D: В A обязательно найдётся строка, которая является линейной комбинацией других строк
+
+原文:
+设函数 $f(x)=\frac{1}{e^{\frac{x}{x-1}}-1}$， 则
+A: $x=0$ 是 $f(x)$ 的第二类间断点， $x=1$ 是 $f(x)$ 的第一类间断点.
+B: $x=0$ 是 $f(x)$ 的第一类间断点， $x=1$ 是 $f(x)$ 的第二类间断点;
+C: $x=0， x=1$ 都是 $f(x)$ 的第二类间断点;
+D: $x=0， x=1$ 都是 $f(x)$ 的第一类间断点;
+
+调用 Qwen API 进行翻译...
+翻译:
+Пусть функция $f(x)=\frac{1}{e^{\frac{x}{x-1}}-1}$, тогда:
+A: $x=0$ является точкой разрыва второго рода для $f(x)$, $x=1$ является точкой разрыва первого рода для $f(x)$.
+B: $x=0$ является точкой разрыва первого рода для $f(x)$, $x=1$ является точкой разрыва второго рода для $f(x)$.
+C: $x=0, x=1$ оба являются точками разрыва второго рода для $f(x)$.
+D: $x=0, x=1$ оба являются точками разрыва первого рода для $f(x)$.
+
+原文:
+10 台洗衣机中有 3 台二等品， 7 台一等品. 现已售出一台， 在余下的 9 台中 任取 2 台发现均为一等品， 则原先售出一台为二等品的概率为 ()
+A: $\frac{3}{8}$
+B: $\frac{1}{4}$
+C: $\frac{1}{5}$
+D: $\frac{3}{10}$
+
+调用 Qwen API 进行翻译...
+翻译:
+Из 10 стиральных машин 3 являются второсортными, а 7 первосортными. Уже продана одна машина, и среди оставшихся 9 машин случайно выбранные 2 оказались первосортными. Какова вероятность того, что ранее проданная машина была второсортной?  
+A: $\frac{3}{8}$  
+B: $\frac{1}{4}$  
+C: $\frac{1}{5}$  
+D: $\frac{3}{10}$
+
+原文:
+设 $f(x)=u(x)+v(x)， g(x)=u(x)-v(x)$， 设 $\lim _{x \rightarrow x_0} u(x)$ 与 $\lim _{x \rightarrow x_0} v(x)$ 都不存在， 下列判断正确的是 ( ).
+A: 若 $\lim _{x \rightarrow x_0} f(x)$ 存在， 则 $\lim _{x \rightarrow x_0} g(x)$ 必不存在
+B: 若 $\lim _{x \rightarrow x_0} f(x)$ 不存在， 则 $\lim _{x \rightarrow x_0} g(x)$ 必不存在
+C: 若 $\lim _{x \rightarrow x_0} f(x)$ 不存在， 则 $\lim _{x \rightarrow x_0} g(x)$ 必存在
+D: 若 $\lim _{x \rightarrow x_0} f(x)$ 存在， 则 $\lim _{x \rightarrow x_0} g(x)$ 必存在
+
+调用 Qwen API 进行翻译...
+翻译:
+Пусть $f(x) = u(x) + v(x)$, $g(x) = u(x) - v(x)$, и пределы $\lim _{x \rightarrow x_0} u(x)$ и $\lim _{x \rightarrow x_0} v(x)$ не существуют. Какое из следующих утверждений верно ( )?
+A: Если $\lim _{x \rightarrow x_0} f(x)$ существует, то $\lim _{x \rightarrow x_0} g(x)$ обязательно не существует.
+B: Если $\lim _{x \rightarrow x_0} f(x)$ не существует, то $\lim _{x \rightarrow x_0} g(x)$ обязательно не существует.
+C: Если $\lim _{x \rightarrow x_0} f(x)$ не существует, то $\lim _{x \rightarrow x_0} g(x)$ обязательно существует.
+D: Если $\lim _{x \rightarrow x_0} f(x)$ существует, то $\lim _{x \rightarrow x_0} g(x)$ обязательно существует.
+
+原文:
+设A，B为n阶矩阵， 则下列结论正确的是 ( )
+A: 若A+B可逆，则A-B可逆
+B: 若A，B 可逆，则A+B可逆
+C: 若A，B可逆，则AB可逆
+D: 若A+B可逆，则A，B都可逆
+
+调用 Qwen API 进行翻译...
+翻译:
+Пусть A и B - матрицы размера n×n, тогда верным является следующее утверждение ( )
+A: Если A+B обратимо, то A-B также обратимо
+B: Если A и B обратимы, то A+B также обратимо
+C: Если A и B обратимы, то AB также обратимо
+D: Если A+B обратимо, то A и B также обратимы
+
+原文:
+设随机变量 $X$ 服从正态分布 $N\left(\mu， \sigma^2\right)， \sigma>0$， 则随着 $\sigma$ 的增大， 概率 $P\{|X-\mu|<1\}$
+A: 减小
+B: 增大
+C: 增减不定
+D: 保持不变
+
+调用 Qwen API 进行翻译...
+翻译:
+Пусть случайная величина \(X\) подчиняется нормальному распределению \(N\left(\mu, \sigma^2\right), \sigma > 0\), тогда при увеличении \(\sigma\) вероятность \(P\{|X-\mu|<1\}\):
+A: уменьшается
+B: увеличивается
+C: изменяется неопределенно
+D: остается постоянной
+
+原文:
+设常系数线性齐次方程的特解方程有根 $r_{1，2}=-1， r_{3，4}= \pm \mathrm{i}$， 则此方程的通解为
+A: $y=C_1 \mathrm{e}^{-x}+(C_2+x) \cos x+C_3 \sin x$
+B: $y=C_1 \mathrm{e}^{-x}+C_2 \cos x+C_3 \sin x$
+C: $y=C_1 \mathrm{e}^{-x}+C_2 \cos x+C_3 x \sin x$
+D: $y=(C_1+C_2 x) \mathrm{e}^{-x}+C_3 \cos x+C_4 \sin x$
+
+调用 Qwen API 进行翻译...
+翻译:
+Пусть характеристическое уравнение линейного однородного дифференциального уравнения с постоянными коэффициентами имеет корни $r_{1,2} = -1$, $r_{3,4} = \pm \mathrm{i}$, тогда общее решение этого уравнения будет
+A: $y=C_1 \mathrm{e}^{-x}+(C_2+x) \cos x+C_3 \sin x$
+B: $y=C_1 \mathrm{e}^{-x}+C_2 \cos x+C_3 \sin x$
+C: $y=C_1 \mathrm{e}^{-x}+C_2 \cos x+C_3 x \sin x$
+D: $y=(C_1+C_2 x) \mathrm{e}^{-x}+C_3 \cos x+C_4 \sin x$
+
+原文:
+设 $(X， Y)$ 服从二维正态分布， 则随机变量 $\xi=X+Y$ 与 $\eta=X-Y$ 不相关的 充分必要条件是 ( )
+A: $E\left(X^2\right)+[E(X)]^2=E\left(Y^2\right)+[E(Y)]^2$
+B: $E(X)=E(Y)$
+C: $E\left(X^2\right)-[E(X)]^2=E\left(Y^2\right)-[E(Y)]^2$
+D: $E\left(X^2\right)=E\left(Y^2\right)$
+
+调用 Qwen API 进行翻译...
+翻译:
+Пусть $(X, Y)$ подчиняется двумерному нормальному распределению, тогда случайные величины $\xi=X+Y$ и $\eta=X-Y$ будут некоррелированными тогда и только тогда, когда ( )
+A: $E\left(X^2\right)+[E(X)]^2=E\left(Y^2\right)+[E(Y)]^2$
+B: $E(X)=E(Y)$
+C: $E\left(X^2\right)-[E(X)]^2=E\left(Y^2\right)-[E(Y)]^2$
+D: $E\left(X^2\right)=E\left(Y^2\right)$
+
+原文:
+在区间 $[0，8]$ 内， 对函数 $f(x)=\sqrt[3]{8 x-x^2}$， 罗尔定理（）.
+A: 成立， 并且 $f^{\prime}(2)=0$
+B: 成立， 并且 $f^{\prime}(8)=0$
+C: 不成立
+D: 成立， 并且 $f^{\prime}(4)=0$
+
+调用 Qwen API 进行翻译...
+翻译:
+На интервале $[0, 8]$ для функции $f(x) = \sqrt[3]{8x - x^2}$, теорема Ролля ( ).
+A: выполняется, и $f^{\prime}(2) = 0$
+B: выполняется, и $f^{\prime}(8) = 0$
+C: не выполняется
+D: выполняется, и $f^{\prime}(4) = 0$
+
+原文:
+函数 $f(x)=x \sin \frac{1}{x}$ 在点 $x=0$ 处 ().
+A: 无定义但有极限
+B: 无定义且无极限
+C: 有定义且有极限
+D: 有定义但无极限
+
+调用 Qwen API 进行翻译...
+翻译:
+Функция $f(x)=x \sin \frac{1}{x}$ в точке $x=0$ ().
+A: 无定义但有极限
+B: 无定义且无极限
+C: 有定义且有极限
+D: 有定义但无极限
+
+原文:
+设A为n阶方阵，$r(A)=r<n$， 则在A的n个列向量中（）.
+A: 任意r个列向量都构成极大无关组
+B: 任意一个列向量都能由其他r个列向量线性表示
+C: 任意r个列向量线性无关
+D: 必有r个列向量线性无关
+
+调用 Qwen API 进行翻译...
+翻译:
+Пусть A - квадратная матрица порядка n, $r(A)=r<n$, тогда среди n векторов столбцов матрицы A ( ).
+A: любые r векторов столбцов образуют максимальный линейно независимый набор
+B: любой вектор столбец может быть выражен линейно через другие r векторов столбцов
+C: любые r векторов столбцов линейно независимы
+D: обязательно существуют r векторов столбцов, которые линейно независимы
+
+原文:
+设 $y=y(x)$ 由 $\left\{\begin{array}{l}x=t+\ln (1-t) \\ g=t+2 \ln (1-t)\end{array}\right.$ 确定， 则曲线 $y=y(x)$ 在 $t=-1$对应点处的曲率半径R及曲率圆的位置.
+A: $R=2$， 在切线的下方
+B: $R=\frac{1}{2}$， 在切线的下方
+C: $R=\frac{1}{2}$， 在切线的上方
+D: $R=2$， 在切线的上方
+
+调用 Qwen API 进行翻译...
+翻译:
+Пусть функция $y=y(x)$ определяется системой $\left\{\begin{array}{l}x=t+\ln (1-t) \\ g=t+2 \ln (1-t)\end{array}\right.$, тогда радиус кривизны $R$ и положение окружности кривизны для кривой $y=y(x)$ в точке, соответствующей $t=-1$, равны:
+A: $R=2$, расположена ниже касательной
+B: $R=\frac{1}{2}$, расположена ниже касательной
+C: $R=\frac{1}{2}$, расположена выше касательной
+D: $R=2$, расположена выше касательной
+
+原文:
+下列命题正确的是
+A: 若 $\boldsymbol{\alpha}_1， \boldsymbol{\alpha}_2， \cdots， \boldsymbol{\alpha}_n$ 线性无关， 则 $\boldsymbol{\alpha}_1， \boldsymbol{\alpha}_2， \cdots， \boldsymbol{\alpha}_n$ 一定两两正交.
+B: 若 $\boldsymbol{\alpha}_1， \boldsymbol{\alpha}_2， \cdots， \boldsymbol{\alpha}_n$ 两两正交， 则 $\boldsymbol{\alpha}_1， \boldsymbol{\alpha}_2， \cdots， \boldsymbol{\alpha}_n$ 一定线性无关.
+C: 设 $\boldsymbol{\alpha}_1， \boldsymbol{\alpha}_2， \boldsymbol{\alpha}_3， \boldsymbol{\alpha}_4$ 是 3 维列向量， 且两两正交， 则其中至少有一个零向量.
+D: 若 $\boldsymbol{\alpha}_1， \boldsymbol{\alpha}_2， \cdots， \boldsymbol{\alpha}_n$ 线性相关， 则其中任一向量都可由其余向量线性表示.
+
+调用 Qwen API 进行翻译...
+翻译:
+Какое из следующих утверждений верно:
+A: Если $\boldsymbol{\alpha}_1, \boldsymbol{\alpha}_2, \cdots, \boldsymbol{\alpha}_n$ линейно независимы, то $\boldsymbol{\alpha}_1, \boldsymbol{\alpha}_2, \cdots, \boldsymbol{\alpha}_n$ обязательно попарно ортогональны.
+B: Если $\boldsymbol{\alpha}_1, \boldsymbol{\alpha}_2, \cdots, \boldsymbol{\alpha}_n$ попарно ортогональны, то $\boldsymbol{\alpha}_1, \boldsymbol{\alpha}_2, \cdots, \boldsymbol{\alpha}_n$ обязательно линейно независимы.
+C: Пусть $\boldsymbol{\alpha}_1, \boldsymbol{\alpha}_2, \boldsymbol{\alpha}_3, \boldsymbol{\alpha}_4$ — векторы-столбцы размерности 3, и они попарно ортогональны, тогда среди них обязательно есть хотя бы один нулевой вектор.
+D: Если $\boldsymbol{\alpha}_1, \boldsymbol{\alpha}_2, \cdots, \boldsymbol{\alpha}_n$ линейно зависимы, то любой из этих векторов можно выразить через остальные.
+
+原文:
+函数 $f(x， y)=\left\{\begin{array}{ll}x \arctan \frac{y}{x}， & x \neq 0， \\ 0， & x=0\end{array}\right.$ 不连续的点集为
+A: $x=0， y \geq 0$ 的点集
+B: 空集
+C: $y$ 轴上的所有点
+D: $x=0， y \leq 0$ 的点集
+
+调用 Qwen API 进行翻译...
+翻译:
+Множество точек разрыва функции $f(x, y)=\left\{\begin{array}{ll}x \arctan \frac{y}{x}, & x \neq 0, \\ 0, & x=0\end{array}\right.$ является
+A: множество точек, где $x=0, y \geq 0$
+B: пустое множество
+C: все точки на оси $y$
+D: множество точек, где $x=0, y \leq 0$
+
+原文:
+设 $F(x)$ 和 $G(x)$ 均为随机变量的分布函数， 则下列可以作为某随机变量的分布 函数的是 ( )
+A: $2 F(x)-G(x)$
+B: $\frac{1}{3} F(x)+\frac{2}{3} G(x)$
+C: $F(x)+G(x)$
+D: $F\left(x^2\right)$
+
+调用 Qwen API 进行翻译...
+翻译:
+Пусть $F(x)$ и $G(x)$ являются функциями распределения случайных величин. Тогда следующее может быть функцией распределения некоторой случайной величины ( )
+A: $2 F(x)-G(x)$
+B: $\frac{1}{3} F(x)+\frac{2}{3} G(x)$
+C: $F(x)+G(x)$
+D: $F\left(x^2\right)$
+
+原文:
+设n阶矩阵A与B等价，则必有（）
+A: 当$|A|=a(a \neq 0)$ 时，$|B|=a$
+B: 当$|A| \neq 0$ 时，|B|=0
+C: 当|A|=0时，|B|=0
+D: 当$|A|=a(a \neq 0)时，|B|=-a
+
+调用 Qwen API 进行翻译...
+翻译:
+Пусть матрицы A и B эквивалентны порядка n, тогда обязательно верно ( )
+A: Когда $|A|=a(a \neq 0)$, $|B|=a$
+B: Когда $|A| \neq 0$, |B|=0
+C: Когда |A|=0, |B|=0
+D: Когда $|A|=a(a \neq 0)$, |B|=-a
+
+原文:
+设 $y=y(x)$ 是二阶常系数微分方程 $y^{\prime \prime}+p y^{\prime}+q y=\mathrm{e}^{3 x}$ 满足初始条件 $y(0)=y^{\prime}(0)=0$ 的特解， 则当 $x \rightarrow 0$ 时， 函数 $\frac{\ln \left(1+x^2\right)}{y(x)}$ 的极限（）.
+A: 不存在
+B: 等于 2
+C: 等于 1
+D: 等于 3
+
+调用 Qwen API 进行翻译...
+翻译:
+Пусть $y=y(x)$ является частным решением дифференциального уравнения второго порядка с постоянными коэффициентами $y^{\prime \prime} + p y^{\prime} + q y = \mathrm{e}^{3 x}$, удовлетворяющим начальным условиям $y(0) = y^{\prime}(0) = 0$, тогда предел функции $\frac{\ln \left(1+x^2\right)}{y(x)}$ при $x \rightarrow 0$ ( ).
+A: не существует
+B: равен 2
+C: равен 1
+D: равен 3
+
+原文:
+已知随机变量 $X$ 与 $Y$ 均服从分布 $B\left(1， \frac{3}{4}\right)$， 且 $\rho_{X Y}=\frac{1}{3}$， 则 $P\{X+Y \leq 1\}=$
+A: $\frac{1}{2}$
+B: $\frac{1}{4}$
+C: $\frac{3}{8}$
+D: $\frac{5}{8}$
+
+调用 Qwen API 进行翻译...
+翻译:
+Известно, что случайные величины $X$ и $Y$ подчиняются распределению $B\left(1, \frac{3}{4}\right)$, причем $\rho_{XY} = \frac{1}{3}$. Тогда $P\{X+Y \leq 1\}=$
+A: $\frac{1}{2}$
+B: $\frac{1}{4}$
+C: $\frac{3}{8}$
+D: $\frac{5}{8}$
+
+原文:
+曲线 $y=1-x+\sqrt{\frac{x^3}{3+x}}$ 的渐近线有.
+A: 1条
+B: 3条
+C: 2条
+D: 4条
+
+调用 Qwen API 进行翻译...
+翻译:
+У кривой $y=1-x+\sqrt{\frac{x^3}{3+x}}$ есть асимптоты:
+A: 1
+B: 3
+C: 2
+D: 4
+
+原文:
+设随机变量 $X \sim N\left(\mu， \sigma^2\right)， \sigma>0$， 记 $p=P\left\{X \leq \mu+\sigma^2\right\}$， 则 ( )
+A: $p$ 随着 $\sigma$ 的增加而减少
+B: $p$ 随着 $\sigma$ 的增加而增加
+C: $p$ 随着 $\mu$ 的增加而减少
+D: $p$ 随着 $\mu$ 的增加而增加
+
+调用 Qwen API 进行翻译...
+翻译:
+Пусть случайная величина \( X \sim N\left(\mu, \sigma^2\right), \sigma > 0 \), и обозначим \( p = P\{X \leq \mu + \sigma^2\} \), тогда ( )
+A: \( p \) уменьшается с увеличением \( \sigma \)
+B: \( p \) увеличивается с увеличением \( \sigma \)
+C: \( p \) уменьшается с увеличением \( \mu \)
+D: \( p \) увеличивается с увеличением \( \mu \)
+
+原文:
+设函数 $f(x)$ 是定义在 $(-1，1)$ 内的奇函数， 且 $\lim _{x \rightarrow 0^{+}} \frac{f(x)}{x}=a \neq 0$， 则 $f(x)$ 在 $x=0$ 处 的导数为 ( ).
+A: $a$
+B: 0
+C: 不存在
+D: $-a$
+
+调用 Qwen API 进行翻译...
+翻译:
+Пусть функция $f(x)$ определена на интервале $(-1, 1)$ и является нечётной, причём $\lim _{x \rightarrow 0^{+}} \frac{f(x)}{x}=a \neq 0$. Тогда производная функции $f(x)$ в точке $x=0$ равна ( ).
+A: $a$
+B: 0
+C: не существует
+D: $-a$
+
+原文:
+设随机事件 $A， B， C$ 两两独立， 其概率均为 $p(0<p<1)$， 若 $A \cup B \cup C=\Omega$， 且 $A B \subset C$， 则 $p=(  )$
+A: 无法确定
+B: $\frac{1}{2}$
+C: $\frac{1}{4}$
+D: $\frac{1}{3}$
+
+调用 Qwen API 进行翻译...
+翻译:
+Пусть случайные события $A$, $B$, $C$ попарно независимы, и их вероятности равны $p(0<p<1)$. Если $A \cup B \cup C=\Omega$ и $AB \subset C$, то $p=(  )$.
+A: unable to determine
+B: $\frac{1}{2}$
+C: $\frac{1}{4}$
+D: $\frac{1}{3}$
+
+原文:
+已知 $f^{\prime}\left(\mathrm{e}^x\right)=1+x$， 则 $f(x)=(   )$.
+A: $x+\frac{1}{2} x^2+C$
+B: $x \ln x+C$
+C: $\mathrm{e}^x+\frac{1}{2} \mathrm{e}^{2 x}+C$
+D: $x+x \ln x+C$
+
+调用 Qwen API 进行翻译...
+翻译:
+Известно, что $f^{\prime}\left(\mathrm{e}^x\right)=1+x$, тогда $f(x)=(   )$.
+A: $x+\frac{1}{2} x^2+C$
+B: $x \ln x+C$
+C: $\mathrm{e}^x+\frac{1}{2} \mathrm{e}^{2 x}+C$
+D: $x+x \ln x+C$
+
+原文:
+若 $x \rightarrow 0$ 时， $F(x)=\int_0^x\left(x^2-t^2\right) f^{\prime \prime}(t) \mathrm{d} t$ 的导数与 $x^2$ 是等价无穷小， 则必有 ( ) (其中 $f$ 有二阶连续导数).
+A: $f^{\prime \prime}(0)=0$
+B: $f^{\prime \prime}(0)=1$
+C: $f^{\prime \prime}(0)=\frac{1}{2}$
+D: $f^{\prime \prime}(0)$ 不存在
+
+调用 Qwen API 进行翻译...
+翻译:
+Если при $x \rightarrow 0$, производная выражения $F(x)=\int_0^x\left(x^2-t^2\right) f^{\prime \prime}(t) \, \mathrm{d} t$ является бесконечно малой величиной того же порядка, что и $x^2$, то обязательно выполняется ( ) (где $f$ имеет непрерывную вторую производную).
+A: $f^{\prime \prime}(0)=0$
+B: $f^{\prime \prime}(0)=1$
+C: $f^{\prime \prime}(0)=\frac{1}{2}$
+D: $f^{\prime \prime}(0)$ не существует
+
+原文:
+设 $N=\int_{-a}^a x^2 \sin ^3 x \mathrm{~d} x， P=\int_{-a}^a\left(x^3 \mathrm{e}^{x^2}-1\right) \mathrm{d} x， Q=\int_{-a}^a \cos ^2 x^3 \mathrm{~d} x， a \geq 0$， 则 ().
+A: $P \leq N \leq Q$
+B: $N \leq P \leq Q$
+C: $Q \leq P \leq N$
+D: $N \leq Q \leq P$
+
+调用 Qwen API 进行翻译...
+翻译:
+Пусть $N=\int_{-a}^a x^2 \sin ^3 x \, \mathrm{d} x$, $P=\int_{-a}^a\left(x^3 \mathrm{e}^{x^2}-1\right) \, \mathrm{d} x$, $Q=\int_{-a}^a \cos ^2 x^3 \, \mathrm{d} x$, где $a \geq 0$, тогда ().
+A: $P \leq N \leq Q$
+B: $N \leq P \leq Q$
+C: $Q \leq P \leq N$
+D: $N \leq Q \leq P$
+
+原文:
+设 3 阶矩阵 $\boldsymbol{A}=\left(\begin{array}{lll}a & b & b \\ b & a & b \\ b & b & a\end{array}\right)$， 若 $\boldsymbol{A}$ 的伴随矩阵的秩为 1 ， 则必有 ( )
+A: $a=b$ 或 $a+2 b=0$
+B: $a \neq b$ 且 $a+2 b=0$
+C: $a=b$ 或 $a+2 b \neq 0$
+D: $a \neq b$ 且 $a+2 b \neq 0$
+
+调用 Qwen API 进行翻译...
+翻译:
+Пусть матрица $\boldsymbol{A}=\left(\begin{array}{lll}a & b & b \\ b & a & b \\ b & b & a\end{array}\right)$ имеет размерность $3 \times 3$, и если ранг сопутствующей матрицы $\boldsymbol{A}$ равен 1, то обязательно выполняется ( )
+A: $a=b$ или $a+2 b=0$
+B: $a \neq b$ и $a+2 b=0$
+C: $a=b$ или $a+2 b \neq 0$
+D: $a \neq b$ и $a+2 b \neq 0$
+
+原文:
+设函数 $f(x)=\frac{2^{\frac{1}{x}}-1}{2^{\frac{1}{x}}+1}$， 则 $x=0$ 是 $f(x)$ 的 ( ).
+A: 跳跃间断点
+B: 无穷间断点
+C: 可去间断点
+D: 振荡间断点
+
+调用 Qwen API 进行翻译...
+翻译:
+Пусть функция $f(x)=\frac{2^{\frac{1}{x}}-1}{2^{\frac{1}{x}}+1}$, тогда $x=0$ является ( ) для $f(x)$.
+A:跳跃间断点
+B:无穷间断点
+C:可去间断点
+D:振荡间断点
+
+原文:
+函数 $y=C x+\frac{x^3}{6}$ （其中 $C$ 是任意常数）对微分方程 $\frac{\mathrm{d}^2 y}{\mathrm{~d} x^2}=x$ 而言 ( ).
+A: 不是解
+B: 是通解
+C: 是特解
+D: 是解， 但既非通解也非特解
+
+调用 Qwen API 进行翻译...
+翻译:
+Функция $y=Cx+\frac{x^3}{6}$ (где $C$ - произвольная постоянная) для дифференциального уравнения $\frac{\mathrm{d}^2 y}{\mathrm{~d} x^2}=x$ ( ).
+A: не является решением
+B: является общим решением
+C: является частным решением
+D: является решением, но ни общим, ни частным решением
+
+原文:
+若向量组 $\boldsymbol{\alpha}， \boldsymbol{\beta}， \boldsymbol{\gamma}$ 线性无关， $\boldsymbol{\alpha}， \boldsymbol{\beta}， \boldsymbol{\delta}$ 线性相关，则( )
+A: $\boldsymbol{\delta}$ 必可由 $\boldsymbol{\alpha}， \boldsymbol{\beta}， \boldsymbol{\gamma}$ 线性表示;
+B: $\boldsymbol{\beta}$ 必不可由 $\boldsymbol{\alpha}， \boldsymbol{\gamma}， \boldsymbol{\delta}$ 线性表示;
+C: $\boldsymbol{\delta}$ 必不可由 $\boldsymbol{\alpha}， \boldsymbol{\beta}， \boldsymbol{\gamma}$ 线性表示.
+D: $\boldsymbol{\alpha}$ 必可由 $\boldsymbol{\beta}， \boldsymbol{\gamma}， \boldsymbol{\delta}$ 线性表示;
+
+调用 Qwen API 进行翻译...
+翻译:
+Если векторы $\boldsymbol{\alpha}, \boldsymbol{\beta}, \boldsymbol{\gamma}$ линейно независимы, а векторы $\boldsymbol{\alpha}, \boldsymbol{\beta}, \boldsymbol{\delta}$ линейно зависимы, то ( )
+A: $\boldsymbol{\delta}$ обязательно можно выразить через $\boldsymbol{\alpha}, \boldsymbol{\beta}, \boldsymbol{\gamma}$;
+B: $\boldsymbol{\beta}$ невозможно выразить через $\boldsymbol{\alpha}, \boldsymbol{\gamma}, \boldsymbol{\delta}$;
+C: $\boldsymbol{\delta}$ невозможно выразить через $\boldsymbol{\alpha}, \boldsymbol{\beta}, \boldsymbol{\gamma}$.
+D: $\boldsymbol{\alpha}$ обязательно можно выразить через $\boldsymbol{\beta}, \boldsymbol{\gamma}, \boldsymbol{\delta}$.
+
+原文:
+设 $f(x)$ 连续， $f(0)=1， f^{\prime}(0)=2$. 下列曲线与曲线 $y=f(x)$ 必有公共切线 的是 ( ).
+A: $y=\int_0^{2 x} f(t) \mathrm{d} t$
+B: $y=\int_0^x f(t) \mathrm{d} t$
+C: $y=1+\int_0^x f(t) \mathrm{d} t$
+D: $y=1+\int_0^{2 x} f(t) \mathrm{d} t$
+
+调用 Qwen API 进行翻译...
+翻译:
+Пусть функция $f(x)$ непрерывна, $f(0) = 1$, $f'(0) = 2$. Следующая кривая обязательно имеет общую касательную с кривой $y = f(x)$ ( ).
+A: $y = \int_0^{2x} f(t) \, \mathrm{d}t$
+B: $y = \int_0^x f(t) \, \mathrm{d}t$
+C: $y = 1 + \int_0^x f(t) \, \mathrm{d}t$
+D: $y = 1 + \int_0^{2x} f(t) \, \mathrm{d}t$
+
+原文:
+设事件 $A， B$ 同时发生时， 事件 $C$ 一定发生， 则 ( )
+A: $P(C) \geq P(A)+P-1$
+B: $P=P(A B)$
+C: $P(C) \leq P+P(B)-1$
+D: $P(C)=P(A \cup B)$
+
+调用 Qwen API 进行翻译...
+翻译:
+Пусть события $A$ и $B$ происходят одновременно, тогда событие $C$ обязательно происходит, следовательно ( )
+A: $P(C) \geq P(A)+P-1$
+B: $P=P(A B)$
+C: $P(C) \leq P+P(B)-1$
+D: $P(C)=P(A \cup B)$
+
+原文:
+当 $x>0$ 时， 曲线 $y=x \sin \frac{1}{x}$.
+A: 既无水平渐近线， 也无铅直渐近线
+B: 既有水平渐近线， 也有铅直渐近线
+C: 有且仅有铅直渐近线
+D: 有且仅有水平渐近线
+
+调用 Qwen API 进行翻译...
+翻译:
+При $x>0$, кривая $y=x \sin \frac{1}{x}$.
+A: 既无水平渐近线， 也无铅直渐近线
+B: 既有水平渐近线， 也有铅直渐近线
+C: 有且仅有铅直渐近线
+D: 有且仅有水平渐近线
+
+Когда $x>0$, кривая $y=x \sin \frac{1}{x}$.
+A: 既无水平渐近线， 也无铅直渐近线
+B: 既有水平渐近线， 也有铅直渐近线
+C: 有且仅有铅直渐近线
+D: 有且仅有水平渐近线
+
+(Перевод вариантов ответов не требуется, они оставлены без изменений.)
+
+原文:
+设 $\boldsymbol{A}$ 是 $m \times n$ 阶矩阵， $\boldsymbol{B}$ 是 $n \times m$ 阶矩阵， 则 $($ )
+A: 当 $m>n$ 时， 必有 $|\boldsymbol{A} \boldsymbol{B}| \neq 0$
+B: 当 $n>m$ 时， 必有 $|\boldsymbol{A} \boldsymbol{B}|=0$
+C: 当 $m>n$ 时， 必有 $|\boldsymbol{A} \boldsymbol{B}|=0$
+D: 当 $n>m$ 时， 必有 $|\boldsymbol{A} \boldsymbol{B}| \neq 0$
+
+调用 Qwen API 进行翻译...
+翻译:
+Пусть $\boldsymbol{A}$ — матрица размера $m \times n$, а $\boldsymbol{B}$ — матрица размера $n \times m$, тогда $($ )
+A: Когда $m>n$, обязательно $|\boldsymbol{A} \boldsymbol{B}| \neq 0$
+B: Когда $n>m$, обязательно $|\boldsymbol{A} \boldsymbol{B}|=0$
+C: Когда $m>n$, обязательно $|\boldsymbol{A} \boldsymbol{B}|=0$
+D: Когда $n>m$, обязательно $|\boldsymbol{A} \boldsymbol{B}| \neq 0$
+
+原文:
+$n$ 维列向量 $\boldsymbol{\alpha}_1， \boldsymbol{\alpha}_2， \cdots， \boldsymbol{\alpha}_s$ 线性无关的充要条件是 ( )
+A: 存在不全为零的数 $k_1， k_2， \cdots， k_s$， 使得 $k_1 \boldsymbol{\alpha}_1+k_2 \boldsymbol{\alpha}_2+\cdots+k_s \boldsymbol{\alpha}_s \neq \mathbf{0}$
+B: $\boldsymbol{\alpha}_1， \boldsymbol{\alpha}_2-\boldsymbol{\alpha}_1， \boldsymbol{\alpha}_3-\boldsymbol{\alpha}_1， \cdots， \boldsymbol{\alpha}_s-\boldsymbol{\alpha}_1$ 线性无关
+C: 去掉任一向量 $\boldsymbol{\alpha}_i$ 后， $\boldsymbol{\alpha}_1， \cdots， \boldsymbol{\alpha}_{i-1}， \boldsymbol{\alpha}_{i+1}， \cdots， \boldsymbol{\alpha}_s$ 线性无关
+D: 添加向量 $\boldsymbol{\beta}$ 后， $\boldsymbol{\alpha}_1， \boldsymbol{\alpha}_2， \cdots， \boldsymbol{\alpha}_s， \boldsymbol{\beta}$ 线性无关
+
+调用 Qwen API 进行翻译...
+翻译:
+Достаточным и необходимым условием того, что векторы $\boldsymbol{\alpha}_1, \boldsymbol{\alpha}_2, \cdots, \boldsymbol{\alpha}_s$ линейно независимы, является ( )
+A: Существуют числа $k_1, k_2, \cdots, k_s$, не все равные нулю, такие что $k_1 \boldsymbol{\alpha}_1 + k_2 \boldsymbol{\alpha}_2 + \cdots + k_s \boldsymbol{\alpha}_s \neq \mathbf{0}$
+B: Векторы $\boldsymbol{\alpha}_1, \boldsymbol{\alpha}_2 - \boldsymbol{\alpha}_1, \boldsymbol{\alpha}_3 - \boldsymbol{\alpha}_1, \cdots, \boldsymbol{\alpha}_s - \boldsymbol{\alpha}_1$ линейно независимы
+C: После удаления любого вектора $\boldsymbol{\alpha}_i$, векторы $\boldsymbol{\alpha}_1, \cdots, \boldsymbol{\alpha}_{i-1}, \boldsymbol{\alpha}_{i+1}, \cdots, \boldsymbol{\alpha}_s$ остаются линейно независимыми
+D: После добавления вектора $\boldsymbol{\beta}$, векторы $\boldsymbol{\alpha}_1, \boldsymbol{\alpha}_2, \cdots, \boldsymbol{\alpha}_s, \boldsymbol{\beta}$ становятся линейно независимыми
+
+原文:
+设函数 $f(x)=\left\{\begin{array}{ll}\sqrt{|x|} \sin \frac{1}{x^2}， & x \neq 0， \\ 0， & x=0，\end{array}\right.$ 则 $f(x)$ 在点 $x=0$ 处 ( ).
+A: 极限存在， 但不连续
+B: 极限不存在
+C: 可导
+D: 连续， 但不可导
+
+调用 Qwen API 进行翻译...
+翻译:
+Пусть функция $f(x)=\begin{cases}\sqrt{|x|} \sin \frac{1}{x^2}, & x \neq 0, \\ 0, & x=0,\end{cases}$ тогда $f(x)$ в точке $x=0$ ( ).
+A: предел существует, но функция не непрерывна
+B: предел не существует
+C: дифференцируема
+D: непрерывна, но не дифференцируема
+
+原文:
+设 $f(x)$ 连续， 且满足 $f(x)=\int_0^{2 x} f\left(\frac{t}{2}\right) \mathrm{d} t+\ln 2$， 则 f(x)=.
+A: $e^{2 x}+\ln 2$
+B: $e^{2 x} \ln 2$
+C: $e^x \ln 2$
+D: $e^x+\ln 2$
+
+调用 Qwen API 进行翻译...
+翻译:
+Пусть функция $f(x)$ непрерывна и удовлетворяет уравнению $f(x)=\int_0^{2x} f\left(\frac{t}{2}\right) \mathrm{d} t+\ln 2$, тогда $f(x)=$.
+A: $e^{2 x}+\ln 2$
+B: $e^{2 x} \ln 2$
+C: $e^x \ln 2$
+D: $e^x+\ln 2$
+
+原文:
+设事件 $A$ 和 $B$ 互不相容， $0<P(A)<1，0<P(B)<1$， 记$X=\left\{\begin{array}{l}1， A \text { 发生 } \\ 0， A \text { 不发生 }\end{array}， Y=\left\{\begin{array}{l}1， B \text { 发生 } \\ 0， B \text { 不发生 }\end{array}， X\right.\right.$ 和 $Y$ 的相关系数为 $\rho$， 则
+A: $\rho>0$
+B: $\rho=1$
+C: $\rho<0$
+D: $\rho=0$
+
+调用 Qwen API 进行翻译...
+翻译:
+Пусть события $A$ и $B$ несовместны, $0<P(A)<1$, $0<P(B)<1$. Обозначим $X=\left\{\begin{array}{l}1, \text{ если } A \text{ происходит } \\ 0, \text{ если } A \text{ не происходит }\end{array}\right.$, $Y=\left\{\begin{array}{l}1, \text{ если } B \text{ происходит } \\ 0, \text{ если } B \text{ не происходит }\end{array}\right.$, и пусть коэффициент корреляции между $X$ и $Y$ равен $\rho$, тогда:
+A: $\rho>0$
+B: $\rho=1$
+C: $\rho<0$
+D: $\rho=0$
+
+原文:
+$f(x)=x \mathrm{e}^x$ 的 $n$ 阶麦克劳林公式为 ( ) .
+A: $x+x^2+\frac{x^3}{2 !}+\cdots+\frac{x^n}{(n-1) !}+\frac{\mathrm{e}^{\theta x}(n+\theta x)}{(n+1) !} x^{n+1}， 0<\theta<1$
+B: $1+x+\frac{x^2}{21}+\ldots+\frac{x^n}{n !}+\frac{\mathrm{e}^{\theta x}(n+1+\theta x)}{(n+1) !} x^{n+1}， 0<\theta<1$
+C: $x+x^2+\frac{x^3}{2 !}+\cdots+\frac{x^n}{(n-1) !}+\frac{\mathrm{e}^{\theta x}(n+1+\theta x)}{(n+1) !} x^{n+1}， 0<\theta<1$
+D: $1+x+\frac{x^2}{2 !}+\ldots+\frac{x^{n-1}}{(n-1) !}+\frac{\mathrm{e}^{\theta x}(n+\theta x)}{n !} x^{n+1}， 0<\theta<1$
+
+调用 Qwen API 进行翻译...
+翻译:
+Формула Маклорена $n$-го порядка для $f(x)=x \mathrm{e}^x$ имеет вид ( ) .
+A: $x+x^2+\frac{x^3}{2 !}+\cdots+\frac{x^n}{(n-1) !}+\frac{\mathrm{e}^{\theta x}(n+\theta x)}{(n+1) !} x^{n+1} , 0<\theta<1$
+B: $1+x+\frac{x^2}{21}+\ldots+\frac{x^n}{n !}+\frac{\mathrm{e}^{\theta x}(n+1+\theta x)}{(n+1) !} x^{n+1} , 0<\theta<1$
+C: $x+x^2+\frac{x^3}{2 !}+\cdots+\frac{x^n}{(n-1) !}+\frac{\mathrm{e}^{\theta x}(n+1+\theta x)}{(n+1) !} x^{n+1} , 0<\theta<1$
+D: $1+x+\frac{x^2}{2 !}+\ldots+\frac{x^{n-1}}{(n-1) !}+\frac{\mathrm{e}^{\theta x}(n+\theta x)}{n !} x^{n+1} , 0<\theta<1$
+
+原文:
+极限 $\lim _{\substack{x \rightarrow 0 \\ y \rightarrow 0}} \frac{3 x-y}{x+y}$ ( ).
+A: 存在， 但不等于 $\frac{1}{2}$ 也不等于 0
+B: 等于 $\frac{1}{2}$
+C: 等于 0
+D: 不存在
+
+调用 Qwen API 进行翻译...
+翻译:
+Предел $\lim _{\substack{x \rightarrow 0 \\ y \rightarrow 0}} \frac{3 x-y}{x+y}$ ( ).
+A: exists, but is not equal to $\frac{1}{2}$ or 0
+B: equals $\frac{1}{2}$
+C: equals 0
+D: does not exist
+
+原文:
+设向量组 (I): $\boldsymbol{\alpha}_1， \boldsymbol{\alpha}_2， \cdots， \boldsymbol{\alpha}_s$ 的秩为 $r_1$， 向量组 (II): $\boldsymbol{\beta}_1， \boldsymbol{\beta}_2， \cdots， \boldsymbol{\beta}_s$ 的秩为 $r_2$， 且向量 组 (II) 可由向量组 (I) 线性表示， 则 ( )
+A: 向量组 $\boldsymbol{\alpha}_1， \boldsymbol{\alpha}_2， \cdots， \boldsymbol{\alpha}_s， \boldsymbol{\beta}_1， \boldsymbol{\beta}_2， \cdots， \boldsymbol{\beta}_s$ 的秩为 $r_2$
+B: 向量组 $\boldsymbol{\alpha}_1-\boldsymbol{\beta}_1， \boldsymbol{\alpha}_2-\boldsymbol{\beta}_2， \cdots， \boldsymbol{\alpha}_s-\boldsymbol{\beta}_s$ 的秩为 $r_1-r_2$
+C: 向量组 $\boldsymbol{\alpha}_1， \boldsymbol{\alpha}_2， \cdots， \boldsymbol{\alpha}_s， \boldsymbol{\beta}_1， \boldsymbol{\beta}_2， \cdots， \boldsymbol{\beta}_s$ 的秩为 $r_1$
+D: 向量组 $\boldsymbol{\alpha}_1+\boldsymbol{\beta}_1， \boldsymbol{\alpha}_2+\boldsymbol{\beta}_2， \cdots， \boldsymbol{\alpha}_s+\boldsymbol{\beta}_s$ 的秩为 $r_1+r_2$
+
+调用 Qwen API 进行翻译...
+翻译:
+Пусть ранг системы векторов (I): $\boldsymbol{\alpha}_1, \boldsymbol{\alpha}_2, \cdots, \boldsymbol{\alpha}_s$ равен $r_1$, а ранг системы векторов (II): $\boldsymbol{\beta}_1, \boldsymbol{\beta}_2, \cdots, \boldsymbol{\beta}_s$ равен $r_2$, и система векторов (II) может быть линейно выражена через систему векторов (I), тогда ( )
+A: Ранг системы векторов $\boldsymbol{\alpha}_1, \boldsymbol{\alpha}_2, \cdots, \boldsymbol{\alpha}_s, \boldsymbol{\beta}_1, \boldsymbol{\beta}_2, \cdots, \boldsymbol{\beta}_s$ равен $r_2$
+B: Ранг системы векторов $\boldsymbol{\alpha}_1-\boldsymbol{\beta}_1, \boldsymbol{\alpha}_2-\boldsymbol{\beta}_2, \cdots, \boldsymbol{\alpha}_s-\boldsymbol{\beta}_s$ равен $r_1-r_2$
+C: Ранг системы векторов $\boldsymbol{\alpha}_1, \boldsymbol{\alpha}_2, \cdots, \boldsymbol{\alpha}_s, \boldsymbol{\beta}_1, \boldsymbol{\beta}_2, \cdots, \boldsymbol{\beta}_s$ равен $r_1$
+D: Ранг системы векторов $\boldsymbol{\alpha}_1+\boldsymbol{\beta}_1, \boldsymbol{\alpha}_2+\boldsymbol{\beta}_2, \cdots, \boldsymbol{\alpha}_s+\boldsymbol{\beta}_s$ равен $r_1+r_2$
+
+原文:
+已知 $0<P(B)<1$， 且 $P[(A_1+A_2) \mid B]=P(A_1 \mid B)+P(A_2 \mid B)$， 则下列选项成立的是 ( )
+A: $P(A_1 B+A_2 B)=P(A_1 B)+P\left(A_2 B)$
+B: $P[(A_1+A_2) \mid \bar{B}]=P(A_1 \mid \bar{B})+P(A_2 \mid \bar{B})$
+C: $P(A_1+A_2)=P(A_1 \mid B)+P(A_2 \mid B)$
+D: $P(B)=P(A_1) P(B \mid A_1)+P(A_2) P(B \mid A_2)$
+
+调用 Qwen API 进行翻译...
+翻译:
+Известно, что $0<P(B)<1$, и $P[(A_1+A_2) \mid B]=P(A_1 \mid B)+P(A_2 \mid B)$, тогда верным является ( )
+A: $P(A_1 B+A_2 B)=P(A_1 B)+P\left(A_2 B)$
+B: $P[(A_1+A_2) \mid \bar{B}]=P(A_1 \mid \bar{B})+P(A_2 \mid \bar{B})$
+C: $P(A_1+A_2)=P(A_1 \mid B)+P(A_2 \mid B)$
+D: $P(B)=P(A_1) P(B \mid A_1)+P(A_2) P(B \mid A_2)$
+
+原文:
+设随机变量 $X$ 和 $Y$ 的方差存在且不等于 0 ， 则 $D(X+Y)=D(X)+D(Y)$ 是 X 和 Y
+A: 不相关的充分条件， 但不是必要条件
+B: 独立的充分必要条件
+C: 不相关的充分必要条件
+D: 独立的充分条件， 但不是必要条件
+
+调用 Qwen API 进行翻译...
+翻译:
+Пусть существуют дисперсии случайных величин $X$ и $Y$ и они не равны 0, тогда $D(X+Y)=D(X)+D(Y)$ является для $X$ и $Y$:
+A: достаточным условием независимости, но не необходимым условием
+B: необходимым и достаточным условием независимости
+C: необходимым и достаточным условием отсутствия корреляции
+D: достаточным условием независимости, но не необходимым условием
+
+原文:
+设 $X$ 是一随机变量， $E(X)=\mu， D(X)=\sigma^2(\mu， \sigma>0$ 常数 $)$， 则对于 任意常数 $C$， 必有 ( )
+A: $E\left[(X-C)^2\right]=E\left(X^2\right)-C^2$
+B: $E\left[(X-C)^2\right]<E\left[(X-\mu)^2\right]$
+C: $E\left[(X-C)^2\right] \geq E\left[(X-\mu)^2\right]$
+D: $E\left[(X-C)^2\right]=E\left[(X-\mu)^2\right]$
+
+调用 Qwen API 进行翻译...
+翻译:
+Пусть $X$ - это случайная величина, $E(X)=\mu$, $D(X)=\sigma^2$ ($\mu$, $\sigma>0$ - константы), тогда для любой константы $C$ обязательно выполняется ( )
+A: $E\left[(X-C)^2\right]=E\left(X^2\right)-C^2$
+B: $E\left[(X-C)^2\right]<E\left[(X-\mu)^2\right]$
+C: $E\left[(X-C)^2\right] \geq E\left[(X-\mu)^2\right]$
+D: $E\left[(X-C)^2\right]=E\left[(X-\mu)^2\right]$
+
+原文:
+设 $f(x)$ 连续， $F(x)=\int_0^{x^2} x^2 f\left(t^2\right) \mathrm{d} t$， 则 $F^{\prime}(x)$ 等于 ( ) .
+A: $2 x^3 f\left(x^4\right)+2 x \int_0^{x^2} f\left(t^2\right) \mathrm{d} t$
+B: $2 x^3 f\left(x^4\right)$
+C: $x^2 f\left(x^4\right)$
+D: $4 x^2 f\left(x^4\right)$
+
+调用 Qwen API 进行翻译...
+翻译:
+Пусть $f(x)$ непрерывна, $F(x)=\int_0^{x^2} x^2 f\left(t^2\right) \mathrm{d} t$, тогда $F^{\prime}(x)$ равна ( ).
+A: $2 x^3 f\left(x^4\right)+2 x \int_0^{x^2} f\left(t^2\right) \mathrm{d} t$
+B: $2 x^3 f\left(x^4\right)$
+C: $x^2 f\left(x^4\right)$
+D: $4 x^2 f\left(x^4\right)$
+
+原文:
+设 $y = y(x)$ 是方程 $y^{\prime \prime}+2 y^{\prime}+y=e^{3 x}$ 满足 $y(0)=y^{\prime}(0)=0$ 的解， 则 $x \rightarrow 0$ 时， 与 $y(x)$ 等价的是.
+A: $\ln \cos x$
+B: $e^{\tan x}-e^{\sin x}$
+C: $x \cos x-\sin x$
+D: $\int_0^x \frac{\sin t^2}{t} d t$
+
+调用 Qwen API 进行翻译...
+翻译:
+Пусть $y = y(x)$ является решением уравнения $y^{\prime \prime}+2 y^{\prime}+y=e^{3 x}$, удовлетворяющим условиям $y(0)=y^{\prime}(0)=0$. Тогда при $x \rightarrow 0$ эквивалентным $y(x)$ является:
+A: $\ln \cos x$
+B: $e^{\tan x}-e^{\sin x}$
+C: $x \cos x-\sin x$
+D: $\int_0^x \frac{\sin t^2}{t} d t$
+
+原文:
+设随机变量 $X_1， X_2， \cdots， X_n(n>1)$ 独立同分布， 且其方差为 $\sigma^2>0$. 令 $Y=\frac{1}{n} \sum_{i=1}^n X_i$， 则 ( )
+A: $D\left(X_1+Y\right)=\frac{n+2}{n} \sigma^2$
+B: $\operatorname{cov}\left(X_1， Y\right)=\sigma^2$
+C: $D\left(X_1-Y\right)=\frac{n+1}{n} \sigma^2$
+D: $\operatorname{cov}\left(X_1， Y\right)=\frac{\sigma^2}{n}$
+
+调用 Qwen API 进行翻译...
+翻译:
+Пусть случайные величины \(X_1, X_2, \cdots, X_n (n>1)\) независимы и одинаково распределены, причем их дисперсия равна \(\sigma^2 > 0\). Пусть \(Y=\frac{1}{n} \sum_{i=1}^n X_i\), тогда ( )
+A: \(D\left(X_1+Y\right)=\frac{n+2}{n} \sigma^2\)
+B: \(\operatorname{cov}\left(X_1, Y\right)=\sigma^2\)
+C: \(D\left(X_1-Y\right)=\frac{n+1}{n} \sigma^2\)
+D: \(\operatorname{cov}\left(X_1, Y\right)=\frac{\sigma^2}{n}\)
+
+原文:
+设 $\boldsymbol{A}， \boldsymbol{B}$ 均为 2 阶矩阵， $\boldsymbol{A}^*， \boldsymbol{B}^*$ 分别为 $\boldsymbol{A}， \boldsymbol{B}$ 的伴随矩阵， 若 $|\boldsymbol{A}|=2，|\boldsymbol{B}|=3$， 则分块矩阵 $\left(\begin{array}{ll}\boldsymbol{O} & \boldsymbol{A} \\ \boldsymbol{B} & \boldsymbol{O}\end{array})$ 的伴随矩阵为
+A: $(\begin{array}{cc}\boldsymbol{O} & 3 \boldsymbol{B}^* \\ 2 \boldsymbol{A}^* & \boldsymbol{O}\end{array})$;
+B: $(\begin{array}{cc}O & 2 B^* \\ 3 A^* & O\end{array})$;
+C: $(\begin{array}{cc}\boldsymbol{O} & 3 \boldsymbol{A}^* \\ 2 \boldsymbol{B}^* & \boldsymbol{O}\end{array})$;
+D: $(\begin{array}{cc}\boldsymbol{O} & 2 \boldsymbol{A}^* \\ 3 \boldsymbol{B}^* & \boldsymbol{O}\end{array})$
+
+调用 Qwen API 进行翻译...
+翻译:
+Пусть $\boldsymbol{A}, \boldsymbol{B}$ — матрицы второго порядка, $\boldsymbol{A}^*, \boldsymbol{B}^*$ — сопутствующие матрицы для $\boldsymbol{A}, \boldsymbol{B}$. Если $|\boldsymbol{A}|=2$, $|\boldsymbol{B}|=3$, то сопутствующая матрица блочной матрицы $\left(\begin{array}{ll}\boldsymbol{O} & \boldsymbol{A} \\ \boldsymbol{B} & \boldsymbol{O}\end{array}\right)$ равна:
+A: $(\begin{array}{cc}\boldsymbol{O} & 3 \boldsymbol{B}^* \\ 2 \boldsymbol{A}^* & \boldsymbol{O}\end{array})$;
+B: $(\begin{array}{cc}O & 2 B^* \\ 3 A^* & O\end{array})$;
+C: $(\begin{array}{cc}\boldsymbol{O} & 3 \boldsymbol{A}^* \\ 2 \boldsymbol{B}^* & \boldsymbol{O}\end{array})$;
+D: $(\begin{array}{cc}\boldsymbol{O} & 2 \boldsymbol{A}^* \\ 3 \boldsymbol{B}^* & \boldsymbol{O}\end{array})$.
+
+原文:
+记行列式 $\left|\begin{array}{cccc}x-2 & x-1 & x-2 & x-3 \\ 2 x-2 & 2 x-1 & 2 x-2 & 2 x-3 \\ 3 x-3 & 3 x-2 & 4 x-5 & 3 x-5 \\ 4 x & 4 x-3 & 5 x-7 & 4 x-3\end{array}\right|$ 为 $f(x)$， 则方程 $f(x)=0$ 的根的个数为
+A: 3
+B: 2
+C: 1
+D: 4
+
+调用 Qwen API 进行翻译...
+翻译:
+Запишем определитель $\left|\begin{array}{cccc}x-2 & x-1 & x-2 & x-3 \\ 2 x-2 & 2 x-1 & 2 x-2 & 2 x-3 \\ 3 x-3 & 3 x-2 & 4 x-5 & 3 x-5 \\ 4 x & 4 x-3 & 5 x-7 & 4 x-3\end{array}\right|$ как $f(x)$, тогда количество корней уравнения $f(x)=0$ равно
+A: 3
+B: 2
+C: 1
+D: 4
+
+原文:
+设 $\boldsymbol{A}， \boldsymbol{B}$ 为满足 $\boldsymbol{A} \boldsymbol{B}=\boldsymbol{O}$ 的任意两个非零矩阵， 则必有
+A: $\boldsymbol{A}$ 的列向量组线性相关， $\boldsymbol{B}$ 的列向量组线性相关.
+B: $\boldsymbol{A}$ 的行向量组线性相关， $\boldsymbol{B}$ 的列向量组线性相关.
+C: $\boldsymbol{A}$ 的列向量组线性相关， $\boldsymbol{B}$ 的行向量组线性相关.
+D: $\boldsymbol{A}$ 的行向量组线性相关， $\boldsymbol{B}$ 的行向量组线性相关.
+
+调用 Qwen API 进行翻译...
+翻译:
+Пусть матрицы $\boldsymbol{A}$ и $\boldsymbol{B}$ ненулевые и удовлетворяют условию $\boldsymbol{A} \boldsymbol{B}=\boldsymbol{O}$, тогда обязательно выполняется:
+A: Набор векторов-столбцов $\boldsymbol{A}$ линейно зависим, набор векторов-столбцов $\boldsymbol{B}$ линейно зависим.
+B: Набор векторов-строк $\boldsymbol{A}$ линейно зависим, набор векторов-столбцов $\boldsymbol{B}$ линейно зависим.
+C: Набор векторов-столбцов $\boldsymbol{A}$ линейно зависим, набор векторов-строк $\boldsymbol{B}$ линейно зависим.
+D: Набор векторов-строк $\boldsymbol{A}$ линейно зависим, набор векторов-строк $\boldsymbol{B}$ линейно зависим.
+
+原文:
+已知向量组 $\boldsymbol{\alpha}_1， \boldsymbol{\alpha}_2， \boldsymbol{\alpha}_3， \boldsymbol{\alpha}_4$ 线性无关， 则向量组( )
+A: $\boldsymbol{\alpha}_1+\boldsymbol{\alpha}_2， \boldsymbol{\alpha}_2+\boldsymbol{\alpha}_3， \boldsymbol{\alpha}_3+\boldsymbol{\alpha}_4， \boldsymbol{\alpha}_4-\boldsymbol{\alpha}_1$ 线性无关
+B: $\boldsymbol{\alpha}_1+\boldsymbol{\alpha}_2， \boldsymbol{\alpha}_2+\boldsymbol{\alpha}_3， \boldsymbol{\alpha}_3+\boldsymbol{\alpha}_4， \boldsymbol{\alpha}_4+\boldsymbol{\alpha}_1$ 线性无关
+C: $\boldsymbol{\alpha}_1-\boldsymbol{\alpha}_2， \boldsymbol{\alpha}_2-\boldsymbol{\alpha}_3， \boldsymbol{\alpha}_3-\boldsymbol{\alpha}_4， \boldsymbol{\alpha}_4-\boldsymbol{\alpha}_1$ 线性无关
+D: $\boldsymbol{\alpha}_1+\boldsymbol{\alpha}_2， \boldsymbol{\alpha}_2+\boldsymbol{\alpha}_3， \boldsymbol{\alpha}_3-\boldsymbol{\alpha}_4， \boldsymbol{\alpha}_4-\boldsymbol{\alpha}_1$ 线性无关
+
+调用 Qwen API 进行翻译...
+翻译:
+Известно, что векторы $\boldsymbol{\alpha}_1, \boldsymbol{\alpha}_2, \boldsymbol{\alpha}_3, \boldsymbol{\alpha}_4$ линейно независимы, тогда векторы ( )
+A: $\boldsymbol{\alpha}_1+\boldsymbol{\alpha}_2, \boldsymbol{\alpha}_2+\boldsymbol{\alpha}_3, \boldsymbol{\alpha}_3+\boldsymbol{\alpha}_4, \boldsymbol{\alpha}_4-\boldsymbol{\alpha}_1$ линейно независимы
+B: $\boldsymbol{\alpha}_1+\boldsymbol{\alpha}_2, \boldsymbol{\alpha}_2+\boldsymbol{\alpha}_3, \boldsymbol{\alpha}_3+\boldsymbol{\alpha}_4, \boldsymbol{\alpha}_4+\boldsymbol{\alpha}_1$ линейно независимы
+C: $\boldsymbol{\alpha}_1-\boldsymbol{\alpha}_2, \boldsymbol{\alpha}_2-\boldsymbol{\alpha}_3, \boldsymbol{\alpha}_3-\boldsymbol{\alpha}_4, \boldsymbol{\alpha}_4-\boldsymbol{\alpha}_1$ линейно независимы
+D: $\boldsymbol{\alpha}_1+\boldsymbol{\alpha}_2, \boldsymbol{\alpha}_2+\boldsymbol{\alpha}_3, \boldsymbol{\alpha}_3-\boldsymbol{\alpha}_4, \boldsymbol{\alpha}_4-\boldsymbol{\alpha}_1$ линейно независимы
+
+原文:
+设两个相互独立的随机变量 $X$ 和 $Y$ 分别服从正态分布 $N(0，1)$ 和 $N(1，1)$， 则
+A: $P\{X-Y \leq 0\}=\frac{1}{2}$
+B: $P\{X+Y \leq 0\}=\frac{1}{2}$
+C: $P\{X-Y \leq 1\}=\frac{1}{2}$
+D: $P\{X+Y \leq 1\}=\frac{1}{2}$
+
+调用 Qwen API 进行翻译...
+翻译:
+Пусть две независимые случайные величины $X$ и $Y$ подчиняются нормальному распределению $N(0, 1)$ и $N(1, 1)$ соответственно, тогда:
+A: $P\{X-Y \leq 0\}=\frac{1}{2}$
+B: $P\{X+Y \leq 0\}=\frac{1}{2}$
+C: $P\{X-Y \leq 1\}=\frac{1}{2}$
+D: $P\{X+Y \leq 1\}=\frac{1}{2}$
+
+原文:
+对于任意两个事件 $A$ 和 $B$， 则下述命题正确的是 ( )
+A: 若 $A B=\varnothing$， 则 $A， B$ 一定相互独立
+B: 若 $A B \neq \varnothing$， 则 $A， B$ 有可能相互独立
+C: 若 $A B=\varnothing$， 则 $A， B$ 一定不相互独立
+D: 若 $A B \neq \varnothing$， 则 $A， B$ 一定相互独立
+
+调用 Qwen API 进行翻译...
+翻译:
+Для любых двух событий $A$ и $B$, правильным является следующее утверждение ( )
+A: Если $A B=\varnothing$, то события $A, B$ обязательно независимы
+B: Если $A B \neq \varnothing$, то события $A, B$ могут быть независимыми
+C: Если $A B=\varnothing$, то события $A, B$ обязательно не являются независимыми
+D: Если $A B \neq \varnothing$, то события $A, B$ обязательно независимы
+
+原文:
+对于任意两个事件 $A$ 和 $B$， 与 $A \bigcup B=B$ 不等价的是（）
+A: $\bar{B} \subset \bar{A}$
+B: $A \bar{B}=\varnothing$
+C: $A \subset B$
+D: $\bar{A} B=\varnothing$
+
+调用 Qwen API 进行翻译...
+翻译:
+Для любых двух событий $A$ и $B$, неэквивалентным $A \bigcup B=B$ является ( )
+A: $\bar{B} \subset \bar{A}$
+B: $A \bar{B}=\varnothing$
+C: $A \subset B$
+D: $\bar{A} B=\varnothing$
+
+原文:
+设随机变量 $X， Y$ 相互独立， $X$ 服从标准正态分布 $N(0，1)， Y$ 的分布律为 $P\{Y=0\}=P\{Y=1\}=\frac{1}{2}$， 令 $Z=X Y$， 则 $Z$ 的分布函数的间断点个数为 ( )
+A: 2
+B: 3
+C: 1
+D: 0
+
+调用 Qwen API 进行翻译...
+翻译:
+Пусть случайные величины \(X\) и \(Y\) независимы, \(X\) подчиняется стандартному нормальному распределению \(N(0,1)\), а распределение \(Y\) задается как \(P\{Y=0\}=P\{Y=1\}=\frac{1}{2}\). Обозначим \(Z=XY\). Тогда количество точек разрыва функции распределения \(Z\) равно ( )
+A: 2
+B: 3
+C: 1
+D: 0
+
+原文:
+设 $f(x)$ 连续， 则在下列变上限积分中， 必为偶函数的是 ( ).
+A: $\int_0^x f\left(t^2\right) \mathrm{d} t$
+B: $\int_0^x t[f(t)-f(-t)] \mathrm{d} t$
+C: $\int_0^x f^2(t) \mathrm{d} t$
+D: $\int_0^x t[f(t)+f(-t)] \mathrm{d} t$
+
+调用 Qwen API 进行翻译...
+翻译:
+Пусть функция $f(x)$ непрерывна. Среди следующих интегралов с переменным верхним пределом, обязательно четной является ( ).
+A: $\int_0^x f\left(t^2\right) \mathrm{d} t$
+B: $\int_0^x t[f(t)-f(-t)] \mathrm{d} t$
+C: $\int_0^x f^2(t) \mathrm{d} t$
+D: $\int_0^x t[f(t)+f(-t)] \mathrm{d} t$
+
+原文:
+函数 $y=x^x$ 在区间 $\left[\frac{1}{\mathrm{e}}，+\infty\right)$ 上 ( ).
+A: 最小值是 $\left(\frac{1}{\mathrm{e}}\right)^{\frac{1}{\mathrm{e}}}$
+B: 最大值是 $\left(\frac{1}{\mathrm{e}}\right)^{\frac{1}{e}}$
+C: 不存在最大值和最小值
+D: 最大值是 $\mathrm{e}^{\frac{1}{e}}$
+
+调用 Qwen API 进行翻译...
+翻译:
+Функция $y=x^x$ на интервале $\left[\frac{1}{\mathrm{e}}, +\infty\right)$ ( ).
+A: минимальное значение равно $\left(\frac{1}{\mathrm{e}}\right)^{\frac{1}{\mathrm{e}}}$
+B: максимальное значение равно $\left(\frac{1}{\mathrm{e}}\right)^{\frac{1}{e}}$
+C: не существует ни максимального, ни минимального значения
+D: максимальное значение равно $\mathrm{e}^{\frac{1}{e}}$
+
+原文:
+若 $D=\left|\begin{array}{cccc}3 & 0 & 4 & 0 \\ 1 & 1 & 1 & 1 \\ 0 & -1 & 0 & 0 \\ 5 & 3 & -2 & 2\end{array}\right|$， 则 $D$ 中第四行元素的余子式之和为 ( ).
+A: 0
+B: -1
+C: -3
+D: -2
+
+调用 Qwen API 进行翻译...
+翻译:
+Если $D=\left|\begin{array}{cccc}3 & 0 & 4 & 0 \\ 1 & 1 & 1 & 1 \\ 0 & -1 & 0 & 0 \\ 5 & 3 & -2 & 2\end{array}\right|$, то сумма алгебраических дополнений элементов четвертой строки в $D$ равна ( ).
+A: 0
+B: -1
+C: -3
+D: -2
+
+原文:
+设 $\lim _{x \rightarrow a} f(x)=A， \lim _{x \rightarrow a} g(x)$ 不存在， $\lim _{x \rightarrow a} h(x)$ 不存在， 则(1) $\lim _{x \rightarrow a}[f(x) \cdot g(x)]$ 不存在;(2) $\lim _{x \rightarrow a}[g(x)+h(x)]$ 不存在;(3) $\lim _{x \rightarrow a}[h(x) \cdot g(x)]$ 不存在;(4) $\lim _{x \rightarrow a}[g(x)+f(x)]$ 不存在;以上命题中正确的个数是
+A: 0
+B: 2
+C: 3
+D: 1
+
+调用 Qwen API 进行翻译...
+翻译:
+Пусть $\lim _{x \rightarrow a} f(x)=A$, $\lim _{x \rightarrow a} g(x)$ не существует, $\lim _{x \rightarrow a} h(x)$ не существует, тогда (1) $\lim _{x \rightarrow a}[f(x) \cdot g(x)]$ не существует; (2) $\lim _{x \rightarrow a}[g(x)+h(x)]$ не существует; (3) $\lim _{x \rightarrow a}[h(x) \cdot g(x)]$ не существует; (4) $\lim _{x \rightarrow a}[g(x)+f(x)]$ не существует. Количество верных утверждений среди приведённых выше:
+A: 0
+B: 2
+C: 3
+D: 1
+
+原文:
+设函数 $f(x)=2^{\frac{1}{x-3}}$， 则 ( )
+A: 在其有定义的任何区间 $\left(x_1， x_2\right)$ 内， $f(x)$ 必是单调增加的
+B: 在其有定义的任何区间 $\left(x_1， x_2\right)$ 内， $f(x)$ 必是单调减少的
+C: 在点 $x_1$ 及 $x_2$ 处有定义， 且 $x_1<x_2$ 时， 必有 $f\left(x_1\right)>f\left(x_2\right)$
+D: 在点 $x_1$ 及 $x_2$ 处有定义， 且 $x_1<x_2$ 时， 必有 $f\left(x_1\right)<f\left(x_2\right)$
+
+调用 Qwen API 进行翻译...
+翻译:
+Пусть функция $f(x)=2^{\frac{1}{x-3}}$, тогда ( )
+A: На любом интервале $\left(x_1, x_2\right)$, где она определена, $f(x)$ обязательно монотонно возрастает
+B: На любом интервале $\left(x_1, x_2\right)$, где она определена, $f(x)$ обязательно монотонно убывает
+C: Если функция определена в точках $x_1$ и $x_2$, и если $x_1<x_2$, то обязательно $f\left(x_1\right)>f\left(x_2\right)$
+D: Если функция определена в точках $x_1$ и $x_2$, и если $x_1<x_2$, то обязательно $f\left(x_1\right)<f\left(x_2\right)$
+
+原文:
+设 $A$ 与 $B$ 相互独立， 且 $P(A) \neq 0， P(B) \neq 0$， 则下列结论中一定正确的是
+A: $A$ 与 $B$ 互不相容
+B: $A$ 与 $B$ 相容
+C: $P(A-B)=P(A)$
+D: $P(A \cup B)=P(A) P(B)$
+
+调用 Qwen API 进行翻译...
+翻译:
+Пусть события $A$ и $B$ независимы, причем $P(A) \neq 0, P(B) \neq 0$. Тогда среди следующих утверждений обязательно верным является:
+A: $A$ и $B$ взаимоисключающие
+B: $A$ и $B$ совместимые
+C: $P(A-B)=P(A)$
+D: $P(A \cup B)=P(A) P(B)$
+
+原文:
+设 $f(x)$ 可导， $F(x)=f(x)(1+|\sin x|)$. 若 $F(x)$ 在 $x=0$ 处可导， 则必有（）.
+A: $f(0)-f^{\prime}(0)=0$
+B: $f^{\prime}(0)=0$
+C: $f(0)+f^{\prime}(0)=0$
+D: $f(0)=0$
+
+调用 Qwen API 进行翻译...
+翻译:
+Пусть $f(x)$ дифференцируема, $F(x)=f(x)(1+|\sin x|)$. Если $F(x)$ дифференцируема в точке $x=0$, то обязательно выполняется ().
+A: $f(0)-f^{\prime}(0)=0$
+B: $f^{\prime}(0)=0$
+C: $f(0)+f^{\prime}(0)=0$
+D: $f(0)=0$
+
+原文:
+设 $\lim _{x \rightarrow 0} \frac{(1+x)(1+2 x)(1+3 x)+a}{x}=6$， 则 $a$ 的值为 ().
+A: -1
+B: 2
+C: 3
+D: 1
+
+调用 Qwen API 进行翻译...
+翻译:
+Пусть $\lim _{x \rightarrow 0} \frac{(1+x)(1+2x)(1+3x)+a}{x}=6$, тогда значение $a$ равно ().
+A: -1
+B: 2
+C: 3
+D: 1
+
+原文:
+下列函数中， 在 $x=0$ 处不可导的是（）.
+A: $f(x)=\cos \sqrt{|x|}$
+B: $f(x)=|x| \sin \sqrt{|x|}$
+C: $f(x)=\cos |x|$
+D: $f(x)=|x| \sin |x|$
+
+调用 Qwen API 进行翻译...
+翻译:
+Среди следующих функций, не дифференцируемой в точке $x=0$ является ().
+A: $f(x)=\cos \sqrt{|x|}$
+B: $f(x)=|x| \sin \sqrt{|x|}$
+C: $f(x)=\cos |x|$
+D: $f(x)=|x| \sin |x|$
+
+原文:
+设函数 $f(x)$ 在点 $x_0$ 的某邻域内有定义， 且在点 $x_0$ 处间断， 则下列函数在点 $x_0$ 处必定 间断的是 ( ).
+A: $f^2(x)$
+B: $f(x) \sin x$
+C: $f(x)+\sin x$
+D: $|f(x)|$
+
+调用 Qwen API 进行翻译...
+翻译:
+Пусть функция \( f(x) \) определена в некоторой окрестности точки \( x_0 \) и разрывна в точке \( x_0 \). Тогда среди следующих функций обязательно разрывна в точке \( x_0 \) следующая ( ):
+A: \( f^2(x) \)
+B: \( f(x) \sin x \)
+C: \( f(x)+\sin x \)
+D: \( |f(x)| \)
+
+原文:
+设 $M=\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}} \frac{(1+x)^2}{1+x^2} \mathrm{~d} x， N=\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}} \frac{1+x}{\mathrm{e}^x} \mathrm{~d} x， K=\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}(1+\sqrt{\cos x}) \mathrm{d} x$， 则( )
+A: $M>N>K$.
+B: $M>K>N$.
+C: $K>M>N$.
+D: $K>N>M$.
+
+调用 Qwen API 进行翻译...
+翻译:
+Пусть $M=\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}} \frac{(1+x)^2}{1+x^2} \, dx$, $N=\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}} \frac{1+x}{\mathrm{e}^x} \, dx$, $K=\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}(1+\sqrt{\cos x}) \, dx$, тогда ( )
+A: $M>N>K$.
+B: $M>K>N$.
+C: $K>M>N$.
+D: $K>N>M$.
+
+原文:
+若函数 $f(x)=\begin{array}{ll}\frac{1-\cos \sqrt{x}}{a x}， & x>0， \\ b， & x \leqslant 0\end{array}.$ 在 $x=0$ 处连续， 则( )
+A: $a b=\frac{1}{2}$.
+B: $a b=-\frac{1}{2}$.
+C: $a b=0$.
+D: $a b=2$.
+
+调用 Qwen API 进行翻译...
+翻译:
+Если функция $f(x)=\begin{cases}\frac{1-\cos \sqrt{x}}{a x}, & x>0, \\ b, & x \leqslant 0\end{cases}$ является непрерывной в точке $x=0$, то ( )
+A: $a b=\frac{1}{2}$.
+B: $a b=-\frac{1}{2}$.
+C: $a b=0$.
+D: $a b=2$.
+
+原文:
+设二阶可导函数 $f(x)$ 满足 $f(1)=f(-1)=1， f(0)=-1$ 且 $f^{\prime \prime}(x)>0$， 则
+A: $\int_{-1}^1 f(x) \mathrm{d} x>0$.
+B: $\int_{-1}^1 f(x) \mathrm{d} x<0$.
+C: $\int_{-1}^0 f(x) \mathrm{d} x>\int_0^1 f(x) \mathrm{d} x$.
+D: $\int_{-1}^0 f(x) \mathrm{d} x<\int_0^1 f(x) \mathrm{d} x$.
+
+调用 Qwen API 进行翻译...
+翻译:
+Пусть функция $f(x)$, дважды дифференцируемая, удовлетворяет условиям $f(1)=f(-1)=1$, $f(0)=-1$ и $f^{\prime \prime}(x)>0$, тогда:
+A: $\int_{-1}^1 f(x) \mathrm{d} x>0$.
+B: $\int_{-1}^1 f(x) \mathrm{d} x<0$.
+C: $\int_{-1}^0 f(x) \mathrm{d} x>\int_0^1 f(x) \mathrm{d} x$.
+D: $\int_{-1}^0 f(x) \mathrm{d} x<\int_0^1 f(x) \mathrm{d} x$.
+
+原文:
+设数列 ${x_n}$ 收敛， 则
+A: 当 $\lim _{n \rightarrow \infty} \sin x_n=0$ 时， $\lim _{n \rightarrow \infty} x_n=0$.
+B: 当 $\lim _{n \rightarrow \infty}(x_n+\sqrt{|x_n|})=0$ 时， $\lim _{n \rightarrow \infty} x_n=0$.
+C: 当 $\lim _{n \rightarrow \infty}\left(x_n+x_n^2\right)=0$ 时， $\lim _{n \rightarrow \infty} x_n=0$.
+D: 当 $\lim _{n \rightarrow \infty}(x_n+\sin x_n\right)=0$ 时， $\lim _{n \rightarrow \infty} x_n=0$.
+
+调用 Qwen API 进行翻译...
+翻译:
+Пусть последовательность ${x_n}$ сходится, тогда:
+A: Когда $\lim _{n \rightarrow \infty} \sin x_n=0$, $\lim _{n \rightarrow \infty} x_n=0$.
+B: Когда $\lim _{n \rightarrow \infty}(x_n+\sqrt{|x_n|})=0$, $\lim _{n \rightarrow \infty} x_n=0$.
+C: Когда $\lim _{n \rightarrow \infty}\left(x_n+x_n^2\right)=0$, $\lim _{n \rightarrow \infty} x_n=0$.
+D: Когда $\lim _{n \rightarrow \infty}(x_n+\sin x_n)=0$, $\lim _{n \rightarrow \infty} x_n=0$.
+
+原文:
+微分方程 $y^{\prime \prime}-4 y^{\prime}+8 y=\mathrm{e}^{2 x}(1+\cos 2 x)$ 的特解可设为 $y*=$
+A: $A \mathrm{e}^{2 x}+\mathrm{e}^{2 x}(B \cos 2 x+C \sin 2 x)$.
+B: $A x \mathrm{e}^{2 x}+\mathrm{e}^{2 x}(B \cos 2 x+C \sin 2 x)$.
+C: $A \mathrm{e}^{2 x}+x \mathrm{e}^{2 x}(B \cos 2 x+C \sin 2 x)$.
+D: $A x \mathrm{e}^{2 x}+x \mathrm{e}^{2 x}(B \cos 2 x+C \sin 2 x)$.
+
+调用 Qwen API 进行翻译...
+翻译:
+Особое решение дифференциального уравнения $y^{\prime \prime}-4 y^{\prime}+8 y=\mathrm{e}^{2 x}(1+\cos 2 x)$ можно задать как $y*=$  
+A: $A \mathrm{e}^{2 x}+\mathrm{e}^{2 x}(B \cos 2 x+C \sin 2 x)$.  
+B: $A x \mathrm{e}^{2 x}+\mathrm{e}^{2 x}(B \cos 2 x+C \sin 2 x)$.  
+C: $A \mathrm{e}^{2 x}+x \mathrm{e}^{2 x}(B \cos 2 x+C \sin 2 x)$.  
+D: $A x \mathrm{e}^{2 x}+x \mathrm{e}^{2 x}(B \cos 2 x+C \sin 2 x)$.
+
+原文:
+设 $f(x， y)$ 具有一阶偏导数， 且对任意的 $(x， y)$， 都有 $\frac{\partial f(x， y)}{\partial x}>0， \frac{\partial f(x， y)}{\partial y}<0$， 则
+A: $f(0，0)>f(1，1)$.
+B: $f(0，0)<f(1，1)$.
+C: $f(0，1)>f(1，0)$.
+D: $f(0，1)<f(1，0)$.
+
+调用 Qwen API 进行翻译...
+翻译:
+Пусть функция $f(x, y)$ имеет частные производные первого порядка, и для любой пары $(x, y)$ выполняется $\frac{\partial f(x, y)}{\partial x} > 0, \frac{\partial f(x, y)}{\partial y} < 0$, тогда:
+A: $f(0,0)>f(1,1)$.
+B: $f(0,0)<f(1,1)$.
+C: $f(0,1)>f(1,0)$.
+D: $f(0,1)<f(1,0)$.
+
+原文:
+若 $\lim _{x \rightarrow 0}\left(\mathrm{e}^x+a x^2+b x\right)^{\frac{1}{x^2}}=1$，则
+A: $a=\frac{1}{2}， b=-1$.
+B: $a=-\frac{1}{2}， b=-1$.
+C: $a=\frac{1}{2}， b=1$
+D: $a=-\frac{1}{2}， b=1$.
+
+调用 Qwen API 进行翻译...
+翻译:
+Если $\lim _{x \rightarrow 0}\left(\mathrm{e}^x+a x^2+b x\right)^{\frac{1}{x^2}}=1$, то:
+A: $a=\frac{1}{2}， b=-1$.
+B: $a=-\frac{1}{2}， b=-1$.
+C: $a=\frac{1}{2}， b=1$
+D: $a=-\frac{1}{2}， b=1$.
+
+原文:
+下列函数中，在 $x=0$ 处不可导的是
+A: $f(x)=|x| \sin |x|$.
+B: $f(x)=|x| \sin \sqrt{|x|}$.
+C: $f(x)=\cos |x|$.
+D: $f(x)=\cos \sqrt{|x|}$.
+
+调用 Qwen API 进行翻译...
+翻译:
+Среди следующих функций, не дифференцируемая в точке $x=0$, это
+A: $f(x)=|x| \sin |x|$.
+B: $f(x)=|x| \sin \sqrt{|x|}$.
+C: $f(x)=\cos |x|$.
+D: $f(x)=\cos \sqrt{|x|}$.
+
+原文:
+设函数 $f(x)=\left\{\begin{array}{ll}-1， & x<0， \\ 1， & x \geqslant 0，\end{array} g(x)=\left\{\begin{array}{ll}x， & -1<x<0， \\ x-b， & x \geqslant 0 .\end{array}\right.\right.$ 若 $f(x)+g(x)$ 在 $\mathbf{R}$ 上连续， 则 ( )
+A: $a=3， b=1$.
+B: $a=3， b=2$.
+C: $a=-3， b=1$.
+D: $a=-3， b=2$.
+
+调用 Qwen API 进行翻译...
+翻译:
+Пусть функция $f(x)=\begin{cases} -1, & x<0, \\ 1, & x \geqslant 0, \end{cases} \quad g(x)=\begin{cases} x, & -1<x<0, \\ x-b, & x \geqslant 0. \end{cases}$ Если $f(x)+g(x)$ непрерывна на $\mathbf{R}$, то ( )
+A: $a=3, b=1$.
+B: $a=3, b=2$.
+C: $a=-3, b=1$.
+D: $a=-3, b=2$.
+
+原文:
+设函数 $f(x)$ 在 $[0，1]$ 上二阶可导， 且 $\int_0^1 f(x) \mathrm{d} x=0$，则
+A: 当 $f^{\prime}(x)<0$ 时， $f\left(\frac{1}{2}\right)<0$.
+B: 当 $f^{\prime \prime}(x)<0$ 时， $f\left(\frac{1}{2}\right)<0$.
+C: 当 $f^{\prime}(x)>0$ 时， $f\left(\frac{1}{2}\right)<0$.
+D: 当 $f^{\prime \prime}(x)>0$ 时， $f\left(\frac{1}{2}\right)<0$.
+
+调用 Qwen API 进行翻译...
+翻译:
+Пусть функция $f(x)$ дважды дифференцируема на $[0, 1]$, и $\int_0^1 f(x) \mathrm{d} x=0$, тогда:
+A: Когда $f^{\prime}(x)<0$, $f\left(\frac{1}{2}\right)<0$.
+B: Когда $f^{\prime \prime}(x)<0$, $f\left(\frac{1}{2}\right)<0$.
+C: Когда $f^{\prime}(x)>0$, $f\left(\frac{1}{2}\right)<0$.
+D: Когда $f^{\prime \prime}(x)>0$, $f\left(\frac{1}{2}\right)<0$.
+
+翻译结果已保存到: college_mathematics_russian.csv，总共 105 行，成功翻译 105 行，平均每行耗时 8.96 秒
+原文:
+设集合$M=\left\{ -1,0,2,8 \right\},N=\left\{x|x\leqslant 2 \right\}$ ，则 $M\cap N =$
+A: {—1,0,1} 
+B: {0,1,2} 
+C: {0,1} 
+D: {—1,0,1,2} 
+
+调用 Qwen API 进行翻译...
+翻译:
+Пусть множество \( M = \{-1, 0, 2, 8\}, N = \{x | x \leqslant 2\} \), тогда \( M \cap N = \)
+A: {—1,0,1} 
+B: {0,1,2} 
+C: {0,1} 
+D: {—1,0,1,2}
+
+原文:
+命题“若⼀个数是负数，则它的平⽅是正数”的逆命题是
+A: “若⼀个数的平⽅是正数，则它是负数”
+B: “若⼀个数不是负数，则它的平⽅不是正数”
+C: “若⼀个数是负数，则它的平⽅不是正数”
+D: “若⼀个数的平⽅不是正数，则它不是负数”
+
+调用 Qwen API 进行翻译...
+翻译:
+Утверждение «Если число отрицательное, то его квадрат положительный» имеет обратное утверждение:
+A: «Если квадрат числа положителен, то число отрицательное»
+B: «Если число не отрицательное, то его квадрат не положителен»
+C: «Если число отрицательное, то его квадрат не положителен»
+D: «Если квадрат числа не положителен, то число не отрицательное»
+
+原文:
+若数列${a_n}$的通项公式是$a_n=2(n+1)+3$则此数列
+A: 是公差为5的等差数列
+B: 不是等差数列
+C: 是公差为2的等差数列 
+D: 是公差为3的等差数列
+
+调用 Qwen API 进行翻译...
+翻译:
+Если общий член последовательности \(a_n\) задан формулой \(a_n = 2(n+1) + 3\), то эта последовательность:
+A: является арифметической прогрессией с разностью 5
+B: не является арифметической прогрессией
+C: является арифметической прогрессией с разностью 2
+D: является арифметической прогрессией с разностью 3
+
+原文:
+在△ABC中，a，b，c分别是⻆A，B，C所对的边，且a＝6，b＝8，A＝30°，则满⾜条件的三⻆形有
+A: 无数个
+B: 1个
+C: 0个
+D: 2个
+
+调用 Qwen API 进行翻译...
+翻译:
+В треугольнике ABC, стороны a, b, c являются противоположными сторонами углов A, B, C соответственно, причём a = 6, b = 8, A = 30°. Сколько треугольников удовлетворяет этим условиям?
+A: бесконечно много
+B: 1
+C: 0
+D: 2
+
+原文:
+设$\bigtriangleup ABC$的内角A，B，C所对边的长分别是a，b，c，若$a^{2}=b^{2}+c^{2}-bc$，则A=
+A: $2\frac{\pi}{3}$
+B: $\frac{\pi}{4}$
+C: $\frac{\pi}{6}$
+D: $\frac{\pi}{3}$
+
+调用 Qwen API 进行翻译...
+翻译:
+Пусть длины сторон треугольника $\bigtriangleup ABC$, противолежащих углам A, B, C, равны соответственно a, b, c. Если $a^{2}=b^{2}+c^{2}-bc$, то A =
+A: $2\frac{\pi}{3}$
+B: $\frac{\pi}{4}$
+C: $\frac{\pi}{6}$
+D: $\frac{\pi}{3}$
+
+原文:
+下列正确的是
+A: {0}=0 
+B: 0属于{0} 
+C: 以上都不对
+D: 0真包含于{0}
+
+调用 Qwen API 进行翻译...
+翻译:
+Выберите правильный вариант:
+A: {0}=0 
+B: 0 принадлежит {0} 
+C: Ни один из приведенных выше вариантов не верен
+D: 0 действительно содержится в {0}
+
+原文:
+设等比数列{a_n}的前n项的和为S_n，若S_10:S_5=1:2，则S_15:S_5等于
+A: 2:3
+B: 1:3
+C: 1:2
+D: 3:4
+
+调用 Qwen API 进行翻译...
+翻译:
+Пусть сумма первых n членов геометрической прогрессии {a_n} равна S_n. Если S_10:S_5 = 1:2, то S_15:S_5 равно:
+A: 2:3
+B: 1:3
+C: 1:2
+D: 3:4
+
+原文:
+某学院的A，B，C三个专业共有1200名学⽣，为了调查这些学⽣勤⼯俭学的情况，拟采⽤分层抽样的⽅法抽取⼀个容量为120的样本．已知该学院的A专业有380名学⽣，B专业有420名学⽣，则在该学院的C专业应抽取的学⽣是 
+A: 120名
+B: 38名
+C: 40名
+D: 42名
+
+调用 Qwen API 进行翻译...
+翻译:
+В одном из институтов специальности A, B и C насчитывают 1200 студентов. Для исследования ситуации с подработкой среди студентов планируется использовать стратифицированную выборку объемом 120 человек. Известно, что в специальности A обучается 380 студентов, а в специальности B — 420 студентов. Сколько студентов должно быть отобрано из специальности C в этом институте? 
+A: 120名
+B: 38名
+C: 40名
+D: 42名
+
+原文:
+已知a=log_{2}0.2, b=2^0.2, c=0.2^0.3，则
+A: a<b<c
+B: c<a<b
+C: b<c<a
+D: a<c<b
+
+调用 Qwen API 进行翻译...
+翻译:
+Известно, что a=log_{2}0.2, b=2^0.2, c=0.2^0.3, тогда
+A: a<b<c 
+B: c<a<b 
+C: b<c<a 
+D: a<c<b
+
+原文:
+某校现有⾼⼀学⽣210⼈，⾼⼆学⽣270⼈，⾼三学⽣300⼈，⽤分层抽样的⽅法从这三个年级的学⽣中随机抽取n名学⽣进⾏问卷调查，如果已知从⾼⼀学⽣中抽取的⼈数为7，那么从⾼三学⽣中抽取的⼈数应为
+A: 9
+B: 26
+C: 25
+D: 10
+
+调用 Qwen API 进行翻译...
+翻译:
+В одной школе насчитывается 210 учеников первого года обучения, 270 учеников второго года обучения и 300 учеников третьего года обучения. Используя метод стратифицированной выборки, случайно выбирается n учеников из этих трех классов для проведения опроса. Если известно, что число выбранных учеников первого года обучения составляет 7 человек, то сколько учеников должно быть выбрано из третьекурсников?
+A: 9
+B: 26
+C: 25
+D: 10
+
+原文:
+下列元素中属于集合{x|x=2k k是⾃然数}的是
+A: -2
+B: 3
+C: 10
+D: 7
+
+调用 Qwen API 进行翻译...
+翻译:
+Среди следующих элементов, принадлежащих множеству {x|x=2k, где k является натуральным числом}, это:
+A: -2
+B: 3
+C: 10
+D: 7
+
+原文:
+在$\bigtriangleup ABC$中，$cos\frac{C}{2}=\frac{\sqrt{5}}{5},BC=1, AC=5$，则AB等于
+A: $2\sqrt{5}$
+B: $4\sqrt{2}$
+C: $\sqrt{29}$
+D: $\sqrt{30}$
+
+调用 Qwen API 进行翻译...
+翻译:
+В треугольнике $\bigtriangleup ABC$, если $cos\frac{C}{2}=\frac{\sqrt{5}}{5}, BC=1, AC=5$, тогда длина AB равна 
+A: $2\sqrt{5}$
+B: $4\sqrt{2}$
+C: $\sqrt{29}$
+D: $\sqrt{30}$
+
+原文:
+若x\in R, 则“x>1” 是 "|x|>1"的
+A: 既⾮充分也⾮必要条件
+B: 充分⾮必要条件
+C: 充分必要条件
+D: 必要⾮充分条件
+
+调用 Qwen API 进行翻译...
+翻译:
+Если \(x \in \mathbb{R}\), то «\(x > 1\)» является «\(|x| > 1\)»
+A: 既⾮充分也⾮必要条件
+B: 充分⾮必要条件
+C: 充分必要条件
+D: 必要⾮充分条件
+
+原文:
+在集合﹛1，2，3，4…，10﹜中任取⼀个元素，所取元素恰好满⾜⽅程cos（30°•x ）= 1/2 的概率为
+A: 1/5
+B: 1/4
+C: 1/6
+D: 1/3
+
+调用 Qwen API 进行翻译...
+翻译:
+Из множества {1, 2, 3, 4, …, 10} выбирается один элемент. Вероятность того, что выбранный элемент удовлетворяет уравнению cos(30°•x) = 1/2, равна
+A: 1/5
+B: 1/4
+C: 1/6
+D: 1/3
+
+原文:
+下列求导运算正确的事
+A: (x^3)'=3x^2
+B: (x^2 cos(x))'=-2xsin(x)
+C: (x^2+1)'=2x+1
+D: (1/x)'=1/x^2
+
+调用 Qwen API 进行翻译...
+翻译:
+Следующая операция дифференцирования является верной:
+A: (x^3)'=3x^2
+B: (x^2 cos(x))'=-2xsin(x)
+C: (x^2+1)'=2x+1
+D: (1/x)'=1/x^2
+
+原文:
+已知函数$f(3x)=log_{2}\sqrt{(9x+1)/2}，则f(1)的值为
+A: 1/2
+B: 2
+C: 1
+D: log_{2}\sqrt{5}
+
+调用 Qwen API 进行翻译...
+翻译:
+Известно, что функция $f(3x)=\log_{2}\sqrt{\frac{(9x+1)}{2}},$ тогда значение $f(1)$ равно:
+A: 1/2
+B: 2
+C: 1
+D: $\log_{2}\sqrt{5}$
+
+原文:
+函数$y=log(x^{2}-1)$的定义域是
+A: $[-1,1]$
+B: $(-\infty ,-1]\cup[1,+\infty)$
+C: $(-\infty ,-1)\cup(1,+\infty)$
+D: $(-1,1)$
+
+调用 Qwen API 进行翻译...
+翻译:
+Область определения функции $y=log(x^{2}-1)$ является
+A: $[-1,1]$
+B: $(-\infty ,-1]\cup[1,+\infty)$
+C: $(-\infty ,-1)\cup(1,+\infty)$
+D: $(-1,1)$
+
+原文:
+已知集合$A={x|y=\sqrt{4-x^4}}$，集合$B={x|x>=a}$，则$A\subseteq B$的一个充分不必要条件是
+A: (-\inf,-2)
+B: [2,+\inf)
+C: (-\inf,-2]
+D: (2,+?)
+
+调用 Qwen API 进行翻译...
+翻译:
+Известно, что множество \(A = \{x \mid y = \sqrt{4 - x^4}\}\), множество \(B = \{x \mid x \geq a\}\). Тогда достаточным, но не необходимым условием для \(A \subseteq B\) является:
+A: (-\inf,-2)
+B: [2,+\inf)
+C: (-\inf,-2]
+D: (2,+?)
+
+原文:
+在空间中，下列命题正确的是
+A: 平⾏于同⼀直线的两个平⾯平⾏
+B: 垂直于同⼀平⾯的两条直线平⾏
+C: 平⾏于同⼀平⾯的两条直线平⾏
+D: 垂直于同⼀直线的两条直线平⾏
+
+调用 Qwen API 进行翻译...
+翻译:
+В пространстве, какой из следующих утверждений верен:
+A: Два плоскости, параллельные одной прямой, параллельны
+B: Две прямые, перпендикулярные одному плоскости, параллельны
+C: Две прямые, параллельные одному плоскости, параллельны
+D: Две прямые, перпендикулярные одной прямой, параллельны
+
+原文:
+在正方体ABCD-A1B2C1D1中，BB1与平面ACD1所成角的余弦值为
+A: \sqrt{3}/2
+B: 2/3
+C: \sqrt{2}/3
+D: \sqrt{6}/3
+
+调用 Qwen API 进行翻译...
+翻译:
+В кубе ABCD-A1B2C1D1, косинус угла между BB1 и плоскостью ACD1 равен
+A: \sqrt{3}/2
+B: 2/3
+C: \sqrt{2}/3
+D: \sqrt{6}/3
+
+原文:
+圆x^2+y^2-2x-2y+1=0上的点到直线x-y=2的距离最大的是
+A: 1+2\sqrt{2}
+B: 2
+C: 1+\sqrt{2}/2
+D: 1+\sqrt{2}
+
+调用 Qwen API 进行翻译...
+翻译:
+Точка на окружности x^2+y^2-2x-2y+1=0, находящаяся на наибольшем расстоянии от прямой x-y=2, равна
+
+A: 1+2\sqrt{2}
+B: 2
+C: 1+\sqrt{2}/2
+D: 1+\sqrt{2}
+
+原文:
+若$\sin\alpha * \cos\alpha > 0$，则\alpha在
+A: 第一、四象限
+B: 第一、二象限
+C: 第一、三象限
+D: 第二、四象限
+
+调用 Qwen API 进行翻译...
+翻译:
+Если $\sin\alpha * \cos\alpha > 0$, то $\alpha$ находится в
+A: Первом, четвертом квадранте
+B: Первом, втором квадранте
+C: Первом, третьем квадранте
+D: Втором, четвертом квадранте
+
+原文:
+同时抛掷两枚质地均匀的硬币，则出现两个正面朝上的概率是
+A: $\frac{1}{8}$
+B: $\frac{1}{4}$
+C: $\frac{1}{2}$
+D: $\frac{1}{3}$
+
+调用 Qwen API 进行翻译...
+翻译:
+При одновременном подбрасывании двух одинаковых монет вероятность того, что обе монеты выпадут гербом вверх, равна:
+A: $\frac{1}{8}$
+B: $\frac{1}{4}$
+C: $\frac{1}{2}$
+D: $\frac{1}{3}$
+
+原文:
+在三角形ABC中，sinA:sinB:sinC=3:2:4，则cosC的值为
+A: -2/3
+B: -1/4
+C: 2/3
+D: 1/4
+
+调用 Qwen API 进行翻译...
+翻译:
+В треугольнике ABC, sinA:sinB:sinC = 3:2:4, тогда значение cosC равно
+A: -2/3
+B: -1/4
+C: 2/3
+D: 1/4
+
+原文:
+600是数列1*2,2*3,3*4，...的第
+A: 25项
+B: 24项 
+C: 30项
+D: 20项 
+
+调用 Qwen API 进行翻译...
+翻译:
+600 является членом последовательности 1*2, 2*3, 3*4, ... под номером
+A: 25th term
+B: 24th term
+C: 30th term
+D: 20th term
+
+原文:
+设$z=(3-i)/(1+2i)$,则|z|=
+A: 2
+B: 1
+C: sqrt{3}
+D: sqrt{2}
+
+调用 Qwen API 进行翻译...
+翻译:
+Пусть $z=(3-i)/(1+2i)$, тогда |z|=
+A: 2  
+B: 1  
+C: sqrt{3}  
+D: sqrt{2}
+
+原文:
+设$\bigtriangleup ABC$的内角A，B，C所对边的长分别是a，b，c，且$f(A)=\sqrt{3}sinA-cosA+2$，若$f(A)=3,a=\sqrt{6}, S_{\bigtriangleup ABC}=\sqrt{3}$，则$\bigtriangleup ABC$的周长是
+A: $3\sqrt{3}+\sqrt{6}$
+B: $2\sqrt{2}+\sqrt{6}$
+C: $3\sqrt{2}+\sqrt{6}$
+D: $2\sqrt{3}+\sqrt{6}$
+
+调用 Qwen API 进行翻译...
+翻译:
+Пусть длины сторон $\bigtriangleup ABC$, противолежащих углам A, B, C, равны соответственно a, b, c, и $f(A)=\sqrt{3}\sin A - \cos A + 2$. Если $f(A)=3, a=\sqrt{6}, S_{\bigtriangleup ABC}=\sqrt{3}$, то периметр $\bigtriangleup ABC$ равен
+A: $3\sqrt{3}+\sqrt{6}$
+B: $2\sqrt{2}+\sqrt{6}$
+C: $3\sqrt{2}+\sqrt{6}$
+D: $2\sqrt{3}+\sqrt{6}$
+
+原文:
+已知空间直⻆坐标系中三点$A(0,1,0),M(\sqrt{2},1,0),N(0,3,\sqrt{2}),O$为坐标原点，则直线 OA 与 MN 所成⻆的余弦值为
+A: \frac{\sqrt{2}}{2}
+B: $\frac{\sqrt{6}+\sqrt{2}}{4}$
+C: $\frac{\sqrt{3}}{2}$
+D: 0
+
+调用 Qwen API 进行翻译...
+翻译:
+Известно, что в пространственной прямоугольной системе координат три точки $A(0,1,0), M(\sqrt{2},1,0), N(0,3,\sqrt{2})$, а $O$ — начало координат. Тогда косинус угла между прямыми $OA$ и $MN$ равен:
+A: \frac{\sqrt{2}}{2}
+B: $\frac{\sqrt{6}+\sqrt{2}}{4}$
+C: $\frac{\sqrt{3}}{2}$
+D: 0
+
+原文:
+$\cos{\alpha}=4/5$，\alpha 为第四象限角，则$\tan{\alpha}$的值为
+A: -4/3
+B: $\pm 4/3$
+C: -3/4
+D: $\pm 3/4$
+
+调用 Qwen API 进行翻译...
+翻译:
+Если $\cos{\alpha}=4/5$ и угол $\alpha$ находится в четвертой четверти, то значение $\tan{\alpha}$ равно:
+A: -4/3
+B: $\pm 4/3$
+C: -3/4
+D: $\pm 3/4$
+
+原文:
+已知x>0, y>0, x+2y+2xy=8, 则x+2y的最小值是
+A: 5.5
+B: 3
+C: 4
+D: 4.5
+
+调用 Qwen API 进行翻译...
+翻译:
+Известно, что x > 0, y > 0, x + 2y + 2xy = 8. Тогда минимальное значение x + 2y равно 
+A: 5.5 
+B: 3 
+C: 4 
+D: 4.5
+
+原文:
+在$\bigtriangleup ABC$中，若c=1，$a=\sqrt{3}$，$\angle A=\frac{2\pi}{3}$，则b为
+A: 1
+B: $\frac{\sqrt{10}}{2}$
+C: $\sqrt{7}$
+D: 2
+
+调用 Qwen API 进行翻译...
+翻译:
+В треугольнике $\bigtriangleup ABC$, если c=1, $a=\sqrt{3}$, $\angle A=\frac{2\pi}{3}$, тогда b равно
+A: 1
+B: $\frac{\sqrt{10}}{2}$
+C: $\sqrt{7}$
+D: 2
+
+原文:
+函数$y=\sqrt{2x+1} + \sqrt{3-4x}$的定义域为
+A: (-\infty, 1/2]
+B: (-1/2, 3/4)
+C: (1/2,0)\cup (0, \infty)
+D: [-1/2, 3/4]
+
+调用 Qwen API 进行翻译...
+翻译:
+Область определения функции \( y = \sqrt{2x+1} + \sqrt{3-4x} \) является:
+A: (-\infty, 1/2]
+B: (-1/2, 3/4)
+C: (1/2,0)\cup (0, \infty)
+D: [-1/2, 3/4]
+
+原文:
+$cos\frac{7}{6}\pi=$
+A: $-\frac{1}{2}$
+B: $\frac{1}{2}$
+C: $-\frac{\sqrt{3}}{2}$
+D: $\frac{\sqrt{3}}{2}$
+
+调用 Qwen API 进行翻译...
+翻译:
+$\cos\frac{7}{6}\pi=$  
+A: $-\frac{1}{2}$  
+B: $\frac{1}{2}$  
+C: $-\frac{\sqrt{3}}{2}$  
+D: $\frac{\sqrt{3}}{2}$
+
+原文:
+$\frac{1+2i}{1-2i}$等于
+A: $-\frac{3}{5}-\frac{4}{5}i$
+B: $-\frac{4}{5}+\frac{3}{5}i$
+C: $-\frac{3}{5}+\frac{4}{5}i$
+D: $-\frac{4}{5}-\frac{3}{5}i$
+
+调用 Qwen API 进行翻译...
+翻译:
+$\frac{1+2i}{1-2i}$ равно
+A: $-\frac{3}{5}-\frac{4}{5}i$
+B: $-\frac{4}{5}+\frac{3}{5}i$
+C: $-\frac{3}{5}+\frac{4}{5}i$
+D: $-\frac{4}{5}-\frac{3}{5}i$
+
+原文:
+把函数y=sin(2x-pi/4)的图像向右平移pi/8,所得到的图像对应的函数为
+A: 非奇非偶函数
+B: 奇函数
+C: 偶函数
+D: 既是奇函数又是偶函数
+
+调用 Qwen API 进行翻译...
+翻译:
+График функции y = sin(2x - π/4) смещен вправо на π/8, и полученная функция является:
+A: Нечетной и нечетной функцией
+B: Нечетной функцией
+C: Четной функцией
+D: Одновременно четной и нечетной функцией
+
+原文:
+在1，2，3，…，10这10个数字中，任取3个数字，那么“这三个数字的和⼤于6”这⼀事件是
+A: 以上选项均不正确
+B: 必然事件 
+C: 不可能事件
+D: 随机事件
+
+调用 Qwen API 进行翻译...
+翻译:
+Среди чисел 1, 2, 3, …, 10, если взять любые 3 числа, то событие «сумма этих трех чисел больше 6» является 
+A: 以上选项均不正确
+B: 必然事件 
+C: 不可能事件
+D: 随机事件
+
+原文:
+在锐角三角形ABC中，a=1, B=2A，则边b的取值范围为
+A: (sqrt(2),sqrt(3))
+B: (1,2)
+C: (2,3)
+D: (1,3)
+
+调用 Qwen API 进行翻译...
+翻译:
+В остроугольном треугольнике ABC, где a=1, B=2A, найти диапазон значений стороны b.
+A: (sqrt(2),sqrt(3))
+B: (1,2)
+C: (2,3)
+D: (1,3)
+
+原文:
+下列⼏个命题中，①两个⾯平⾏且相似，其余各⾯都是梯形的多⾯体是棱台；②有两个⾯互相平⾏，其余四个⾯都是等腰梯形的六⾯体是棱台；③各侧⾯都是正⽅形的四棱柱⼀定是正⽅体；④分别以矩形两条不等的边所在直线为旋转轴，将矩形旋转，所得到的两个圆柱是两个不同的圆柱。其中正确的有几个。
+A: 2
+B: 1
+C: 4
+D: 3
+
+调用 Qwen API 进行翻译...
+翻译:
+Среди следующих утверждений: ① многогранник, у которого две грани параллельны и подобны, а все остальные грани трапеции, является усеченной пирамидой; ② шестигранный многогранник, у которого два противоположных лица параллельны, а остальные четыре грани равнобедренные трапеции, является усеченной пирамидой; ③ четырехугольный призма, у которой все боковые грани являются квадратами, обязательно является кубом; ④ если прямоугольник вращается вокруг двух различных прямых, проходящих через его стороны, то получаются два разных цилиндра. Сколько из них верны?
+A: 2
+B: 1
+C: 4
+D: 3
+
+原文:
+已知{a_n}是等比数列，a_2=2, a_3=1/4，则公比q=
+A: 2
+B: -2
+C: -1/2
+D: 1/2
+
+调用 Qwen API 进行翻译...
+翻译:
+Известно, что {a_n} является геометрической прогрессией, a_2 = 2, a_3 = 1/4, тогда общее отношение q =
+A: 2
+B: -2
+C: -1/2
+D: 1/2
+
+原文:
+我国数学家陈景润在哥德巴赫猜想的研究中取得了世界领先的成果。哥德巴赫猜想是“每个大于2的偶数可以表示为两个素数的和”，如30=7+23.在不超过30的素数中，随机选取两个不同的数，其和等于30的概率是
+A: $\frac{1}{15}$
+B: $\frac{1}{12}$
+C: $\frac{1}{14}$
+D: $\frac{1}{18}$
+
+调用 Qwen API 进行翻译...
+翻译:
+Китайский математик Чэнь Цинрун достиг выдающихся результатов в исследовании гипотезы Гольдбаха. Гипотеза Гольдбаха гласит: «Каждое четное число, большее 2, можно представить как сумму двух простых чисел», например, 30 = 7 + 23. Среди простых чисел, не превышающих 30, два различных числа выбираются случайным образом. Вероятность того, что их сумма равна 30, является:
+A: $\frac{1}{15}$
+B: $\frac{1}{12}$
+C: $\frac{1}{14}$
+D: $\frac{1}{18}$
+
+原文:
+集合A={x|1<x<9},B={2，3，4}，那么A与B的关系是
+A: A真包含于B
+B: ⽆法确定
+C: B真包含于A 
+D: B=A 
+
+调用 Qwen API 进行翻译...
+翻译:
+Множество A = {x | 1 < x < 9}, B = {2, 3, 4}, тогда отношение между A и B является:
+A: A истинно содержится в B
+B: ⽆法确定
+C: B истинно содержится в A
+D: B = A
+
+原文:
+若sin(a)cos(a)=1/8，且pi/4<a<pi/2，则sin(a)-cos(a)=
+A: -\sqrt{3}/2
+B: 3/4
+C: -3/4
+D: \sqrt{3}/2
+
+调用 Qwen API 进行翻译...
+翻译:
+Если sin(a)cos(a) = 1/8 и π/4 < a < π/2, то sin(a) - cos(a) =
+A: -\sqrt{3}/2  
+B: 3/4  
+C: -3/4  
+D: \sqrt{3}/2
+
+原文:
+设$\bigtriangleup ABC$的内角A，B，C所对边的长分别是a，b，c，tan(A+B)=-2sinC, c=3, $\bigtriangleup ABC$的周长取值范围是
+A: $(6,3+2\sqrt{3}]$
+B: (6,9]
+C: [6,9]
+D: $[6,3+2\sqrt{3}]$
+
+调用 Qwen API 进行翻译...
+翻译:
+Пусть длины сторон треугольника $\bigtriangleup ABC$, противолежащих углам A, B и C, равны соответственно a, b, c, причем tan(A+B) = -2sinC, c = 3. Тогда диапазон значений периметра треугольника $\bigtriangleup ABC$ является:
+A: $(6,3+2\sqrt{3}]$
+B: (6,9]
+C: [6,9]
+D: $[6,3+2\sqrt{3}]$
+
+原文:
+已知等差数列中，公差为2，第n项等于30，且前n项之和为240，则n等于
+A: 17
+B: 15
+C: 16
+D: 14
+
+调用 Qwen API 进行翻译...
+翻译:
+Известно, что в арифметической прогрессии разность равна 2, n-й член равен 30, а сумма первых n членов равна 240. Тогда n равно 
+A: 17 
+B: 15 
+C: 16 
+D: 14
+
+原文:
+若(a+i)/(1-i)(a\in R)是纯虚数，则|(a+i)/(1-i)|=
+A: 2
+B: 1
+C: -i
+D: i
+
+调用 Qwen API 进行翻译...
+翻译:
+Если \((a+i)/(1-i)\) (где \(a \in \mathbb{R}\)) является чисто мнимым числом, то \(|(a+i)/(1-i)|=\)
+A: 2  
+B: 1  
+C: -i  
+D: i
+
+原文:
+函数$y=sin2xcos2x$最⼩正周期是
+A: $\frac{1}{2}\pi$
+B: $\frac{1}{4}\pi$
+C: $2\pi$
+D: $6\pi$
+
+调用 Qwen API 进行翻译...
+翻译:
+Наименьший положительный период функции \(y = \sin2x\cos2x\) является
+A: \(\frac{1}{2}\pi\)
+B: \(\frac{1}{4}\pi\)
+C: \(2\pi\)
+D: \(6\pi\)
+
+原文:
+为了判断甲、⼄两名同学本学期⼏次数学考试成绩哪个稳定，通常需要知道这两个⼈数学成绩的
+A: ⽅差
+B: 众数
+C: 频率分布
+D: 平均数
+
+调用 Qwen API 进行翻译...
+翻译:
+Для того чтобы определить, чьи результаты по математике более стабильны у учеников А и Б за несколько тестов этого семестра, обычно необходимо знать их
+A: дисперсию
+B: моду
+C: частотное распределение
+D: среднее значение
+
+原文:
+三角形ABC的面积是1，AB=2，BC=\sqrt{2}，角B为钝角，则AC=
+A: \sqrt{10}
+B: \sqrt{5} 
+C: 1
+D: 2
+
+调用 Qwen API 进行翻译...
+翻译:
+Площадь треугольника ABC равна 1, AB = 2, BC = \sqrt{2}, угол B тупой, тогда AC =
+A: \sqrt{10}
+B: \sqrt{5} 
+C: 1
+D: 2
+
+原文:
+已知集合p={1,2,3,4},Q={-1,0,1}，则$P\cap Q$等于
+A: {1,2}
+B: {-1,0,1,2,3,4}
+C: {1}
+D: {3,4}
+
+调用 Qwen API 进行翻译...
+翻译:
+Известно, что множество p = {1,2,3,4}, Q = {-1,0,1}, тогда $P \cap Q$ равно
+A: {1,2}
+B: {-1,0,1,2,3,4}
+C: {1}
+D: {3,4}
+
+原文:
+同时抛掷两枚质地均匀的硬币，则出现两个正⾯朝上的概率是
+A: 1/8
+B: 1/3
+C: 1/2
+D: 1/4
+
+调用 Qwen API 进行翻译...
+翻译:
+При одновременном бросании двух одинаковых монет вероятность того, что обе покажут герб, равна  
+A: 1/8  
+B: 1/3  
+C: 1/2  
+D: 1/4
+
+原文:
+设三阶方程$A=[A_{1},A_{2},A_{3}]$，其中$a_[i], i=1,2,3$为A的列向量，且$|A|=2$，则$|B|=|[a_{1}+3a_{2},a_{2},a_{3}]|=$
+A: 6
+B: 0
+C: -2
+D: 2
+
+调用 Qwen API 进行翻译...
+翻译:
+Пусть уравнение третьего порядка $A=[A_{1},A_{2},A_{3}]$, где $a_{i}, i=1,2,3$ — это векторы-столбцы A, и $|A|=2$, тогда $|B|=|[a_{1}+3a_{2},a_{2},a_{3}]|=$
+A: 6
+B: 0
+C: -2
+D: 2
+
+原文:
+等差数列中a5=11, S12=186, 则a8等于
+A: 18
+B: 20
+C: 21
+D: 22
+
+调用 Qwen API 进行翻译...
+翻译:
+В арифметической прогрессии a5 = 11, S12 = 186, тогда a8 равно 
+A: 18 
+B: 20 
+C: 21 
+D: 22
+
+原文:
+从一批羽毛球产品中任取一个，其质量小于4.8g的概率为0.3，质量小于4.85g的概率为0.32，那么质量在[4.8,4.85)g范围内的概率是
+A: 0.68
+B: 0.38
+C: 0.02
+D: 0.62
+
+调用 Qwen API 进行翻译...
+翻译:
+Из партии теннисных мячей вероятность того, что масса мяча меньше 4.8 г, равна 0.3, а вероятность того, что масса меньше 4.85 г, равна 0.32. Какова вероятность того, что масса находится в интервале [4.8, 4.85) г?
+A: 0.68
+B: 0.38
+C: 0.02
+D: 0.62
+
+原文:
+设$\bigtriangleup ABC$的内角A，B，C所对边的长分别是a，b，c，且$f(A)=\sqrt{3}sinA-2cos^{2}\frac{A}{2}+3$，当函数f(A)取到最大值时$\bigtriangleup ABC$的形状是
+A: 不确定
+B: 锐角三角形
+C: 钝角三角形
+D: 直角三角形
+
+调用 Qwen API 进行翻译...
+翻译:
+Пусть длины сторон треугольника $\bigtriangleup ABC$, противолежащих углам A, B, C, равны соответственно a, b, c, и $f(A)=\sqrt{3}\sin A - 2\cos^{2}\frac{A}{2} + 3$. Когда функция f(A) достигает своего максимального значения, форма треугольника $\bigtriangleup ABC$ является:
+A: неопределённой
+B: остроугольным треугольником
+C: тупоугольным треугольником
+D: прямоугольным треугольником
+
+原文:
+函数$f(x)=lnx-\frac{1}{x}$的零点所在的区间为
+A: (2,3)
+B: (3,4)
+C: (1,2)
+D: (0,1)
+
+调用 Qwen API 进行翻译...
+翻译:
+Нулевой точкой функции $f(x)=\ln x - \frac{1}{x}$ является интервал:
+A: (2,3)
+B: (3,4)
+C: (1,2)
+D: (0,1)
+
+原文:
+已知向量a，b满足$|a|=1,a\cdot b=-1$，则$a\cdot(2a-b)$ 等于
+A: 3
+B: 4
+C: 2
+D: 0
+
+调用 Qwen API 进行翻译...
+翻译:
+Известно, что векторы a и b удовлетворяют условиям \( |a| = 1 \), \( a \cdot b = -1 \). Тогда \( a \cdot (2a - b) \) равно
+A: 3
+B: 4
+C: 2
+D: 0
+
+原文:
+在$\bigtriangleup ABC$ 中，$a=2\sqrt{2},B=\frac{\pi}{4},\angle A=\frac{\pi}{3}$，则b=
+A: $\frac{5\sqrt{3}}{4}$
+B: $\frac{4\sqrt{3}}{3}$
+C: $\frac{5\sqrt{3}}{3}$
+D: $\frac{3\sqrt{3}}{2}$
+
+调用 Qwen API 进行翻译...
+翻译:
+В треугольнике $\bigtriangleup ABC$, $a=2\sqrt{2}, B=\frac{\pi}{4}, \angle A=\frac{\pi}{3}$, тогда $b=$
+A: $\frac{5\sqrt{3}}{4}$
+B: $\frac{4\sqrt{3}}{3}$
+C: $\frac{5\sqrt{3}}{3}$
+D: $\frac{3\sqrt{3}}{2}$
+
+原文:
+若回归直线的方程为$\hat{y}=2-1.5x$，则变量x增加一个单位时
+A: y平均减少2个单位
+B: y平均增加1.5个单位
+C: y平均增加2个单位
+D: y平均减少1.5个单位
+
+调用 Qwen API 进行翻译...
+翻译:
+Если уравнение регрессионной прямой равно $\hat{y}=2-1.5x$, то при увеличении переменной x на одну единицу:
+A: y в среднем уменьшается на 2 единицы
+B: y в среднем увеличивается на 1.5 единиц
+C: y в среднем увеличивается на 2 единицы
+D: y в среднем уменьшается на 1.5 единиц
+
+原文:
+不等式$|x(x-2)|>x(x-2)$的解集为
+A: $(2,+\infty)$
+B: $(-\infty,0)\cup(0,+\infty)$
+C: $(-\infty,0)$
+D: (0,2)
+
+调用 Qwen API 进行翻译...
+翻译:
+Решением неравенства $|x(x-2)|>x(x-2)$ является
+A: $(2,+\infty)$
+B: $(-\infty,0)\cup(0,+\infty)$
+C: $(-\infty,0)$
+D: (0,2)
+
+原文:
+16汽修（2）班总⼈数是50，其中喜欢蓝球的有21⼈，喜欢⽻⽑球的有19⼈，既不喜欢篮球⼜不喜欢⽻⽑球的有15⼈，那么既喜欢篮球⼜喜欢⽻⽑球的有⼏⼈？
+A: 5人
+B: 6人
+C: 7人
+D: 4人
+
+调用 Qwen API 进行翻译...
+翻译:
+В классе 16 по ремонту автомобилей (2) всего 50 человек, из них 21 человек любит баскетбол, 19 человек любят бадминтон, 15 человек не любят ни баскетбол, ни бадминтон. Сколько человек любят и баскетбол, и бадминтон?
+A: 5 человек
+B: 6 человек
+C: 7 человек
+D: 4 человека
+
+原文:
+如果等差数列$\left\{ a_{n} \right\}$中，$a_{3}+a_{5}+a_{7}=12$，那么$a_{1}+a_{2}+...+a_{9}$的值为
+A: 18
+B: 36
+C: 54
+D: 27
+
+调用 Qwen API 进行翻译...
+翻译:
+Если в арифметической прогрессии $\left\{ a_{n} \right\}$, $a_{3}+a_{5}+a_{7}=12$, то значение $a_{1}+a_{2}+...+a_{9}$ равно
+A: 18
+B: 36
+C: 54
+D: 27
+
+原文:
+已知$tan\alpha=\frac{1}{4},tan(\alpha-\beta)=\frac{1}{3}$，则$tan\beta=$
+A: $\frac{1}{13}$
+B: $-\frac{1}{13}$
+C: $-\frac{11}{7}$
+D: $\frac{7}{11}$
+
+调用 Qwen API 进行翻译...
+翻译:
+Известно, что \(tan\alpha=\frac{1}{4}, tan(\alpha-\beta)=\frac{1}{3}\), тогда \(tan\beta=\) 
+A: \(\frac{1}{13}\) 
+B: \(-\frac{1}{13}\) 
+C: \(-\frac{11}{7}\) 
+D: \(\frac{7}{11}\)
+
+原文:
+已知点（—4，2），（0，0），则线段的垂直平分线的斜率为
+A: 1/2
+B: -1/2
+C: 2
+D: -2
+
+调用 Qwen API 进行翻译...
+翻译:
+Известны точки (—4, 2), (0, 0). Тогда угловой коэффициент перпендикулярной биссектрисы отрезка равен  
+A: 1/2  
+B: -1/2  
+C: 2  
+D: -2
+
+原文:
+设A={x| x>1}，B={ x|x≥5}，那么$A\cup B=$
+A: {x|x≥1}
+B: {x|x≥5} 
+C: {x| x>1} 
+D: {x| x>5} 
+
+调用 Qwen API 进行翻译...
+翻译:
+Пусть A = {x | x > 1}, B = {x | x ≥ 5}, тогда $A \cup B =$ 
+A: {x|x≥1}  
+B: {x|x≥5}  
+C: {x| x>1}  
+D: {x| x>5}
+
+原文:
+人的年龄x与人体脂肪含量的百分数y的回归方程为y=0.577x-0.448，如果某人36岁，那么这个人的脂肪含量
+A: 无任何参考数据
+B: 一定20.3%
+C: 在20.3%附近的可能性比较大
+D: 以上解释都无道理
+
+调用 Qwen API 进行翻译...
+翻译:
+Уравнение регрессии между возрастом человека x и процентным содержанием жира в теле y задается как y = 0.577x - 0.448. Если человеку 36 лет, то содержание его жира:
+A: нет никаких справочных данных
+B: обязательно 20.3%
+C: вероятнее всего будет около 20.3%
+D: ни одно из этих объяснений не имеет смысла
+
+原文:
+经过点M(-2,m), N(m,4)的直线的斜率等于1，则m的值为
+A: 1或3
+B: 1
+C: 4
+D: 1或4
+
+调用 Qwen API 进行翻译...
+翻译:
+Найдите значение m, если прямая, проходящая через точки M(-2,m) и N(m,4), имеет угловой коэффициент, равный 1.
+A: 1 или 3
+B: 1
+C: 4
+D: 1 или 4
+
+原文:
+$f(x)=x^3-3x^2+2$在区间[-1,1]上的最大值是
+A: 4
+B: 1
+C: 0
+D: 2
+
+调用 Qwen API 进行翻译...
+翻译:
+Максимальное значение функции $f(x)=x^3-3x^2+2$ на интервале [-1, 1] равно
+A: 4
+B: 1
+C: 0
+D: 2
+
+原文:
+$x^2\neq y^2$是$x\neq y$且$x\neq -y$的
+A: 既不充分也不必要条件
+B: 充分不必要条件 
+C: 充要条件
+D: 必要不充分条件
+
+调用 Qwen API 进行翻译...
+翻译:
+$x^2 \neq y^2$ является 
+A: ни необходимым, ни достаточным условием для $x \neq y$ и $x \neq -y$
+B: достаточным, но не необходимым условием 
+C: необходимым и достаточным условием
+D: необходимым, но не достаточным условием
+
+原文:
+设$\bigtriangleup ABC$的内角A，B，C所对边的长分别是a，b，c，已知$a=2\sqrt{2}, cosA=\frac{\sqrt{6}}{3}, B=A+\frac{\pi}{2}$，则$\bigtriangleup ABC$的面积为
+A: $\frac{4\sqrt{3}}{3}$
+B: $\frac{4\sqrt{2}}{3}$
+C: $\frac{2\sqrt{3}}{3}$
+D: $\frac{2\sqrt{2}}{3}$
+
+调用 Qwen API 进行翻译...
+翻译:
+Пусть длины сторон треугольника $\bigtriangleup ABC$, противолежащих углам A, B, C, равны соответственно a, b, c. Известно, что $a=2\sqrt{2}, \cos A=\frac{\sqrt{6}}{3}, B=A+\frac{\pi}{2}$. Тогда площадь треугольника $\bigtriangleup ABC$ равна:
+A: $\frac{4\sqrt{3}}{3}$
+B: $\frac{4\sqrt{2}}{3}$
+C: $\frac{2\sqrt{3}}{3}$
+D: $\frac{2\sqrt{2}}{3}$
+
+原文:
+袋中有5个⽩球，3个红球，从中任意抽取4个球恰好抽到3个⽩球的概率
+A: 4/5
+B: 3/4
+C: 3/7
+D: 1/2
+
+调用 Qwen API 进行翻译...
+翻译:
+В мешке находится 5 белых шаров и 3 красных шара. Вероятность того, что при случайном извлечении 4 шаров окажется извлечено ровно 3 белых шара.
+A: 4/5
+B: 3/4
+C: 3/7
+D: 1/2
+
+原文:
+下⾯⼏何体中，过轴的截⾯⼀定是圆⾯的是
+A: 圆台
+B: 圆柱 
+C: 圆锥
+D: 球
+
+调用 Qwen API 进行翻译...
+翻译:
+Среди следующих геометрических тел, сечение через ось обязательно является круговым в случае:
+A: Circular truncated cone
+B: Cylinder 
+C: Cone
+D: Sphere
+
+原文:
+已知四棱锥S-ABCD的底面是中心为O的正方形，且SO$\prep$底面ABCD，$SA=2\sqrt{3}$，那么当该棱锥的体积最大时，它的高为
+A: $\sqrt{3}$
+B: 1
+C: 2
+D: 3
+
+调用 Qwen API 进行翻译...
+翻译:
+Известно, что основанием четырехугольной пирамиды S-ABCD является квадрат с центром O, причем SO$\perp$основанию ABCD, $SA=2\sqrt{3}$. Когда объем данной пирамиды максимальный, ее высота равна
+A: $\sqrt{3}$
+B: 1
+C: 2
+D: 3
+
+原文:
+函数$f(x)=\pi x +log_{2}x$的零点所在的区间为
+A: [0,1/8]
+B: [1/2, 1]
+C: [1/8, 1/4]
+D: [1/4, 1/2]
+
+调用 Qwen API 进行翻译...
+翻译:
+Интервал, в котором находится ноль функции $f(x)=\pi x + \log_{2}x$, является
+A: [0,1/8]
+B: [1/2, 1]
+C: [1/8, 1/4]
+D: [1/4, 1/2]
+
+原文:
+若复数m(m-2)+(m^2-3m+2)i是纯虚数，则实数m的值为
+A: 0或2
+B: 0
+C: 2
+D: 1或2
+
+调用 Qwen API 进行翻译...
+翻译:
+Если комплексное число m(m-2)+(m^2-3m+2)i является чисто мнимым числом, то значение вещественного числа m равно:
+A: 0 или 2
+B: 0
+C: 2
+D: 1 или 2
+
+原文:
+复数$(i(2+i)/(1-2i))$等于
+A: -i
+B: i
+C: -1
+D: 1
+
+调用 Qwen API 进行翻译...
+翻译:
+Комплексное число $(i(2+i)/(1-2i))$ равно
+A: -i
+B: i
+C: -1
+D: 1
+
+原文:
+已知两条平行直线l_1: 3x-4y+a=0, l_2: 6x-8y+10=0的距离为2，则a等于
+A: -5,15
+B: 10,5
+C: -5,10
+D: -15,5
+
+调用 Qwen API 进行翻译...
+翻译:
+Известно, что расстояние между двумя параллельными прямыми l_1: 3x-4y+a=0, l_2: 6x-8y+10=0 равно 2, тогда a равно
+A: -5,15
+B: 10,5
+C: -5,10
+D: -15,5
+
+原文:
+若$\overrightarrow{a}=(x,3),\overrightarrow{b}=(x,-2)$，则“$x=\sqrt{6}$”是“$\overrightarrow{a}\bot \overrightarrow{b}$”的
+A: 既不充分也不必要条件
+B: 必要而不充分条件
+C: 充分必要条件
+D: 充分而不必要条件
+
+调用 Qwen API 进行翻译...
+翻译:
+Если $\overrightarrow{a}=(x,3),\overrightarrow{b}=(x,-2)$, то «$x=\sqrt{6}$» является для «$\overrightarrow{a}\bot \overrightarrow{b}$»
+A: ни достаточным, ни необходимым условием
+B: необходимым, но не достаточным условием
+C:充分必要条件
+D: sufficient but not necessary condition
+
+原文:
+若回归直线的⽅程为y=2-1.5x，则变量x增加⼀个单位时
+A: y 平均增加1.5个单位
+B: y 平均减少2个单位 
+C: y 平均减少1.5个单位 
+D: y 平均增加2个单位
+
+调用 Qwen API 进行翻译...
+翻译:
+Если уравнение регрессионной прямой имеет вид y = 2 - 1.5x, то при увеличении переменной x на одну единицу:
+A: y в среднем увеличивается на 1.5 единиц
+B: y в среднем уменьшается на 2 единицы
+C: y в среднем уменьшается на 1.5 единиц
+D: y в среднем увеличивается на 2 единицы
+
+原文:
+将⼀个⻓⽅体切去3个顶⻆，得到的物体有多少个⾯
+A: 9
+B: 8
+C: 6
+D: 7
+
+调用 Qwen API 进行翻译...
+翻译:
+Сколько граней имеет полученный объект, если от прямоугольного параллелепипеда отрезать 3 вершины?
+A: 9
+B: 8
+C: 6
+D: 7
+
+原文:
+已知$\tan\alpha=1/4$, $\tan(\alpha-\beta)=1/3$，则$\tan\beta=$
+A: -1/13
+B: 1/13
+C: -11/7
+D: 7/11
+
+调用 Qwen API 进行翻译...
+翻译:
+Известно, что $\tan\alpha=1/4$, $\tan(\alpha-\beta)=1/3$, тогда $\tan\beta=$  
+A: -1/13  
+B: 1/13  
+C: -11/7  
+D: 7/11
+
+原文:
+等差数列{a_N}中，若$a_2+a_3=4$，$a_4+a_5=6$，则$a_9+a_{10}=$
+A: 11
+B: 12
+C: 10
+D: 9
+
+调用 Qwen API 进行翻译...
+翻译:
+В арифметической прогрессии {a_N}, если $a_2 + a_3 = 4$, $a_4 + a_5 = 6$, тогда $a_9 + a_{10} =$ 
+A: 11  
+B: 12  
+C: 10  
+D: 9
+
+原文:
+设三角形ABC的内角A，B，C所对边长分别是a，b，c，且b=3, c=1, A=2B，则a=
+A: $\sqrt{3}$
+B: $2\sqrt{3}$
+C: 2
+D: $\sqrt{3}/2$
+
+调用 Qwen API 进行翻译...
+翻译:
+Пусть длины сторон треугольника ABC, противолежащих углам A, B и C, равны соответственно a, b, c, причем b = 3, c = 1, A = 2B, тогда a =
+A: $\sqrt{3}$
+B: $2\sqrt{3}$
+C: 2
+D: $\sqrt{3}/2$
+
+原文:
+条件p:(x-2)^2<=1，条件q:2/(x-1)>=1，则p是q的
+A: 充要条件 
+B: 充分不必要条件
+C: 既不充分也不必要条件
+D: 必要不充分条件
+
+调用 Qwen API 进行翻译...
+翻译:
+Условие p: (x-2)^2<=1, условие q: 2/(x-1)>=1, тогда p является для q:
+A: необходимым и достаточным условием 
+B: достаточным, но не необходимым условием
+C: ни достаточным, ни необходимым условием
+D: необходимым, но не достаточным условием
+
+原文:
+设$\bigtriangleup ABC$的内角A，B，C所对边的长分别是a，b，c，若$\angle C=120^{\circ }, c=\sqrt{2}a$，则
+A: A与B的大小关系不能确定
+B: $A\gt B$
+C: A=B
+D: $A\lt B$
+
+调用 Qwen API 进行翻译...
+翻译:
+Пусть длины сторон треугольника $\bigtriangleup ABC$, соответствующих углам A, B и C, равны соответственно a, b, c. Если $\angle C=120^{\circ }$ и $c=\sqrt{2}a$, то:
+A: Невозможно определить соотношение между A и B
+B: $A\gt B$
+C: A=B
+D: $A\lt B$
+
+原文:
+使$log_{2}a>log_{3}27成立的a的取值范围是
+A: (8, \inf)
+B: (9, \inf)
+C: (3, \inf)
+D: (0, \inf)
+
+调用 Qwen API 进行翻译...
+翻译:
+Найти диапазон значений a, для которого выполнено неравенство \(log_{2}a > log_{3}27\):
+A: (8, \inf)
+B: (9, \inf)
+C: (3, \inf)
+D: (0, \inf)
+
+原文:
+投一颗骰子，设A为“出现2点”，B为“出现奇数点”，则P(A+B)=
+A: 1/6
+B: 5/6
+C: 2/3
+D: 1/3
+
+调用 Qwen API 进行翻译...
+翻译:
+При бросании кубика, пусть A — «появление двух очков», B — «появление нечетного числа очков», тогда P(A+B)= 
+A: 1/6 
+B: 5/6 
+C: 2/3 
+D: 1/3
+
+原文:
+若椭圆$x^2/m+y^2/8=1$的焦距为2，则m的值为
+A: 7
+B: 9
+C: 9或16
+D: 9或7
+
+调用 Qwen API 进行翻译...
+翻译:
+Если фокусное расстояние эллипса $x^2/m + y^2/8 = 1$ равно 2, то значение m равно 
+A: 7 
+B: 9 
+C: 9 или 16 
+D: 9 или 7
+
+原文:
+展开式中，x的系数为$\left( x-\frac{2}{x} \right)^{5}$
+A: 20
+B: 5
+C: 40
+D: 10
+
+调用 Qwen API 进行翻译...
+翻译:
+В разложении выражения коэффициент при \(x\) в \(\left( x-\frac{2}{x} \right)^{5}\) равен:
+A: 20
+B: 5
+C: 40
+D: 10
+
+原文:
+已知幂函数y=f(x)的图像过点$(-\frac{1}{2},-\frac{1}{8})$,则$log_{2}f(4)$的值为
+A: 4
+B: 6
+C: 3
+D: -6
+
+调用 Qwen API 进行翻译...
+翻译:
+Известно, что график степенной функции y=f(x) проходит через точку $(-\frac{1}{2},-\frac{1}{8})$, тогда значение $log_{2}f(4)$ равно
+A: 4
+B: 6
+C: 3
+D: -6
+
+原文:
+已知 $a\gt 0,a\neq 0$，则$a^{0}+log_{a}a=$
+A: 1
+B: 2
+C: a
+D: 0
+
+调用 Qwen API 进行翻译...
+翻译:
+Известно, что $a\gt 0, a\neq 0$, тогда $a^{0}+log_{a}a=$
+A: 1
+B: 2
+C: a
+D: 0
+
+原文:
+等⽐数列中a1=8,a2=64,则公⽐q为
+A: 8
+B: 3
+C: 4
+D: 2
+
+调用 Qwen API 进行翻译...
+翻译:
+В геометрической прогрессии a1 = 8, a2 = 64, тогда общее отношение q равно 
+A: 8 
+B: 3 
+C: 4 
+D: 2
+
+原文:
+若数列{a_n}满足a_{s+1}=1-1/a_s，且a_1=2，则a_2010等于
+A: -1
+B: 1
+C: 3/2
+D: 1/2
+
+调用 Qwen API 进行翻译...
+翻译:
+Если последовательность \{a_n\} удовлетворяет условию a_{s+1} = 1 - 1/a_s и a_1 = 2, то чему равно a_2010?
+A: -1
+B: 1
+C: 3/2
+D: 1/2
+
+原文:
+函数y=\sqrt{3-log_{2}x}的定义域为
+A: (0,9]
+B: (-inf,27]
+C: (0,27]
+D: (-inf, 9]
+
+调用 Qwen API 进行翻译...
+翻译:
+Область определения функции y=\sqrt{3-log_{2}x} является
+A: (0,9]
+B: (-inf,27]
+C: (0,27]
+D: (-inf, 9]
+
+原文:
+已知集合A={1,2,3,4}，B={y|y=3x-5, x\in A}，则$A\cap B$ =
+A: {1,2}
+B: {1,4}
+C: {2,4}
+D: {3,4}
+
+调用 Qwen API 进行翻译...
+翻译:
+Известно, что множество A = {1,2,3,4}, B = {y|y=3x-5, x ∈ A}, тогда $A \cap B$ =
+A: {1,2}
+B: {1,4}
+C: {2,4}
+D: {3,4}
+
+原文:
+函数y=sin(x)^(sin(\pi/2+x) 的最小正周期是
+A: 2\pi
+B: \pi/2
+C: 4\pi
+D: \pi
+
+调用 Qwen API 进行翻译...
+翻译:
+Наименьший положительный период функции y = sin(x)^(sin(π/2 + x)) является
+A: 2π
+B: π/2
+C: 4π
+D: π
+
+原文:
+若A与B相似，则
+A: |A|=|B|
+B: A，B都和同一对角矩阵相似
+C: A，B都有相同的特征向量
+D: $A-\lambda E=B-\lambda E$
+
+调用 Qwen API 进行翻译...
+翻译:
+Если A подобна B, тогда:
+A: |A|=|B|
+B: A и B подобны одному и тому же диагональному матрице
+C: У A и B есть одинаковые собственные векторы
+D: $A-\lambda E=B-\lambda E$
+
+原文:
+{语⽂，数学，英语，体育}$\cup${语⽂，数学，英语，历史，地理}是
+A: {语⽂，数学，英语}
+B: 空集 
+C: {历史，地理，体育} 
+D: {语⽂，数学}
+
+调用 Qwen API 进行翻译...
+翻译:
+{русский язык, математика, английский язык, физкультура} ∪ {русский язык, математика, английский язык, история, география} является
+A: {русский язык, математика, английский язык}
+B: пустое множество 
+C: {история, география, физкультура} 
+D: {русский язык, математика}
+
+原文:
+不等式$(x^2-x-6)/(x-1)>0$的解集为
+A: (x|x<-2或x>3}
+B: {x|-2<x<1或x>3}
+C: {x|-2<x<1或1<x<3}
+D: {x|x<-2或1<x<3}
+
+调用 Qwen API 进行翻译...
+翻译:
+Решением неравенства $(x^2-x-6)/(x-1)>0$ является:
+A: {x|x<-2 или x>3}
+B: {x|-2<x<1 или x>3}
+C: {x|-2<x<1 или 1<x<3}
+D: {x|x<-2 или 1<x<3}
+
+原文:
+设$\bigtriangleup ABC$的内角A，B，C所对边的长分别是a，b，c，且b=3，c=1，A=2B，则a=
+A: 2
+B: $\sqrt{3}$
+C: $2\sqrt{3}$
+D: \frac{\sqrt{3}}{2}
+
+调用 Qwen API 进行翻译...
+翻译:
+Пусть длины сторон треугольника $\bigtriangleup ABC$, противолежащих углам A, B и C, равны соответственно a, b, c, причем b = 3, c = 1 и A = 2B. Тогда a =
+A: 2
+B: $\sqrt{3}$
+C: $2\sqrt{3}$
+D: \frac{\sqrt{3}}{2}
+
+原文:
+已知复数z满足(1-i)z=2，则z为
+A: -1-i
+B: 1-i
+C: -1+i
+D: 1+i
+
+调用 Qwen API 进行翻译...
+翻译:
+Известно, что комплексное число z удовлетворяет уравнению (1-i)z=2, тогда z равно
+A: -1-i
+B: 1-i
+C: -1+i
+D: 1+i
+
+原文:
+记S_n为等差数列a_n的前n项和，若a_2=3,a_3=9,则S_6为
+A: 32
+B: 28
+C: 24
+D: 36
+
+调用 Qwen API 进行翻译...
+翻译:
+Обозначим S_n как сумму первых n членов арифметической прогрессии a_n. Если a_2 = 3, a_3 = 9, то S_6 равно:
+A: 32
+B: 28
+C: 24
+D: 36
+
+原文:
+已知集合$A=\left\{ (x,y)|x^{2}+y^{^{2}}\le 3,x\in Z,y\in Z \right\}$，则A中元素的个数为
+A: 9
+B: 5
+C: 4
+D: 8
+
+调用 Qwen API 进行翻译...
+翻译:
+Известно, что множество \( A = \{ (x,y) | x^2 + y^2 \leq 3, x \in \mathbb{Z}, y \in \mathbb{Z} \} \), тогда количество элементов в множестве A равно:
+A: 9
+B: 5
+C: 4
+D: 8
+
+原文:
+复数$\frac{2i}{1-i}$
+A: 1+i
+B: 1-i
+C: -1+i
+D: -1-i
+
+调用 Qwen API 进行翻译...
+翻译:
+Комплексное число $\frac{2i}{1-i}$
+A: 1+i
+B: 1-i
+C: -1+i
+D: -1-i
+
+原文:
+两位到北京旅游的外国游客要与2008奥运会的吉祥物福娃（5个）合影留念，要求排成⼀排，两位游客相邻且不排在两端，则不同的排法共有
+A: 720
+B: 480
+C: 1440
+D: 960
+
+调用 Qwen API 进行翻译...
+翻译:
+Два иностранных туриста, приехавших в Пекин, хотят сделать фотографию на память с талисманами Олимпиады 2008 года — Фуwa (5 штук). Они должны выстроиться в одну линию, причем два туриста должны стоять рядом и не на концах. Сколько существует различных способов расстановки?
+A: 720
+B: 480
+C: 1440
+D: 960
+
+原文:
+已知$\Omega=\left\{ (x,y)|x+y\le 8,x\ge 0,y\ge 0 \right\},A=\left\{ (x,y)|x\le 2,y\ge 0,3x-y\ge 0 \right\}$，若向区域$\Omega$上随机投1个点P，则点p落入区域A的概率为
+A: $\frac{7}{16}$
+B: $\frac{3}{4}$
+C: $\frac{3}{16}$
+D: $\frac{1}{4}$
+
+调用 Qwen API 进行翻译...
+翻译:
+Известно, что $\Omega=\left\{ (x,y)|x+y\le 8,x\ge 0,y\ge 0 \right\},A=\left\{ (x,y)|x\le 2,y\ge 0,3x-y\ge 0 \right\}$, если случайно выбрать точку P в области $\Omega$, то вероятность того, что точка p окажется в области A, равна
+A: $\frac{7}{16}$
+B: $\frac{3}{4}$
+C: $\frac{3}{16}$
+D: $\frac{1}{4}$
+
+原文:
+已知集合A={x|x\ge 0},B={0,1,2}，则
+A: $A\cup B=B$
+B: $A={x|x\ge 0},B={0,1,2}$
+C: $B\subsetneq A$
+D: $AIB=\emptyset $
+
+调用 Qwen API 进行翻译...
+翻译:
+Известно, что множество A = {x | x ≥ 0}, B = {0, 1, 2}, тогда:
+A: $A \cup B = B$
+B: $A = {x | x \ge 0}, B = {0, 1, 2}$
+C: $B \subsetneq A$
+D: $A \cap B = \emptyset$
+
+原文:
+使$log_{2}a>log_{3}27$成⽴a的取值范围是
+A: $(3,+\infty )$
+B: $(8,+\infty )$
+C: $(0,+\infty )$
+D: $(9,+\infty )$
+
+调用 Qwen API 进行翻译...
+翻译:
+Найти область значений a, для которой выполняется неравенство $log_{2}a>log_{3}27$:
+A: $(3,+\infty )$
+B: $(8,+\infty )$
+C: $(0,+\infty )$
+D: $(9,+\infty )$
+
+原文:
+若⼲个棱⻓为2、3、5的⻓⽅体，依相同⽅向拼成棱⻓为90的正⽅体，则正⽅体的⼀条对⻆线贯穿的⼩⻓⽅体的个数是
+A: 64
+B: 70
+C: 68
+D: 66
+
+调用 Qwen API 进行翻译...
+翻译:
+Несколько прямоугольных параллелепипедов с ребрами 2, 3 и 5 соединяются в одном направлении, чтобы образовать куб с ребром 90. Требуется найти количество малых прямоугольных параллелепипедов, которые пронзает диагональ куба.
+A: 64
+B: 70
+C: 68
+D: 66
+
+原文:
+函数f(x)=ln(x)-1/x的零点所在的区间为
+A: (2,3)
+B: (1,2)
+C: (0,1)
+D: (3,4)
+
+调用 Qwen API 进行翻译...
+翻译:
+Интервал, в котором находится нуль функции f(x) = ln(x) - 1/x, это
+A: (2,3)
+B: (1,2)
+C: (0,1)
+D: (3,4)
+
+原文:
+设甲：x=1 ⼄：$x^{2}-3x+2=0$
+A: 甲是⼄的充分条件，但不是⼄的必要条件
+B: 甲是⼄的必要条件，但不是⼄的充分条件 
+C: 甲是⼄的充分必要条件 
+D: 甲不是⼄的充分条件，也不是⼄的必要条件
+
+调用 Qwen API 进行翻译...
+翻译:
+Пусть А: x=1, Б: $x^{2}-3x+2=0$  
+A: А является достаточным условием для Б, но не является необходимым условием для Б  
+B: А является необходимым условием для Б, но не является достаточным условием для Б  
+C: А является как достаточным, так и необходимым условием для Б  
+D: А не является ни достаточным условием для Б, ни необходимым условием для Б
+
+原文:
+若函数$f(x)=log_{2}(1+x)-log_{2}(1-x)$在[a,b]上的最大值与最小值之和恰为0，则实数a,b满足
+A: -1<=a<b<=1且a+b=0
+B: -1<a<b<1且a+b=0
+C: a<b且a+b=0
+D: a=b=0
+
+调用 Qwen API 进行翻译...
+翻译:
+Если функция $f(x)=log_{2}(1+x)-log_{2}(1-x)$ определена на отрезке [a,b] и сумма её максимального и минимального значений равна точно 0, то действительные числа a,b удовлетворяют
+A: -1<=a<b<=1且a+b=0
+B: -1<a<b<1且a+b=0
+C: a<b且a+b=0
+D: a=b=0
+
+原文:
+在$\bigtriangleup ABC$中，$a=2, b=\sqrt{2}, \angle A=\frac{\pi}{4}$，则$\angle B=$
+A: $\frac{\pi}{6}$或$\frac{5\pi}{6}$
+B: $\frac{\pi}{3}$或$\frac{2\pi}{3}$
+C: $\frac{\pi}{6}$
+D: $\frac{\pi}{3}$
+
+调用 Qwen API 进行翻译...
+翻译:
+В треугольнике $\bigtriangleup ABC$, где $a=2, b=\sqrt{2}, \angle A=\frac{\pi}{4}$, тогда $\angle B=$  
+A: $\frac{\pi}{6}$ или $\frac{5\pi}{6}$  
+B: $\frac{\pi}{3}$ или $\frac{2\pi}{3}$  
+C: $\frac{\pi}{6}$  
+D: $\frac{\pi}{3}$
+
+原文:
+在⻓⽅体$ABCD-A_{1}B_{1}C_{1}D_{1}$中$AB=BC=1,CC_{1}=2$ ，则$AC_{1}=$
+A: $\sqrt{6}$
+B: $\sqrt{2}$
+C: $\sqrt{5}$
+D: 2
+
+调用 Qwen API 进行翻译...
+翻译:
+В прямоугольном параллелепипеде $ABCD-A_{1}B_{1}C_{1}D_{1}$, где $AB=BC=1, CC_{1}=2$, тогда $AC_{1}=$
+A: $\sqrt{6}$
+B: $\sqrt{2}$
+C: $\sqrt{5}$
+D: 2
+
+原文:
+$cos(-19\pi/6)=$
+A: -1/2
+B: 1/2
+C: \sqrt{3}/2
+D: -\sqrt{3}/2
+
+调用 Qwen API 进行翻译...
+翻译:
+$\cos(-19\pi/6)=$  
+A: -1/2  
+B: 1/2  
+C: $\sqrt{3}/2$  
+D: $-\sqrt{3}/2$
+
+原文:
+$(x-2/x)^7$的展开式中x^3的系数为
+A: 42
+B: 84
+C: 168
+D: 21
+
+调用 Qwen API 进行翻译...
+翻译:
+Коэффициент при x^3 в разложении выражения $(x-2/x)^7$ равен 
+A: 42 
+B: 84 
+C: 168 
+D: 21
+
+原文:
+设A，B为同阶可逆方阵，则下列等式中错误的是
+A: |AB|=|A||B|
+B: (A+B)-1=A-1+B-1
+C: $(AB)^{T}=B^{T}A^{T}$
+D: (AB)-1=(B-1)(A-1)
+
+调用 Qwen API 进行翻译...
+翻译:
+Пусть A и B - квадратные обратимые матрицы одинакового порядка, тогда неверным является следующее равенство:
+A: |AB|=|A||B|
+B: (A+B)-1=A-1+B-1
+C: $(AB)^{T}=B^{T}A^{T}$
+D: (AB)-1=(B-1)(A-1)
+
+原文:
+已知集合A={0,1,2}，B={2,3}，则集合$A\cup B = $ 
+A: {0,1,3}
+B: {0,1,2,3}
+C: {1,2,3}
+D: {2}
+
+调用 Qwen API 进行翻译...
+翻译:
+Известно, что множество A = {0, 1, 2}, B = {2, 3}, тогда множество \(A \cup B = \) 
+A: {0,1,3} 
+B: {0,1,2,3} 
+C: {1,2,3} 
+D: {2}
+
+原文:
+在三角形ABC中，$a=2\sqrt{2}$，$B=\pi /4$, $\angle = \pi /3$，则b=
+A: $5\sqrt{3}/3$
+B: $3\sqrt{3}/2$
+C: $5\sqrt{3}/4$
+D: $4\sqrt{3}/3$
+
+调用 Qwen API 进行翻译...
+翻译:
+В треугольнике ABC, $a=2\sqrt{2}$, $B=\pi /4$, $\angle = \pi /3$, тогда b=
+A: $5\sqrt{3}/3$
+B: $3\sqrt{3}/2$
+C: $5\sqrt{3}/4$
+D: $4\sqrt{3}/3$
+
+原文:
+下列对象不能组成集合的是
+A: 本班数学成绩较好的同学
+B: 不⼩于0的所有偶数
+C: 直线y=2x-1上所有的点
+D: 不等式x+2>0的解集全体
+
+调用 Qwen API 进行翻译...
+翻译:
+Следующие объекты не могут образовать множество:
+A: Одноклассники с хорошими результатами по математике
+B: Все четные числа, не меньшие 0
+C: Все точки на прямой y=2x-1
+D: Общий набор решений неравенства x+2>0
+
+原文:
+下列函数中，既是偶函数又在区间$(0,+\inf)$上单调递增的是
+A: $y=x^2-1$
+B: $y=-x$
+C: $y=\cos(x)$
+D: $y=x^4$
+
+调用 Qwen API 进行翻译...
+翻译:
+Среди следующих функций, какая является как чётной функцией, так и монотонно возрастающей на интервале $(0,+\inf)$:
+A: $y=x^2-1$
+B: $y=-x$
+C: $y=\cos(x)$
+D: $y=x^4$
+
+原文:
+已知双曲线$\frac{x^{2}}{4}-\frac{y^{2}}{12}=1$上一点M的横坐标是3，则点M到双曲线左焦点的距离是
+A: 4
+B: $2(\sqrt{7}+1)$
+C: $2(\sqrt{7}-1)$
+D: 8
+
+调用 Qwen API 进行翻译...
+翻译:
+Известно, что абсцисса точки M гиперболы $\frac{x^{2}}{4}-\frac{y^{2}}{12}=1$ равна 3. Тогда расстояние от точки M до левого фокуса гиперболы равно 
+A: 4 
+B: $2(\sqrt{7}+1)$ 
+C: $2(\sqrt{7}-1)$ 
+D: 8
+
+原文:
+在等比数列$\left\{ a_{n} \right\}$中，$a_{n}\gt 0(n\in N^{*})$且$a_{4}=4,a_{6}=16$，则数列$\left\{ a_{n} \right\}$的公比q是
+A: 2
+B: 1
+C: 4
+D: 3
+
+调用 Qwen API 进行翻译...
+翻译:
+В геометрической прогрессии $\left\{ a_{n} \right\}$, $a_{n}\gt 0(n\in N^{*})$ и $a_{4}=4, a_{6}=16$, тогда общий знаменатель последовательности $\left\{ a_{n} \right\}$ q равен
+A: 2
+B: 1
+C: 4
+D: 3
+
+原文:
+若函数f(x)的图象经过(0,-1)，则函数y=f(x+4)的反函数的图象经过点
+A: (-1,-4)
+B: (-4,-1)
+C: (0,-1)
+D: (1,-4)
+
+调用 Qwen API 进行翻译...
+翻译:
+Если график функции f(x) проходит через точку (0, -1), то график обратной функции к функции y = f(x+4) проходит через точку 
+A: (-1,-4) 
+B: (-4,-1) 
+C: (0,-1) 
+D: (1,-4)
+
+原文:
+设$x,y \in R$，且x+y=3，则3^x+3^y的最小值是
+A: 6\sqrt{3}
+B: 18\sqrt{3}
+C: 4\sqrt{3}
+D: 0
+
+调用 Qwen API 进行翻译...
+翻译:
+Пусть $x, y \in \mathbb{R}$ и $x + y = 3$, тогда минимальное значение выражения $3^x + 3^y$ равно:
+A: 6\sqrt{3}
+B: 18\sqrt{3}
+C: 4\sqrt{3}
+D: 0
+
+原文:
+在抽查产品的尺⼨过程中，将其尺⼨分成若⼲组，[3.5，6)是其中的⼀组，抽查出的个体在该组上的频率为0.2，该组上的直⽅图的⾼为h，则h为
+A: 0.1 
+B: 0.2
+C: 0.05
+D: 0.08
+
+调用 Qwen API 进行翻译...
+翻译:
+В процессе случайной проверки размеров products, их размеры делятся на несколько групп, [3.5, 6) — это одна из групп. Частота попадания элементов в эту группу составляет 0.2, а высота гистограммы для этой группы равна h. Тогда h равна
+A: 0.1 
+B: 0.2 
+C: 0.05 
+D: 0.08
+
+原文:
+下列函数中，周期是$\pi$，且在$[0,\pi/2]$上的减函数是
+A: $y=\sin(2x)$
+B: $y=\cos(2x)$
+C: $y=\sin(x+\pi/4)$
+D: $y=\cos(x+\pi/4)$
+
+调用 Qwen API 进行翻译...
+翻译:
+Среди следующих функций, период которых равен $\pi$, и которые являются убывающими на отрезке $[0,\pi/2]$, является:
+A: $y=\sin(2x)$
+B: $y=\cos(2x)$
+C: $y=\sin(x+\pi/4)$
+D: $y=\cos(x+\pi/4)$
+
+原文:
+已知$\tan\alpha=-3$, 则$\sin2(\alpha+\pi/4)=$
+A: 3/5
+B: -4/5
+C: 4/5
+D: -3/5
+
+调用 Qwen API 进行翻译...
+翻译:
+Известно, что $\tan\alpha=-3$, тогда $\sin2(\alpha+\pi/4)=$
+A: 3/5
+B: -4/5
+C: 4/5
+D: -3/5
+
+原文:
+已知三角形ABC的内角A，B，C的对边分别为a,b,c，若a^2=b^2+c^2-bc，则A=
+A: pi/3
+B: pi/6
+C: 2pi/3
+D: pi/4
+
+调用 Qwen API 进行翻译...
+翻译:
+Известно, что в треугольнике ABC стороны, противолежащие углам A, B и C, равны соответственно a, b, c. Если a^2 = b^2 + c^2 - bc, то A =
+A: pi/3
+B: pi/6
+C: 2pi/3
+D: pi/4
+
+原文:
+集合A={1,2,3,4}的真⼦集个数为
+A: 15
+B: 10
+C: 11
+D: 14
+
+调用 Qwen API 进行翻译...
+翻译:
+Количество собственных подмножеств множества A={1,2,3,4} равно 
+A: 15 
+B: 10 
+C: 11 
+D: 14
+
+原文:
+下列向量中与a=(1,1,-1)正交的向量是
+A: $a_{2}=(-1,1,1)$
+B: $a_{1}=(1,1,1)$
+C: $a_{4}=(0,1,1)$
+D: $a_{3}=(1,-1,1)$
+
+调用 Qwen API 进行翻译...
+翻译:
+Среди следующих векторов, вектор, ортогональный a=(1,1,-1), является
+A: $a_{2}=(-1,1,1)$
+B: $a_{1}=(1,1,1)$
+C: $a_{4}=(0,1,1)$
+D: $a_{3}=(1,-1,1)$
+
+原文:
+⽅程$x^2+2x-8=0$的解集⽤列举法表示为
+A: {2,-4}
+B: -4 ,2 
+C: {4,-2} 
+D: 4,-2
+
+调用 Qwen API 进行翻译...
+翻译:
+Решение уравнения $x^2+2x-8=0$ можно представить методом перечисления как
+A: {2,-4}
+B: -4 ,2 
+C: {4,-2} 
+D: 4,-2
+
+原文:
+如果在等差数列{a_n}中，a_3+a_4+a_5=12，那么a_1+a_2+a_3+…+a_7=
+A: 28
+B: 21
+C: 14
+D: 36
+
+调用 Qwen API 进行翻译...
+翻译:
+Если в арифметической прогрессии {a_n}, a_3+a_4+a_5=12, то a_1+a_2+a_3+…+a_7=
+A: 28
+B: 21
+C: 14
+D: 36
+
+原文:
+$\bigtriangleup ABC$ 中，若a=2, b+c=7, cosB=-1/4，则sinA=
+A: $\frac{3}{4}$
+B: $\frac{5}{8}$
+C: $\frac{\sqrt{15}}{8}$
+D: $\frac{\sqrt{5}}{4}$
+
+调用 Qwen API 进行翻译...
+翻译:
+В треугольнике $\bigtriangleup ABC$, если a=2, b+c=7, cosB=-1/4, тогда sinA=
+A: $\frac{3}{4}$
+B: $\frac{5}{8}$
+C: $\frac{\sqrt{15}}{8}$
+D: $\frac{\sqrt{5}}{4}$
+
+原文:
+设l，m是两条不同的直线，$\alpha$是一个平面，则下列命题正确的是
+A: 若$l//\alpha, m\subset \alpha$，则$l// m$
+B: 若$l//\alpha, m//\alpha$，则$l// m$
+C: 若$l\bot m, m\subset \alpha$，则$l\bot \alpha$
+D: 若$l\bot \alpha, l//m$，则$m\bot \alpha$
+
+调用 Qwen API 进行翻译...
+翻译:
+Пусть l и m — две различные прямые, а $\alpha$ — плоскость. Какое из следующих утверждений верно:
+A: Если $l//\alpha, m\subset \alpha$, то $l// m$
+B: Если $l//\alpha, m//\alpha$, то $l// m$
+C: Если $l\bot m, m\subset \alpha$, то $l\bot \alpha$
+D: Если $l\bot \alpha, l//m$, то $m\bot \alpha$
+
+原文:
+计算机执行 a=8, b=5, a=a+b, b=a-b, print a,b 程序段后，输出的结果为
+A: 8,5
+B: 13, 8
+C: 3, 13
+D: 13, 3 
+
+调用 Qwen API 进行翻译...
+翻译:
+После выполнения программного фрагмента компьютером a=8, b=5, a=a+b, b=a-b, print a,b, результат вывода будет
+A: 8,5
+B: 13, 8
+C: 3, 13
+D: 13, 3
+
+原文:
+下列函数中，为偶函数的是
+A: $y=log_{3}{x}$
+B: $y=3x^{2}-1$
+C: $y=x^{3}-3$
+D: $y=3^{x}$
+
+调用 Qwen API 进行翻译...
+翻译:
+Среди следующих функций, четной функцией является
+A: $y=log_{3}{x}$
+B: $y=3x^{2}-1$
+C: $y=x^{3}-3$
+D: $y=3^{x}$
+
+原文:
+双曲线$\frac{x^{2}}{a^{2}}-\frac{y^{2}}{b^{2}}=1 (a\gt 0, b\gt 0)$的离心率为$\sqrt{3}$，则其渐近方程为
+A: $y=\pm \frac{\sqrt{2}}{2}$
+B: $y=\pm \sqrt{2}x$
+C: $y=\pm \sqrt{3}x$
+D: $y=\pm \frac{\sqrt{3}}{2}$
+
+调用 Qwen API 进行翻译...
+翻译:
+Гипербола $\frac{x^{2}}{a^{2}}-\frac{y^{2}}{b^{2}}=1 (a\gt 0, b\gt 0)$ имеет эксцентриситет $\sqrt{3}$, тогда уравнение асимптот будет
+A: $y=\pm \frac{\sqrt{2}}{2}$
+B: $y=\pm \sqrt{2}x$
+C: $y=\pm \sqrt{3}x$
+D: $y=\pm \frac{\sqrt{3}}{2}$
+
+原文:
+若x>0,y>0，且1/x+9/y=1，则x+y的最小值是
+A: 16
+B: 13
+C: 12
+D: 20
+
+调用 Qwen API 进行翻译...
+翻译:
+Если x > 0, y > 0 и 1/x + 9/y = 1, то минимальное значение x + y равно 
+A: 16
+B: 13
+C: 12
+D: 20
+
+原文:
+y=log_{3}(6-x-x^2)的单调递减区间为
+A: [-1/2,inf)
+B: (-inf,-1/2]
+C: (-3,1/2]
+D: [-1/2,2)
+
+调用 Qwen API 进行翻译...
+翻译:
+Интервал монотонного убывания функции y=log_{3}(6-x-x^2) является 
+A: [-1/2,inf)
+B: (-inf,-1/2]
+C: (-3,1/2]
+D: [-1/2,2)
+
+原文:
+我省⾼中学校⾃实施素质教育以来，学⽣社团得到迅猛发展．某校⾼⼀新⽣中的五名同学打算参加“春晖⽂学社”、“健身俱乐部”、“篮球之家”、“围棋苑”四个社团．若每个社团⾄少有⼀名同学参加，每名同学必须参加且只能参加⼀个社团，且同学甲不参加“围棋苑”，则不同的参加⽅法的种数为
+A: 180
+B: 108
+C: 72
+D: 216
+
+调用 Qwen API 进行翻译...
+翻译:
+С тех пор как в нашей провинции в средних школах начали внедрять качественное образование, ученические клубы получили быстрое развитие. Пять первокурсников одной из школ хотят присоединиться к четырём клубам: «Весенняя литература», «Фитнес-клуб», «Дом баскетбола», «Сад го». Если каждый клуб должен иметь хотя бы одного участника, каждый ученик должен присоединиться ровно к одному клубу, и при этом ученик А не может присоединиться к «Саду го», то сколько существует различных способов распределения?
+
+A: 180
+B: 108
+C: 72
+D: 216
+
+原文:
+过圆锥的⾼的三等分点作平⾏于底⾯的截⾯，它们把圆锥侧⾯分成的三部分的⾯积之⽐为
+A: 1：2：4
+B: 1：3：5 
+C: 1：3：9
+D: 1：2：3 
+
+调用 Qwen API 进行翻译...
+翻译:
+Через точки, делящие высоту конуса на три равные части, проведены плоскости, параллельные основанию. Эти плоскости делят боковую поверхность конуса на три части, площади которых относятся как:
+A: 1:2:4
+B: 1:3:5
+C: 1:3:9
+D: 1:2:3
+
+原文:
+集合A={1，2,3, 4, 5},集合B={x| x2=9}，A∩B是
+A: { 2, 3, 5} 
+B: {3} 
+C: { -3， 3, } 
+D: { 1，2, 3} 
+
+调用 Qwen API 进行翻译...
+翻译:
+Множество A = {1, 2, 3, 4, 5}, множество B = {x | x² = 9}, A ∩ B это:
+A: { 2, 3, 5} 
+B: {3} 
+C: { -3, 3 } 
+D: { 1, 2, 3}
+
+原文:
+已知f(x)是定义域为$(-\infty ,+\infty )$的奇函数，满足f(1-x)=f(1+x)。若f(1)=2，则f(1)+f(2)+f(3)+...+f(50)等于
+A: -50
+B: 0
+C: 2
+D: 50
+
+调用 Qwen API 进行翻译...
+翻译:
+Известно, что f(x) — нечётная функция, определённая на области $(-\infty ,+\infty )$, и удовлетворяет условию f(1-x)=f(1+x). Если f(1)=2, то чему равно f(1)+f(2)+f(3)+...+f(50)?
+A: -50
+B: 0
+C: 2
+D: 50
+
+原文:
+已知定义在R上的偶函数f(x)，满足f(4+x)=f(x)，且在区间[0,2]上是增函数，那么f(0)<0是函数f(x)在区间[0,6]上有3个零点的
+A: 充分⽽不必要的条件 
+B: 既不充分也不必要的条件
+C: 充要条件 
+D: 必要⽽不充分的条件
+
+调用 Qwen API 进行翻译...
+翻译:
+Известно, что четная функция f(x), определенная на R, удовлетворяет условию f(4+x)=f(x), и является возрастающей на интервале [0,2]. Тогда, утверждение f(0)<0 является для того, чтобы функция f(x) имела 3 нуля на интервале [0,6]:
+A: sufficient but not necessary condition 
+B: neither sufficient nor necessary condition 
+C: necessary and sufficient condition 
+D: necessary but not sufficient condition
+
+原文:
+若向量 a=(1,m)，b=(-2,4) ，且 a*b=-10，则m=
+A: -2
+B: -4
+C: 4
+D: 1
+
+调用 Qwen API 进行翻译...
+翻译:
+Если вектор a = (1, m), b = (-2, 4), и a * b = -10, тогда m =
+A: -2
+B: -4
+C: 4
+D: 1
+
+原文:
+在长方体$ABCD-A_{1}B_{1}C_{1}D_{1}$中，AB=BC=1，$AA_{1}=\sqrt{3}$，则异面直线$AD_{1}$与$DB_{1}$所成角的余弦值为
+A: $\frac{1}{5}$
+B: $\frac{\sqrt{5}}{6}$
+C: $\frac{\sqrt{2}}{2}$
+D: $\frac{\sqrt{5}}{5}$
+
+调用 Qwen API 进行翻译...
+翻译:
+В прямоугольном параллелепипеде $ABCD-A_{1}B_{1}C_{1}D_{1}$, где AB=BC=1 и $AA_{1}=\sqrt{3}$, косинус угла между скрещивающимися прямыми $AD_{1}$ и $DB_{1}$ равен 
+A: $\frac{1}{5}$
+B: $\frac{\sqrt{5}}{6}$
+C: $\frac{\sqrt{2}}{2}$
+D: $\frac{\sqrt{5}}{5}$
+
+原文:
+已知双曲线 x^2/4-y^2/12=1 上的一点M的横坐标是3，则点M到双曲线左焦点的距离是
+A: 4
+B: 2(\sqrt{7}-1)
+C: 8
+D: 2(\sqrt{7}+1)
+
+调用 Qwen API 进行翻译...
+翻译:
+Известно, что абсцисса точки M гиперболы x^2/4-y^2/12=1 равна 3. Тогда расстояние от точки M до левого фокуса гиперболы равно
+A: 4
+B: 2(\sqrt{7}-1)
+C: 8
+D: 2(\sqrt{7}+1)
+
+原文:
+若f(x)=cosx-sinx在[-a,a]上是减函数，则a的最大值是
+A: $\frac{3\pi}{4}$
+B: $\frac{2\pi}{2}$
+C: $\frac{\pi}{4}$
+D: $\frac{\pi}{2}$
+
+调用 Qwen API 进行翻译...
+翻译:
+Если функция f(x) = cosx - sinx убывает на интервале [-a, a], то максимальное значение a равно 
+A: $\frac{3\pi}{4}$
+B: $\frac{2\pi}{2}$
+C: $\frac{\pi}{4}$
+D: $\frac{\pi}{2}$
+
+原文:
+设$\bigtriangleup ABC$的内角A，B，C所对边的长分别是a，b，c，若$b cosC+ccosB=2asinB, a^{2}+c^{2}-b^{2}=6$，则$\bigtriangleup ABC$的面积为
+A: $\frac{\sqrt{3}}{3}$
+B: $\frac{4\sqrt{3}}{3}$
+C: $\frac{8\sqrt{3}}{3}$
+D: $\frac{\sqrt{3}}{2}$
+
+调用 Qwen API 进行翻译...
+翻译:
+Пусть длины сторон треугольника $\bigtriangleup ABC$, противолежащих углам A, B, C, равны соответственно a, b, c. Если $b \cos C + c \cos B = 2a \sin B$ и $a^2 + c^2 - b^2 = 6$, то площадь треугольника $\bigtriangleup ABC$ равна
+
+A: $\frac{\sqrt{3}}{3}$  
+B: $\frac{4\sqrt{3}}{3}$  
+C: $\frac{8\sqrt{3}}{3}$  
+D: $\frac{\sqrt{3}}{2}$
+
+原文:
+已知幂函数y=f(x)的图像过点(-1/2,-1/8)，则log2 f(4)的值为
+A: -6
+B: 6
+C: 4
+D: 3
+
+调用 Qwen API 进行翻译...
+翻译:
+Известно, что график степенной функции y=f(x) проходит через точку (-1/2, -1/8). Тогда значение log2 f(4) равно:
+A: -6
+B: 6
+C: 4
+D: 3
+
+原文:
+在空间中，下列命题正确的是
+A: 平行与同一平面的两条直线平行
+B: 垂直与同一直线的两条直线平行
+C: 垂直与同一平面的两条直线平行
+D: 平行与同一直线的两个平面平行
+
+调用 Qwen API 进行翻译...
+翻译:
+В пространстве, какой из следующих утверждений верен:
+A: Две прямые, параллельные одной и той же плоскости, параллельны
+B: Две прямые, перпендикулярные одной и той же прямой, параллельны
+C: Две прямые, перпендикулярные одной и той же плоскости, параллельны
+D: Две плоскости, параллельные одной и той же прямой, параллельны
+
+原文:
+⽤性质描述法表示第⼀象限的所有点的集合
+A: {(x,y)|x<0,y>0}
+B: {(x,y)|x<0.y<0}
+C: {(x,y)|x>0,y>0}
+D: {(x,y)|x>0,Y<0} 
+
+调用 Qwen API 进行翻译...
+翻译:
+Выразите множество всех точек первого квадранта с помощью описания их свойств 
+A: {(x,y)|x<0,y>0} 
+B: {(x,y)|x<0.y<0} 
+C: {(x,y)|x>0,y>0} 
+D: {(x,y)|x>0,Y<0}
+
+原文:
+椭圆x^2/4+y^2=1的焦点坐标为
+A: (0,\pm\sqrt(2))
+B: (\pm\sqrt(3), 0)
+C: (0, \pm\sqrt(3)/2)
+D: (\pm\sqrt(3)/2, 0)
+
+调用 Qwen API 进行翻译...
+翻译:
+Фокусные координаты эллипса x^2/4 + y^2 = 1 являются
+A: (0,\pm\sqrt(2))
+B: (\pm\sqrt(3), 0)
+C: (0, \pm\sqrt(3)/2)
+D: (\pm\sqrt(3)/2, 0)
+
+原文:
+⽤性质描述法表示全体偶数
+A: {x|x=2k} 
+B: {x|x=2k+1} 
+C: {x|x=2k， K是⾃然数}
+D: {x|x=2K,K是正整数} 
+
+调用 Qwen API 进行翻译...
+翻译:
+Выразите множество всех четных чисел с помощью описания свойств.
+A: {x|x=2k} 
+B: {x|x=2k+1} 
+C: {x|x=2k, k - натуральное число}
+D: {x|x=2k, k - положительное целое число}
+
+原文:
+若直线x+y+m=0与圆$x^{2}+y^{2}=m$相切，则m=
+A: 2
+B: $\sqrt{2}$
+C: 无解
+D: 0或2
+
+调用 Qwen API 进行翻译...
+翻译:
+Если прямая x+y+m=0 касается окружности $x^{2}+y^{2}=m$, то m=
+A: 2
+B: $\sqrt{2}$
+C: нет решения
+D: 0 или 2
+
+原文:
+抛物线y^2=10x的焦点到准线的距离是
+A: 15/2
+B: 10
+C: 5/2
+D: 5
+
+调用 Qwen API 进行翻译...
+翻译:
+Расстояние от фокуса до директрисы параболы y^2=10x равно
+A: 15/2
+B: 10
+C: 5/2
+D: 5
+
+原文:
+已知函数$f(x)=ln(x)+ln(4-x)$，则
+A: f(x)在(0,4)单调递减
+B: y=f(x)的图像关于直线x=2对称
+C: f(x)在(0,4)单调递增
+D: y=f(x)的图像关于点(2,0)对称
+
+调用 Qwen API 进行翻译...
+翻译:
+Известно, что функция $ f(x) = \ln(x) + \ln(4-x) $, тогда:
+A: f(x) монотонно убывает на (0,4)
+B: график y=f(x) симметричен относительно прямой x=2
+C: f(x) монотонно возрастает на (0,4)
+D: график y=f(x) симметричен относительно точки (2,0)
+
+原文:
+设$\bigtriangleup ABC$的面积是1，$AB=1, BC=\sqrt{2}, \angle B$为钝角，则AC=
+A: 2
+B: $\sqrt{10}$
+C: $\sqrt{5}$
+D: 1
+
+调用 Qwen API 进行翻译...
+翻译:
+Пусть площадь $\bigtriangleup ABC$ равна 1, $AB=1$, $BC=\sqrt{2}$, и $\angle B$ тупой угол, тогда $AC=$
+A: 2  
+B: $\sqrt{10}$  
+C: $\sqrt{5}$  
+D: 1
+
+原文:
+对任意实数a(a>0, a\neq 1)，函数f(x)=a^{x-1}+3的图像必经过点
+A: (2,5)
+B: (5,2)
+C: (4,1)
+D: (1,4)
+
+调用 Qwen API 进行翻译...
+翻译:
+Для любого вещественного числа a (a > 0, a ≠ 1), график функции f(x) = a^{x-1} + 3 обязательно проходит через точку
+A: (2,5)
+B: (5,2)
+C: (4,1)
+D: (1,4)
+
+原文:
+已知一个等差数列的首项为1，公差为3，那么该数列的前5项和为
+A: 35
+B: 20
+C: 30
+D: 10
+
+调用 Qwen API 进行翻译...
+翻译:
+Известно, что первый член арифметической прогрессии равен 1, а разность равна 3. Тогда сумма первых пяти членов этой последовательности равна
+A: 35
+B: 20
+C: 30
+D: 10
+
+原文:
+2位男⽣和3位⼥⽣共5位同学站成⼀排，若男⽣甲不站在两端，3位⼥⽣中有且只有两位⼥⽣相邻，则不同的排法总数共有
+A: 42
+B: 36
+C: 60
+D: 48
+
+调用 Qwen API 进行翻译...
+翻译:
+Сколько всего различных способов расстановки 5 учеников, состоящих из 2 мальчиков и 3 девочек, если мальчик А не стоит на концах, и только две из трех девочек стоят рядом?
+
+A: 42
+B: 36
+C: 60
+D: 48
+
+原文:
+设全集U={a，b，c，d，e，f}，A={a，c，e}，那么CuA=
+A: {a,b,c,d,e,f} 
+B: 空集
+C: {a,c,e} 
+D: {b,d,f} 
+
+调用 Qwen API 进行翻译...
+翻译:
+Пусть универсальное множество U = {a, b, c, d, e, f}, A = {a, c, e}, тогда CuA =
+A: {a,b,c,d,e,f} 
+B: пустое множество
+C: {a,c,e} 
+D: {b,d,f}
+
+原文:
+在三角形ABC中，若a=2, b+c=7, cosB=-1/4，则sinA=
+A: \sqrt{5}/4
+B: \sqrt{15}/8
+C: 5/8
+D: 3/4
+
+调用 Qwen API 进行翻译...
+翻译:
+В треугольнике ABC, если a=2, b+c=7, cosB=-1/4, тогда sinA=
+A: \sqrt{5}/4
+B: \sqrt{15}/8
+C: 5/8
+D: 3/4
+
+原文:
+已知不等式|x-m|<1成立的充分不必要条件是1/4<x<1/2，则实数m的取值范围是
+A: [-1/2,5/4]
+B: (-1/2,5/4)
+C: [-5/4,1/2]
+D: [5/4,+inf)
+
+调用 Qwen API 进行翻译...
+翻译:
+Известно, что достаточное, но не необходимое условие для выполнения неравенства |x-m|<1 является 1/4<x<1/2, тогда множество значений действительного числа m есть:
+A: [-1/2,5/4]
+B: (-1/2,5/4)
+C: [-5/4,1/2]
+D: [5/4,+inf)
+
+翻译结果已保存到: high_school_mathematics_russian.csv，总共 164 行，成功翻译 164 行，平均每行耗时 4.40 秒
+原文:
+在某校班际篮球联赛中，每场⽐赛都要分出胜负，每队胜⼀场得3分，负⼀场得1分，如果某班要在第⼀轮的28场⽐赛中⾄少得43分，那么这个班⾄少要胜多少场
+A: 6
+B: 5
+C: 7
+D: 8
+
+调用 Qwen API 进行翻译...
+翻译:
+В межклассной баскетбольной лиге одной школы, в каждой игре определяется победитель и проигравший. За победу команда получает 3 очка, за поражение — 1 очко. Если одному классу нужно набрать как минимум 43 очка в первых 28 играх, то какое минимальное количество игр ему нужно выиграть?
+A: 6
+B: 5
+C: 7
+D: 8
+
+原文:
+三洋电视机⼚为了能清楚地表示出上半年⽉产量的多少与增减变化的情况，应绘制
+A: 不确定
+B: 扇形统计图
+C: 条形统计图 
+D: 折线统计图 
+
+调用 Qwen API 进行翻译...
+翻译:
+Телевизорный завод «Санъё» для четкого представления объема месячной продукции в первом полугодии и ситуации с изменениями производства должен использовать:
+A: Uncertain
+B: Pie chart
+C: Bar chart 
+D: Line chart
+
+原文:
+明明今年⼏岁? 爸爸今年39岁。您的年龄⽐我的2倍多11岁
+A: 13
+B: 15
+C: 12
+D: 14
+
+调用 Qwen API 进行翻译...
+翻译:
+Сколько лет Мингу в этом году? Папе в этом году 39 лет. Ваш возраст на 11 лет больше, чем вдвое больше моего.
+A: 13
+B: 15
+C: 12
+D: 14
+
+原文:
+$\frac{2}{5}$的分⺟增加15，要使分数⼤⼩不变，分⼦应扩⼤
+A: 6倍
+B: 15倍
+C: 3倍
+D: 4倍
+
+调用 Qwen API 进行翻译...
+翻译:
+Чтобы размер дроби $\frac{2}{5}$ не изменился при увеличении знаменателя на 15, числитель должен быть увеличен 
+A: 6倍 
+B: 15倍 
+C: 3倍 
+D: 4倍
+
+原文:
+⽤⼀块⻓28.26厘⽶、宽15.7厘⽶的⻓⽅形铁⽪，应该配上直径（ ）厘⽶的圆形铁⽪就可以做成⼀个容积最⼤的容器
+A: 2.5
+B: 5
+C: 9
+D: 4.5
+
+调用 Qwen API 进行翻译...
+翻译:
+Из прямоугольной металлической пластины размером 28,26 см в длину и 15,7 см в ширину следует подобрать круглую металлическую пластину с диаметром ( ) см, чтобы制成 сосуд с максимальным объемом.
+A: 2.5
+B: 5
+C: 9
+D: 4.5
+
+原文:
+我国股市交易中，每买、卖一次都要交7.5%的各种费用，某投资者以每股10元的价格买入上海某股1000股，当该股涨到12元时，他全部卖出后盈利为
+A: 1910元
+B: 1925元
+C: 2000元
+D: 1835元
+
+调用 Qwen API 进行翻译...
+翻译:
+В ходе торгов на китайском фондовом рынке за каждую покупку и продажу взимается комиссия в размере 7.5%. Определенный инвестор приобрел 1000 акций шанхайской компании по цене 10 юаней за акцию. Когда цена акции выросла до 12 юаней, он полностью их продал, получив прибыль:
+A: 1910 юаней
+B: 1925 юаней
+C: 2000 юаней
+D: 1835 юаней
+
+原文:
+某公司今年4⽉的营业额为2500万元，按计划第⼆季度的总营业额要达到9100万元，设该公司5、6 两⽉的营业额的⽉平均增⻓率为 x，根据题意列⽅程，则下列⽅程正确的是
+A: $2500(1+x)^{2}=9100$
+B: $2500(1+x)+2500(1+x)^{2}=9100$
+C: $2500+2500(1+x)+2500(1+x)^{2}=9100$
+D: $2500(1+x\%)^{2}=9100$
+
+调用 Qwen API 进行翻译...
+翻译:
+Выручка компании в апреле этого года составила 25 миллионов юаней, и согласно плану, общая выручка во втором квартале должна достичь 91 миллиона юаней. Обозначим среднемесячный процент роста выручки компании за май и июнь как x. На основе условия задачи, какой из следующих уравнений является правильным:
+A: $2500(1+x)^{2}=9100$
+B: $2500(1+x)+2500(1+x)^{2}=9100$
+C: $2500+2500(1+x)+2500(1+x)^{2}=9100$
+D: $2500(1+x\%)^{2}=9100$
+
+原文:
+⼀个商⼈把⼀件连⾐裙标价为640元，经⼯商⼈员核价，降⾄60元出售，仍可获利20%，如按原标价出售则⼀条裙⼦可获暴利（ ）元
+A: 610
+B: 600
+C: 590
+D: 620
+
+调用 Qwen API 进行翻译...
+翻译:
+Один торговец установил цену на платье в 640 юаней. После проверки сотрудниками коммерческой службы цена была снижена до 60 юаней, и даже при этом торговец получал бы 20% прибыли. Если бы он продавал по первоначальной цене, то получил бы чрезмерную прибыль ( ) юаней.
+A: 610
+B: 600
+C: 590
+D: 620
+
+原文:
+⼀元⼆次⽅程$x^{2}-8x=48$可表示成 $(x-a)^{2}=48+b$形式，其中a，b为整数，求a+b之值为
+A: -20
+B: 12
+C: -12
+D: 20
+
+调用 Qwen API 进行翻译...
+翻译:
+Квадратное уравнение $x^{2}-8x=48$ можно представить в виде $(x-a)^{2}=48+b$, где a и b - целые числа. Найдите значение a+b.
+A: -20
+B: 12
+C: -12
+D: 20
+
+原文:
+－3.782
+A: 不是分数，是有理数
+B: 是分数，不是有理数 
+C: 是负数，也是分数 
+D: 是负数，不是分数
+
+调用 Qwen API 进行翻译...
+翻译:
+-3.782
+A: Not a fraction, it is a rational number
+B: Is a fraction, not a rational number
+C: Is a negative number, and also a fraction
+D: Is a negative number, not a fraction
+
+原文:
+已知圆的半径为$\sqrt{2}cm$，圆心到直线l的距离为1.4cm，则直线与圆的公共点数为
+A: 2个
+B: 1个 
+C: 0个
+D: 不确定
+
+调用 Qwen API 进行翻译...
+翻译:
+Известно, что радиус круга равен $\sqrt{2} \, \text{см}$, а расстояние от центра круга до прямой $l$ равно 1.4 см. Тогда количество общих точек между прямой и кругом равно:
+A: 2 точки
+B: 1 точка
+C: 0 точек
+D: неопределено
+
+原文:
+在边⻓为a的正⽅形内部，以⼀个顶点为圆⼼，a为半径画弧经过与圆⼼相邻的两个顶点，那么阴影部分的⾯积为
+A: $a-\frac{1}{2}\pi a^{2}$
+B: $\pi a^{2}-a$
+C: $\frac{1}{4}\pi a^{2}$
+D: $a-\pi a^{2}$
+
+调用 Qwen API 进行翻译...
+翻译:
+Внутри квадрата со стороной a, с одной вершиной как центр окружности и a как радиус, дуга проходит через две смежные вершины, прилегающие к центру. Какова площадь заштрихованной части?
+A: $a-\frac{1}{2}\pi a^{2}$
+B: $\pi a^{2}-a$
+C: $\frac{1}{4}\pi a^{2}$
+D: $a-\pi a^{2}$
+
+原文:
+某⼯⼚的⼀个⽣产⼩组，⽣产⼀批零件，当每个⼯⼈在⾃⼰原岗位⼯作时，9⼩时可完成这项⽣产任务。如果交换⼯⼈A和B的⼯作岗位，其它⼯⼈⽣产效率不变时，可提前⼀⼩时完成这项⽣产任务；如果交换⼯⼈C和D的⼯作岗位，其它⼯⼈⽣产效率不变时，也可以提前⼀⼩时完成这项⽣产任务。问： 如果同时交换A与B，C与D的⼯作岗位，其它⼯⼈⽣产效率不变，可以提前⼏分割完成这项⽣产任务
+A: 108
+B: 111
+C: 110
+D: 105
+
+调用 Qwen API 进行翻译...
+翻译:
+В одной производственной группе завода рабочие производят партию деталей. Когда каждый рабочий работает на своей позиции, им требуется 9 часов для выполнения этой производственной задачи. Если поменять местами рабочих A и B, при условии что производительность других рабочих остается неизменной, задача будет выполнена на час раньше. Также, если поменять местами рабочих C и D, при неизменной производительности других рабочих, задача также будет выполнена на час раньше. Вопрос: если одновременно поменять местами A с B и C с D, а производительность других рабочих останется прежней, на сколько минут можно будет завершить эту производственную задачу раньше?
+A: 108
+B: 111
+C: 110
+D: 105
+
+原文:
+下列元素中属于集合{x|x=2k k是⾃然数}的是
+A: -2
+B: 10
+C: 7
+D: 3
+
+调用 Qwen API 进行翻译...
+翻译:
+Среди следующих элементов, принадлежащих множеству {x|x=2k, где k является натуральным числом}, это:
+A: -2
+B: 10
+C: 7
+D: 3
+
+原文:
+横坐标、纵坐标都是整数的点叫做整点，函数$y=\frac{6x+3}{2x-1}$的图象上整点的个数是
+A: 5个
+B: 6个
+C: 3个
+D: 4个
+
+调用 Qwen API 进行翻译...
+翻译:
+Точки, у которых обе координаты — целые числа, называются целыми точками. Количество целых точек на графике функции \( y = \frac{6x + 3}{2x - 1} \) равно:
+A: 5个
+B: 6个
+C: 3个
+D: 4个
+
+原文:
+王先⽣到银⾏存了⼀笔三年期的定期存款，年利率是4.25%．若到期后取出得到本息（本⾦+利息）33825元．设王先⽣存⼊的本⾦为x元，则下⾯所列⽅程正确的是
+A: 3×4.25%x=33825 
+B: 3(x+4.25x)=33825 
+C: x+3×4.25%x=33825 
+D: x+4.25%x=33825 
+
+调用 Qwen API 进行翻译...
+翻译:
+Господин Ван сделал вклад в банке на три года под годовые 4,25%. Если по истечении срока он получил сумму principal+interest (основной капитал + проценты) в размере 33825 юаней. Пусть основной капитал, вложенный господином Ван, составляет x юаней, тогда правильным уравнением будет:
+A: 3×4.25%x=33825 
+B: 3(x+4.25x)=33825 
+C: x+3×4.25%x=33825 
+D: x+4.25%x=33825
+
+原文:
+等腰三⻆形的⼀个内⻆是50°，则另外两个⻆的度数分别是
+A: 65°，65°或50°，80°
+B: 50°,80°
+C: 50°,50°
+D: 65°，65° 
+
+调用 Qwen API 进行翻译...
+翻译:
+Один из внутренних углов равнобедренного треугольника равен 50°, тогда меры двух других углов соответственно:
+A: 65°, 65° или 50°, 80°
+B: 50°, 80°
+C: 50°, 50°
+D: 65°, 65°
+
+原文:
+如果a：b=c：d，那么不成⽴的等式有
+A: a：d=c：b
+B: b：a=d：c
+C: a: c=b: d 
+D: ad=bc
+
+调用 Qwen API 进行翻译...
+翻译:
+Если a:b = c:d, то неверные равенства включают:
+A: a:d = c:b
+B: b:a = d:c
+C: a:c = b:d 
+D: ad = bc
+
+原文:
+如果m是任意实数，则点P（m-4，m+1）⼀定不在
+A: 第⼀象限
+B: 第⼆象限 
+C: 第四象限 
+D: 第三象限 
+
+调用 Qwen API 进行翻译...
+翻译:
+Если m является любым вещественным числом, то точка P (m-4, m+1) точно не находится в 
+A: Первом квадранте 
+B: Втором квадранте 
+C: Четвертом квадранте 
+D: Третьем квадранте
+
+原文:
+⼀件上⾐打⼋折出售 就是按照原价的
+A: 百分之80
+B: 百分之120 
+C: 百分之100
+D: 百分之20 
+
+调用 Qwen API 进行翻译...
+翻译:
+Пиджак продается со скидкой 20%, что означает цену равную 
+A: 80 процентам 
+B: 120 процентам 
+C: 100 процентам 
+D: 20 процентам
+
+原文:
+在菱形ABCD中，对角线AC=4，$\angle BAD=120^{\circ }$，则菱形ABCD的周长为
+A: 16
+B: 20
+C: 15
+D: 18
+
+调用 Qwen API 进行翻译...
+翻译:
+В ромбе ABCD диагональ AC = 4, ∠BAD = 120°. Найдите периметр ромба ABCD.
+A: 16
+B: 20
+C: 15
+D: 18
+
+原文:
+某集合有5个元素，它的⼦集数为
+A: 24
+B: 27
+C: 25
+D: 26
+
+调用 Qwen API 进行翻译...
+翻译:
+Некоторое множество содержит 5 элементов, количество его подмножеств равно  
+A: 24  
+B: 27  
+C: 25  
+D: 26
+
+原文:
+福源鞋店进了25双⼉童鞋，每双进价20.2元，售货员阿姨以每双25元的价格售出，全部卖完这些鞋⼀共能赚多少钱
+A: 135
+B: 100
+C: 120
+D: 125
+
+调用 Qwen API 进行翻译...
+翻译:
+Обувной магазин «Фу Юань» закупил 25 пар детской обуви, заплатив за каждую пару 20,2 юаня, и продал их по цене 25 юаней за пару. Сколько всего денег магазин заработает на продаже всей партии обуви?
+A: 135
+B: 100
+C: 120
+D: 125
+
+原文:
+若多项式$x^{2}+mx+4$可以用完全平方公式分解因式，则m的值可以是
+A: 4
+B: 4或-4
+C: -4
+D: 2或-2
+
+调用 Qwen API 进行翻译...
+翻译:
+Если многочлен \(x^{2} + mx + 4\) может быть разложен на множители с помощью формулы полного квадрата, то значение \(m\) может быть:
+A: 4
+B: 4 или -4
+C: -4
+D: 2 или -2
+
+原文:
+已知∠A=65°，则∠A的补⻆等于
+A: 95°
+B: 135°
+C: 105°
+D: 115°
+
+调用 Qwen API 进行翻译...
+翻译:
+Известно, что ∠A = 65°, тогда дополнительный угол ∠A равен:
+A: 95°
+B: 135°
+C: 105°
+D: 115°
+
+原文:
+⽤性质描述法表示第⼀象限的所有点的集合
+A: {(x,y)|x<0.y<0} 
+B: {(x,y)|x>0,Y<0}
+C: {(x,y)|x>0,y>0}
+D: {(x,y)|x<0,y>0}
+
+调用 Qwen API 进行翻译...
+翻译:
+Выразите множество всех точек первого квадранта с помощью описания их свойств:
+A: {(x,y)|x<0.y<0} 
+B: {(x,y)|x>0,Y<0} 
+C: {(x,y)|x>0,y>0} 
+D: {(x,y)|x<0,y>0}
+
+原文:
+某市⼀⽉份的平均⽓温是﹣2℃，⼆⽉份的平均⽓温⽐⼀⽉份的升⾼了5℃，该市⼆⽉份的平均⽓温是
+A: 7℃ 
+B: ﹣5℃ 
+C: 5℃
+D: 3℃ 
+
+调用 Qwen API 进行翻译...
+翻译:
+Средняя температура в одном городе в январе составляет -2℃, а средняя температура в феврале на 5℃ выше, чем в январе. Какова средняя температура в этом городе в феврале?
+A: 7℃ 
+B: ﹣5℃ 
+C: 5℃ 
+D: 3℃
+
+原文:
+宝康⻝品⼚运回⼀批煤，原计划每天烧0.72吨，可以烧14天/改进炉灶后，世界每天少烧0.16吨，这批煤实际烧了多少天
+A: 16
+B: 20
+C: 14
+D: 18
+
+调用 Qwen API 进行翻译...
+翻译:
+Завод по производству пищевых продуктов «Баокан» привез партию угля. По первоначальному плану предполагалось сжигать 0,72 тонны в день, хватило бы на 14 дней. После улучшения печи ежедневное потребление угля сократилось на 0,16 тонны. Сколько фактически дней хватило этой партии угля?
+A: 16
+B: 20
+C: 14
+D: 18
+
+原文:
+已知关于x的分式⽅程$\frac{x}{x-1}-2=\frac{k}{1-x}$的解为正数，则k的取值范围为 
+A: k＞-2 
+B: k＞-2且k≠-1
+C: -2＜k＜0
+D: k＜2且k≠1
+
+调用 Qwen API 进行翻译...
+翻译:
+Известно, что решение дробного уравнения по \( x \) \(\frac{x}{x-1}-2=\frac{k}{1-x}\) является положительным числом, тогда диапазон значений \( k \) равен:
+A: k＞-2 
+B: k＞-2且k≠-1
+C: -2＜k＜0
+D: k＜2且k≠1
+
+原文:
+化简$\sqrt{3}-\sqrt{3}(1-\sqrt{3})$的结果是
+A: 3
+B: -3
+C: $\sqrt{3}$
+D: $-\sqrt{3}$
+
+调用 Qwen API 进行翻译...
+翻译:
+Упростите выражение $\sqrt{3}-\sqrt{3}(1-\sqrt{3})$. Результат равен:
+A: 3
+B: -3
+C: $\sqrt{3}$
+D: $-\sqrt{3}$
+
+原文:
+已知a、b均a >b,则下列结论不正确的是 
+A: 3a>3b
+B: a+3>b+3
+C: a-3>b-3
+D: -3a>-3b
+
+调用 Qwen API 进行翻译...
+翻译:
+Известно, что a и b таковы, что a > b. Среди следующих утверждений неверным является:
+A: 3a>3b
+B: a+3>b+3
+C: a-3>b-3
+D: -3a>-3b
+
+原文:
+下⾯的物体中，⽆论从什么⽅向观察，看到的图形都是圆形的是
+A: 旗袍
+B: ⾜球
+C: ⽛膏
+D: 易拉罐
+
+调用 Qwen API 进行翻译...
+翻译:
+Среди следующих объектов, тот, который при наблюдении с любого направления всегда имеет круглую форму, это:
+A:旗袍
+B:football
+C[toothpaste
+D:can
+
+解析翻译结果时出错
+解析失败，跳过该行
+
+原文:
+计算3.2*9.9的简便算法是
+A: 3.2*10-3.2*0.1
+B: 3.2*9*0.9
+C: 3.2*20-0.1
+D: 3.2*10/3.2
+
+调用 Qwen API 进行翻译...
+翻译:
+Удобный способ вычисления 3.2*9.9 — это
+A: 3.2*10-3.2*0.1
+B: 3.2*9*0.9
+C: 3.2*20-0.1
+D: 3.2*10/3.2
+
+原文:
+[3.4+3.6]*[4.5+4.5]=
+A: 16
+B: 36
+C: 42
+D: 63
+
+调用 Qwen API 进行翻译...
+翻译:
+[3,4+3,6]*[4,5+4,5]=
+A: 16
+B: 36
+C: 42
+D: 63
+
+原文:
+农村常搭建横截⾯为半圆形的全封闭塑料薄膜蔬菜⼤棚。如果不考虑塑料薄膜埋在⼟⾥的部分，那么搭建⼀个长32m，宽4米的蔬菜⼤棚需要⽤塑料薄膜的⾯积是
+A: $72\pi $
+B: $68\pi $
+C: $64\pi $
+D: $69\pi $
+
+调用 Qwen API 进行翻译...
+翻译:
+В сельской местности часто строят полностью закрытые пластиковыми пленками теплицы, поперечное сечение которых имеет форму полукруга. Если не учитывать часть пластиковой пленки, которая находится в земле, то какова площадь пластиковой пленки, необходимая для строительства теплицы длиной 32 м и шириной 4 м?
+A: $72\pi $
+B: $68\pi $
+C: $64\pi $
+D: $69\pi $
+
+原文:
+已知A在双曲线$y=-\frac{2}{x}$上，点B在直线y=x-4，且A，B关于y轴对称，设A的坐标为(m, n)，则$\frac{m}{n}+\frac{n}{m}$的值是
+A: -10
+B: 6
+C: 4
+D: -8
+
+调用 Qwen API 进行翻译...
+翻译:
+Известно, что точка A находится на гиперболе $y=-\frac{2}{x}$, точка B лежит на прямой $y=x-4$, причем точки A и B симметричны относительно оси y. Если координаты точки A обозначить как (m, n), то значение выражения $\frac{m}{n}+\frac{n}{m}$ равно:
+A: -10
+B: 6
+C: 4
+D: -8
+
+原文:
+在-2，-1，0，1这四个数中，最⼩的数是
+A: 0
+B: -2
+C: -1
+D: 1
+
+调用 Qwen API 进行翻译...
+翻译:
+Среди чисел -2, -1, 0, 1 наименьшее число является
+A: 0
+B: -2
+C: -1
+D: 1
+
+原文:
+在直⻆坐标系中，已知A（3，3），在x轴、y轴上确定⼀点P，使△AOP为等腰三⻆形，则符合条件的点P共有
+A: 6个 
+B: 8个 
+C: 10个 
+D: 4个
+
+调用 Qwen API 进行翻译...
+翻译:
+В прямоугольной системе координат известна точка A(3,3). На оси x и оси y найдите такую точку P, чтобы треугольник AOP был равнобедренным. Сколько всего существует точек P, удовлетворяющих данному условию?
+A: 6个 
+B: 8个 
+C: 10个 
+D: 4个
+
+原文:
+⼩慧去花店购买鲜花，若买5⽀玫瑰和3⽀百合，则她所带的钱还剩下10元；若买3⽀玫瑰和5⽀百合，则她所带的钱还缺4元.若只买8⽀玫瑰，则她所带的钱还剩下
+A: 31元
+B: 30元
+C: 19元 
+D: 25元 
+
+调用 Qwen API 进行翻译...
+翻译:
+Хуэй пошла в цветочный магазин покупать свежие цветы. Если она купит 5 роз и 3 лилии, у неё останется 10 юаней от того, что она принесла с собой; если она купит 3 розы и 5 лилий, ей не хватит 4 юаней из тех денег, что она принесла. Если она купит только 8 роз, то у неё останется:
+A: 31 юань
+B: 30 юаней
+C: 19 юаней
+D: 25 юаней
+
+原文:
+已知实数x、y满⾜$\sqrt{2x+y-1}+|x-2|=0$则x+y=
+A: 7
+B: 0
+C: 3
+D: 10
+
+调用 Qwen API 进行翻译...
+翻译:
+Известно, что действительные числа x и y удовлетворяют уравнению $\sqrt{2x+y-1}+|x-2|=0$, тогда x+y=
+A: 7
+B: 0
+C: 3
+D: 10
+
+原文:
+⼀根绳⼦剪成两段，第⼀段⻓4/9⽶，第⼆段占全⻓的4/9。，那么
+A: ⽆法确定 
+B: 两段⼀样⻓ 
+C: 第⼆段⻓ 
+D: 第⼀段⻓
+
+调用 Qwen API 进行翻译...
+翻译:
+Кусок верёвки разрезан на две части, длина первой части 4/9 метра, вторая часть составляет 4/9 всей длины. Тогда:
+A: Cannot determine
+B: Both segments are the same length
+C: The second segment is longer
+D: The first segment is longer
+
+原文:
+已知一个多边形内角和是外角和的四倍，则这个多边形是
+A: 十边形
+B: 九边形
+C: 十二边形
+D: 八边形
+
+调用 Qwen API 进行翻译...
+翻译:
+Известно, что сумма внутренних углов многоугольника в четыре раза больше суммы внешних углов. Тогда этот многоугольник является:
+A: десятиугольник
+B: девятиугольник
+C: двенадцатиугольник
+D: восьмиугольник
+
+原文:
+光速为$3\times10^{8}$米每秒，太阳与地球之间的距离为$1.5\times10^{11}$米，则太阳光到地球需要（）秒
+A: $5\times10^{3}$
+B: $5\times10^{4}$
+C: $5\times10^{2}$
+D: $2\times10^{2}$
+
+调用 Qwen API 进行翻译...
+翻译:
+Скорость света составляет $3\times10^{8}$ метров в секунду, а расстояние между Солнцем и Землей равно $1.5\times10^{11}$ метров, тогда время, необходимое для того, чтобы свет от Солнца достиг Земли, составляет ( ) секунд.
+A: $5\times10^{3}$
+B: $5\times10^{4}$
+C: $5\times10^{2}$
+D: $2\times10^{2}$
+
+原文:
+在平⾯直⻆坐标系中，若点M（1，3）与点N（x，3）之间的距离是5，则x的值是 
+A: 不确定
+B: 6或－4
+C: 6或4
+D: 6
+
+调用 Qwen API 进行翻译...
+翻译:
+В прямоугольной декартовой системе координат, если расстояние между точкой M(1, 3) и точкой N(x, 3) равно 5, то значение x равно  
+A: неопределено  
+B: 6 или -4  
+C: 6 или 4  
+D: 6
+
+原文:
+把20克糖溶解在80克开⽔中，这时糖⽔中含糖
+A: $\frac{1}{5}$
+B: 20%
+C: 20克 
+D: $\frac{1}{4}$
+
+调用 Qwen API 进行翻译...
+翻译:
+Растворите 20 грамм сахара в 80 граммах кипятка, в этом случае содержание сахара в сахарном растворе составляет:
+A: $\frac{1}{5}$
+B: 20%
+C: 20 грамм 
+D: $\frac{1}{4}$
+
+原文:
+⼀块正⽅形钢板上截去3cm宽的⻓⽅形钢条，剩下的⾯积是$54cm^{2}$，则原来这块钢板的⾯积是
+A: $81cm^{2}$
+B: $72cm^{2}$
+C: $54cm^{2}$
+D: $90cm^{2}$
+
+调用 Qwen API 进行翻译...
+翻译:
+С квадратной стальной пластины отрезан прямоугольный стальной полос, ширина которого 3 см, и оставшаяся площадь составляет $54 \, \text{см}^2$. Какова была площадь первоначальной стали?
+A: $81 \, \text{см}^2$
+B: $72 \, \text{см}^2$
+C: $54 \, \text{см}^2$
+D: $90 \, \text{см}^2$
+
+原文:
+⽅程$x^{2}+2x-8=0$的解集⽤列举法表示为
+A: {2,-4}
+B: {4,-2} 
+C: -4 ,2 
+D: 4,-2 
+
+调用 Qwen API 进行翻译...
+翻译:
+Решение уравнения $x^{2}+2x-8=0$ можно представить методом перечисления как 
+A: {2,-4} 
+B: {4,-2} 
+C: -4 ,2 
+D: 4,-2
+
+原文:
+王⽼师准备⽤80元钱为年级获奖运动员买奖品，他先花48.6元买了9本笔记本，并准备⽤余下的钱买⼀些钢笔，钢笔每枝3.2元。王⽼师还可以买⼏枝钢笔
+A: 9
+B: 10
+C: 8
+D: 11
+
+调用 Qwen API 进行翻译...
+翻译:
+Учитель Ван собирался потратить 80 юаней на покупку призов для спортсменов, награждённых за успехи в учебе. Он сначала потратил 48.6 юаней на 9 тетрадей и планировал использовать оставшиеся деньги для покупки ручек, каждая из которых стоит 3.2 юаня. Сколько ручек ещё может купить учитель Ван?
+A: 9
+B: 10
+C: 8
+D: 11
+
+原文:
+互为反序的两个⾃然数的积是92565，求这两个互为反序的⾃然数
+A: 155和551
+B: 135和531
+C: 167和761
+D: 165和651 
+
+调用 Qwen API 进行翻译...
+翻译:
+Произведение двух натуральных чисел, являющихся обратными друг другу, равно 92565. Найдите эти два натуральных числа.
+A: 155 и 551
+B: 135 и 531
+C: 167 и 761
+D: 165 и 651
+
+原文:
+下列计算正确的是
+A: $-\sqrt{0.36}=-0.6$
+B: $\sqrt{36}=\pm 6$
+C: $\sqrt{(-3)^{2}}=-2$
+D: $\sqrt[3]{-5}=\sqrt[3]{5}$
+
+调用 Qwen API 进行翻译...
+翻译:
+Какое из следующих вычислений верно?
+A: $-\sqrt{0.36}=-0.6$
+B: $\sqrt{36}=\pm 6$
+C: $\sqrt{(-3)^{2}}=-2$
+D: $\sqrt[3]{-5}=\sqrt[3]{5}$
+
+原文:
+ 1/3的相反数是
+A: 1/3
+B: 3
+C: -1/3
+D: -3
+
+调用 Qwen API 进行翻译...
+翻译:
+Противоположное число для 1/3 это:
+A: 1/3
+B: 3
+C: -1/3
+D: -3
+
+原文:
+已知实数满足$(x^{2}-x)^{2}-4(x^{2}-x)-12=0$，则代数式$x^{2}-x+1$的值为
+A: 6
+B: 4
+C: 7
+D: 11
+
+调用 Qwen API 进行翻译...
+翻译:
+Известно, что действительные числа удовлетворяют уравнению $(x^{2}-x)^{2}-4(x^{2}-x)-12=0$, тогда значение выражения $x^{2}-x+1$ равно
+A: 6
+B: 4
+C: 7
+D: 11
+
+原文:
+⼀个圆柱和⼀个圆锥的底⾯积相等，体积也相等。如果圆柱的⾼是6厘⽶，圆锥的⾼是（ ）厘⽶
+A: 18
+B: 6
+C: 2
+D: 36
+
+调用 Qwen API 进行翻译...
+翻译:
+Площадь основания цилиндра и конуса равны, их объёмы также равны. Если высота цилиндра составляет 6 сантиметров, то высота конуса составляет ( ) сантиметров.
+A: 18
+B: 6
+C: 2
+D: 36
+
+原文:
+若关于x的⼀元⼆次⽅程$ax^{2}+bx+5=0 (a\neq 0)$ 的解是x=1，则2015-a-b的值是
+A: 2021
+B: 2020
+C: 2023
+D: 2022
+
+调用 Qwen API 进行翻译...
+翻译:
+Если решение квадратного уравнения с одной переменной $ax^{2}+bx+5=0 (a\neq 0)$ равно x=1, то значение 2015-a-b равно 
+A: 2021 
+B: 2020 
+C: 2023 
+D: 2022
+
+原文:
+下列各式中，等号不成⽴的是
+A: -|8=-|-8|
+B: -|-8|=8
+C: |-8|=|8|
+D: |-8|=8
+
+调用 Qwen API 进行翻译...
+翻译:
+Среди следующих выражений, неверным является
+A: -|8=-|-8|
+B: -|-8|=8
+C: |-8|=|8|
+D: |-8|=8
+
+原文:
+4.803保留两位⼩数，约等于
+A: 4.81
+B: 4.80
+C: 5.0
+D: 4.8
+
+调用 Qwen API 进行翻译...
+翻译:
+4.803 округляется до двух десятичных знаков, что примерно равно 
+A: 4.81 
+B: 4.80 
+C: 5.0 
+D: 4.8
+
+原文:
+已知：$x=-6,y=-\frac{1}{6}$，n为自然数，则$x^{4n}y^{4n+2}$的值是
+A: $\frac{1}{36}$
+B: $-\frac{1}{12}$
+C: $-\frac{1}{36}$
+D: $\frac{1}{12}$
+
+调用 Qwen API 进行翻译...
+翻译:
+Известно, что $x = -6$, $y = -\frac{1}{6}$, и $n$ является натуральным числом. Тогда значение выражения $x^{4n}y^{4n+2}$ равно:
+A: $\frac{1}{36}$
+B: $-\frac{1}{12}$
+C: $-\frac{1}{36}$
+D: $\frac{1}{12}$
+
+原文:
+锐⻆△ABC的三条⾼AD、BE、CF交于H，在A、B、C、D、E、F、H七个点中.能组成四点共圆的组数是
+A: 6组
+B: 5组
+C: 7组
+D: 4组
+
+调用 Qwen API 进行翻译...
+翻译:
+В остроугольном треугольнике △ABC высоты AD, BE и CF пересекаются в точке H. Среди семи точек A, B, C, D, E, F и H количество групп из четырех точек, лежащих на одной окружности, равно:
+A: 6 групп
+B: 5 групп
+C: 7 групп
+D: 4 группы
+
+原文:
+若(2,k)是双曲线$y=\frac{1}{x}$上的一点，则函数y=(k-1)x的图像经过
+A: 一、三象限
+B: 三、四象限
+C: 二、四象限
+D: 一、二象限
+
+调用 Qwen API 进行翻译...
+翻译:
+Если точка (2, k) принадлежит гиперболе $y=\frac{1}{x}$, то график функции y=(k-1)x проходит через
+A: первая и третья четверти
+B: третья и четвертая четверти
+C: вторая и четвертая четверти
+D: первая и вторая четверти
+
+原文:
+x=1 是关于 x 的⽅程 2x-a=0 的解，则 a 的值是
+A: -2
+B: 1
+C: 2
+D: -1
+
+调用 Qwen API 进行翻译...
+翻译:
+Если x=1 является решением уравнения 2x-a=0 относительно x, то значение a равно
+A: -2
+B: 1
+C: 2
+D: -1
+
+原文:
+当1999≤x≤2000时，函数$y=x^{2}+x+12$的函数值中是整数值的个数是
+A: 4000
+B: 3998
+C: 3999
+D: 4001
+
+调用 Qwen API 进行翻译...
+翻译:
+Когда 1999≤x≤2000, количество целочисленных значений функции $y=x^{2}+x+12$ равно 
+A: 4000
+B: 3998
+C: 3999
+D: 4001
+
+原文:
+下列运⽤等式性质进⾏的变形，正确的是
+A: 若2x=3y，则x/2 = y/3 
+B: 如果am=bm，那么a=b 
+C: 若10x=5，则x=2
+D: 如果 a/m=b/m，那么a=b 
+
+调用 Qwen API 进行翻译...
+翻译:
+Следующее преобразование, выполненное с использованием свойств равенства, является правильным:
+A: Если 2x=3y, то x/2 = y/3
+B: Если am=bm, то a=b
+C: Если 10x=5, то x=2
+D: Если a/m=b/m, то a=b
+
+原文:
+16汽修（2）班总⼈数是50，其中喜欢蓝球的有21⼈，喜欢⽻⽑球的有19⼈，既不喜欢篮球⼜不喜欢⽻⽑球的有15⼈，那么既喜欢篮球⼜喜欢⽻⽑球的有⼏⼈
+A: 5⼈
+B: 7⼈
+C: 6⼈
+D: 4⼈
+
+调用 Qwen API 进行翻译...
+翻译:
+В классе 16 по ремонту автомобилей (2) всего 50 человек, из них 21 человек любит баскетбол, 19 человек любят бадминтон, 15 человек не любят ни баскетбол, ни бадминтон. Сколько человек любят и баскетбол, и бадминтон?
+A: 5 человек
+B: 7 человек
+C: 6 человек
+D: 4 человека
+
+原文:
+若(x+t)(x+1)的积中不含有x的一次项，则t为
+A: 1
+B: -1
+C: 0
+D: $\pm 1$
+
+调用 Qwen API 进行翻译...
+翻译:
+Если в произведении (x+t)(x+1) отсутствует член с x первой степени, то t равно
+A: 1
+B: -1
+C: 0
+D: $\pm 1$
+
+原文:
+已知$\frac{a}{|a|}+\frac{b}{|b|}$，则$\frac{ab}{|ab|}$的值为
+A: 0
+B: 不确定
+C: -1
+D: 1
+
+调用 Qwen API 进行翻译...
+翻译:
+Известно, что $\frac{a}{|a|}+\frac{b}{|b|}$, тогда значение $\frac{ab}{|ab|}$ равно
+A: 0
+B: Неопределенно
+C: -1
+D: 1
+
+原文:
+⼀元⼆次⽅程(x+1)(x–1)=2x+3的根的情况是
+A: 有两个不相等的实数根 
+B: 有两个相等的实数根 
+C: 没有实数根 
+D: 只有⼀个实数根 
+
+调用 Qwen API 进行翻译...
+翻译:
+Ситуация с корнями квадратного уравнения (x+1)(x–1)=2x+3 является:
+A: 有两个不相等的实数根 
+B: 有两个相等的实数根 
+C: нет вещественных корней 
+D: только один вещественный корень
+
+原文:
+在$\triangle ABC$和$\triangle A'B'C'$中，已知$\angle A=\angle A'$，AB=A'B'，添加下列条件中的⼀个，不能使$\triangle ABC\cong \triangle A'B'C'$⼀定成⽴的是
+A: BC=B'C'
+B: AC=A'C'
+C: $\angle C=\angle C'$
+D: $\angle B=\angle B'$
+
+调用 Qwen API 进行翻译...
+翻译:
+В треугольниках $\triangle ABC$ и $\triangle A'B'C'$ известно, что $\angle A=\angle A'$, $AB=A'B'$. Добавив один из следующих условий, какое из них не гарантирует, что $\triangle ABC\cong \triangle A'B'C'$:
+A: $BC=B'C'$
+B: $AC=A'C'$
+C: $\angle C=\angle C'$
+D: $\angle B=\angle B'$
+
+原文:
+“五⼀”假⽇期间，某省银联⽹络交易总⾦额接近161亿元，其中161亿⽤科学记数法表示为
+A: $1.61\times 10^{12}$
+B: $1.61\times 10^{10}$
+C: $1.61\times 10^{9}$
+D: $1.61\times 10^{11}$
+
+调用 Qwen API 进行翻译...
+翻译:
+Во время праздничных дней «Праздник Труда», общий объем транзакций через платежную сеть UnionPay в одной из провинций составил почти 16,1 миллиарда юаней, где 16,1 миллиард в научной нотации представляется как:
+A: $1.61\times 10^{12}$
+B: $1.61\times 10^{10}$
+C: $1.61\times 10^{9}$
+D: $1.61\times 10^{11}$
+
+原文:
+下列多项式在实数范围内能因式分解的是
+A: $x^{2}+x+1$
+B: $x^{2}-y$
+C: $x^{2}-2x+1$
+D: $x^{2}+y$
+
+调用 Qwen API 进行翻译...
+翻译:
+Следующие многочлены могут быть разложены на множители в области вещественных чисел:
+A: $x^{2}+x+1$
+B: $x^{2}-y$
+C: $x^{2}-2x+1$
+D: $x^{2}+y$
+
+原文:
+下列说法中，正确的是
+A: -9的平⽅根是-3
+B: 9的⽴⽅根是3 
+C: $\sqrt{25}$的算术平⽅根是5
+D: 6是36的算术平⽅根
+
+调用 Qwen API 进行翻译...
+翻译:
+Из следующих утверждений верным является:
+A: -9의平方根는 -3
+B: 9的立方根是 3
+C: $\sqrt{25}$ 的算术平方根是 5
+D: 6 是 36 的算术平方根
+
+原文:
+下列说法不正确的是
+A: 一组邻边相等的矩形是正方形
+B: 对角线相等的菱形是正方形
+C: 对角线互相垂直的矩形是正方形
+D: 有一个角是直角的平行四边形是正方形
+
+调用 Qwen API 进行翻译...
+翻译:
+Неправильное утверждение:
+A: A set of adjacent equal sides in a rectangle makes it a square
+B: A rhombus with equal diagonals is a square
+C: A rectangle with diagonals perpendicular to each other is a square
+D: A parallelogram with one right angle is a square
+
+原文:
+下列各式中，积最⼩的算式是
+A: 16.5*0.24
+B: 1.65*24.8
+C: 16.5*0.024 
+D: 16.5*24.8
+
+调用 Qwen API 进行翻译...
+翻译:
+Среди следующих выражений, наименьшее произведение имеет
+A: 16.5*0.24
+B: 1.65*24.8
+C: 16.5*0.024 
+D: 16.5*24.8
+
+原文:
+如果$x^{2}+2xy+y^{2}-2x-2y+1=0$,则x+y=
+A: 0
+B: 1
+C: -1
+D: $\pm 1$
+
+调用 Qwen API 进行翻译...
+翻译:
+Если $x^{2}+2xy+y^{2}-2x-2y+1=0$, то x+y=
+A: 0
+B: 1
+C: -1
+D: $\pm 1$
+
+原文:
+⼀个整数精确到万位是30万，这个数精确前可能是
+A:  309111 
+B: 294999
+C:  295786 
+D: 305997
+
+调用 Qwen API 进行翻译...
+翻译:
+Целое число, округленное до разряда десятков тысяч, составляет 300 тысяч. До округления это число могло быть:
+A: 309111 
+B: 294999 
+C: 295786 
+D: 305997
+
+原文:
+养禽场养鹅600只，养鸭的只数⽐鹅多50%，养禽场养鸭多少只？
+A: 800
+B: 600
+C: 900
+D: 700
+
+调用 Qwen API 进行翻译...
+翻译:
+На птицеферме находится 600 гусей, а число уток превышает число гусей на 50%. Сколько уток находится на птицеферме?
+A: 800
+B: 600
+C: 900
+D: 700
+
+原文:
+已知关于x的⽅程2x+4=m-x的解为负数，则m的取值范围是
+A: $m\lt 4$
+B: $m\gt \frac{3}{4}$
+C: $m\lt \frac{3}{4}$
+D: $m\gt 4$
+
+调用 Qwen API 进行翻译...
+翻译:
+Известно, что решение уравнения 2x + 4 = m - x является отрицательным числом, тогда диапазон значений m равен:
+A: $m\lt 4$
+B: $m\gt \frac{3}{4}$
+C: $m\lt \frac{3}{4}$
+D: $m\gt 4$
+
+原文:
+已知⼀个实数的两个不同平⽅根是a＋3和2a－3，则该实数是
+A: 10
+B: 15
+C: 12
+D: 9
+
+调用 Qwen API 进行翻译...
+翻译:
+Известно, что два различных квадратных корня из одного вещественного числа равны a + 3 и 2a - 3. Тогда это вещественное число равно
+A: 10
+B: 15
+C: 12
+D: 9
+
+原文:
+⽼王 a 岁，⼩李（ a -18）岁，过 c 年后，他们相差（ ）岁
+A: c-18
+B: 18
+C: c
+D: c+18
+
+调用 Qwen API 进行翻译...
+翻译:
+Ваньку старшему a лет, а Ли младшему (a - 18) лет. Через c лет разница между ними составит ( ) лет.
+A: c-18
+B: 18
+C: c
+D: c+18
+
+原文:
+如果两个有理数的商等于0，则
+A: 被除数不为0除数为0
+B: 两个数中有一个为0
+C: 被除数为0除数不为0
+D: 两个数都为0
+
+调用 Qwen API 进行翻译...
+翻译:
+Если частное двух рациональных чисел равно 0, то  
+A: делимое не равно 0, делитель равен 0  
+B: одно из двух чисел равно 0  
+C: делимое равно 0, делитель не равен 0  
+D: оба числа равны 0
+
+原文:
+一个长方形的长宽高分别是3x+6，4x，3x，则它的体积为
+A: $36x^{2}+72x$
+B: $15x^{3}+18x^{2}$
+C: $36x^{3}+72x^{2}$
+D: $21x^{3}+42x^{2}$
+
+调用 Qwen API 进行翻译...
+翻译:
+Длина, ширина и высота прямоугольного параллелепипеда равны соответственно 3x+6, 4x и 3x. Тогда его объем равен:
+A: $36x^{2}+72x$
+B: $15x^{3}+18x^{2}$
+C: $36x^{3}+72x^{2}$
+D: $21x^{3}+42x^{2}$
+
+原文:
+等底等⾼的⻓⽅体 正⽅体 圆柱的体积相⽐较 
+A: 圆柱体积⼤ 
+B: 正⽅体体积⼤ 
+C: ⼀样⼤ 
+D: ⻓⽅体体积⼤ 
+
+调用 Qwen API 进行翻译...
+翻译:
+Сравнение объемов прямоугольного параллелепипеда, куба и цилиндра с одинаковым основанием и высотой.  
+A: Volume of the cylinder is greater  
+B: Volume of the cube is greater  
+C: All are the same  
+D: Volume of the rectangular prism is greater
+
+原文:
+⼀件商品先涨价10%，后再降价10%，现价和原价相⽐
+A: 现价⾼
+B: 原价⾼
+C: ⼀样⾼
+D: ⽆法判断
+
+调用 Qwen API 进行翻译...
+翻译:
+Товар сначала подорожал на 10%, а затем подешевел на 10%, сравните текущую цену с первоначальной.
+A: Текущая цена выше
+B: Первоначальная цена выше
+C: Они одинаковые
+D: Невозможно определить
+
+原文:
+有6个棱⻓分别是3cm，4cm，5cm，的相同的⻓⽅体，把它们的某些⾯染上红⾊，使得有的⻓⽅体只有⼀个⾯是红⾊的，有的⻓⽅体恰有两个⾯是红⾊的，有的⻓⽅体恰有三个⾯是红⾊的，有的⻓⽅体恰有四个⾯是红⾊的，有的⻓⽅体恰有五个⾯是红⾊的，还有⼀个⻓⽅体六个⾯都是红⾊的，染⾊后把所有 的⻓⽅体分割成棱⻓为1cm的⼩正⽅体，分割完毕后，恰有⼀⾯是红⾊的⼩正⽅体最多有⼏个
+A: 199
+B: 177
+C: 166
+D: 188
+
+调用 Qwen API 进行翻译...
+翻译:
+Имеется 6 одинаковых прямоугольных параллелепипедов с ребрами 3 см, 4 см и 5 см. Некоторые их грани окрашиваются в красный цвет так, что у некоторых параллелепипедов только одна грань красная, у других — ровно две грани, у некоторых — ровно три грани, у других — ровно четыре грани, у некоторых — ровно пять граней, а один параллелепипед имеет все шесть красных граней. После окраски все параллелепипеды разделяются на маленькие кубики со стороной 1 см. Сколько всего может быть кубиков, у которых ровно одна грань красная?
+
+A: 199  
+B: 177  
+C: 166  
+D: 188
+
+原文:
+下列计算正确的是
+A: $3\sqrt{2}-\sqrt{2}=2\sqrt{2}$
+B: 2a+3a=6a
+C: $(-3a)^{2}=6a^{2}$
+D: $(x-y)^{2}=x^{2}-y^{2}$
+
+调用 Qwen API 进行翻译...
+翻译:
+Какое из следующих вычислений верно?
+A: $3\sqrt{2}-\sqrt{2}=2\sqrt{2}$
+B: 2a+3a=6a
+C: $(-3a)^{2}=6a^{2}$
+D: $(x-y)^{2}=x^{2}-y^{2}$
+
+原文:
+有⼀块梯形菜地，上底⻓4.5⽶，下底⻓7.5⽶，⾼10⽶，平均每平⽅⽶能收6棵⽩菜，这块地共可以收多少棵⽩菜
+A: 300
+B: 500
+C: 720
+D: 360
+
+调用 Qwen API 进行翻译...
+翻译:
+Есть трапециевидное овощное поле, длина верхнего основания составляет 4,5 метра, длина нижнего основания 7,5 метров, высота 10 метров. В среднем с одного квадратного метра собирают 6 капустных головок. Сколько всего капустных головок можно собрать с этого поля?
+A: 300
+B: 500
+C: 720
+D: 360
+
+原文:
+⼀个圆柱的侧⾯积是12.56dm2，⾼是0.5dm，它的底⾯直径是（ ）dm
+A: 8
+B: 4
+C: 16
+D: 12
+
+调用 Qwen API 进行翻译...
+翻译:
+Площадь боковой поверхности цилиндра равна 12.56 дм², высота составляет 0.5 дм, его диаметр основания равен ( ) дм.
+A: 8
+B: 4
+C: 16
+D: 12
+
+原文:
+和三⻆形三个顶点的距离相等的点是
+A: 三边中线的交点
+B: 三边上⾼所在直线的交点 
+C: 三条⻆平分线的交点
+D: 三边的垂直平分线的交点 
+
+调用 Qwen API 进行翻译...
+翻译:
+Точка, равноудаленная от трех вершин треугольника, это
+A: точка пересечения медиан треугольника
+B: точка пересечения прямых, содержащих высоты треугольника
+C: точка пересечения биссектрис углов треугольника
+D: точка пересечения серединных перпендикуляров сторон треугольника
+
+原文:
+骰⼦是⼀个质量均匀的⼩正⽅体，它的六个⾯上分别刻有1~6个点，⼩明仔细观察骰⼦，发现任意相对两⾯的点数和都相等。这枚骰⼦向上的⼀⾯的点数是5，它的对⾯ 的点数是
+A: 1
+B: 3
+C: 6
+D: 2
+
+调用 Qwen API 进行翻译...
+翻译:
+Кубик является маленьким кубом с равномерным распределением массы, на его шести гранях указаны числа от 1 до 6. Маленький Мин тщательно осмотрел кубик и обнаружил, что сумма чисел на любых противоположных гранях одинакова. На верхней грани кубика виднеется число 5, какое число находится на противоположной грани?
+A: 1
+B: 3
+C: 6
+D: 2
+
+原文:
+mn为相反数，下列错误的是
+A: $\frac{m}{n}=-1$
+B: $|m|=|n|$
+C: $mn=-m^{2}$
+D: $2m+2n=0$
+
+调用 Qwen API 进行翻译...
+翻译:
+mn являются противоположными числами, следующее неверно:
+A: $\frac{m}{n}=-1$
+B: $|m|=|n|$
+C: $mn=-m^{2}$
+D: $2m+2n=0$
+
+原文:
+⼀张纸围成⼀个圆柱形，它的⾼是3.14分⽶，底⾯直径1分⽶，这张纸⼀定是
+A: ⻓⽅形 
+B: 圆形 
+C: 圆锥形 
+D: 正⽅形
+
+调用 Qwen API 进行翻译...
+翻译:
+Лист бумаги свернут в цилиндр, высота которого составляет 3.14 дециметра, а диаметр основания 1 дециметр. Этот лист обязательно имеет форму:
+A: Прямоугольник 
+B: Круг 
+C: Конус 
+D: Квадрат
+
+原文:
+买1.5千克藕和4千克南⽠应付多钱？藕4.2元/千克。南⽠1.4元/千克。
+A: 11
+B: 11.9
+C: 12
+D: 11.7
+
+调用 Qwen API 进行翻译...
+翻译:
+Сколько стоит купить 1,5 килограмма лотоса и 4 килограмма тыквы? Лотос стоит 4,2 юаня за килограмм. Тыква стоит 1,4 юаня за килограмм.
+A: 11
+B: 11.9
+C: 12
+D: 11.7
+
+原文:
+内⻆的度数为整数的正 边形的个数是
+A: 24
+B: 22
+C: 18
+D: 20
+
+调用 Qwen API 进行翻译...
+翻译:
+Количество правильных многоугольников, у которых внутренние углы имеют целое число градусов, равно:
+A: 24
+B: 22
+C: 18
+D: 20
+
+原文:
+下列说法正确的是
+A: $-\frac{x+y}{3}-2x$不是整式
+B: $5a^{2}b^{2}$的次数是5
+C: x是单项式
+D: $4xy^{3}+3x^{2}y$的次数是7
+
+调用 Qwen API 进行翻译...
+翻译:
+Какое из следующих утверждений верно:
+A: $-\frac{x+y}{3}-2x$ не является целым выражением
+B: Степень $5a^{2}b^{2}$ равна 5
+C: x является одночленом
+D: Степень $4xy^{3}+3x^{2}y$ равна 7
+
+原文:
+化简$\frac{x^{2}}{x-1}+\frac{x}{1-x}$的结果是
+A: x+1
+B: -x
+C: x
+D: x-1
+
+调用 Qwen API 进行翻译...
+翻译:
+Упростите выражение $\frac{x^{2}}{x-1}+\frac{x}{1-x}$. Результат равен 
+A: x+1 
+B: -x 
+C: x 
+D: x-1
+
+原文:
+下⾯说法中正确的是
+A: 0是最⼩的有理数
+B: 0是整数，但不是正数，也不是负数
+C: 0是最⼩的正数
+D: 0是最⼩的整数
+
+调用 Qwen API 进行翻译...
+翻译:
+Выберите правильное утверждение:
+A: 0 является наименьшим рациональным числом
+B: 0 является целым числом, но не является положительным или отрицательным числом
+C: 0 является наименьшим положительным числом
+D: 0 является наименьшим целым числом
+
+原文:
+若$x=1-\frac{1}{m}$是方程mx-2m+2=0的根，则x-m的值为
+A: 0
+B: -1
+C: 2
+D: 1
+
+调用 Qwen API 进行翻译...
+翻译:
+Если $ x = 1 - \frac{1}{m} $ является корнем уравнения $ mx - 2m + 2 = 0 $, то значение $ x - m $ равно
+A: 0
+B: -1
+C: 2
+D: 1
+
+原文:
+⽐例尺⼀定，图上距离与实际距离
+A: 成正⽐例
+B: 成反⽐例
+C: 不成⽐例
+D: 不确定
+
+调用 Qwen API 进行翻译...
+翻译:
+При фиксированном масштабе, соотношение между расстоянием на карте и реальным расстоянием:
+A: Прямая пропорциональность
+B: Обратная пропорциональность
+C: Не образует пропорции
+D: Неопределенно
+
+原文:
+某学校计划⽤34件同样的奖品全部⽤于奖励在“经典诵读”活动中表现突出的班级，⼀等奖奖励6件，⼆等奖奖励4件，则分配⼀、⼆等奖个数的⽅案有 
+A: 1种
+B: 4种
+C: 3种
+D: 2种
+
+调用 Qwen API 进行翻译...
+翻译:
+Одна школа планирует использовать все 34 одинаковых призов для награждения классов, показавших отличные результаты в активности «Чтение классических произведений». Первому месту вручается 6 призов, второму месту — 4 приза. Сколько существует способов распределить количество мест первого и второго призов?
+A: 1 way
+B: 4 ways
+C: 3 ways
+D: 2 ways
+
+原文:
+下列各式中[ ]是⽅程
+A: X
+B: 4.7+5.2=9.9 
+C: 3X+6
+D: 3X+6=27
+
+调用 Qwen API 进行翻译...
+翻译:
+Среди следующих выражений [ ] является уравнением
+A: X
+B: 4.7+5.2=9.9 
+C: 3X+6
+D: 3X+6=27
+
+原文:
+下列现象是数学中的平移的是
+A: DVD⽚在光驱中运⾏ 
+B: 电梯由⼀楼升到顶楼 
+C: 秋天的树叶从树上随⻛飘落 
+D: “神⾈”六号宇宙⻜船绕地球运动 
+
+调用 Qwen API 进行翻译...
+翻译:
+Явление, которое представляет собой смещение в математике:
+A: DVD диск работает в приводе 
+B: Лифт поднимается с первого этажа на самый верхний 
+C: Осенние листья падают с деревьев, колеблемые ветром 
+D: Космический корабль «Шэньчжоу» шестой совершает движение вокруг Земли
+
+原文:
+已知a+b=2000+2001，a-b=2001−2000.则$s^{4}$-b^{4}等于
+A: 2003
+B: 2001
+C: 2000
+D: 2002
+
+调用 Qwen API 进行翻译...
+翻译:
+Известно, что a + b = 2000 + 2001 и a - b = 2001 - 2000. Тогда $s^{4}$ - b^{4} равно
+A: 2003
+B: 2001
+C: 2000
+D: 2002
+
+原文:
+已知⼀个⻆的补⻆是这个⻆余⻆的8.5倍，这个⻆的⼤⼩为
+A: 65°
+B: 68°
+C: 72°
+D: 78°
+
+调用 Qwen API 进行翻译...
+翻译:
+Известно, что дополнительный угол в 8.5 раз больше, чем острый угол. Найти величину этого угла.
+A: 65°
+B: 68°
+C: 72°
+D: 78°
+
+原文:
+某商场五⼀期间举⾏优惠销售活动，采取“满⼀百元送⼆⼗元，并且连环赠送”的酬宾⽅式，即顾客每消费满100元（100元可以是现⾦，也可以是购物券，或⼆者合计）就送20元购物券，满200元就送40元购 物券，依次类推，现有⼀位顾客第⼀次就⽤了16000元购物，并⽤所得购物券继续购物，那么他购回的 商品⼤约相当于它们原价的
+A: 90%
+B: 75%
+C: 80%
+D: 85%
+
+调用 Qwen API 进行翻译...
+翻译:
+Один торговый центр во время майских праздников проводит акцию со скидками, используя способ «при каждой полной сумме в 100 юаней дарим 20 юаней, и так далее по цепочке». То есть, каждый раз, когда покупатель тратит 100 юаней (100 юаней могут быть наличными, либо ваучерами, либо их комбинацией), он получает ваучер на 20 юаней, при расходе 200 юаней — ваучер на 40 юаней, и так далее. Один покупатель изначально потратил 16000 юаней на покупки и продолжил делать покупки, используя полученные за это покупные ваучеры. Какой примерно процент от первоначальной стоимости товаров составляют купленные им товары?
+A: 90%
+B: 75%
+C: 80%
+D: 85%
+
+原文:
+⽤性质描述法表示全体偶数
+A: {x|x=2k+1} 
+B: {x|x=2K,K是正整数} 
+C: {x|x=2k} 
+D: {x|x=2k， K是⾃然数} 
+
+调用 Qwen API 进行翻译...
+翻译:
+Выразите множество всех четных чисел с помощью описательного метода.
+A: {x|x=2k+1} 
+B: {x|x=2K, K является положительным целым числом} 
+C: {x|x=2k} 
+D: {x|x=2k, K является натуральным числом}
+
+原文:
+⼩华玩某种游戏，每局可随意玩若⼲次，每次得分是8，a（⾃然数），0这三个数中的⼀个，每局各次得分的总和叫做这⼀局的总积分，⼩华曾得到过这样的总积分：103，104，105，106，107，108， 109，110，⼜知道他不可能得到“83分”这个总积分。问：a是多少
+A: 12
+B: 13
+C: 14
+D: 11
+
+调用 Qwen API 进行翻译...
+翻译:
+Хуа играет в определенную игру, где может делать столько попыток, сколько захочет. За каждый ход он получает одно из трех очков: 8, a (натуральное число) или 0. Сумма всех набранных очков за раунд называется общей суммой очков этого раунда. Хуа уже набирал следующие общие суммы очков: 103, 104, 105, 106, 107, 108, 109, 110. Также известно, что ему невозможно набрать общую сумму очков «83». Вопрос: сколько равно a?
+A: 12
+B: 13
+C: 14
+D: 11
+
+原文:
+下列判断中，错误的是
+A: ⼀个负数的绝对值⼀定是正数
+B: ⼀个正数的绝对值⼀定是正数
+C: 任何数的绝对值都是正数
+D: 任何数的绝对值都不是负数
+
+调用 Qwen API 进行翻译...
+翻译:
+Среди следующих утверждений ошибочным является:
+A: Абсолютное значение отрицательного числа всегда является положительным числом
+B: Абсолютное значение положительного числа всегда является положительным числом
+C: Абсолютное значение любого числа всегда является положительным числом
+D: Абсолютное значение любого числа никогда не является отрицательным числом
+
+原文:
+如果把学校的位置记作0m，从学校出发向东⾛300m有⼀个书店，书店的位置记作+300m，从书店出发向⻄⾛600m有⼀个报亭，报亭的位置记作（ ）m 
+A:  +900 
+B: -600
+C: -300
+D: -900
+
+调用 Qwen API 进行翻译...
+翻译:
+Если считать положение школы за 0 метров, то через 300 метров к востоку от школы находится книжный магазин, его положение обозначается как +300 метров. От книжного магазина, двигаясь на запад 600 метров, вы попадаете к газетному киоску, положение которого обозначается ( ) метров.
+A: +900 
+B: -600
+C: -300
+D: -900
+
+原文:
+在数轴上，0左边的数
+A: 是负数
+B: 是正数
+C: 既不是正数，也不是负数 
+D: 既是正数，也是负数
+
+调用 Qwen API 进行翻译...
+翻译:
+На числовой прямой, числа слева от 0:
+A: являются отрицательными числами
+B: являются положительными числами
+C: ни положительные, ни отрицательные числа
+D: как положительные, так и отрицательные числа
+
+原文:
+抛物线$y=(x-2)^{2}+3$的顶点坐标为
+A: (-2,3)
+B: (-2,-3)
+C: (2,-3)
+D: (2,3)
+
+调用 Qwen API 进行翻译...
+翻译:
+Координаты вершины параболы $y=(x-2)^{2}+3$ являются
+A: (-2,3)
+B: (-2,-3)
+C: (2,-3)
+D: (2,3)
+
+原文:
+⼀个正⽅体的⽔晶砖，体积为$100cm^{2}$它的棱⻓⼤约在
+A: 7cm~8cm之间
+B: 4cm~5cm之间
+C: 5cm~6cm之间
+D: 6cm~7cm之间
+
+调用 Qwen API 进行翻译...
+翻译:
+Кубический кирпич из кристалла имеет объём $100cm^{2}$, его ребро примерно находится в следующем диапазоне:
+
+A: 7cm~8cm之间  
+B: 4cm~5cm之间  
+C: 5cm~6cm之间  
+D: 6cm~7cm之间
+
+原文:
+下列对象不能组成集合的是
+A: 直线y=2x-1上所有的点 
+B: 本班数学成绩较好的同学 
+C: 不等式x+2>0的解集全体 
+D: 不⼩于0的所有偶数 
+
+调用 Qwen API 进行翻译...
+翻译:
+Следующие объекты не могут образовать множество:
+A: Все точки на прямой y=2x-1 
+B: Одноклассники, хорошо успевающие по математике 
+C: Общий набор решений неравенства x+2>0 
+D: Все четные числа, не меньшие 0
+
+原文:
+⼀根体积为120⽴⽅分⽶的圆柱体⽊料，要把它削成最⼤的圆锥，需要削去（ ）⽴⽅分⽶的⽊料
+A: 80
+B: 100
+C: 40
+D: 60
+
+调用 Qwen API 进行翻译...
+翻译:
+Из圓лого бруса объёмом 120 кубических дециметров нужно сделать наибольший возможный круглый конус, при этом необходимо срезать ( ) кубических дециметров древесины.
+A: 80
+B: 100
+C: 40
+D: 60
+
+原文:
+现代互联⽹技术的⼴泛应⽤，催⽣了快递⾏业的⾼速发展.某家快递公司的分拣⼯⼩李和⼩江在分拣同⼀类物件时，⼩李分拣120个物件所⽤的时间与⼩江分拣 90 个物件所⽤的时间相同，已知⼩李每⼩时⽐ ⼩江多分拣20个物件.若设⼩江每⼩时分拣x个物件，则可列⽅程为
+A: 120/(x+20)=90/x 
+B: 120/x=90/(x-20) 
+C: 120/x=90/(x+20) 
+D: 120/(x-20)=90/x
+
+调用 Qwen API 进行翻译...
+翻译:
+Широкое применение современных интернет-технологий способствовало быстрому развитию курьерской отрасли. В одной курьерской компании сортировщики Ли и Цзян сортируют одинаковые типы предметов. За то же время, что Ли тратит на сортировку 120 предметов, Цзян сортирует 90 предметов. Известно, что Ли сортирует на 20 предметов в час больше, чем Цзян. Если предположить, что Цзян сортирует x предметов в час, то уравнение будет:
+A: 120/(x+20)=90/x 
+B: 120/x=90/(x-20) 
+C: 120/x=90/(x+20) 
+D: 120/(x-20)=90/x
+
+原文:
+下列计算中，正确的是
+A: $a^{3}+a^{3}=a^{6}$
+B: $a^{2}\cdot a^{4}=a^{8}$
+C: $(a^{2})^{3}=a^{5}$
+D: $a^{4}/a^{3}=a $
+
+调用 Qwen API 进行翻译...
+翻译:
+В следующих вычислениях правильным является
+A: $a^{3}+a^{3}=a^{6}$
+B: $a^{2}\cdot a^{4}=a^{8}$
+C: $(a^{2})^{3}=a^{5}$
+D: $a^{4}/a^{3}=a $
+
+原文:
+已知“甲⽐⼄多50%°则下⾯叙述中正确的是
+A: 甲与⼄的⽐是3：2 
+B: ⼄是甲的3倍 
+C: 甲与⼄的⽐是2：3 
+D: ⼄⽐甲少50% 
+
+调用 Qwen API 进行翻译...
+翻译:
+Известно, что «А больше В на 50%», тогда из нижеперечисленных утверждений верным является:
+A: Соотношение А к В равно 3:2 
+B: В является в 3 раза больше чем А 
+C: Соотношение А к В равно 2:3 
+D: В меньше А на 50%
+
+原文:
+在平⾯直⻆坐标系中，抛物线y=(x+5)(x-3) 经过变换后得到抛物线y=(x+3)(x-5)，则这个变换可以是
+A: 向左平移8个单位 
+B: 向右平移2个单位
+C: 向左平移2个单位
+D: 向右平移8个单位 
+
+调用 Qwen API 进行翻译...
+翻译:
+В прямоугольной декартовой системе координат парабола y = (x+5)(x-3) после преобразования становится параболой y = (x+3)(x-5). Это преобразование может быть:
+A: Сдвиг влево на 8 единиц
+B: Сдвиг вправо на 2 единицы
+C: Сдвиг влево на 2 единицы
+D: Сдвиг вправо на 8 единиц
+
+原文:
+在平⾯直⻆坐标系xOy中，点A(a, b)(a＞0, b＞0)在双曲线$y=\frac{k_{1}}{x}$上，点A关于x轴的对称点B在双曲线上$y=\frac{k_{2}}{x}$，则k1+k2的值为 0
+A: -1
+B: 1
+C: 2
+D: 0
+
+调用 Qwen API 进行翻译...
+翻译:
+В прямоугольной декартовой системе координат xOy точка A(a, b) (a > 0, b > 0) находится на гиперболе $y=\frac{k_{1}}{x}$, симметричная точке A относительно оси x точка B расположена на гиперболе $y=\frac{k_{2}}{x}$. Тогда значение k1+k2 равно
+A: -1
+B: 1
+C: 2
+D: 0
+
+原文:
+在60后⾯添上百分号，这个数就
+A: ⼤⼩不变 
+B: 扩⼤100倍 
+C: 缩⼩10倍 
+D: 缩⼩为原来的1% 
+
+调用 Qwen API 进行翻译...
+翻译:
+После добавления знака процента к числу 60, это число будет:
+A: remain the same 
+B: expand 100 times 
+C: reduce by 10 times 
+D: reduce to 1% of the original
+
+原文:
+⼀个菱形的边⻓是⽅程$x^{2}-8x+15=0$的⼀个根，其中⼀条对⻆线⻓为8，则该菱形的⾯积为
+A: 24或40
+B: 24
+C: 48
+D: 48或80
+
+调用 Qwen API 进行翻译...
+翻译:
+Сторона ромба является одним из корней уравнения $x^{2}-8x+15=0$, а одна из его диагоналей равна 8. Найдите площадь данного ромба.
+A: 24 или 40
+B: 24
+C: 48
+D: 48 или 80
+
+原文:
+(-2,6)关于x轴对称点的坐标为
+A: (2,-6)
+B: (2,6) 
+C: (-2,-6) 
+D: (-2,6)
+
+调用 Qwen API 进行翻译...
+翻译:
+Координаты точки, симметричной точке (-2,6) относительно оси x:
+A: (2,-6)
+B: (2,6) 
+C: (-2,-6) 
+D: (-2,6)
+
+原文:
+在4.3的末尾添上一个零后，小数的计数单位是
+A: 百分位
+B: 0.01 
+C: 0.1 
+D: 十分位 
+
+调用 Qwen API 进行翻译...
+翻译:
+После добавления нуля в конце 4.3, единица счета десятичной дроби становится
+A: Hundredths
+B: 0.01 
+C: 0.1 
+D: Tenths
+
+原文:
+一个三角形的底边和高都增加10%，那么，新三角形的面积比原三角形的面积
+A: 增加20%
+B: 增加10%
+C: 增加21%
+D: 增加100%
+
+调用 Qwen API 进行翻译...
+翻译:
+Если основание и высота треугольника увеличиваются на 10%, то площадь нового треугольника по сравнению с площадью исходного треугольника:
+A: увеличивается на 20%
+B: увеличивается на 10%
+C: увеличивается на 21%
+D: увеличивается на 100%
+
+原文:
+一件工作，甲做1/3小时完成，乙做0.4小时完成，两人合作()小时完成
+A: 0.7
+B: 不能计算
+C: 15/11/2023
+D: 11/02/2023
+
+调用 Qwen API 进行翻译...
+翻译:
+Одна работа, А может её выполнить за 1/3 часа, Б может выполнить за 0.4 часа, работая вместе они выполнят работу () часов.
+A: 0.7
+B: cannot calculate
+C: 15/11/2023
+D: 11/02/2023
+
+原文:
+0.375的计数单位是
+A: 0.01
+B: 无法确定
+C: 0.1
+D: 0.001
+
+调用 Qwen API 进行翻译...
+翻译:
+Единица счета для 0.375 это  
+A: 0.01  
+B: невозможно определить  
+C: 0.1  
+D: 0.001
+
+原文:
+已知A=1+1/2+1/3+1/4+...+1/11+1/12，则A的整数部分是
+A: 3
+B: 1
+C: 2
+D: 4
+
+调用 Qwen API 进行翻译...
+翻译:
+Известно, что A = 1 + 1/2 + 1/3 + 1/4 + ... + 1/11 + 1/12, тогда целая часть A равна
+A: 3
+B: 1
+C: 2
+D: 4
+
+原文:
+“太白酒”酒瓶上的商标纸上标有酒精度58%，这里的58%是指
+A: 酒精的体积是整瓶酒的质量的58%
+B: 酒精的质量是整瓶酒的质量的58%
+C: 酒精的质量是整瓶酒的体积的58%
+D: 酒精的体积是整瓶酒的体积的58%
+
+调用 Qwen API 进行翻译...
+翻译:
+На этикетке бутылки "Тайбаисю" указано содержание алкоголя 58%, что означает:
+A: Объем алкоголя составляет 58% от массы всего напитка в бутылке
+B: Масса алкоголя составляет 58% от массы всего напитка в бутылке
+C: Масса алкоголя составляет 58% от объема всего напитка в бутылке
+D: Объем алкоголя составляет 58% от объема всего напитка в бутылке
+
+原文:
+把20升的纯牛奶喝掉2升，用水添至和原来一样多，则牛奶浓度为
+A: 95%
+B: 85%
+C: 90%
+D: 10%
+
+调用 Qwen API 进行翻译...
+翻译:
+Из 20 литров чистого молока выпили 2 литра, затем добавили воды до первоначального объёма. Какова концентрация молока?
+A: 95%
+B: 85%
+C: 90%
+D: 10%
+
+原文:
+在100千克的水中加10千克食盐，盐水的浓度是
+A: 10/100-10*100%
+B: 10/100+10*100%
+C: 90%
+D: 10%
+
+调用 Qwen API 进行翻译...
+翻译:
+В 100 килограммах воды добавлено 10 килограммов соли, концентрация соляного раствора является
+A: 10/100-10*100%
+B: 10/100+10*100%
+C: 90%
+D: 10%
+
+原文:
+甲轮滚动2周的距离，乙轮要滚动3周，甲轮与乙轮的直径比是
+A: 3：2 
+B: 9：4 
+C: 9：1 
+D: 2：3
+
+调用 Qwen API 进行翻译...
+翻译:
+При движении колесо А проходит за 2 оборота то же расстояние, что колесо Б за 3 оборота. Соотношение диаметров колес А и Б равно 
+A: 3:2 
+B: 9:4 
+C: 9:1 
+D: 2:3
+
+原文:
+算式603-[124*3+137-(69+68)]的正确答案是
+A: 231
+B: 233
+C: 230
+D: 232
+
+调用 Qwen API 进行翻译...
+翻译:
+Правильный ответ для выражения 603-[124*3+137-(69+68)] является:
+A: 231
+B: 233
+C: 230
+D: 232
+
+原文:
+如果一个三角形的两个内角度数的和等于第三个内角的度数，那么这个三角形是
+A: 锐角三角形
+B: 无法判断
+C: 直角三角形
+D: 钝角三角形
+
+调用 Qwen API 进行翻译...
+翻译:
+Если сумма двух внутренних углов треугольника равна градусной мере третьего угла, то этот треугольник является:
+A: acute triangle
+B: cannot determine
+C: right triangle
+D: obtuse triangle
+
+原文:
+1.9965四舍五入到千分位是
+A: 1.99 
+B: 1.996
+C: 1.997
+D: 2.00
+
+调用 Qwen API 进行翻译...
+翻译:
+1.9965 округляется до тысячных как
+A: 1.99 
+B: 1.996
+C: 1.997
+D: 2.00
+
+原文:
+30比()少1/5
+A: 25
+B: 36
+C: 37.5
+D: 28
+
+调用 Qwen API 进行翻译...
+翻译:
+30 меньше чем () на 1/5
+A: 25
+B: 36
+C: 37.5
+D: 28
+
+原文:
+14/42的分子减少7，要使这个分数的大小不变，分母应该减少
+A: 28
+B: 7
+C: 14
+D: 21
+
+调用 Qwen API 进行翻译...
+翻译:
+Числитель дроби 14/42 уменьшился на 7, чтобы размер этой дроби остался прежним, знаменатель должен быть уменьшен на 
+A: 28 
+B: 7 
+C: 14 
+D: 21
+
+原文:
+在估算8.8*6.92时，误差最小的是
+A: 8*7
+B: 9*6
+C: 9*7
+D: 8*6
+
+调用 Qwen API 进行翻译...
+翻译:
+При оценке 8.8*6.92 наименьшая ошибка у
+A: 8*7
+B: 9*6
+C: 9*7
+D: 8*6
+
+原文:
+有一堆糖，吃了3/4，还剩1.2千克，这堆糖原来有
+A: 1.2*(1—3/4)
+B: 1.2/(1-3/4)
+C: 1.2*(3/4)
+D: 1.2/(3/4)
+
+调用 Qwen API 进行翻译...
+翻译:
+Имеется куча конфет, съели 3/4, осталось 1.2 кг, первоначально в этой куче было
+A: 1.2*(1—3/4)
+B: 1.2/(1-3/4)
+C: 1.2*(3/4)
+D: 1.2/(3/4)
+
+原文:
+甲乙两书架，把甲书架上的书的1/4放到乙书架上，这时，两书架上的书正好相等，原来甲书架上的书比乙书架上多
+A: 75%
+B: 100%
+C: 50%
+D: 25%
+
+调用 Qwen API 进行翻译...
+翻译:
+На двух книжных полках, А и Б. Если перенести с полки А на полку Б четверть книг с полки А, то количество книг на обеих полках станет равным. На сколько процентов первоначально книг было больше на полке А, чем на полке Б?
+A: 75%
+B: 100%
+C: 50%
+D: 25%
+
+原文:
+100增加1/10后，又减少了1/10，结果是
+A: 100
+B: 110
+C: 90
+D: 99
+
+调用 Qwen API 进行翻译...
+翻译:
+После увеличения числа 100 на 1/10, оно затем уменьшилось на 1/10, результат:
+A: 100
+B: 110
+C: 90
+D: 99
+
+原文:
+一艘轮船从甲港开往乙港，逆流用了15小时，返回时顺流速度加快了1/4，这艘轮船返回时用了
+A: 19小时
+B: 10小时
+C: 12小时
+D: 20小时
+
+调用 Qwen API 进行翻译...
+翻译:
+Корабль отправился из порта А в порт Б, против течения он потратил 15 часов. При возвращении скорость увеличилась на 1/4, сколько времени потратил корабль при возвращении?
+A: 19 часов
+B: 10 часов
+C: 12 часов
+D: 20 часов
+
+原文:
+甲数的305与乙数的40%相等，那么甲数()乙数
+A: 等于
+B: 小于
+C: 大于
+D: 不一定
+
+调用 Qwen API 进行翻译...
+翻译:
+Число А умноженное на 305 равно числу Б умноженному на 40%, тогда число А () число Б
+A: равно
+B: меньше
+C: больше
+D: не обязательно
+
+原文:
+已知3个数的和是470，第一个数比第二个数多160，第三个数比第一个数少180，这三个数的最大公因数是
+A: 10
+B: 20
+C: 12
+D: 2
+
+调用 Qwen API 进行翻译...
+翻译:
+Известно, что сумма трех чисел равна 470, первое число больше второго на 160, а третье число меньше первого на 180. Наибольший общий делитель этих трех чисел равен:
+A: 10
+B: 20
+C: 12
+D: 2
+
+原文:
+一段绳子，第一次用去全长的2/5，第二次用去全长的1/4，剩下的比第二次用去的长20米，这根绳子原来有
+A: 150米
+B: 180米
+C: 200米
+D: 60米
+
+调用 Qwen API 进行翻译...
+翻译:
+Отрезок верёвки, после первого использования осталось 2/5 всей длины, после второго использования осталось 1/4 всей длины, оставшаяся часть на 20 метров длиннее той, что была использована во второй раз. Какова первоначальная длина верёвки?
+A: 150 метров
+B: 180 метров
+C: 200 метров
+D: 60 метров
+
+原文:
+在一个棱长为1分米的正方体的8个角上，各锯下一个棱长为1厘米的正方体，现在它的表面积和原来比
+A: 不变
+B: 增加
+C: 减少 
+D: 无法确定
+
+调用 Qwen API 进行翻译...
+翻译:
+В кубе с ребром 1 дециметр на его восьми углах поочередно срезают кубики с ребром 1 сантиметр. Как изменилась его площадь поверхности по сравнению с исходной?
+A: не изменилась
+B: увеличилась
+C: уменьшилась 
+D: невозможно определить
+
+原文:
+用()可以估算7.9804*3.025的积大约是多少
+A: 7*4
+B: 8*4
+C: 7*3
+D: 8*3
+
+调用 Qwen API 进行翻译...
+翻译:
+С помощью () можно оценить, что примерно равно произведение 7.9804*3.025.
+A: 7*4
+B: 8*4
+C: 7*3
+D: 8*3
+
+原文:
+自然数中，能被2整除的数都是
+A: 偶数
+B: 奇数
+C: 质数
+D: 合数
+
+调用 Qwen API 进行翻译...
+翻译:
+Среди натуральных чисел, те что делятся на 2 без остатка, являются:
+A:偶数
+B:奇数
+C:质数
+D:合数
+
+原文:
+修路队修一段路，第一周修了全的1/6，第二周修了全长的1/4，第一周比第二周少修20千米，这段路全长有
+A: 240
+B: 120
+C: 48
+D: 80
+
+调用 Qwen API 进行翻译...
+翻译:
+Бригада ремонтировала дорогу. За первую неделю они отремонтировали 1/6 всей дороги, а за вторую неделю — 1/4 всей дороги. В первую неделю было отремонтировано на 20 километров меньше, чем во вторую. Какова общая длина этой дороги?
+
+A: 240  
+B: 120  
+C: 48  
+D: 80
+
+原文:
+如果0<a<1，b=1/(a*a*a)，c=1/(a+a+a)，那么b和c的值相比
+A: 值可能相等
+B: c的值大
+C: 不确定
+D: b的值大
+
+调用 Qwen API 进行翻译...
+翻译:
+Если 0 < a < 1, b = 1/(a*a*a), c = 1/(a+a+a), то сравните значения b и c.
+A: Значения могут быть равны
+B: Значение c больше
+C: Неопределенно
+D: Значение b больше
+
+原文:
+如果a-6=8，那么(a*2)—(6*2)=
+A: 8
+B: 32
+C: 4
+D: 16
+
+调用 Qwen API 进行翻译...
+翻译:
+Если a - 6 = 8, то (a * 2) - (6 * 2) =
+A: 8
+B: 32
+C: 4
+D: 16
+
+原文:
+把分数a的分子扩大到原来的11倍，分母扩大到原来的13倍，得到的一个新分数b，把分数a的分子扩大到原来的8倍，分母扩大到原来的9倍，得到一个新分数c。那么b和c比较
+A: b>c
+B: 比不清楚
+C: b<c
+D: b=c
+
+调用 Qwen API 进行翻译...
+翻译:
+Числитель дроби a увеличен в 11 раз, а знаменатель в 13 раз, получается новая дробь b. Числитель дроби a увеличен в 8 раз, а знаменатель в 9 раз, получается новая дробь c. Сравнить b и c.
+A: b>c
+B: Неясно
+C: b<c
+D: b=c
+
+原文:
+一根绳子长5米，第一次用去1/5，第二次用去1/5米，还剩下
+A: 4米
+B: 12/5米
+C: 3米
+D: 2/5米
+
+调用 Qwen API 进行翻译...
+翻译:
+У нас есть верёвка длиной 5 метров, первый раз использовали 1/5 часть, второй раз использовали 1/5 метра, сколько осталось?
+A: 4 метра
+B: 12/5 метра
+C: 3 метра
+D: 2/5 метра
+
+原文:
+某专业户去年每公顷产粮食9400千克，比前年增产二成，前年每公顷产粮食()千克
+A: 9400*(1-20%)
+B: 9400/(1-20%)
+C: 9400*(1+20%)
+D: 9400/(1+20%)
+
+调用 Qwen API 进行翻译...
+翻译:
+Профессиональный фермер прошлого года собрал 9400 кг зерна с гектара, что на 20% больше, чем позапрошлого года. Сколько килограммов зерна было собрано с гектара позапрошлого года?
+A: 9400*(1-20%)
+B: 9400/(1-20%)
+C: 9400*(1+20%)
+D: 9400/(1+20%)
+
+原文:
+甲数比乙数少甲数的1/4，也就是乙数是甲数的
+A: 1/4
+B: 1.25
+C: 4倍
+D: 0.25
+
+调用 Qwen API 进行翻译...
+翻译:
+Число А меньше числа Б на 1/4 от числа А, то есть число Б является 
+A: 1/4 
+B: 1.25 
+C: в 4 раза больше числа А 
+D: 0.25
+
+原文:
+小圆直径为a厘米，大圆的半径为a厘米，则小圆面积与大圆面积的比是
+A: 2:1
+B: 1:4
+C: 3.14
+D: 4:1
+
+调用 Qwen API 进行翻译...
+翻译:
+Диаметр малого круга равен a сантиметров, а радиус большого круга равен a сантиметров. Тогда отношение площади малого круга к площади большого круга равно:
+A: 2:1
+B: 1:4
+C: 3.14
+D: 4:1
+
+原文:
+10千克的盐溶解在100千克的水中，盐的重量占盐水重量的
+A: 1/10
+B: 1/12
+C: 1/9
+D: 1/11
+
+调用 Qwen API 进行翻译...
+翻译:
+10 килограммов соли растворены в 100 килограммах воды, доля веса соли в весе раствора составляет
+A: 1/10
+B: 1/12
+C: 1/9
+D: 1/11
+
+原文:
+甲、乙、丙三个不为0的自然数，满足条件甲*5/4=乙*3/4=丙*3/2，则甲、乙、丙三个数从大到小的排列顺序是
+A: 丙>乙>甲
+B: 丙>甲>乙
+C: 乙>甲>丙
+D: 甲>乙>丙
+
+调用 Qwen API 进行翻译...
+翻译:
+Пусть а, б, в – три натуральных числа, не равных нулю, которые удовлетворяют условию: а * 5/4 = б * 3/4 = в * 3/2. Тогда порядок чисел а, б, в от большего к меньшему будет:
+A: в > б > а
+B: в > а > б
+C: б > а > в
+D: а > б > в
+
+原文:
+爸爸去年买了一种股票，该股票去年跌了20%，今年应上涨()才能保持原值
+A: 30%
+B: 40%
+C: 20%
+D: 25%
+
+调用 Qwen API 进行翻译...
+翻译:
+Папа купил акции год назад, и их цена упала на 20%. На сколько процентов должна вырасти цена в этом году, чтобы вернуться к первоначальной стоимости?
+A: 30%
+B: 40%
+C: 20%
+D: 25%
+
+原文:
+一个大于0的数除以真分数，商()被除数
+A: 小于或等于
+B: 小于
+C: 大于
+D: 等于
+
+调用 Qwen API 进行翻译...
+翻译:
+Число больше 0 делится на правильную дробь, частное () делимое
+A: меньше или равно
+B: меньше
+C: больше
+D: равно
+
+原文:
+一个分数的分子减少它的4/5，要使分数的大小不变，分母应
+A: 除以5
+B: 除以4/5
+C: 乘以5
+D: 减去4/5
+
+调用 Qwen API 进行翻译...
+翻译:
+Чтобы величина дроби не изменилась при уменьшении числителя на его 4/5, знаменатель должен быть:
+A: divided by 5
+B: divided by 4/5
+C: multiplied by 5
+D: subtracted by 4/5
+
+原文:
+今年的柑橘产量比去年成长一成半，今年产量是去年的
+A: 85%
+B: 115%
+C: 105%
+D: 15%
+
+调用 Qwen API 进行翻译...
+翻译:
+В этом году производство цитрусовых выросло на полтора процента по сравнению с прошлым годом, текущий объем производства составляет от прошлогоднего уровня:
+A: 85%
+B: 115%
+C: 105%
+D: 15%
+
+原文:
+已知a是一个真分数，b是一个假分数，在下列算式中答案一定大于1的算式是
+A: a+b
+B: a*b
+C: a/b
+D: a-b
+
+调用 Qwen API 进行翻译...
+翻译:
+Известно, что a является правильной дробью, а b — неправильной дробью. В следующих выражениях какое из них всегда даёт результат больше 1:
+A: a+b  
+B: a*b  
+C: a/b  
+D: a-b
+
+原文:
+()统计图既表示数量的多少，又表示数量之间的增减变化
+A: 扇形
+B: 折线 
+C: 百分比
+D: 条列
+
+调用 Qwen API 进行翻译...
+翻译:
+() Статистический график показывает как количество, так и изменения в количестве.
+A:扇形
+B:折线
+C:百分比
+D:条列
+
+原文:
+一个因数扩大到原来的10倍，另一个因数缩小的原来的1/20，它们的积
+A: 缩小到原来的1/2
+B: 缩小到原来的1/10
+C: 扩大到原来的10倍
+D: 扩大到原来的2倍
+
+调用 Qwen API 进行翻译...
+翻译:
+Один множитель увеличивается в 10 раз, другой множитель уменьшается до 1/20 от оригинального значения, их произведение:
+A: Уменьшается до 1/2 от оригинального
+B: Уменьшается до 1/10 от оригинального
+C: Увеличивается в 10 раз по сравнению с оригинальным
+D: Увеличивается в 2 раза по сравнению с оригинальным
+
+原文:
+在70克的水中放入10克糖，配成糖水，含糖率为
+A: 12.50%
+B: 1.25%
+C: 87.55
+D: 14.30%
+
+调用 Qwen API 进行翻译...
+翻译:
+В 70 граммах воды растворено 10 граммов сахара, чтобы получить сахарный раствор, концентрация сахара составляет:
+A: 12.50%
+B: 1.25%
+C: 87.55
+D: 14.30%
+
+原文:
+已知除数是132，商是0.001，余数是0.1，被除数是
+A: 0.133
+B: 1.33
+C: 0.232
+D: 1.3
+
+调用 Qwen API 进行翻译...
+翻译:
+Известно, что делитель равен 132, частное равно 0.001, а остаток равен 0.1. Делимое является:
+A: 0.133
+B: 1.33
+C: 0.232
+D: 1.3
+
+原文:
+刘叔叔看病花了280元，报销时，个人要负担四成，能报销多少元钱，算式是
+A: 280÷40%
+B: 80*(1-40%)
+C: 280/(1-40%)
+D: 280*40%
+
+调用 Qwen API 进行翻译...
+翻译:
+Дядя Лю потратил 280 юаней на лечение, при возмещении расходов личная оплата составляет 40%. Сколько юаней будет возмещено? Формула расчета:
+A: 280÷40%
+B: 80*(1-40%)
+C: 280/(1-40%)
+D: 280*40%
+
+原文:
+甲三角形与乙三角形的底边长的比是2：1，高的比是1：2，那么甲三角形与乙三角形面积的比是
+A: 2：1
+B: 1：2
+C: 3：2 
+D: 1：1
+
+调用 Qwen API 进行翻译...
+翻译:
+Отношение длины основания треугольника А к треугольнику Б равно 2:1, а отношение их высот равно 1:2. Каково же отношение площади треугольника А к треугольнику Б?
+
+A: 2:1  
+B: 1:2  
+C: 3:2  
+D: 1:1
+
+原文:
+修路队修一段路，第一天修了全程的2/5，第二天修了240米，完成了全部修路任务，第一天修了多少米，正确的算式是
+A: 240/(1-2/5)
+B: 240/(1-2/5)*(2/5)
+C: 240/(1+2/5)
+D: 240*(1+2/5)
+
+调用 Qwen API 进行翻译...
+翻译:
+Бригада по ремонту дорог работала над участком дороги, в первый день они отремонтировали 2/5 всей трассы, во второй день отремонтировали 240 метров, завершив всю работу. Сколько метров было отремонтировано в первый день? Правильная формула:
+A: 240/(1-2/5)
+B: 240/(1-2/5)*(2/5)
+C: 240/(1+2/5)
+D: 240*(1+2/5)
+
+原文:
+一段绳子，第一次剪去全长的1/5，第二次剪去全长的1/2，还剩30米，这根绳子全长
+A: 90
+B: 100
+C: 80
+D: 160
+
+调用 Qwen API 进行翻译...
+翻译:
+Отрезок верёвки, первый раз отрезали одну пятую её длины, второй раз — половину её длины, осталось 30 метров. Какова первоначальная длина верёвки?
+
+A: 90
+B: 100
+C: 80
+D: 160
+
+原文:
+修路队修一段路，第一天修了全程的1/4，第二天修了全程的1/5，已知第一天与第二天一共修了1800米，这段路的全长是()米
+A: 1800/(1/4+1/5)
+B: 1800/(1/4—1/5)
+C: 1800*(1/4+1/5)
+D: 1800/(1—1/4—1/5)
+
+调用 Qwen API 进行翻译...
+翻译:
+Бригада по ремонту дорог работала над участком дороги, в первый день они отремонтировали 1/4 всей трассы, во второй день — 1/5 всей трассы. Известно, что за первый и второй дни вместе они отремонтировали 1800 метров. Полная длина этого участка составляет () метров.
+A: 1800/(1/4+1/5)
+B: 1800/(1/4—1/5)
+C: 1800*(1/4+1/5)
+D: 1800/(1—1/4—1/5)
+
+原文:
+一辆汽车从甲地开往乙地，已经行驶了160千米，余下的占全长的3/8，甲乙两地相距
+A: 160(1+3)*8
+B: 160/(1-3/8)
+C: 160*(1-3/8)
+D: 160/(1+3/8)
+
+调用 Qwen API 进行翻译...
+翻译:
+Машина едет из пункта А в пункт Б, уже проехала 160 километров, а оставшееся расстояние составляет 3/8 всего пути. Каково расстояние между пунктами А и Б?
+A: 160(1+3)*8
+B: 160/(1-3/8)
+C: 160*(1-3/8)
+D: 160/(1+3/8)
+
+原文:
+小圆的直径为a厘米，大圆的半径为a厘米，则小圆面积是大圆面积的
+A: 25%
+B: 20%
+C: 80%
+D: 50%
+
+调用 Qwen API 进行翻译...
+翻译:
+Диаметр малого круга равен a сантиметров, а радиус большого круга равен a сантиметров. Тогда площадь малого круга составляет площадь большого круга:
+A: 25%
+B: 20%
+C: 80%
+D: 50%
+
+原文:
+一座粮食仓库的容积为约1500
+A: 平方米
+B: 立方米
+C: 升
+D: 米
+
+调用 Qwen API 进行翻译...
+翻译:
+Объем зернового склада составляет около 1500
+A: квадратных метров
+B: кубических метров
+C: литров
+D: метров
+
+原文:
+同学们参加合唱队，男生人数的1/3等于女生人数的3/8，女生有128，参加合唱队的男生比女生多
+A: 18
+B: 16
+C: 24
+D: 12
+
+调用 Qwen API 进行翻译...
+翻译:
+С同学ы участвуют в хоре, и одна треть количество мальчиков равна трём восьмым количества девочек. У девочек их 128, количество мальчиков, участвующих в хоре, больше, чем у девочек.
+A: 18
+B: 16
+C: 24
+D: 12
+
+原文:
+一个两位数，个位上的数字和十位上的数字都是合数，并且是互质数，这个数最大是
+A: 96
+B: 98
+C: 94
+D: 99
+
+调用 Qwen API 进行翻译...
+翻译:
+Двухзначное число, в котором цифры единиц и десятков являются составными числами и взаимно простыми, максимально равно:
+A: 96
+B: 98
+C: 94
+D: 99
+
+原文:
+如果甲数的2/3等于乙数的3/5，那么甲数：乙数等于
+A: 10：9 
+B: 15：6
+C: 6：15
+D: 9：10 
+
+调用 Qwen API 进行翻译...
+翻译:
+Если две трети числа А равны трем пятым числа Б, то число А : число Б равно 
+A: 10:9 
+B: 15:6 
+C: 6:15 
+D: 9:10
+
+原文:
+甲数是7777776/7777777，乙数是9999998/9999999，那么甲乙两数的关系是
+A: 甲<乙
+B: 甲>乙
+C: 不确定
+D: 甲=乙
+
+调用 Qwen API 进行翻译...
+翻译:
+Число а равно 7777776/7777777, число б равно 9999998/9999999. Какова же взаимосвязь между числами а и б?
+A: а<б
+B: а>б
+C: неопределенно
+D: а=б
+
+原文:
+绘制统计图时，要能清楚地表示数量增减变化的情况，应选用
+A: AB
+B: 扇形统计图
+C: 折线统计图
+D: 条形统计图
+
+调用 Qwen API 进行翻译...
+翻译:
+При построении статистических графиков, чтобы четко показать изменения количества, следует использовать:
+A: AB
+B: Круговую диаграмму
+C: Линейную диаграмму
+D: Столбчатую диаграмму
+
+原文:
+40-[12+(10-3)*4]的得数是
+A: 0
+B: 2
+C: 10
+D: 1
+
+调用 Qwen API 进行翻译...
+翻译:
+Результат выражения 40-[12+(10-3)*4] равен  
+A: 0  
+B: 2  
+C: 10  
+D: 1
+
+原文:
+商店运来一批水果，第一天卖出总量的1/6是240千克，第二天卖出总量的2/5，商店里还有()千克水水果
+A: 624
+B: 720
+C: 864
+D: 780
+
+调用 Qwen API 进行翻译...
+翻译:
+В магазин поступила партия фруктов. В первый день было продано 1/6 общего количества, что составило 240 кг, а во второй день было продано 2/5 от общей массы. В магазине осталось () кг фруктов.
+A: 624
+B: 720
+C: 864
+D: 780
+
+原文:
+1-1*(0/1)+1/1的的数是
+A: 2
+B: 3
+C: 0
+D: 1
+
+调用 Qwen API 进行翻译...
+翻译:
+Число 1-1*(0/1)+1/1 равно 
+A: 2 
+B: 3 
+C: 0 
+D: 1
+
+原文:
+有两堆砂石，第一堆比第二堆中60%，那么第二堆比第一堆轻
+A: 37.50%
+B: 40%
+C: 60.50%
+D: 62.50%
+
+调用 Qwen API 进行翻译...
+翻译:
+Есть две кучи щебня, первая куча на 60% больше, чем вторая, насколько процентов вторая куча легче первой 
+A: 37.50%
+B: 40%
+C: 60.50%
+D: 62.50%
+
+原文:
+有两根同样长的绳子，从第一根中先用去1/3，再用去1/3米，从第二根中先用去1/3米，再用去余下长度的1/3，仍都有剩余。第一根所剩部分与第二根所剩部分相比较
+A: 两根剩的同样长
+B: 第二根剩的长
+C: 无法确定
+D: 第一根剩的长
+
+调用 Qwen API 进行翻译...
+翻译:
+Имеется два одинаковых по длине шнура. От первого сначала отрезают 1/3, затем ещё 1/3 метра. От второго сначала отрезают 1/3 метра, а потом 1/3 от оставшейся длины. После этого в обоих случаях остаётся некоторая часть. Сравните оставшиеся части первого и второго шнуров.
+A: Оставшиеся части равны
+B: У второго шнура осталась большая часть
+C: Невозможно определить
+D: У первого шнура осталась большая часть
+
+原文:
+已知a+b=4，c+b=3，b=1/2，那么c比1少
+A: 1/4
+B: 1
+C: 1/3
+D: 3/4
+
+调用 Qwen API 进行翻译...
+翻译:
+Известно, что a+b=4, c+b=3, b=1/2, тогда c меньше 1 на 
+A: 1/4 
+B: 1 
+C: 1/3 
+D: 3/4
+
+原文:
+甲乙两袋米，由甲袋倒出1/10到乙袋后，两袋米的重量相等，原来甲戴米比乙袋多
+A: 10%
+B: 25%
+C: 80%
+D: 20%
+
+调用 Qwen API 进行翻译...
+翻译:
+В двух мешках риса, после того как из мешка А пересыпают 1/10 часть риса в мешок Б, вес обоих мешков становится равным. Сколько процентов риса было больше первоначально в мешке А, чем в мешке Б?
+A: 10%
+B: 25%
+C: 80%
+D: 20%
+
+原文:
+文具店今天卖出120支圆珠笔，比昨天多卖出1/5，昨天卖出()支圆珠笔
+A: 120/(1—1/5)
+B: 120*(1—1/5)
+C: 120/(1+1/5)
+D: 120*1+1/5)
+
+调用 Qwen API 进行翻译...
+翻译:
+Канцелярский магазин сегодня продал 120 шариковых ручек, что на 1/5 больше, чем вчера. Сколько шариковых ручек было продано вчера?
+A: 120/(1—1/5)
+B: 120*(1—1/5)
+C: 120/(1+1/5)
+D: 120*1+1/5)
+
+原文:
+一个数的3/14是5，那这个数的3/7是
+A: 10
+B: 7
+C: 9
+D: 8
+
+调用 Qwen API 进行翻译...
+翻译:
+Третье число равно 5, когда взято 3/14 этого числа. Каким будет 3/7 этого числа?
+A: 10
+B: 7
+C: 9
+D: 8
+
+原文:
+把0.8亿改写成用“万”作单位的数是
+A: 80000万
+B: 8000万
+C: 80000000万
+D: 0.8万
+
+调用 Qwen API 进行翻译...
+翻译:
+Перепишите число 0,8 миллиарда, используя единицу «тенг» (10 тысяч):
+A: 80000万
+B: 8000万
+C: 80000000万
+D: 0.8万
+
+原文:
+有一堆煤，增加1/7后，又减少1/7，这堆煤的重量
+A: 与原来重量相等
+B: 比原来多
+C: 不确定
+D: 比原来少
+
+调用 Qwen API 进行翻译...
+翻译:
+Есть куча угля, после увеличения её на 1/7, она снова уменьшилась на 1/7, вес этой кучи угля:
+A: Равен исходному весу
+B: Больше, чем было изначально
+C: Неопределён
+D: Меньше, чем было изначально
+
+原文:
+一个正方体的棱长扩大2倍，表面积就扩大
+A: 8倍
+B: 2倍
+C: 4倍
+D: 12倍
+
+调用 Qwen API 进行翻译...
+翻译:
+При увеличении ребра куба в 2 раза, его площадь поверхности увеличивается в:
+A: 8倍
+B: 2倍
+C: 4倍
+D: 12倍
+
+原文:
+一本故事书共有240页，如果第一天看了全部的1/8，第二天看了全部的1/6，第三天应该从第()页开始看
+A: 75
+B: 76
+C: 70
+D: 71
+
+调用 Qwen API 进行翻译...
+翻译:
+Книга с рассказами состоит из 240 страниц. Если в первый день прочитали 1/8 часть книги, во второй день — 1/6 часть, то в третий день нужно начать с страницы ().
+A: 75
+B: 76
+C: 70
+D: 71
+
+原文:
+A、B两只青蛙进行跳跃比赛，A每次跳10厘米，B每次跳15厘米，他们每秒都只跳1次，且一起从起点开始向同一方向跳跃。在比赛途中，每隔12厘米有一陷阱，当它们中第一只掉进陷阱时，另一只距离它最近的陷阱有()厘米
+A: 6
+B: 2
+C: 4
+D: 无法确定
+
+调用 Qwen API 进行翻译...
+翻译:
+Две лягушки, A и B, участвуют в прыжковом соревновании. A прыгает на 10 см за раз, а B — на 15 см. Они обе прыгают один раз в секунду, начиная одновременно с одной точки и двигаясь в одном направлении. По пути каждые 12 см находится яма, и когда одна из них первой попадает в яму, другая окажется в () см от ближайшей ямы.
+A: 6
+B: 2
+C: 4
+D: невозможно определить
+
+原文:
+修一段路，已经修了它的5/6，剩下没修的比已经修了的少
+A: 80%
+B: 66.70%
+C: 16.70%
+D: 20%
+
+调用 Qwen API 进行翻译...
+翻译:
+При ремонте дороги уже отремонтировано 5/6 её длины, оставшаяся часть меньше отремонтированной.
+A: 80%
+B: 66.70%
+C: 16.70%
+D: 20%
+
+原文:
+一个两位数，各位数字的和的5倍比原数打6，则这个两位数是
+A: 74
+B: 24或69
+C: 24
+D: 69
+
+调用 Qwen API 进行翻译...
+翻译:
+Двухзначное число, в пять раз большее суммы его цифр, на 6 больше самого числа. Каким же является это двухзначное число?
+A: 74
+B: 24 или 69
+C: 24
+D: 69
+
+原文:
+30以内的质数加上2还是质数的有()个
+A: 4
+B: 7
+C: 6
+D: 5
+
+调用 Qwen API 进行翻译...
+翻译:
+Сколько чисел в пределах 30 являются простыми числами, к которым при добавлении 2 также остаются простыми?
+A: 4
+B: 7
+C: 6
+D: 5
+
+原文:
+下列算式()的积与5.555*6.666的结果最接近
+A: 5*7
+B: 6*6
+C: 6*7
+D: 5*6
+
+调用 Qwen API 进行翻译...
+翻译:
+Среди следующих выражений () произведение наиболее близко к результату 5.555*6.666
+A: 5*7
+B: 6*6
+C: 6*7
+D: 5*6
+
+原文:
+一本故事书共有240页，如果第一天看了全部的1/8，第二天看了剩下的1/6，第三天应该从第()页开始看
+A: 70
+B: 66
+C: 141
+D: 71
+
+调用 Qwen API 进行翻译...
+翻译:
+Книга с рассказами состоит из 240 страниц. Если в первый день прочитали одну восьмую часть книги, во второй день — одну шестую остатка, то в третий день нужно начать с () страницы.
+A: 70
+B: 66
+C: 141
+D: 71
+
+原文:
+24/36的分子减少16，要使这个分数的大小不变，分母应该变成
+A: 2
+B: 6
+C: 24
+D: 12
+
+调用 Qwen API 进行翻译...
+翻译:
+Числитель дроби 24/36 уменьшился на 16, чтобы значение этой дроби осталось неизменным, знаменатель должен стать 
+A: 2 
+B: 6 
+C: 24 
+D: 12
+
+原文:
+一次打靶，命中了100发，没命中是25发，命中率是
+A: 80%
+B: 75%
+C: 25%
+D: 50%
+
+调用 Qwen API 进行翻译...
+翻译:
+Попаданий в мишень было 100, промахов — 25. Точность попадания составляет:
+A: 80%
+B: 75%
+C: 25%
+D: 50%
+
+原文:
+5米长的铁丝平均分成8份，每份是1米的
+A: 5/8 
+B: 1/8 
+C: 5/8米
+D: 8/5
+
+调用 Qwen API 进行翻译...
+翻译:
+Проволока длиной 5 метров разделена на 8 равных частей, каждая часть составляет 1 метр:
+A: 5/8 
+B: 1/8 
+C: 5/8 метра 
+D: 8/5
+
+原文:
+钝角三角形的内角和()锐角三角形的内角和
+A: 小于
+B: 无法确定
+C: 大于
+D: 等于
+
+调用 Qwen API 进行翻译...
+翻译:
+Сумма внутренних углов тупоугольного треугольника () сумма внутренних углов остроугольного треугольника
+A: меньше
+B: невозможно определить
+C: больше
+D: равна
+
+原文:
+数a分解质因数是a=2*2*3，数b分解质因数是b=2*2*5，数a和数b的最大公因数是解质因数是a=2*2*3，数b分解质因数是b=2*2*5，数a和数b的最大公因数是
+A: 4
+B: 6
+C: 2
+D: 60
+
+调用 Qwen API 进行翻译...
+翻译:
+Число a разложено на простые множители как a=2*2*3, число b разложено на простые множители как b=2*2*5, наибольший общий делитель чисел a и b равен 
+A: 4
+B: 6
+C: 2
+D: 60
+
+原文:
+下列图形中，对称轴只有一条的是
+A: 等腰三角形
+B: 圆
+C: 等边三角形
+D: 长方形
+
+调用 Qwen API 进行翻译...
+翻译:
+Среди следующих фигур, только одна имеет одну ось симметрии:
+A: Равнобедренный треугольник
+B: Круг
+C: Равносторонний треугольник
+D: Прямоугольник
+
+原文:
+一根木料用去全长的40%，还剩5.4米，这根木料原来的长是多少米，列式是
+A: 5.4/40%
+B: 5.4/(1+40%)
+C: 5.4/(1-40%)
+D: 5.4*40%
+
+调用 Qwen API 进行翻译...
+翻译:
+Из доски использовано 40% её длины, осталось 5.4 метра. Какова была первоначальная длина доски в метрах? Выражение для расчёта:
+A: 5.4/40%
+B: 5.4/(1+40%)
+C: 5.4/(1-40%)
+D: 5.4*40%
+
+原文:
+下列选项中的数是序数的是
+A: 第2节课
+B: 5支铅笔
+C: 2栋楼房
+D: 6只鸡
+
+调用 Qwen API 进行翻译...
+翻译:
+Среди следующих вариантов, числительное, которое является порядковым, это:
+A: 第2节课 (второй урок)
+B: 5支铅笔 (пять карандашей)
+C: 2栋楼房 (два здания)
+D: 6只鸡 (шесть кур)
+
+原文:
+要使x/8是最简真分数，8/x是假分数，x应该是
+A: 9
+B: 7
+C: 6
+D: 8
+
+调用 Qwen API 进行翻译...
+翻译:
+Для того чтобы x/8 была несократимой правильной дробью, а 8/x – неправильной дробью, x должно быть равно:
+A: 9
+B: 7
+C: 6
+D: 8
+
+原文:
+在一个减法算式里，被减数、减数与差的和是120，且差是减数的3倍，差是
+A: 45
+B: 40
+C: 20
+D: 60
+
+调用 Qwen API 进行翻译...
+翻译:
+В выражении для вычитания сумма уменьшаемого, вычитаемого и разности равна 120, причём разность в 3 раза больше вычитаемого. Какова разность?
+A: 45
+B: 40
+C: 20
+D: 60
+
+原文:
+一种商品先涨价20%，又降价20%，这种商品现在的价格是原价的
+A: 80%
+B: 88%
+C: 不变
+D: 96%
+
+调用 Qwen API 进行翻译...
+翻译:
+Товар сначала подорожал на 20%, затем подешевел на 20%. Какова текущая цена товара по сравнению с первоначальной?
+A: 80%
+B: 88%
+C: не изменилась
+D: 96%
+
+原文:
+两个自然数的倒数和是11/24，这两个自然数是
+A: 2和9
+B: 5和6
+C: 1和10
+D: 3和8
+
+调用 Qwen API 进行翻译...
+翻译:
+Сумма обратных двух натуральных чисел равна 11/24. Эти два натуральных числа являются:
+A: 2 и 9
+B: 5 и 6
+C: 1 и 10
+D: 3 и 8
+
+原文:
+甲每秒跑3米，乙每秒跑2米，丙每秒跑4米，三人沿600米的环形跑道从同一点同时同向跑步，经过()秒三人又同时从出发点出发
+A: 300
+B: 12
+C: 无法确定
+D: 600
+
+调用 Qwen API 进行翻译...
+翻译:
+А каждую секунду бежит 3 метра, Б каждую секунду бежит 2 метра, Ц каждую секунду бежит 4 метра. Трое из них бегут в одном направлении по круговой дорожке длиной 600 метров, начиная с одной точки одновременно, и через () секунд они снова окажутся вместе в точке старта.
+A: 300
+B: 12
+C: невозможно определить
+D: 600
+
+原文:
+某地区的电话号码是一个八位数，已知其前四位数是一个固定数6869，那么该地区最多可安装()部电话
+A: 9999
+B: 6869
+C: 10001
+D: 10000
+
+调用 Qwen API 进行翻译...
+翻译:
+В некотором регионе телефонный номер состоит из восьми цифр, известно, что первые четыре цифры — это фиксированное число 6869. Сколько максимум телефонов можно установить в этом районе?
+A: 9999
+B: 6869
+C: 10001
+D: 10000
+
+原文:
+一个数增加15%后得到一个新数，再从新数中减少15%，结果比原数相比
+A: 结果比原数小
+B: 结果比原数大
+C: 不确定
+D: 结果与原数相等
+
+调用 Qwen API 进行翻译...
+翻译:
+Число увеличивается на 15%, получается новое число, затем из нового числа уменьшается на 15%, результат по сравнению с исходным числом:
+A: Результат меньше исходного числа
+B: Результат больше исходного числа
+C: Неопределенно
+D: Результат равен исходному числу
+
+原文:
+小丽和贝贝在玩游戏，小丽报的数a在25至50之间，贝贝报的数b在10至20之间，那么a+b的结果在()之间
+A: 45至60
+B: 35至70
+C: 15至30
+D: 5至40
+
+调用 Qwen API 进行翻译...
+翻译:
+Лиля и Бэйбэй играют в игру, число a, которое называет Лиля, находится между 25 и 50, а число b, которое называет Бэйбэй, находится между 10 и 20. Таким образом, результат a+b находится в интервале ().
+A: 45至60
+B: 35至70
+C: 15至30
+D: 5至40
+
+原文:
+下列说法正确的是
+A: 如果甲数比乙数多1/4，乙数就比甲数少1/4
+B: (a+b)/c=a+b/c
+C: 4/7*6表示求6个4/7的和
+D: (a+b)*c=a+b*c
+
+调用 Qwen API 进行翻译...
+翻译:
+Какое из следующих утверждений верно:
+A: Если число А больше числа Б на 1/4, то число Б меньше числа А на 1/4
+B: (a+b)/c=a+b/c
+C: 4/7*6 обозначает сумму шести дробей 4/7
+D: (a+b)*c=a+b*c
+
+原文:
+6/39的分子减去4，要使分数大小不变，分母应减去
+A: 6
+B: 13
+C: 2
+D: 26
+
+调用 Qwen API 进行翻译...
+翻译:
+Числитель дроби 6/39 уменьшили на 4, чтобы величина дроби осталась неизменной, знаменатель следует уменьшить на 
+A: 6 
+B: 13 
+C: 2 
+D: 26
+
+原文:
+计算(8.2+6.21+6.21)*3.5，下面几种计算方法中最简便的方法是
+A: 6.21*(2+1+1)*3.5
+B: 6.21*(2+1+1*3.5)
+C: 8.2*3.5+6.21*3.5+6.21*3.5
+D: (8.2+6.21*2)*3.5
+
+调用 Qwen API 进行翻译...
+翻译:
+Вычислить (8.2+6.21+6.21)*3.5, среди следующих методов самый простой способ:
+A: 6.21*(2+1+1)*3.5
+B: 6.21*(2+1+1*3.5)
+C: 8.2*3.5+6.21*3.5+6.21*3.5
+D: (8.2+6.21*2)*3.5
+
+原文:
+小华养了98只蚕，全部成活，成活率是
+A: 100%
+B: 不确定
+C: 80%
+D: 98%
+
+调用 Qwen API 进行翻译...
+翻译:
+У Сяо Хуа было 98 шелкопрядов, все выжили, выживаемость составляет 
+A: 100% 
+B: Неопределенно 
+C: 80% 
+D: 98%
+
+原文:
+65*4+4*35=(65+35)*4，应用的是
+A: 加法结合率
+B: 乘法分配律
+C: 加法交换律
+D: 乘法交换律
+
+调用 Qwen API 进行翻译...
+翻译:
+65*4+4*35=(65+35)*4, это применение 
+A: associative law of addition 
+B: distributive law of multiplication 
+C: commutative law of addition 
+D: commutative law of multiplication
+
+原文:
+一个三角形，三个内角度数比是2：5：2，这个三角形是
+A: 直角三角形
+B: 等边三角形
+C: 锐角三角形
+D: 钝角三角形
+
+调用 Qwen API 进行翻译...
+翻译:
+Треугольник с внутренними углами в соотношении 2:5:2 является:
+A: прямоугольным треугольником
+B: равносторонним треугольником
+C: остроугольным треугольником
+D: тупоугольным треугольником
+
+原文:
+一堆煤重2500吨，烧锅炉每天要用120吨，每天需用
+A: 48%
+B: 12%
+C: 4.80%
+D: 2.40%
+
+调用 Qwen API 进行翻译...
+翻译:
+Вес одной кучи угля составляет 2500 тонн, для сжигания в котле требуется 120 тонн в день, ежедневно необходимо использовать:
+A: 48%
+B: 12%
+C: 4.80%
+D: 2.40%
+
+原文:
+有两块面积相等的白铁皮和黑铁皮，白铁皮用去了4/5，黑铁皮用去4/5平方米，剩下的白铁皮比黑铁皮面积小，原来这两块铁皮的面积
+A: 正好都是1平方米
+B: 小于1平方米
+C: 都大于1平方米
+D: 无法确定
+
+调用 Qwen API 进行翻译...
+翻译:
+Имеется два куска листового металла одинаковой площади – белый и чёрный. От белого металла использовано 4/5, а от чёрного металла – 4/5 квадратного метра. Оставшаяся часть белого металла меньше по площади, чем остаток чёрного металла. Какова была первоначальная площадь этих двух кусков металла?
+A: Exactly 1 square meter
+B: Less than 1 square meter
+C: More than 1 square meter
+D: Cannot be determined
+
+原文:
+某商店清仓处理一批袜子，按六五折出售，则售价是原价的
+A: 1/35
+B: 30%
+C: 1/65
+D: 65%
+
+调用 Qwen API 进行翻译...
+翻译:
+Определенный магазин распродает партию носков со скидкой 65%, тогда текущая цена составляет от первоначальной цены:
+A: 1/35
+B: 30%
+C: 1/65
+D: 65%
+
+原文:
+a和b都是整数，且a*b=36，则a和b的和最大可能是
+A: 20
+B: 13
+C: 12
+D: 37
+
+调用 Qwen API 进行翻译...
+翻译:
+a и b являются целыми числами, причём a * b = 36. Максимально возможная сумма a и b может быть:
+A: 20
+B: 13
+C: 12
+D: 37
+
+原文:
+一袋糖的5/7比他的2/3多1.6千克，这代糖重
+A: 1.6*(5/7+2/3)
+B: 1.6/(5/7+2/3)
+C: 1.6*(5/7—2/3)
+D: 1.6/(5/7—2/3)
+
+调用 Qwen API 进行翻译...
+翻译:
+5/7 мешка сахара на 1.6 килограмма больше, чем 2/3 этого же мешка. Каков вес этого мешка сахара?
+A: 1.6*(5/7+2/3)
+B: 1.6/(5/7+2/3)
+C: 1.6*(5/7—2/3)
+D: 1.6/(5/7—2/3)
+
+原文:
+甲数的3/4相当于乙数的2/5，甲数()乙数
+A: 等于
+B: 不确定
+C: 大于
+D: 小于
+
+调用 Qwen API 进行翻译...
+翻译:
+Третье число A составляет 3/4 числа B и эквивалентно 2/5 числа C. Число A () числу B.
+A: равно
+B: неопределенно
+C: больше
+D: меньше
+
+原文:
+已知300/13商为23余数为1，那么3除以0.13商23时，余数是
+A: 0.01
+B: 1
+C: 0.05
+D: 500
+
+调用 Qwen API 进行翻译...
+翻译:
+Известно, что при делении 300 на 13 получается частное 23 и остаток 1. Тогда при делении 3 на 0.13 с частным 23, остаток будет
+A: 0.01
+B: 1
+C: 0.05
+D: 500
+
+原文:
+甲数的2/3等于乙数的3/4，则甲数（）乙数
+A: 小于
+B: 大于
+C: 等于
+D: 无法确定
+
+调用 Qwen API 进行翻译...
+翻译:
+Две трети числа А равны трем четвертым числа Б, тогда число А () число Б.
+A: меньше
+B: больше
+C: равно
+D: невозможно определить
+
+原文:
+某厂计划加工200套服装，实际多加工50套，实际比计划超产
+A: 255
+B: 80%
+C: 335
+D: 20%
+
+调用 Qwen API 进行翻译...
+翻译:
+Завод планировал произвести 200 комплектов одежды, но фактически произвел на 50 комплектов больше, что превышает план.
+A: 255
+B: 80%
+C: 335
+D: 20%
+
+原文:
+检查4.2-2.65=1.65对不对，可以用()验算
+A: 2.65+1.65
+B: 2.65—1.65
+C: 4.2-1.65
+D: 4.2+1.65
+
+调用 Qwen API 进行翻译...
+翻译:
+Чтобы проверить, верно ли что 4.2 - 2.65 = 1.65, можно использовать ().
+A: 2.65+1.65
+B: 2.65—1.65
+C: 4.2-1.65
+D: 4.2+1.65
+
+原文:
+大小两个正方形的边长比是5：3，这大小两个正方形的面积比是
+A: 10：6 
+B: 20：12
+C: 25：9 
+D: 5：3
+
+调用 Qwen API 进行翻译...
+翻译:
+Соотношение сторон большого и маленького квадратов равно 5:3. Каково соотношение площадей этих двух квадратов?
+A: 10:6 
+B: 20:12 
+C: 25:9 
+D: 5:3
+
+原文:
+0.04*0.04是
+A: 0.0016
+B: 0.00016
+C: 0.16
+D: 0.016
+
+调用 Qwen API 进行翻译...
+翻译:
+0.04 умножить на 0.04 равно 
+A: 0.0016 
+B: 0.00016 
+C: 0.16 
+D: 0.016
+
+翻译结果已保存到: elementary_mathematics_russian.csv，总共 230 行，成功翻译 229 行，平均每行耗时 3.67 秒
+Translating college_mathematics.csv to 俄语 (russian)...
+Translating high_school_mathematics.csv to 俄语 (russian)...
+Translating elementary_mathematics.csv to 俄语 (russian)...

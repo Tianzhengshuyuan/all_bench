@@ -1,241 +1,230 @@
-"In an inter-class basketball league at a certain school, each game must result in a win or loss. A team earns 3 points for a win and 1 point for a loss. If a class aims to score at least 43 points in the first round of 28 games, what is the minimum number of games this class must win?",6,5,7,8,D
-"In order to clearly show the monthly production output and its fluctuations in the first half of the year, Sanyo TV Factory should use",Uncertain,Pie chart,Bar graph,Line graph,D
-How old is Mingming this year? Dad is 39 years old this year. Your age is 11 years more than twice my age.,13,15,12,14,D
-"If the denominator of $\frac{2}{5}$ is increased by 15, to keep the value of the fraction unchanged, the numerator should be multiplied by",6 times,15 times,3 times,4 times,D
-"Using a rectangular piece of iron sheet with a length of 28.26 centimeters and a width of 15.7 centimeters, what diameter ( ) centimeters of a circular iron sheet should be paired to create a container with the maximum volume?",2.5,5,9,4.5,C
-"In China's stock market trading, a 7.5% fee is charged for each buy and sell transaction. An investor purchases 1000 shares of a Shanghai stock at a price of 10 yuan per share. When the stock rises to 12 yuan, the profit after selling all the shares is",1910 yuan,1925 yuan,2000 yuan,1835 yuan,D
-"A company's revenue in April this year was 25 million yuan. According to the plan, the total revenue for the second quarter should reach 91 million yuan. Let the average monthly growth rate of the company's revenue in May and June be x. Based on the given information, formulate the equation. Then, the correct equation among the following is:",$2500(1+x)^{2}=9100$,$2500(1+x)+2500(1+x)^{2}=9100$,$2500+2500(1+x)+2500(1+x)^{2}=9100$,$2500(1+x\%)^{2}=9100$,C
-"A merchant marked a dress at 640 yuan. After price verification by industrial and commercial personnel, it was reduced to 60 yuan for sale, still yielding a 20% profit. If sold at the original marked price, the dress would yield an exorbitant profit of ( ) yuan.",610,600,590,620,C
-"The quadratic equation $x^{2}-8x=48$ can be expressed in the form $(x-a)^{2}=48+b$, where a and b are integers. Find the value of a + b.",-20,12,-12,20,D
-－3.782,不是分数，是有理数,是分数，不是有理数,是负数，也是分数,是负数，不是分数,C
-"Given that the radius of a circle is $\sqrt{2}cm$ and the distance from the center to the line l is 1.4 cm, the number of intersection points between the line and the circle is",2,1,0,Uncertain,A
-"Inside a square with side length a, an arc is drawn from one vertex as the center with radius a, passing through the two adjacent vertices of the center. The area of the shaded region is",$a-\frac{1}{2}\pi a^{2}$,$\pi a^{2}-a$,$\frac{1}{4}\pi a^{2}$,$a-\pi a^{2}$,C
-"In a production team of a factory, a batch of parts is being manufactured. When each worker operates at their original position, the production task can be completed in 9 hours. If workers A and B switch positions while the productivity of other workers remains unchanged, the task can be completed one hour earlier. Similarly, if workers C and D switch positions while the productivity of other workers remains unchanged, the task can also be completed one hour earlier. The question is: If both A and B, and C and D switch positions simultaneously while the productivity of other workers remains unchanged, how many minutes earlier can the production task be completed?",108,111,110,105,A
-下列元素中属于集合{x|x=2k k是⾃然数}的是,-2,10,7,3,B
-A point where both the abscissa and ordinate are integers is called a lattice point. The number of lattice points on the graph of the function $y=\frac{6x+3}{2x-1}$ is,5,6,3,4,D
-"Mr. Wang deposited a three-year fixed-term deposit in the bank with an annual interest rate of 4.25%. Upon maturity, he withdrew the principal plus interest, totaling 33,825 yuan. Let the principal Mr. Wang deposited be x yuan. Which of the following equations is correct?",3×4.25%x=33825,3(x+4.25x)=33825,x+3×4.25%x=33825,x+4.25%x=33825,C
-"One interior angle of an isosceles triangle is 50°, what are the measures of the other two angles?",65°，65° or 50°，80°,"50°,80°","50°,50°",65°，65°,A
-"If a:b = c:d, then the equation that does not hold is",a:d = c:b,b:a = d:c,a:c = b:d,ad = bc,A
+"In an inter-class basketball league at a school, every match must have a winner and a loser. Each team gets 3 points for a win and 1 point for a loss. If a certain class needs to score at least 43 points in the first round of 28 matches, what is the minimum number of games this class must win?",6,5,7,8,D
+"Sanyo TV factory, in order to clearly show the monthly output of the first half of the year and the situation of increase and decrease, should draw",Uncertain,Pie chart,Bar chart,Line chart,D
+How old is Mingming this year? Dad is 39 years old this year. Your age is 11 years more than twice mine.,13,15,12,14,D
+"The denominator of $\frac{2}{5}$ is increased by 15, to keep the size of the fraction unchanged, the numerator should be expanded",6 times,15 times,3 times,4 times,D
+"Using a rectangular iron sheet that is 28.26 cm long and 15.7 cm wide, it should be paired with a circular iron sheet with a diameter of ( ) cm to make the container with the maximum volume.",2.5,5,9,4.5,C
+"In our country's stock market transactions, every buy and sell incurs a fee of 7.5%. An investor buys 1000 shares of a Shanghai stock at 10 yuan per share, and when the stock rises to 12 yuan, he sells all his shares. His profit is:",1910 yuan,1925 yuan,2000 yuan,1835 yuan,D
+"A company's turnover in April this year was 25 million yuan, and according to the plan, the total turnover for the second quarter should reach 91 million yuan. If the average monthly growth rate of turnover for May and June is set as x, which of the following equations is correct based on the problem description?",$2500(1+x)^{2}=9100$,$2500(1+x)+2500(1+x)^{2}=9100$,$2500+2500(1+x)+2500(1+x)^{2}=9100$,$2500(1+x\%)^{2}=9100$,C
+"A merchant marks a dress at 640 yuan, and after the industrial and commercial staff verifies the price, it is reduced to 60 yuan for sale, yet still yields a profit of 20%. If sold at the original marked price, the profit on one dress would be ( ) yuan.",610,600,590,620,C
+"A quadratic equation in one variable $x^{2}-8x=48$ can be expressed in the form $(x-a)^{2}=48+b$, where a and b are integers. Find the value of a+b.",-20,12,-12,20,D
+-3.782,"Not a fraction, but a rational number","Is a fraction, but not a rational number","Is a negative number, and also a fraction","Is a negative number, but not a fraction",C
+"Given that the radius of a circle is $\sqrt{2} \, \text{cm}$ and the distance from the center of the circle to line $l$ is 1.4 cm, the number of common points between the line and the circle is",2,1,0,uncertain,A
+"In a square with side length $a$, an arc is drawn with one vertex as the center and $a$ as the radius, passing through the two adjacent vertices. The area of the shaded part is",$a-\frac{1}{2}\pi a^{2}$,$\pi a^{2}-a$,$\frac{1}{4}\pi a^{2}$,$a-\pi a^{2}$,C
+"A production team in a factory is responsible for producing a batch of parts. When each worker stays in their original position, it takes them 9 hours to complete the production task. If workers A and B swap positions while others maintain the same efficiency, the task can be completed one hour earlier. Similarly, if workers C and D swap positions while others maintain the same efficiency, the task can also be completed one hour earlier. Ask: If both A and B as well as C and D swap positions simultaneously, with other workers maintaining the same efficiency, how many minutes earlier can the production task be completed?",108,111,110,105,A
+The element that belongs to the set {x|x=2k k is a natural number} among the following is,-2,10,7,3,B
+A point whose both x-coordinate and y-coordinate are integers is called an integer point. The number of integer points on the graph of the function $y=\frac{6x+3}{2x-1}$ is,5,6,3,4,D
+"Mr. Wang deposited a lump sum in the bank for a three-year fixed-term deposit, with an annual interest rate of 4.25%. If after maturity he withdraws a total principal and interest (principal + interest) of 33825 yuan, and assuming Mr. Wang's deposited principal is x yuan, then which of the following equations is correct?",3×4.25%x=33825,3(x+4.25x)=33825,x+3×4.25%x=33825,x+4.25%x=33825,C
+"One of the interior angles of an isosceles triangle is 50°, then the degrees of the other two angles are respectively","65°, 65° or 50°, 80°","50°, 80°","50°, 50°","65°, 65°",A
+"If a:b = c:d, which of the following equations does not hold?",a:d = c:b,b:a = d:c,a:c = b:d,ad = bc,A
 "If m is any real number, then the point P (m-4, m+1) must not be in",the first quadrant,the second quadrant,the fourth quadrant,the third quadrant,C
-"A jacket is sold at a 20% discount, which means it is priced at",80 percent,120 percent,100 percent,20 percent,A
-在菱形ABCD中，对角线AC=4，$\angle BAD=120^{\circ }$，则菱形ABCD的周长为,16,20,15,18,A
-某集合有5个元素，它的⼦集数为,24,27,25,26,C
-"Fuyuan Shoe Store purchased 25 pairs of children's shoes, with each pair costing 20.2 yuan. The salesperson sold them at 25 yuan per pair. How much profit will be made after selling all the shoes?",135,100,120,125,C
-若多项式$x^{2}+mx+4$可以用完全平方公式分解因式，则m的值可以是,4,4 or -4,-4,2 or -2,B
-"Given that ∠A=65°, the supplementary angle of ∠A is equal to",95°,135°,105°,115°,D
-用性质描述法表示第一象限的所有点的集合,"{(x,y)|x<0.y<0}","{(x,y)|x>0,Y<0}","{(x,y)|x>0,y>0}","{(x,y)|x<0,y>0}",C
-"The average temperature in a certain city in January is -2℃. In February, the average temperature rises by 5℃ compared to January. The average temperature in February in this city is",7℃,﹣5℃,5℃,3℃,D
-"Baokang Food Factory transported a batch of coal, originally planned to burn 0.72 tons per day, which could last for 14 days. After improving the stove, the daily consumption was reduced by 0.16 tons. How many days did this batch of coal actually last?",16,20,14,18,D
-"Given the fractional equation $\frac{x}{x-1}-2=\frac{k}{1-x}$ with a positive solution for x, the range of values for k is",k＞-2,k＞-2且k≠-1,-2＜k＜0,k＜2且k≠1,B
+"A jacket is sold at 80% of the original price, which is",80 percent,120 percent,100 percent,20 percent,A
+"In rhombus ABCD, diagonal AC=4, $\angle BAD=120^{\circ }$, then the perimeter of rhombus ABCD is",16,20,15,18,A
+"A set has 5 elements, the number of its subsets is",24,27,25,26,C
+"Fu Yuan Shoe Store purchased 25 pairs of children's shoes, each pair costing 20.2 yuan. The saleswoman sold each pair for 25 yuan. How much profit would they make after selling all the shoes?",135,100,120,125,C
+"If the polynomial $x^{2}+mx+4$ can be factored using the perfect square formula, then the value of m can be",4,4 or -4,-4,2 or -2,B
+"It is known that ∠A = 65°, then the supplementary angle of ∠A equals",95°,135°,105°,115°,D
+Use the descriptive method of properties to represent the set of all points in the first quadrant,"{(x,y)|x<0.y<0}","{(x,y)|x>0,Y<0}","{(x,y)|x>0,y>0}","{(x,y)|x<0,y>0}",C
+"The average temperature in a city in January is -2℃, and the average temperature in February is 5℃ higher than in January. What is the average temperature in the city in February?",7℃,﹣5℃,5℃,3℃,D
+"A food factory at Baokang has received a batch of coal. Originally, they planned to burn 0.72 tons per day, which would last for 14 days. After improving the stove, they burn 0.16 tons less per day. How many days did this batch of coal actually last?",16,20,14,18,D
+"It is known that the solution to the fractional equation $\frac{x}{x-1}-2=\frac{k}{1-x}$ is positive, then the range of values for k is",k＞-2,k＞-2 and k≠-1,-2＜k＜0,k＜2 and k≠1,B
 The result of simplifying $\sqrt{3}-\sqrt{3}(1-\sqrt{3})$ is,3,-3,$\sqrt{3}$,$-\sqrt{3}$,A
-"Given that a > b for both a and b, which of the following conclusions is incorrect?",3a>3b,a+3>b+3,a-3>b-3,-3a>-3b,D
-"Among the following objects, the one that appears as a circle from any viewing angle is",Qipao,Football,Toothpaste,Soda can,B
-The simplified method to calculate 3.2*9.9 is,3.2*10-3.2*0.1,3.2*9*0.9,3.2*20-0.1,3.2*10/3.2,A
-"In rural areas, fully enclosed plastic film vegetable greenhouses with a semi-circular cross-section are often built. If the part of the plastic film buried in the soil is not considered, then the area of plastic film required to build a vegetable greenhouse that is 32m long and 4m wide is",$72\pi $,$68\pi $,$64\pi $,$69\pi $,B
-"It is known that point A lies on the hyperbola $y=-\frac{2}{x}$, and point B lies on the line y = x - 4. Points A and B are symmetric about the y-axis. Given the coordinates of A as (m, n), the value of $\frac{m}{n}+\frac{n}{m}$ is",-10,6,4,-8,A
-"Among the numbers -2, -1, 0, and 1, the smallest number is",0,-2,-1,1,B
-"In a rectangular coordinate system, given point A (3, 3), determine a point P on the x-axis or y-axis such that triangle AOP is an isosceles triangle. The number of possible points P that satisfy this condition is",6,8,10,4,B
-"Xiaohui goes to the flower shop to buy flowers. If she buys 5 roses and 3 lilies, she will have 10 yuan left; if she buys 3 roses and 5 lilies, she will be short of 4 yuan. If she only buys 8 roses, how much money will she have left?",31 yuan,30 yuan,19 yuan,25 yuan,A
-"Given real numbers x and y satisfy $\sqrt{2x+y-1}+|x-2|=0$, then x+y=",7,0,3,10,A
-"A rope is cut into two pieces. The first piece is 4/9 meters long, and the second piece accounts for 4/9 of the total length. Then,",Cannot be determined,Both pieces are of equal length,The second piece is longer,The first piece is longer,D
-It is known that the sum of the interior angles of a polygon is four times the sum of its exterior angles. Then this polygon is,decagon,nonagon,dodecagon,octagon,A
-"The speed of light is $3\times10^{8}$ meters per second, and the distance between the Sun and the Earth is $1.5\times10^{11}$ meters. How many seconds does it take for sunlight to reach the Earth?",$5\times10^{3}$,$5\times10^{4}$,$5\times10^{2}$,$2\times10^{2}$,C
-"In the plane rectangular coordinate system, if the distance between point M (1, 3) and point N (x, 3) is 5, then the value of x is",不确定,6或－4,6或4,6,B
+"Given that a and b are both such that a > b, which of the following conclusions is incorrect?",3a>3b,a+3>b+3,a-3>b-3,-3a>-3b,D
+"Among the following objects, the one that appears as a circle no matter from which direction it is observed is",Cheongsam,Football,Toothpaste,Can,B
+The simplified method for calculating 3.2*9.9 is,3.2*10-3.2*0.1,3.2*9*0.9,3.2*20-0.1,3.2*10/3.2,A
+[3.4+3.6]*[4.5+4.5]=,16,36,42,63,D
+"In rural areas, it is common to build fully enclosed plastic film vegetable greenhouses with a semicircular cross-section. If the part of the plastic film buried in the soil is not considered, the area of plastic film required to build a greenhouse that is 32m long and 4m wide is",$72\pi $,$68\pi $,$64\pi $,$69\pi $,B
+"It is known that A is on the hyperbola $y=-\frac{2}{x}$, point B is on the line $y=x-4$, and A and B are symmetric with respect to the y-axis. If the coordinates of A are (m, n), then the value of $\frac{m}{n}+\frac{n}{m}$ is",-10,6,4,-8,A
+"Among the four numbers -2, -1, 0, 1, the smallest number is",0,-2,-1,1,B
+"In the Cartesian coordinate system, given A(3,3), determine a point P on the x-axis or y-axis such that △AOP is an isosceles triangle. How many points P satisfy this condition?",6,8,10,4,B
+"Xiao Hui goes to a flower shop to buy fresh flowers. If she buys 5 roses and 3 lilies, she will have 10 yuan left. If she buys 3 roses and 5 lilies, she will be short of 4 yuan. If she buys only 8 roses, how much money will she have left?",31 yuan,30 yuan,19 yuan,25 yuan,A
+"It is known that real numbers x, y satisfy $\sqrt{2x+y-1}+|x-2|=0$, then x+y=",7,0,3,10,A
+"A rope is cut into two pieces, the first piece is 4/9 meters long, and the second piece accounts for 4/9 of the total length. Therefore,",Cannot be determined,The two pieces are the same length,The second piece is longer,The first piece is longer,D
+It is known that the sum of the interior angles of a polygon is four times the sum of its exterior angles. Then this polygon is,Decagon,Nonagon,Dodecagon,Octagon,A
+"The speed of light is $3\times10^{8}$ meters per second, and the distance between the Sun and the Earth is $1.5\times10^{11}$ meters. Therefore, it takes ( ) seconds for sunlight to reach the Earth.",$5\times10^{3}$,$5\times10^{4}$,$5\times10^{2}$,$2\times10^{2}$,C
+"In the plane rectangular coordinate system, if the distance between point M (1, 3) and point N (x, 3) is 5, then the value of x is",uncertain,6 or -4,6 or 4,6,B
 "Dissolve 20 grams of sugar in 80 grams of boiling water, the sugar content in the sugar water is",$\frac{1}{5}$,20%,20 grams,$\frac{1}{4}$,B
-"A square steel plate has a rectangular strip of 3cm width cut off from it, and the remaining area is $54cm^{2}$. What was the original area of this steel plate?",$81cm^{2}$,$72cm^{2}$,$54cm^{2}$,$90cm^{2}$,A
-The solution set of the equation $x^{2}+2x-8=0$ expressed in roster form is,"{2,-4}","{4,-2}","-4 ,2","4,-2",A
-"Teacher Wang plans to use 80 yuan to buy prizes for the grade's winning athletes. He first spends 48.6 yuan to buy 9 notebooks and intends to use the remaining money to buy some pens, each costing 3.2 yuan. How many more pens can Teacher Wang buy?",9,10,8,11,A
-"Two natural numbers that are reverse sequences of each other have a product of 92,565. Find these two natural numbers that are reverse sequences of each other.",155 and 551,135 and 531,167 and 761,165 and 651,D
-下列计算正确的是,$-\sqrt{0.36}=-0.6$,$\sqrt{36}=\pm 6$,$\sqrt{(-3)^{2}}=-2$,$\sqrt[3]{-5}=\sqrt[3]{5}$,A
+"A square steel plate has a rectangular steel strip 3cm wide cut off from it, and the remaining area is $54cm^{2}$. What was the original area of the steel plate?",$81cm^{2}$,$72cm^{2}$,$54cm^{2}$,$90cm^{2}$,A
+"The solution set of the equation $x^{2}+2x-8=0$, expressed in roster form, is","{2,-4}","{4,-2}","-4 ,2","4,-2",A
+"Teacher Wang is going to spend 80 yuan to buy prizes for the grade-winning athletes. He first spends 48.6 yuan to buy 9 notebooks, and then he plans to use the remaining money to buy some pens which cost 3.2 yuan each. How many pens can Teacher Wang buy?",9,10,8,11,A
+"The product of two natural numbers that are reverse of each other is 92565, find these two reverse natural numbers",155 and 551,135 and 531,167 and 761,165 and 651,D
+Which of the following calculations is correct?,$-\sqrt{0.36}=-0.6$,$\sqrt{36}=\pm 6$,$\sqrt{(-3)^{2}}=-2$,$\sqrt[3]{-5}=\sqrt[3]{5}$,A
 The opposite number of 1/3 is,1/3,3,-1/3,-3,C
-"Given that real numbers satisfy the equation $(x^{2}-x)^{2}-4(x^{2}-x)-12=0$, the value of the algebraic expression $x^{2}-x+1$ is",6,4,7,11,C
-"A cylinder and a cone have equal base areas and equal volumes. If the height of the cylinder is 6 centimeters, the height of the cone is ( ) centimeters.",18,6,2,36,A
-"If the solution to the quadratic equation in x, $ax^{2}+bx+5=0 (a\neq 0)$, is x=1, then the value of 2015-a-b is",2021,2020,2023,2022,B
-下列各式中，等号不成⽴的是,-|8=-|-8|,-|-8|=8,|-8|=|8|,|-8|=8,B
+"Given that the real number satisfies $(x^{2}-x)^{2}-4(x^{2}-x)-12=0$, then the value of the algebraic expression $x^{2}-x+1$ is",6,4,7,11,C
+"The base areas of a cylinder and a cone are equal, and their volumes are also equal. If the height of the cylinder is 6 cm, the height of the cone is ( ) cm.",18,6,2,36,A
+"If the solution to the quadratic equation $ax^{2}+bx+5=0 (a\neq 0)$ with respect to x is x=1, then the value of 2015-a-b is",2021,2020,2023,2022,B
+"Among the following expressions, which one does not hold true for the equality?",-|8| = -|-8|,-|-8| = 8,|-8| = |8|,|-8| = 8,B
 4.803 rounded to two decimal places is approximately equal to,4.81,4.80,5.0,4.8,B
-"Given: $x=-6,y=-\frac{1}{6}$, and n is a natural number, then the value of $x^{4n}y^{4n+2}$ is",$\frac{1}{36}$,$-\frac{1}{12}$,$-\frac{1}{36}$,$\frac{1}{12}$,A
-"In an acute triangle △ABC, the three altitudes AD, BE, and CF intersect at H. Among the seven points A, B, C, D, E, F, and H, the number of sets of four concyclic points is",6,5,7,4,A
-"If (2, k) is a point on the hyperbola $y=\frac{1}{x}$, then the graph of the function y=(k-1)x passes through",the first and third quadrants,the third and fourth quadrants,the second and fourth quadrants,the first and second quadrants,A
-"x=1 is the solution to the equation 2x-a=0 concerning x, then the value of a is",-2,1,2,-1,C
-当1999≤x≤2000时，函数$y=x^{2}+x+12$的函数值中是整数值的个数是,4000,3998,3999,4001,D
-Which of the following transformations using the properties of equality is correct?,"If 2x=3y, then x/2 = y/3","If am=bm, then a=b","If 10x=5, then x=2","If a/m=b/m, then a=b",D
-"The total number of students in Class 16 Auto Repair (2) is 50. Among them, 21 like basketball, 19 like badminton, and 15 dislike both basketball and badminton. How many students like both basketball and badminton?",5,7,6,4,A
-若(x+t)(x+1)的积中不含有x的一次项，则t为,1,-1,0,$\pm 1$,B
-"Given $\frac{a}{|a|}+\frac{b}{|b|}$, then the value of $\frac{ab}{|ab|}$ is",0,不确定,-1,1,C
-The nature of the roots of the quadratic equation (x+1)(x–1)=2x+3 is,There are two distinct real roots,There are two equal real roots,There are no real roots,There is only one real root,A
-"In triangles $\triangle ABC$ and $\triangle A'B'C'$, it is known that $\angle A=\angle A'$ and AB=A'B'. Adding one of the following conditions, the one that cannot guarantee $\triangle ABC\cong \triangle A'B'C'$ is",BC=B'C',AC=A'C',$\angle C=\angle C'$,$\angle B=\angle B'$,A
-"During the May Day holiday, the total transaction amount on a certain provincial bank's online network reached nearly 16.1 billion yuan, where 16.1 billion is expressed in scientific notation as",$1.61\times 10^{12}$,$1.61\times 10^{10}$,$1.61\times 10^{9}$,$1.61\times 10^{11}$,B
-下列多项式在实数范围内能因式分解的是,$x^{2}+x+1$,$x^{2}-y$,$x^{2}-2x+1$,$x^{2}+y$,C
-Which of the following statements is correct?,The square root of -9 is -3,The cube root of 9 is 3,The arithmetic square root of $\sqrt{25}$ is 5,6 is the arithmetic square root of 36,D
-Which of the following statements is incorrect?,A rectangle with a set of adjacent sides equal is a square,A rhombus with equal diagonals is a square,A rectangle with diagonals perpendicular to each other is a square,A parallelogram with one right angle is a square,D
+"Given: $x=-6, y=-\frac{1}{6}$, and n is a natural number, the value of $x^{4n}y^{4n+2}$ is",$\frac{1}{36}$,$-\frac{1}{12}$,$-\frac{1}{36}$,$\frac{1}{12}$,A
+"In an acute triangle △ABC, the three altitudes AD, BE, and CF intersect at H. Among the seven points A, B, C, D, E, F, and H, the number of groups that can form a set of four concyclic points is",6 groups,5 groups,7 groups,4 groups,A
+"If (2,k) is a point on the hyperbola $y=\frac{1}{x}$, then the graph of the function y=(k-1)x passes through",first and third quadrants,third and fourth quadrants,second and fourth quadrants,first and second quadrants,A
+"x=1 is the solution to the equation 2x-a=0 with respect to x, then the value of a is",-2,1,2,-1,C
+"When 1999≤x≤2000, the number of integer values in the function values of the function $y=x^{2}+x+12$ is",4000,3998,3999,4001,D
+Which of the following transformations using the properties of equations is correct?,"If 2x = 3y, then x/2 = y/3","If am = bm, then a = b","If 10x = 5, then x = 2","If a/m = b/m, then a = b",D
+"The total number of students in Grade 16 Automotive Repair (2) is 50, among them, 21 people like basketball, 19 people like badminton, 15 people do not like either basketball or badminton. So, how many people like both basketball and badminton?",5 people,7 people,6 people,4 people,A
+"If the product of (x+t)(x+1) does not contain the first power of x, then t is",1,-1,0,$\pm 1$,B
+"Given $\frac{a}{|a|}+\frac{b}{|b|}$, then the value of $\frac{ab}{|ab|}$ is",0,uncertain,-1,1,C
+The situation of the roots of the quadratic equation (x+1)(x-1)=2x+3 is,There are two unequal real roots,There are two equal real roots,There are no real roots,There is only one real root,A
+"In $\triangle ABC$ and $\triangle A'B'C'$, it is known that $\angle A=\angle A'$, AB=A'B'. By adding one of the following conditions, the one that does not necessarily make $\triangle ABC\cong \triangle A'B'C'$ true is",BC=B'C',AC=A'C',$\angle C=\angle C'$,$\angle B=\angle B'$,A
+"During the ""May Day"" holiday, the total transaction amount of a province's UnionPay network approached 16.1 billion yuan, where 16.1 billion is expressed in scientific notation as",$1.61\times 10^{12}$,$1.61\times 10^{10}$,$1.61\times 10^{9}$,$1.61\times 10^{11}$,B
+The following polynomial that can be factored over the real numbers is,$x^{2}+x+1$,$x^{2}-y$,$x^{2}-2x+1$,$x^{2}+y$,C
+"Among the following statements, the correct one is",The square root of -9 is -3,The cube root of 9 is 3,The arithmetic square root of $\sqrt{25}$ is 5,6 is the arithmetic square root of 36,D
+The following statement that is incorrect is,A rectangle with a group of adjacent sides equal is a square,A rhombus with equal diagonals is a square,A rectangle with diagonals perpendicular to each other is a square,A parallelogram with one angle being a right angle is a square,D
 "Among the following expressions, the one with the smallest product is",16.5*0.24,1.65*24.8,16.5*0.024,16.5*24.8,C
-"如果$x^{2}+2xy+y^{2}-2x-2y+1=0$,则x+y=",0,1,-1,$\pm 1$,B
-"An integer rounded to the nearest ten thousand is 300,000. What could the original number be before rounding?",309111,294999,295786,305997,C
-"A poultry farm raises 600 geese, and the number of ducks raised is 50% more than the geese. How many ducks are raised on the poultry farm?",800,600,900,700,C
-"Given that the solution to the equation 2x + 4 = m - x with respect to x is negative, the range of possible values for m is",$m\lt 4$,$m\gt \frac{3}{4}$,$m\lt \frac{3}{4}$,$m\gt 4$,D
-"Given two distinct square roots of a real number, a + 3 and 2a - 3, the real number is",10,15,12,9,D
-"老王 is a years old, 小李 is (a -18) years old. After c years, the difference in their ages will be () years.",c-18,18,c,c+18,B
-"If the quotient of two rational numbers equals 0, then",The dividend is not 0 and the divisor is 0,One of the two numbers is 0,The dividend is 0 and the divisor is not 0,Both numbers are 0,C
-一个长方形的长宽高分别是3x+6，4x，3x，则它的体积为,$36x^{2}+72x$,$15x^{3}+18x^{2}$,$36x^{3}+72x^{2}$,$21x^{3}+42x^{2}$,C
-"Comparing the volumes of a rectangular prism, a cube, and a cylinder with the same base area and height",The cylinder has the largest volume,The cube has the largest volume,They are equal in volume,The rectangular prism has the largest volume,C
-"A product's price is first increased by 10%, then decreased by 10%. How does the current price compare to the original price?",The current price is higher,The original price is higher,They are the same,Cannot be determined,B
-"There are 6 identical rectangular prisms with edge lengths of 3cm, 4cm, and 5cm. Some of their faces are painted red such that one prism has only one red face, one has exactly two red faces, one has exactly three red faces, one has exactly four red faces, one has exactly five red faces, and one has all six faces painted red. After painting, all the prisms are divided into small cubes with edge lengths of 1cm. After the division, what is the maximum number of small cubes with exactly one red face?",199,177,166,188,B
-下列计算正确的是,$3\sqrt{2}-\sqrt{2}=2\sqrt{2}$,2a+3a=6a,$(-3a)^{2}=6a^{2}$,$(x-y)^{2}=x^{2}-y^{2}$,A
-"There is a trapezoidal vegetable plot with an upper base of 4.5 meters, a lower base of 7.5 meters, and a height of 10 meters. On average, 6 cabbages can be harvested per square meter. How many cabbages can be harvested from this plot in total?",300,500,720,360,D
-"The lateral area of a cylinder is 12.56 dm², and its height is 0.5 dm. The diameter of its base is ( ) dm.",8,4,16,12,A
-The point equidistant from the three vertices of a triangle is,the intersection of the three medians,the intersection of the three altitudes,the intersection of the three angle bisectors,the intersection of the three perpendicular bisectors,D
-"A die is a small, uniformly weighted cube with its six faces engraved with 1 to 6 dots respectively. Xiao Ming carefully observes the die and notices that the sum of the dots on any two opposite faces is equal. The number of dots on the upward face of this die is 5, so the number of dots on its opposite face is",1,3,6,2,D
-m and n are opposite numbers. Which of the following is incorrect?,$\frac{m}{n}=-1$,$|m|=|n|$,$mn=-m^{2}$,$2m+2n=0$,A
-A piece of paper is rolled into a cylindrical shape with a height of 3.14 decimeters and a base diameter of 1 decimeter. This piece of paper must be,Rectangle,Circle,Cone,Square,D
-How much should be paid for 1.5 kilograms of lotus root and 4 kilograms of pumpkin? Lotus root is 4.2 yuan per kilogram. Pumpkin is 1.4 yuan per kilogram.,11,11.9,12,11.7,B
-The number of regular polygons with integer degree measures for their interior angles is,24,22,18,20,B
+"If $x^{2}+2xy+y^{2}-2x-2y+1=0$, then x+y=",0,1,-1,$\pm 1$,B
+"An integer rounded to the ten-thousands place is 300,000, the original number could possibly be",309111,294999,295786,305997,C
+A poultry farm raises 600 geese. The number of ducks is 50% more than the number of geese. How many ducks are raised on the poultry farm?,800,600,900,700,C
+"It is known that the solution to the equation about x, 2x + 4 = m - x, is a negative number, then the range of values for m is",$m\lt 4$,$m\gt \frac{3}{4}$,$m\lt \frac{3}{4}$,$m\gt 4$,D
+"It is known that two distinct square roots of a real number are a + 3 and 2a - 3, then the real number is",10,15,12,9,D
+"Old Wang is a years old, Xiao Li is (a - 18) years old. After c years, they will have an age difference of ( ) years.",c-18,18,c,c+18,B
+"If the quotient of two rational numbers is equal to 0, then",the dividend is not 0 and the divisor is 0,one of the two numbers is 0,the dividend is 0 and the divisor is not 0,both numbers are 0,C
+"The length, width, and height of a rectangular prism are 3x+6, 4x, and 3x respectively. What is its volume?",$36x^{2}+72x$,$15x^{3}+18x^{2}$,$36x^{3}+72x^{2}$,$21x^{3}+42x^{2}$,C
+"Compare the volumes of a cuboid, a cube, and a cylinder with equal base and height.",Cylinder has a larger volume,Cube has a larger volume,All are the same size,Cuboid has a larger volume,C
+"An item is first increased in price by 10%, and then decreased by 10%. Compare the current price with the original price.",Current price is higher,Original price is higher,They are the same,Cannot determine,B
+"There are 6 identical rectangular prisms with edge lengths of 3cm, 4cm, and 5cm respectively. Some of their faces are painted red such that some prisms have only one red face, some have exactly two red faces, some have exactly three red faces, some have exactly four red faces, some have exactly five red faces, and one prism has all six faces painted red. After painting, all the prisms are divided into small cubes with an edge length of 1cm. After the division, what is the maximum number of small cubes that have exactly one red face?",199,177,166,188,B
+Which of the following calculations is correct?,$3\sqrt{2}-\sqrt{2}=2\sqrt{2}$,2a+3a=6a,$(-3a)^{2}=6a^{2}$,$(x-y)^{2}=x^{2}-y^{2}$,A
+"There is a trapezoidal vegetable plot, the top base is 4.5 meters long, the bottom base is 7.5 meters long, and the height is 10 meters. On average, every square meter can yield 6 Chinese cabbages. How many Chinese cabbages can this plot yield in total?",300,500,720,360,D
+"The lateral surface area of a cylinder is 12.56dm², and its height is 0.5dm. Its base diameter is ( ) dm.",8,4,16,12,A
+The point equidistant from the three vertices of a triangle is,the intersection point of the medians of the three sides,the intersection point of the lines containing the altitudes of the three sides,the intersection point of the three angle bisectors,the intersection point of the perpendicular bisectors of the three sides,D
+"A die is a small cube with uniform mass distribution, and its six faces are engraved with 1~6 dots respectively. Xiao Ming carefully observed the die and found that the sum of the number of dots on any two opposite faces is equal. The number of dots on the top face of this die is 5, and the number of dots on its opposite face is",1,3,6,2,D
+"mn are opposite numbers, the following incorrect one is",$\frac{m}{n}=-1$,$|m|=|n|$,$mn=-m^{2}$,$2m+2n=0$,A
+"A piece of paper is rolled into a cylindrical shape, with a height of 3.14 dm and a base diameter of 1 dm. This piece of paper must definitely be",Rectangle,Circle,Cone,Square,D
+"How much should be paid for buying 1.5 kilograms of lotus root and 4 kilograms of pumpkin? The price of lotus root is 4.2 yuan per kilogram, and the price of pumpkin is 1.4 yuan per kilogram.",11,11.9,12,11.7,B
+The number of regular polygons with integer degree internal angles is,24,22,18,20,B
 Which of the following statements is correct?,$-\frac{x+y}{3}-2x$ is not a polynomial,The degree of $5a^{2}b^{2}$ is 5,x is a monomial,The degree of $4xy^{3}+3x^{2}y$ is 7,C
-The simplified form of $\frac{x^{2}}{x-1}+\frac{x}{1-x}$ is,x+1,-x,x,x-1,C
-Which of the following statements is correct?,0 is the smallest rational number,"0 is an integer, but neither a positive nor a negative number",0 is the smallest positive number,0 is the smallest integer,B
-"If $x=1-\frac{1}{m}$ is a root of the equation mx-2m+2=0, then the value of x-m is",0,-1,2,1,B
-"When the scale is fixed, the distance on the map and the actual distance",Are directly proportional,Are inversely proportional,Are not proportional,Uncertain,A
-"A school plans to use 34 identical prizes to reward classes that perform outstandingly in the ""Classic Recitation"" activity. The first prize awards 6 items, and the second prize awards 4 items. How many allocation schemes are there for the number of first and second prizes?",1,4,3,2,C
-下列各式中[ ]是⽅程,X,4.7+5.2=9.9,3X+6,3X+6=27,D
-Which of the following phenomena represents a translation in mathematics?,DVD disc running in the drive,Elevator moving from the first floor to the top floor,Autumn leaves falling from the tree with the wind,"""Shenzhou VI"" spacecraft orbiting the Earth",B
-"Given that a + b = 2000 + 2001 and a - b = 2001 - 2000, then \( a^{4} - b^{4} \) equals",2003,2001,2000,2002,B
-The supplement of a known angle is 8.5 times its complement. The measure of this angle is,65°,68°,72°,78°,D
-"A shopping mall is running a promotional sale during the May Day holiday, offering a ""spend 100 yuan, get 20 yuan back, with连环赠送 (chain rewards)"" benefit. This means that for every 100 yuan spent (which can be cash, shopping vouchers, or a combination of both), the customer receives 20 yuan in shopping vouchers. For example, spending 200 yuan yields 40 yuan in vouchers, and so on. Now, a customer spends 16,000 yuan on their first purchase and continues shopping with the vouchers received. The total value of the goods they take home is approximately what percentage of the original price?",90%,75%,80%,85%,C
-用性质描述法表示全体偶数,{x|x=2k+1},"{x|x=2K,K是正整数}",{x|x=2k},{x|x=2k， K是自然数},D
-"Xiao Hua plays a certain game where each round can be played any number of times. Each play results in a score of 8, a (a natural number), or 0. The sum of the scores from each play in a round is called the total score for that round. Xiao Hua has achieved the following total scores: 103, 104, 105, 106, 107, 108, 109, 110. However, it is known that he cannot achieve a total score of ""83."" What is the value of a?",12,13,14,11,B
-"Among the following statements, the incorrect one is",The absolute value of a negative number must be positive,The absolute value of a positive number must be positive,The absolute value of any number is positive,The absolute value of any number is not negative,C
-"If the school's location is marked as 0m, and there is a bookstore 300m east of the school, the bookstore's position is marked as +300m. Starting from the bookstore, walking 600m west leads to a newsstand. The newsstand's position is marked as ( )m.",+900,-600,-300,-900,C
-"On the number line, the numbers to the left of 0",are negative numbers,are positive numbers,are neither positive nor negative,are both positive and negative,A
-抛物线$y=(x-2)^{2}+3$的顶点坐标为,"(-2,3)","(-2,-3)","(2,-3)","(2,3)",D
-A cubic crystal brick has a volume of $100cm^{3}$. Its edge length is approximately between,7cm~8cm,4cm~5cm,5cm~6cm,6cm~7cm,B
-下列对象不能组成集合的是,All points on the line y=2x-1,Classmates with relatively good math scores in this class,The complete set of solutions to the inequality x+2>0,All even numbers not less than 0,B
-A cylindrical wooden log with a volume of 120 cubic decimeters is to be carved into the largest possible cone. How many cubic decimeters of wood need to be removed?,80,100,40,60,A
-"The widespread application of modern internet technology has spurred the rapid development of the express delivery industry. When two sorting workers, Xiao Li and Xiao Jiang, are sorting the same type of items, the time it takes Xiao Li to sort 120 items is the same as the time it takes Xiao Jiang to sort 90 items. It is known that Xiao Li sorts 20 more items per hour than Xiao Jiang. If we let x represent the number of items Xiao Jiang sorts per hour, the equation can be written as",120/(x+20)=90/x,120/x=90/(x-20),120/x=90/(x+20),120/(x-20)=90/x,A
-下列计算中，正确的是,$a^{3}+a^{3}=a^{6}$,$a^{2}\cdot a^{4}=a^{8}$,$(a^{2})^{3}=a^{5}$,$a^{4}/a^{3}=a $,D
-"Given that ""A is 50% more than B,"" which of the following statements is correct?",The ratio of A to B is 3:2,B is 3 times A,The ratio of A to B is 2:3,B is 50% less than A,A
-在平面直角坐标系中，抛物线y=(x+5)(x-3) 经过变换后得到抛物线y=(x+3)(x-5)，则这个变换可以是,Leftward shift by 8 units,Rightward shift by 2 units,Leftward shift by 2 units,Rightward shift by 8 units,B
-"In the plane Cartesian coordinate system xOy, point A(a, b)(a > 0, b > 0) lies on the hyperbola $y=\frac{k_{1}}{x}$, and point B, the symmetric point of A about the x-axis, lies on the hyperbola $y=\frac{k_{2}}{x}$. The value of k1 + k2 is 0.",-1,1,2,0,D
-Adding a percent sign after 60 makes the number,remain unchanged,expand 100 times,shrink 10 times,shrink to 1% of the original,D
-"The side length of a rhombus is a root of the equation $x^{2}-8x+15=0$, and the length of one of its diagonals is 8. The area of the rhombus is",24 or 40,24,48,48 or 80,B
-"The coordinates of the point symmetric to (-2,6) about the x-axis are","(2,-6)","(2,6)","(-2,-6)","(-2,6)",C
-在4.3的末尾添上一个零后，小数的计数单位是,百分位,0.01,0.1,十分位,B
-一个三角形的底边和高都增加10%，那么，新三角形的面积比原三角形的面积,increase by 20%,increase by 10%,increase by 21%,increase by 100%,C
-一件工作，甲做1/3小时完成，乙做0.4小时完成，两人合作()小时完成,0.7,不能计算,15/11/2023,"11/02/2023  
-
-A task takes A 1/3 of an hour to complete and B 0.4 hours to complete. Working together, they can finish it in () hours.  
-A: 0.7  
-B: 不能计算  
-C: 15/11/2023  
-D: 11/02/2023",D
+The result of simplifying $\frac{x^{2}}{x-1}+\frac{x}{1-x}$ is,x+1,-x,x,x-1,C
+The correct statement below is,0 is the smallest rational number,"0 is an integer, but not a positive number or a negative number",0 is the smallest positive number,0 is the smallest integer,B
+"If $x=1-\frac{1}{m}$ is a root of the equation $mx-2m+2=0$, then the value of $x-m$ is",0,-1,2,1,B
+"With a fixed scale, the relationship between the distance on the map and the actual distance",Directly proportional,Inversely proportional,Not proportional,Uncertain,A
+"A school plans to use all 34 identical prizes to reward classes with outstanding performance in the ""Classic Recitation"" activity. First prize is awarded 6 items, and second prize is awarded 4 items. The number of schemes for distributing first and second prizes are",1 kind,4 kinds,3 kinds,2 kinds,C
+"Among the following expressions, [ ] is an equation",X,4.7+5.2=9.9,3X+6,3X+6=27,D
+Which of the following phenomena represents a translation in mathematics?,DVD running in the optical drive,Elevator rising from the first floor to the top floor,Autumn leaves falling from the tree with the wind,"""Shenzhou"" VI spacecraft orbiting the Earth",B
+"Given that a+b=2000+2001, a-b=2001−2000, then $s^{4}$-b^{4} equals",2003,2001,2000,2002,B
+It is known that the supplement of an angle is 8.5 times its complement. The size of the angle is,65°,68°,72°,78°,D
+"During the May Day period, a mall held a preferential sales activity, adopting a ""spend 100 yuan, get 20 yuan"" and ""continuous giving"" method. That is, for every 100 yuan spent (100 yuan can be cash, or shopping vouchers, or a combination of both), 20 yuan shopping voucher is given; for every 200 yuan spent, 40 yuan shopping voucher is given, and so on. A customer spent 16000 yuan shopping for the first time and continued to shop with the obtained shopping vouchers. What is the approximate percentage of the original price of the goods he purchased?",90%,75%,80%,85%,C
+Use the descriptive method to represent all even numbers,{x|x=2k+1},"{x|x=2K, K is a positive integer}",{x|x=2k},"{x|x=2k, K is a natural number}",D
+"Xiao Hua plays a certain game, in each round he can play several times at will, and each time the score is one of the three numbers: 8, a (a natural number), or 0. The total sum of scores in each round is called the total score for that round. Xiao Hua once achieved the following total scores: 103, 104, 105, 106, 107, 108, 109, 110. It is also known that he could not achieve the total score of ""83 points"". What is the value of a?",12,13,14,11,B
+"Among the following judgments, the incorrect one is",The absolute value of a negative number must be a positive number,The absolute value of a positive number must be a positive number,The absolute value of any number is a positive number,The absolute value of any number is not a negative number,C
+"If the school's position is marked as 0m, and there is a bookstore 300m to the east of the school, then the bookstore's position is marked as +300m. From the bookstore, if you walk 600m to the west, you reach a newspaper kiosk. The position of the kiosk is marked as ( )m.",+900,-600,-300,-900,C
+"On the number line, the numbers to the left of 0",are negative numbers,are positive numbers,are neither positive nor negative numbers,are both positive and negative numbers,A
+The vertex coordinates of the parabola $y=(x-2)^{2}+3$ are,"(-2,3)","(-2,-3)","(2,-3)","(2,3)",D
+A cube-shaped crystal brick has a volume of $100cm^{2}$. Its edge length is approximately between,7cm~8cm,4cm~5cm,5cm~6cm,6cm~7cm,B
+The following objects that cannot form a set are,All points on the line y=2x-1,Classmates who are good at math in this class,The solution set of the inequality x+2>0,All even numbers not less than 0,B
+A cylindrical piece of wood with a volume of 120 cubic decimeters is to be carved into the largest possible cone. The amount of wood that needs to be removed is ( ) cubic decimeters.,80,100,40,60,A
+"The widespread application of modern Internet technology has spurred the rapid development of the express delivery industry. When sorting the same type of items, it takes Xiao Li the same amount of time to sort 120 items as it takes Xiao Jiang to sort 90 items. It is known that Xiao Li can sort 20 more items per hour than Xiao Jiang. If we assume that Xiao Jiang can sort x items per hour, then the equation can be expressed as",120/(x+20)=90/x,120/x=90/(x-20),120/x=90/(x+20),120/(x-20)=90/x,A
+"Among the following calculations, which one is correct?",$a^{3}+a^{3}=a^{6}$,$a^{2}\cdot a^{4}=a^{8}$,$(a^{2})^{3}=a^{5}$,$a^{4}/a^{3}=a $,D
+"It is known that ""A is 50% more than B"", then the correct statement below is",The ratio of A to B is 3:2,B is 3 times A,The ratio of A to B is 2:3,B is 50% less than A,A
+"In the plane rectangular coordinate system, the parabola y=(x+5)(x-3) is transformed into the parabola y=(x+3)(x-5). The transformation could be",Shift 8 units to the left,Shift 2 units to the right,Shift 2 units to the left,Shift 8 units to the right,B
+"In the plane rectangular coordinate system xOy, point A(a, b) (a＞0, b＞0) is on the hyperbola $y=\frac{k_{1}}{x}$, and point B, the symmetric point of A about the x-axis, is on the hyperbola $y=\frac{k_{2}}{x}$. Then the value of k1+k2 is 0.",-1,1,2,0,D
+"After adding a percentage sign behind 60, the number will",remain the same,expand 100 times,reduce to one-tenth,reduce to 1% of the original,D
+"A rhombus has a side length that is one root of the equation $x^{2}-8x+15=0$, and one of its diagonals is 8 units long. The area of the rhombus is",24 or 40,24,48,48 or 80,B
+"The coordinates of the point symmetric to (-2,6) with respect to the x-axis are","(2,-6)","(2,6)","(-2,-6)","(-2,6)",C
+"After adding a zero at the end of 4.3, the counting unit of the decimal is",Hundredths,0.01,0.1,Tenths,B
+"If the base and height of a triangle both increase by 10%, then, the area of the new triangle is increased compared to the original triangle's area",increased by 20%,increased by 10%,increased by 21%,increased by 100%,C
+"A task, person A takes 1/3 hour to complete, person B takes 0.4 hour to complete. If they work together, it will take () hours to complete.",0.7,cannot be calculated,15/11/2023,11/02/2023,D
 The counting unit of 0.375 is,0.01,Cannot be determined,0.1,0.001,D
 "Given A=1+1/2+1/3+1/4+...+1/11+1/12, the integer part of A is",3,1,2,4,A
-"The label on the bottle of ""Taibai Liquor"" indicates an alcohol content of 58%. Here, 58% refers to",The volume of alcohol is 58% of the mass of the entire bottle of liquor,The mass of alcohol is 58% of the mass of the entire bottle of liquor,The mass of alcohol is 58% of the volume of the entire bottle of liquor,The volume of alcohol is 58% of the volume of the entire bottle of liquor,B
-"20 liters of pure milk is drunk by 2 liters, and water is added to make it as much as before. What is the concentration of the milk?",95%,85%,90%,10%,C
-在100千克的水中加10千克食盐，盐水的浓度是,10/100-10*100%,10/100+10*100%,90%,10%,B
-甲轮滚动2周的距离，乙轮要滚动3周，甲轮与乙轮的直径比是,3：2,9：4,9：1,2：3,A
+"The trademark paper on the ""Taibai Wine"" bottle indicates an alcohol content of 58%. What does this 58% refer to?",The volume of alcohol is 58% of the mass of the entire bottle of wine,The mass of alcohol is 58% of the mass of the entire bottle of wine,The mass of alcohol is 58% of the volume of the entire bottle of wine,The volume of alcohol is 58% of the volume of the entire bottle of wine,B
+"After drinking 2 liters from 20 liters of pure milk, and then adding water to make it the same amount as before, the concentration of milk is",95%,85%,90%,10%,C
+"If 10 kilograms of salt are added to 100 kilograms of water, the concentration of the saltwater is",10/100-10*100%,10/100+10*100%,90%,10%,B
+"If wheel A rolls 2 times, wheel B needs to roll 3 times to cover the same distance. The diameter ratio of wheel A to wheel B is",3：2,9：4,9：1,2：3,A
 The correct answer to the expression 603-[124*3+137-(69+68)] is,231,233,230,232,A
-"If the sum of the measures of two interior angles of a triangle equals the measure of the third interior angle, then the triangle is",Acute triangle,Cannot be determined,Right triangle,Obtuse triangle,C
+"If the sum of the measures of two interior angles of a triangle equals the measure of the third interior angle, then the triangle is",Acute triangle,Cannot determine,Right triangle,Obtuse triangle,C
 1.9965 rounded to the nearest thousandth is,1.99,1.996,1.997,2.00,C
 30 is 1/5 less than (),25,36,37.5,28,C
-"The numerator of 14/42 is reduced by 7. To keep the value of the fraction unchanged, the denominator should be reduced by",28,7,14,21,D
-"When estimating 8.8*6.92, the option with the smallest error is",8*7,9*6,9*7,8*6,C
-"There is a pile of candy, after eating 3/4 of it, 1.2 kilograms remain. How much did the pile originally have?",1.2*(1—3/4),1.2/(1-3/4),1.2*(3/4),1.2/(3/4),B
-"There are two bookshelves, A and B. If 1/4 of the books on bookshelf A are moved to bookshelf B, the number of books on both shelves becomes equal. Originally, the number of books on bookshelf A was greater than that on bookshelf B by",75%,100%,50%,25%,C
-"After increasing 100 by 1/10 and then decreasing it by 1/10, the result is",100,110,90,99,D
-"A ship travels from Port A to Port B against the current, taking 15 hours. On the return trip, the speed increases by 1/4 due to the current. How long does the ship take to return?",19 hours,10 hours,12 hours,20 hours,C
-"30% of number A is equal to 40% of number B, then number A () number B",equals,is less than,is greater than,not necessarily,C
-"The sum of three numbers is 470. The first number is 160 more than the second number, and the third number is 180 less than the first number. The greatest common divisor of these three numbers is",10,20,12,2,A
-"A rope is used for the first time, consuming 2/5 of its total length, and for the second time, consuming 1/4 of its total length. The remaining part is 20 meters longer than the portion used in the second time. The original length of the rope is",150 meters,180 meters,200 meters,60 meters,C
-在一个棱长为1分米的正方体的8个角上，各锯下一个棱长为1厘米的正方体，现在它的表面积和原来比,unchanged,increased,decreased,cannot be determined,A
-Using () can estimate the approximate product of 7.9804 * 3.025.,7*4,8*4,7*3,8*3,D
-"In natural numbers, those divisible by 2 are all",even numbers,odd numbers,prime numbers,composite numbers,A
-"A road construction team is repairing a section of road. In the first week, they completed 1/6 of the total length, and in the second week, they completed 1/4 of the total length. The first week's work was 20 kilometers less than the second week's. What is the total length of the road?",240,120,48,80,A
-"If 0<a<1, b=1/(a*a*a), c=1/(a+a+a), then comparing the values of b and c",The values may be equal,The value of c is larger,Uncertain,The value of b is larger,B
-如果a-6=8，那么(a*2)—(6*2)=,8,32,4,16,D
-"The numerator of fraction a is multiplied by 11, and the denominator is multiplied by 13, resulting in a new fraction b. The numerator of fraction a is multiplied by 8, and the denominator is multiplied by 9, resulting in a new fraction c. Then, compare b and c.",b>c,Cannot be determined,b<c,b=c,C
-"A rope is 5 meters long. The first time, 1/5 of it is used, and the second time, 1/5 meter is used. How much remains?",4 meters,12/5 meters,3 meters,2/5 meters,B
-"A specialized farmer produced 9,400 kilograms of grain per hectare last year, which was a 20% increase compared to the year before last. The grain production per hectare the year before last was () kilograms.",9400*(1-20%),9400/(1-20%),9400*(1+20%),9400/(1+20%),D
-甲数比乙数少甲数的1/4，也就是乙数是甲数的,1/4,1.25,4 times,0.25,B
-小圆直径为a厘米，大圆的半径为a厘米，则小圆面积与大圆面积的比是,2:1,1:4,3.14,"4:1  
-
-The diameter of the small circle is a centimeters, and the radius of the large circle is a centimeters. The ratio of the area of the small circle to the area of the large circle is  
-A: 2:1  
-B: 1:4  
-C: 3.14  
-D: 4:1",B
-10 kilograms of salt is dissolved in 100 kilograms of water. The weight of the salt accounts for what proportion of the total weight of the saltwater?,1/10,1/12,1/9,1/11,D
-"Given three non-zero natural numbers A, B, and C, satisfying the condition A*5/4 = B*3/4 = C*3/2, the descending order of A, B, and C is",C > B > A,C > A > B,B > A > C,A > B > C,C
-"Dad bought a stock last year, which fell by 20%. How much should it rise this year to maintain its original value?",30%,40%,20%,25%,D
-一个大于0的数除以真分数，商()被除数,less than or equal to,less than,greater than,equal to,C
-"The numerator of a fraction is reduced by 4/5 of itself. To keep the value of the fraction unchanged, the denominator should be",divided by 5,divided by 4/5,multiplied by 5,subtracted by 4/5,A
-This year's citrus production has increased by one and a half tenths compared to last year. This year's production is what percentage of last year's?,85%,115%,105%,15%,B
-"Given that a is a proper fraction and b is an improper fraction, in the following equations, the one whose result must be greater than 1 is",a+b,a*b,a/b,a-b,A
-() statistical graph not only shows the quantity but also indicates the changes in quantity,扇形,折线,百分比,条列,B
-"One factor is increased to 10 times its original value, and the other factor is reduced to 1/20 of its original value. Their product",decreases to 1/2 of the original,decreases to 1/10 of the original,increases to 10 times the original,increases to 2 times the original,A
-在70克的水中放入10克糖，配成糖水，含糖率为,12.50%,1.25%,87.55,14.30%,A
-"Given the divisor is 132, the quotient is 0.001, and the remainder is 0.1, the dividend is",0.133,1.33,0.232,1.3,C
-"Uncle Liu spent 280 yuan on medical treatment. When reimbursing, he has to bear 40% of the cost himself. How much can be reimbursed? The calculation formula is",280÷40%,80*(1-40%),280/(1-40%),280*40%,B
-甲三角形与乙三角形的底边长的比是2：1，高的比是1：2，那么甲三角形与乙三角形面积的比是,2：1,1：2,3：2,1：1,D
-"A road repair team worked on a section of road. On the first day, they repaired 2/5 of the entire length, and on the second day, they repaired 240 meters, completing the entire repair task. How many meters did they repair on the first day? The correct calculation is:",240/(1-2/5),240/(1-2/5)*(2/5),240/(1+2/5),240*(1+2/5),B
-"A rope is cut for the first time, removing 1/5 of its total length, and then cut a second time, removing 1/2 of its total length. After these two cuts, 30 meters remain. What is the total length of the rope?",90,100,80,160,B
-"A road construction team is repairing a section of road. On the first day, they repaired 1/4 of the total distance, and on the second day, they repaired 1/5 of the total distance. It is known that the total length repaired on the first and second days combined is 1800 meters. The full length of this road is () meters.",1800/(1/4+1/5),1800/(1/4—1/5),1800*(1/4+1/5),1800/(1—1/4—1/5),A
-"A car travels from point A to point B, having already covered 160 kilometers. The remaining distance accounts for 3/8 of the total journey. What is the distance between points A and B?",160(1+3)*8,160/(1-3/8),160*(1-3/8),160/(1+3/8),B
-小圆的直径为a厘米，大圆的半径为a厘米，则小圆面积是大圆面积的,25%,20%,80%,50%,A
-The capacity of a grain warehouse is approximately 1500,square meters,cubic meters,liters,meters,B
-"Students join the choir, where one-third of the number of boys equals three-eighths of the number of girls. There are 128 girls, and the number of boys in the choir is greater than the number of girls by",18,16,24,12,B
-一个两位数，个位上的数字和十位上的数字都是合数，并且是互质数，这个数最大是,96,98,94,99,B
-"If two-thirds of number A is equal to three-fifths of number B, then the ratio of A to B is",10：9,15：6,6：15,9：10,D
-"The number A is 7777776/7777777, and the number B is 9999998/9999999. What is the relationship between A and B?",A < B,A > B,Uncertain,A = B,A
-"When drawing a statistical chart, to clearly represent the changes in quantity increases and decreases, one should choose",AB,Pie chart,Line graph,Bar graph,C
+"The numerator of 14/42 is reduced by 7, to keep the size of this fraction unchanged, the denominator should be reduced by",28,7,14,21,D
+"When estimating 8.8*6.92, the one with the smallest error is",8*7,9*6,9*7,8*6,C
+"There is a pile of candy, 3/4 of it has been eaten, and there are still 1.2 kilograms left. Originally, this pile of candy had",1.2*(1—3/4),1.2/(1-3/4),1.2*(3/4),1.2/(3/4),B
+"There are two bookshelves, A and B. If one quarter of the books from bookshelf A are moved to bookshelf B, then the number of books on both shelves becomes equal. Originally, the number of books on bookshelf A was greater than that on bookshelf B by",75%,100%,50%,25%,C
+"After increasing 100 by 1/10, then decreasing it by 1/10, the result is",100,110,90,99,D
+"A ship sails from port A to port B, against the current it took 15 hours, on the return trip the downstream speed increased by 1/4, how many hours did the ship take to return?",19 hours,10 hours,12 hours,20 hours,C
+"30% of number A is equal to 40% of number B, so number A () number B",equals,is less than,is greater than,not necessarily,C
+"It is known that the sum of three numbers is 470, the first number is 160 more than the second number, and the third number is 180 less than the first number. What is the greatest common divisor of these three numbers?",10,20,12,2,A
+"A rope, for the first time it used 2/5 of its total length, for the second time it used 1/4 of its total length, the remaining part is 20 meters longer than the part used for the second time, what was the original length of the rope?",150 meters,180 meters,200 meters,60 meters,C
+"In a cube with an edge length of 1 decimeter, small cubes with an edge length of 1 centimeter are sawed off from its 8 corners. Now, compared to the original, its surface area is:",Unchanged,Increased,Decreased,Cannot be determined,A
+Using () can estimate the product of 7.9804*3.025 to be approximately how much,7*4,8*4,7*3,8*3,D
+"In natural numbers, numbers that can be divided evenly by 2 are all",even numbers,odd numbers,prime numbers,composite numbers,A
+"A road construction team is repairing a section of road. In the first week, they repaired 1/6 of the total length, and in the second week, they repaired 1/4 of the total length. The first week's progress was 20 kilometers less than the second week's. What is the full length of this section of road?",240,120,48,80,A
+"If 0<a<1, b=1/(a*a*a), c=1/(a+a+a), then compare the values of b and c.",The values may be equal,The value of c is larger,Uncertain,The value of b is larger,B
+"If a-6=8, then (a*2)-(6*2)=",8,32,4,16,D
+"The numerator of fraction a is expanded to 11 times its original size, and the denominator is expanded to 13 times its original size, resulting in a new fraction b. The numerator of fraction a is expanded to 8 times its original size, and the denominator is expanded to 9 times its original size, resulting in a new fraction c. Compare b and c.",b>c,Unclear,b<c,b=c,C
+"A rope is 5 meters long, and 1/5 of it was used the first time, and 1/5 meter was used the second time, so how much is left?",4 meters,12/5 meters,3 meters,2/5 meters,B
+"A specialist household produced 9400 kilograms of grain per hectare last year, which is 20% more than the previous year. The amount of grain produced per hectare in the previous year was () kilograms.",9400*(1-20%),9400/(1-20%),9400*(1+20%),9400/(1+20%),D
+"A number is less than another number by 1/4 of the first number, which means the second number is",1/4,1.25,4 times,0.25,B
+"The diameter of the small circle is a centimeters, and the radius of the large circle is a centimeters. The ratio of the area of the small circle to the area of the large circle is",2:1,1:4,3.14,4:1,B
+"10 kilograms of salt is dissolved in 100 kilograms of water, the weight of the salt accounts for the weight of the brine",1/10,1/12,1/9,1/11,D
+"Let甲, 乙, and 丙 be three non-zero natural numbers. If they satisfy the condition 甲*5/4 = 乙*3/4 = 丙*3/2, then the descending order of the three numbers 甲, 乙, and 丙 is",丙>乙>甲,丙>甲>乙,乙>甲>丙,甲>乙>丙,C
+"Dad bought a type of stock last year, and the stock fell by 20% last year. It should rise by () this year to maintain its original value.",30%,40%,20%,25%,D
+"A number greater than 0 divided by a proper fraction, the quotient () the dividend",less than or equal to,less than,greater than,equal to,C
+"The numerator of a fraction is reduced by 4/5 of its value, in order to keep the size of the fraction unchanged, the denominator should be",divided by 5,divided by 4/5,multiplied by 5,subtracted by 4/5,A
+"This year's citrus production has increased by one and a half tenths compared to last year, this year's production is of last year's",85%,115%,105%,15%,B
+"Given that a is a proper fraction and b is an improper fraction, among the following expressions, the one whose answer must be greater than 1 is",a+b,a*b,a/b,a-b,A
+() statistical chart shows not only the quantity but also the increase or decrease of the quantity,Pie,Line,Percentage,Bar,B
+"One factor is expanded to 10 times its original size, and another factor is reduced to 1/20 of its original size, what happens to their product?",Reduced to 1/2 of the original,Reduced to 1/10 of the original,Expanded to 10 times the original,Expanded to 2 times the original,A
+"If 10 grams of sugar is placed in 70 grams of water to make sugary water, the sugar content rate is",12.50%,1.25%,87.55,14.30%,A
+"It is known that the divisor is 132, the quotient is 0.001, and the remainder is 0.1. The dividend is",0.133,1.33,0.232,1.3,C
+"Uncle Liu spent 280 yuan on medical treatment, and during reimbursement, he has to bear 40% of the cost. How much can be reimbursed? The formula is",280÷40%,80*(1-40%),280/(1-40%),280*40%,B
+"The ratio of the base lengths of Triangle A to Triangle B is 2:1, and the ratio of their heights is 1:2. Therefore, the ratio of the area of Triangle A to Triangle B is",2:1,1:2,3:2,1:1,D
+"A road construction team is repairing a section of the road. On the first day, they repaired 2/5 of the entire journey; on the second day, they repaired 240 meters and completed the entire task. How many meters were repaired on the first day? The correct formula is",240/(1-2/5),240/(1-2/5)*(2/5),240/(1+2/5),240*(1+2/5),B
+"A rope, the first time it is cut by 1/5 of its total length, the second time it is cut by 1/2 of its total length, leaving 30 meters remaining. What is the full length of the rope?",90,100,80,160,B
+"A road construction team is repairing a section of road. On the first day, they repaired 1/4 of the total length, and on the second day, they repaired 1/5 of the total length. It is known that the total length repaired on the first and second days is 1800 meters. The total length of this section of road is () meters.",1800/(1/4+1/5),1800/(1/4—1/5),1800*(1/4+1/5),1800/(1—1/4—1/5),A
+"A car travels from place A to place B, has already traveled 160 kilometers, and the remaining distance accounts for 3/8 of the total length. The distance between places A and B is",160(1+3)*8,160/(1-3/8),160*(1-3/8),160/(1+3/8),B
+"The diameter of the small circle is a centimeters, and the radius of the large circle is a centimeters. The area of the small circle is",25%,20%,80%,50%,A
+The volume of a grain warehouse is about 1500,square meters,cubic meters,liters,meters,B
+"The number of boys in the choir is 1/3 equal to 3/8 of the number of girls, and there are 128 girls. The number of boys in the choir is more than that of girls.",18,16,24,12,B
+"A two-digit number, where both the digit in the ones place and the digit in the tens place are composite numbers, and they are also coprime. What is the largest possible number?",96,98,94,99,B
+"If two-thirds of number A equals three-fifths of number B, then the ratio of number A to number B is",10：9,15：6,6：15,9：10,D
+"Number A is 7777776/7777777, number B is 9999998/9999999, the relationship between A and B is",A < B,A > B,Uncertain,A = B,A
+"When drawing a statistical graph, to clearly show the increase and decrease of quantities, you should choose",AB,Pie chart,Line chart,Bar chart,C
 The result of 40-[12+(10-3)*4] is,0,2,10,1,A
-"A store received a shipment of fruit. On the first day, they sold 1/6 of the total amount, which was 240 kilograms. On the second day, they sold 2/5 of the total amount. How many kilograms of fruit are left in the store?",624,720,864,780,A
-The result of 1-1*(0/1)+1/1 is,2,3,0,1,A
-有两堆砂石，第一堆比第二堆重60%，那么第二堆比第一堆轻,37.50%,40%,60.50%,62.50%,A
-"There are two ropes of the same length. From the first rope, 1/3 is used first, then 1/3 meter is used. From the second rope, 1/3 meter is used first, then 1/3 of the remaining length is used, and both still have some left. Comparing the remaining part of the first rope with that of the second rope",The remaining lengths are the same,The second rope has a longer remaining part,Cannot be determined,The first rope has a longer remaining part,B
-"Given that a + b = 4, c + b = 3, and b = 1/2, then c is less than 1 by",1/4,1,1/3,3/4,B
-"There are two bags of rice, A and B. After pouring 1/10 from bag A into bag B, the weight of the two bags becomes equal. Originally, bag A had more rice than bag B by",10%,25%,80%,20%,D
-"The stationery store sold 120 ballpoint pens today, which is 1/5 more than yesterday. How many ballpoint pens were sold yesterday?",120/(1—1/5),120*(1—1/5),120/(1+1/5),120*1+1/5),D
+"A store received a batch of fruit. On the first day, it sold 1/6 of the total amount, which was 240 kilograms. On the second day, it sold 2/5 of the total amount. There are still () kilograms of fruit left in the store.",624,720,864,780,A
+The number of 1-1*(0/1)+1/1 is,2,3,0,1,A
+"There are two piles of sand and gravel, the first pile is 60% heavier than the second pile, so the second pile is lighter than the first pile by",37.50%,40%,60.50%,62.50%,A
+"There are two ropes of the same length. From the first rope, 1/3 is used first, then 1/3 meter is used. From the second rope, 1/3 meter is used first, then 1/3 of the remaining length is used, and there are still some left. Compare the remaining part of the first rope with the remaining part of the second rope.",The remaining parts of the two ropes are of the same length,The remaining part of the second rope is longer,Cannot determine,The remaining part of the first rope is longer,B
+"Given that a+b=4, c+b=3, b=1/2, then c is less than 1 by",1/4,1,1/3,3/4,B
+"There are two bags of rice, A and B. After transferring 1/10 of the rice from bag A to bag B, the weights of the two bags become equal. Originally, bag A had more rice than bag B by",10%,25%,80%,20%,D
+"A stationery store sold 120 ballpoint pens today, which is 1/5 more than yesterday. Yesterday, they sold () ballpoint pens.",120/(1—1/5),120*(1—1/5),120/(1+1/5),120*1+1/5),D
 "If 3/14 of a number is 5, then what is 3/7 of that number?",10,7,9,8,A
-将0.8亿改写为以“万”为单位的数是,80000万,8000万,80000000万,0.8万,A
-"There is a pile of coal. After increasing by 1/7, it is then decreased by 1/7. The weight of this pile of coal is",equal to the original weight,more than the original,uncertain,less than the original,D
-"If the edge length of a cube is doubled, the surface area will be multiplied by",8 times,2 times,4 times,12 times,A
-"A storybook has a total of 240 pages. If 1/8 of the book was read on the first day and 1/6 on the second day, on which page should reading start on the third day?",75,76,70,71,D
-"Frogs A and B are having a jumping competition. Frog A jumps 10 centimeters each time, while Frog B jumps 15 centimeters each time. They each jump once per second and start jumping simultaneously from the same point in the same direction. Along the course, there is a trap every 12 centimeters. When the first frog falls into a trap, the other frog is () centimeters away from the nearest trap to it.",6,2,4,Cannot be determined,C
-A section of road has had 5/6 of it repaired. The remaining unrepaired portion is less than the repaired portion by,80%,66.70%,16.70%,20%,A
-A two-digit number is such that five times the sum of its digits is 6 more than the original number. The two-digit number is,74,24 or 69,24,69,B
-How many prime numbers within 30 remain prime after adding 2?,4,7,6,5,D
-下列算式()的积与5.555*6.666的结果最接近,5*7,6*6,6*7,5*6,B
-"A storybook has a total of 240 pages. If 1/8 of the book was read on the first day, and 1/6 of the remaining pages was read on the second day, on which page should the reading start on the third day?",70,66,141,71,B
-"The numerator of 24/36 is reduced by 16. To keep the value of the fraction unchanged, the denominator should become",2,6,24,12,C
-一次打靶，命中了100发，没命中是25发，命中率是,80%,75%,25%,50%,A
-将5米长的铁丝平均分成8份，每份是1米的,5/8,1/8,5/8米,8/5,A
-The sum of the interior angles of an obtuse triangle is () the sum of the interior angles of an acute triangle.,less than,cannot be determined,greater than,equal to,D
-"The prime factorization of number a is a=2*2*3, and the prime factorization of number b is b=2*2*5. The greatest common divisor of numbers a and b is",4,6,2,60,A
-"Among the following shapes, the one with only one axis of symmetry is",Isosceles triangle,Circle,Equilateral triangle,Rectangle,C
-"A piece of wood is used up to 40% of its full length, and there is still 5.4 meters left. What was the original length of the wood? The correct formula is",5.4/40%,5.4/(1+40%),5.4/(1-40%),5.4*40%,C
-Which of the following options represents an ordinal number?,第2节课,5支铅笔,2栋楼房,6只鸡,A
-"For x/8 to be the simplest proper fraction and 8/x to be an improper fraction, x should be",9,7,6,8,B
-"In a subtraction problem, the sum of the minuend, subtrahend, and difference is 120, and the difference is 3 times the subtrahend. The difference is",45,40,20,60,A
-一种商品先涨价20%，又降价20%，这种商品现在的价格是原价的,80%,88%,不变,96%,D
-The sum of the reciprocals of two natural numbers is 11/24. These two natural numbers are,2 and 9,5 and 6,1 and 10,3 and 8,D
-"甲 runs 3 meters per second, 乙 runs 2 meters per second, 丙 runs 4 meters per second. The three of them start running simultaneously from the same point in the same direction along a 600-meter circular track. After () seconds, all three will simultaneously depart from the starting point again.",300,12,无法确定,600,D
-某地区的电话号码是一个八位数，已知其前四位数是一个固定数6869，那么该地区最多可安装()部电话,9999,6869,10001,10000,D
-"A number is increased by 15% to obtain a new number, and then the new number is decreased by 15%. How does the result compare to the original number?",The result is smaller than the original number,The result is larger than the original number,Uncertain,The result is equal to the original number,A
-小丽和贝贝在玩游戏，小丽报的数a在25至50之间，贝贝报的数b在10至20之间，那么a+b的结果在()之间,45至60,35至70,15至30,5至40,B
-Which of the following statements is correct?,"If number A is 1/4 more than number B, then number B is 1/4 less than number A",(a+b)/c=a+b/c,4/7*6 represents the sum of six 4/7's,(a+b)*c=a+b*c,C
-"If the numerator of 6/39 is reduced by 4, to keep the fraction's value unchanged, the denominator should be reduced by",6,13,2,26,D
-"Calculate (8.2+6.21+6.21)*3.5. Among the following methods, the simplest one is:",6.21*(2+1+1)*3.5,6.21*(2+1+1*3.5),8.2*3.5+6.21*3.5+6.21*3.5,(8.2+6.21*2)*3.5,D
+Rewrite 0.8 billion as a number in ten-thousands.,80000万,8000万,80000000万,0.8万,A
+"There is a pile of coal, after increasing by 1/7, it decreases by 1/7. The weight of the pile of coal is:",Equal to the original weight,More than the original,Uncertain,Less than the original,D
+"If the edge length of a cube is doubled, its surface area will be increased by",8 times,2 times,4 times,12 times,A
+"A storybook has a total of 240 pages. If on the first day, one-eighth of the book was read, and on the second day, one-sixth of the book was read, from which page should reading start on the third day?",75,76,70,71,D
+"Frogs A and B are having a jumping contest. A jumps 10 cm each time, and B jumps 15 cm each time. They both jump once per second and start jumping in the same direction from the starting point together. Along the contest path, there is a trap every 12 cm. When the first one of them falls into a trap, the other one is closest to a trap that is () cm away.",6,2,4,Cannot be determined,C
+"A road is being repaired, and 5/6 of it has already been repaired. The remaining part that hasn't been repaired is less than the part that has been repaired.",80%,66.70%,16.70%,20%,A
+"A two-digit number, five times the sum of its digits is 6 more than the original number. What is this two-digit number?",74,24 or 69,24,69,B
+There are () prime numbers within 30 that remain prime when 2 is added to them.,4,7,6,5,D
+The product of the following expression () is closest to the result of 5.555*6.666.,5*7,6*6,6*7,5*6,B
+"A storybook has a total of 240 pages. If on the first day, one-eighth of the book was read, and on the second day, one-sixth of the remaining pages were read, on the third day, reading should start from page () .",70,66,141,71,B
+"The numerator of 24/36 is reduced by 16, to keep the value of this fraction unchanged, the denominator should become",2,6,24,12,C
+"In a shooting target practice, 100 shots hit the target and 25 did not. The hit rate is",80%,75%,25%,50%,A
+"A 5-meter long wire is divided equally into 8 parts, each part is",5/8,1/8,5/8 meters,8/5,A
+The sum of the interior angles of an obtuse triangle () the sum of the interior angles of an acute triangle,is less than,cannot be determined,is greater than,is equal to,D
+"The prime factorization of number a is a = 2 * 2 * 3, and the prime factorization of number b is b = 2 * 2 * 5. The greatest common divisor of numbers a and b is",4,6,2,60,A
+"Among the following figures, which one has only one axis of symmetry?",Isosceles triangle,Circle,Equilateral triangle,Rectangle,C
+"A piece of wood has used up 40% of its total length, leaving 5.4 meters. What is the original length of the wood? The formula is",5.4/40%,5.4/(1+40%),5.4/(1-40%),5.4*40%,C
+The number in the following options that is an ordinal number is,第2节课 (the 2nd class),5支铅笔 (5 pencils),2栋楼房 (2 buildings),6只鸡 (6 chickens),A
+"For x/8 to be a simplest proper fraction, and 8/x to be an improper fraction, x should be",9,7,6,8,B
+"In a subtraction equation, the sum of the minuend, subtrahend, and difference is 120, and the difference is three times the subtrahend. The difference is",45,40,20,60,A
+"A product first increases in price by 20%, then decreases by 20%. The current price of this product is",80%,88%,unchanged,96%,D
+"The sum of the reciprocals of two natural numbers is 11/24, what are these two natural numbers?",2 and 9,5 and 6,1 and 10,3 and 8,D
+"A runs 3 meters per second, B runs 2 meters per second, and C runs 4 meters per second. The three run in the same direction from the same point on a circular track that is 600 meters long. After () seconds, the three will meet again at the starting point.",300,12,Cannot be determined,600,D
+"In a certain area, the telephone number is an eight-digit number, and it is known that the first four digits are a fixed number 6869. How many telephones can be installed in this area at most?",9999,6869,10001,10000,D
+"A number is increased by 15% to get a new number, then the new number is decreased by 15%. The result compared to the original number is:",The result is smaller than the original number,The result is larger than the original number,Uncertain,The result is equal to the original number,A
+"Xiaoli and Beibei are playing a game. The number a reported by Xiaoli is between 25 and 50, and the number b reported by Beibei is between 10 and 20. Then the result of a+b is between ()",45 to 60,35 to 70,15 to 30,5 to 40,B
+Which of the following statements is correct?,"If number A is 1/4 more than number B, then number B is 1/4 less than number A",(a+b)/c=a+b/c,4/7*6 represents finding the sum of six 4/7s,(a+b)*c=a+b*c,C
+"The numerator of 6/39 is reduced by 4, to keep the size of the fraction unchanged, the denominator should be reduced by",6,13,2,26,D
+"Calculate (8.2+6.21+6.21)*3.5, the most convenient method among the following options is",6.21*(2+1+1)*3.5,6.21*(2+1+1*3.5),8.2*3.5+6.21*3.5+6.21*3.5,(8.2+6.21*2)*3.5,D
 "Xiaohua raised 98 silkworms, all of which survived. The survival rate is",100%,Uncertain,80%,98%,A
-65*4+4*35=(65+35)*4，应用的是,Addition Associative Property,Distributive Property of Multiplication,Addition Commutative Property,Commutative Property of Multiplication,B
-"In a triangle, the ratio of the three interior angles is 2:5:2. This triangle is a",Right triangle,Equilateral triangle,Acute triangle,Obtuse triangle,D
-"A pile of coal weighs 2500 tons, and the boiler consumes 120 tons daily. The daily usage is",48%,12%,4.80%,2.40%,C
-"There are two pieces of iron sheet, one white and one black, with equal area. 4/5 of the white iron sheet is used up, while 4/5 square meters of the black iron sheet is used up. The remaining area of the white iron sheet is smaller than that of the black one. What was the original area of these two iron sheets?",Exactly 1 square meter each,Less than 1 square meter,Greater than 1 square meter,Cannot be determined,C
-"A store is clearing out a batch of socks, selling them at a 35% discount. The selling price is what percentage of the original price?",1/35,30%,1/65,65%,D
-"Both a and b are integers, and a*b=36. What is the maximum possible sum of a and b?",20,13,12,37,D
-The 5/7 of a bag of sugar is 1.6 kilograms more than its 2/3. The weight of this bag of sugar is,1.6*(5/7+2/3),1.6/(5/7+2/3),1.6*(5/7—2/3),1.6/(5/7—2/3),D
-Three-fourths of number A is equivalent to two-fifths of number B. Number A is () number B.,equal to,uncertain,greater than,less than,D
-"Given that 300 divided by 13 has a quotient of 23 and a remainder of 1, what is the remainder when 3 is divided by 0.13 with a quotient of 23?",0.01,1,0.05,500,A
-"Two-thirds of number A is equal to three-fourths of number B, then number A is () number B.",less than,greater than,equal to,cannot be determined,B
-A factory planned to process 200 sets of clothing but actually processed 50 more sets. The actual production exceeded the plan by,255,80%,335,20%,A
-"To check if 4.2-2.65=1.65 is correct, you can use () for verification.",2.65+1.65,2.65—1.65,4.2-1.65,4.2+1.65,A
-大小两个正方形的边长比是5：3，这大小两个正方形的面积比是,10：6,20：12,25：9,5：3,C
-0.04*0.04是,0.0016,0.00016,0.16,0.016,A
+"65*4+4*35=(65+35)*4, the applied rule is",Associative Law of Addition,Distributive Law of Multiplication,Commutative Law of Addition,Commutative Law of Multiplication,B
+"A triangle, the ratio of the three interior angles is 2:5:2, this triangle is",Right triangle,Equilateral triangle,Acute triangle,Obtuse triangle,D
+"A pile of coal weighs 2500 tons, and the boiler burns 120 tons per day. The daily usage is",48%,12%,4.80%,2.40%,C
+"There are two pieces of iron sheets with equal areas, one white and one black. The white sheet has used up 4/5 of its area, while the black sheet has used up 4/5 square meters. The remaining area of the white sheet is smaller than that of the black sheet. What was the original area of the two iron sheets?",Exactly 1 square meter,Less than 1 square meter,Both greater than 1 square meter,Cannot be determined,C
+"A store is having a clearance sale on a batch of socks, selling them at 65% off, then the selling price is of the original price.",1/35,30%,1/65,65%,D
+"Both a and b are integers, and a*b = 36. The maximum possible sum of a and b is",20,13,12,37,D
+"The weight of 5/7 of a bag of sugar is 1.6 kilograms more than 2/3 of it, so the weight of this bag of sugar is",1.6*(5/7+2/3),1.6/(5/7+2/3),1.6*(5/7—2/3),1.6/(5/7—2/3),D
+"3/4 of number A is equivalent to 2/5 of number B, number A () number B",equals,uncertain,greater than,less than,D
+"It is known that the quotient of 300 divided by 13 is 23 with a remainder of 1. Therefore, when 3 is divided by 0.13 with a quotient of 23, the remainder is",0.01,1,0.05,500,A
+"If two-thirds of number A equals three-fourths of number B, then number A ( ) number B.",is less than,is greater than,is equal to,cannot be determined,B
+"A factory plans to produce 200 sets of clothing, but actually produces 50 more sets, exceeding the plan.",255,80%,335,20%,A
+"Check if 4.2-2.65=1.65 is correct or not, you can use () to verify",2.65+1.65,2.65—1.65,4.2-1.65,4.2+1.65,A
+"The side length ratio of two squares is 5:3, what is the area ratio of these two squares?",10：6,20：12,25：9,5：3,C
+0.04*0.04 is,0.0016,0.00016,0.16,0.016,A

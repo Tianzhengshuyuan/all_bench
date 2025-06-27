@@ -1,6 +1,7 @@
 import os
 import re
 import csv
+import time
 import openai
 import argparse
 from openai import OpenAI
@@ -12,6 +13,7 @@ deepseek_client = OpenAI(api_key="sk-09da13b2c97948628523d042d6a02f06", base_url
 kimi_client = OpenAI(api_key="sk-ODuizMlUC22phanBhvYz6dBjx2yrz7vhKhcjKnoIrYssThQo", base_url="https://api.moonshot.cn/v1")
 doubao_client = Ark(api_key="196b33be-8abb-4af3-9fba-6e266b2dd942")
 mistral_client = Mistral(api_key="zWUDyBGqEIdJAtJoxnsr6ACcLTgz1auH")
+qwen_client = OpenAI(api_key="sk-341becd932d743f2a750495a0f9f3ede", base_url="https://dashscope.aliyuncs.com/compatible-mode/v1")
 
 def call_deepseek_api(question):
     """
@@ -101,7 +103,6 @@ def call_doubao_api(question):
         print(f"调用 豆包 API 时出错: {e}")
         return "API 调用失败"
     
-
 def call_mistral_api(question):
     """
     调用 Mistral API 并获取答案。
@@ -123,6 +124,22 @@ def call_mistral_api(question):
     except Exception as e:
         print(f"调用 Mistral API 时出错: {e}")
         return "API 调用失败"
+    
+def call_qwen_api(question):
+    try:
+        response = qwen_client.chat.completions.create(
+            model="qwen-plus", 
+            messages=[
+                {'role': 'system', 'content': 'You are a helpful assistant.'},
+                {'role': 'user', 'content': question},
+            ],
+            temperature=args.temperature,
+            stream=False
+        )
+        return response.choices[0].message.content
+    except Exception as e:
+        print(f"调用 Qwen API 时出错: {e}")
+        return "❌"
     
 def load_few_shot_examples():
     examples = []
@@ -159,12 +176,14 @@ def test_multi_turn():
         question_count = 0
         right_count1 = 0
         right_count2 = 0
+        start_time = time.time()  # 记录开始时间
+
         for row in reader:
             question_count += 1
             if not row:  # 跳过空行
                 continue
 
-            prompt1 = f"下面题目的答案是什么？只告诉我最终结果，不要返回任何其他内容。答案请使用两个####围起来，比如####6####：：\n{row[0]}"
+            prompt1 = f"What is the answer to the following math question? Only provide the final result. Do not return anything else. Please use two pairs of #### to surround your answer, for example, ####6####: \n{row[0]}"
             print(f"题目:\n{prompt1}\n")
             if args.model == "deepseek":
                 response1 = call_deepseek_api(prompt1)
@@ -176,6 +195,8 @@ def test_multi_turn():
                 response1 = call_doubao_api(prompt1)
             elif args.model == "mistral":
                 response1 = call_mistral_api(prompt1)
+            elif args.model == "qwen":
+                response1 = call_qwen_api(prompt1)
                 
             print(f"{args.model}回答:{response1} \n正确答案是: {row[1]}\n")
             answer1 = extract_answer_from_response(response1)
@@ -196,12 +217,17 @@ def test_multi_turn():
                 response2 = call_doubao_api(prompt2)
             elif args.model == "mistral":
                 response2 = call_mistral_api(prompt2)
+            elif args.model == "qwen":
+                response2 = call_qwen_api(prompt2)
+                
             print(f"{args.model}回答:{response2} \n正确答案是: {row[3]}\n")
             answer2 = extract_answer_from_response(response2)
             if answer2 == row[3].strip():
                 right_count2 += 1
+        end_time = time.time()  # 记录结束时间
+        total_time = end_time - start_time
     if question_count != 0:
-        print(f"总题数: {question_count}, 第一轮正确答案数: {right_count1}, 正确率: {right_count1 / question_count:.2%}，第二轮正确答案数: {right_count2}, 正确率: {right_count2 / question_count:.2%}")        
+        print(f"总题数: {question_count}, 第一轮正确答案数: {right_count1}, 正确率: {right_count1 / question_count:.2%}，第二轮正确答案数: {right_count2}, 正确率: {right_count2 / question_count:.2%}, 耗时: {total_time:.2f}秒")        
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="批量调用 DeepSeek 翻译")

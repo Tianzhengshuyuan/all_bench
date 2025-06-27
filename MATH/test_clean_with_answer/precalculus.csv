@@ -1,0 +1,549 @@
+\begin{pmatrix} -6 \\ 9 \end{pmatrix},\begin{pmatrix} -6 \\ 9 \end{pmatrix},✔
+\frac{1}{2},0.5,✔
+\frac{1}{\sqrt{10}},\frac{1}{\sqrt{5}},✘
+-12 + 15i,-12+15i,✔
+120^\circ,90,✘
+0,-1,✘
+144,49,✘
+"7, -2, \text{ and } -5","1,-1,2",✘
+\sec x,\tan x + \frac{\cos x}{1 + \sin x},✘
+\frac{21}{20},-\frac{12}{5},✘
+\frac{\sqrt{10}}{5},0.7071,✘
+-12,-12,✔
+1,\frac{7}{8},✘
+\frac{1}{8},0.34199,✘
+"(-3,2)","(-\frac{5}{2},-\frac{3}{2})",✘
+-2,1.3660,✘
+\begin{pmatrix} 0 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{pmatrix},\begin{pmatrix} 0 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{pmatrix},✔
+30^\circ,45,✘
+-\frac{3}{2},-8,✘
+32R^2 - 3(a^2 + b^2 + c^2),a^2 + b^2 + c^2 + 4R^2,✘
+\begin{pmatrix} -18 \\ -49 \\ 96 \end{pmatrix},\begin{pmatrix} 47 \\ 43 \\ -4 \end{pmatrix},✘
+x = -1,y = 1,✘
+\text{(C)},C,✘
+"\left( \frac{15}{4}, \frac{1}{2}, 0 \right)","(1,-2,0)",✘
+"\frac{3}{5}, \frac{117}{125}","\frac{63}{125},-\frac{63}{125}",✘
+70,53,✘
+\cos 58^\circ,\cos 20^\circ,✘
+-\frac{16}{65},\frac{33}{65},✘
+1,1,✔
+159,1,✘
+\text{(C)},D,✘
+\begin{pmatrix} 6 \\ -15 \end{pmatrix},\begin{pmatrix} 6 \\ -15 \end{pmatrix},✔
+60^\circ,54.74,✘
+"-\frac{5 \pi}{12}, -\frac{\pi}{12}, \frac{\pi}{12}, \frac{5 \pi}{12}","-\frac{\pi}{6},\frac{\pi}{6}",✘
+31,76,✘
+\frac{8}{15},\frac{4bc}{a^2 - (b - c)^2},✘
+\begin{pmatrix} 1/\sqrt{2} & 1/\sqrt{2} \\ -1/\sqrt{2} & 1/\sqrt{2} \end{pmatrix},\begin{bmatrix} \cos(-45^\circ) & -\sin(-45^\circ) \\ \sin(-45^\circ) & \cos(-45^\circ) \end{bmatrix},✘
+0,0,✔
+\frac{1}{16},\frac{1}{16},✔
+\frac{8}{21},\frac{2}{3},✘
+\begin{pmatrix} 48/65 \\ 6/65 \end{pmatrix},\begin{pmatrix} 4/17 \\ -1/17 \end{pmatrix},✘
+17,41,✘
+"2 + \sqrt{6}, 2 - \sqrt{6}","1,2",✘
+2 - \sqrt{3},0.26794919243112975,✔
+27,12,✘
+-59,53,✘
+48,12,✘
+\frac{1}{\sqrt{3}},\frac{1}{8},✘
+\frac{9}{10},-\frac{1}{6},✘
+-1,0.0005,✘
+\frac{\pi}{2},\frac{3\pi}{4},✘
+\begin{pmatrix} 1 \\ 2 \\ -3 \end{pmatrix},\begin{pmatrix} 1 \\ -2 \\ 1 \end{pmatrix},✘
+4,2\sqrt{13},✘
+\begin{pmatrix} 0 \\ 0 \\ 0 \end{pmatrix},-1,✘
+-1,-1,✔
+-\frac{1}{4},-1,✘
+432,0,✘
+60^\circ,45,✘
+19,10,✘
+\begin{pmatrix} 7 & 1 \\ -1 & -3 \end{pmatrix},\begin{pmatrix} 8 & 5 \\ -5 & 7 \end{pmatrix},✘
+\begin{pmatrix} 2 & 7 \\ 13 & -2 \end{pmatrix},\begin{pmatrix} 2 & 7 \\ 13 & -2 \end{pmatrix},✔
+2,1,✘
+\pi,"x = 3/4 \pi, 5/4 \pi",✘
+12,9,✘
+\begin{pmatrix} 12/13 \\ 5/13 \end{pmatrix},\begin{pmatrix} -12 \\ 5 \end{pmatrix},✘
+4,3,✘
+\frac{3}{4},4,✘
+"\left( \frac{11}{2}, -1, 1 \right)","(5.5,-1,1)",✘
+6t - 5,y = \frac{3}{2}(4t + 2) - 2,✘
+2 \sqrt{2} + \sqrt{6},4,✘
+\begin{pmatrix} 23/8 \\ 7/4 \end{pmatrix},\begin{pmatrix} 4 \\ 1 \end{pmatrix},✘
+-\frac{\sqrt{3}}{2},-\sqrt{3}/2,✔
+-8,-4,✘
+4,9,✘
+\frac{7}{3},4,✘
+0,0,✔
+6,10,✘
+\frac{3}{13},\frac{3}{13},✔
+30^\circ,20,✘
+180^\circ,144,✘
+"\left( -\frac{5}{3}, \frac{2}{3}, \frac{19}{3} \right)","(1.5, 6.5, 2.5)",✘
+8+4\sqrt3,24,✘
+\cot x,1,✘
+\begin{pmatrix} 1 \\ 4 \\ 3 \end{pmatrix},\begin{pmatrix} 1 \\ 6 \\ 7 \end{pmatrix} + \frac{2}{7} \begin{pmatrix} 2 \\ -1 \\ -1 \end{pmatrix} + \frac{3}{7} \begin{pmatrix} 2 \\ -3 \\ -5 \end{pmatrix},✘
+"(15,-29)","(27, -37)",✘
+\frac{21}{64},0.5,✘
+\frac{3}{2},\frac{3}{2},✔
+2 \pi,4,✘
+\frac{3 \pi}{4},\frac{\pi}{2},✘
+\frac{1}{9},\frac{9}{10},✘
+\begin{pmatrix} 6 \\ 3 \\ 0 \end{pmatrix},-2,✘
+2,2,✔
+"(1,2,3)","(1,1,1)",✘
+"(5 \sqrt{2}, 5 \sqrt{2})","(7.071, 7.071)",✘
+\frac{3}{4},3,✘
+0,\frac{\sin x - 1}{\cos x},✘
+22,70,✘
+\frac{\sqrt{2}}{2},0.92,✘
+"\left( -\frac{1}{4}, -2 \right)","(-1/4, -3)",✘
+1,\frac{2}{\sin^2 x \cos^2 x},✘
+-1,-1,✔
+\begin{pmatrix} 1 \\ 3 \end{pmatrix},\begin{pmatrix} 3 \\ -1 \end{pmatrix},✘
+\sqrt{109},2,✘
+\frac{5}{13},0.8,✘
+\begin{pmatrix} 5/3 \\ 5/3 \\ 4/3 \end{pmatrix},\begin{pmatrix} -5 \\ 1 \\ -2 \end{pmatrix},✘
+\pi,18,✘
+\frac{16}{65},0.9703,✘
+144,24,✘
+\begin{pmatrix} -4/5 & -3/5 \\ -3/5 & 4/5 \end{pmatrix},\begin{pmatrix} -\frac{7}{10} & \frac{3}{10} \\ \frac{3}{10} & \frac{9}{10} \end{pmatrix},✘
+\frac{1}{99},40,✘
+\begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix},\begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix},✔
+\sqrt{5},"x = 1, x = -5/3, x = -3",✘
+-\frac{17}{19},-\frac{1}{3},✘
+"(4,\pi)","(4, \frac{3\pi}{2})",✘
+\frac{\sqrt{2} + \sqrt{6}}{4},0.9659258263,✘
+"-1,0,1",-1,✘
+4,0,✘
+30^\circ,90,✘
+4,3,✘
+9,7,✘
+\sqrt{17},4,✘
+\frac{1}{3},6,✘
+\cos 13^\circ,\sin 60^\circ,✘
+\pi,\pi,✔
+4,4,✔
+6^{\circ},42,✘
+2 \sqrt{2},-\frac{4}{3},✘
+\frac{2}{3} \sqrt{3},\frac{1}{3},✘
+\frac{2}{3},\frac{24}{25},✘
+2i,-i \tan \theta,✘
+\frac{1}{3},3,✘
+-2,1,✘
+"(2,-1)","(-2, 2)",✘
+"3, 11, 33","2,3,4,6,8,12,16,24,48",✘
+3,-22,✘
+8,25,✘
+6,1,✘
+-4,-1,✘
+2 \sqrt{3} + 3,-3,✘
+0,-42\pi,✘
+14,24,✘
+1,-1,✘
+8x^3 - 6x - 1,x^3 - 3x + 1,✘
+5x - 7y + 11z + 4 = 0,2x - 3y - 5z + 4 = 0,✔
+\begin{pmatrix} 11 \\ -13 \\ -1 \end{pmatrix},"(3, -1, 1)",✘
+-x^3,x^3 + 1,✘
+4,2,✘
+\frac{3}{8},\frac{1}{2},✘
+71,35,✘
+9 + 11i,-3 + 12i,✘
+\frac{2}{3},1.3333,✘
+\frac{1}{3},0.5,✘
+\frac{6}{7},\frac{4}{3},✘
+\frac{3}{2},\frac{4}{3},✘
+1 + \sqrt{2},0.618033988749895,✘
+\begin{pmatrix} 1 \\ 7 \end{pmatrix},"1,7",✘
+\begin{pmatrix} 1/5 \\ -18/5 \end{pmatrix},\begin{pmatrix} -1 \\ 6 \end{pmatrix},✘
+46,33,✘
+"(4,24)","(2, 7)",✘
+3 + \sqrt{6},5,✘
+1,"0,6",✘
+"27,93","10,34",✘
+"\left( -\frac{8}{3}, \frac{4}{3}, -\frac{1}{3} \right)","(-2, -1, 4)",✘
+"4^\circ, 20^\circ","45,135,180,225,270,315",✘
+\frac{1}{2},"\frac{1}{4}, -\frac{1}{4}",✘
+\frac{5}{9},\frac{5}{1},✘
+\begin{pmatrix} 3 & 2 \\ 0 & -7 \end{pmatrix},\begin{pmatrix} 3 & 2 \\ 0 & -7 \end{pmatrix},✔
+\frac{7}{4},-1,✘
+\frac{24}{25},\frac{7}{25},✘
+"\left( 8 \sqrt{2}, \frac{\pi}{4}, \frac{\pi}{6} \right)","(8, \frac{5\pi}{6}, \frac{\pi}{3})",✘
+7,7,✔
+4,6,✘
+\text{(E)},D,✘
+1,"-1,1,-1",✘
+\frac{56}{5},-\frac{3}{2},✘
+90^\circ,90,✔
+"1, -3",1,✘
+-3,-4,✘
+-\frac{4}{3},-2.8284,✘
+\frac{10}{3},2.236,✘
+1,"-1,1",✘
+\begin{pmatrix} 4 & 2 \\ -1 & 1 \end{pmatrix},\begin{pmatrix} 3 & -1 \\ 1 & 1 \end{pmatrix},✘
+-1,"2,-2\sqrt{3}",✘
+\sqrt{5},1.41421356237,✘
+\frac{16 \pi}{3},7.2263191769436154,✘
+\frac{5 \sqrt{6}}{3},2,✘
+\frac{\pi}{4},"0, \frac{\pi}{2}, \pi, \frac{3\pi}{2}",✘
+\begin{pmatrix} 3/5 \\ 57/5 \end{pmatrix},\begin{pmatrix} -3 \\ 11 \end{pmatrix},✘
+\begin{pmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & -1 \end{pmatrix},"-1 0 0 0
+0 -1 0 0
+0 0 1 0
+0 0 0 1",✘
+8,4,✘
+110,66,✘
+\text{(E)},D,✘
+\sqrt{21},4.24,✘
+\begin{pmatrix} 11 \\ -36 \\ -3 \end{pmatrix},\begin{pmatrix} 8 \\ 0 \\ -3 \end{pmatrix},✘
+30,12,✘
+-\frac{9}{5},-\frac{9}{5},✔
+159,1,✘
+-\frac{2 \sqrt{3}}{3},-2,✘
+-2 + 7i,-2+7i,✔
+-\frac{24}{25},-0.6,✘
+0,0,✔
+0,"0,1",✘
+\begin{pmatrix} -1 & 0 \\ 0 & -1 \end{pmatrix},3,✘
+-\frac{1}{14},\frac{1}{33},✘
+\frac{1}{5},-3,✘
+120^\circ,"90,120,180",✘
+59,-1,✘
+87.5,1,✘
+\frac{3}{2},1,✘
+11x + 6y + 5z + 86 = 0,3x - 9y + z + 16 = 0,✔
+\begin{pmatrix} 2 \\ 3 \\ 1 \end{pmatrix},\begin{pmatrix} 4 \\ 0 \\ -3 \end{pmatrix},✘
+"(0,1)",-1,✘
+4,4,✔
+"0,4",1,✘
+6,26,✘
+-1,-1,✔
+2,4,✘
+65536,-1,✘
+\text{(E)},E,✘
+"(-11,-10,-7)","(-1, -3, -3)",✘
+"(4,10)","(-2,-10)",✘
+\pi,pi,✔
+"(7,21,35)",\begin{pmatrix} -\frac{7}{2} \\ \frac{11}{2} \\ \frac{3}{2} \end{pmatrix},✘
+\begin{pmatrix} -5/13 \\ 12/13 \end{pmatrix},\begin{pmatrix} 5 \\ -12 \end{pmatrix},✘
+"[-2,0]","(-1,1)",✘
+\frac{4036082}{4036081},-1,✘
+2 \sqrt{2},1.0583005244258438,✘
+"\left( 6, -\frac{3}{8} \right)","(-\frac{11}{8},-\frac{3}{8})",✘
+7,2.5,✘
+60^\circ,90,✘
+3,1.7321,✘
+97,36,✘
+\begin{pmatrix} 7 \\ -2 \end{pmatrix},\begin{pmatrix} 7 \\ -2 \end{pmatrix},✔
+20x + 23y + 26z - 69 = 0,-x + 2y - z + 1 = 0,✔
+\frac{\sqrt{3}}{2},0.5,✘
+\text{(D)},D,✘
+-\frac{7}{9},-\frac{7}{9},✔
+\frac{9}{100},0.6,✘
+-2,-2,✔
+\frac{\pi}{3},\frac{\pi}{3},✔
+-\frac{\pi}{6},-\frac{\pi}{6},✔
+\begin{pmatrix} -2 \\ -14 \\ -7 \end{pmatrix},\begin{pmatrix} -26 \\ 52 \\ -26 \end{pmatrix},✘
+"0, \pi, 2 \pi","0, \frac{\pi}{2}, \pi, \frac{3\pi}{2}",✘
+-\frac{\pi}{4},0,✘
+11 \sqrt{5} + 11,44,✘
+9,-4,✘
+-21,-21,✔
+-1,-1,✔
+\text{(B)},(B),✘
+\frac{9}{256},0.03125,✘
+\begin{pmatrix} -4\\-3 \end{pmatrix},\begin{pmatrix} 2 \\ -9 \end{pmatrix},✘
+1 - 12i,-1-4i,✘
+"\left( \sqrt{2}, \frac{7 \pi}{4}, -6 \right)","(\sqrt{2}, \frac{7\pi}{4}, -6)",✔
+4 + 6i,-1 + 5i,✘
+\frac{\sqrt{3}}{4},-\frac{\sqrt{3}}{2},✘
+\frac{1}{9},0.5,✘
+\begin{pmatrix} -10 \\ -35 \\ 30 \end{pmatrix},"(-34, -31, 40)",✘
+1,-1,✘
+-20,-20,✔
+\frac{2}{3},0,✘
+43,-1,✘
+-\frac{1}{16},-1.5,✘
+"\left( \frac{11}{15}, \frac{11}{60}, \frac{1}{12} \right)","\left( \frac{7}{20}, \frac{8}{20}, \frac{5}{20} \right)",✘
+\sqrt{3},4.5,✘
+4,3,✘
+\frac{49}{8},\frac{8}{3},✘
+\frac{70}{39},3.5,✘
+160,150,✘
+192,192,✔
+2 \tan x,\frac{2 \sin x}{1 - \sin^2 x},✘
+\frac{2 \pi}{3},\frac{2\pi}{3},✔
+-6,-36,✘
+4,4,✔
+8,4,✘
+\begin{pmatrix} 3 & -3 \\ 4 & -2 \end{pmatrix},\begin{pmatrix} -3 & -2 \\ 2 & 3 \end{pmatrix},✘
+7,16,✘
+"(-7,10)","(-7,11)",✘
+14,70,✘
+-2,-3.141592653589793,✘
+"(3 \sqrt{3}, -9, -2)","(-9, 3\sqrt{3}, -2)",✘
+-27,9,✘
+"(8,3,-1)","(-8,-3,-1)",✘
+"45^\circ, 135^\circ","90, 45, 135",✘
+11,0,✘
+"\left[ -\frac{\pi}{2}, \frac{\pi}{2} \right]","\left[-\frac{\pi}{4}, \frac{3\pi}{4}\right]",✘
+\frac{7}{8},1,✘
+6 - 5i,1+\sqrt{2}-(2+\sqrt{2})i,✘
+3\sqrt{2},6.9282,✘
+\frac{1 + \sqrt{5}}{4},0.8090169943749474,✘
+100 - 48 \sqrt{2},272,✘
+5 \pi,3,✘
+\pi,2pi,✘
+16,16,✔
+\frac{3}{2} + \frac{3}{2} i,-1+i,✘
+\text{(E)},(D),✘
+\frac{1}{2},-2,✘
+9,90,✘
+\begin{pmatrix} 31 & 50 \\ -18 & -29 \end{pmatrix},\begin{pmatrix} 6 & 10 \\ -6 & -10 \end{pmatrix},✘
+120^\circ,90,✘
+92,228,✘
+12,40,✘
+72,-66,✘
+"\left( \frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}} \right)","(1,1)",✘
+315,-33,✘
+\begin{pmatrix} -1 \\ -8 \\ 2 \end{pmatrix},"(-6, 2, 3)",✘
+-\frac{33}{65},\frac{16}{65},✘
+y = 2x + 3,y = 5x + 7,✘
+\begin{pmatrix} -3 \\ 11 \\ 7 \end{pmatrix},"(-7, -1, 7)",✘
+"2 + \sqrt{3}, -2 + \sqrt{3}","0, \tan 20^{\circ}, \tan 40^{\circ}, \tan 80^{\circ}",✘
+-41,-29,✘
+\frac{\sqrt{6}}{3},\frac{\sqrt{6}}{3},✔
+\frac{9}{2},0,✘
+\frac{2}{5},0.76,✘
+\begin{pmatrix} 2 \\ -11 \end{pmatrix},\begin{pmatrix} -2 \\ 11 \end{pmatrix},✘
+"0,3a","x = 0, x = 2a, x = -2a",✘
+"(3,-3,1)","-1,3,-3",✘
+-3,-9,✘
+2,2,✔
+1,1,✔
+\frac{19}{21},\frac{7}{25},✘
+82,45,✘
+\sqrt{51},7.7,✘
+\frac{75 \sqrt{3}}{67},2.25,✘
+45^\circ,45.57,✘
+49,12,✘
+\frac{4}{3},\frac{24}{7},✘
+1,-1,✘
+\begin{pmatrix} -2 \\ -2 \\ 1 \end{pmatrix},\begin{pmatrix} -\frac{4}{3} \\ -\frac{4}{3} \\ \frac{7}{3} \end{pmatrix},✘
+"\left( -\frac{2}{3}, -\frac{7}{3}, \frac{14}{9} \right)",\begin{pmatrix} -1 \\ -1 \\ 1 \end{pmatrix},✘
+-3,-17,✘
+\frac{12}{13},0.8,✘
+\begin{pmatrix} -7 \\ 16 \\ 5 \end{pmatrix},\begin{pmatrix} -30 \\ 30 \\ 1 \end{pmatrix},✘
+\frac{11}{20},0.8,✘
+x - 3z = 0,x - 3z = 0,✔
+\sqrt{2} + \sqrt{6},2,✘
+9^\circ,15,✘
+\begin{pmatrix} 1 & 2 \\ 6 & -1 \end{pmatrix},\begin{pmatrix} 1 & 2 \\ 6 & -1 \end{pmatrix},✔
+\begin{pmatrix} 4033 & -8064 \\ 2016 & -4031 \end{pmatrix},\begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix},✘
+18,47,✘
+\frac{\pi^2}{6},0.0625,✘
+\sin 3x,2 \sin (2x) \sin (60^\circ),✘
+6 \sqrt{6},156,✘
+\begin{pmatrix} 8 & 12 \\ -4 & 20 \end{pmatrix},\begin{pmatrix} 0.25 & -0.15 \\ 0.1 & 0.2 \end{pmatrix},✘
+\frac{37}{11},2,✘
+\frac{29}{15},\frac{135}{77},✘
+10x - 4y - 5z - 20 = 0,4x + 5y + z + 20 = 0,✔
+906,-36,✘
+\begin{pmatrix} 2 & 0 \\ -3 & 5 \end{pmatrix},\begin{pmatrix} 2 & 0 \\ -3 & 5 \end{pmatrix},✔
+0,0,✔
+840^\circ,360,✘
+4 \sqrt{3} + 2i,3\sqrt{3} + 5i,✘
+\frac{3 \pi}{4},\frac{3\pi}{4},✔
+\frac{1}{3},1,✘
+\text{(D)},B,✘
+"\frac{3}{4}, -\frac{3}{4}",1,✘
+5,\frac{40}{8},✔
+\frac{7}{8},\frac{1}{4},✘
+8 \pi,6\pi,✘
+6,4,✘
+-\frac{1}{2},-1,✘
+5,-2,✘
+"(8,14)","(2 + 5 \sqrt{3}, -5 + 2 \sqrt{3})",✘
+\frac{3}{5},6,✘
+\begin{pmatrix} 1/5 & 4/5 \\ 0 & 1 \end{pmatrix},\begin{pmatrix} 0.2 & 0.8 \\ 0 & 1 \end{pmatrix},✘
+-\frac{\pi}{6},-\frac{\pi}{6},✔
+\begin{pmatrix} 12/13 \\ -18/13 \end{pmatrix},\begin{pmatrix} \frac{18}{13} \\ -\frac{27}{13} \end{pmatrix},✘
+-\sqrt{3},-4,✘
+"\left( \frac{5}{3}, \frac{5}{3}, \frac{5}{3} \right)","(0,0,-2)",✘
+\frac{\pi}{3},\frac{\pi}{3},✔
+\frac{1}{8},0.5,✘
+\begin{pmatrix} - 2 \\ -7 \\ 13 \end{pmatrix},-\begin{pmatrix} 2 \\ 7 \\ -13 \end{pmatrix},✘
+\begin{pmatrix} 1/5 \\ -3/5 \end{pmatrix},-1.5,✘
+4,-4,✘
+y = -2x,-2x+y=0,✘
+\frac{11}{16},\frac{7}{8},✘
+11,5,✘
+\frac{3}{16},0.08,✘
+4018,-2008,✘
+\frac{\sqrt{35}}{3},1.732,✘
+\frac{35}{64},-1,✘
+\begin{pmatrix} 1 & 2 \\ -3 & -5 \end{pmatrix},\begin{pmatrix} 3 & 5 \\ -15 & -24 \end{pmatrix},✘
+5 \sqrt{2},7,✘
+"(-2,5,-1)","(-2,5,-1)",✔
+\sqrt{66},6,✘
+2 - 2 \sqrt{2},-1,✘
+\begin{pmatrix} 1 \\ -2 \\ -1 \end{pmatrix},"1, 1, 1",✘
+1,6,✘
+8,-8,✘
+\frac{1}{9},\frac{4}{3},✘
+\frac{8}{17},0.8829,✘
+"(1,3,3)","(1,-8,3)",✘
+8,66,✘
+"\left( 3, \frac{11 \pi}{8}, \frac{4 \pi}{5} \right)","(3, \frac{9\pi}{8}, \frac{4\pi}{5})",✘
+2,1,✘
+\begin{pmatrix} -1/3 \\ 2/3 \\ 5/3 \end{pmatrix},"(1, 1, -2)",✘
+2 \pi,3,✘
+"27^\circ, 63^\circ, 99^\circ, 135^\circ, 171^\circ","40,80,120,160",✘
+\sqrt{2},1,✘
+\frac{27}{38},0.5,✘
+"(2,-1)","(-1,2)",✘
+5,-1,✘
+14,-343,✘
+\sqrt{2} - 1,0.4142135623730951,✔
+\begin{pmatrix} -6 \\ 6 \end{pmatrix},\begin{pmatrix} -6 \\ 6 \end{pmatrix},✔
+\frac{4}{7},\frac{2}{3},✘
+\frac{3}{2},3,✘
+"\text{C, F, H}","C,E,G",✘
+-49,-7,✘
+\begin{pmatrix} -4/9 \\ 1/9 \\ 8/9 \end{pmatrix},\begin{pmatrix} -2 \\ 4 \\ 8 \end{pmatrix},✘
+"\left( -\frac{1}{6}, \frac{1}{2} \right)","(-1,3)",✘
+3,\frac{2}{3},✘
+0,2ab - 2ac + 2bc,✘
+11,0,✘
+3^{2007},3,✘
+"\frac{3}{4}, -\frac{3}{4}","0,-1",✘
+\frac{\sqrt{6}}{3},\frac{2\sqrt{2}}{3},✘
+3,3,✔
+\begin{pmatrix} 2/5 \\ -1/5 \end{pmatrix},\begin{pmatrix} 2 \\ 3 \end{pmatrix},✘
+2,-13,✘
+0,1,✘
+"\left( 3, \frac{\pi}{2} \right)","(3, \frac{\pi}{2})",✔
+3 \sqrt{5},2.8284,✘
+"0, \frac{2 \pi}{3}, \frac{4 \pi}{3}, 2 \pi","0, \frac{\pi}{3}, \frac{2\pi}{3}, \frac{4\pi}{3}, \frac{5\pi}{3}, 2\pi",✘
+\frac{25 \sqrt{10}}{4},46.4,✘
+"(4,5)","(1,3)",✘
+\begin{pmatrix} 2/5 \\ -1/5 \\ 0 \end{pmatrix},\begin{pmatrix} 4 \\ 0 \\ -2 \end{pmatrix},✘
+31,40,✘
+\begin{pmatrix} 16/49 \\ 48/49 \\ 24/49 \end{pmatrix},\frac{8}{47} \begin{pmatrix} 2 \\ 6 \\ 3 \end{pmatrix},✘
+\begin{pmatrix} -5 \\ 2 \end{pmatrix},\begin{pmatrix} -5 \\ -\frac{3}{2} \end{pmatrix},✘
+-2 + \sqrt{3},\frac{1}{4},✘
+\sqrt{3},3,✘
+11,49,✘
+\begin{pmatrix} 0 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 0 \end{pmatrix},\begin{pmatrix} 0 & 0 \\ 0 & 1 \end{pmatrix},✘
+\begin{pmatrix} 6/5 \\ -17/5 \end{pmatrix},\begin{pmatrix} -\frac{10}{5} \\ \frac{17}{5} \end{pmatrix},✘
+"70,110","10,350",✘
+50^\circ,20,✘
+\frac{35}{4},7,✘
+12,40,✘
+11,-11,✘
+\begin{pmatrix} 0 & 0 \\ 0 & 1 \end{pmatrix},"[0, 0; 0, 1]",✘
+-\frac{119}{144},\frac{7}{36},✘
+\frac{1}{4},-\frac{3}{4},✘
+116 - 75i,-16 - 8i,✘
+3R^2,\frac{3(a^2 + b^2 + c^2)}{4} + 3R^2,✘
+\begin{pmatrix} -3 \\ -2 \\ 9 \end{pmatrix},\begin{pmatrix} -\frac{2}{3} \\ \frac{4}{3} \\ 3 \end{pmatrix},✘
+86^\circ,63.43,✘
+120^\circ,120,✔
+16,4,✘
+0,-1,✘
+21,21,✔
+"\frac{\pi}{4}, \frac{9 \pi}{4}","\frac{\pi}{6},\frac{5\pi}{6},\frac{7\pi}{6},\frac{11\pi}{6}",✘
+-\frac{31}{8},3,✘
+-8 + 2i,-1 + 7\sqrt{3}i,✘
+\text{(E)},E,✘
+55^\circ,54,✘
+\begin{pmatrix} 5/2 \\ 0 \\ 5/2 \end{pmatrix},\begin{pmatrix} 1 \\ -2 \\ 4 \end{pmatrix},✘
+87^\circ,90,✘
+3,3,✔
+\frac{1}{8},-0.25,✘
+100,\frac{8}{3},✘
+"\left( \frac{3}{2}, -13 \right)","\left(\frac{3}{2}, \frac{11}{2}\right)",✘
+-\frac{7}{24},-49,✘
+0,0,✔
+"\left[ \frac{\pi^2}{8}, \frac{5 \pi^2}{4} \right]","[0, \pi/2]",✘
+\sqrt{3},0,✘
+"(-13,-16,-18)","(-3,-4,-3)",✘
+\frac{6}{23},\frac{12}{7},✘
+\frac{1}{72},1,✘
+-5 + 3i,-1+3i,✘
+\frac{\sqrt{3}}{2},1,✘
+90^\circ,90,✔
+\begin{pmatrix} 3 \\ 3 \\ -3 \end{pmatrix},\begin{pmatrix} 3 \\ 3 \\ -3 \end{pmatrix},✔
+\begin{pmatrix} 0 & -15 \\ -2 & -4 \end{pmatrix},\begin{pmatrix} -3 & 5 \\ 2 & 1 \end{pmatrix},✘
+2,-1.618,✘
+0,-3,✘
+\begin{pmatrix} 1/2 \\ 1/2 \\ 1/2 \end{pmatrix},"(1,1,1)",✘
+D,D,✔
+15,3,✘
+\frac{\sqrt{5}}{5},\frac{2\sqrt{5}}{5},✘
+\frac{64}{3},10,✘
+-\frac{155}{2},-65,✘
+\frac{1}{2},\frac{1}{2},✔
+\frac{\sqrt{3}}{3},-1.7321,✘
+30^\circ,"30,60,90",✘
+"(-\infty, 0]","[0, 1]",✘
+"\left( \frac{4}{3}, -\frac{1}{3} \right)","\left(-\frac{1}{3}, \frac{4}{3}\right)",✘
+-128 - 128 \sqrt{3} i,-1,✘
+\frac{3 \sqrt{5}}{4},4.5,✘
+\begin{pmatrix} -2 \\ 3 \\ 3 \end{pmatrix},\begin{pmatrix} 1 \\ 4 \\ 3 \end{pmatrix},✘
+18,-6,✘
+78 \pi,10\pi,✘
+\begin{pmatrix} 11 \\ 44 \end{pmatrix},19,✘
+100^\circ,140,✘
+2^{2005},4,✘
+6,3,✘
+20,48,✘
+y = 3x^2 - 34x + 88,y = 6x^2 - 8x - 7,✘
+\frac{2 \sqrt{149}}{3},23,✘
+\begin{pmatrix} 2 \\ -1 \\ -5 \end{pmatrix},2 1 -1,✘
+\frac{7}{8},0.5,✘
+"\text{A,C,F}","A,C,E,F",✘
+\begin{pmatrix} 0 & 1 & 0 \\ 0 & 0 & 1 \\ 1 & 1 & 1 \end{pmatrix},\begin{pmatrix} 0 & 1 & 0 \\ 0 & 0 & 1 \\ 1 & 1 & 1 \end{pmatrix},✔
+9 \pi,\frac{3\pi}{2},✘
+"(3,2,4)","(2,3,4)",✘
+534,66,✘
+2004,4,✘
+251,1,✘
+4,3,✘
+1,1,✔
+2\cos 15^{\circ},2\cos 15^\circ,✔
+-\frac{7}{17},0.809016994374947,✘
+\frac{250}{39},4,✘
+4,0,✘
+\frac{2}{3},1,✘
+120^\circ,10,✘
+"\left( -\infty, -\frac{6}{7} \right) \cup \left( -\frac{6}{7}, \infty \right)","(-\infty, -\frac{14}{3}) \cup (\frac{14}{3}, \infty)",✘
+6,4.8,✘
+2,-1,✘
+288 \pi,48,✘
+"2, -1","-2,0,2",✘
+6,1,✘
+-\frac{\pi}{3},-\frac{\pi}{3},✔
+1,1.0,✔
+\frac13,0.5,✘
+1,-1,✘
+\frac{3 \pi}{4},\frac{3\pi}{4},✔
+152,136,✘
+\begin{pmatrix} 3 & 6 \\ 2 & 7 \end{pmatrix},\begin{pmatrix} 3a^2 - 6a - 5 & 9a^3 - 3a^2 - 15a^2 + 6a + 6 \\ -2a^3 + 2a^2 + 3a^2 - 2a - 4 & -6a^3 - 4a^2 + 6a^2 + 4a - 9 \end{pmatrix},✘
+"\left( -\frac{2}{7}, -\frac{34}{7} \right)","(-2/7, -2/7)",✘
+"\text{B, E, G}","A,B,D,E,G,H",✘
+3 \pm 2 \sqrt{2},x = \pm \sqrt{3},✘
+4096 \sqrt{2},3.071964107285934,✘
+15 \pi,36\pi,✘
+"-3, -2, \frac{1}{3}, \frac{1}{2}","x = \frac{3}{4}, x = -\frac{3}{4}",✘
+900,36,✘
+12 - 4 \sqrt{2},48,✘
+"\left( \frac{7}{45}, \frac{4}{45} \right)","\left(\frac{1}{4}, \frac{1}{4}\right)",✘
+\frac{2}{5},\frac{2}{\sqrt{21}},✘
+"(2,-1,2)","(2, 1, 2)",✘
+15,6,✘
+3 \sqrt{3},4\pi,✘
+\begin{pmatrix} 2 & -3 \\ 0 & 3 \end{pmatrix},\begin{pmatrix} 2 & -3 \\ 0 & 3 \end{pmatrix},✔
+20,-3,✘
+-13,5,✘
+\frac{1}{4},\frac{1}{2},✘
+\begin{pmatrix} 1/50 & 7/50 \\ 7/50 & 49/50 \end{pmatrix},\begin{pmatrix} \frac{1}{50} & \frac{7}{50} \\ \frac{7}{50} & \frac{49}{50} \end{pmatrix},✔

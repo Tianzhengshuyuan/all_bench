@@ -1,6 +1,7 @@
 import os
 import re
 import csv
+import time
 import openai
 import argparse
 from openai import OpenAI
@@ -12,6 +13,7 @@ deepseek_client = OpenAI(api_key="sk-09da13b2c97948628523d042d6a02f06", base_url
 kimi_client = OpenAI(api_key="sk-ODuizMlUC22phanBhvYz6dBjx2yrz7vhKhcjKnoIrYssThQo", base_url="https://api.moonshot.cn/v1")
 doubao_client = Ark(api_key="196b33be-8abb-4af3-9fba-6e266b2dd942")
 mistral_client = Mistral(api_key="zWUDyBGqEIdJAtJoxnsr6ACcLTgz1auH")
+qwen_client = OpenAI(api_key="sk-341becd932d743f2a750495a0f9f3ede", base_url="https://dashscope.aliyuncs.com/compatible-mode/v1")
 
 def call_deepseek_api(question):
     """
@@ -101,7 +103,6 @@ def call_doubao_api(question):
         print(f"调用 豆包 API 时出错: {e}")
         return "API 调用失败"
     
-
 def call_mistral_api(question):
     """
     调用 Mistral API 并获取答案。
@@ -124,6 +125,22 @@ def call_mistral_api(question):
         print(f"调用 Mistral API 时出错: {e}")
         return "API 调用失败"
     
+def call_qwen_api(question):
+    try:
+        response = qwen_client.chat.completions.create(
+            model="qwen-plus", 
+            messages=[
+                {'role': 'system', 'content': 'You are a helpful assistant.'},
+                {'role': 'user', 'content': question},
+            ],
+            temperature=args.temperature,
+            stream=False
+        )
+        return response.choices[0].message.content
+    except Exception as e:
+        print(f"调用 Qwen API 时出错: {e}")
+        return "❌"
+    
 def extract_answer_from_response(response):
     match = re.search(r'answer\s*:\s*([A-D])\s*', response)
     if match:
@@ -137,6 +154,8 @@ def test_origin(filepath):
         reader = csv.reader(infile)
         question_count = 0
         right_count = 0
+        start_time = time.time()  # 记录开始时间
+
         for row in reader:
             question_count += 1
             if not row:  # 跳过空行
@@ -148,7 +167,7 @@ def test_origin(filepath):
                 f"C: {row[3]}\n"
                 f"D: {row[4]}"
             )
-            prompt = f"以下是数学选择题，请直接给出正确答案的选项，例如“answer: B”，不要返回任何其他内容\n{text}"
+            prompt = f"The following are math multiple-choice questions. Please provide only the correct answer option, such as “answer: B”, and do not return anything else.\n{text}"
             print(f"题目:\n{text}\n")
             if args.model == "deepseek":
                 response = call_deepseek_api(prompt)
@@ -160,13 +179,17 @@ def test_origin(filepath):
                 response = call_doubao_api(prompt)
             elif args.model == "mistral":
                 response = call_mistral_api(prompt)
+            elif args.model == "qwen":   
+                response = call_qwen_api(prompt)
                 
             print(f"{args.model}回答:\n{response}， \n正确答案是: {row[5]}\n")
             answer = extract_answer_from_response(response)
             if answer == row[5].strip():
                 right_count += 1
+        end_time = time.time()  # 记录结束时间
+        total_time = end_time - start_time
     if question_count != 0:
-        print(f"总题数: {question_count}, 正确答案数: {right_count}, 正确率: {right_count / question_count:.2%}")    
+        print(f"总题数: {question_count}, 正确答案数: {right_count}, 正确率: {right_count / question_count:.2%}, 耗时: {total_time:.2f}秒")    
     return question_count, right_count
 
 if __name__ == "__main__":
