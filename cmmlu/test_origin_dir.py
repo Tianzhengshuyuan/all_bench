@@ -142,7 +142,7 @@ def call_qwen_api(question):
         print(f"调用 Qwen API 时出错: {e}")
         return "❌"
 def extract_answer_from_response(response):
-    match = re.search(r'答案\s*:\s*([A-D])\s*', response)
+    match = re.search(r'answer\s*:\s*([A-D])\s*', response)
     if match:
         return match.group(1).strip()
     else:
@@ -161,13 +161,13 @@ def test_origin(filepath):
             if not row:  # 跳过空行
                 continue
             text = (
-                f"问题: {row[1]}\n"
+                f"question: {row[1]}\n"
                 f"A: {row[2]}\n"
                 f"B: {row[3]}\n"
                 f"C: {row[4]}\n"
                 f"D: {row[5]}"
             )
-            prompt = f"以下是数学选择题，请直接给出正确答案的选项，例如“答案: B”，不要返回任何其他内容\n{text}"
+            prompt = f"以下是数学选择题，请直接给出正确答案的选项，例如“answer: B”，不要返回任何其他内容\n{text}"
             print(f"题目:\n{text}\n")
             if args.model == "deepseek":
                 response = call_deepseek_api(prompt)

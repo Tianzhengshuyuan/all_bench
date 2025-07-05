@@ -165,7 +165,7 @@ def test_cot(filepath):
             if not row:  # 跳过空行
                 continue
             text = (
-                f"问题: {row[1]}\n"
+                f"question: {row[1]}\n"
                 f"A: {row[2]}\n"
                 f"B: {row[3]}\n"
                 f"C: {row[4]}\n"

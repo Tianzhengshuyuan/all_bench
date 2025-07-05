@@ -147,6 +147,7 @@ def call_qwen_api(question):
     try:
         response = qwen_client.chat.completions.create(
             model="qwen-plus", 
+            # model="qwen2.5-32b-instruct", 
             messages=[
                 {'role': 'system', 'content': 'You are a helpful assistant.'},
                 {'role': 'user', 'content': question},

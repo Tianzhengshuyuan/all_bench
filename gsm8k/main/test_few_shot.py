@@ -129,7 +129,8 @@ def call_mistral_api(question):
 def call_qwen_api(question):
     try:
         response = qwen_client.chat.completions.create(
-            model="qwen-plus", 
+            # model="qwen-plus", 
+            model="qwen2.5-32b-instruct", 
             messages=[
                 {'role': 'system', 'content': 'You are a helpful assistant.'},
                 {'role': 'user', 'content': question},
@@ -146,8 +147,12 @@ def load_few_shot_examples():
     examples = []
     with open(args.input_few_shot, 'r', encoding='utf-8') as fs:
         reader = csv.reader(fs)
+        count = 0
         for row in reader:
-            if not row or len(row) < 3:
+            count += 1
+            if count > 5:  # 限制最多加载5个例子
+                break
+            if not row or len(row) < 2:
                 continue
             example = (
                 f"question: {row[0]}\n"
@@ -180,8 +185,7 @@ def test_few_shot():
                 continue
 
             few_shot_text = load_few_shot_examples()
-            print(f"few-shot 例子:\n{few_shot_text}\n")
-            prompt = f" The following is a math fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the answer with two pairs of ####, for example: ####6####.\n{few_shot_text}\n{row[0]}"
+            prompt = f" The following are math fill-in-the-blank questions. Please return only the correct answer and nothing else. Please enclose the answer with two pairs of ####, for example: ####6####.\n{few_shot_text}\n{row[0]}"
             print(f"题目:\n{prompt}\n")
             if args.model == "deepseek":
                 response = call_deepseek_api(prompt)

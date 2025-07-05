@@ -13,27 +13,6 @@ deepseek_client = OpenAI(api_key="sk-09da13b2c97948628523d042d6a02f06", base_url
 kimi_client = OpenAI(api_key="sk-ODuizMlUC22phanBhvYz6dBjx2yrz7vhKhcjKnoIrYssThQo", base_url="https://api.moonshot.cn/v1")
 qwen_client = OpenAI(api_key="sk-341becd932d743f2a750495a0f9f3ede", base_url="https://dashscope.aliyuncs.com/compatible-mode/v1")
 
-def is_number(s):
-    try:
-        # 先尝试 float
-        float(s)
-        return True
-    except ValueError:
-        pass
-    try:
-        # 再尝试分数
-        Fraction(s)
-        return True
-    except ValueError:
-        pass
-    try:
-        # 再尝试表达式（支持e, pi等）
-        expr = sympify(s, locals={"e": E})
-        if isinstance(expr, tuple):
-            return False
-        return expr.is_number
-    except (SympifyError, TypeError):
-        return False
     
 def call_deepseek_api(question, temperature=0):
     """

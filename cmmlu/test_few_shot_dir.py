@@ -150,12 +150,12 @@ def load_few_shot_examples(few_shot_file):
             if not row or len(row) < 6:
                 continue
             example = (
-                f"问题: {row[1]}\n"
+                f"question: {row[1]}\n"
                 f"A: {row[2]}\n"
                 f"B: {row[3]}\n"
                 f"C: {row[4]}\n"
                 f"D: {row[5]}\n"
-                f"答案: {row[6]}"
+                f"answer: {row[6]}"
             )
             examples.append(example)
     return "\n\n".join(examples)
@@ -164,7 +164,7 @@ def extract_answer_from_response(response):
     """
     从回答中提取被####包裹的答案
     """
-    match = re.search(r'答案\s*:\s*([A-D])\s*', response)
+    match = re.search(r'answer\s*:\s*([A-D])\s*', response)
     if match:
         return match.group(1).strip()
     else:
@@ -183,14 +183,14 @@ def test_few_shot(input_file, few_shot_file):
             if not row:  # 跳过空行
                 continue
             text = (
-                f"问题: {row[1]}\n"
+                f"question: {row[1]}\n"
                 f"A: {row[2]}\n"
                 f"B: {row[3]}\n"
                 f"C: {row[4]}\n"
                 f"D: {row[5]}"
             )
             few_shot_text = load_few_shot_examples(few_shot_file)
-            prompt = f"以下是数学选择题，请直接给出正确答案的选项，例如“答案: B”，不要返回任何其他内容\n{few_shot_text}\n{text}"
+            prompt = f"以下是数学选择题，请直接给出正确答案的选项，例如“answer: B”，不要返回任何其他内容\n{few_shot_text}\n{text}"
             print(f"题目:\n{prompt}\n")
             if args.model == "deepseek":
                 response = call_deepseek_api(prompt)

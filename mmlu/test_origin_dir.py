@@ -167,7 +167,8 @@ def test_origin(filepath):
                 f"C: {row[3]}\n"
                 f"D: {row[4]}"
             )
-            prompt = f"The following are math multiple-choice questions. Please provide only the correct answer option, such as “answer: B”, and do not return anything else.\n{text}"
+            
+            prompt = f"The following is a math multiple-choice questions. Please provide only the correct answer option, such as “answer: B”, and do not return anything else.\n{text}"
             print(f"题目:\n{text}\n")
             if args.model == "deepseek":
                 response = call_deepseek_api(prompt)
