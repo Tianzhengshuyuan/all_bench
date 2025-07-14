@@ -144,12 +144,16 @@ def call_qwen_api(question):
         print(f"调用 Qwen API 时出错: {e}")
         return "❌"
     
+
 def extract_answer_from_response(response):
-    match = re.search(r'answer\s*:\s*([A-D])\s*', response)
+    """
+    从回答中提取被####包裹的答案（允许任意内容）
+    """
+    match = re.search(r'####(.*?)####', response, re.DOTALL)
     if match:
         return match.group(1).strip()
     else:
-        return None
+        return "无匹配"
     
 def test_origin():
     # 读取输入 CSV
@@ -169,8 +173,8 @@ def test_origin():
                 f"B: {row[2]}\n"
                 f"C: {row[3]}\n"
                 f"D: {row[4]}"
-            )
-            prompt = f"The following is a math multiple-choice question. Please provide only the correct answer option, such as “answer: B”, and do not return anything else.\n{text}"            
+            )            
+            prompt = f"The following is a math multiple-choice question. Please return only the correct answer option and nothing else. Please enclose the answer with two pairs of ####, for example: ####B####.\n{text}"
             print(f"题目:\n{text}\n")
             if args.model == "deepseek":
                 response = call_deepseek_api(prompt)

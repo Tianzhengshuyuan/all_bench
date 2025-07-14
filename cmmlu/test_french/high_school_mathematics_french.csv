@@ -1,164 +1,169 @@
-"Soit l'ensemble \( M = \{-1, 0, 2, 8\}, N = \{x | x \leqslant 2\} \), alors \( M \cap N = \)","{—1,0,1}","{0,1,2}","{0,1}","{—1,0,1,2}",D
-"La contraposée de la proposition « Si un nombre est négatif, alors son carré est positif » est :","« Si le carré d'un nombre est positif, alors il est négatif. »","« Si un nombre n'est pas négatif, alors son carré n'est pas positif. »","« Si un nombre est négatif, alors son carré n'est pas positif. »","« Si le carré d'un nombre n'est pas positif, alors il n'est pas négatif. »",A
-"Si la formule générale de la suite \( \{a_n\} \) est \( a_n = 2(n+1) + 3 \), alors cette suite :",est une suite arithmétique avec une différence commune de 5,n'est pas une suite arithmétique,est une suite arithmétique avec une différence commune de 2,est une suite arithmétique avec une différence commune de 3,C
-"Dans le triangle △ABC, a, b et c sont respectivement les côtés opposés aux angles A, B et C, avec a = 6, b = 8 et A = 30°. Combien de triangles satisfont ces conditions ?",infinitely many,1,0,2,D
-"Soit $\bigtriangleup ABC$ un triangle où les longueurs des côtés opposés aux angles A, B, C sont respectivement a, b, c. Si $a^{2}=b^{2}+c^{2}-bc$, alors A=",$2\frac{\pi}{3}$,$\frac{\pi}{4}$,$\frac{\pi}{6}$,$\frac{\pi}{3}$,D
-Lequel des choix suivants est correct ?,{0}=0,0 appartient à {0},Aucun des choix ci-dessus n'est correct,0 est strictement inclus dans {0},B
-"Soit la somme des \( n \) premiers termes de la suite géométrique \{a_n\} notée \( S_n \). Si \( S_{10} : S_5 = 1 : 2 \), alors \( S_{15} : S_5 \) est égal à",2:3,1:3,1:2,3:4,D
-"Dans un institut, les trois départements A, B et C comptent un total de 1200 étudiants. Afin d'enquêter sur la situation des étudiants travaillant à temps partiel, une méthode d'échantillonnage stratifié sera utilisée pour extraire un échantillon de taille 120. On sait que le département A compte 380 étudiants et le département B en compte 420. Le nombre d'étudiants qui devraient être sélectionnés dans le département C de cet institut est",120,38,40,42,A
-"On sait que a = log₂0.2, b = 2^0.2, c = 0.2^0.3, alors",a<b<c,c<a<b,b<c<a,a<c<b,D
-"Dans un certain lycée, il y a actuellement 210 élèves de première année, 270 élèves de deuxième année et 300 élèves de troisième année. Une méthode d'échantillonnage stratifié est utilisée pour extraire au hasard n élèves de ces trois années afin de réaliser une enquête par questionnaire. Si l'on sait que le nombre d'élèves de première année sélectionnés est de 7, alors le nombre d'élèves de troisième année qui doivent être sélectionnés devrait être :",9,26,25,10,D
-"Parmi les éléments suivants, ceux qui appartiennent à l'ensemble {x|x=2k k est un nombre naturel} sont :",-2,3,10,7,C
-"Dans le triangle $\bigtriangleup ABC$, $cos\frac{C}{2}=\frac{\sqrt{5}}{5}$, $BC=1$ et $AC=5$. Alors, $AB$ est égal à",$2\sqrt{5}$,$4\sqrt{2}$,$\sqrt{29}$,$\sqrt{30}$,B
-"Si \( x \in \mathbb{R} \), alors « \( x > 1 \) » est pour « \( |x| > 1 \) » :",neither a sufficient nor a necessary condition,a sufficient but not necessary condition,a sufficient and necessary condition,a necessary but not sufficient condition,B
-"Dans l'ensemble {1, 2, 3, 4, ..., 10}, la probabilité qu'un élément choisi au hasard satisfasse exactement l'équation cos(30°•x) = 1/2 est",1/5,1/4,1/6,1/3,A
-La dérivation correcte parmi les suivantes est :,(x^3)'=3x^2,(x^2 cos(x))'=-2xsin(x),(x^2+1)'=2x+1,(1/x)'=1/x^2,A
-"La fonction donnée est \( f(3x) = \log_{2}\sqrt{\frac{(9x+1)}{2}} \), alors la valeur de \( f(1) \) est :",1/2,2,1,log_{2}\sqrt{5},A
+"Soit les ensembles $M=\left\{ -1,0,2,8 \right\}, N=\left\{x|x\leqslant 2 \right\}$, alors $M\cap N =$","{—1,0,1}","{0,1,2}","{0,1}","{—1,0,1,2}",D
+"La proposition ""Si un nombre est négatif, alors son carré est positif"" a pour réciproque :","""Si le carré d'un nombre est positif, alors ce nombre est négatif""","""Si un nombre n'est pas négatif, alors son carré n'est pas positif""","""Si un nombre est négatif, alors son carré n'est pas positif""","""Si le carré d'un nombre n'est pas positif, alors ce nombre n'est pas négatif""",A
+"Si la formule générale de la suite ${a_n}$ est $a_n = 2(n+1) + 3$, alors cette suite",est une suite arithmétique de raison 5,n'est pas une suite arithmétique,est une suite arithmétique de raison 2,est une suite arithmétique de raison 3,C
+"Dans le triangle ABC, soient a, b, c les côtés opposés aux angles A, B, C respectivement. On donne a = 6, b = 8 et A = 30°. Combien de triangles satisfont à ces conditions ?",Une infinité,1 triangle,0 triangle,2 triangles,D
+"Soit a, b, c les longueurs des côtés opposés respectivement aux angles A, B, C du triangle ABC. Si $a^{2} = b^{2} + c^{2} - bc$, alors A =",$2\frac{\pi}{3}$,$\frac{\pi}{4}$,$\frac{\pi}{6}$,$\frac{\pi}{3}$,D
+Laquelle est correcte ?,{0}=0,0 ∈ {0},Aucune des réponses ci-dessus,0 ⊂ {0},B
+"Soit $ S_n $ la somme des $ n $ premiers termes d'une suite géométrique $\{a_n\}$. Si $ S_{10} : S_5 = 1 : 2$, alors $ S_{15} : S_5$ est égal à",2:3,1:3,1:2,3:4,D
+"Dans une certaine académie, il y a un total de 1200 étudiants dans les spécialités A, B et C. Afin d'étudier leur situation concernant le travail étudiant, on prévoit d'utiliser un échantillonnage stratifié pour tirer un échantillon de taille 120. Sachant que la spécialité A compte 380 étudiants et la spécialité B compte 420 étudiants, alors dans la spécialité C de cette académie, le nombre d'étudiants à échantillonner est :",120 étudiants,38 étudiants,40 étudiants,42 étudiants,A
+"On donne a = log₂0.2, b = 2^0.2, c = 0.2^0.3, alors",a < b < c,c < a < b,b < c < a,a < c < b,D
+"Une école compte actuellement 210 élèves en première année, 270 élèves en deuxième année et 300 élèves en troisième année. On souhaite appliquer une méthode d'échantillonnage stratifié pour sélectionner aléatoirement n élèves parmi ces trois années afin de leur faire remplir un questionnaire. Si l'on sait que le nombre d'élèves tirés au sort parmi les élèves de première année est de 7, alors le nombre d'élèves à tirer parmi les élèves de troisième année devrait être",9,26,25,10,D
+"Lequel des éléments suivants appartient à l'ensemble {x|x=2k, où k est un nombre naturel} ?",-2,3,10,7,C
+"Dans le triangle ABC, on donne $cos\frac{C}{2} = \frac{\sqrt{5}}{5}, BC = 1, AC = 5$. Que vaut AB ?",$2\sqrt{5}$,$4\sqrt{2}$,$\sqrt{29}$,$\sqrt{30}$,B
+"Si x ∈ R, alors « x > 1 » est une",condition ni suffisante ni nécessaire,condition suffisante mais non nécessaire,condition nécessaire et suffisante,condition nécessaire mais non suffisante,B
+"Dans l'ensemble {1, 2, 3, 4, ..., 10}, la probabilité de choisir un élément qui satisfait exactement l'équation cos(30°·x) = 1/2 est :",1/5,1/4,1/6,1/3,A
+Laquelle des opérations de dérivation suivantes est correcte ?,(x^3)'=3x^2,(x^2 cos(x))'=-2xsin(x),(x^2+1)'=2x+1,(1/x)'=1/x^2,A
+On donne la fonction $f(3x) = \log_{2}\sqrt{\frac{9x+1}{2}}$. Quelle est la valeur de $f(1)$ ?,1/2,2,1,$\log_{2}\sqrt{5}$,A
 Le domaine de définition de la fonction $y=log(x^{2}-1)$ est,"$[-1,1]$","$(-\infty ,-1]\cup[1,+\infty)$","$(-\infty ,-1)\cup(1,+\infty)$","$(-1,1)$",C
-On considère l'ensemble \(A = \{x \mid y = \sqrt{4 - x^4}\}\) et l'ensemble \(B = \{x \mid x \geq a\}\). Une condition suffisante mais non nécessaire pour que \(A \subseteq B\) est :,"(-\inf,-2)","[2,+\inf)","(-\inf,-2]","(2,+?)",A
-"Dans l'espace, laquelle des propositions suivantes est correcte ?",Two planes parallel to the same line are parallel,Two lines perpendicular to the same plane are parallel,Two lines parallel to the same plane are parallel,Two lines perpendicular to the same line are parallel,B
-"Dans le cube ABCD-A1B2C1D1, le cosinus de l'angle formé par BB1 et le plan ACD1 est",\sqrt{3}/2,2/3,\sqrt{2}/3,\sqrt{6}/3,D
-Le point sur le cercle \(x^2+y^2-2x-2y+1=0\) qui est à la plus grande distance de la droite \(x-y=2\) est :,1+2\sqrt{2},2,1+\sqrt{2}/2,1+\sqrt{2},D
-"Si $\sin\alpha * \cos\alpha > 0$, alors \alpha est dans",premier et quatrième quadrants,premier et deuxième quadrants,premier et troisième quadrants,deuxième et quatrième quadrants,C
-"Lorsque deux pièces équilibrées sont lancées en même temps, la probabilité d'obtenir deux faces est",$\frac{1}{8}$,$\frac{1}{4}$,$\frac{1}{2}$,$\frac{1}{3}$,B
-"Dans le triangle ABC, sinA : sinB : sinC = 3 : 2 : 4, alors la valeur de cosC est",-2/3,-1/4,2/3,1/4,B
-"600 est le terme de la suite 1*2, 2*3, 3*4, ...",25th term,24th term,30th term,20th term,B
-"Soit \( z = \frac{3 - i}{1 + 2i} \), alors \( |z| = \)",2,1,\(\sqrt{3}\),\(\sqrt{2}\),D
-"Soit $\bigtriangleup ABC$ un triangle dont les longueurs des côtés opposés aux angles A, B et C sont respectivement a, b et c, et $f(A)=\sqrt{3}\sin A - \cos A + 2$. Si $f(A)=3$, $a=\sqrt{6}$ et $S_{\bigtriangleup ABC}=\sqrt{3}$, alors le périmètre de $\bigtriangleup ABC$ est :",$3\sqrt{3}+\sqrt{6}$,$2\sqrt{2}+\sqrt{6}$,$3\sqrt{2}+\sqrt{6}$,$2\sqrt{3}+\sqrt{6}$,C
-"On connaît trois points dans un système de coordonnées cartésiennes en trois dimensions : $A(0,1,0), M(\sqrt{2},1,0), N(0,3,\sqrt{2})$, et $O$ est l'origine des coordonnées. Alors, le cosinus de l'angle formé par les droites OA et MN est :",\frac{\sqrt{2}}{2},$\frac{\sqrt{6}+\sqrt{2}}{4}$,$\frac{\sqrt{3}}{2}$,0,A
-"$\cos{\alpha}=4/5$, $\alpha$ est un angle du quatrième quadrant, alors la valeur de $\tan{\alpha}$ est",-4/3,$\pm 4/3$,-3/4,$\pm 3/4$,C
-"On sait que x > 0, y > 0, x + 2y + 2xy = 8, alors la plus petite valeur de x + 2y est",5.5,3,4,4.5,C
-"Dans $\bigtriangleup ABC$, si $c = 1$, $a = \sqrt{3}$, et $\angle A = \frac{2\pi}{3}$, alors $b$ est égal à :",1,$\frac{\sqrt{10}}{2}$,$\sqrt{7}$,2,A
-La domaine de définition de la fonction \(y=\sqrt{2x+1} + \sqrt{3-4x}\) est,"(-\infty, 1/2]","(-1/2, 3/4)","(1/2,0)\cup (0, \infty)","[-1/2, 3/4]",D
+"On donne les ensembles $A = \{x \,|\, y = \sqrt{4 - x^4} \}$ et $B = \{x \,|\, x \geq a \}$. Alors une condition suffisante mais non nécessaire pour que $A \subseteq B$ est","(-∞,-2)","[2,+∞)","(-∞,-2]","(2,+∞)",A
+"Dans l'espace, laquelle des propositions suivantes est correcte ?",Deux plans parallèles à la même droite sont parallèles,Deux droites perpendiculaires au même plan sont parallèles,Deux droites parallèles au même plan sont parallèles,Deux droites perpendiculaires à la même droite sont parallèles,B
+"Dans le cube ABCD-A1B1C1D1, la valeur du cosinus de l'angle formé par BB1 et le plan ACD1 est :",\sqrt{3}/2,2/3,\sqrt{2}/3,\sqrt{6}/3,D
+Les points sur le cercle x^2+y^2-2x-2y+1=0 ont une distance maximale à la droite x-y=2 égale à,1+2\sqrt{2},2,1+\sqrt{2}/2,1+\sqrt{2},D
+"Si $\sin\alpha * \cos\alpha > 0$, alors $\alpha$ se trouve dans",Premier et quatrième quadrants,Premier et deuxième quadrants,Premier et troisième quadrants,Deuxième et quatrième quadrants,C
+"En lançant simultanément deux pièces équilibrées, quelle est la probabilité d'obtenir deux fois le côté face ?",$\frac{1}{8}$,$\frac{1}{4}$,$\frac{1}{2}$,$\frac{1}{3}$,B
+"Dans le triangle ABC, sinA:sinB:sinC = 3:2:4, alors la valeur de cosC est",-2/3,-1/4,2/3,1/4,B
+"600 est le ... terme de la suite 1×2, 2×3, 3×4, ...",25e terme,24e terme,30e terme,20e terme,B
+"Soit $z=(3-i)/(1+2i)$, alors |z|=",2,1,sqrt{3},sqrt{2},D
+"Soit a, b, c les longueurs des côtés du triangle ABC opposés respectivement aux angles A, B, C, et soit $f(A) = \sqrt{3}\sin A - \cos A + 2$. Si $f(A) = 3$, $a = \sqrt{6}$, et l'aire du triangle ABC est $\sqrt{3}$, alors le périmètre du triangle ABC est",$3\sqrt{3}+\sqrt{6}$,$2\sqrt{2}+\sqrt{6}$,$3\sqrt{2}+\sqrt{6}$,$2\sqrt{3}+\sqrt{6}$,C
+"Étant donnés trois points dans un repère cartésien : $A(0,1,0), M(\sqrt{2},1,0), N(0,3,\sqrt{2}), O$ étant l'origine du repère, alors la valeur du cosinus de l'angle formé par les droites $OA$ et $MN$ est :",$\frac{\sqrt{2}}{2}$,$\frac{\sqrt{6}+\sqrt{2}}{4}$,$\frac{\sqrt{3}}{2}$,0,A
+"$\cos{\alpha}=4/5$，\alpha étant un angle du quatrième quadrant, alors la valeur de $\tan{\alpha}$ est",-4/3,$\pm 4/3$,-3/4,$\pm 3/4$,C
+"Sachant que x > 0, y > 0 et x + 2y + 2xy = 8, la valeur minimale de x + 2y est",5.5,3,4,4.5,C
+"Dans le triangle ABC, si c = 1, $a = \sqrt{3}$, $\angle A = \frac{2\pi}{3}$, alors b est égal à",1,$\frac{\sqrt{10}}{2}$,$\sqrt{7}$,2,A
+Le domaine de définition de la fonction $y=\sqrt{2x+1} + \sqrt{3-4x}$ est,"(-\infty, 1/2]","(-1/2, 3/4)","(1/2,0)\cup (0, \infty)","[-1/2, 3/4]",D
 $\cos\frac{7}{6}\pi=$,$-\frac{1}{2}$,$\frac{1}{2}$,$-\frac{\sqrt{3}}{2}$,$\frac{\sqrt{3}}{2}$,C
 $\frac{1+2i}{1-2i}$ est égal à,$-\frac{3}{5}-\frac{4}{5}i$,$-\frac{4}{5}+\frac{3}{5}i$,$-\frac{3}{5}+\frac{4}{5}i$,$-\frac{4}{5}-\frac{3}{5}i$,C
-Le déplacement de l'image de la fonction y = sin(2x - π/4) vers la droite de π/8 donne une fonction correspondante à :,Ni paire ni impaire,Impaire,Paire,À la fois paire et impaire,C
-"Parmi les 10 chiffres 1, 2, 3, …, 10, si l'on choisit au hasard 3 chiffres, l'événement « la somme de ces trois chiffres est supérieure à 6 » est :",None of the above options is correct,Certain event,Impossible event,Random event,D
-"Dans un triangle ABC à angles aigus, si a = 1 et B = 2A, alors l'intervalle des valeurs possibles pour le côté b est","(sqrt(2),sqrt(3))","(1,2)","(2,3)","(1,3)",A
-"Parmi les propositions suivantes, ① un polyèdre dont deux faces sont parallèles et similaires et dont toutes les autres faces sont des trapèzes est une pyramide tronquée ; ② un hexaèdre ayant deux faces parallèles et les quatre autres faces étant des trapèzes isocèles est une pyramide tronquée ; ③ un prisme à base quadrilatère dont toutes les faces latérales sont des carrés est nécessairement un cube ; ④ en faisant tourner un rectangle autour de deux droites correspondant à deux côtés inégaux du rectangle comme axes de rotation, on obtient deux cylindres différents. Combien d'entre elles sont correctes ?",2,1,4,3,B
-"On sait que \{a_n\} est une suite géométrique, avec a_2=2, a_3=1/4, alors la raison q=",2,-2,-1/2,1/2,D
-"Le mathématicien chinois Chen Jingrun a obtenu des résultats mondialement reconnus dans l'étude de la conjecture de Goldbach. La conjecture de Goldbach stipule que « chaque nombre pair supérieur à 2 peut être exprimé comme la somme de deux nombres premiers », par exemple, 30 = 7 + 23. Parmi les nombres premiers inférieurs ou égaux à 30, si deux nombres différents sont choisis au hasard, quelle est la probabilité que leur somme soit égale à 30 ?",$\frac{1}{15}$,$\frac{1}{12}$,$\frac{1}{14}$,$\frac{1}{18}$,A
-"L'ensemble A = {x | 1 < x < 9}, B = {2, 3, 4}, alors la relation entre A et B est",A est strictement inclus dans B,Indéterminable,B est strictement inclus dans A,B = A,C
-"Si sin(a)cos(a) = 1/8, et π/4 < a < π/2, alors sin(a) - cos(a) =",-\sqrt{3}/2,3/4,-3/4,\sqrt{3}/2,D
-"Soit $\bigtriangleup ABC$ un triangle avec les longueurs des côtés opposés aux angles A, B et C respectivement a, b, c, tan(A+B) = -2sinC, c = 3, l'intervalle possible pour le périmètre de $\bigtriangleup ABC$ est","$(6,3+2\sqrt{3}]$","(6,9]","[6,9]","$[6,3+2\sqrt{3}]$",B
-"Dans une suite arithmétique donnée, la différence commune est 2, le nième terme est égal à 30, et la somme des n premiers termes est de 240. Alors, n est égal à",17,15,16,14,B
-"Si \(\frac{a+i}{1-i}\) (\(a \in \mathbb{R}\)) est un nombre purement imaginaire, alors \(\left|\frac{a+i}{1-i}\right|=\)",2,1,-i,i,B
-La plus petite période positive de la fonction $y=sin2xcos2x$ est,$\frac{1}{2}\pi$,$\frac{1}{4}\pi$,$2\pi$,$6\pi$,A
-"Pour déterminer lesquels des résultats d'examens de mathématiques de plusieurs sessions cette année entre les élèves A et B sont plus stables, il est généralement nécessaire de connaître la",variance,mode,distribution de fréquence,moyenne,A
-"La surface du triangle ABC est de 1, AB = 2, BC = \sqrt{2}, et l'angle B est obtus, alors AC =",\sqrt{10},\sqrt{5},1,2,A
-"On connaît les ensembles \( p = \{1, 2, 3, 4\} \) et \( Q = \{-1, 0, 1\} \), alors \( P \cap Q \) est égal à","{1,2}","{-1,0,1,2,3,4}",{1},"{3,4}",C
-"Lorsque deux pièces équilibrées sont lancées simultanément, la probabilité d'obtenir deux faces est",1/8,1/3,1/2,1/4,D
-"Soit l'équation de troisième ordre \( A = [A_{1}, A_{2}, A_{3}] \), où \( a_{i}, i=1,2,3 \) sont les vecteurs colonnes de A, et \( |A| = 2 \), alors \( |B| = |[a_{1} + 3a_{2}, a_{2}, a_{3}]| = \)",6,0,-2,2,D
-"Dans une suite arithmétique, \(a_5 = 11\), \(S_{12} = 186\), alors \(a_8\) est égal à",18,20,21,22,B
-"En prenant au hasard un produit de la série de shuttlecocks, la probabilité que sa masse soit inférieure à 4.8 g est de 0.3, et la probabilité que la masse soit inférieure à 4.85 g est de 0.32. Alors, quelle est la probabilité que la masse se trouve dans l'intervalle [4.8, 4.85) g ?",0.68,0.38,0.02,0.62,C
-"Soit $\bigtriangleup ABC$ un triangle dont les longueurs des côtés opposés aux angles A, B, C sont respectivement a, b, c, et $f(A)=\sqrt{3}\sin A-2\cos^{2}\frac{A}{2}+3$. Lorsque la fonction $f(A)$ atteint sa valeur maximale, la forme de $\bigtriangleup ABC$ est :",indéterminé,triangle acutangle,triangle obtusangle,triangle rectangle,C
-L'intervalle contenant le zéro de la fonction \( f(x) = \ln x - \frac{1}{x} \) est,"(2,3)","(3,4)","(1,2)","(0,1)",C
-"On sait que les vecteurs a et b satisfont $|a|=1, a\cdot b=-1$, alors $a\cdot(2a-b)$ est égal à",3,4,2,0,A
-"Dans $\bigtriangleup ABC$, $a=2\sqrt{2}, B=\frac{\pi}{4}, \angle A=\frac{\pi}{3}$, alors $b=$",$\frac{5\sqrt{3}}{4}$,$\frac{4\sqrt{3}}{3}$,$\frac{5\sqrt{3}}{3}$,$\frac{3\sqrt{3}}{2}$,B
+"Déplacez le graphique de la fonction y = sin(2x - π/4) vers la droite de π/8, la fonction correspondant au nouveau graphique est",une fonction ni impaire ni paire,une fonction impaire,une fonction paire,une fonction à la fois impaire et paire,C
+"Parmi les 10 nombres 1, 2, 3, ..., 10, on choisit 3 nombres au hasard. Alors « la somme de ces trois nombres est supérieure à 6 » est :",Aucune des réponses ci-dessus n'est correcte,Un événement certain,Un événement impossible,Un événement aléatoire,D
+"Dans un triangle acutangle ABC, on a a=1, B=2A. Alors l'intervalle de la valeur du côté b est :","(sqrt(2),sqrt(3))","(1,2)","(2,3)","(1,3)",A
+"Parmi les propositions suivantes :  
+① Un polyèdre dont deux faces sont parallèles et similaires, et toutes les autres faces sont des trapèzes est un tronc de prisme ;  
+② Un hexaèdre dont deux faces sont parallèles l'une à l'autre, et les quatre autres faces sont des trapèzes isocèles est un tronc de prisme ;  
+③ Un prisme à quatre faces latérales, chacune étant un carré, est nécessairement un cube ;  
+④ Si on prend comme axes de rotation les deux côtés inégaux d'un rectangle, alors les deux cylindres obtenus par rotation sont deux cylindres différents.  
+Combien de propositions sont correctes ?",2,1,4,3,B
+"On sait que {a_n} est une suite géométrique, avec a_2 = 2 et a_3 = 1/4. Alors la raison q est :",2,-2,-1/2,1/2,D
+"Le mathématicien chinois Chen Jingrun a obtenu des résultats mondialement avancés dans l'étude de la conjecture de Goldbach. La conjecture de Goldbach affirme que « chaque nombre pair supérieur à 2 peut être exprimé comme la somme de deux nombres premiers », par exemple 30 = 7 + 23. Parmi les nombres premiers inférieurs ou égaux à 30, quelle est la probabilité de choisir au hasard deux nombres distincts dont la somme soit égale à 30 ?",$\frac{1}{15}$,$\frac{1}{12}$,$\frac{1}{14}$,$\frac{1}{18}$,A
+"L'ensemble A = {x | 1 < x < 9}, B = {2, 3, 4}, alors la relation entre A et B est :",A est strictement inclus dans B,Impossible à déterminer,B est strictement inclus dans A,B = A,C
+"Si sin(a)cos(a) = 1/8, et pi/4 < a < pi/2, alors sin(a) - cos(a) =",-\sqrt{3}/2,3/4,-3/4,\sqrt{3}/2,D
+"Soit a, b, c les longueurs des côtés opposés aux angles A, B, C du triangle ABC respectivement, et supposons que tan(A+B) = -2sinC, c = 3. L'ensemble des valeurs possibles pour le périmètre du triangle ABC est :","$(6,3+2\sqrt{3}]$","(6,9]","[6,9]","$[6,3+2\sqrt{3}]$",B
+"On connaît une suite arithmétique dont la raison est 2, le n-ième terme est égal à 30 et la somme des n premiers termes est 240. Alors n est égal à :",17,15,16,14,B
+"Si $\frac{a+i}{1-i}$ (avec $a \in \mathbb{R}$) est un nombre imaginaire pur, alors $\left|\frac{a+i}{1-i}\right| =$",2,1,-i,i,B
+La période minimale positive de la fonction $y = \sin 2x \cos 2x$ est,$\frac{1}{2}\pi$,$\frac{1}{4}\pi$,$2\pi$,$6\pi$,A
+"Pour déterminer la stabilité des résultats d'évaluations mathématiques de deux étudiants, A et B, sur plusieurs épreuves au cours de ce semestre, on a généralement besoin de connaître la mesure statistique suivante de leurs résultats en mathématiques :",Variance,Mode,Distribution de fréquence,Moyenne,A
+"L'aire du triangle ABC est 1, AB = 2, BC = $\sqrt{2}$, l'angle B est obtus, alors AC =",$\sqrt{10}$,$\sqrt{5}$,1,2,A
+"On donne les ensembles P = {1,2,3,4} et Q = {-1,0,1}. Que vaut $P \cap Q$ ?","{1,2}","{-1,0,1,2,3,4}",{1},"{3,4}",C
+"En lançant simultanément deux pièces équilibrées, quelle est la probabilité d'obtenir deux faces ?",1/8,1/3,1/2,1/4,D
+"Soit une matrice A d'ordre 3 définie par $A=[A_{1},A_{2},A_{3}]$, où les $a_{i},\ i=1,2,3$, sont les colonnes de A, et telle que $|A|=2$. Alors $|B|=|[a_{1}+3a_{2},a_{2},a_{3}]|=$",6,0,-2,2,D
+"Dans une suite arithmétique, on donne a5 = 11 et S12 = 186. Quelle est la valeur de a8 ?",18,20,21,22,B
+"La probabilité de tirer au hasard un volant dont la masse est inférieure à 4,8 g dans un lot d'articles est de 0,3 et la probabilité que sa masse soit inférieure à 4,85 g est de 0,32. Quelle est alors la probabilité qu'un volant ait une masse située dans l'intervalle [4,8 ; 4,85[ ?",0.68,0.38,0.02,0.62,C
+"Soit a, b, c les longueurs des côtés du triangle ABC opposés aux angles A, B, C respectivement, et soit $f(A) = \sqrt{3}\sin A - 2\cos^{2}\frac{A}{2} + 3$. Lorsque la fonction $f(A)$ atteint sa valeur maximale, la forme du triangle ABC est :",Indéterminée,Triangle acutangle,Triangle obtusangle,Triangle rectangle,C
+La fonction $f(x)=\ln x-\frac{1}{x}$ admet un zéro dans l'intervalle,"(2,3)","(3,4)","(1,2)","(0,1)",C
+On donne les vecteurs a et b tels que $|a| = 1$ et $a \cdot b = -1$. Que vaut $a \cdot (2a - b)$ ?,3,4,2,0,A
+"Dans le triangle $\bigtriangleup ABC$, on a $a=2\sqrt{2}$, $B=\frac{\pi}{4}$, $\angle A=\frac{\pi}{3}$, alors $b=$",$\frac{5\sqrt{3}}{4}$,$\frac{4\sqrt{3}}{3}$,$\frac{5\sqrt{3}}{3}$,$\frac{3\sqrt{3}}{2}$,B
 "Si l'équation de la droite de régression est $\hat{y}=2-1.5x$, alors lorsque la variable x augmente d'une unité :",y diminue en moyenne de 2 unités,y augmente en moyenne de 1.5 unités,y augmente en moyenne de 2 unités,y diminue en moyenne de 1.5 unités,D
 L'ensemble des solutions de l'inéquation $|x(x-2)|>x(x-2)$ est,"$(2,+\infty)$","$(-\infty,0)\cup(0,+\infty)$","$(-\infty,0)$","(0,2)",D
-"Le nombre total d'étudiants dans la classe 16 de réparation automobile (2) est de 50, parmi eux, 21 aiment le basketball, 19 aiment le badminton, et 15 n'aiment ni le basketball ni le badminton. Alors, combien d'entre eux aiment à la fois le basketball et le badminton ?",5 personnes,6 personnes,7 personnes,4 personnes,A
-"Si dans une suite arithmétique $\left\{ a_{n} \right\}$, $a_{3}+a_{5}+a_{7}=12$, alors la valeur de $a_{1}+a_{2}+...+a_{9}$ est",18,36,54,27,B
-"On sait que \(tan\alpha=\frac{1}{4}\) et \(tan(\alpha-\beta)=\frac{1}{3}\), alors \(tan\beta=\)",\(\frac{1}{13}\),\(-\frac{1}{13}\),\(-\frac{11}{7}\),\(\frac{7}{11}\),B
-"Étant donné les points (—4, 2) et (0, 0), la pente de la médiatrice du segment est",1/2,-1/2,2,-2,C
-"Soit A = {x | x > 1}, B = {x | x ≥ 5}, alors \(A \cup B = \)",{x|x≥1},{x|x≥5},{x| x>1},{x| x>5},C
-"L'équation de régression entre l'âge d'une personne \(x\) et le pourcentage de graisse corporelle \(y\) est \(y = 0.577x - 0.448\). Si une personne a 36 ans, alors son pourcentage de graisse :",There is no reference data at all,Must be 20.3%,Is more likely to be around 20.3%,None of the above explanations make sense,C
-"La pente de la droite passant par les points M(-2,m) et N(m,4) est égale à 1, alors la valeur de m est",1 or 3,1,4,1 or 4,B
-"Le maximum de $f(x)=x^3-3x^2+2$ sur l'intervalle [-1,1] est",4,1,0,2,D
-$x^2 \neq y^2$ est la condition pour $x \neq y$ et $x \neq -y$ :,Neither a sufficient nor a necessary condition,A sufficient but not necessary condition,A necessary and sufficient condition,A necessary but not sufficient condition,C
-"Soit $\bigtriangleup ABC$ un triangle où les longueurs des côtés opposés aux angles A, B et C sont respectivement a, b et c. On sait que $a=2\sqrt{2}, \cos A=\frac{\sqrt{6}}{3}, B=A+\frac{\pi}{2}$. Alors, l'aire de $\bigtriangleup ABC$ est",$\frac{4\sqrt{3}}{3}$,$\frac{4\sqrt{2}}{3}$,$\frac{2\sqrt{3}}{3}$,$\frac{2\sqrt{2}}{3}$,B
-Un sac contient 5 boules blanches et 3 boules rouges. La probabilité de tirer exactement 3 boules blanches en choisissant au hasard 4 boules est,4/5,3/4,3/7,1/2,C
-"Parmi les solides géométriques suivants, celui dont la section passant par l'axe est toujours un disque circulaire est",Frustum of a cone,Cylinder,Cone,Sphere,D
-"On connaît une pyramide quadrangulaire S-ABCD dont la base est un carré centré en O, et SO est perpendiculaire à la base ABCD, avec $SA=2\sqrt{3}$. Quelle est la hauteur de cette pyramide lorsque son volume est maximal ?",$\sqrt{3}$,1,2,3,C
-L'intervalle contenant le zéro de la fonction $f(x)=\pi x + \log_{2}x$ est,"[0,1/8]","[1/2, 1]","[1/8, 1/4]","[1/4, 1/2]",D
-"Si le nombre complexe m(m-2)+(m²-3m+2)i est un nombre imaginaire pur, alors la valeur du nombre réel m est",0 or 2,0,2,1 or 2,B
+"La classe 16汽修（2） compte un total de 50 élèves. Parmi eux, 21 aiment le basket-ball et 19 aiment le badminton. Il y a également 15 élèves qui n'aiment ni le basket-ball ni le badminton. Alors combien d'élèves aiment à la fois le basket-ball et le badminton ?",5 personnes,6 personnes,7 personnes,4 personnes,A
+"Si, dans la suite arithmétique $\left\{ a_{n} \right\}$, on a $a_{3}+a_{5}+a_{7}=12$, alors la valeur de $a_{1}+a_{2}+...+a_{9}$ est",18,36,54,27,B
+"On donne $\tan\alpha = \frac{1}{4}$ et $\tan(\alpha - \beta) = \frac{1}{3}$, alors $\tan\beta =$",$\frac{1}{13}$,$-\frac{1}{13}$,$-\frac{11}{7}$,$\frac{7}{11}$,B
+"Sachant les points (-4, 2) et (0, 0), la pente de la médiatrice du segment est :",1/2,-1/2,2,-2,C
+"Soit A={x| x>1}, B={x|x≥5}, alors $A\cup B=$",{x|x≥1},{x|x≥5},{x| x>1},{x| x>5},C
+"L'équation de régression entre l'âge d'une personne (x) et le pourcentage de graisse corporelle (y) est donnée par y = 0.577x - 0.448. Si une personne a 36 ans, alors le pourcentage de sa graisse corporelle est :",Aucune donnée de référence,"Certainement 20,3 %","Très probablement autour de 20,3 %",Toutes les explications ci-dessus sont sans fondement,C
+"La pente de la droite passant par les points M(-2, m) et N(m, 4) est égale à 1. La valeur de m est :",1 ou 3,1,4,1 ou 4,B
+"La valeur maximale de $f(x)=x^3-3x^2+2$ sur l'intervalle $[-1,1]$ est",4,1,0,2,D
+$x^2\neq y^2$ est une condition pour que $x\neq y$ et $x\neq -y$.,Ni suffisante ni nécessaire,Suffisante mais non nécessaire,Nécessaire et suffisante,Nécessaire mais non suffisante,C
+"Soit a, b, c les longueurs des côtés opposés respectivement aux angles A, B, C du triangle ABC. On sait que $a=2\sqrt{2}, \cos A=\frac{\sqrt{6}}{3}, B=A+\frac{\pi}{2}$. L'aire du triangle ABC est :",$\frac{4\sqrt{3}}{3}$,$\frac{4\sqrt{2}}{3}$,$\frac{2\sqrt{3}}{3}$,$\frac{2\sqrt{2}}{3}$,B
+Une sac contient 5 boules blanches et 3 boules rouges. On en tire 4 boules au hasard. Quelle est la probabilité d'obtenir exactement 3 boules blanches ?,4/5,3/4,3/7,1/2,C
+"Parmi les solides géométriques suivants, celui dont la section transversale passant par l'axe est nécessairement un disque circulaire est :",Tronc de cône,Cylindre,Cône,Sphère,D
+"On connaît une pyramide à base quadrilatère S-ABCD dont la base est un carré centré en O, et SO est perpendiculaire à la base ABCD, avec SA = 2√3. Lorsque le volume de cette pyramide est maximal, sa hauteur est :",√3,1,2,3,C
+La fonction $f(x) = \pi x + \log_{2}x$ a un zéro dans l'intervalle,"[0,1/8]","[1/2, 1]","[1/8, 1/4]","[1/4, 1/2]",D
+"Si le nombre complexe $m(m-2)+(m^2-3m+2)i$ est un nombre imaginaire pur, alors la valeur du nombre réel $m$ est",0 ou 2,0,2,1 ou 2,B
 Le nombre complexe $(i(2+i)/(1-2i))$ est égal à,-i,i,-1,1,C
-"On sait que la distance entre deux droites parallèles \( l_1 : 3x - 4y + a = 0 \) et \( l_2 : 6x - 8y + 10 = 0 \) est 2, alors \( a \) est égal à","-5,15","10,5","-5,10","-15,5",A
-"Si $\overrightarrow{a}=(x,3),\overrightarrow{b}=(x,-2)$, alors « $x=\sqrt{6}$ » est pour « $\overrightarrow{a}\bot \overrightarrow{b}$ » :",Neither a sufficient nor a necessary condition,A necessary but not sufficient condition,A sufficient and necessary condition,A sufficient but not necessary condition,B
-"Si l'équation de la droite de régression est \( y = 2 - 1.5x \), alors lorsque la variable \( x \) augmente d'une unité :",y increases on average by 1.5 units,y decreases on average by 2 units,y decreases on average by 1.5 units,y increases on average by 2 units,C
-"En enlevant 3 sommets d'un parallélépipède rectangulaire, combien de faces l'objet résultant a-t-il ?",9,8,6,7,A
-"On sait que $\tan\alpha=1/4$ et $\tan(\alpha-\beta)=1/3$, alors $\tan\beta=$",-1/13,1/13,-11/7,7/11,A
-"Dans une suite arithmétique \{a_N\}, si \(a_2 + a_3 = 4\) et \(a_4 + a_5 = 6\), alors \(a_9 + a_{10} =\)",11,12,10,9,A
-"Soit un triangle ABC avec les angles intérieurs A, B et C opposés aux côtés de longueurs respectives a, b, c, et où b = 3, c = 1, A = 2B, alors a =",$\sqrt{3}$,$2\sqrt{3}$,2,$\sqrt{3}/2$,B
-"Condition p : \((x-2)^2 \leq 1\), condition q : \( \frac{2}{x-1} \geq 1\), alors p est pour q :",Condition nécessaire et suffisante,Condition suffisante mais non nécessaire,Condition qui n'est ni suffisante ni nécessaire,Condition nécessaire mais non suffisante,D
-"Soit $\bigtriangleup ABC$ un triangle où les longueurs des côtés opposés aux angles A, B et C sont respectivement a, b et c. Si $\angle C=120^{\circ }$ et $c=\sqrt{2}a$, alors :",The relationship between A and B cannot be determined,$A\gt B$,A=B,$A\lt B$,B
-La plage de valeurs de \(a\) qui satisfait \( \log_{2}a > \log_{3}27 \) est,"(8, \inf)","(9, \inf)","(3, \inf)","(0, \inf)",A
-"Lancer un dé, soit A ""obtenir 2"", B ""obtenir un nombre impair"", alors P(A+B)=",1/6,5/6,2/3,1/3,C
-"Si la distance focale de l'ellipse \(x^2/m + y^2/8 = 1\) est égale à 2, alors la valeur de \(m\) est",7,9,9 ou 16,9 ou 7,D
-"Dans le développement, le coefficient de \(x\) pour \(\left( x-\frac{2}{x} \right)^{5}\) est :",20,5,40,10,C
-"On sait que l'image de la fonction puissance \( y = f(x) \) passe par le point \((- \frac{1}{2}, -\frac{1}{8})\), alors la valeur de \( \log_{2}f(4) \) est",4,6,3,-6,B
-"On sait que \(a > 0, a \neq 0\), alors \(a^{0} + \log_{a}a =\)",1,2,a,0,B
+"Sachant que la distance entre les deux droites parallèles l_1: 3x-4y+a=0, l_2: 6x-8y+10=0 est égale à 2, alors a est égal à","-5,15","10,5","-5,10","-15,5",A
+"Si $\overrightarrow{a}=(x,3),\overrightarrow{b}=(x,-2)$, alors « $x=\sqrt{6}$ » est une condition",Ni suffisante ni nécessaire,Nécessaire mais non suffisante,Suffisante et nécessaire,Suffisante mais non nécessaire,B
+"Si l'équation de la droite de régression est y = 2 - 1.5x, alors lorsque la variable x augmente d'une unité :",y augmente en moyenne de 1.5 unités,y diminue en moyenne de 2 unités,y diminue en moyenne de 1.5 unités,y augmente en moyenne de 2 unités,C
+Combien de faces possède l'objet obtenu après avoir coupé 3 sommets d'un parallélépipède ?,9,8,6,7,A
+"Sachant que $\tan\alpha=1/4$ et $\tan(\alpha-\beta)=1/3$, alors $\tan\beta=$",-1/13,1/13,-11/7,7/11,A
+"Dans la suite arithmétique {a_N}, si $a_2+a_3=4$ et $a_4+a_5=6$, alors $a_9+a_{10}=$",11,12,10,9,A
+"Considérons le triangle ABC, où les longueurs des côtés opposés aux angles A, B et C sont respectivement notées a, b et c. On donne b = 3, c = 1 et A = 2B. Que vaut a ?",$\sqrt{3}$,$2\sqrt{3}$,2,$\sqrt{3}/2$,B
+"Condition p : (x - 2)² ≤ 1, condition q : 2/(x - 1) ≥ 1, alors p est",condition nécessaire et suffisante,condition suffisante mais non nécessaire,condition ni suffisante ni nécessaire,condition nécessaire mais non suffisante,D
+"Soient a, b, c les longueurs des côtés opposés respectivement aux angles A, B, C du triangle ABC. Si $\angle C=120^{\circ}$ et $c=\sqrt{2}a$, alors",La relation entre A et B ne peut pas être déterminée,$A > B$,$A = B$,$A < B$,B
+La valeur de $a$ pour laquelle l'inégalité $\log_{2}a>\log_{3}27$ est vraie appartient à l'intervalle,"(8, +\inf)","(9, +\inf)","(3, +\inf)","(0, +\inf)",A
+"On lance un dé. Soit A = ""obtenir 2 points"" et B = ""obtenir un nombre impair de points"". Alors P(A+B) =",1/6,5/6,2/3,1/3,C
+"Si la distance entre les foyers de l'ellipse $x^2/m + y^2/8 = 1$ est égale à 2, alors la valeur de $m$ est",7,9,9 ou 16,9 ou 7,D
+"Dans le développement, le coefficient de x est $\left( x-\frac{2}{x} \right)^{5}$",20,5,40,10,C
+"On sait que la courbe de la fonction puissance $ y = f(x) $ passe par le point $ \left(-\frac{1}{2}, -\frac{1}{8}\right) $. Quelle est la valeur de $ \log_{2} f(4) $ ?",4,6,3,-6,B
+"Sachant que $a > 0, a \neq 1$, alors $a^0 + \log_a a =$",1,2,a,0,B
 "Dans une suite géométrique, si a1 = 8 et a2 = 64, alors la raison q est",8,3,4,2,A
-"Si la suite \{a_n\} satisfait a_{s+1}=1-1/a_s, et que a_1=2, alors a_2010 est égal à",-1,1,3/2,1/2,A
-Le domaine de définition de la fonction \( y = \sqrt{3 - \log_{2}x} \) est,"(0,9]","(-inf,27]","(0,27]","(-inf, 9]",C
-"Soit l'ensemble A = {1, 2, 3, 4} et B = {y | y = 3x - 5, x ∈ A}, alors \(A \cap B\) =","{1,2}","{1,4}","{2,4}","{3,4}",B
-La plus petite période positive de la fonction \( y = \sin(x)^{\sin(\pi/2 + x)} \) est,2\pi,\pi/2,4\pi,\pi,D
-"Si A est similaire à B, alors :",|A|=|B|,A et B sont similaires à la même matrice diagonale,A et B ont tous les deux les mêmes vecteurs propres,$A-\lambda E=B-\lambda E$,A
-"{Langue, Mathématiques, Anglais, Éducation physique} $\cup$ {Langue, Mathématiques, Anglais, Histoire, Géographie} est","{Langue, Mathématiques, Anglais}",Ensemble vide,"{Histoire, Géographie, Éducation physique}","{Langue, Mathématiques}",A
-L'ensemble des solutions de l'inéquation $(x^2-x-6)/(x-1)>0$ est :,{x|x<-2 ou x>3},{x|-2<x<1 ou x>3},{x|-2<x<1 ou 1<x<3},{x|x<-2 ou 1<x<3},B
-"Soit $\bigtriangleup ABC$ un triangle où les longueurs des côtés opposés aux angles A, B et C sont respectivement a, b, c, avec b = 3, c = 1 et A = 2B, alors a =",2,$\sqrt{3}$,$2\sqrt{3}$,\frac{\sqrt{3}}{2},C
-"On sait que le nombre complexe z satisfait (1-i)z=2, alors z est",-1-i,1-i,-1+i,1+i,D
-"Soit \( S_n \) la somme des \( n \) premiers termes de la suite arithmétique \( a_n \). Si \( a_2 = 3 \) et \( a_3 = 9 \), alors \( S_6 \) est :",32,28,24,36,D
-"On considère l'ensemble \(A=\left\{ (x,y)|x^{2}+y^{2}\le 3,x\in \mathbb{Z},y\in \mathbb{Z} \right\}\), alors le nombre d'éléments dans A est",9,5,4,8,A
-Le nombre complexe $\frac{2i}{1-i}$,1+i,1-i,-1+i,-1-i,C
-"Deux touristes étrangers visitant Pékin souhaitent prendre une photo souvenir avec les mascottes des Jeux olympiques de 2008, les Fuwa (5). Ils doivent se placer en ligne, avec les deux touristes côte à côte et ne pas se trouver aux extrémités. Combien y a-t-il de dispositions différentes possibles ?",720,480,1440,960,D
-"On sait que $\Omega=\left\{ (x,y)|x+y\le 8,x\ge 0,y\ge 0 \right\},A=\left\{ (x,y)|x\le 2,y\ge 0,3x-y\ge 0 \right\}$. Si un point P est choisi au hasard dans la région $\Omega$, quelle est la probabilité que le point P tombe dans la région A ?",$\frac{7}{16}$,$\frac{3}{4}$,$\frac{3}{16}$,$\frac{1}{4}$,C
-"On connaît l'ensemble A = {x | x \ge 0}, B = {0,1,2}, alors",$A\cup B=B$,"$A={x|x\ge 0},B={0,1,2}$",$B\subsetneq A$,$AIB=\emptyset $,C
-La plage de valeurs de \(a\) qui satisfait \( \log_{2}a > \log_{3}27 \) est,"\((3,+\infty )\)","\((8,+\infty )\)","\((0,+\infty )\)","\((9,+\infty )\)",B
-"Un certain nombre de parallélépipèdes rectangles, ayant des arêtes de longueurs 2, 3 et 5, sont assemblés dans la même orientation pour former un cube d'arête 90. Le nombre de petits parallélépipèdes rectangles traversés par une diagonale du cube est",64,70,68,66,D
-L'intervalle contenant le zéro de la fonction f(x) = ln(x) - 1/x est,"(2,3)","(1,2)","(0,1)","(3,4)",B
-Soit A : x = 1 et B : $x^{2}-3x+2=0$.,"A is a sufficient condition for B, but not a necessary condition for B","A is a necessary condition for B, but not a sufficient condition for B",A is both a necessary and sufficient condition for B,A is neither a sufficient condition nor a necessary condition for B,A
-"Si la somme des valeurs maximale et minimale de la fonction \( f(x) = \log_{2}(1+x) - \log_{2}(1-x) \) sur l'intervalle \([a, b]\) est exactement égale à 0, alors les nombres réels \(a\) et \(b\) satisfont :",-1<=a<b<=1 et a+b=0,-1<a<b<1 et a+b=0,a<b et a+b=0,a=b=0,C
-"Dans $\bigtriangleup ABC$, $a=2, b=\sqrt{2}, \angle A=\frac{\pi}{4}$, alors $\angle B=$",$\frac{\pi}{6}$ ou $\frac{5\pi}{6}$,$\frac{\pi}{3}$ ou $\frac{2\pi}{3}$,$\frac{\pi}{6}$,$\frac{\pi}{3}$,C
-"Dans le prisme rectangulaire $ABCD-A_{1}B_{1}C_{1}D_{1}$, on a $AB=BC=1, CC_{1}=2$, alors $AC_{1}=$",$\sqrt{6}$,$\sqrt{2}$,$\sqrt{5}$,2,A
+"Si la suite {a_n} satisfait la relation a_{s+1} = 1 - 1/a_s, et que a_1 = 2, alors a_2010 est égal à",-1,1,3/2,1/2,A
+La fonction $ y = \sqrt{3 - \log_{2} x} $ a pour ensemble de définition,"(0,9]","(-∞,27]","(0,27]","(-∞, 9]",C
+"On donne les ensembles A={1,2,3,4}, B={y|y=3x-5, x∈A}, alors $A\cap B$ =","{1,2}","{1,4}","{2,4}","{3,4}",B
+La période minimale positive de la fonction y=sin(x)^(sin(π/2+x)) est,2π,π/2,4π,π,D
+"Si A est semblable à B, alors",|A|=|B|,A et B sont tous deux semblables à la même matrice diagonale,A et B ont les mêmes vecteurs propres,$A-\lambda E=B-\lambda E$,A
+"L'union de {chinois, mathématiques, anglais, éducation physique} et de {chinois, mathématiques, anglais, histoire, géographie} est","{chinois, mathématiques, anglais}",ensemble vide,"{histoire, géographie, éducation physique}","{chinois, mathématiques}",A
+L'ensemble des solutions de l'inéquation $(x^2-x-6)/(x-1) > 0$ est,{x|x<-2 ou x>3},{x|-2<x<1 ou x>3},{x|-2<x<1 ou 1<x<3},{x|x<-2 ou 1<x<3},B
+"Soit a, b, c les longueurs des côtés opposés respectivement aux angles A, B, C du triangle ABC. On donne b=3, c=1, et A=2B. Déterminer la valeur de a :",2,$\sqrt{3}$,$2\sqrt{3}$,$\frac{\sqrt{3}}{2}$,C
+On sait que le nombre complexe z satisfait l'équation (1 - i)z = 2. Alors z est égal à,-1 - i,1 - i,-1 + i,1 + i,D
+"Soit $ S_n $ la somme des $ n $ premiers termes d'une suite arithmétique $ a_n $. Si $ a_2 = 3 $ et $ a_3 = 9 $, alors $ S_6 $ est égal à",32,28,24,36,D
+"Étant donné l'ensemble $A=\left\{ (x,y)|x^{2}+y^{^{2}}\le 3,x\in Z,y\in Z \right\}$, le nombre d'éléments dans A est :",9,5,4,8,A
+Nombre complexe $\frac{2i}{1-i}$,1+i,1-i,-1+i,-1-i,C
+"Deux touristes étrangers visitant Pékin veulent se faire prendre en photo avec les cinq mascottes des Jeux Olympiques de 2008, appelées Fuwa. Ils doivent tous s'aligner en file indienne, en respectant la condition que les deux touristes soient assis l'un à côté de l'autre et ne soient pas placés aux extrémités. Combien y a-t-il d'arrangements possibles ?",720,480,1440,960,D
+"On donne Ω = {(x, y) | x + y ≤ 8, x ≥ 0, y ≥ 0}, A = {(x, y) | x ≤ 2, y ≥ 0, 3x − y ≥ 0}. Si l'on jette au hasard un point P sur la région Ω, la probabilité que le point P tombe dans la région A est :",$\frac{7}{16}$,$\frac{3}{4}$,$\frac{3}{16}$,$\frac{1}{4}$,C
+"On connaît l'ensemble A = {x | x ≥ 0}, B = {0,1,2}, alors",$A \cup B = B$,"$A = {x | x ≥ 0}, B = {0,1,2}$",$B \subsetneq A$,$A \cap B = \emptyset$,C
+La plage de valeurs de $a$ pour laquelle $\log_{2}a>\log_{3}27$ est vérifiée est,"$(3,+\infty )$","$(8,+\infty )$","$(0,+\infty )$","$(9,+\infty )$",B
+"Plusieurs pavés droits de dimensions 2, 3 et 5 sont assemblés dans la même direction pour former un cube dont l'arête mesure 90. Le nombre de petits pavés droits traversés par une diagonale du cube est :",64,70,68,66,D
+"La fonction f(x) = ln(x) - 1/x, l'intervalle contenant le zéro de cette fonction est :","(2,3)","(1,2)","(0,1)","(3,4)",B
+Soit甲：x=1 et乙：$x^{2}-3x+2=0$,甲是乙的充分条件，但不是乙的必要条件,甲是乙的必要条件，但不是乙的充分条件,甲是乙的充分必要条件,甲不是乙的充分条件，也不是乙的必要条件,A
+"Si la somme du maximum et du minimum de la fonction $f(x)=\log_{2}(1+x)-\log_{2}(1-x)$ sur l'intervalle $[a,b]$ est exactement égale à 0, alors les réels $a$ et $b$ vérifient :",$-1 \leq a < b \leq 1$ et $a + b = 0$,$-1 < a < b < 1$ et $a + b = 0$,$a < b$ et $a + b = 0$,$a = b = 0$,C
+"Dans le triangle ABC, on a $a=2$, $b=\sqrt{2}$, $\angle A=\frac{\pi}{4}$, alors $\angle B=$",$\frac{\pi}{6}$ ou $\frac{5\pi}{6}$,$\frac{\pi}{3}$ ou $\frac{2\pi}{3}$,$\frac{\pi}{6}$,$\frac{\pi}{3}$,C
+"Dans le parallélépipède rectangle $ABCD-A_{1}B_{1}C_{1}D_{1}$, on a $AB=BC=1$ et $CC_{1}=2$. Alors $AC_{1}=$",$\sqrt{6}$,$\sqrt{2}$,$\sqrt{5}$,2,A
 $\cos(-19\pi/6)=$,-1/2,1/2,\sqrt{3}/2,-\sqrt{3}/2,D
-Le coefficient de x^3 dans le développement de $(x-2/x)^7$ est,42,84,168,21,B
-"Soient A et B deux matrices carrées inversibles, alors parmi les équations suivantes, celle qui est incorrecte est :",|AB|=|A||B|,(A+B)-1=A-1+B-1,$(AB)^{T}=B^{T}A^{T}$,(AB)-1=(B-1)(A-1),B
-"Étant donné les ensembles A = {0, 1, 2} et B = {2, 3}, alors l'ensemble \(A \cup B = \)","{0,1,3}","{0,1,2,3}","{1,2,3}",{2},B
-"Dans le triangle ABC, $a=2\sqrt{2}$, $B=\pi /4$, $\angle = \pi /3$, alors b=",$5\sqrt{3}/3$,$3\sqrt{3}/2$,$5\sqrt{3}/4$,$4\sqrt{3}/3$,D
-L'ensemble suivant qui ne peut pas former un ensemble est :,Les camarades de classe ayant de bonnes notes en mathématiques,Tous les nombres pairs non inférieurs à 0,Tous les points sur la droite y = 2x - 1,L'ensemble des solutions de l'inéquation x + 2 > 0,A
-"Parmi les fonctions suivantes, laquelle est à la fois paire et strictement croissante sur l'intervalle $(0,+\inf)$ ?",$y=x^2-1$,$y=-x$,$y=\cos(x)$,$y=x^4$,A
-"On connaît un point M sur l'hyperbole $\frac{x^{2}}{4}-\frac{y^{2}}{12}=1$ dont l'abscisse est 3. Alors, la distance du point M au foyer gauche de l'hyperbole est",4,$2(\sqrt{7}+1)$,$2(\sqrt{7}-1)$,8,D
-"Dans une suite géométrique $\left\{ a_{n} \right\}$, où $a_{n}\gt 0$ ($n\in N^{*}$) et $a_{4}=4$, $a_{6}=16$, la raison $q$ de la suite $\left\{ a_{n} \right\}$ est",2,1,4,3,A
-"Si le graphe de la fonction \( f(x) \) passe par le point \( (0, -1) \), alors le graphe de la fonction inverse de \( y = f(x+4) \) passe par le point :","(-1,-4)","(-4,-1)","(0,-1)","(1,-4)",A
-"Soit \( x, y \in \mathbb{R} \), et \( x + y = 3 \), alors la valeur minimale de \( 3^x + 3^y \) est",\( 6\sqrt{3} \),\( 18\sqrt{3} \),\( 4\sqrt{3} \),\( 0 \),A
-"Pendant le processus de vérification aléatoire des dimensions des produits, les dimensions sont divisées en plusieurs groupes, [3,5 ; 6) étant l'un de ces groupes. La fréquence des individus sélectionnés dans ce groupe est de 0,2. La hauteur du histogramme pour ce groupe est h, alors h est",0.1,0.2,0.05,0.08,D
-"Parmi les fonctions suivantes, celle qui a une période de $\pi$ et est décroissante sur $[0,\pi/2]$ est",$y=\sin(2x)$,$y=\cos(2x)$,$y=\sin(x+\pi/4)$,$y=\cos(x+\pi/4)$,B
-"On sait que $\tan\alpha=-3$, alors $\sin2(\alpha+\pi/4)=$",3/5,-4/5,4/5,-3/5,B
-"On sait que dans le triangle ABC, les angles intérieurs A, B et C ont pour côtés opposés respectivement a, b, c. Si a² = b² + c² - bc, alors A =",pi/3,pi/6,2pi/3,pi/4,A
-"Le nombre de sous-ensembles propres de l'ensemble A = {1, 2, 3, 4} est",15,10,11,14,C
-"Le vecteur orthogonal à a = (1,1,-1) parmi les vecteurs suivants est","$a_{2}=(-1,1,1)$","$a_{1}=(1,1,1)$","$a_{4}=(0,1,1)$","$a_{3}=(1,-1,1)$",C
-L'ensemble des solutions de l'équation $x^2+2x-8=0$ peut être exprimé par énumération comme suit :,"{2,-4}","-4 ,2","{4,-2}","4,-2",A
+Le coefficient de $x^3$ dans le développement de $(x-2/x)^7$ est :,42,84,168,21,B
+"Soit A, B deux matrices carrées inversibles de même ordre. Parmi les égalités suivantes, laquelle est fausse ?",|AB|=|A||B|,(A+B)-1=A-1+B-1,$(AB)^{T}=B^{T}A^{T}$,(AB)-1=(B-1)(A-1),B
+"On donne les ensembles A = {0,1,2} et B = {2,3}. Déterminer l'ensemble $A\cup B = $","{0,1,3}","{0,1,2,3}","{1,2,3}",{2},B
+"Dans le triangle ABC, $a=2\sqrt{2}$, $B=\pi /4$, $\angle = \pi /3$, alors b =",$5\sqrt{3}/3$,$3\sqrt{3}/2$,$5\sqrt{3}/4$,$4\sqrt{3}/3$,D
+Quel est l'objet suivant qui ne peut pas former un ensemble ?,Les élèves de cette classe dont les résultats en mathématiques sont bons,Tous les nombres pairs supérieurs ou égaux à 0,Tous les points situés sur la droite y=2x-1,L'ensemble des solutions de l'inéquation x+2>0,A
+"Parmi les fonctions suivantes, laquelle est à la fois paire et strictement croissante sur l'intervalle $(0,+\infty)$ ?",$y=x^2-1$,$y=-x$,$y=\cos(x)$,$y=x^4$,A
+"On donne l'abscisse du point M sur l'hyperbole $\frac{x^{2}}{4}-\frac{y^{2}}{12}=1$, qui est 3. La distance entre le point M et le foyer gauche de l'hyperbole est :",4,$2(\sqrt{7}+1)$,$2(\sqrt{7}-1)$,8,D
+"Dans la suite géométrique $\left\{ a_{n} \right\}$, on a $a_{n} > 0$ (pour tout $n \in \mathbb{N}^{*}$) et $a_{4} = 4$, $a_{6} = 16$. Quelle est la raison $q$ de la suite géométrique $\left\{ a_{n} \right\}$ ?",2,1,4,3,A
+"Si le graphique de la fonction f(x) passe par le point (0,-1), alors le graphique de la fonction inverse de y = f(x+4) passe par le point","(-1,-4)","(-4,-1)","(0,-1)","(1,-4)",A
+"Soit $x, y \in \mathbb{R}$ tels que $x + y = 3$, alors la valeur minimale de $3^x + 3^y$ est",$6\sqrt{3}$,$18\sqrt{3}$,$4\sqrt{3}$,$0$,A
+"Lors du contrôle aléatoire des dimensions d'un produit, les dimensions ont été réparties en plusieurs groupes. [3,5 ; 6) est l'un de ces groupes. La fréquence d'individus contrôlés dans ce groupe est de 0,2. La hauteur du diagramme en bâtons pour ce groupe est h. Alors h est égal à :",0.1,0.2,0.05,0.08,D
+"Parmi les fonctions suivantes, celle dont la période est $\pi$ et qui est décroissante sur $[0,\pi/2]$ est :",$y=\sin(2x)$,$y=\cos(2x)$,$y=\sin(x+\pi/4)$,$y=\cos(x+\pi/4)$,B
+"Sachant que $\tan\alpha=-3$, alors $\sin2(\alpha+\pi/4)=$",3/5,-4/5,4/5,-3/5,B
+"Sachant que dans le triangle ABC, les côtés opposés aux angles A, B, C sont respectivement a, b, c, et que a² = b² + c² - bc, alors l'angle A est égal à",π/3,π/6,2π/3,π/4,A
+"Le nombre de sous-ensembles propres de l'ensemble A = {1,2,3,4} est :",15,10,11,14,C
+"Lequel des vecteurs suivants est orthogonal au vecteur $a = (1, 1, -1)$ ?","$a_{2} = (-1, 1, 1)$","$a_{1} = (1, 1, 1)$","$a_{4} = (0, 1, 1)$","$a_{3} = (1, -1, 1)$",C
+L'ensemble des solutions de l'équation $x^2+2x-8=0$ exprimé en extension est,"{2,-4}","-4 ,2","{4,-2}","4,-2",A
 "Si dans la suite arithmétique {a_n}, a_3 + a_4 + a_5 = 12, alors a_1 + a_2 + a_3 + … + a_7 =",28,21,14,36,A
-"Dans le triangle $\bigtriangleup ABC$, si a=2, b+c=7, et cosB=-1/4, alors sinA=",$\frac{3}{4}$,$\frac{5}{8}$,$\frac{\sqrt{15}}{8}$,$\frac{\sqrt{5}}{4}$,C
-"Soit \( l \) et \( m \) deux droites distinctes, et \( \alpha \) un plan, alors la proposition correcte est :","Si \( l // \alpha, m \subset \alpha \), alors \( l // m \)","Si \( l // \alpha, m // \alpha \), alors \( l // m \)","Si \( l \perp m, m \subset \alpha \), alors \( l \perp \alpha \)","Si \( l \perp \alpha, l // m \), alors \( m \perp \alpha \)",D
-"Après l'exécution du segment de programme par l'ordinateur a=8, b=5, a=a+b, b=a-b, print a,b, le résultat de la sortie est","8,5","13, 8","3, 13","13, 3",B
+"Dans le triangle ABC, si a=2, b+c=7, cosB=-1/4, alors sinA =",$\frac{3}{4}$,$\frac{5}{8}$,$\frac{\sqrt{15}}{8}$,$\frac{\sqrt{5}}{4}$,C
+"Soient l et m deux droites distinctes, et soit $\alpha$ un plan. Laquelle des propositions suivantes est correcte ?","Si $l//\alpha, m\subset \alpha$, alors $l// m$","Si $l//\alpha, m//\alpha$, alors $l// m$","Si $l\bot m, m\subset \alpha$, alors $l\bot \alpha$","Si $l\bot \alpha, l//m$, alors $m\bot \alpha$",D
+"L'ordinateur exécute le segment de programme suivant : a=8, b=5, a=a+b, b=a-b, print a,b. Le résultat affiché est :","8,5","13, 8","3, 13","13, 3",B
 "Parmi les fonctions suivantes, laquelle est une fonction paire ?",$y=log_{3}{x}$,$y=3x^{2}-1$,$y=x^{3}-3$,$y=3^{x}$,B
-"L'excentricité de l'hyperbole $\frac{x^{2}}{a^{2}}-\frac{y^{2}}{b^{2}}=1 (a\gt 0, b\gt 0)$ est $\sqrt{3}$, alors l'équation des asymptotes est",$y=\pm \frac{\sqrt{2}}{2}$,$y=\pm \sqrt{2}x$,$y=\pm \sqrt{3}x$,$y=\pm \frac{\sqrt{3}}{2}$,B
-"Si \(x > 0\), \(y > 0\), et \(\frac{1}{x} + \frac{9}{y} = 1\), alors la plus petite valeur de \(x + y\) est",16,13,12,20,A
-L'intervalle de décroissance monotone de y = log_{3}(6-x-x^2) est,"[-1/2,inf)","(-inf,-1/2]","(-3,1/2]","[-1/2,2)",D
-"Depuis que les écoles secondaires de notre province ont mis en œuvre l'éducation de qualité, les clubs d'étudiants ont connu une croissance rapide. Cinq élèves de la première année du secondaire d'une certaine école souhaitent rejoindre quatre clubs : « le Cercle Littéraire Printemps », « le Club de Remise en Forme », « la Maison du Basket » et « le Jardin du Go ». Si chaque club doit compter au moins un élève, si chaque élève doit participer à un seul club, et si l'élève A ne peut pas rejoindre « le Jardin du Go », combien y a-t-il de façons différentes pour qu'ils s'inscrivent ?",180,108,72,216,A
-"En passant par les points de trisection de la hauteur du cône, des sections planes parallèles à la base sont faites, divisant la surface latérale du cône en trois parties dont les rapports d'aires sont :",1:2:4,1:3:5,1:3:9,1:2:3,B
-"L'ensemble A = {1, 2, 3, 4, 5}, l'ensemble B = {x | x² = 9}, A ∩ B est :","{ 2, 3, 5}",{3},"{ -3, 3 }","{ 1, 2, 3}",B
-"On sait que \( f(x) \) est une fonction impaire définie sur \( (-\infty, +\infty) \), qui satisfait \( f(1-x) = f(1+x) \). Si \( f(1) = 2 \), alors \( f(1) + f(2) + f(3) + \ldots + f(50) \) est égal à",-50,0,2,50,C
-"On considère une fonction paire \( f(x) \), définie sur \( \mathbb{R} \), qui satisfait \( f(4+x) = f(x) \), et qui est croissante sur l'intervalle [0, 2]. Alors, \( f(0) < 0 \) est une condition pour que la fonction \( f(x) \) ait 3 zéros sur l'intervalle [0, 6] :",Condition suffisante mais non nécessaire,Ni suffisante ni nécessaire,Condition nécessaire et suffisante,Condition nécessaire mais non suffisante,D
-"Si le vecteur a = (1, m), b = (-2, 4), et a * b = -10, alors m =",-2,-4,4,1,A
-"Dans le prisme rectangulaire $ABCD-A_{1}B_{1}C_{1}D_{1}$, on a $AB=BC=1$ et $AA_{1}=\sqrt{3}$. La valeur du cosinus de l'angle formé par les droites non coplanaires $AD_{1}$ et $DB_{1}$ est :",$\frac{1}{5}$,$\frac{\sqrt{5}}{6}$,$\frac{\sqrt{2}}{2}$,$\frac{\sqrt{5}}{5}$,D
-"On connaît une point M sur l'hyperbole x^2/4-y^2/12=1 dont l'abscisse est 3, alors la distance du point M au foyer gauche de l'hyperbole est",4,2(\sqrt{7}-1),8,2(\sqrt{7}+1),C
-"Si \( f(x) = \cos x - \sin x \) est une fonction décroissante sur \([-a, a]\), alors la plus grande valeur de \( a \) est",\(\frac{3\pi}{4}\),\(\frac{2\pi}{2}\),\(\frac{\pi}{4}\),\(\frac{\pi}{2}\),C
-"Soit $\bigtriangleup ABC$ un triangle où les longueurs des côtés opposés aux angles A, B et C sont respectivement a, b et c. Si $b \cos C + c \cos B = 2a \sin B$ et $a^{2} + c^{2} - b^{2} = 6$, alors l'aire de $\bigtriangleup ABC$ est",$\frac{\sqrt{3}}{3}$,$\frac{4\sqrt{3}}{3}$,$\frac{8\sqrt{3}}{3}$,$\frac{\sqrt{3}}{2}$,D
-"On sait que l'image de la fonction puissance \( y = f(x) \) passe par le point \((-1/2, -1/8)\), alors la valeur de \( \log_2 f(4) \) est",-6,6,4,3,B
-"Dans l'espace, laquelle des propositions suivantes est correcte ?",Two lines parallel to the same plane are parallel,Two lines perpendicular to the same line are parallel,Two lines perpendicular to the same plane are parallel,Two planes parallel to the same line are parallel,C
-Représenter l'ensemble de tous les points du premier quadrant en utilisant la méthode de description par propriété.,"{(x,y)|x<0,y>0}","{(x,y)|x<0,y<0}","{(x,y)|x>0,y>0}","{(x,y)|x>0,Y<0}",C
-Les coordonnées des foyers de l'ellipse x^2/4 + y^2 = 1 sont,"(0,\pm\sqrt(2))","(\pm\sqrt(3), 0)","(0, \pm\sqrt(3)/2)","(\pm\sqrt(3)/2, 0)",B
-Représenter l'ensemble de tous les nombres pairs par la méthode de description par propriété.,{x|x=2k},{x|x=2k+1},"{x|x=2k, k est un nombre naturel}","{x|x=2k, k est un entier positif}",C
-"Si la droite x+y+m=0 est tangente au cercle $x^{2}+y^{2}=m$, alors m=",2,$\sqrt{2}$,No solution,0 or 2,A
-La distance entre le foyer et la directrice de la parabole y^2=10x est,15/2,10,5/2,5,D
-"La fonction donnée est \( f(x) = \ln(x) + \ln(4-x) \), alors :","f(x) est strictement décroissante sur (0,4)",Le graphe de y=f(x) est symétrique par rapport à la droite x=2,"f(x) est strictement croissante sur (0,4)","Le graphe de y=f(x) est symétrique par rapport au point (2,0)",B
-"Soit l'aire de $\bigtriangleup ABC$ égale à 1, $AB=1$, $BC=\sqrt{2}$, et $\angle B$ un angle obtus, alors $AC=$",2,$\sqrt{10}$,$\sqrt{5}$,1,B
+"L'excentricité de l'hyperbole $\frac{x^{2}}{a^{2}}-\frac{y^{2}}{b^{2}}=1$ $(a > 0, b > 0)$ est $\sqrt{3}$, alors son équation asymptotique est :",$y=\pm \frac{\sqrt{2}}{2}$,$y=\pm \sqrt{2}x$,$y=\pm \sqrt{3}x$,$y=\pm \frac{\sqrt{3}}{2}$,B
+"Si x > 0, y > 0, et que 1/x + 9/y = 1, alors la valeur minimale de x + y est",16,13,12,20,A
+y=log_{3}(6-x-x^2) l'intervalle de décroissance monotone est,"[-1/2,inf)","(-inf,-1/2]","(-3,1/2]","[-1/2,2)",D
+"Depuis la mise en œuvre de l'éducation axée sur la qualité, les associations étudiantes de notre province se sont rapidement développées. Cinq nouveaux élèves de première année au lycée envisagent de participer à l'une des quatre associations suivantes : « Société littéraire du printemps », « Club de fitness », « Maison du basket-ball » et « Pavillon de go ». Si chaque association doit compter au moins un élève, chaque élève doit participer à une seule association, et l'élève Jia ne peut pas participer au « Pavillon de go », combien y a-t-il de méthodes différentes de répartition ?",180,108,72,216,A
+"Parallèlement à la base, on trace des sections passant par les points qui divisent en trois parties égales la hauteur d'un cône. Ces sections divisent la surface latérale du cône en trois parties dont le rapport des aires est de",1：2：4,1：3：5,1：3：9,1：2：3,B
+"L'ensemble A = {1, 2, 3, 4, 5}, l'ensemble B = {x | x2 = 9}, A ∩ B est","{2, 3, 5}",{3},"{ -3, 3 }","{1, 2, 3}",B
+"On sait que f(x) est une fonction impaire définie sur $(-\infty, +\infty)$, et qu'elle satisfait à la condition f(1-x) = f(1+x). Si f(1) = 2, alors que vaut f(1) + f(2) + f(3) + ... + f(50) ?",-50,0,2,50,C
+"On connaît une fonction paire f(x) définie sur R, satisfaisant f(4+x)=f(x), et croissante sur l'intervalle [0,2]. Alors f(0)<0 est une condition pour que la fonction f(x) ait trois zéros dans l'intervalle [0,6].",Condition suffisante mais non nécessaire,Condition ni suffisante ni nécessaire,Condition nécessaire et suffisante,Condition nécessaire mais non suffisante,D
+"Si les vecteurs a = (1, m) et b = (-2, 4), et que a * b = -10, alors m =",-2,-4,4,1,A
+"Dans le parallélépipède rectangle $ABCD-A_{1}B_{1}C_{1}D_{1}$, on donne $AB = BC = 1$ et $AA_{1} = \sqrt{3}$. Alors la valeur du cosinus de l'angle formé par les arêtes gauches $AD_{1}$ et $DB_{1}$ est :",$\frac{1}{5}$,$\frac{\sqrt{5}}{6}$,$\frac{\sqrt{2}}{2}$,$\frac{\sqrt{5}}{5}$,D
+On donne l'abscisse du point M sur l'hyperbole $\frac{x^2}{4} - \frac{y^2}{12} = 1$ qui est égale à 3. Quelle est la distance entre le point M et le foyer gauche de l'hyperbole ?,4,2(\sqrt{7}-1),8,2(\sqrt{7}+1),C
+"Si la fonction f(x) = cosx - sinx est décroissante sur l'intervalle [-a, a], alors la valeur maximale de a est",$\frac{3\pi}{4}$,$\frac{2\pi}{2}$,$\frac{\pi}{4}$,$\frac{\pi}{2}$,C
+"Soit un triangle ABC dont les côtés opposés aux angles A, B et C ont pour longueurs respectives a, b et c. Si $b \cos C + c \cos B = 2a \sin B$ et $a^{2} + c^{2} - b^{2} = 6$, alors l'aire du triangle ABC est :",$\frac{\sqrt{3}}{3}$,$\frac{4\sqrt{3}}{3}$,$\frac{8\sqrt{3}}{3}$,$\frac{\sqrt{3}}{2}$,D
+"On sait que la courbe de la fonction puissance $ y = f(x) $ passe par le point $ \left(-\frac{1}{2}, -\frac{1}{8}\right) $. Quelle est la valeur de $ \log_2 f(4) $ ?",-6,6,4,3,B
+"Dans l'espace, laquelle des propositions suivantes est correcte ?",Deux droites parallèles à un même plan sont parallèles,Deux droites perpendiculaires à une même droite sont parallèles,Deux droites perpendiculaires à un même plan sont parallèles,Deux plans parallèles à une même droite sont parallèles,C
+En utilisant la notation ensembliste pour décrire l'ensemble de tous les points du premier quadrant,"{(x,y)|x<0,y>0}","{(x,y)|x<0,y<0}","{(x,y)|x>0,y>0}","{(x,y)|x>0,y<0}",C
+Les coordonnées des foyers de l'ellipse x²/4 + y² = 1 sont,"(0, ±√2)","(±√3, 0)","(0, ±√3/2)","(±√3/2, 0)",B
+Représenter l'ensemble des nombres pairs à l'aide d'une propriété caractéristique,{x|x=2k},{x|x=2k+1},"{x|x=2k, K est un nombre naturel}","{x|x=2K, K est un entier positif}",C
+"Si la droite x + y + m = 0 est tangente au cercle $x^{2}+y^{2}=m$, alors m =",2,$\sqrt{2}$,Aucune solution,0 ou 2,A
+La distance entre le foyer et la directrice de la parabole $ y^2 = 10x $ est,15/2,10,5/2,5,D
+On donne la fonction $f(x) = \ln(x) + \ln(4 - x)$. Alors :,"f(x) est strictement décroissante sur $(0, 4)$",La courbe représentative de $y = f(x)$ est symétrique par rapport à la droite $x = 2$,"f(x) est strictement croissante sur $(0, 4)$","La courbe représentative de $y = f(x)$ est symétrique par rapport au point $(2, 0)$",B
+"Soit ΔABC un triangle dont l'aire est égale à 1, AB = 1, BC = √2, et l'angle B est obtus. Alors AC =",2,√10,√5,1,B
 "Pour tout nombre réel a (a > 0, a ≠ 1), le graphe de la fonction f(x) = a^{x-1} + 3 passe nécessairement par le point","(2,5)","(5,2)","(4,1)","(1,4)",D
-"On connaît une suite arithmétique dont le premier terme est 1 et la différence commune est 3. Alors, la somme des cinq premiers termes de cette suite est",35,20,30,10,A
-"Deux garçons et trois filles, soit cinq élèves en tout, se placent en ligne. Si le garçon A ne se tient pas aux extrémités et que seules deux des trois filles sont adjacentes, alors le nombre total de dispositions différentes est :",42,36,60,48,D
-"Soit l'ensemble universel U = {a, b, c, d, e, f} et A = {a, c, e}, alors CuA =","{a,b,c,d,e,f}",ensemble vide,"{a,c,e}","{b,d,f}",D
-"Dans le triangle ABC, si a = 2, b + c = 7, et cosB = -1/4, alors sinA =",\sqrt{5}/4,\sqrt{15}/8,5/8,3/4,B
-"La condition suffisante mais non nécessaire pour que l'inégalité |x-m|<1 soit vraie est 1/4<x<1/2, alors le domaine des valeurs réelles de m est","[-1/2,5/4]","(-1/2,5/4)","[-5/4,1/2]","[5/4,+inf)",A
+"Sachant qu'un une suite arithmétique a pour premier terme 1 et pour raison 3, la somme des cinq premiers termes de cette suite est :",35,20,30,10,A
+"Deux garçons et trois filles, soit un total de cinq étudiants, se tiennent en rang. Si le garçon A ne se tient pas à l'une des extrémités, et parmi les trois filles, exactement deux seulement sont adjacentes, alors le nombre total de façons différentes de les disposer est :",42,36,60,48,D
+"Soit l'ensemble universel U = {a, b, c, d, e, f}, A = {a, c, e}, alors CuA =","{a,b,c,d,e,f}",Ensemble vide,"{a,c,e}","{b,d,f}",D
+"Dans le triangle ABC, si a=2, b+c=7, cosB=-1/4, alors sinA=",\sqrt{5}/4,\sqrt{15}/8,5/8,3/4,B
+On sait qu'une condition suffisante mais non nécessaire pour que l'inéquation |x-m| < 1 soit vérifiée est que $ \frac{1}{4} < x < \frac{1}{2} $. Quel est l'ensemble des valeurs possibles pour le nombre réel $ m $ ?,"$[- \frac{1}{2}, \frac{5}{4}]$","$(- \frac{1}{2}, \frac{5}{4})$","$[- \frac{5}{4}, \frac{1}{2}]$","$[\frac{5}{4}, +\infty)$",A

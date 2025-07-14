@@ -143,6 +143,17 @@ def parse_response(translation):
     
 def translate(args):
     output_filename = get_output_filename(args.input, args.language)
+
+    # 新增部分开始
+    folder = f"test_{args.language}"
+    if not os.path.exists(folder):
+        os.makedirs(folder)
+
+    target_path = os.path.join(folder, os.path.basename(output_filename))
+    if os.path.exists(target_path):
+        print(f"文件 {target_path} 已存在，程序直接退出。")
+        return
+    
     total_count = 0
     success_count = 0
     start_time = time.time()  # 记录开始时间

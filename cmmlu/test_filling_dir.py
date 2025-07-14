@@ -145,7 +145,7 @@ def test_gap_filling_on_file(filepath):
             if not row:
                 continue
             question_count += 1
-            prompt = f"下面这道题的答案是什么？只告诉我最终结果，不要返回任何其他内容。答案请使用两个####围起来，比如####6####：\n{row[0]}"
+            prompt = f"以下是一道填空题，请直接给出最终答案，使用两个####围起来，比如####6####，不要返回任何其他内容\n{row[0]}"
             print(f"题目:\n{row[0]}\n")
             if args.model == "deepseek":
                 response = call_deepseek_api(prompt)

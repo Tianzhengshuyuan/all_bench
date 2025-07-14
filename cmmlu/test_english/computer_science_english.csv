@@ -1,0 +1,208 @@
+"Using one byte, the maximum number of different codes that can be encoded is (  )",128,256,16,8,B
+Ethernet usually adopts ( ) protocol to support a bus topology,Ring,Carrier Sense Multiple Access with Collision Detection (CSMA/CD),Token Ring,Bus,B
+"If the operand is read in indexed addressing mode, the effective address refers to",The address obtained through index calculation,The address stored in the base register,The address directly provided in the instruction,The address stored in the index register,A
+The world's first network was born in ( ) year,1969,1977,1973,1946,A
+Serial interface refers to,"Serial transmission is used between the host and the interface, and between the interface and the peripheral","Serial transmission is used between the host and the interface, and parallel transmission is used between the interface and the peripheral","Parallel transmission is used between the host and the interface, and serial transmission is used between the interface and the peripheral",The system bus uses a serial bus,C
+An access list is a security policy of a router. You decide to use a standard IP access list for security control. The following are examples of standard access lists:,access-list 101 deny 192.168.10.23 255.255.255.255,access-list standart 192.168.10.23,access-list 10 deny 192.168.10.23 0.0.0.0,access-list 101 deny 192.168.10.23 0.0.0.0,C
+Which of the following options belongs to logical structures?,Circular Queue,Adjacency List,Hash Table,Binary Tree,D
+The composition of a C program is,Several subroutines,Statements,Loop body,Several procedures,B
+"You just created an extended access list 101, now you want to apply it to an interface. Which of the following commands can you use to apply it to the interface?",pemit access-list 101 out,access-list 101 out,apply access-list 101 out,ip access-group 101 out,D
+What two parts does the CPU include?,ALU and main memory,ALU and controller,Arithmetic unit and controller,ALU and accumulator,C
+"When a linear list is stored sequentially, the storage addresses of two data elements that are logically adjacent are",Not necessarily adjacent,Definitely adjacent,Not necessarily adjacent,Possibly not adjacent,B
+The reason why Chinese characters are represented using internal codes instead of national standard codes inside computers is,"Some Chinese characters have non-unique national standard codes, while internal codes are unique","In some cases, national standard codes may cause misunderstandings","National standard code is a national standard, while internal code is an international standard",Internal code is easier to represent than national standard code,B
+"The IP address of the billing server is within the 192.168.1.0/24 subnet. To ensure the security of the billing server, no user is allowed to telnet to this server. The correct access list entry that needs to be configured is:",access-list 11 deny tcp 192.168.1.0 0.0.0.255 eq telnet/access-list 111 permit ip any any,access-list 111 deny tcp any 192.168.1.0 0.0.0.255 eq,access-list 111 deny tcp any 192.168.1.0 eq telnet/access-list 111 permit ip any any,access-list 111 deny udp 192.168.1.0 0.0.0.255 eq telnet/access-list 111 permit ip any any,C
+Programs written in high-level languages are called,Source program,Compiler program,Linker program,Editor program,A
+Which of the following correctly lists the 568A pinout order for twisted pair cables?,"White-Green, Green, White-Orange, Blue, White-Blue, Orange, White-Brown, Brown","Green, White-Green, Orange, White-Orange, Blue, White-Blue, Brown, White-Brown","White-Orange, Orange, White-Green, Blue, White-Blue, Green, White-Brown, Brown","White-Orange, Orange, Green, White-Blue, Blue, White-Green, White-Brown, Brown",A
+The main purpose of using different addressing modes in an instruction system is,To achieve stored program and program control,To directly access external memory,"To shorten instruction length, expand addressing space, and improve programming flexibility",To provide possibilities for extending opcodes and reduce decoding difficulty,C
+"In the ""http://www.cqu.edu.cn/"" entered in the IE address bar, ""http"" stands for",Resource,Protocol,Address,Host,B
+"Assume char str[20]; the statement that can fully input the string ""I am a student."" from the keyboard is:",str = gets( ),"scanf( ""%c"",str)",gets(str),"scanf( ""%s"",str)",C
+Which of the following correctly describes the OSI reference model from top to bottom?,"Application layer, Transport layer, Internet layer, Network Interface layer","Physical layer, Data Link layer, Transport layer, Session layer, Presentation layer, Application layer, Network layer","Application layer, Presentation layer, Session layer, Transport layer, Network layer, Data Link layer, Physical layer","Application layer, Presentation layer, Session layer, Network layer, Data Link layer, Transport layer, Physical layer",C
+Which of the following statements is correct?,The boundary between software and hardware is not absolute; sometimes their functions are equivalent,Software cannot be replaced by hardware,Hardware systems cannot be replaced by software,Computer performance is entirely determined by the CPU,A
+"For a Windows application window in a restored state, the operation that cannot be performed is",Move,Rotate,Minimize,Maximize,B
+The characteristic of dynamic semiconductor memory is,The content of the memory will change during operation,It is necessary to dynamically change the memory access address during operation,"After each readout, it is necessary to rewrite the original content again","At regular intervals, it is necessary to rewrite the original content again",D
+"A switching network containing devices from multiple vendors including Ruijie, the Trunk tagging for VLANs should generally be selected as:",VTP,IEEE 802.1q,ISL,All of the above can be used,C
+"For a network administrator, the goal of network management is not",To provide users with more diverse services,To improve security,To reduce the overall operating costs of the network,To increase equipment utilization,A
+The following that does not belong to wireless media is,Electromagnetic waves,Microwaves,Laser,Optical fiber,D
+"The basic form of conditional compilation is as follows: #XXX identifier  
+Program segment 1  
+#else  
+Program segment 2  
+#endif  
+Here, XXX can be",ifdef or ifndef or if,ifdef or include,ifdef or ifndef or define,define or include,A
+Which of the following statements defines `c` as a file pointer?,FILE *c,file * c,file c,FILEc,A
+Multiple components connected to the bus ( ),"Can only send data to the bus in a time-sharing manner, but can receive data from the bus simultaneously","Can only send data to the bus in a time-sharing manner, and can only receive data from the bus in a time-sharing manner","Can send data to the bus simultaneously, but can only receive data from the bus in a time-sharing manner","Can send data to the bus simultaneously, and can also receive data from the bus simultaneously",A
+"In an access list, there is a rule as follows: access-list 131 permit ip any 192.168.10.0 0.0.0.255 eq ftp. In this rule, ""any"" means:",Check all bits of the destination address,Check all bits of the source address,Allow all source addresses,Allow 255.255.255.255 0.0.0.0,C
+The development of language processing programs has gone through three stages: ( ),"Binary code language, machine language, and FORTRAN language","Machine language, assembly language, and high-level language","Machine language, BASIC language, and C language","Machine language, assembly language, and C++ language",B
+An alarm event is generated in the console when a set of network performance metrics in the network device exceeds the definition of the RMON alarm group,Minimum value,Threshold value,Default value,Maximum value,B
+Variables that cannot have the same name in different functions within a file are:,register-type internal variables,Formal parameters,auto-type internal variables,Function names,D
+"telnet is a file transfer protocol, and the port it uses is",23,21 22,139,80,A
+The protocol used on the Internet for sending and receiving email is,TCP/IP,NetBEUI,IPX/SPX,POP3/SMTP,D
+The unknown data type defined in RFC1155 is,Gauge,Counter,TimeTicks,Opaque,D
+"In order to improve efficiency, it is desired that the monitor returns only those values that have changed since the last query. This concept is defined in the MIB of RMON2 as",Protocol Directory Table,Monitor's Standard Configuration Method,Time Filter Index,External Object Index,C
+SNMPv2 is the same as SNMPv1 in terms of,Message encapsulation format,Protocol operations,Security functions,Management information structure,A
+"If a new office subnet is added to the original network, manual configuration of the IP routing table will be required. Which command should be entered?",Sh ip route,Route ip,Ip route,Sh route,C
+The complement addition operation refers to,"Operands are represented in complement form, and the sign bit is added together with the value","Operands are represented in complement form, and the actual operation is determined based on the sign bit",Convert operands to original code before adding,"Add the absolute values of the operands directly, and handle the sign bit separately",A
+The standardization work of local area networks is mainly formulated by ___,CCITT,IEEE,OSI,EIA,B
+Which of the following correctly arranges memory read/write speeds from fastest to slowest?,Cache>RAM>Hard Disk>Floppy Disk,Cache>Hard Disk>RAM>Floppy Disk,RAM>Hard Disk>Floppy Disk>Cache,RAM>Cache>Hard Disk>Floppy Disk,A
+The Ethernet switch can work normally even if there is a loop in the network because it runs the ( ) protocol,802.3,801.z,Trunk,Spanning Tree,D
+"The command ""ip access-group {number} in"" means:",Cancel the application of the specified interface to perform access control on data flows entering that interface,Apply the specified interface to perform access control on data flows leaving that interface,Cancel the application of the specified interface to perform access control on data flows leaving that interface,Apply the specified interface to perform access control on data flows entering that interface,D
+Sign-magnitude multiplication is,"Multiply the absolute values of the operands first, then handle the sign bit separately",Use sign-magnitude representation for the operands and then multiply directly,"Represent the multiplicand in sign-magnitude form, take the absolute value of the multiplier, and then multiply","Represent the multiplier in sign-magnitude form, take the absolute value of the multiplicand, and then multiply",A
+Which of the following methods is the most fundamental way to reduce errors?,Improve line quality,Error checking,Select a reasonable coding method,Use shielding,A
+"The operating system is divided into three layers according to its functional relationship: the system layer, the management layer, and the (  ) layer.",User layer,Logical layer,Application layer,Data layer,C
+The maximum number of VLANs supported by IEEE802.1Q is,4094,256,2048,1024,A
+192.108.192.0 belongs to which class of IP address,Class B,Class D,Class A,Class C,D
+"WWW, which is widely used on the Internet, is a type of",Browsing service model,Network server,Network model,Network host,A
+"The Chinese national standard code (GB2312-80) specifies the encoding for Chinese characters, with each character represented by",four bytes,three bytes,two bytes,one byte,C
+"The first time you save a Word document, the system will open the ( ) dialog box",Close,Save As,Save,New,B
+"When creating a new document, the default font and font size in Word are respectively","SimSun, No.5","SimHei, No.3","FangSong, No.6","KaiTi, No.4",A
+"If x's two's complement is 0.1101010, then x's original code is",0.110101,1.0010101,1.001011,0.001011,A
+The logical structure of data can be divided into,Linear structure and nonlinear structure,Dynamic structure and static structure,Sequential structure and linked structure,Simple structure and structured structure,A
+"At the same time the world's first computer, ENIAC, was introduced, the concept proposed by von Neumann was",Process management,Program control,Process control,Stored program,D
+"In an upward-growing stack, if the pop instruction POP x is defined as: M(x) ← M(SP); SP ← (SP) - 1, then the push instruction PUSH x should be defined as ( )",SP ← (SP) - 1; M(SP) ← M(x),SP ← (SP) + 1; M(SP) ← M(x),M(SP) ← M(x); SP ← (SP) - 1,M(SP) ← M(x); SP ← (SP) + 1,B
+"Let a=1, b=2, c=8, d=7, x=10, y=10. After executing (x=a>b)&&(y=c>d), the value of y is",1,4,2,10,D
+The concept that is unrelated to data storage structure is,Binary linked list,Stack,Sequential table,Linked list,B
+Which layer of the OSI reference model does a router operate on?,Application Layer,Transport Layer,Presentation Layer,Network Layer,D
+"""Bus Busy"" signal is established by ( )",CPU,The device that gains bus control,"The device issuing a ""bus request""",Bus controller,B
+"In the Windows window menu, if a command item has a black triangle pointing to the right, it indicates that the command item",Can be executed directly by clicking the mouse,Has a sub-menu,Can be executed directly by double-clicking the mouse,Can be executed directly by right-clicking the mouse,B
+What is the default administrative distance of the static routing protocol? What is the default administrative distance of the RIP routing protocol?,1120,2140,1140,2120,A
+"To avoid ambiguity, the C language specifies that an else clause always matches with ( )",its preceding nearest if,its following nearest if,if at the same indentation level,if on the same line,A
+The correct character constant is,GO,'/1010','68',"""B""",B
+The interface for plugging a USB flash drive into a computer is usually a ( ) standard interface,USB,UBS,UPS,USP,A
+"To retrieve the maximum amount of management information with the fewest exchanges, or in other words, for a management station to request the most likely large response message, the PDU added by SNMPv2 is",GetRequestPDU,InformRequestPDU,GetBulkRequestPDU,SetRequestPDU,C
+The world's first computer was born in ( ) year,1977,1946,1969,1973,B
+"In the Internet, an IP address consists of ( ) binary digits",16,32,64,8,B
+"If 1,000,000,000 symbols are received and one symbol is found to be in error after inspection, the bit error rate is",ten to the power of negative four,ten to the power of negative two,ten to the power of negative six,ten to the power of negative nine,D
+"In the OSI seven-layer model, the functions of the network layer include",Determining how packets are forwarded and routed,Transmitting bit streams over the channel,Ensuring data transmission across the network,Establishing end-to-end connections to ensure correct and error-free data transfer,A
+How many worksheets does a newly created Excel workbook have by default?,5,3,4,2,B
+The method for aligning exponents in floating-point addition and subtraction is,Adjust the exponent of the addend to match the exponent of the augend,Adjust the smaller exponent to match the larger exponent,Adjust the exponent of the augend to match the exponent of the addend,Adjust the larger exponent to match the smaller exponent,B
+Programs written in the C language need to be translated by a ( ) program before the computer can recognize them.,Compile,Interpret,Assemble,Link,A
+"Essentially, a computer virus is a",Bacteria,Program,Text,Microorganism,B
+How to clear VLAN information from flash on the S2126G switch,clear vlan flash,clear flash:vlan.dat,delete flash:vlan.dat,delete vlan flash,C
+Pinyin input code for Chinese characters belongs to which of the following categories of Chinese characters?,Standard code,ASCII code,Internal code,External code,D
+Programs that can be directly executed by a computer are written in ( ) language.,High-level,Assembly,Machine,Network,C
+"To view the VLAN membership of switch ports, you can use the ( ) command.",show interface vlan,show vlan.dat,show vlan,show running-config,C
+"The router has the following three routes configured: 1) ip route 0.0.0.0 0.0.0.0 192.168.10.1 2) ip route 10.10.10.0 255.255.255.0 192.168.11.1 3) ip route 10.10.0.0 255.255.0.0 192.168.12.1. When the router receives a packet with the source address 10.10.10.1, to which next hop address should it be forwarded?","Route setting error, cannot determine",192.168.11.1,192.168.12.1,192.168.10.1,A
+"In a microprogrammed control computer, if you want to modify the instruction set, you just need to (  )",Change the contents of the control memory,Increase the number of microcommands,Change the microinstruction format,Change the timing control method,A
+The default file extension for presentations created with PowerPoint is,.pwp,.ppt,.pop,.ppn,B
+"Among the following software, ___ is not an operating system software",Windows xp,unix,linux,microsoft office,D
+"In a network using NAT, ___ has a translation table",Router,Server,None of the above,Switch,A
+"In the frequency modulation recording method, ( ) is used to write 0 or 1",Changes in current frequency,Changes in current phase,Changes in current amplitude,Changes in voltage level,A
+"In a Windows Server 2003 environment, the group type used only for distributing emails and without security enabled is",Security group,Distribution group,Local group,Global group,B
+A complete computer system consists of ( ),"Arithmetic unit, control unit, memory, input device, and output device",Hardware system and software system,Host and peripheral devices,"Mainframe, monitor, keyboard, mouse, printer",B
+The access list is configured as follows: access-list 101 permit 192.168.0.0 0.0.0.255 10.0.0.0 0.255.255.255 What is the final default rule?,Only allows datagrams destined for 10.0.0.0 to pass,Denies all datagrams from passing,Allows all datagrams to pass,Only allows datagrams destined for 192.168.0.0 to pass,B
+The operations that an SNMP entity can perform on objects in MIB-2 are:,"Get, Set, GetNext","Get, Set, Trap","Get, GetNext, Trap","Set, Trap, GetNext",B
+Which of the following protocols is an international standard?,TCP/IP,FTP,UDP,X.25,D
+"When editing a document in Word, which view provides a WYSIWYG (What You See Is What You Get) display?",Outline view,Web view,Normal view,Page view,D
+The two main components of a computer's CPU are,Controller and Register,Arithmetic Logic Unit and Controller,Arithmetic Logic Unit and Memory,Controller and Memory,B
+"In a Word table, the name of the cell located in the third row and fourth column is",C4,D3,3∶4,4∶3,B
+"What does the ""U"" stand for in the Ping command sent from the R2624 router?",Destination unreachable,Successfully received an echo reply,Network congestion encountered,Packet has been lost,A
+The correct command to add a static route in a router is,Red-giant#ip route 192.168.1.1 255.255.255.0 10.0.0.1,Red-giant(config)#ip route 192.168.5.0 serial 0,Red-giant(config)#route add 0.0.0.0 255.255.255.0 192.168.1.0,Red-giant(config)#route add 172.16.5.1 255.255.255.0 192.168.1.1,B
+A file with the .MOV extension is usually a,Video file,Text file,Image file,Audio file,A
+"The computer name in the domain ""ftp.beijing.gov.cn"" is",ftp.beijing.gov.cn,ftp.beijing,ftp,ftp.beijing.gov,C
+The administrative distance of RIP is,100,90,120,110,C
+"Which of the following refers to collecting status information from systems and subnets, analyzing the behavior of managed devices in order to detect problems existing in network operation?",Topology monitoring,View monitoring,Network monitoring,Software monitoring,C
+High-speed cache memory generally uses,Read-only method,Half-sequential access method,Random access method,Sequential access method,C
+Various network host devices need to use specific cables for connection. Which of the following connections between network devices are correct?,"Host-----Host, direct connection","Switch-----Router, direct connection","Host-----Router, direct connection","Host-----Switch, crossover",B
+Information resources in a computer network can only be modified by authorized users. This security requirement is called,Confidentiality,Availability,Data Integrity,Consistency,C
+The telephone switching system uses,Packet switching,Circuit switching,Message switching,Signal switching,B
+The Windows clipboard is used to temporarily store information.,a folder,a disk area,a memory area,a window,C
+Which of the following belongs to the lower layer protocols?,FTP,TCP,IP,UDP,C
+The memory capacity of a microcomputer mainly refers to the capacity of (  ),RAM,ROM,CMOS,Cache,A
+Which of the following MAC addresses is valid?,00-D0-F8-00-11-0A,00-00-F8-00-EC-G7,00-00-0C-05-1C,00-0C-1E-23-00-2A-01,A
+"On a Layer 3 switch and a router, the command to enable routing functionality is",start ip route,enable route,ip router,ip routing,D
+A local area network (LAN) that uses Ethernet is typically organized in a ___ topology.,Ring,Tree,Bus,Star,C
+"For the C++ language, among the following operators, the one with the highest precedence is",++,[ ],%,&&,B
+The media control protocol used by Ethernet is,UDP,CSMA/CD,X.25,TCP/IP,B
+The time complexity of an algorithm characterizes,the storage space required to execute the algorithm,the readability of the algorithm,the time required to execute the algorithm,the difficulty level of the algorithm,C
+"A middle school has been assigned a C-class network segment with the IP range 192.168.1.0/24. You are required to divide it into more than 7 subnets, with each subnet supporting at least 25 hosts. What should be the subnet mask?",255.255.255.240,255.255.255.224,255.255.240.0,255.255.255.128,B
+"If the decimal number is 137.5, then its octal number is",211.5,89.8,1011111.101,211.4,D
+The time required to read a microinstruction from the control memory and execute the corresponding operation is called,CPU cycle,Micro cycle,Machine cycle,Clock cycle,B
+"Computer development is generally divided into four stages, and the stage of large-scale integrated circuit computers saw the emergence of:",High-level programming languages,Operating systems,Assembly language,Database systems,D
+The content of the stack pointer SP is,Stack bottom unit address,Stack bottom unit content,Stack top unit address,Stack top unit content,C
+The maximum number of hops for RIP is,24,15,18,12,B
+Any program must be loaded into ( ) to be executed by the CPU,Disk,Hard drive,External storage,Memory,D
+"The monitor sends a request to the agent, asking for the value of the information it needs. The agent responds to the monitor's request by retrieving the requested value from its stored management information base and returns it to the monitor. This communication mechanism is called",Response,Request,Event Report,Polling,D
+Which IEEE standard defines RSTP?,IEEE802.1,IEEE802.1d,IEEE802.3,IEEE802.1w,D
+The parameter that must be set when establishing a WAN connection on a router is,Configure remote login on the router,Add a static route,Set the clock rate at the DTE end,Set the clock rate at the DCE end,D
+Which of the following formats occupies the largest storage space when used to store the same image?,.GIF,.JPG,.BMP,.TIF,C
+Which ICMP does the PING command use?,Echo reply,Redirect,Source quench,Destination unreachable,A
+Serial interface refers to,"Interface transfers in parallel with the system bus, and transfers in parallel with I/O devices","Interface transfers in parallel with the system bus, and transfers serially with I/O devices","Interface transfers serially with the system bus, and transfers in parallel with I/O devices","Interface transfers serially with the system bus, and transfers serially with I/O devices",B
+The twisted pair used in local area networks is,Category 6 UTP,Category 3 UTP,Category 4 UTP,Category 5 UTP,D
+Which of the following statements is correct,Computer networks can be divided into client/server networks and broadcast networks according to service method,"Computer networks can be divided into local area networks, metropolitan area networks, provincial area networks, and wide area networks according to geographical location","Computer networks can be divided into local area networks, metropolitan area networks, wide area networks, and internets according to geographical location","Computer networks can be divided into local area networks, metropolitan area networks, provincial area networks, and internets according to geographical location",C
+The English meaning of DRAM memory is,Dynamic Random Access Memory,Dynamic Read-Only Memory,Static Random Access Memory,Static Read-Only Memory,A
+"In RIP routing, setting the administrative distance is a measure of the trustworthiness level of a route. You can distinguish between different ( ) sources by defining the administrative distance. Routers always select the route with the lowest administrative distance.",Network structure information,Data exchange information,Topology information,Routing information,B
+"If the text entered in the same cell of Excel consists of two paragraphs, which key should be used after finishing the first paragraph?",Alt+Enter,Shift+Enter,Ctrl+Enter,Enter,A
+"If the hexadecimal number is AC.B, then its decimal equivalent is",254.54,172.6875,172.625,2763,B
+Security management in network management refers to the security of which of the following between the management station and the agent,Information storage,Information exchange,Information index,Complete information,B
+The unit of computer processing speed is,MHz,MB,MIPS,MTBF,C
+Windows directory structure adopts,Hierarchical structure,Linear structure,Mesh structure,Tree structure,D
+Which of the following devices is an output device?,Mouse,Handwriting tablet,Monitor,Keyboard,C
+The magnitude of time consumption of an algorithm is called the algorithm's,Difficulty,Efficiency,Time complexity,Feasibility,C
+The purpose of adding a high-speed cache memory between the main memory and the CPU is,To increase both the main memory capacity and the number of general-purpose registers in the CPU,To increase the number of general-purpose registers in the CPU,To solve the speed matching problem between the CPU and main memory,To expand the capacity of the main memory,C
+"In single-address instructions, to perform arithmetic operations on two numbers, in addition to one operand specified by the address code, the other number often uses",Indirect addressing,Stack addressing,Implicit addressing,Immediate addressing,C
+The range of values for an (n+1)-bit offset code integer is,-2^n ≤ x ≤ 2^n - 1,-2^(n+1),-2^(n-1),-2^(n+1) ≤ x ≤ 2^n - 1,A
+Which layer of the OSI seven-layer model does a switch operate on?,Above Layer 3,Layer 3,Layer 1,Layer 2,D
+The Chinese character set in the Chinese character system stores the,Glyph code,Input code,GB code,Internal code,A
+"In the structure of MIB-2, the node under Internet that includes all management objects approved by IAB is",experimental,private,directory,mgmt,D
+"If the storage cycle is 100ns and one byte is read out each time, then the data transfer rate of this memory is",8×106 bits/second,32×106 bits/second,80×106 bits/second,80Mb/s,C
+"Without modifying or violating the SNMPv1 management framework, the RMON specification provides",Row addition and row deletion operations,Operations to retrieve unknown objects,Operations to set or update variable values,Operations to retrieve table objects,A
+"Among the three types of computer buses, which one is not included?",Control Bus,Address Bus,Transmission Bus,Data Bus,C
+"Among the following functions, the one that belongs to the scope of configuration management is",Test management function,Defining and modifying the interconnection relationships among network elements,Workload monitoring function,Data collection function,B
+The main difference between semiconductor read-only memory (ROM) and semiconductor random-access memory (RAM) is that,"ROM loses its information after power loss, while RAM does not","ROM is internal memory, and RAM is external memory","RAM is internal memory, and ROM is external memory","ROM can permanently retain information, while RAM loses its information after power loss",D
+The data path width of a bus refers to,The number of data bits that can be transmitted sequentially in series,The number of data bits that can be transmitted per unit time,The number of data bits that can be transmitted in parallel at one time,The maximum value of data that can be transmitted at one time,C
+The binary number corresponding to the decimal number 27 is,10111,1011,1100,11011,D
+"In describing information transmission, bps stands for",Number of bits transmitted per second,Number of instructions transmitted per second,Number of words transmitted per second,Number of bytes transmitted per second,A
+How to track the RIP routing update process,show ip route,clear ip route *,show ip rip,debug ip rip,D
+The correct address for configuring the default gateway on a router is,0.0.0.0 255.255.255.255,255.255.255.255 0.0.0.0,0.0.0.0 255.255.255.0,0.0.0.0 0.0.0.0,D
+How to set the interface of the S2126G switch to TAG VLAN mode,switchport mode trunk,switchport mode tag,set port trunk on,trunk on,A
+Which of the following statements about algorithm outputs is correct?,The algorithm definitely has no output,The algorithm may have no output,The algorithm has at least one output,The algorithm must have multiple outputs,C
+In which of the following modes should you create a VLAN?,Interface configuration mode,Privileged mode,Global configuration mode,User mode,C
+Which of the following statements is incorrect?,An algorithm must terminate after a finite number of steps,The same problem can have multiple different algorithms,Algorithms can only solve numerical computation problems,Each step of an algorithm must be clear and unambiguous,C
+"The microprogrammed controller is slower than the combinational logic controller, mainly due to the additional time required to read microinstructions from ( )",Cache,Control memory,Instruction register,Main memory,B
+The command to disable RIP route summarization is,auto-summary,apply access-list 101 out,no auto-summary,no ip router,C
+"In computer information measurement units, K stands for",102,103,28,210,D
+Which of the following is a private address?,172.16.0.1,193.168.159.3,127.0.0.1,100.172.1.98,A
+Configure a standard access list on STAR-R2624 to allow only IP packets originating from the Class B address: 172.16.0.0 to pass through. Which of the following wildcard access-list masks is correct?,0.0.255.255,255.255.255.0,0.255.255.255,255.255.0.0,A
+"Swiss computer scientist Professor Wirth once pointed out: Algorithms + Data Structures = Programs. The term ""data structures"" here refers to",Compact and non-compact structures of data,Linear and nonlinear structures of data,Sequential and linked structures of data,Logical and storage structures of data,D
+The correct protocol data unit order during data encapsulation in the OSI seven-layer model is,"bit, frame, packet, segment","frame, bit, segment, packet","packet, frame, bit, segment","segment, packet, frame, bit",D
+"Among the following types of memory, which one can be directly accessed by the CPU?",Main memory,Tape,CD/DVD,Disk,A
+The media access protocol of an Ethernet Hub is,Token-Bus,CSMA/CA,CSMA/CD,Token-Ring,C
+"If the subnet mask is 255.255.255.128 and the host address is 195.16.15.14, how many hosts can this subnet mask support at most",30,126,62,254,B
+Virtual address is,Non-existent address,Disk address,Address that can be used by user programming,Main memory address,C
+Which of the following options belongs to nonlinear data structures?,Stack,Binary search tree,Linear list,Queue,B
+"Which of the following statements about the pointer operator ""*"" is incorrect?",The associativity of the operator is right to left,It is a unary prefix operator,"The result of the operation is the corresponding variable, array element, etc., of the operand",The operand can only be a pointer variable,D
+"After calculating a set of data in an Excel worksheet cell, ######## appears. This is caused by (  ).",Insufficient cell display width,Computer formula error,Data format error,Calculation data error,A
+TCP protocol works at which of the following layers?,Application layer,Transport layer,Physical layer,Link layer,B
+"For general users, anonymous FTP servers do not require users to register a username and password in advance. The following can be used as the username when logging in:",Anonymous,anonymous,Email address,niming,B
+"To shorten the number of bits in an address field of an instruction, an effective method is to use",Register addressing,Immediate addressing,Indirect addressing,Indexed addressing,A
+Sign-magnitude multiplication is,Using sign-magnitude representation for operands and then multiplying directly,"Representing the multiplicand in sign-magnitude form, taking the absolute value of the multiplier, and then multiplying","Representing the multiplier in sign-magnitude form, taking the absolute value of the multiplicand, and then multiplying","Multiplying the absolute values of the operands first, and handling the sign bit separately",D
+"If [X]_comp = 11110011, then [-X]_comp is",11110011,00001100,01110011,00001101,D
+The naming method used by the Active Directory in Windows 2003 Server is,Numeric naming,File naming,DNS,User-defined,C
+The storage principle of semiconductor static memory (SRAM) is,Relying on periodic refresh,Information does not change,Relying on regeneration after reading,Relying on a bistable circuit,D
+"The original code addition and subtraction division method is also called the non-restoring remainder method, therefore","When a certain step of computation is not sufficient for subtraction, perform a remainder restoration operation","Only when the remainder of the last step is negative, perform a remainder restoration operation","When the remainder of a certain step is negative, perform a remainder restoration operation",There is no remainder restoration operation,B
+"Among the following time complexities, which one has the best performance?",O(n^3),O(n),O(log₂n),O(2ⁿ),C
+"When transferring data between devices of different speeds, (  )",Must use handshaking method,Can choose synchronous method or asynchronous method,Must use synchronous control method,Must use asynchronous control method,B
+The content that is not included in data structures is,Data storage structure,Operations applied to data,Source of data elements,Logical structure of data,C
+Which of the following options is directly related to the data storage structure?,Doubly Linked List,Directed Graph,Binary Tree,Linear List,A
+The following is not a switch configuration mode:,Privileged mode,Port mode,Line configuration mode,User mode,C
+"If the floating point uses two sign bits, then the characteristic of a positive overflow is that the two sign bits are:",1 0,1 1,0 1,0 0,C
+"In the RMON specification, two new data types are defined. These two data types are",DisplayString and RowStatus,OwnerString and RowStatus,DisplayString and EntryStatus,OwnerString and EntryStatus,D
+The basic unit for processing data in a computer is,Bit,Word length,Word,Byte,D
+Which layer of the OSI reference model implements the following function: converting the data from the sender into the data format for the receiver?,Application layer,Transport layer,Session layer,Presentation layer,D
+"Assume int x = 5, * p = &x;. The expression whose value is 5 is:",*px,p,*p,&x,C
+Which of the following IP addresses is a standard Class B IP address?,190.168.12.7/16,120.10.1.1/16,172.19.3.245/24,10.0.0.1/16,A
+The waiting time of a disk storage refers to,The time required for the disk to rotate one full revolution,The time required for the disk to rotate half a revolution,The time required for the disk to rotate one-third of a revolution,The time required for the disk to rotate two-thirds of a revolution,B
+"IP, Telnet, UDP are protocols of which layers of the OSI reference model respectively?","3, 7, 4","4, 5, 6","3, 4, 5","1, 2, 3",A
+Which of the following is a packet switching protocol?,HDLC,Frame Relay,ISDN,PPP,B
+"The IP address is 202.114.18.10, and the subnet mask is 255.255.255.252. What is its broadcast address?",202.114.18.11,202.114.18.12,202.114.18.8,202.114.18.255,A
+Static semiconductor memory SRAM refers to,No dynamic refresh required,Information can be retained even after power loss,"During operation, the stored content remains unchanged",The chip has internal automatic refresh logic,A
+Which of the following are methods for generating a routing table?,Automatically generated by directly connected networks on the router,All of the above,Manually configured to add routes,Automatically learned and generated by running dynamic routing protocols,B
+"If the decimal number is 137.625, then its binary representation is",1011111.101,10001011.1,10001001.11,10001001.1,D
+"When restoring files from the Recycle Bin, the restored files will return to",the location where they were deleted,"""My Documents""",the desktop,memory,A
+"Assuming `int m = 5;`, the number of times the loop body in the statement `while(m == 0) printf(""%d"",m -=2);` is executed is:",Infinite,2,1,0,D
+Using Cache can improve the speed of computer operations because,Cache can store programs and data,Cache increases the capacity of memory,Cache reduces the CPU's waiting time,Cache increases the capacity of the hard disk,C
+Which of the following belongs to logical structure?,Circular queue,Sequential stack,Linked list,Linear list,D
+"Among the following data structures, the one with a different logical structure is",Stack,Queue,Linear List,Binary Tree,D
+"When RIP sends updates to adjacent routers, what time value in seconds does it use for the update timer?",20,15,25,30,D
+"Assuming the array declaration statement ""int a[50];"", which of the following array element references does not exceed the bounds of the index?",a[-1],a[50],a[51],a[0],D
+"To manage the switch through the console port in the HyperTerminal, it should be set to",Baud rate: 57600 data bits: 8 stop bits: 1 parity: yes,Baud rate: 9600 data bits: 6 stop bits: 2 parity: yes,Baud rate: 57600 data bits: 6 stop bits: 1 parity: no,Baud rate: 9600 data bits: 8 stop bits: 1 parity: no,D

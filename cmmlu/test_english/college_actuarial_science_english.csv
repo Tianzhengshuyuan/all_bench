@@ -1,0 +1,169 @@
+"Given the following conditions of a double-decrement table:  
+(1) $ q_x^{\prime(2)} = 2 q_x^{\prime(1)} $  
+(2) $ q_x^{\prime(1)} + q_x^{\prime(2)} = q_x^{(r)} + 0.18 $  
+then $ q_x^{r(2)} = ( ) $.",0.66,0.80,0.60,0.82,C
+"Let the random variables $X_1$ and $X_2$ be independent, with their respective probability distributions given by: 
+$$X_1 \sim \begin{pmatrix} 0 & 1 & 2 \\ 0.5 & 0.3 & 0.2 \end{pmatrix}, \quad X_2 \sim \begin{pmatrix} 0 & 1 & 2 & 3 \\ 0.4 & 0.3 & 0.2 & 0.1 \end{pmatrix}$$
+Let $S = X_1 + X_2$, then $P_S(2) =$",0.07,0.20,0.17,0.27,D
+"For a two-decrement survival model, it is given that: $q_x^{\prime(2)} = 1/8,\ 11q_x^{(1)} = 1/4,\ q_{x+1}^{(1)} = 1/3$. Then $q_x^{\prime(1)} =$",1/7,1/10,1/5,3/4,A
+"The variance of the risk loss retained by the original insurer for this portfolio is ( ).  
+(1) $\lambda \operatorname{Var}(X_I)$;  
+(2) $\lambda \int_{-\infty}^M x^2 f(x) \mathrm{d} x$;  
+(3) $\lambda\left[\int_0^M x^2 f(x) \mathrm{d} x+M^2 P(X>M)\right]$",(3),(1),(2),(1)(2),A
+"A discrete probability distribution has the following properties: (1) $ p_k = c(1 + 1/k) p_{k-1} $, $ k = 1, 2, \cdots $; (2) $ p_0 = 0.5 $. Then $ c = ( ) $.",0.35,0.25,0.29,0.42,C
+"Assuming the safety loading factor $\theta = 0.1$, use the normal approximation method to calculate the probability that the total claim amount exceeds the premium income, $P(S > (1 + \theta) E(S)) = ( )$.",0.2,0.4,0.1,0.3,B
+"Suppose the distribution function of the actual loss amount X for an automobile insurance policy is: $$F(x)=1-0.9 e^{-0.02 x}-0.1 e^{-0.0001 x}, \quad x \geq 0$$ Assuming the policy specifies a policy limit of 5000 yuan, the expected claim amount is ( ).",168.56,208.54,325.15,144.33,D
+"Given $S(x)=\frac{\sqrt{100-x}}{10}$ $(0 \leqslant x \leqslant 100)$, then $\frac{\mu_{10}}{\dot{e}_{36}} = $",0.13,0.0013,0.00013,0.013,C
+"Let X₁ and X₂ be two independent random variables. If Z = max(X₁, X₂) and Y = min(X₁, X₂), then which of the following statements is false?","If both X₁ and X₂ follow an exponential distribution, then Z does not follow an exponential distribution",The density function of Z is the product of the density functions of X₁ and X₂,"If both X₁ and X₂ follow an exponential distribution, then Y also follows an exponential distribution",The survival function of Y is the product of the survival functions of X₁ and X₂,B
+"It is known that the survival function of a random variable $X$ is $S(x) = -\frac{1}{60^3} x^3 + 1$, with $0 \leqslant x \leqslant 60$, and $E(X) = 45$. Then ${}_3 m_4 = ( )$.",0.000054,0.000027,0.000026,0.00043,D
+"Let the force of mortality function be: $\mu_x=\frac{1}{100-x},\ 0 \leqslant x \leqslant 100$. Then $P(30 < x \leqslant 35 \mid x > 20) =$",0.0625,0.0327,0.0728,0.0428,A
+"The information of a double-decrement model is as follows: $\mu_{x+t}^{(1)}=\frac{t}{100}, \mu_{x+t}^{(2)}=\frac{1}{100} (t \geqslant 0)$. Then $E(T \mid J=2)$ is",7.85,7.42,7.50,7.63,D
+"If for $20 \leqslant x \leqslant 25$, the force of mortality $\mu_x = 0.001$, then ${ }_{2|2} q_{20} = ( )$.",0.004,0.001,0.003,0.002,D
+"For a triple-decrement survival model, it is known that: $q_{80}^{(1)}=0.25,\ q_{80}^{(2)}=0.30,\ q_{80}^{(3)}=0.20$, and each cause of decrement follows a uniform distribution within each age. Then $p^{\prime \prime(1)}=(\ )$.",0.72,0.52,0.63,0.75,C
+"It is known that for a certain multiple decrement table, the associated single decrement table for each decrement satisfies a uniform distribution at all ages, and $ q_x^{(1)} = 0.1, q_x^{(2)} = 0.04, q_x^{\prime(3)} = 0.0625 $. Then $ 1000 q_x^{(1)} = ( ) $.",94.96,95.96,93.96,90.96,A
+"Given: $S(x)=\frac{1}{10} \sqrt{100-x}, 0 \leqslant x \leqslant 100$, then the probability that a person aged 19 dies between the ages of 36 and 75 is ( ).",1/3,1/8,1/9,1/6,A
+"Let $f_x$ be the average number of years survived within the unit interval by individuals who survived to age $x$ and died in the interval $[x, x+n]$. Given that $l_{25}=10000$, $l_{30}=9600$, ${}_5 m_{25}=0.008$, and ${}_5 m_{30}=0.003$, find $f_{25}=$.",6,1,9,7,B
+"Given that the multiple decrement table satisfies the uniform distribution assumption for all decrements at each age, and $q_x^1=0.48$, $q_x^2=0.32$, $q_x^3=0.16$, then $q_x^{\prime 1}=___$.",0.9,0.7,0.6,0.8,D
+"For a double-decrement model, it is known that the independent termination rates are: $q_x^{\prime(1)}=0.2$, $q_x^{\prime(2)}=0.4$. In each associated single-risk model, each cause is uniformly distributed over the age. Then the termination probability $q_x^{(2)} = ( )$.",0.4281,0.2572,0.3619,0.2944,C
+"Given a competing risks survival model, it is known that:  
+$\mu_x^{1}(t) = 0.2,\ \mu_x^{2}(t) = 0.3,\ \mu_x^{3}(t) = 0.5\ (t \geqslant 0)$, then $q_x^{2} =\, $____.",0.15,0.22,0.19,0.10,C
+"Each decrement of a life insurance product can be attributed to death $(j=1)$, disability $(j=2)$, or retirement $(j=3)$, and the hazard rate functions for each decrement are constant within each age interval. It is known that for individuals aged 52, the independent termination rates are $q_{52}^{\prime(1)} = 0.020$, $q_{52}^{\prime(2)} = 0.030$, and $q_{52}^{\prime(3)} = 0.180$. What is the termination probability $q_{52}^{(2)} = ( )$?",0.02042,0.02696,0.02389,0.01455,B
+"Given a multiple decrement model with two causes of decrement, the forces of decrement are: $\mu_{x+t}^{(1)}=\frac{t}{100}, \mu_{x+t}^{(2)}=\frac{1}{100}$ $(t \geq 0)$. Given that the status terminates at time $t$, the correct conditional distribution law of $J$ is ( ).
+
+(1) $h(j \mid t)=\left\{\begin{array}{ll}\mu_{x+t}^{(1)} / \mu_{x+t}^\tau=\frac{t}{t+1}, & (j=1) \\ \mu_{x+t}^{(2)} / \mu_{x+t}^\tau=\frac{1}{t+1}, & (j=2)\end{array}\right.$;
+
+(2) $h(j \mid t)=\frac{t}{t+1}, j=2$;
+
+(3) $h(j \mid t)=\frac{1}{t+1}, j=1$.",(1) (2),(1),(1) (3),(2),B
+"Consider a two-decrement survival model with the following forces of decrement: $\mu_x^{(1)}(t)=1/[100-(x+t)]$, $\mu_x^{(2)}(t)=2/[100-(x+t)]$, for $t<100-x$. If $x=50$, what are the respective values of $h(1 \mid T=t)$ and $h(2 \mid T=t)$? ( )","1/2, 1/2","1/4, 3/4","2/3, 1/3","1/3, 2/3",D
+Which of the following expressions is equivalent to ${}_k p_x$?,$\frac{S(x+k-1)}{S(x)}$,$\frac{S(x+k+1)}{S(x+1)}$,$p_{x+1} p_{x+2} \cdots p_{x+k}$,$p_x \cdot p_{x+1} \cdots p_{x+k-1}$,D
+"Suppose X follows a uniform distribution on [0,10], let m_x denote the central death rate, then m_x is ( ).",2/9,1/3,3/8,3/5,A
+"Assume that the survival function for a newborn is $S(x)=1-\frac{x}{100}$ $(0 \leqslant x < 100)$. Then for a person aged 40, which of the following calculations is correct? (1) The survival function is $\frac{60-t}{40}$; (2) The force of mortality function is $\frac{1}{60-t}$; (3) The density function is $\frac{1}{60}$.",(2)(3),(1)(3),(1)(2),(1)(2)(3),A
+"Assume that in the two-decrement model, each decrement follows a uniform distribution, $ q_x^{(\tau)} = 0.6, \ p_x^{\prime(1)} = 0.8, \ q_x^{(1)} = 0.3 $. Then r = .",3/5,2/5,1/3,4/5,A
+"The claim amount statistics of an insurance company indicate that if a claim amount is X dollars, then the variable $ Y = \ln X $ follows a normal distribution (the claim amount follows a log-normal distribution), with a mean of 6.012 and a variance of 1.792. What is the difference between the probability that a claim amount is greater than 1200 dollars and the probability that it is less than 200 dollars?",0.046,-0.087,0.037,-0.029,B
+"Given: $S(x)=\frac{c-x^2}{c+x^2}, 0 \leqslant x \leqslant \sqrt{c}$, and $l_0=1600, l_{30}=800$, then ${ }_{10110} q_{15}=( )$.",0.493,0.193,0.293,0.393,C
+"The insurer covers two groups of risks. The number of claims per hour in risk group A follows a Poisson process with a mean of 3, and the number of claims per hour in risk group B follows a Poisson process with a mean of 5. The two processes are independent. What is the probability that risk group A experiences 3 claims before risk group B experiences 3 claims? ( )",0.33,0.43,0.28,0.38,C
+"A manufacturer will provide a warranty for one of its products, which only covers quality problems caused by the manufacturer. The following are some details regarding the warranty: (1) All quality problems caused by the manufacturer are covered under warranty; (2) The force of mortality due to quality problems caused by the manufacturer is $\mu_x^{(1)} = 0.02$; (3) The force of mortality due to quality problems caused by other reasons is $\mu_x^{(2)} = 0.03$; (4) The warranty period is $n$ years. To ensure that no more than 2% of these products receive warranty service during the warranty period, the maximum value of $n$ is ___ years.",1,4,3,2,A
+It is known that a survival distribution follows a doubly truncated exponential distribution with parameter $\lambda = 0.02$ over the interval $5 \leq x \leq 15$. The median of the future lifetime of a random variable from this survival distribution is ( ).,9.7504,8.7504,6.7504,4.7504,D
+"There is a multiple decrement model composed of three decrement causes. It is known that each independent cause follows a uniform distribution within each age interval, and we are given $q_x^{\prime(1)}=\frac{1}{10}, q_x^{\prime(2)}=\frac{1}{20}, q_x^{\prime(3)}=\frac{1}{30}$. Then $q_x^{(1)} = ( )$.",0.032,0.096,0.021,0.065,B
+"The future lifetime of $X$ is subject to two competing causes of decrement. It is given that $\mu_{x+1}^{(1)}=0.05$ and $\mu_{x+t}^{(2)}=0.02$ for $t \geqslant 0$. Which of the following statements are true?  
+(1) ${}_{10} p_x^{(\tau)} = 0.4966$;  
+(2) $q_x^{(1)} = 0.7143$;  
+(3) $q_x^{(2)} = 0.4286^{\circ}$",(1)(2)(3),(1)(3),(2)(3),(1)(2),D
+"A discrete probability distribution has the following property: $p_k = c(1 + 1/k)p_{k-1}$, $k = 1, 2, \cdots$; $p_0 = 0.5$. What is the value of $c$?",0.29,0.25,0.35,0.42,A
+"Let $y = g(x) = -\ln S_X(x)$, then the probability density function of $Y$ is ___.",$-e^{-y}$,$e^y$,$e^{-y}$,$-e^y$,C
+"Given $f(x)=\frac{10-x}{50}$, $0 \leq x < 10$. Let T(3) denote the future lifetime variable for age 3, then the mean residual life $e_3 = $.",$\frac{6}{7}$,$\frac{7}{3}$,$\frac{7}{6}$,$\frac{3}{7}$,B
+"A total of 100,000 people participated in car insurance. The probability of vehicle loss per car per year is 0.005. What is the probability that the number of vehicle losses is between 475 and 525?",0.35,0.62,0.56,0.74,D
+"Suppose the survival function of a certain random variable $ X $ is: $ S(x) = a x^3 + b, \ 0 \leq x \leq k $. If $ E(X) = 45 $, then $ \operatorname{Var}(X) = $",120,90,135,450,C
+"An insurer's portfolio of risks has the following characteristics: (1) The probability of a claim occurring is 0.05; (2) When a claim occurs, the claim amount B follows a uniform distribution on (0, 400). Given that the insurer's safety loading factor is 0.5, how many policies must the insurer underwrite at minimum in order for the probability of total claims exceeding total premiums to be 0.05?",249,278,252,263,C
+"Given the survival function $S(x)=1-\frac{x}{\omega}$ $(0 \leqslant x < \omega)$, and $\dot{e}_{20}=40$, then $\operatorname{Var}[T(20)]=( )$.",533.3,565.5,542.5,512.6,A
+"Assume that for the insured person aged 20, there are only two causes of decrement affecting the policy, and $\mu_x^{(1)}=0.1$, $x \geqslant 0; \mu_x^{(2)}=\frac{1}{50-x}$, $0 \leqslant x \leqslant 50$. Then $h(1) = ( )$.",0.58326,0.68326,0.78326,0.66326,B
+"Suppose the survival function of a certain population is $S(x)=1-\frac{x}{100}, 0 \leqslant x<100$. Which of the following statements is correct? (1) The probability that a newborn will not survive to age 50 is 0.5; (2) The probability that a newborn will live beyond age 80 is 0.8; (3) The probability that a newborn will die between ages 60 and 70 is 0.1; (4) The probability that a person who has reached age 30 will not survive to age 60 is 0.43.",$(2)(3)(4)$,(1) (2) (3),$(1)(3)(4)$,$(1)(2)(4)$,C
+"Given $q_{40}^{\prime(1)}=0.02$ and $q_{40}^{\prime(2)}=0.04$, then $q_{40}^{(\tau)}=( )$.",0.0392,0.0697,0.0592,0.0498,C
+"Given the survival function $S(x) = e^{-0.05x}$, $x \geqslant 0$, then $\xi_{30} = ( )$.",25,35,30,20,D
+"On average, every ( ) times of insurance claims, there is one loss exceeding 10.",9.5,8.5,10,7.5,B
+"The survival function of the product's lifetime is $ S(x) = 1 - 0.0025 x^2 $, where $ 0 \leqslant x \leqslant 20 $. The expected future lifetime at median age is ( ).",2.0965,12.142,3.0966,1.0965,C
+"It is known that the survival function is $S(x) = 1 - \frac{x}{100}$ $(0 \leqslant x \leqslant 100)$. A person is currently 30 years old. The probability that he dies between the ages of 60 and 80, and his expected remaining lifetime are respectively ( ).","3/7, 50","2/7, 50","1/7, 35","2/7, 35",D
+"For a two-decrement survival model, it is given that: $l_{20}^{(\tau)} = 100$, $l_{22}^{(\tau)} = 40$, $q_{20}^{\prime(1)} = 0.2$, $q_{20}^{\prime(2)} = 0.3$, ${}_{11}q_{20}^{(1)} = 0.02$, then $q_{21}^{(2)} = ( )$.",0.125,0.425,0.333,0.250,D
+It is known that the loss amount $X$ (unit: 10 thousand yuan) of a certain transportation insurance in 2010 follows a gamma distribution with parameters $\alpha=4$ and $\theta=0.4$. The inflation rate from 2010 to 2011 was 8%. Then the average loss amounts in 2010 and 2011 are respectively ( ).,"1.728, 1.6","1.8, 1.6","1.6, 1.8","1.6, 1.728",D
+"Given: $S(x)=\frac{1}{100^2} \cdot \left(\frac{x-100}{x+1}\right)^2$, then $\mu_{10}=( )$.",0.204,0.564,0.304,0.354,A
+"In a double-decrement survival model, the causes of decrement are uniformly distributed within each year. Given that the independent decrement rates at age x are $q_x^{\prime(1)} = 0.2$ and $q_x^{\prime(2)} = 0.3$, what is the value of $q_x^{(1)}$?",0.45,0.17,0.36,0.25,B
+"It is known that the remaining lifetimes $ T(x) $ and $ T(y) $ are independent, and $ E[T(x)] = E[T(y)] = 4 $, $ \operatorname{Cov}[T(xy), T(\overline{xy})] = 0.09 $. Then $ E[T(xy)] $ equals $()$.",3.7,2.0,4.0,2.8,A
+"Given $l_x=1000(8-0.1 x)^{\frac{1}{3}}$, $0 \leqslant x \leqslant 80$, the variance of the future lifetime for a person aged 20 is ( ).",46,289.3,45,47.7,B
+"It is known that the number of survivors at age 50 in a certain population is 89,509. The mortality rates for the following five years are 0.006, 0.007, 0.009, 0.012, and 0.015, respectively. What will be the number of survivors at age 55?",85206,87206,87509,86206,A
+"Given $ S(x) = (1 - \frac{x}{100})^2, 0 \leq x < 100 $, which of the following calculations is correct? ( )  
+(1) $ S(75) = 0.0625 $  
+(2) $ F(75) = 0.9375 $  
+(3) $ f(75) = 0.5 $  
+(4) $ \mu_{75} = 0.08 $",(1)(2)(3),(1)(2)(4),(1)(3)(4),(1)(2)(3)(4),B
+"For a two-decrement survival model, it is given that: $q_x^{\prime(1)} = 2 q_x^{\prime(2)}$ and $q_x^{\prime(1)} + q_x^{\prime(2)} = q_x^{(\tau)} + 0.1$. Find $q_x^{\prime(2)} =$ ( ).",0.1145,0.2045,0.1942,0.2236,D
+"It is known that the distribution function of a random variable $X$ is: $F(x) = \frac{x}{1+x}, x \geq 0$. Then the probability that a person who is currently 20 years old will die between the ages of 30 and 40 is ( ).",0.1857,0.1652,0.1451,0.1754,B
+"Given that the distribution function of the actual loss amount $ X $ for an insurance policy is: $$F_X(x) = 1 - 0.8 e^{-0.02 x} - 0.2 e^{-0.001 x}, \quad x \geqslant 0$$ If the policy stipulates: the loss is fully reimbursed if it is less than 1000 yuan, and only 1000 yuan will be reimbursed if the loss exceeds 1000 yuan. Then the expected value of the actual reimbursement amount received by the insured is ( ).",166.4,206.8,126.4,40.0,A
+"Let $X_1$ and $X_2$ be two independent random variables, where $X_1 \sim \exp (\lambda_1), X_2 \sim \exp (\lambda_2), \lambda_1 > \lambda_2$. Define $Y = \min (X_1, X_2)$ and $Z = \max (X_1, X_2)$. It is given that $S_Y(2) = 0.24$ and $S_Z(2) = 0.86$, where $S_Y(y)$ and $S_Z(z)$ denote the survival functions of $Y$ and $Z$, respectively. Then $\lambda_1 - \lambda_2 =$ ( )",0.602,0.590,0.490,0.112,C
+"It is known that the number of survivors at age 55 in a certain population is 56,000, and the mortality rates for the following 5 years are 0.005, 0.006, 0.008, 0.022, and 0.025 respectively. The number of survivors at age 60 is ( ) people.",52390,52380,52360,52370,A
+"Suppose that an insurance policy has a deductible of 20, and the losses under this policy follow an exponential distribution with a mean of 5. Then, the expected value of the claim payment is ( ).",6.2563,5.3695,4.9988,4.1986,C
+"The force of failure for a certain product is $\mu_{x+t}$. An actuary estimates that the force of failure should be revised to $\mu_{x+t}-C$. The original probability of failure for the product was $q_x$, and after revising the force of failure, the probability of failure within one year becomes half. Then the constant $C=( )$.",$\ln (1-\frac{1}{2} q_x)-\ln (1-q_x)$,$\ln (1-\frac{1}{2} q_x)+\ln (1-q_x)$,$\ln (1+\frac{1}{2} q_x)-\ln (1-q_x)$,$\ln (1-\frac{1}{2} q_x)-\ln (1+q_x)$,A
+"It is known that mortality follows the Makeham distribution, $h_{20}=0.003，h_{30}=0.004，h_{40}=0.006$. Calculate ${ }_{10} p_{10}$ ( ).",0.98555,0.97555,0.97315,0.98315,C
+"Given $S(x) = 1 - \frac{x}{100}$, $0 \leq x \leq 100$, and $l_0 = 10000$, what are the values of $q_{30}$ and $d_{35}$?","1/70, 100","1/65, 110","1/70, 110","1/65, 100",A
+"Let $S(x)$ be the survival function, the function $\varphi(x) = \frac{2}{75} x^{-\frac{1}{3}}$, and $\varphi(x) + S'(x) = 0$. Then the limiting age $\omega$ of the survival function $S(x)$ is ( ).",121,128,122,125,D
+Let $ S(x) = \frac{1}{1+x} $. Then the median of the remaining lifetime $ T(y) $ is ___.,$1+2 y$,$1+y$,$1-y$,$1+y / 2$,B
+"Suppose an insurer covers two insured objects, whose claim amount random variables are $X_1$ and $X_2$, respectively, where $X_1 \sim U(0, 75)$, $X_2 \sim U(0, 150)$, and $X_1$ and $X_2$ are independent. Let the total claim amount random variable be $S$. Then $P(S = 100) = ( \ )$",1/175,1/125,1/135,1/150,D
+"It is known that the moment generating function of a random variable $u$ is: $M_u(t) = (1 - 2t)^{-9}$, $t < 1/2$. Then its variance $\operatorname{Var}(u) =$ ().",18,324,36,54,C
+"Given the life table function $ l_x = \frac{10000}{(x+1)^3}, x \geqslant 0 $, and let the random variable $ T $ denote the remaining lifetime of a person aged $ x $, then $ Var(T) = ( ) $.",$\frac{x+1}{2}$,$\frac{(x+1)^2}{2}$,$\frac{3(x+1)}{4}$,$\frac{3(x+1)^2}{4}$,D
+"Let $\stackrel{e}{x}_x$ denote the mean remaining lifetime of an individual aged $x$, and let $\mu(x)$ denote its force of mortality. Then  
+$$
+e_x \mu(x) - \frac{\mathrm{d}}{\mathrm{d}x} \stackrel{e}{x}_x = ( \quad )
+$$",0,-1,$\frac{S(x+t)}{S(x)}$,1,D
+"Under the assumption of constant force of mortality, which of the following expressions correctly represents $f_x$ in terms of $p_x$?",$-\frac{1}{1-p_x}-\frac{p_x}{\ln p_x}$,$\frac{1}{\ln p_x}-\frac{p_x}{1-p_x}$,$\frac{1}{\ln p_x}+\frac{p_x}{1-p_x}$,$-\frac{1}{\ln p_x}-\frac{p_x}{1-p_x}$,D
+"The lifetime X is a random variable. The probability that the lifetime of a 60-year-old person does not exceed 80 years is ( ).  
+(1) $\frac{S(60)-S(80)}{S(60)}$;  
+(2) $\frac{F(80)-F(60)}{1-F(60)}$;  
+(3) $\frac{F(80)+F(60)}{1-F(60)}$;  
+(4) $\frac{S(60)+S(80)}{S(60)}$",(1)(3),(1)(2),(3)(4),(2)(4),B
+"Which of the following expressions is equivalent to ${ }_{n| m} q_x$?  
+(1) ${ }_n p_x \cdot{ }_m q_{x+n}$;  
+(2) $\frac{{ }_m d_{x+n}}{l_x}$;  
+(3) ${ }_{x+n} p_x \cdot{ }_m q_{x+n}$;  
+(4) ${ }_n p_x-{ }_{n+m} p_x$;  
+(5) ${ }_{x+n} p_x-{ }_{m+m} p_x$",$(1)(2)(5)$,$(1)(2)(3)$,$(2)(3)(4)$,$(1)(2)(4)$,D
+"It is known that in a multiple decrement model, the force of mortality satisfies:  
+$\mu_{x+t}^{(k)}=\frac{1}{n+1} \cdot \frac{k}{60-x-t},\quad t<60-x;\ k=1, 2, \cdots, n$.  
+Which of the following statements are correct? $(\ )$  
+(1) ${}_t p_x^{(\tau)} = \frac{n}{2(60-x-t)}$  
+(2) $f(t,j) = \frac{j(60-x-t)^{\frac{n}{2}-1}}{(n+1)(60-x)^{\frac{n}{2}}}$  
+(3) $g(t) = \frac{n(60-x-t)^{\frac{n}{2}-1}}{2(60-x)^{\frac{n}{2}}}$  
+(4) $h(2 \mid T=4) = \frac{1}{n(n+1)}$",(1) (2) (3) (4),(1) (2) (4),(1) (3) (4),(2) (3),D
+"Given $S(x) = (1 - \frac{x}{100})^2$, $0 \leq x \leq 100$. Let the remaining lifetime be $T$. The sum of the expected value and the standard deviation of the remaining lifetime for a person aged 50 is ( ).",28.45,24.32,29.42,29.65,A
+"Given two decrement survival models: $q_x^{(1)}=0.02，q_x^{(2)}=0.05$. Assuming that the annual decrement force is constant at each age, the values of $q_x^{\prime(1)}$ and $q_x^{\prime(2)}$ are respectively ( ).",$0.0205，0.9795$,$0.0505，0.9795$,$0.0205，0.0505$,$0.0505，0.0205$,C
+"Given that the random variable $X$ follows a uniform distribution on [0, 20], $f_X(x) = 1 / 20$, and the random variable $Y = 4 X^2$, then the hazard rate function of $Y$, $h_Y(16) = ( )$.",0.0016,0.0026,0.0023,0.0035,D
+"It is known that the hazard rate function of a random variable $X$ is $h(x) = 3x^4$, $x \geq 0$. Apply the transformation $Y = \ln X$. What is the hazard rate function of $Y$?",$5 e^{-3 y}$,$5 e^{3 y}$,$\frac{3}{5} e^{5 y}$,$3 e^{5 y}$,D
+"Consider two decrement causes, both with constant forces of decrement, and $q_x^{(1)} = q_x^{(2)} = \frac{12}{49}$. Then, in the associated single-decrement model, $q_x^{\prime(1)} =$ ( ).",$2 / 7$,$2 / 5$,$3 / 7$,$3 / 5$,A
+"A three-decrement survival model, where each cause of decrement follows a uniform distribution within each age interval. It is given that $q_x^{\prime(1)}=0.05$, $q_x^{\prime(2)}=0.04$, and $q_x^{\prime(3)}=0.08$. Then $q_x^{(2)} = ( )$.",0.0125,0.0333,0.0375,0.0425,C
+"A person's probability of catching a cold in one year follows a mixed Poisson distribution, where the parameter $\lambda$ follows a uniform distribution on $(0, 5)$. The probability that he catches a cold at least 2 times in one year is ( ).",0.61,0.41,0.81,0.21,A
+"Given that the force of mortality of a certain population is $\mu_x = \frac{1}{\omega - x}$, $0 \leqslant x \leqslant \omega$, where $\omega$ is the limiting age, then the survival function at age $x$ is",$\frac{t}{\omega-x}$,$\frac{1}{\omega-x}$,$\frac{\omega-x+t}{\omega-x}$,$\frac{\omega-x-t}{\omega-x}$,D
+"Assuming the current ages of a couple are 30 and 35, and their lifespans both follow the distribution $S(x) = 1 - \frac{x}{100}, 0 \leq x < 100$, then the probability that the time interval between their deaths does not exceed 5 years is equal to ___.",0.164,0.137,0.156,0.173,B
+A random variable $N$ representing the number of claims on an insurance policy follows a Poisson distribution with parameter $\lambda$. Suppose that $\lambda$ follows an exponential distribution with parameter 1. Then $P(N \leqslant 1) = ( )$.,$\frac{3}{5}$,$\frac{3}{4}$,$\frac{2}{5}$,$\frac{1}{4}$,B
+"Given the survival model: $l_x=1000(8-0.1x)^{\frac{1}{3}}$, $0 \leqslant x \leqslant 80$, then ${}_{20}m_{60}=( )$.",0.034,0.023,0.067,0.056,C
+"For a double-decrement model, it is known that: (1) $\mu_{x+t}^{(1)}=\frac{k}{50-t},\ 0 \leqslant t<50$; (2) $\mu_{x+t}^{(2)}=\frac{1}{50-t},\ 0 \leqslant t<50$; (3) $h(2 \mid T=t)=0.5,\ 0 \leqslant t<50$. Then $g(20)=()$.",0.048,0.036,0.024,0.012,C
+"Suppose the lifetime distribution function of a certain bridge is given by:  
+$$F(t)= \begin{cases}\frac{t}{60},& 0 \leqslant t<60 \\ 1,& 60 \leqslant t \\ 0,& t<0\end{cases}$$  
+Then, the value of ${ }_6 m_{20} = ( )$.",1/58,1/56,1/55,1/37,D
+"Given the survival function $S(x) = 1 - \frac{x}{105}$ $(0 \leq x \leq 105)$, what is its mean life expectancy?",52.5,55.5,58.5,50.5,A
+"Let $X_1, X_2$ be independent and have the same distribution as $X$. It is known that the probability density function of $X$ is: $$f_X(x)=\frac{2}{100^2}(100-x), \quad 0 < x \leqslant 100.$$ Let $S = X_1 + X_2$. Then $f_S(120) = ( )$.",0.0032,0.0034,0.0030,0.0031,B
+"Given ${ }_t p_x=0.9^t$ $(t \geqslant 0), l_{x+2}=8.1$, then $T_{x+1}=(\quad)_{\circ}$",87.45,86.32,85.42,84.46,C
+"For a two-decrement survival model, it is given that:
+
+$$\begin{aligned}
+& \mu_x^{(1)}(t) = \frac{1}{60-t}, \quad 0 \leqslant t < 60 \\
+& \mu_x^{(2)}(t) = \frac{k}{60-t}, \quad 0 \leqslant t < 60 \\
+& h(2 \mid T = t) = 0.75, \quad 0 \leqslant t \leqslant 60
+\end{aligned}$$
+
+Then the marginal density function of $T$, $g(30) =$ ( ).",1/80,1/120,2/15,1/100,B
+"Given: $q_x^{\prime(1)}=0.12$, $q_x^{(2)}=0.15$. The force of decrement 1 follows the uniform distribution within each age interval. It is known that, given decrement 2 occurs within one year, the probability that decrement 2 happens at $t=1/6$ is $2/3$, and the probability that decrement 2 occurs at $t=2/3$ is $1/3$. Then $q_x^{(2)}=( )$.",0.144,0.748,0.252,0.108,A
+"For a double decrement model, it is given that: (1) $\mu_{20+t}^{(1)}=\frac{1}{30-t},\ 0 \leqslant t<30$; (2) $\mu_{20+t}^{(\tau)}=\frac{70-2 t}{t^2-70 t+1200},\ 0 \leqslant t<30$. Which of the following statements are correct? ( )  
+(1) The independent termination rate due to the first decrement ${ }_5 q_{20}^{\prime(1)}=0.167$;  
+(2) The independent termination rate due to the second decrement ${ }_5 q_{20}^{\prime(2)}=0.125$;  
+(3) The total survival probability ${ }_5 p_{20}^{(\tau)}=0.708$;  
+(4) The termination probability due to the first decrement ${ }_5 q_{20}^{(1)}=0.156$;  
+(5) The total decrement probability ${ }_5 q_{20}^{(\tau)}=0.729$.",$(1)(2)(5)$,$(1)(2)(4)(5)$,$(1)(2)(3)(4)(5)$,$(1)(2)(4)$,D
+"Let $\mu_{x+t}^{(j)}=\mu_x^{(j)} (t \geqslant 0 ; j=1, 2, \cdots, m)$, then which of the following statements is correct(). (1) $f(t, j)=\mu_x^{(j)} e^{-t \cdot \mu_x^{(\tau)}}$; (2) $h(j)=\frac{\mu_x^{(j)}}{\mu_x^{(\tau)}}$; (3) $g(t)=\mu_z^{(j)} e^{-t \cdot \mu \mu_\delta^{(t)}}$; (4) T and J are independent.",(1)(2)(3),(1)(2)(3)(4),(1)(2)(4),(1)(3)(4),C
+"Given the survival distribution function: $S(x) = \frac{80 - x}{80}$, $0 \leqslant x \leqslant 80$, then ${}_6 m_{20} = ( )$.",1/54,1/52,1/57,1/59,C
+"It is known that the distribution of $T(0)$ is: $F_0(t) = \left\{\begin{array}{ll} t / 100, & 0 < t \leqslant 100 \\ 1, & t > 100 \end{array}\right.$. Then the probability that a newborn dies between the ages of 30 and 50 is ( ).",0.7,0.5,0.2,0.6,C
+"It is known that in a multiple decrement model, decrement 1 is policy surrender and decrement 2 is death. It is given that: $\mu_{x+t}^{(1)}=\frac{1}{x+t}$, $\mu_{x+t}^{(2)}=\frac{2}{x+t}$, $t \geqslant 0$. If $x=40$, which of the following statements is correct ( )?
+
+(1) The probability that an insured person aged 40 will leave coverage due to death at age 70 is 5.3%;
+(2) For an insured person aged 40, the total probability of leaving coverage by age 70, whether due to death or surrender, is only 8%;
+(3) An insured person aged 40 has a $\frac{2}{3}$ chance of exiting coverage due to death;
+(4) $h(J=2 | T=10)=\frac{1}{3}$.",$(1)(2)(3)$,$(1)(2)(4)$,$(1)(2)(3)(4)$,$(1)(3)(4)$,A
+"It is known that the survival function of a certain population is $S(x)=\frac{\sqrt{100-x}}{20}$, for $0 < x \leqslant 100$. Then $\frac{f(75)}{F(75)} = ( )$.",0.0050,0.0020,0.00667,0.0025,C
+"The number of claims N for a certain insurance policy follows a Poisson distribution with parameter $\Lambda$, and $\Lambda$ itself follows an exponential distribution with mean 1/4. What is the probability that there is at least one claim for this insurance policy?",0.55,0.20,0.15,0.80,D
+"Given: $q_x^{\prime(1)}=0.015$, $q_x^{\prime(2)}=0.030$. The decrement force of cause 1 (voluntary withdrawal during employment) follows a uniform distribution, and the decrement of cause 2 (disability during employment) occurs at midyear. What are the values of $p_x^{(r)}$ and $q_x^{(2)}$, respectively?","0.01478, 0.029775","0.04455, 0.029775","0.95545, 0.014775","0.95545, 0.029775",D
+"Given $l_x=1000(8-0.1 x)^{\frac{1}{3}}$, $0 \leqslant x \leqslant 80$, let X represent the remaining lifetime of a newborn. Then $E(X \mid X>$$20) = \underline{\quad\quad}$.",65,30,40,25,A
+"Mr. Li, currently 55 years old, is faced with two choices: the first is to retire in Australia, and the second is to continue living in China. Under normal circumstances, the probability of death between ages 55 and 56 is 0.005. However, living abroad introduces additional risks due to environmental adaptation, which can be expressed as an added force of mortality starting at 0.03 at the beginning of the year and uniformly decreasing to 0 at the end of the year. The probability that he survives to age 56 is ( ).",0.9476,0.9674,0.9576,0.9876,D
+"Suppose $m_{40}^{(+)} = 0.2$, $q_{40}^{\prime(1)} = 0.1$, and the decrements due to each cause in the multiple decrement model follow a uniform distribution. Then $q_{40}^{\prime(2)} =$",2/11,1/11,9/11,5/11,B
+"Let $\mu_s^{(1)}=\frac{1}{a-x}(0 \leqslant x \leqslant a)$, and $\mu^{(2)}(x)=1$, $l_0^{(\tau)}=a$, then which of the following statements is correct (  ).  
+(1) $l_x^{(\tau)}=(a-x) e^{-x}$;  
+(2) $d_x^{(1)}=e^{-x-1}-e^{-x}$;  
+(3) $d_x^{(2)}=(a-x-1) e^{-x}-(a-x-2) e^{-x-1}$.",(1) (2) (3),(1) (2),(1) (3),(2) (3),C
+"Suppose X is the number of heads obtained in 5 coin flips, and then X dice are rolled. Let Y be the sum of the numbers shown on the dice. Then $E(Y) + \sqrt{\operatorname{Var}(Y)} = ( )$.",13.50,4.75,22.60,8.75,A

@@ -16,16 +16,16 @@ mistral_client = Mistral(api_key="zWUDyBGqEIdJAtJoxnsr6ACcLTgz1auH")
 qwen_client = OpenAI(api_key="sk-341becd932d743f2a750495a0f9f3ede", base_url="https://dashscope.aliyuncs.com/compatible-mode/v1")
 
 PROMPT_DICT = {
-    "english": "The following is a math multiple-choice question. Please provide only the correct answer option, such as “answer: B”, and do not return anything else.\n{text}",
-    "chinese": "以下是一道数学选择题，请直接给出正确答案的选项，例如“answer: B”，不要返回任何其他内容\n{text}",
-    "arabic": "فيما يلي سؤال اختيار من متعدد في الرياضيات. يرجى تقديم خيار الإجابة الصحيحة فقط، مثل “answer: B”، وعدم إعادة أي شيء آخر.\n{text}",
-    "french": "Voici une question à choix multiples de mathématiques. Veuillez fournir uniquement la lettre de la bonne réponse, par exemple « answer: B », et ne rien retourner d’autre.\n{text}",
-    "russian": "Ниже приведён математический вопрос с выбором ответа. Пожалуйста, укажите только правильный вариант ответа, например «answer: B», и не возвращайте ничего больше.\n{text}",
-    "spanish": "A continuación se presenta una pregunta de matemáticas de opción múltiple. Proporcione solo la opción de respuesta correcta, como “answer: B”, y no devuelva nada más.\n{text}",
-    "japanese": "以下は数学の選択問題です。「answer: B」のように正しい選択肢のみを返し、それ以外は返さないでください。\n{text}",
-    "hindi": "निम्नलिखित एक गणित बहुविकल्पीय प्रश्न है। कृपया केवल सही उत्तर विकल्प दें, जैसे “answer: B”, और कुछ भी अन्य न लौटाएँ।\n{text}",
-    "bengali": "নিচে একটি গণিতের বহু নির্বাচনী প্রশ্ন দেওয়া হলো। শুধুমাত্র সঠিক উত্তরটি লিখুন, যেমন “answer: B”, এবং কিছুই ফেরত দেবেন না।\n{text}",
-    "portuguese": "A seguir está uma questão de múltipla escolha de matemática. Forneça apenas a opção correta de resposta, como “answer: B”, e não retorne mais nada.\n{text}",
+    "english": "The following is a multiple-choice question. Please provide only the correct answer option, surrounded by two pairs of ####, such as ####B####, and do not return anything else.\n{text}",
+    "chinese": "以下是一道选择题，请直接给出正确答案的选项，使用两个####围起来，比如####B####，不要返回任何其他内容\n{text}",
+    "arabic": "فيما يلي سؤال اختيار من متعدد. يرجى تقديم خيار الإجابة الصحيحة فقط، ومحاطًا بأربعة علامات #### على الجانبين، مثل ####B####، وعدم إعادة أي شيء آخر.\n{text}",
+    "french": "Voici une question à choix multiples. Veuillez fournir uniquement la lettre de la bonne réponse, entourée de deux paires de ####, par exemple ####B####, et ne rien retourner d’autre.\n{text}",
+    "russian": "Ниже приведён вопрос с выбором ответа. Пожалуйста, укажите только правильный вариант ответа, обрамлённый двумя парами ####, например ####B####, и не возвращайте ничего больше.\n{text}",
+    "spanish": "A continuación se presenta una pregunta de opción múltiple. Proporcione solo la opción de respuesta correcta, rodeada por dos pares de ####, como ####B####, y no devuelva nada más.\n{text}",
+    "japanese": "以下は選択問題です。正しい選択肢のみを、####で囲んで返してください（例：####B####）。それ以外は返さないでください。\n{text}",
+    "hindi": "निम्नलिखित एक बहुविकल्पीय प्रश्न है। कृपया केवल सही उत्तर विकल्प दें, जिसे दो-दो #### के बीच लिखें, जैसे ####B####, और कुछ भी अन्य न लौटाएँ।\n{text}",
+    "bengali": "নিচে একটি বহু নির্বাচনী প্রশ্ন দেওয়া হলো। শুধুমাত্র সঠিক উত্তরটি, দুটি #### দিয়ে ঘেরা, যেমন ####B####, লিখুন এবং কিছুই ফেরত দেবেন না।\n{text}",
+    "portuguese": "A seguir está uma questão de múltipla escolha. Forneça apenas a opção correta de resposta, usando dois pares de ####, como ####B####, e não retorne mais nada.\n{text}",
 }
 
 def get_prompt(text, language):
@@ -161,11 +161,14 @@ def call_qwen_api(question):
         return "❌"
     
 def extract_answer_from_response(response):
-    match = re.search(r'answer\s*:\s*([A-D])\s*', response)
+    """
+    从回答中提取被####包裹的答案（允许任意内容）
+    """
+    match = re.search(r'####(.*?)####', response, re.DOTALL)
     if match:
         return match.group(1).strip()
     else:
-        return None
+        return "无匹配"
     
 def test_language(filepath):
     # 读取输入 CSV
