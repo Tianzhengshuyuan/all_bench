@@ -29,6 +29,9 @@ def call_deepseek_api(question):
                 {"role": "user", "content": question},
             ],
             temperature=args.temperature,
+            top_p=args.top_p,
+            presence_penalty=args.presence_penalty,
+            max_tokens=args.max_tokens,
             stream=False
         )
         return response.choices[0].message.content
@@ -74,6 +77,9 @@ def call_kimi_api(question):
                 {"role": "user", "content": question},
             ],
             temperature=args.temperature,
+            top_p=args.top_p,
+            presence_penalty=args.presence_penalty,
+            max_tokens=args.max_tokens,
             stream=False
         )
         return response.choices[0].message.content
@@ -96,6 +102,9 @@ def call_doubao_api(question):
                 {"role": "user", "content": question},
             ],
             temperature=args.temperature,
+            top_p=args.top_p,
+            presence_penalty=args.presence_penalty,
+            max_tokens=args.max_tokens,
             stream=False
         )
         return response.choices[0].message.content
@@ -129,19 +138,41 @@ def call_mistral_api(question):
 def call_qwen_api(question):
     try:
         response = qwen_client.chat.completions.create(
-            # model="qwen-plus", 
-            model="qwen2.5-32b-instruct", 
+            model="qwen-plus", 
             messages=[
                 {'role': 'system', 'content': 'You are a helpful assistant.'},
                 {'role': 'user', 'content': question},
             ],
             temperature=args.temperature,
+            top_p=args.top_p,
+            presence_penalty=args.presence_penalty,
+            max_tokens=args.max_tokens,
             stream=False
         )
         return response.choices[0].message.content
     except Exception as e:
         print(f"调用 Qwen API 时出错: {e}")
         return "❌"
+
+def call_qwen25_api(question):
+    try:
+        response = qwen_client.chat.completions.create(
+            model="qwen2.5-32b-instruct", 
+            messages=[
+                {'role': 'system', 'content': 'You are a helpful assistant.'},
+                {'role': 'user', 'content': question},
+            ],
+            temperature=args.temperature,
+            top_p=args.top_p,
+            presence_penalty=args.presence_penalty,
+            max_tokens=args.max_tokens,
+            stream=False
+        )
+        return response.choices[0].message.content
+    except Exception as e:
+        print(f"调用 Qwen API 时出错: {e}")
+        return "❌"
+    
 def extract_answer_from_response(response):
     """
     从回答中提取被####包裹的答案（允许任意内容）
@@ -185,6 +216,8 @@ def test_origin(filepath):
                 response = call_mistral_api(prompt)
             elif args.model == "qwen":
                 response = call_qwen_api(prompt)
+            elif args.model == "qwen25":
+                response = call_qwen25_api(prompt)
                 
             print(f"{args.model}回答:\n{response}， \n正确答案是: {row[6]}\n")
             answer = extract_answer_from_response(response)
@@ -199,7 +232,10 @@ def test_origin(filepath):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="批量调用 DeepSeek 翻译")
     parser.add_argument('--dir', required=True, help="输入文件夹名，包含多个CSV文件")
-    parser.add_argument('--temperature', type=float, default=0.2, help="API 回答多样性，默认 0.2")
+    parser.add_argument('--temperature', type=float)
+    parser.add_argument('--top_p', type=float)
+    parser.add_argument('--presence_penalty', type=float)
+    parser.add_argument('--max_tokens', type=int)
     parser.add_argument('--model', type=str, default="deepseek", help="使用的模型，如gpt、deepseek")
     args = parser.parse_args()
     

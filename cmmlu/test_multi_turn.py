@@ -124,6 +124,19 @@ def call_qwen_api(messages):
         print(f"调用 Qwen API 时出错: {e}")
         return "❌" 
     
+def call_qwen25_api(messages):
+    try:
+        response = qwen_client.chat.completions.create(
+            model="qwen2.5-32b-instruct", 
+            messages=messages,
+            temperature=args.temperature,
+            stream=False
+        )
+        return response.choices[0].message
+    except Exception as e:
+        print(f"调用 Qwen API 时出错: {e}")
+        return "❌" 
+    
 def extract_answer_from_response(response):
     """
     从回答中提取被####包裹的答案（允许任意内容）
@@ -185,13 +198,16 @@ def test_multi_turn(input_file):
             response1 = call_mistral_api(messages)
         elif args.model == "qwen":
             response1 = call_qwen_api(messages)
+        elif args.model == "qwen25":
+            response1 = call_qwen25_api(messages)
+        
+        if hasattr(response1, "content"):
+            print(f"{args.model}回答: {response1.content} \n正确答案是: {row1[6]}\n")
+            answer1 = extract_answer_from_response(response1.content)
+            if answer1 == row1[6].strip():
+                right_count1 += 1
         else:
-            response1 = "不支持的模型"
-
-        print(f"{args.model}回答: {response1.content} \n正确答案是: {row1[6]}\n")
-        answer1 = extract_answer_from_response(response1.content)
-        if answer1 == row1[6].strip():
-            right_count1 += 1
+            continue
 
         # 第二轮
         messages.append({"role": "assistant", "content": response1.content})  # assistant角色
@@ -209,18 +225,19 @@ def test_multi_turn(input_file):
             response2 = call_mistral_api(messages)
         elif args.model == "qwen":
             response2 = call_qwen_api(messages)
-        else:
-            response2 = "不支持的模型"
+        elif args.model == "qwen25":
+            response2 = call_qwen25_api(messages)
 
-        print(f"{args.model}回答: {response2.content} \n正确答案是: {row2[6]}\n")
-        answer2 = extract_answer_from_response(response2.content)
-        if answer2 == row2[6].strip():
-            right_count2 += 1
+        if hasattr(response2, "content"):
+            print(f"{args.model}回答: {response2.content} \n正确答案是: {row2[6]}\n")
+            answer2 = extract_answer_from_response(response2.content)
+            if answer2 == row2[6].strip():
+                right_count2 += 1
 
     end_time = time.time()
     total_time = end_time - start_time
-    if question_pair_count != 0:
-        print(f"总题组数: {question_pair_count}, 第一轮正确答案数: {right_count1}, 正确率: {right_count1 / question_pair_count:.2%}，第二轮正确答案数: {right_count2}, 正确率: {right_count2 / question_pair_count:.2%}, 总耗时: {total_time:.2f}秒")
+    if question_pair_count != 0:       
+        print(f"{os.path.basename(filepath)}测试完毕！总题数: {question_pair_count}, 第一轮正确答案数: {right_count1}, 正确率: {right_count1 / question_pair_count:.2%}，第二轮正确答案数: {right_count2}, 正确率: {right_count2 / question_pair_count:.2%}, 总耗时: {total_time:.2f}秒")
     return question_pair_count, right_count1, right_count2
 
 

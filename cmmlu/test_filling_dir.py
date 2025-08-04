@@ -127,11 +127,15 @@ def extract_answer_from_response(response):
         return match.group(1).strip()
     else:
         return "无匹配"
-    
-def normalize_answer(ans):
-    # 用逗号或空格分割，然后去除空字符串，去重，排序
-    ans = ans.replace(',', '')
-    return ans.strip()
+
+def llm_judge(llm_answer, true_answer, question):
+    prompt=f"对于这道题目：{question}，正确答案是：“{true_answer}”，下面这个答案：“{llm_answer}”是否可以认为是正确的，请回复“可以”或“不可以”，不要回复任何其他内容"
+    response = call_doubao_api(prompt)
+    print(f"豆包回复：{response}")
+    if response == "可以":
+        return 1
+    else:
+        return 0
 
 def test_gap_filling_on_file(filepath):
     # 读取输入 CSV
@@ -145,8 +149,8 @@ def test_gap_filling_on_file(filepath):
             if not row:
                 continue
             question_count += 1
-            prompt = f"以下是一道填空题，请直接给出最终答案，使用两个####围起来，比如####6####，不要返回任何其他内容\n{row[0]}"
-            print(f"题目:\n{row[0]}\n")
+            prompt = f"以下是一道填空题，请直接给出最终答案，使用两个####围起来，比如####6####，不要返回任何其他内容\n{row[1]}"
+            print(f"题目:\n{row[1]}\n")
             if args.model == "deepseek":
                 response = call_deepseek_api(prompt)
             elif args.model == "gpt":
@@ -161,15 +165,15 @@ def test_gap_filling_on_file(filepath):
                 response = call_qwen_api(prompt)
             else:
                 response = "不支持的模型"
-            print(f"{args.model}回答:\n{response}， 正确答案是: {row[1]}\n")
+            print(f"{args.model}回答:\n{response}， 正确答案是: {row[2]}\n")
             answer = extract_answer_from_response(response)
-            if normalize_answer(answer) == normalize_answer(row[1]):
+            if llm_judge(answer, row[2], row[1]):
                 right_count += 1
                 print("right +1")
         end_time = time.time()  # 记录结束时间
         total_time = end_time - start_time
     if question_count != 0:
-        print(f"总题数: {question_count}, 正确答案数: {right_count}, 正确率: {right_count / question_count:.2%}, 耗时: {total_time:.2f}秒")    
+        print(f"{os.path.basename(filepath)}测试完毕！总题数: {question_count}, 正确答案数: {right_count}, 正确率: {right_count / question_count:.2%}, 耗时: {total_time:.2f}秒")    
     return question_count, right_count
 
 if __name__ == "__main__":

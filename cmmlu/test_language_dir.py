@@ -148,6 +148,8 @@ def call_qwen_api(question):
     try:
         response = qwen_client.chat.completions.create(
             model="qwen-plus", 
+            # model="qwen2.5-32b-instruct", 
+            
             messages=[
                 {'role': 'system', 'content': 'You are a helpful assistant.'},
                 {'role': 'user', 'content': question},
@@ -211,7 +213,7 @@ def test_language(filepath):
         end_time = time.time()  # 记录结束时间
         total_time = end_time - start_time
     if question_count != 0:
-        print(f"总题数: {question_count}, 正确答案数: {right_count}, 正确率: {right_count / question_count:.2%}, 耗时: {total_time:.2f}秒")    
+        print(f"{os.path.basename(filepath)}测试完毕！总题数: {question_count}, 正确答案数: {right_count}, 正确率: {right_count / question_count:.2%}, 耗时: {total_time:.2f}秒")    
     return question_count, right_count
 
 if __name__ == "__main__":

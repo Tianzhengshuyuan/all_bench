@@ -142,6 +142,23 @@ def call_qwen_api(question):
         print(f"调用 Qwen API 时出错: {e}")
         return "❌"
     
+
+def call_qwen25_api(question):
+    try:
+        response = qwen_client.chat.completions.create(
+            model="qwen2.5-32b-instruct", 
+            messages=[
+                {'role': 'system', 'content': 'You are a helpful assistant.'},
+                {'role': 'user', 'content': question},
+            ],
+            temperature=args.temperature,
+            stream=False
+        )
+        return response.choices[0].message.content
+    except Exception as e:
+        print(f"调用 Qwen API 时出错: {e}")
+        return "❌"
+    
 def extract_answer_from_response(response):
     """
     从回答中提取被####包裹的答案
@@ -185,6 +202,8 @@ def test_cot(filepath):
                 response = call_mistral_api(prompt)
             elif args.model == "qwen":
                 response = call_qwen_api(prompt)
+            elif args.model == "qwen25":
+                response = call_qwen25_api(prompt)
                 
             print(f"{args.model}回答:\n{response}， \n正确答案是: {row[6]}\n")
             answer = extract_answer_from_response(response)
@@ -192,8 +211,8 @@ def test_cot(filepath):
                 right_count += 1
         end_time = time.time()  # 记录结束时间
         total_time = end_time - start_time
-    if question_count != 0:
-        print(f"总题数: {question_count}, 正确答案数: {right_count}, 正确率: {right_count / question_count:.2%}, 耗时: {total_time:.2f}秒")    
+    if question_count != 0:        
+        print(f"{os.path.basename(filepath)}测试完毕！总题数: {question_count}, 正确答案数: {right_count}, 正确率: {right_count / question_count:.2%}, 耗时: {total_time:.2f}秒")    
     return question_count, right_count
           
 if __name__ == "__main__":
