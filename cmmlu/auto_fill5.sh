@@ -9,4 +9,8 @@
 # python sheets_auto_fill.py --log=log/test_cot_doubao.log --row=3 --col=AA
 # python sheets_auto_fill.py --log=log/test_cot_qwen.log --row=4 --col=AA
 # python sheets_auto_fill.py --log=log/test_cot_qwen25.log --row=5 --col=AA
-python sheets_auto_fill.py --log=log/test_few_shot_deepseek.log --row=1 --col=X
+# python sheets_auto_fill.py --log=log/test_deepseek_p1.0.log --row=1 --col=BR
+python sheets_auto_fill.py --log=log/test_deepseek_m100.log --row=1 --col=CP
+python sheets_auto_fill.py --log=log/test_deepseek_p0.8.log --row=1 --col=BO
+python sheets_sum.py --row=1 --col=CP
+python sheets_sum.py --row=1 --col=BO
