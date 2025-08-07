@@ -142,27 +142,237 @@
 # python sheets_sum.py --row=4 --col=CJ
 # python sheets_sum.py --row=5 --col=CJ
 # python sheets_sum.py --row=6 --col=CJ
-python sheets_sum.py --row=1 --col=CM
-python sheets_sum.py --row=2 --col=CM
-python sheets_sum.py --row=3 --col=CM
-python sheets_sum.py --row=4 --col=CM
-python sheets_sum.py --row=5 --col=CM
-python sheets_sum.py --row=6 --col=CM
-python sheets_sum.py --row=1 --col=CP
-python sheets_sum.py --row=2 --col=CP
-python sheets_sum.py --row=3 --col=CP
-python sheets_sum.py --row=4 --col=CP
-python sheets_sum.py --row=5 --col=CP
-python sheets_sum.py --row=6 --col=CP
-python sheets_sum.py --row=1 --col=CS
-python sheets_sum.py --row=2 --col=CS
-python sheets_sum.py --row=3 --col=CS
-python sheets_sum.py --row=4 --col=CS
-python sheets_sum.py --row=5 --col=CS
-python sheets_sum.py --row=6 --col=CS
-python sheets_sum.py --row=1 --col=CV
-python sheets_sum.py --row=2 --col=CV
-python sheets_sum.py --row=3 --col=CV
-python sheets_sum.py --row=4 --col=CV
-python sheets_sum.py --row=5 --col=CV
-python sheets_sum.py --row=6 --col=CV
+# python sheets_sum.py --row=1 --col=CM
+# python sheets_sum.py --row=2 --col=CM
+# python sheets_sum.py --row=3 --col=CM
+# python sheets_sum.py --row=4 --col=CM
+# python sheets_sum.py --row=5 --col=CM
+# python sheets_sum.py --row=6 --col=CM
+# python sheets_sum.py --row=1 --col=CP
+# python sheets_sum.py --row=2 --col=CP
+# python sheets_sum.py --row=3 --col=CP
+# python sheets_sum.py --row=4 --col=CP
+# python sheets_sum.py --row=5 --col=CP
+# python sheets_sum.py --row=6 --col=CP
+# python sheets_sum.py --row=1 --col=CS
+# python sheets_sum.py --row=2 --col=CS
+# python sheets_sum.py --row=3 --col=CS
+# python sheets_sum.py --row=4 --col=CS
+# python sheets_sum.py --row=5 --col=CS
+# python sheets_sum.py --row=6 --col=CS
+# python sheets_sum.py --row=1 --col=CV
+# python sheets_sum.py --row=2 --col=CV
+# python sheets_sum.py --row=3 --col=CV
+# python sheets_sum.py --row=4 --col=CV
+# python sheets_sum.py --row=5 --col=CV
+# python sheets_sum.py --row=6 --col=CV
+# python sheets_sum.py --row=1 --col=Q
+# python sheets_sum.py --row=2 --col=Q
+# python sheets_sum.py --row=3 --col=Q
+# python sheets_sum.py --row=4 --col=Q
+# python sheets_sum.py --row=5 --col=Q
+# python sheets_sum.py --row=6 --col=Q
+# python sheets_sum.py --row=1 --col=T
+# python sheets_sum.py --row=2 --col=T
+# python sheets_sum.py --row=3 --col=T
+# python sheets_sum.py --row=4 --col=T
+# python sheets_sum.py --row=5 --col=T
+# python sheets_sum.py --row=6 --col=T
+# python sheets_sum.py --row=1 --col=X
+# python sheets_sum.py --row=2 --col=X
+# python sheets_sum.py --row=3 --col=X
+# python sheets_sum.py --row=4 --col=X
+# python sheets_sum.py --row=5 --col=X
+# python sheets_sum.py --row=6 --col=X
+# python sheets_sum.py --row=1 --col=Y
+# python sheets_sum.py --row=2 --col=Y
+# python sheets_sum.py --row=3 --col=Y
+# python sheets_sum.py --row=4 --col=Y
+# python sheets_sum.py --row=5 --col=Y
+# python sheets_sum.py --row=6 --col=Y
+# python sheets_sum.py --row=1 --col=Z
+# python sheets_sum.py --row=2 --col=Z
+# python sheets_sum.py --row=3 --col=Z
+# python sheets_sum.py --row=4 --col=Z
+# python sheets_sum.py --row=5 --col=Z
+# python sheets_sum.py --row=6 --col=Z
+# python sheets_sum.py --row=1 --col=AA
+# python sheets_sum.py --row=2 --col=AA
+# python sheets_sum.py --row=3 --col=AA
+# python sheets_sum.py --row=4 --col=AA
+# python sheets_sum.py --row=5 --col=AA
+# python sheets_sum.py --row=6 --col=AA
+# python sheets_sum.py --row=1 --col=AB
+# python sheets_sum.py --row=2 --col=AB
+# python sheets_sum.py --row=3 --col=AB
+# python sheets_sum.py --row=4 --col=AB
+# python sheets_sum.py --row=5 --col=AB
+# python sheets_sum.py --row=6 --col=AB
+# python sheets_sum.py --row=1 --col=AC
+# python sheets_sum.py --row=2 --col=AC
+# python sheets_sum.py --row=3 --col=AC
+# python sheets_sum.py --row=4 --col=AC
+# python sheets_sum.py --row=5 --col=AC
+# python sheets_sum.py --row=6 --col=AC
+# python sheets_sum.py --row=1 --col=AF
+# python sheets_sum.py --row=2 --col=AF
+# python sheets_sum.py --row=3 --col=AF
+# python sheets_sum.py --row=4 --col=AF
+# python sheets_sum.py --row=5 --col=AF
+# python sheets_sum.py --row=6 --col=AF
+# python sheets_sum.py --row=1 --col=AG
+# python sheets_sum.py --row=2 --col=AG
+# python sheets_sum.py --row=3 --col=AG
+# python sheets_sum.py --row=4 --col=AG
+# python sheets_sum.py --row=5 --col=AG
+# python sheets_sum.py --row=6 --col=AG
+# python sheets_sum.py --row=1 --col=AH
+# python sheets_sum.py --row=2 --col=AH
+# python sheets_sum.py --row=3 --col=AH
+# python sheets_sum.py --row=4 --col=AH
+# python sheets_sum.py --row=5 --col=AH
+# python sheets_sum.py --row=6 --col=AH
+# python sheets_sum.py --row=1 --col=AI
+# python sheets_sum.py --row=2 --col=AI
+# python sheets_sum.py --row=3 --col=AI
+# python sheets_sum.py --row=4 --col=AI
+# python sheets_sum.py --row=5 --col=AI
+# python sheets_sum.py --row=6 --col=AI
+# python sheets_sum.py --row=1 --col=AJ
+# python sheets_sum.py --row=2 --col=AJ
+python sheets_sum.py --row=3 --col=AJ
+# python sheets_sum.py --row=4 --col=AJ
+# python sheets_sum.py --row=5 --col=AJ
+# python sheets_sum.py --row=6 --col=AJ
+# python sheets_sum.py --row=1 --col=AM
+# python sheets_sum.py --row=2 --col=AM
+# python sheets_sum.py --row=3 --col=AM
+# python sheets_sum.py --row=4 --col=AM
+# python sheets_sum.py --row=5 --col=AM
+# python sheets_sum.py --row=6 --col=AM
+# python sheets_sum.py --row=1 --col=AP
+# python sheets_sum.py --row=2 --col=AP
+# python sheets_sum.py --row=3 --col=AP
+# python sheets_sum.py --row=4 --col=AP
+# python sheets_sum.py --row=5 --col=AP
+# python sheets_sum.py --row=6 --col=AP
+# python sheets_sum.py --row=1 --col=AS
+# python sheets_sum.py --row=2 --col=AS
+# python sheets_sum.py --row=3 --col=AS
+# python sheets_sum.py --row=4 --col=AS
+python sheets_sum.py --row=5 --col=AS
+# python sheets_sum.py --row=6 --col=AS
+# python sheets_sum.py --row=1 --col=AV
+# python sheets_sum.py --row=2 --col=AV
+# python sheets_sum.py --row=3 --col=AV
+# python sheets_sum.py --row=4 --col=AV
+# python sheets_sum.py --row=5 --col=AV
+# python sheets_sum.py --row=6 --col=AV
+# python sheets_sum.py --row=1 --col=AY
+# python sheets_sum.py --row=2 --col=AY
+# python sheets_sum.py --row=3 --col=AY
+# python sheets_sum.py --row=4 --col=AY
+# python sheets_sum.py --row=5 --col=AY
+# python sheets_sum.py --row=6 --col=AY
+# python sheets_sum.py --row=1 --col=BB
+# python sheets_sum.py --row=2 --col=BB
+# python sheets_sum.py --row=3 --col=BB
+# python sheets_sum.py --row=4 --col=BB
+# python sheets_sum.py --row=5 --col=BB
+# python sheets_sum.py --row=6 --col=BB
+# python sheets_sum.py --row=1 --col=BE
+# python sheets_sum.py --row=2 --col=BE
+# python sheets_sum.py --row=3 --col=BE
+# python sheets_sum.py --row=4 --col=BE
+# python sheets_sum.py --row=5 --col=BE
+# python sheets_sum.py --row=6 --col=BE
+# python sheets_sum.py --row=1 --col=BH
+# python sheets_sum.py --row=2 --col=BH
+# python sheets_sum.py --row=3 --col=BH
+# python sheets_sum.py --row=4 --col=BH
+# python sheets_sum.py --row=5 --col=BH
+# python sheets_sum.py --row=6 --col=BH
+# python sheets_sum.py --row=1 --col=BK
+# python sheets_sum.py --row=2 --col=BK
+# python sheets_sum.py --row=3 --col=BK
+# python sheets_sum.py --row=4 --col=BK
+# python sheets_sum.py --row=5 --col=BK
+# python sheets_sum.py --row=6 --col=BK
+# python sheets_sum.py --row=1 --col=BN
+# python sheets_sum.py --row=2 --col=BN
+# python sheets_sum.py --row=3 --col=BN
+# python sheets_sum.py --row=4 --col=BN
+# python sheets_sum.py --row=5 --col=BN
+# python sheets_sum.py --row=6 --col=BN
+# python sheets_sum.py --row=1 --col=BQ
+# python sheets_sum.py --row=2 --col=BQ
+# python sheets_sum.py --row=3 --col=BQ
+# python sheets_sum.py --row=4 --col=BQ
+# python sheets_sum.py --row=5 --col=BQ
+# python sheets_sum.py --row=6 --col=BQ
+# python sheets_sum.py --row=1 --col=BT
+# python sheets_sum.py --row=2 --col=BT
+# python sheets_sum.py --row=3 --col=BT
+# python sheets_sum.py --row=4 --col=BT
+# python sheets_sum.py --row=5 --col=BT
+# python sheets_sum.py --row=6 --col=BT
+# python sheets_sum.py --row=1 --col=BW
+# python sheets_sum.py --row=2 --col=BW
+# python sheets_sum.py --row=3 --col=BW
+# python sheets_sum.py --row=4 --col=BW
+# python sheets_sum.py --row=5 --col=BW
+# python sheets_sum.py --row=6 --col=BW
+# python sheets_sum.py --row=1 --col=BZ
+# python sheets_sum.py --row=2 --col=BZ
+# python sheets_sum.py --row=3 --col=BZ
+# python sheets_sum.py --row=4 --col=BZ
+# python sheets_sum.py --row=5 --col=BZ
+# python sheets_sum.py --row=6 --col=BZ
+# python sheets_sum.py --row=1 --col=CC
+# python sheets_sum.py --row=2 --col=CC
+# python sheets_sum.py --row=3 --col=CC
+# python sheets_sum.py --row=4 --col=CC
+# python sheets_sum.py --row=5 --col=CC
+# python sheets_sum.py --row=6 --col=CC
+# python sheets_sum.py --row=1 --col=CF
+# python sheets_sum.py --row=2 --col=CF
+# python sheets_sum.py --row=3 --col=CF
+# python sheets_sum.py --row=4 --col=CF
+# python sheets_sum.py --row=5 --col=CF
+# python sheets_sum.py --row=6 --col=CF
+# python sheets_sum.py --row=1 --col=CI
+# python sheets_sum.py --row=2 --col=CI
+# python sheets_sum.py --row=3 --col=CI
+# python sheets_sum.py --row=4 --col=CI
+# python sheets_sum.py --row=5 --col=CI
+# python sheets_sum.py --row=6 --col=CI
+# python sheets_sum.py --row=1 --col=CL
+# python sheets_sum.py --row=2 --col=CL
+# python sheets_sum.py --row=3 --col=CL
+# python sheets_sum.py --row=4 --col=CL
+# python sheets_sum.py --row=5 --col=CL
+# python sheets_sum.py --row=6 --col=CL
+# python sheets_sum.py --row=1 --col=CO
+# python sheets_sum.py --row=2 --col=CO
+# python sheets_sum.py --row=3 --col=CO
+# python sheets_sum.py --row=4 --col=CO
+# python sheets_sum.py --row=5 --col=CO
+# python sheets_sum.py --row=6 --col=CO
+# python sheets_sum.py --row=1 --col=CR
+# python sheets_sum.py --row=2 --col=CR
+# python sheets_sum.py --row=3 --col=CR
+# python sheets_sum.py --row=4 --col=CR
+# python sheets_sum.py --row=5 --col=CR
+# python sheets_sum.py --row=6 --col=CR
+# python sheets_sum.py --row=1 --col=CU
+python sheets_sum.py --row=2 --col=CU
+# python sheets_sum.py --row=3 --col=CU
+# python sheets_sum.py --row=4 --col=CU
+# python sheets_sum.py --row=5 --col=CU
+# python sheets_sum.py --row=6 --col=CU
+python sheets_sum.py --row=1 --col=CX
+# python sheets_sum.py --row=2 --col=CX
+# python sheets_sum.py --row=3 --col=CX
+# python sheets_sum.py --row=4 --col=CX
+# python sheets_sum.py --row=5 --col=CX
+# python sheets_sum.py --row=6 --col=CX

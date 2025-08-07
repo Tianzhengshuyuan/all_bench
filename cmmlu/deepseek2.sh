@@ -6,5 +6,5 @@
 # echo "deepseek m100测试完成"
 # python test_cot_dir.py --dir=./test --model=deepseek > log/test_cot_deepseek.log
 # echo "deepseek cot 测试完成"
-python test_origin_dir.py --dir=./test --model=deepseek --top_p=1.0 > log/test_deepseek_p1.0.log
-echo "deepseek p1.0 测试完成"
+python test_origin_dir.py --dir=./test --model=deepseek --top_p=0.8 > log/test_deepseek_p0.8.log
+echo "deepseek p0.8 测试完成"
