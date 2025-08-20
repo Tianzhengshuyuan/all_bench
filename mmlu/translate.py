@@ -158,11 +158,11 @@ def translate(args):
                 continue
             # 拼接待翻译文本
             text = (
-                f"{row[0]}\n"
-                f"A: {row[1]}\n"
-                f"B: {row[2]}\n"
-                f"C: {row[3]}\n"
-                f"D: {row[4]}"
+                f"{row[1]}\n"
+                f"A: {row[2]}\n"
+                f"B: {row[3]}\n"
+                f"C: {row[4]}\n"
+                f"D: {row[5]}"
             )
 
             prompt = f"Please translate the following content into {args.language}. Do not translate the four options A, B, C, D; keep them in English. Only translate, do not return anything else: \n{text}"
@@ -184,7 +184,8 @@ def translate(args):
             if parsed is None:
                 print(f"解析失败，跳过该行\n")
                 continue
-            parsed.append(row[5])   # 答案不用翻译
+            parsed.append(row[6])   # 答案不用翻译
+            parsed.insert(0, row[0])  # 保留原问题index
             success_count += 1
             writer.writerow(parsed)
     end_time = time.time()  # 记录结束时间

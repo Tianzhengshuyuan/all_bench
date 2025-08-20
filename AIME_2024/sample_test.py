@@ -15,6 +15,7 @@ kimi_client = OpenAI(api_key="sk-ODuizMlUC22phanBhvYz6dBjx2yrz7vhKhcjKnoIrYssThQ
 doubao_client = Ark(api_key="196b33be-8abb-4af3-9fba-6e266b2dd942")
 mistral_client = Mistral(api_key="zWUDyBGqEIdJAtJoxnsr6ACcLTgz1auH")
 qwen_client = OpenAI(api_key="sk-341becd932d743f2a750495a0f9f3ede", base_url="https://dashscope.aliyuncs.com/compatible-mode/v1")
+gemini_client = OpenAI(api_key="AIzaSyB1Kwa7mos2CuVQmvOZYtQd8ql4AljYx_g", base_url="https://generativelanguage.googleapis.com/v1beta/openai/")
 
 PROMPT_TEMPLATES = {
     "english": {
@@ -111,7 +112,7 @@ def call_doubao_api(messages, args):
         print(f"调用 豆包 API 时出错: {e}")
         return "API 调用失败"
 
-def call_deepseek_api(messages, args):
+def call_deepseekv3_api(messages, args):
     try:
         response = deepseek_client.chat.completions.create(
             model="deepseek-chat",
@@ -143,6 +144,23 @@ def call_qwen_api(messages, args):
         print(f"调用 Qwen API 时出错: {e}")
         return "API 调用失败"
     
+def call_qwen3_api(messages, args):
+    try:
+        response = qwen_client.chat.completions.create(
+            model="qwen3-30b-a3b",
+            messages=messages,
+            temperature=args.temperature,
+            top_p=args.top_p,
+            presence_penalty=args.presence_penalty,
+            max_tokens=args.max_tokens,
+            stream=False,
+            extra_body={"enable_thinking": False}
+        )
+        return response.choices[0].message.content
+    except Exception as e:
+        print(f"调用 Qwen3 API 时出错: {e}")
+        return "API 调用失败"
+    
 def call_qwen25_api(messages, args):
     try:
         response = qwen_client.chat.completions.create(
@@ -159,7 +177,23 @@ def call_qwen25_api(messages, args):
         print(f"调用 Qwen2.5 API 时出错: {e}")
         return "API 调用失败"
     
-def call_kimi_api(messages, args):
+def call_kimik2_api(messages, args):
+    try:
+        response = kimi_client.chat.completions.create(
+            model="kimi-k2-0711-preview",
+            messages=messages,
+            temperature=args.temperature,
+            top_p=args.top_p,
+            presence_penalty=args.presence_penalty,
+            max_tokens=args.max_tokens,
+            stream=False
+        )
+        return response.choices[0].message.content
+    except Exception as e:
+        print(f"调用 kimi API 时出错: {e}")
+        return "API 调用失败"
+    
+def call_kimiv1_api(messages, args):
     try:
         response = kimi_client.chat.completions.create(
             model="moonshot-v1-8k",
@@ -175,17 +209,118 @@ def call_kimi_api(messages, args):
         print(f"调用 kimi API 时出错: {e}")
         return "API 调用失败"
     
+def call_mistralS_api(messages, args):
+    try:
+        response = mistral_client.chat.complete(
+            model="mistral-small-latest",
+            messages=messages,
+            temperature=args.temperature,
+            top_p=args.top_p,
+            presence_penalty=args.presence_penalty,
+            max_tokens=args.max_tokens,
+            stream=False
+        )
+        return response.choices[0].message.content
+    except Exception as e:
+        print(f"调用 Mistral API 时出错: {e}")
+        return "API 调用失败"
+    
+def call_mistralL_api(messages, args):
+    try:
+        response = mistral_client.chat.complete(
+            model="mistral-large-latest",
+            messages=messages,
+            temperature=args.temperature,
+            top_p=args.top_p,
+            presence_penalty=args.presence_penalty,
+            max_tokens=args.max_tokens,
+            stream=False
+        )
+        return response.choices[0].message.content
+    except Exception as e:
+        print(f"调用 Mistral API 时出错: {e}")
+        return "API 调用失败"
+        
+def call_gpt35_api(messages, args):
+    os.environ["HTTP_PROXY"] = "http://localhost:7890"
+    os.environ["HTTPS_PROXY"] = "http://localhost:7890"
+    try:
+        openai.api_key = os.getenv("OPENAI_API_KEY")
+        response = openai.chat.completions.create(
+            model="gpt-3.5-turbo",
+            messages=messages,
+            temperature=args.temperature,
+            top_p=args.top_p,
+            presence_penalty=args.presence_penalty,
+            max_tokens=args.max_tokens,
+            stream=False
+        )
+        return response.choices[0].message.content
+    except Exception as e:
+        print(f"调用 gpt API 时出错: {e}")
+        return "API 调用失败"
+    
+def call_gpt41_api(messages, args):
+    os.environ["HTTP_PROXY"] = "http://localhost:7890"
+    os.environ["HTTPS_PROXY"] = "http://localhost:7890"
+    try:
+        openai.api_key = os.getenv("OPENAI_API_KEY")
+        response = openai.chat.completions.create(
+            model="gpt-4.1",
+            messages=messages,
+            temperature=args.temperature,
+            top_p=args.top_p,
+            presence_penalty=args.presence_penalty,
+            max_tokens=args.max_tokens,
+            stream=False
+        )
+        print(response)
+        return response.choices[0].message.content
+    except Exception as e:
+        print(f"调用 gpt API 时出错: {e}")
+        return "API 调用失败"
+    
+def call_gemini_api(messages, args):
+    try:
+        response = gemini_client.chat.completions.create(
+            model="gemini-2.0-flash-lite",
+            messages=messages,
+            temperature=args.temperature,
+            top_p=args.top_p,
+            presence_penalty=args.presence_penalty,
+            max_tokens=args.max_tokens,
+            stream=False
+        )
+        return response.choices[0].message.content
+    except Exception as e:
+        print(f"调用 Gemini API 时出错: {e}")
+        return "API 调用失败"
+    
 def call_LLM_api(model, messages, args):
     if model == "doubao":
         return call_doubao_api(messages, args)
-    elif model == "deepseek":
-        return call_deepseek_api(messages, args)    
-    elif model == "kimi":
-        return call_kimi_api(messages, args)
+    elif model == "deepseekv3":
+        return call_deepseekv3_api(messages, args)    
+    elif model == "kimik2":
+        return call_kimik2_api(messages, args)
+    elif model == "kimiv1":
+        return call_kimiv1_api(messages, args)
+    elif model == "mistralS":
+        return call_mistralS_api(messages, args)    
+    elif model == "mistralL":
+        return call_mistralL_api(messages, args)
     elif model == "qwen":
         return call_qwen_api(messages, args)
     elif model == "qwen25": 
         return call_qwen25_api(messages, args)
+    elif model == "qwen3":
+        return call_qwen3_api(messages, args)
+    elif model == "gpt35":
+        return call_gpt35_api(messages, args)
+    elif model == "gpt41":
+        return call_gpt41_api(messages, args)
+    elif model == "gemini": 
+        return call_gemini_api(messages, args)
     
 # == 筛选文件 ==
 def select_csv_file(lang_str, question_type, question_tran, csv_dir):
@@ -368,30 +503,51 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--model", type=str, default="doubao")
     parser.add_argument("--csv_dir", type=str, default="csv")
+    parser.add_argument("--pkl_path", type=str, default="related_work_data.pkl")
     parser.add_argument("--temperature", type=float, default=1.0)
     parser.add_argument("--top_p", type=float, default=1.0)
     parser.add_argument("--presence_penalty", type=float, default=0.0)
     parser.add_argument("--max_tokens", type=int, default=1024)
+    parser.add_argument("--start", type=int, default=0, help="从第几个config开始测试，默认从头开始")
+    parser.add_argument("--end", type=int, default=None)
     args = parser.parse_args()
 
     # == 读取pkl文件 ==
-    with open('sample_data_v1.2.pkl', 'rb') as f:
+    with open(args.pkl_path, 'rb') as f:
         data = pickle.load(f)
     print("PKL内容如下：")
     print(data)
     # == 主流程 ==
-    for key, value in enumerate(tqdm(data, desc="采样测试进度")):
-        print(f"处理key: {key}, 配置: {value}")
+    start_index = args.start
+    end_index = args.end if args.end is not None else len(data)
+    print(f"将从第 {start_index} 个配置开始测试。")
+    for key, value in enumerate(tqdm(data[start_index:end_index], desc="采样测试进度", initial=start_index, total=len(data))):
+        real_key = key + start_index
+        print(f"处理key: {real_key}, 配置: {value}")
 
         # 根据value设置参数
         args.temperature = value.get('Temperature', args.temperature)
         args.top_p = value.get('top_p', args.top_p)
         args.presence_penalty = value.get('presence_penalty', args.presence_penalty)
         args.max_tokens = value.get('max_tokens', args.max_tokens)
-        if args.model == "kimi" and args.temperature > 1.0:
+        
+        if "kimi" in args.model and args.temperature > 1.0:
             args.temperature = 1.0
-        if (args.model == "qwen" or args.model == "qwen25") and args.temperature > 1.9:
+        elif "qwen" in args.model and args.temperature > 1.9:
             args.temperature = 1.9
+        elif "mistral" in args.model:
+            if args.temperature > 1.5:
+                args.temperature = 1.5
+            elif args.temperature == 0.0:
+                args.top_p = 1.0
+                
+        if args.model == "qwen3" and args.max_tokens > 16384:
+            args.max_tokens = 16384
+        elif args.model == "qwen25" and args.max_tokens > 8192:
+            args.max_tokens = 8192
+        elif "deepseek" in args.model and args.max_tokens > 8192:
+            args.max_tokens = 8192
+        
         language = language_map.get(value['language'], None)
         question_type = value['question_type']
         question_tran = value['question_tran']

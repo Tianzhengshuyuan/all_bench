@@ -1,0 +1,13 @@
+34,"Un certain groupe (G, 0) est connu comme étant abélien. Alors laquelle des affirmations suivantes est VRAIE pour G ?",g = g^-1 pour tout g dans G,g = g^2 pour tout g dans G,"(g o h)^2 = g^2 o h^2 pour tout g,h dans G",G est d'ordre fini,C
+31,"Énoncé 1 | Si H est un sous-groupe d'un groupe G et si a appartient à G, alors aH = Ha.  
+Énoncé 2 | Si H est un sous-groupe normal de G et si a appartient à G, alors ah = ha pour tout h de H.","Vrai, Vrai","Faux, Faux","Vrai, Faux","Faux, Vrai",B
+51,"Énoncé 1 | Tout groupe résoluble est d'ordre une puissance d'un nombre premier.  
+Énoncé 2 | Tout groupe d'ordre une puissance d'un nombre premier est résoluble.","Vrai, Vrai","Faux, Faux","Vrai, Faux","Faux, Vrai",D
+93,Laquelle des affirmations suivantes est vraie ?,Every equivalence relation is a partial-ordering relation.,"Number of relations form A = {x, y, z} to B= (1, 2), is 64.",Empty relation _ is reflexive,Properties of a relation being symmetric and being un-symmetric are negative of each other.,B
+3,"Trouvez toutes les racines dans le corps fini indiqué du polynôme donné, dont les coefficients appartiennent à ce corps.  
+x^5 + 3x^3 + x^2 + 2x dans Z_5",0,1,"0,1","0,4",D
+60,"Énoncé 1 | Si H et K sont des sous-groupes de G et si l'un des H ou K est un sous-groupe normal de G, alors HK est un sous-groupe de G. Énoncé 2 | Tous les groupes d'ordre p^2 où p est un nombre premier sont abéliens.","True, True","False, False","True, False","False, True",A
+92,Trouvez toutes les classes latérales du sous-groupe 4Z de 2Z.,4Z,"4Z, 2 + 4Z",2Z,Z,B
+71,"(Z,*) est un groupe avec a*b = a+b+1 pour tous a, b dans Z. L'inverse de a est",0,-2,a-2,(2+a)*-1,D
+27,Énoncé 1 | Tout groupe d'ordre 42 possède un sous-groupe normal d'ordre 7. Énoncé 2 | Tout groupe d'ordre 42 possède un sous-groupe normal d'ordre 8.,"True, True","False, False","True, False","False, True",C
+55,Déterminer le degré de l'extension de corps Q(sqrt(2)) sur Q.,0,2,1,3,B

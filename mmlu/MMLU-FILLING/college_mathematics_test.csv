@@ -1,0 +1,10 @@
+42,"A group G in which (ab)^2 = a^2b^2 for all a, b in G is necessarily",finite,cyclic,of order two,abelian,"一个群 G，若对所有 a, b ∈ G 都满足 (ab)^2 = a^2b^2，则该群一定是",有限,循环,二阶,阿贝尔,D
+15,Sofia and Tess will each randomly choose one of the 10 integers from 1 to 10. What is the probability that neither integer chosen will be the square of the other?,0.64,0.72,0.81,0.95,索菲亚和泰丝将各自从1到10这10个整数中随机选择一个。两个所选数字中 neither 是对方的平方的概率是多少？,0.64,0.72,0.81,0.95,D
+90,The map x -> axa^2 of a group G into itself is a homomorphism if and only if,G is abelian,G = {e},a^3 = e,a^2 = a,映射 x → axa² 是群 G 到其自身的同态，当且仅当,G 是阿贝尔群,G = {e},a³ = e,a² = a,C
+96,"If U and V are 3-dimensional subspaces of R^5, what are the possible dimensions of U ∩ V?",0,1,0 or 1,"1, 2, or 3",若 U 和 V 是 R^5 的三维子空间，那么 U ∩ V 的可能维数是多少？,0,1,0 或 1,1、2 或 3,D
+54,What is the area of an equilateral triangle whose inscribed circle has radius 2?,12,16,12*sqrt(3),16*sqrt(3),一个内切圆半径为2的等边三角形的面积是多少？,12,16,12*sqrt(3),16*sqrt(3),C
+58,"If V and W are 2-dimensional subspaces of R^4 ,what are the possible dimensions of the subspace V intersect W?",1 only,2 only,0 and 1 only,"0, 1, and 2 only",若V和W是R^4的二维子空间，那么子空间V交W的可能维数是多少？,仅1,仅2,仅0和1,仅0、1和2,D
+30,What is the largest order of an element in the group of permutations of 5 objects?,5,6,12,15,5个对象的置换群中元素的最大阶数是多少？,5,6,12,15,B
+5,"There are 25 suitcases, 5 of which are damaged. Three suitcases are selected at random. What is the probability that exactly 2 are damaged?",2/69,1/30,2/23,12/125,这里有25个行李箱，其中5个是损坏的。随机选择3个行李箱。求恰好有2个损坏的行李箱的概率。,2/69,1/30,2/23,12/125,C
+10,Which of the following is true?,Every compact space is complete,Every complete space is compact,Neither (a) nor (b)., Both (a) and (b).,以下哪一项是正确的？,每个紧致空间都是完备的,每个完备空间都是紧致的,(a) 和 (b) 都不对,(a) 和 (b) 都对,A
+43,"If f is a continuously differentiable real-valued function defined on the open interval (-1, 4) such that f(3) = 5 and f'(x) ≥ -1 for all x, what is the greatest possible value of f(0)?",3,4,5,8,"若 f 是定义在开区间 (-1, 4) 上的一个连续可微的实值函数，满足 f(3) = 5 且对所有 x 都有 f'(x) ≥ -1，则 f(0) 的最大可能值是多少？",3,4,5,8,D

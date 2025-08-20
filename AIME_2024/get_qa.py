@@ -16,7 +16,7 @@ def get_output_filename(input_name, language):
     lang = language.strip().replace(" ", "_").lower()
     return f"{base}_{lang}.csv"
     
-def translate(args):
+def select_and_merge(args):
     output_filename = get_output_filename(args.input, "english")
 
     # 读取输入 CSV
@@ -29,8 +29,8 @@ def translate(args):
             writer.writerow([row[1], row[3]])
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="批量调用 DeepSeek 翻译")
+    parser = argparse.ArgumentParser()
     parser.add_argument('--input', required=True, help="输入 CSV 文件名")
     args = parser.parse_args()
 
-    translate(args)
+    select_and_merge(args)

@@ -1,0 +1,23 @@
+116,"Какая из приведенных формул логики предикатов лучше всего символизирует следующее предложение?
+Либо импорт мяса Англией является достаточным условием для субсидирования сельского хозяйства во Франции, либо продвижение прав человека в Китае является необходимым условием для поставок алмазов из Южной Африки.",(E ⊃ F) ∨ (S ⊃ C),(F ⊃ E) ∨ (C ⊃ S),(E ⊃ F) ∨ (C ⊃ S),(F ⊃ E) ∨ (S ⊃ C),A
+50,"Выберите наиболее точный английский перевод данных аргументов в логике предикатов.
+Dh ⊃ ~Pt
+(∀x)Px ∨ (∀x)Mx
+~Mb	/ ~Dh","If my headache is dualist state, then your tickle is a physical state. Either everything is physical or everything is mental. But my broken toe is not a mental state. So my headache is not a dualist state.","If my headache is dualist state, then your tickle is not a physical state. Either everything is physical or everything is mental. But my broken toe is not a mental state. So my headache is not a dualist state.","If my headache is dualist state, then your tickle is not a physical state. If everything is physical then everything is mental. But my broken toe is not a mental state. So my headache is not a dualist state.","If my headache is dualist state, then your tickle is not a physical state. Everything is either physical or mental. But my broken toe is not a mental state. So my headache is not a dualist state.",B
+120,"Определите вывод следующего аргумента. Нам не следует отменять смертную казнь. Если мы это сделаем, тюрьмы станут более переполненными. Если тюрьмы станут более переполненными, тогда нам придется строить больше тюрем. И мы не хотим строить больше тюрем.",We shouldn't abolish capital punishment.,"If we do, prisons will become more crowded.","If prisons become more crowded, then we will have to build more prisons.",We will have to build more prisons.,A
+106,Выберите лучший перевод на язык логики предикатов: Некоторые люди счастливы.,(∃x)(Fx • Lx),Fl,Lf,(∀x)(Fx • Lx),A
+126,Выберите наилучший перевод на язык логики предикатов. Все дети ходят в какую-то школу. (Cx: x является ребенком; Sx: x является школой; Gxy: x ходит в y),(∀x)(∃y)[(Cx • Sy) • Gxy),(∀x)[Sx ⊃ (∃y)(Cy • Gxy)],(∀x)[Cx ⊃ (∃y)(Sy • Gxy)],(∀x)[Sx • (∃y)(Cy • Gxy)],C
+3,"Выберите наилучшую английскую интерпретацию данного предложения, используя следующий ключ перевода: Ax: x является квартирой Hx: x является домом Lx: x является большим Bxy: x больше, чем y (∃x)[(Ax • Lx) • (∃y)(Hy • Bxy)]",Some large houses are bigger than some apartments.,Some houses are bigger than all large apartments.,Some large apartments are bigger than some houses.,Some houses are bigger thatn some large apartments.,C
+10,"Какая из приведенных формул логики предикатов лучше всего символизирует следующее предложение?
+Все любят Рэймонда, или нет.",L,~L,L • ~L,L ∨ ~L,D
+125,Выберите наилучший перевод на язык логики предикатов. Некоторый генеральный директор богаче всех. (Cx: x является генеральным директором; Px: x является человеком; Wxy: x богаче y),(∃x)[Cx • (∀y)(Py • Wxy)],(∃x)[Cx ⊃ (∀y)(Py ⊃ Wxy)],(∃x)[Cx • (∀y)(Py ⊃ Wxy)],(∀x)[Px ⊃ (∃y)(Cy ⊃ Wxy)],C
+85,Используйте следующие обозначения для перевода данной формулы логики предикатов (PL) на естественный английский язык.,Марианна читает книгу о Перси Джексоне.,Иззи играет в Minecraft.,Эмили прекращает работать.,"Рассел готовит ужин.
+E: Эшли заглядывает.
+
+(A ∨ ~E) ≡ (D • ~B)
+A: Либо Марианна читает книгу о Перси Джексоне, либо Эшли не заглядывает, является необходимым условием для того, чтобы Рассел готовил ужин и Иззи не играл в Minecraft.
+B: Либо Марианна читает книгу о Перси Джексоне, либо Эшли не заглядывает, является необходимым и достаточным условием для того, чтобы Рассел готовил ужин и Иззи играл в Minecraft.
+C: Марианна читает книгу о Перси Джексоне, если только Эшли не заглядывает, если и только если Рассел готовит ужин и Иззи не играет.
+D: Либо Марианна читает книгу о Перси Джексоне, либо Эшли не заглядывает, имеет место тогда и только тогда, когда Рассел готовит ужин и Иззи не играет в Minecraft.",D
+44,"Постройте полную таблицу истинности для следующих пар высказываний. Затем, используя таблицы истинности, определите, являются ли утверждения логически эквивалентными или противоречивыми. Если ни то, ни другое, определите, являются ли они совместными или несовместными. Обоснуйте свои ответы.
+~O ⊃ P и O ∨ P",Логически эквивалентны,Противоречивы,"Ни логически эквивалентны, ни противоречивы, но совместны",Несовместны,A

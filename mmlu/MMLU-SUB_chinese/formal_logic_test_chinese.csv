@@ -1,0 +1,28 @@
+116,"下面哪个给出的PL公式是对以下句子的最佳符号化表达？
+要么英国进口牛肉是法国补贴农业的充分条件，要么中国促进人权是南非供应钻石的必要条件。",(E ⊃ F) ∨ (S ⊃ C),(F ⊃ E) ∨ (C ⊃ S),(E ⊃ F) ∨ (C ⊃ S),(F ⊃ E) ∨ (S ⊃ C),A
+50,"请选择谓词逻辑中给定论证的最佳英文解释。
+Dh ⊃ ~Pt
+(∀x)Px ∨ (∀x)Mx
+~Mb	/ ~Dh",如果我的头痛是二元论状态，那么你的痒是物理状态。要么一切都是物理的，要么一切都是心理的。但是我的折断的脚趾不是心理状态。因此，我的头痛不是二元论状态。,如果我的头痛是二元论状态，那么你的痒不是物理状态。要么一切都是物理的，要么一切都是心理的。但是我的折断的脚趾不是心理状态。因此，我的头痛不是二元论状态。,如果我的头痛是二元论状态，那么你的痒不是物理状态。如果一切都是物理的，那么一切都是心理的。但是我的折断的脚趾不是心理状态。因此，我的头痛不是二元论状态。,如果我的头痛是二元论状态，那么你的痒不是物理状态。一切都是物理的或心理的。但是我的折断的脚趾不是心理状态。因此，我的头痛不是二元论状态。,B
+120,请识别以下论证的结论。我们不应该废除死刑。如果我们废除的话，监狱将会变得更加拥挤。如果监狱变得更加拥挤，那么我们就必须建造更多的监狱。而我们不想建造更多的监狱。,我们不应该废除死刑。,如果我们废除的话，监狱将会变得更加拥挤。,如果监狱变得更加拥挤，那么我们就必须建造更多的监狱。,我们将必须建造更多的监狱。,A
+106,选择最合适的谓词逻辑翻译：有些人很幸运。,(∃x)(Fx • Lx),Fl,Lf,(∀x)(Fx • Lx),A
+126,请选择最合适的谓词逻辑翻译。所有儿童都去某所学校。（Cx：x 是一个儿童；Sx：x 是一所学校；Gxy：x 去 y）,(∀x)(∃y)[(Cx • Sy) • Gxy),(∀x)[Sx ⊃ (∃y)(Cy • Gxy)],(∀x)[Cx ⊃ (∃y)(Sy • Gxy)],(∀x)[Sx • (∃y)(Cy • Gxy)],C
+3,"选择给出命题的最佳英文解释，使用以下翻译关键：
+Ax：x 是一套公寓
+Hx：x 是一所房子
+Lx：x 是大的
+Bxy：x 比 y 大
+(∃x)[(Ax • Lx) • (∃y)(Hy • Bxy)]",Some large houses are bigger than some apartments.,Some houses are bigger than all large apartments.,Some large apartments are bigger than some houses.,Some houses are bigger thatn some large apartments.,C
+10,"在给出的PL公式中，哪一个最能符号化以下句子？
+每个人都爱雷蒙德，或者不爱。",L,~L,L • ~L,L ∨ ~L,D
+125,选择谓词逻辑的最佳翻译：有些CEO比所有人都更富有。（Cx：x是一个CEO；Px：x是一个人；Wxy：x比y更富有）,(∃x)[Cx • (∀y)(Py • Wxy)],(∃x)[Cx ⊃ (∀y)(Py ⊃ Wxy)],(∃x)[Cx • (∀y)(Py ⊃ Wxy)],(∀x)[Px ⊃ (∃y)(Cy ⊃ Wxy)],C
+85,请使用以下符号将给定的命题逻辑公式翻译成自然的英文句子：,Marina读一本Percy Jackson的书。,Izzy玩Minecraft。,Emily停止工作。,"Russell做晚饭。
+E：Ashleigh顺道拜访。
+
+(A ∨ ~E) ≡ (D • ~B)
+A：Marina读一本Percy Jackson的书或Ashleigh没有顺道拜访，这是Russell做晚饭并且Izzy没有玩Minecraft的必要条件。
+B：Marina读一本Percy Jackson的书或Ashleigh没有顺道拜访，这是Russell做晚饭并且Izzy玩Minecraft的必要且充分条件。
+C：如果且仅如果Russell做晚饭并且Izzy不玩Minecraft，那么Marina读Percy Jackson的书或Ashleigh顺道拜访。
+D：当且仅当Russell做晚饭并且Izzy不玩Minecraft时，Marina读Percy Jackson的书或者Ashleigh没有顺道拜访。",D
+44,"为以下命题对构造完整的真值表。然后，通过真值表判断这些命题是逻辑等价还是矛盾。如果不是这样，请判断它们是否是一致或不一致的。请说明理由：
+~O ⊃ P 和 O ∨ P",逻辑等价,矛盾,既不逻辑等价也不矛盾，但是一致,不一致,A

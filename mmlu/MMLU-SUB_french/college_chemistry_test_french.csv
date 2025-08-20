@@ -1,0 +1,10 @@
+3,Quel est le nombre maximum de phases pouvant être en équilibre les unes avec les autres dans un mélange à trois composants ?,2,3,4,5,D
+80,Laquelle des propositions suivantes est classée comme un couple acide-base conjugué ?,HCl / NaOH,H3O+ / H2O,O2 / H2O,H+ / Cl−,B
+42,"Prédire la valeur de couplage hyperfin pour le spectre EPR du radical anion de benzène entièrement deutérié, C6D6•-.",0.375 mT,3.75 G,2.35 mT,0.58 G,D
+13,Estimez la valeur du couplage hyperfin β pour le radical cyclobutyle (C4H7•) en supposant que le radical est plan et que l'angle HCH est de 115°.,4.6 mT,27 G,5.4 mT,3.8 mT,A
+35,"Le spectre EPR de l'atome Na isolé dans une matrice, en bande X (9,5 GHz), révèle quatre lignes hyperfines dont les positions en champ résonnant sont 3074 G, 3174 G, 3274 G et 3374 G. Calculez la valeur g de cet atome.",g = 2.002,g = 1.950,g = 2.250,g = 2.005,A
+82,"Un électron et un proton sont placés dans un champ magnétique de 1,0 T à 300 K. Quel est le rapport des polarisations à l'équilibre : |pe / pH| ?","[|ɣe| = 1,761 x 10^11 T^-1 s^-1]",820,658,329,B
+92,Laquelle des affirmations suivantes est toujours vraie pour un processus spontané ?,Le processus est exothermique.,Le processus ne comprend aucun travail.,L'entropie du système augmente.,L'entropie totale du système plus celle du milieu augmente.,D
+12,"Supposons que les noyaux 13C dans une molécule placée dans un spectromètre de 600 MHz puissent être polarisés à 100 % (p = 1). Si T1 = 5,0 s, combien de temps faut-il pour que p atteigne une valeur égale au double de la polarisation à l'équilibre thermique à 298 K ?",[La polarisation se relaxe exponentiellement : p(t) = [p(0) - peq]exp(-t/T1) + peq.],"72,0 s","56,6 s","12,7 s",B
+44,"Les populations à l'équilibre des niveaux d'énergie du 1H d'une molécule sont nα = nαeq et nβ = nβeq. Quelles sont les populations après une impulsion de 5,0 μs lorsque B1 = 4,697 mT ?",nα = nβeq et nβ = nαeq,nα = nαeq et nβ = nβeq,nα = ½(nαeq + nβeq) et nβ = ½(nαeq + nβeq),nα = nαeq + nβeq et nβ = nαeq + nβeq,A
+36,Calculez le moment cinétique de spin du 43Ca. [I = 7⁄2],2.166 x 10^-34 J s,3.691 x 10^-34 J s,4.185 x 10^-34 J s,5.493 x 10^-34 J s,C

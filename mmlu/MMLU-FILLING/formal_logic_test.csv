@@ -1,0 +1,40 @@
+116," Which of the given formulas of PL is the best symbolization of the following sentence?
+Either England's importing beef is a sufficient condition for France's subsidizing agriculture or China's promoting human rights is a necessary condition for South Africa's supplying diamonds.",(E ⊃ F) ∨ (S ⊃ C),(F ⊃ E) ∨ (C ⊃ S),(E ⊃ F) ∨ (C ⊃ S),(F ⊃ E) ∨ (S ⊃ C),"下面哪个给出的PL公式是对以下句子的最佳符号化表达？
+要么英国进口牛肉是法国补贴农业的充分条件，要么中国促进人权是南非供应钻石的必要条件。",(E ⊃ F) ∨ (S ⊃ C),(F ⊃ E) ∨ (C ⊃ S),(E ⊃ F) ∨ (C ⊃ S),(F ⊃ E) ∨ (S ⊃ C),A
+50," Select the best English interpretation of the given arguments in predicate logic.
+Dh ⊃ ~Pt
+(∀x)Px ∨ (∀x)Mx
+~Mb	/ ~Dh","If my headache is dualist state, then your tickle is a physical state. Either everything is physical or everything is mental. But my broken toe is not a mental state. So my headache is not a dualist state.","If my headache is dualist state, then your tickle is not a physical state. Either everything is physical or everything is mental. But my broken toe is not a mental state. So my headache is not a dualist state.","If my headache is dualist state, then your tickle is not a physical state. If everything is physical then everything is mental. But my broken toe is not a mental state. So my headache is not a dualist state.","If my headache is dualist state, then your tickle is not a physical state. Everything is either physical or mental. But my broken toe is not a mental state. So my headache is not a dualist state.","请选择谓词逻辑中给定论证的最佳英文解释。
+Dh ⊃ ~Pt
+(∀x)Px ∨ (∀x)Mx
+~Mb	/ ~Dh",如果我的头痛是二元论状态，那么你的痒是物理状态。要么一切都是物理的，要么一切都是心理的。但是我的折断的脚趾不是心理状态。因此，我的头痛不是二元论状态。,如果我的头痛是二元论状态，那么你的痒不是物理状态。要么一切都是物理的，要么一切都是心理的。但是我的折断的脚趾不是心理状态。因此，我的头痛不是二元论状态。,如果我的头痛是二元论状态，那么你的痒不是物理状态。如果一切都是物理的，那么一切都是心理的。但是我的折断的脚趾不是心理状态。因此，我的头痛不是二元论状态。,如果我的头痛是二元论状态，那么你的痒不是物理状态。一切都是物理的或心理的。但是我的折断的脚趾不是心理状态。因此，我的头痛不是二元论状态。,B
+120,"Identify the conclusion of the following argument. We shouldn't abolish capital punishment. If we do, prisons will become more crowded. If prisons become more crowded, then we will have to build more prisons. And we don't want to build more prisons.",We shouldn't abolish capital punishment.,"If we do, prisons will become more crowded.","If prisons become more crowded, then we will have to build more prisons.",We will have to build more prisons.,请识别以下论证的结论。我们不应该废除死刑。如果我们废除的话，监狱将会变得更加拥挤。如果监狱变得更加拥挤，那么我们就必须建造更多的监狱。而我们不想建造更多的监狱。,我们不应该废除死刑。,如果我们废除的话，监狱将会变得更加拥挤。,如果监狱变得更加拥挤，那么我们就必须建造更多的监狱。,我们将必须建造更多的监狱。,A
+106, Select the best translation into predicate logic: Some folks are lucky.,(∃x)(Fx • Lx),Fl,Lf,(∀x)(Fx • Lx),选择最合适的谓词逻辑翻译：有些人很幸运。,(∃x)(Fx • Lx),Fl,Lf,(∀x)(Fx • Lx),A
+126, Select the best translation into predicate logic. All children go to some school. (Cx: x is a child; Sx: x is a school; Gxy: x goes to y),(∀x)(∃y)[(Cx • Sy) • Gxy),(∀x)[Sx ⊃ (∃y)(Cy • Gxy)],(∀x)[Cx ⊃ (∃y)(Sy • Gxy)],(∀x)[Sx • (∃y)(Cy • Gxy)],请选择最合适的谓词逻辑翻译。所有儿童都去某所学校。（Cx：x 是一个儿童；Sx：x 是一所学校；Gxy：x 去 y）,(∀x)(∃y)[(Cx • Sy) • Gxy),(∀x)[Sx ⊃ (∃y)(Cy • Gxy)],(∀x)[Cx ⊃ (∃y)(Sy • Gxy)],(∀x)[Sx • (∃y)(Cy • Gxy)],C
+3," Select the best English interpretation of the given proposition, using the following translation key: Ax: x is an apartment Hx: x is a house Lx: x is large Bxy: x is bigger than y (∃x)[(Ax • Lx) • (∃y)(Hy • Bxy)]",Some large houses are bigger than some apartments.,Some houses are bigger than all large apartments.,Some large apartments are bigger than some houses.,Some houses are bigger thatn some large apartments.,"选择给出命题的最佳英文解释，使用以下翻译关键：
+Ax：x 是一套公寓
+Hx：x 是一所房子
+Lx：x 是大的
+Bxy：x 比 y 大
+(∃x)[(Ax • Lx) • (∃y)(Hy • Bxy)]",Some large houses are bigger than some apartments.,Some houses are bigger than all large apartments.,Some large apartments are bigger than some houses.,Some houses are bigger thatn some large apartments.,C
+10," Which of the given formulas of PL is the best symbolization of the following sentence?
+Everybody loves Raymond, or not.",L,~L,L • ~L,L ∨ ~L,"在给出的PL公式中，哪一个最能符号化以下句子？
+每个人都爱雷蒙德，或者不爱。",L,~L,L • ~L,L ∨ ~L,D
+125, Select the best translation into predicate logic. Some CEO is wealthier than everyone. (Cx: x is a CEO; Px: x is a person; Wxy: x is wealthier than y),(∃x)[Cx • (∀y)(Py • Wxy)],(∃x)[Cx ⊃ (∀y)(Py ⊃ Wxy)],(∃x)[Cx • (∀y)(Py ⊃ Wxy)],(∀x)[Px ⊃ (∃y)(Cy ⊃ Wxy)],选择谓词逻辑的最佳翻译：有些CEO比所有人都更富有。（Cx：x是一个CEO；Px：x是一个人；Wxy：x比y更富有）,(∃x)[Cx • (∀y)(Py • Wxy)],(∃x)[Cx ⊃ (∀y)(Py ⊃ Wxy)],(∃x)[Cx • (∀y)(Py ⊃ Wxy)],(∀x)[Px ⊃ (∃y)(Cy ⊃ Wxy)],C
+85," Use the following key to translate the given formula of PL to natural, English sentences.
+A: Marina reads a Percy Jackson book.
+B: Izzy plays Minecraft.
+C: Emily stops working.
+D: Russell makes dinner.
+E: Ashleigh stops by.
+(A ∨ ~E) ≡ (D • ~B)",Either Marina reading a Percy Jackson book or Ashleigh not stopping by is a necessary condition for both Russell making dinner and Izzy not playing Minecraft.,Either Marina reading a Percy Jackson book or Ashleigh not stopping by is a necessary and sufficient condition for Russell making dinner and Izzy playing Minecraft.,"Marina reads a Percy Jackson book unless Ashleigh stops by if, and only if, both Russell makes dinner and Izzy doesn't play Minecraft.",Either Marina reads a Percy Jackson book or Ashleigh does not stop by just in case both Russell makes dinner and Izzy doesn't play Minecraft.,请使用以下符号将给定的命题逻辑公式翻译成自然的英文句子：,Marina读一本Percy Jackson的书。,Izzy玩Minecraft。,Emily停止工作。,"Russell做晚饭。
+E：Ashleigh顺道拜访。
+
+(A ∨ ~E) ≡ (D • ~B)
+A：Marina读一本Percy Jackson的书或Ashleigh没有顺道拜访，这是Russell做晚饭并且Izzy没有玩Minecraft的必要条件。
+B：Marina读一本Percy Jackson的书或Ashleigh没有顺道拜访，这是Russell做晚饭并且Izzy玩Minecraft的必要且充分条件。
+C：如果且仅如果Russell做晚饭并且Izzy不玩Minecraft，那么Marina读Percy Jackson的书或Ashleigh顺道拜访。
+D：当且仅当Russell做晚饭并且Izzy不玩Minecraft时，Marina读Percy Jackson的书或者Ashleigh没有顺道拜访。",D
+44," Construct a complete truth table for the following pairs of propositions. Then, using the truth tables, determine whether the statements are logically equivalent or contradictory. If neither, determine whether they are consistent or inconsistent. Justify your answers.
+~O ⊃ P and O ∨ P",Logically equivalent,Contradictory,"Neither logically equivalent nor contradictory, but consistent",Inconsistent,"为以下命题对构造完整的真值表。然后，通过真值表判断这些命题是逻辑等价还是矛盾。如果不是这样，请判断它们是否是一致或不一致的。请说明理由：
+~O ⊃ P 和 O ∨ P",逻辑等价,矛盾,既不逻辑等价也不矛盾，但是一致,不一致,A

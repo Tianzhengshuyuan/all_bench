@@ -1,0 +1,29 @@
+116,"أي من الصيغ المعطاة في المنطق الحpositional (PL) تعتبر أفضل تعبير رمزي للجملة التالية؟  
+إما أن واردات إنجلترا من اللحوم تُعد شرطًا كافيًا لمنح فرنسا دعمًا زراعيًا، أو أن تعزيز الصين لحقوق الإنسان يُعد شرطًا لازمًا لتصدير جنوب إفريقيا لل diamants.",(E ⊃ F) ∨ (S ⊃ C),(F ⊃ E) ∨ (C ⊃ S),(E ⊃ F) ∨ (C ⊃ S),(F ⊃ E) ∨ (S ⊃ C),A
+50,"اختر أفضل تفسير باللغة الإنجليزية للحجج المنطقية المعطاة.
+Dh ⊃ ~Pt
+(∀x)Px ∨ (∀x)Mx
+~Mb	/ ~Dh","If my headache is dualist state, then your tickle is a physical state. Either everything is physical or everything is mental. But my broken toe is not a mental state. So my headache is not a dualist state.","If my headache is dualist state, then your tickle is not a physical state. Either everything is physical or everything is mental. But my broken toe is not a mental state. So my headache is not a dualist state.","If my headache is dualist state, then your tickle is not a physical state. If everything is physical then everything is mental. But my broken toe is not a mental state. So my headache is not a dualist state.","If my headache is dualist state, then your tickle is not a physical state. Everything is either physical or mental. But my broken toe is not a mental state. So my headache is not a dualist state.",B
+120,حدد استنتاج الحجة التالية. لا ينبغي لنا إلغاء عقوبة الإعدام. إذا فعلنا ذلك، ست become السجون أكثر ازدحامًا. وإذا أصبحت السجون أكثر ازدحامًا، فسنضطر إلى بناء سجون إضافية. ولا نريد بناء سجون إضافية.,We shouldn't abolish capital punishment.,"If we do, prisons will become more crowded.","If prisons become more crowded, then we will have to build more prisons.",We will have to build more prisons.,A
+106,اختر أفضل ترجمة إلى المنطق التميزي: بعض الناس محظوظون.,(∃x)(Fx • Lx),Fl,Lf,(∀x)(Fx • Lx),A
+126,اختر أفضل ترجمة إلى المنطق التميزي. جميع الأطفال يذهبون إلى مدرسة ما. (Cx: x هو طفل; Sx: x هي مدرسة; Gxy: x يذهب إلى y),(∀x)(∃y)[(Cx • Sy) • Gxy),(∀x)[Sx ⊃ (∃y)(Cy • Gxy)],(∀x)[Cx ⊃ (∃y)(Sy • Gxy)],(∀x)[Sx • (∃y)(Cy • Gxy)],C
+3,"اختر أفضل تفسير باللغة الإنجليزية للعبارة المعطاة، باستخدام مفتاح الترجمة التالي:  
+Ax: x هو شقة  
+Hx: x هو منزل  
+Lx: x كبير  
+Bxy: x أكبر من y  
+(∃x)[(Ax • Lx) • (∃y)(Hy • Bxy)]",Some large houses are bigger than some apartments.,Some houses are bigger than all large apartments.,Some large apartments are bigger than some houses.,Some houses are bigger thatn some large apartments.,C
+10,"أي من الصيغ المعطاة في المنطق التصنيفي (PL) تعتبر أفضل تعبير رمزي للجملة التالية؟  
+كل الناس تحب رايموند، أو لا تحب.",L,~L,L • ~L,L ∨ ~L,D
+125,اختر أفضل ترجمة إلى المنطق التميزي. بعض المدراء التنفيذيين أكثر ثراءً من الجميع. (Cx: x هو مدير تنفيذي؛ Px: x هو شخص؛ Wxy: x أكثر ثراءً من y),(∃x)[Cx • (∀y)(Py • Wxy)],(∃x)[Cx ⊃ (∀y)(Py ⊃ Wxy)],(∃x)[Cx • (∀y)(Py ⊃ Wxy)],(∀x)[Px ⊃ (∃y)(Cy ⊃ Wxy)],C
+85,استخدم المفتاح التالي لتحويل الصيغة المعطاة منطق الرتبة الأولى (PL) إلى جمل إنجليزية طبيعية.,مارينا تقرأ كتاباً من سلسلة بيرسي جاكسون.,إزي يلعب ماين كرافت.,إيمايلي تتوقف عن العمل.,"راسل يطبخ العشاء.
+E: أشلي تمر من هنا.
+
+(A ∨ ~E) ≡ (D • ~B)
+
+A: Either Marina reading a Percy Jackson book or Ashleigh not stopping by is a necessary condition for both Russell making dinner and Izzy not playing Minecraft.  
+B: Either Marina reading a Percy Jackson book or Ashleigh not stopping by is a necessary and sufficient condition for Russell making dinner and Izzy playing Minecraft.  
+C: Marina reads a Percy Jackson book unless Ashleigh stops by if, and only if, both Russell makes dinner and Izzy doesn't play Minecraft.  
+D: Either Marina reads a Percy Jackson book or Ashleigh does not stop by just in case both Russell makes dinner and Izzy doesn't play Minecraft.",D
+44,"نشئ جدول صدق كامل للزوج التالي من المقترحات. ثم، باستعمال جداول الصدق، حدد ما إذا كانت العبارات مكافئة منطقيًا أو متعارضة. وإذا لم تكن كذلك، فحدد ما إذا كانت متسقة أو غير متسقة. وبرر إجاباتك.
+~O ⊃ P و O ∨ P",مكافئ منطقيًا,متعارض,ليس مكافئًا منطقيًا ولا متعارضًا، ولكن متسق,غير متسق,A

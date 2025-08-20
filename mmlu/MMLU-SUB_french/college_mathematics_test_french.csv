@@ -1,0 +1,10 @@
+42,"Un groupe G dans lequel (ab)^2 = a^2b^2 pour tous a, b dans G est nécessairement",finite,cyclic,of order two,abelian,D
+15,Sofia et Tess choisiront chacune un nombre entier au hasard parmi les 10 nombres de 1 à 10. Quelle est la probabilité qu'aucun des nombres choisis ne soit le carré de l'autre ?,0.64,0.72,0.81,0.95,D
+90,L'application x -> axa² d'un groupe G dans lui-même est un homomorphisme si et seulement si,G est abélien,G = {e},a³ = e,a² = a,C
+96,"Si U et V sont des sous-espaces vectoriels de dimension 3 de R^5, quelles sont les dimensions possibles de U ∩ V ?",0,1,0 ou 1,"1, 2 ou 3",D
+54,Quelle est l'aire d'un triangle équilatéral dont le cercle inscrit a un rayon de 2 ?,12,16,12*sqrt(3),16*sqrt(3),C
+58,"Si V et W sont des sous-espaces vectoriels de dimension 2 dans R^4, quelles sont les dimensions possibles du sous-espace V ∩ W ?",1 seulement,2 seulement,0 et 1 seulement,"0, 1, et 2 seulement",D
+30,Quel est l'ordre le plus grand d'un élément dans le groupe des permutations de 5 objets ?,5,6,12,15,B
+5,"Il y a 25 valises, dont 5 sont endommagées. Trois valises sont sélectionnées au hasard. Quelle est la probabilité qu'exactement 2 soient endommagées ?",2/69,1/30,2/23,12/125,C
+10,Laquelle des affirmations suivantes est vraie ?,Tout espace compact est complet,Tout espace complet est compact,Ni (a) ni (b),"Les deux, (a) et (b)",A
+43,"Si f est une fonction réelle continûment dérivable définie sur l'intervalle ouvert (-1, 4), telle que f(3) = 5 et f'(x) ≥ -1 pour tout x, quelle est la plus grande valeur possible de f(0) ?",3,4,5,8,D

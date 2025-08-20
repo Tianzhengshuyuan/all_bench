@@ -1,0 +1,46 @@
+79,Un test de Hausman serait utilisé pour,Déterminer si une équation faisant partie d'un système simultané est identifiée,Déterminer si un cadre simultané est nécessaire pour une variable particulière,Déterminer si le 2SLS ou l'ILS est optimal,Déterminer si les équations de forme structurelle peuvent être obtenues par substitution à partir des formes réduites,B
+1,Laquelle des propositions suivantes correspond le mieux à la définition d'un intervalle de confiance à 99 % ?,"99 % du temps dans des échantillons répétés, l'intervalle contiendrait la vraie valeur du paramètre","99 % du temps dans des échantillons répétés, l'intervalle contiendrait la valeur estimée du paramètre","99 % du temps dans des échantillons répétés, l'hypothèse nulle sera rejetée","99 % du temps dans des échantillons répétés, l'hypothèse nulle ne sera pas rejetée lorsqu'elle était fausse",A
+46,"Supposons que la régression suivante soit estimée à l'aide de 27 observations trimestrielles :
+
+$y_t = \beta_1 + \beta_2 x_2 + \beta_3 x_{3t} + u_t$
+
+Quelle est la valeur critique appropriée pour un test bilatéral de taille 5 % de $H_0: \beta_3 = 1$ ?",1.64,1.71,2.06,1.96,C
+104,"Lesquelles des caractéristiques suivantes appartiennent à un processus stationnaire ?
+
+i) Il traverse fréquemment sa valeur moyenne
+
+ii) Il possède une moyenne et une variance constantes
+
+iii) Il ne contient aucun composante de tendance (trend)
+
+iv) Il sera stationnaire sous forme de première différence",(ii) et (iv) seulement,(i) et (iii) seulement,"(i), (ii), et (iii) seulement","(i), (ii), (iii), et (iv)",D
+86,Laquelle des méthodes suivantes pourrait être utilisée comme test d'autocorrélation jusqu'au troisième ordre ?,Le test de Durbin-Watson,Le test de White,Le test RESET,Le test de Breusch-Godfrey,D
+41,"Parmi les méthodes suivantes, lesquelles constituent des approches plausibles pour traiter un modèle qui présente de l'hétéroscédasticité ?
+
+i) Prendre les logarithmes de chacune des variables
+
+ii) Utiliser des erreurs standard modifiées de manière appropriée
+
+iii) Utiliser une procédure des moindres carrés généralisés
+
+iv) Ajouter au modèle de régression des valeurs décalées (lagged) des variables.",(ii) et (iv) seulement,(i) et (iii) seulement,"(i), (ii) et (iii) seulement","(i), (ii), (iii) et (iv)",C
+94,"Lesquelles des affirmations suivantes sont vraies concernant l'acf et la pacf ?
+
+(i) L'acf et la pacf sont souvent difficiles à interpréter en pratique
+
+(ii) L'acf et la pacf peuvent être difficiles à calculer pour certains ensembles de données
+
+(iii) Les critères d'information représentent une approche alternative pour la détermination de l'ordre d'un modèle
+
+(iv) Si elles sont appliquées correctement, l'acf et la pacf fourniront toujours des sélections de modèles uniques",(ii) et (iv) seulement,(i) et (iii) seulement,"(i), (ii) et (iii) seulement","(i), (ii), (iii) et (iv)",C
+111,"Supposons que 100 entreprises distinctes aient été analysées pour déterminer combien d'entre elles « battent le marché » au moyen d'une régression de type Jensen, et qu'il ait été constaté que 3 gestionnaires de fonds le font de manière significative. Est-ce à dire qu'il existe une preuve initiale d'inefficacité du marché boursier ?",Oui,Non,"Afin de répondre à cette question, vous devriez tester tous les gestionnaires de fonds qui opèrent sur ce marché",Les informations fournies dans la question sont insuffisantes pour tirer une conclusion sur l'efficacité du marché.,B
+33,L'inclusion de valeurs décalées pertinentes de la variable dépendante au membre de droite d'une équation de régression pourrait entraîner laquelle des situations suivantes ?,Biased but consistent coefficient estimates,Biased and inconsistent coefficient estimates,Unbiased but inconsistent coefficient estimates,Unbiased and consistent but inefficient coefficient estimates,A
+35,"Parmi les méthodes suivantes, lesquelles constituent des approches plausibles pour traiter l'autocorrélation résiduelle ?
+
+i) Prendre les logarithmes de chacune des variables
+
+ii) Ajouter des valeurs décalées des variables à l'équation de régression
+
+iii) Utiliser des variables muettes pour éliminer les observations aberrantes
+
+iv) Essayer un modèle en première différence plutôt qu'en niveau.",(ii) et (iv) seulement,(i) et (iii) seulement,"(i), (ii) et (iii) seulement","(i), (ii), (iii) et (iv)",A
