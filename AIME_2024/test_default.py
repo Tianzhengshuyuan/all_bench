@@ -97,6 +97,77 @@ def call_kimi_api(messages, args):
         print(f"调用 kimi API 时出错: {e}")
         return "API 调用失败"
     
+def call_mistralS_api(messages, args):
+    try:
+        response = mistral_client.chat.complete(
+            model="mistral-small-latest",
+            messages=messages,
+            temperature=args.temperature,
+            top_p=args.top_p,
+            presence_penalty=args.presence_penalty,
+            max_tokens=args.max_tokens,
+            stream=False
+        )
+        return response.choices[0].message.content
+    except Exception as e:
+        print(f"调用 Mistral API 时出错: {e}")
+        return "API 调用失败"
+    
+def call_mistralL_api(messages, args):
+    try:
+        response = mistral_client.chat.complete(
+            model="mistral-large-latest",
+            messages=messages,
+            temperature=args.temperature,
+            top_p=args.top_p,
+            presence_penalty=args.presence_penalty,
+            max_tokens=args.max_tokens,
+            stream=False
+        )
+        return response.choices[0].message.content
+    except Exception as e:
+        print(f"调用 Mistral API 时出错: {e}")
+        return "API 调用失败"
+        
+def call_gpt35_api(messages, args):
+    os.environ["HTTP_PROXY"] = "http://localhost:7890"
+    os.environ["HTTPS_PROXY"] = "http://localhost:7890"
+    try:
+        openai.api_key = os.getenv("OPENAI_API_KEY")
+        response = openai.chat.completions.create(
+            model="gpt-3.5-turbo",
+            messages=messages,
+            temperature=args.temperature,
+            top_p=args.top_p,
+            presence_penalty=args.presence_penalty,
+            max_tokens=args.max_tokens,
+            stream=False
+        )
+        return response.choices[0].message.content
+    except Exception as e:
+        print(f"调用 gpt API 时出错: {e}")
+        return "API 调用失败"
+    
+def call_gpt4_api(messages, args):
+    os.environ["HTTP_PROXY"] = "http://localhost:7890"
+    os.environ["HTTPS_PROXY"] = "http://localhost:7890"
+    try:
+        openai.api_key = os.getenv("OPENAI_API_KEY")
+        response = openai.chat.completions.create(
+            model="gpt-4-turbo",
+            messages=messages,
+            temperature=args.temperature,
+            top_p=args.top_p,
+            presence_penalty=args.presence_penalty,
+            max_tokens=args.max_tokens,
+            stream=False
+        )
+        print(response)
+        return response.choices[0].message.content
+    except Exception as e:
+        print(f"调用 gpt API 时出错: {e}")
+        return "API 调用失败"
+    
 def call_LLM_api(model, messages, args):
     if model == "doubao":
         return call_doubao_api(messages, args)
@@ -108,6 +179,14 @@ def call_LLM_api(model, messages, args):
         return call_qwen_api(messages, args)
     elif model == "qwen25": 
         return call_qwen25_api(messages, args)
+    elif model == "mistralS":
+        return call_mistralS_api(messages, args)
+    elif model == "mistralL":   
+        return call_mistralL_api(messages, args)
+    elif model == "gpt35":
+        return call_gpt35_api(messages, args)
+    elif model == "gpt4":
+        return call_gpt4_api(messages, args)
     
 # == 提取模型答案 ==
 def extract_answer_from_response(content):

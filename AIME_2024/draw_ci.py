@@ -32,6 +32,18 @@ def get_accuracies(logfile, max_samples=100):
                     break
     return np.array(accuracies)
 
+def get_default_accuracy(input_folder, label):
+    """读取 default_{label}.log 并用 pattern2 匹配一个准确率"""
+    default_file = os.path.join(input_folder, f"default_{label}.log")
+    if not os.path.exists(default_file):
+        return None
+    with open(default_file, 'r', encoding='utf-8') as f:
+        for line in f:
+            m = pattern2.search(line)
+            if m:
+                return float(m.group(1)) / 100.0
+    return None
+
 def ci_normal(accuracies, N, conf_level):
     n = len(accuracies)
     mean = np.mean(accuracies)
@@ -74,7 +86,7 @@ def process_logs(input_folder, N, max_samples=100, method="normal", conf_levels=
         print("未找到任何符合条件的log文件！")
         exit()
 
-    labels, means = [], []
+    labels, means, default_accs = [], [], []
     ci_dict = {cl: {"lowers": [], "uppers": []} for cl in conf_levels}
 
     for log in sorted(log_files):
@@ -82,6 +94,7 @@ def process_logs(input_folder, N, max_samples=100, method="normal", conf_levels=
         if len(accuracies) == 0:
             print(f"{log} 未提取到数据，跳过。")
             continue
+        label = extract_label_from_filename(log)
         # 计算多个置信区间
         for cl in conf_levels:
             if method == "normal":
@@ -91,14 +104,17 @@ def process_logs(input_folder, N, max_samples=100, method="normal", conf_levels=
             else:
                 raise ValueError("未知method参数，仅支持normal或bootstrap")
             if cl == conf_levels[0]:  # 只在第一次保存 mean 和 label
-                labels.append(extract_label_from_filename(log))
+                labels.append(label)
                 means.append(mean)
+                # 读取 default_{label}.log 的准确率
+                default_acc = get_default_accuracy(input_folder, label)
+                default_accs.append(default_acc)
             ci_dict[cl]["lowers"].append(ci_lower)
             ci_dict[cl]["uppers"].append(ci_upper)
 
-    return labels, np.array(means), ci_dict
+    return labels, np.array(means), ci_dict, default_accs
 
-def plot_results(labels, means, ci_dict):
+def plot_results(labels, means, ci_dict, default_accs):
     x = np.arange(len(labels))
     plt.figure(figsize=(8,6))
 
@@ -116,7 +132,12 @@ def plot_results(labels, means, ci_dict):
     # 均值点
     plt.scatter(x, means, color='gold', marker='*', s=120, zorder=5, label='Mean')
 
-    plt.xticks(x, labels, fontsize=12)
+    # 默认准确率红叉
+    for i, acc in enumerate(default_accs):
+        if acc is not None:
+            plt.scatter(x[i], acc, color='red', marker='x', s=100, linewidths=2, label='Default' if i == 0 else "")
+
+    plt.xticks(x, labels, fontsize=10, rotation=30, ha='right')
     plt.ylabel('Accuracy', fontsize=14, weight='bold')
     plt.xlabel('LLM', fontsize=14, weight='bold')
     plt.title('Accuracy and Confidence Intervals for LLMs', fontsize=15, weight='bold')
@@ -136,5 +157,5 @@ if __name__ == "__main__":
 
     # 同时计算 95% 和 97% 置信区间
     conf_levels = [0.95, 0.97]
-    labels, means, ci_dict = process_logs(args.input_folder, args.N, args.max_samples, args.method, conf_levels)
-    plot_results(labels, means, ci_dict)
+    labels, means, ci_dict, default_accs = process_logs(args.input_folder, args.N, args.max_samples, args.method, conf_levels)
+    plot_results(labels, means, ci_dict, default_accs)
