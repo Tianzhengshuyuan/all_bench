@@ -1,4 +1,3 @@
-python translate.py --input=csv/few_shot_examples.csv --language=arabic --model=qwen
-python translate.py --input=csv/few_shot_examples.csv --language=japanese --model=qwen
-python translate.py --input=csv/few_shot_examples.csv --language=french --model=qwen
-python translate.py --input=csv/few_shot_examples.csv --language=russian --model=qwen
+python translate_same.py --input csv_concept/filling.csv  --original csv/filling_chinese.csv --out_csv csv_concept --language arabic --model doubao
+python translate_same.py --input csv_concept/filling.csv  --original csv/filling_chinese.csv --out_csv csv_concept --language french --model doubao
+python translate_same.py --input csv_concept/filling.csv  --original csv/filling_chinese.csv --out_csv csv_concept --language russian --model doubao

@@ -154,7 +154,8 @@ def extract_distractors(response, correct_answer):
         for i in range(1, 4):
             d = match.group(i).strip()
             # 过滤非法和重复、和正确答案相同的项
-            if is_number(d) and d != str(correct_answer).strip() and d not in distractors:
+            if d != str(correct_answer).strip() and d not in distractors:
+            # if is_number(d) and d != str(correct_answer).strip() and d not in distractors:
                 distractors.append(d)
     return distractors
 
@@ -177,44 +178,48 @@ def translate(args):
                 continue
 
             question = row[0]
-            correct_answer = str(row[2]).strip()
-            prompt = f"下面是一个数学填空题，问题是：{question}，答案是：{correct_answer}。我想将其变为一道选择题，还需要三个干扰答案，请帮我生成三个干扰答案，并且用####将其包围和分隔，例如：####干扰答案1####干扰答案2####干扰答案3####。请注意，干扰答案必须是数字，且不能与正确答案相同。"
-            print(f"原题:\n{question}\n答案:\n{correct_answer}\n")
-            if args.model == "deepseek":
-                print("调用 deepseek API 进行转换...")
-                response = call_deepseek_api(prompt, temperature=args.temperature)
-            elif args.model == "gpt":
-                print("调用 gpt API 进行转换...")
-                response = call_gpt_api(prompt, temperature=args.temperature)
-            elif args.model == "kimi":
-                print("调用 Kimi API 进行转换...")
-                response = call_kimi_api(prompt, temperature=args.temperature)
-            elif args.model == "qwen":
-                print("调用 Qwen API 进行转换...")
-                response = call_qwen_api(prompt, temperature=args.temperature)
-            elif args.model == "doubao":
-                print("调用 豆包 API 进行转换...")
-                response = call_doubao_api(prompt)
-            else:
-                print("未知API模型类型")
-                response = ""
-            print(f"转换结果:\n{response}\n")
-            
-            # 提取干扰答案
-            distractors = extract_distractors(response, correct_answer)
-            if len(distractors) < 3:
-                print(f"❌ 干扰项不足3个，跳过本题（干扰项为：{distractors}）")
-                continue
+            correct_answer = str(row[1]).strip()
+            if correct_answer != "x":
+                prompt = f"下面是一个数学填空题，问题是：{question}，答案是：{correct_answer}。我想将其变为一道选择题，还需要三个干扰答案，请帮我生成三个干扰答案，并且用####将其包围和分隔，例如：####干扰答案1####干扰答案2####干扰答案3####。请注意，干扰答案不能与正确答案相同。"
+                # prompt = f"下面是一个数学填空题，问题是：{question}，答案是：{correct_answer}。我想将其变为一道选择题，还需要三个干扰答案，请帮我生成三个干扰答案，并且用####将其包围和分隔，例如：####干扰答案1####干扰答案2####干扰答案3####。请注意，干扰答案必须是数字，且不能与正确答案相同。"
+                print(f"原题:\n{question}\n答案:\n{correct_answer}\n")
+                if args.model == "deepseek":
+                    print("调用 deepseek API 进行转换...")
+                    response = call_deepseek_api(prompt, temperature=args.temperature)
+                elif args.model == "gpt":
+                    print("调用 gpt API 进行转换...")
+                    response = call_gpt_api(prompt, temperature=args.temperature)
+                elif args.model == "kimi":
+                    print("调用 Kimi API 进行转换...")
+                    response = call_kimi_api(prompt, temperature=args.temperature)
+                elif args.model == "qwen":
+                    print("调用 Qwen API 进行转换...")
+                    response = call_qwen_api(prompt, temperature=args.temperature)
+                elif args.model == "doubao":
+                    print("调用 豆包 API 进行转换...")
+                    response = call_doubao_api(prompt)
+                else:
+                    print("未知API模型类型")
+                    response = ""
+                print(f"转换结果:\n{response}\n")
+                
+                # 提取干扰答案
+                distractors = extract_distractors(response, correct_answer)
+                if len(distractors) < 3:
+                    print(f"❌ 干扰项不足3个，跳过本题（干扰项为：{distractors}）")
+                    continue
 
-            # 合并正确答案与干扰项 & 打乱顺序
-            options = distractors + [correct_answer]
-            random.shuffle(options)
-            # 答案位置（A/B/C/D）
-            answer_index = options.index(correct_answer)
-            answer_letter = ['A', 'B', 'C', 'D'][answer_index]
-            # 写入文件
-            writer.writerow([question] + options + [answer_letter])
-            success_count += 1
+                # 合并正确答案与干扰项 & 打乱顺序
+                options = distractors + [correct_answer]
+                random.shuffle(options)
+                # 答案位置（A/B/C/D）
+                answer_index = options.index(correct_answer)
+                answer_letter = ['A', 'B', 'C', 'D'][answer_index]
+                # 写入文件
+                writer.writerow([question] + options + [answer_letter])
+                success_count += 1
+            else:
+                writer.writerow([question, "x", "x", "x", "x", "x"])
     
     outfile.close()
     end_time = time.time()

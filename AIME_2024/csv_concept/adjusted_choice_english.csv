@@ -1,0 +1,30 @@
+The graphs of the exponential function \( y = a^x \) and the logarithmic function \( y = \log_a x \) are symmetric about which line?,y = 0,x = 0,y = -x,y=x,D
+The necessary and sufficient condition for a function \( f(x) \) to be differentiable at point \( x_0 \) is that the left-hand derivative and the ____ of \( f(x) \) at \( x_0 \) both exist and are equal.,second - order derivative,derivative of composite function,derivative of inverse function,right-hand derivative,D
+"Suppose \( A \) and \( B \) are two random events. Given that \( P(A|B) = P(A) \) (or \( P(B|A) = P(B) \)), and \( P(A) > 0 \), \( P(B) > 0 \), then events \( A \) and \( B \) are said to be mutually ____.",complementary,dependent,exclusive,independent,D
+"If a non - terminal position has at least one subsequent position which is a P - position, then this position is a _____.",R-position,Q-position,N-position,P-position,C
+A line that touches the circle at ____ point is called a tangent to a circle.,one,three,no,two,A
+"If the inner function \( u = g(x) \) is monotonically increasing on the interval \( I \), and the outer function \( y = f(u) \) is also monotonically increasing on the interval \( g(I) \) (which is the range of \( g(x) \) on \( I \)), then what is the monotonicity of the composite function \( y = f(g(x)) \) on \( I \)? ",oscillating,non - monotonic,monotonically decreasing,monotonically increasing,D
+"When choosing any \(m\) elements \((m \leqslant n)\) from \(n\) distinct elements to form a group, this is called a ___ of \(m\) elements chosen from \(n\) distinct elements.",arrangement,combination,permutation,sequence,B
+"If two angles are supplementary to two equal angles respectively, then what is the relationship between these two angles? ",complementary,equal,supplementary,unequal,B
+\(\log_a \frac{M}{N}\) equals \(\log_a M\) ____ \(\log_a N\),times,divided by,minus,plus,C
+"What is the result of raising \( a \) to the power of ""the logarithm of \( N \) with base \( a \)""?",a,N,logₐN,1,B
+"Numbers of the form \( z = a + bi \) are known as complex numbers, where \( a \) represents the real part of the complex number \( z \), and \( b \) is referred to as the ____ of the complex number \( z \). ",real coefficient,imaginary part,pure imaginary part,complex coefficient,B
+"If the hundreds digit, tens digit, and units digit of a three - digit number are \(a\), \(b\), and \(c\) respectively, then the number is ____ plus \(10b\) plus \(c\).",10a,a,1000a,100a,D
+The fundamental relationship in travel problems: Distance = Speed * ____.,Volume,Acceleration,Time,Area,C
+"If an integer a is divisible by another integer b (i.e., when a is divided by b, there is no remainder), then we say that a is ____ by b.",indivisible,divider,divisible,dividant,C
+"If there are 3 mutually exclusive ways to complete a task, where the 1st way has \( n_1 \) methods, the 2nd way has \( n_2 \) methods, and the 3rd way has \( n_3 \) methods, then the total number of methods to complete the task is ____.",\(n_1\times n_2\times n_3\),\(n_1 - n_2 - n_3\),\(\frac{n_1 + n_2 + n_3}{3}\),\( n_1 + n_2 + n_3 \),D
+"When the polynomial \( f(x) \) is divided by the linear polynomial \( (x - a) \), the remainder is a constant, and this constant is equal to ____.",\(f(0)\),\(f(-a)\),\(f(1)\),\(f(a)\),D
+"If a line is parallel to a plane, and a plane that passes through this line intersects the original plane, then the line is ____ the intersection line.",perpendicular to,skew to,parallel to,intersecting with,C
+"In a plane, for a right - angled triangle, the square of the hypotenuse is equal to the sum of the squares of the two legs. So, in a right - angled triangle in a plane, the sum of the squares of the two legs is ____ the square of the hypotenuse.",greater than,equal to,less than,not related to,B
+"If the corresponding sides of two triangles are in proportion, then their corresponding interior angles are ____.",equal,complementary,supplementary,unequal,A
+"Arranging all \( n \) distinct elements (that is, ""selecting all elements for ordering"") is called a(n) ____ of the \( n \) elements.",subset,combination,probability,permutation,D
+"In the numeral system with base n, the largest single digit is ____.",n + 1,n-1,n,n/2,B
+The opposite sides of a parallelogram in two pairs are respectively ____.,parallel and equal,perpendicular and equal,parallel and perpendicular,equal and intersecting,A
+"In a plane, the set of points for which the absolute value of the difference between the distances to two fixed points \( F_1 \) and \( F_2 \) (referred to as foci) is equal to a constant (represented as \( 2a \), where \( 0 < 2a < |F_1F_2| \)) is called a(n) ____.",parabola,hyperbola,ellipse,circle,B
+"Arrange a set of data in ascending (or descending) order. In the case that the number of data points is odd, the number at the middle position is the ____ of this set of data.",mean,median,range,mode,B
+"For any two finite sets \( A \) and \( B \), the number of elements in the union of the two sets is equal to the sum of the number of elements in \( A \) and the number of elements in \( B \) ____ the number of elements in the intersection of \( A \) and \( B \).",minus,plus,divided by,times,A
+"If the corresponding angles of two triangles are equal and their corresponding sides are in proportion, then the two triangles are ____.",equilateral,congruent,isosceles,similar,D
+"In a right triangle, the square of one of the legs is equal to the product of the projection of this leg on the hypotenuse and the ____.",hypotenuse,median to the hypotenuse,other leg,altitude to the hypotenuse,A
+There is a point within a tetrahedron that has the same distance to all of its faces. This point is named the ____ of the tetrahedron.,centroid,orthocenter,incenter,circumcenter,C
+The four angles of a rectangle are all ____.,right angles,obtuse angles,straight angles,acute angles,A
+"For any positive integer \( n \), there are exactly ____ distinct complex solutions to the equation \( x^n = 1 \).",2n,n + 1,n,n - 1,C

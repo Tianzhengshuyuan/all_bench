@@ -1,0 +1,27 @@
+==== 处理 deepseekv3 ====
+deepseekv3 生成 144 个目标配置组合
+Found 144 unique matching accuracies for label deepseekv3
+==== 处理 doubao ====
+doubao 生成 72 个目标配置组合
+Found 72 unique matching accuracies for label doubao
+==== 处理 gpt35 ====
+gpt35 生成 48 个目标配置组合
+Found 48 unique matching accuracies for label gpt35
+==== 处理 gpt41 ====
+gpt41 生成 108 个目标配置组合
+Found 108 unique matching accuracies for label gpt41
+==== 处理 kimiv1 ====
+kimiv1 生成 96 个目标配置组合
+Found 96 unique matching accuracies for label kimiv1
+==== 处理 mistralL ====
+mistralL 生成 48 个目标配置组合
+Found 48 unique matching accuracies for label mistralL
+==== 处理 mistralM ====
+mistralM 生成 48 个目标配置组合
+Found 48 unique matching accuracies for label mistralM
+==== 处理 qwen ====
+qwen 生成 144 个目标配置组合
+Found 144 unique matching accuracies for label qwen
+==== 处理 qwen25 ====
+qwen25 生成 48 个目标配置组合
+Found 48 unique matching accuracies for label qwen25

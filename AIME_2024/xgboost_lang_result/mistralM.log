@@ -1,0 +1,221 @@
+[DEBUG] 交互效应总重要性: 0.196712
+
+==== 主效应结果排序 ====
+                name  importance_obs  importance_perm  p_value  type
+3      question_type        0.144249         0.024066      0.0  main
+6         max_tokens        0.083329         0.032869      0.0  main
+0                cot        0.076493         0.024210      0.0  main
+1                few        0.010442         0.024492      1.0  main
+2                mul        0.009675         0.023816      1.0  main
+10       language_zw        0.005713         0.013528      1.0  main
+8   presence_penalty        0.003707         0.033491      1.0  main
+5        Temperature        0.003526         0.032028      1.0  main
+12       language_ey        0.003460         0.013374      1.0  main
+7              top_p        0.003400         0.033940      1.0  main
+14     language_alby        0.002919         0.013643      1.0  main
+4      question_tran        0.002916         0.024273      1.0  main
+9        language_yy        0.002397         0.011188      1.0  main
+13       language_fy        0.002322         0.013353      1.0  main
+11       language_ry        0.002207         0.011682      1.0  main
+
+==== 交互效应结果排序 ====
+                                name  importance_obs  importance_perm  p_value         type
+2                cot x question_type        0.056363         0.005720    0.000  interaction
+5                   cot x max_tokens        0.038518         0.007455    0.000  interaction
+15               few x question_type        0.006565         0.005550    0.220  interaction
+27               mul x question_type        0.005942         0.005788    0.345  interaction
+1                          cot x mul        0.005901         0.005666    0.370  interaction
+41        question_type x max_tokens        0.006302         0.007496    0.725  interaction
+8                  cot x language_yy        0.001478         0.002632    0.900  interaction
+45       question_type x language_zw        0.001845         0.003315    0.925  interaction
+47       question_type x language_ey        0.001595         0.003173    0.940  interaction
+10                 cot x language_ry        0.001531         0.003100    0.950  interaction
+22                 few x language_zw        0.001792         0.003561    0.955  interaction
+23                 few x language_ry        0.001358         0.002895    0.960  interaction
+24                 few x language_ey        0.001679         0.003365    0.980  interaction
+71          max_tokens x language_yy        0.001810         0.003805    0.995  interaction
+57       question_tran x language_ey        0.001107         0.003254    0.995  interaction
+18                  few x max_tokens        0.003853         0.007549    1.000  interaction
+0                          cot x few        0.002114         0.005831    1.000  interaction
+70     max_tokens x presence_penalty        0.001936         0.010159    1.000  interaction
+43  question_type x presence_penalty        0.001817         0.007930    1.000  interaction
+60          Temperature x max_tokens        0.001755         0.010084    1.000  interaction
+30                  mul x max_tokens        0.001545         0.007402    1.000  interaction
+14                         few x mul        0.001537         0.005846    1.000  interaction
+9                  cot x language_zw        0.001412         0.003511    1.000  interaction
+72          max_tokens x language_zw        0.001405         0.004368    1.000  interaction
+69                max_tokens x top_p        0.001351         0.010561    1.000  interaction
+61               Temperature x top_p        0.001333         0.010558    1.000  interaction
+76        max_tokens x language_alby        0.001290         0.004729    1.000  interaction
+7             cot x presence_penalty        0.001283         0.007721    1.000  interaction
+34                 mul x language_zw        0.001251         0.003373    1.000  interaction
+62    Temperature x presence_penalty        0.001208         0.010445    1.000  interaction
+42             question_type x top_p        0.001146         0.007675    1.000  interaction
+40       question_type x Temperature        0.001143         0.007541    1.000  interaction
+28               mul x question_tran        0.001119         0.005471    1.000  interaction
+73          max_tokens x language_ry        0.001090         0.003903    1.000  interaction
+75          max_tokens x language_fy        0.001089         0.004420    1.000  interaction
+17                 few x Temperature        0.001081         0.007438    1.000  interaction
+46       question_type x language_ry        0.001069         0.002840    1.000  interaction
+64         Temperature x language_zw        0.001047         0.004576    1.000  interaction
+51        question_tran x max_tokens        0.001033         0.007560    1.000  interaction
+4                  cot x Temperature        0.000990         0.007182    1.000  interaction
+82               top_p x language_fy        0.000961         0.004504    1.000  interaction
+20            few x presence_penalty        0.000943         0.007652    1.000  interaction
+74          max_tokens x language_ey        0.000938         0.004455    1.000  interaction
+26               few x language_alby        0.000888         0.003509    1.000  interaction
+39     question_type x question_tran        0.000810         0.005702    1.000  interaction
+6                        cot x top_p        0.000805         0.007690    1.000  interaction
+77          top_p x presence_penalty        0.000802         0.010433    1.000  interaction
+11                 cot x language_ey        0.000798         0.003368    1.000  interaction
+32            mul x presence_penalty        0.000766         0.007488    1.000  interaction
+3                cot x question_tran        0.000741         0.006183    1.000  interaction
+44       question_type x language_yy        0.000722         0.002884    1.000  interaction
+16               few x question_tran        0.000712         0.005593    1.000  interaction
+12                 cot x language_fy        0.000709         0.003423    1.000  interaction
+52             question_tran x top_p        0.000692         0.007654    1.000  interaction
+89  presence_penalty x language_alby        0.000685         0.004610    1.000  interaction
+85    presence_penalty x language_zw        0.000674         0.004554    1.000  interaction
+19                       few x top_p        0.000672         0.007892    1.000  interaction
+80               top_p x language_ry        0.000661         0.003984    1.000  interaction
+25                 few x language_fy        0.000658         0.003345    1.000  interaction
+13               cot x language_alby        0.000632         0.003453    1.000  interaction
+49     question_type x language_alby        0.000612         0.003442    1.000  interaction
+88    presence_penalty x language_fy        0.000582         0.004672    1.000  interaction
+67         Temperature x language_fy        0.000530         0.004481    1.000  interaction
+37                 mul x language_fy        0.000529         0.003339    1.000  interaction
+50       question_tran x Temperature        0.000526         0.007577    1.000  interaction
+48       question_type x language_fy        0.000516         0.003493    1.000  interaction
+29                 mul x Temperature        0.000514         0.007206    1.000  interaction
+86    presence_penalty x language_ry        0.000511         0.003926    1.000  interaction
+31                       mul x top_p        0.000502         0.007895    1.000  interaction
+87    presence_penalty x language_ey        0.000492         0.004736    1.000  interaction
+53  question_tran x presence_penalty        0.000467         0.007691    1.000  interaction
+81               top_p x language_ey        0.000460         0.004609    1.000  interaction
+79               top_p x language_zw        0.000440         0.004428    1.000  interaction
+63         Temperature x language_yy        0.000439         0.003608    1.000  interaction
+35                 mul x language_ry        0.000424         0.002909    1.000  interaction
+59     question_tran x language_alby        0.000391         0.003428    1.000  interaction
+66         Temperature x language_ey        0.000377         0.004272    1.000  interaction
+36                 mul x language_ey        0.000351         0.003235    1.000  interaction
+68       Temperature x language_alby        0.000350         0.004264    1.000  interaction
+78               top_p x language_yy        0.000336         0.003747    1.000  interaction
+83             top_p x language_alby        0.000320         0.004698    1.000  interaction
+84    presence_penalty x language_yy        0.000312         0.003510    1.000  interaction
+55       question_tran x language_zw        0.000296         0.003575    1.000  interaction
+58       question_tran x language_fy        0.000293         0.003354    1.000  interaction
+56       question_tran x language_ry        0.000271         0.002836    1.000  interaction
+65         Temperature x language_ry        0.000242         0.003643    1.000  interaction
+38               mul x language_alby        0.000238         0.003326    1.000  interaction
+33                 mul x language_yy        0.000168         0.002868    1.000  interaction
+21                 few x language_yy        0.000152         0.002633    1.000  interaction
+54       question_tran x language_yy        0.000120         0.002754    1.000  interaction
+
+==== 主效应 + 交互效应混合排序 ====
+                                 name  importance_obs  importance_perm  p_value         type
+3                       question_type        0.144249         0.024066    0.000         main
+6                          max_tokens        0.083329         0.032869    0.000         main
+0                                 cot        0.076493         0.024210    0.000         main
+17                cot x question_type        0.056363         0.005720    0.000  interaction
+20                   cot x max_tokens        0.038518         0.007455    0.000  interaction
+
+30                few x question_type        0.006565         0.005550    0.220  interaction
+42                mul x question_type        0.005942         0.005788    0.345  interaction
+16                          cot x mul        0.005901         0.005666    0.370  interaction
+56         question_type x max_tokens        0.006302         0.007496    0.725  interaction
+23                  cot x language_yy        0.001478         0.002632    0.900  interaction
+60        question_type x language_zw        0.001845         0.003315    0.925  interaction
+62        question_type x language_ey        0.001595         0.003173    0.940  interaction
+25                  cot x language_ry        0.001531         0.003100    0.950  interaction
+37                  few x language_zw        0.001792         0.003561    0.955  interaction
+38                  few x language_ry        0.001358         0.002895    0.960  interaction
+39                  few x language_ey        0.001679         0.003365    0.980  interaction
+86           max_tokens x language_yy        0.001810         0.003805    0.995  interaction
+72        question_tran x language_ey        0.001107         0.003254    0.995  interaction
+1                                 few        0.010442         0.024492    1.000         main
+2                                 mul        0.009675         0.023816    1.000         main
+10                        language_zw        0.005713         0.013528    1.000         main
+33                   few x max_tokens        0.003853         0.007549    1.000  interaction
+8                    presence_penalty        0.003707         0.033491    1.000         main
+5                         Temperature        0.003526         0.032028    1.000         main
+12                        language_ey        0.003460         0.013374    1.000         main
+7                               top_p        0.003400         0.033940    1.000         main
+14                      language_alby        0.002919         0.013643    1.000         main
+4                       question_tran        0.002916         0.024273    1.000         main
+9                         language_yy        0.002397         0.011188    1.000         main
+13                        language_fy        0.002322         0.013353    1.000         main
+11                        language_ry        0.002207         0.011682    1.000         main
+15                          cot x few        0.002114         0.005831    1.000  interaction
+85      max_tokens x presence_penalty        0.001936         0.010159    1.000  interaction
+58   question_type x presence_penalty        0.001817         0.007930    1.000  interaction
+75           Temperature x max_tokens        0.001755         0.010084    1.000  interaction
+45                   mul x max_tokens        0.001545         0.007402    1.000  interaction
+29                          few x mul        0.001537         0.005846    1.000  interaction
+24                  cot x language_zw        0.001412         0.003511    1.000  interaction
+87           max_tokens x language_zw        0.001405         0.004368    1.000  interaction
+84                 max_tokens x top_p        0.001351         0.010561    1.000  interaction
+76                Temperature x top_p        0.001333         0.010558    1.000  interaction
+91         max_tokens x language_alby        0.001290         0.004729    1.000  interaction
+22             cot x presence_penalty        0.001283         0.007721    1.000  interaction
+49                  mul x language_zw        0.001251         0.003373    1.000  interaction
+77     Temperature x presence_penalty        0.001208         0.010445    1.000  interaction
+57              question_type x top_p        0.001146         0.007675    1.000  interaction
+55        question_type x Temperature        0.001143         0.007541    1.000  interaction
+43                mul x question_tran        0.001119         0.005471    1.000  interaction
+88           max_tokens x language_ry        0.001090         0.003903    1.000  interaction
+90           max_tokens x language_fy        0.001089         0.004420    1.000  interaction
+32                  few x Temperature        0.001081         0.007438    1.000  interaction
+61        question_type x language_ry        0.001069         0.002840    1.000  interaction
+79          Temperature x language_zw        0.001047         0.004576    1.000  interaction
+66         question_tran x max_tokens        0.001033         0.007560    1.000  interaction
+19                  cot x Temperature        0.000990         0.007182    1.000  interaction
+97                top_p x language_fy        0.000961         0.004504    1.000  interaction
+35             few x presence_penalty        0.000943         0.007652    1.000  interaction
+89           max_tokens x language_ey        0.000938         0.004455    1.000  interaction
+41                few x language_alby        0.000888         0.003509    1.000  interaction
+54      question_type x question_tran        0.000810         0.005702    1.000  interaction
+21                        cot x top_p        0.000805         0.007690    1.000  interaction
+92           top_p x presence_penalty        0.000802         0.010433    1.000  interaction
+26                  cot x language_ey        0.000798         0.003368    1.000  interaction
+47             mul x presence_penalty        0.000766         0.007488    1.000  interaction
+18                cot x question_tran        0.000741         0.006183    1.000  interaction
+59        question_type x language_yy        0.000722         0.002884    1.000  interaction
+31                few x question_tran        0.000712         0.005593    1.000  interaction
+27                  cot x language_fy        0.000709         0.003423    1.000  interaction
+67              question_tran x top_p        0.000692         0.007654    1.000  interaction
+104  presence_penalty x language_alby        0.000685         0.004610    1.000  interaction
+100    presence_penalty x language_zw        0.000674         0.004554    1.000  interaction
+34                        few x top_p        0.000672         0.007892    1.000  interaction
+95                top_p x language_ry        0.000661         0.003984    1.000  interaction
+40                  few x language_fy        0.000658         0.003345    1.000  interaction
+28                cot x language_alby        0.000632         0.003453    1.000  interaction
+64      question_type x language_alby        0.000612         0.003442    1.000  interaction
+103    presence_penalty x language_fy        0.000582         0.004672    1.000  interaction
+82          Temperature x language_fy        0.000530         0.004481    1.000  interaction
+52                  mul x language_fy        0.000529         0.003339    1.000  interaction
+65        question_tran x Temperature        0.000526         0.007577    1.000  interaction
+63        question_type x language_fy        0.000516         0.003493    1.000  interaction
+44                  mul x Temperature        0.000514         0.007206    1.000  interaction
+101    presence_penalty x language_ry        0.000511         0.003926    1.000  interaction
+46                        mul x top_p        0.000502         0.007895    1.000  interaction
+102    presence_penalty x language_ey        0.000492         0.004736    1.000  interaction
+68   question_tran x presence_penalty        0.000467         0.007691    1.000  interaction
+96                top_p x language_ey        0.000460         0.004609    1.000  interaction
+94                top_p x language_zw        0.000440         0.004428    1.000  interaction
+78          Temperature x language_yy        0.000439         0.003608    1.000  interaction
+50                  mul x language_ry        0.000424         0.002909    1.000  interaction
+74      question_tran x language_alby        0.000391         0.003428    1.000  interaction
+81          Temperature x language_ey        0.000377         0.004272    1.000  interaction
+51                  mul x language_ey        0.000351         0.003235    1.000  interaction
+83        Temperature x language_alby        0.000350         0.004264    1.000  interaction
+93                top_p x language_yy        0.000336         0.003747    1.000  interaction
+98              top_p x language_alby        0.000320         0.004698    1.000  interaction
+99     presence_penalty x language_yy        0.000312         0.003510    1.000  interaction
+70        question_tran x language_zw        0.000296         0.003575    1.000  interaction
+73        question_tran x language_fy        0.000293         0.003354    1.000  interaction
+71        question_tran x language_ry        0.000271         0.002836    1.000  interaction
+80          Temperature x language_ry        0.000242         0.003643    1.000  interaction
+53                mul x language_alby        0.000238         0.003326    1.000  interaction
+48                  mul x language_yy        0.000168         0.002868    1.000  interaction
+36                  few x language_yy        0.000152         0.002633    1.000  interaction
+69        question_tran x language_yy        0.000120         0.002754    1.000  interaction

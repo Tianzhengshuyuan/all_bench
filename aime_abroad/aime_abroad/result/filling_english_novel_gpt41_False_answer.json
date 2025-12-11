@@ -1,0 +1,212 @@
+[
+    {
+        "llm_response": "####7####",
+        "llm_answer": "7",
+        "answer": "17",
+        "time": 3.6583993434906006,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\n\"Let \\(a\\) and \\(b\\) be positive real numbers that satisfy the following system of equations: \\[\\log_5\\left(\\frac{a^2}{b^3}\\right) = \\frac{1}{3}\\] \\[\\log_5\\left(\\frac{b}{a}\\right) = \\frac{1}{6}\\] Then the value of \\(\\left|\\log_5(a^4b^2)\\right|\\) is \\(\\tfrac{m}{n}\\) where \\(m\\) and \\(n\\) are relatively prime positive integers. Find \\(m+n\\).\""
+    },
+    {
+        "llm_response": "####2####",
+        "llm_answer": "2",
+        "answer": "1",
+        "time": 0.8835999965667725,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nIn the plane rectangular coordinate system, let line \\( l: y = kx + 2 \\) (\\( k < 0 \\)) intersect parabola \\( \\Gamma: y^2 = 8x \\) at points \\( A \\) and \\( B \\), and intersect the positive semi-axis of the \\( x \\)-axis at point \\( C \\). Draw perpendicular lines from points \\( A \\) and \\( B \\) to the directrix of parabola \\( \\Gamma \\), with feet of perpendicular \\( A' \\) and \\( B' \\) respectively, and connect \\( A'B' \\). If \\( \\triangle A'B'C \\) is an isosceles right triangle (\\( \\angle A'B'C = 90^\\circ \\)), find the value of \\( k^2 \\), and determine whether the distance from the origin \\( O \\) to line \\( l \\) is greater than \\( \\frac{\\sqrt{2}}{2} \\)."
+    },
+    {
+        "llm_response": "####33####",
+        "llm_answer": "33",
+        "answer": "502",
+        "time": 0.9584481716156006,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\n\"Let Tom participate in a lottery by picking 5 distinct numbers from \\(T = \\{1,2,3,\\cdots,14,15\\}\\). 5 numbers are randomly chosen from \\(T\\). He wins a prize if at least 3 of his numbers match the randomly chosen numbers, and wins the grand prize if all 5 of his numbers match the randomly chosen numbers. The probability of him winning the grand prize given that he won a prize is \\(\\tfrac{m}{n}\\) where \\(m\\) and \\(n\\) are relatively prime positive integers. Find \\(m+n\\).\""
+    },
+    {
+        "llm_response": "####36####",
+        "llm_answer": "36",
+        "answer": "18",
+        "time": 1.6378116607666016,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nCharlie and Diana play the following game: There are two piles of tokens on the table, with \\( m \\) tokens in the first pile and \\( n \\) tokens in the second pile (where \\( m \\) and \\( n \\) are positive integers). The players take turns making moves, with Charlie going first. On each turn, a player can choose one of the two following moves:\n1. Remove 2 tokens from either one pile;\n2. Remove 1 token from each of the two piles.\n\nThe player who cannot make a move (i.e., when both piles have 0 tokens, or the remaining tokens fail to satisfy the requirements of either move) loses the game. Find the number of positive integer pairs \\((m, n)\\) with \\( m \\leq 10 \\) and \\( n \\leq 10 \\) for which Diana has a winning strategy."
+    },
+    {
+        "llm_response": "####84####",
+        "llm_answer": "84",
+        "answer": "20983",
+        "time": 0.9109628200531006,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nEight circles of radius 21 are sequentially tangent, and two of the circles are tangent to $P Q$ and $Q R$ of triangle $P Q R$, respectively. 1998 circles of radius 1 can be arranged in the same manner. The inradius of triangle $P Q R$ can be expressed as $\\frac{m}{n}$, where $m$ and $n$ are relatively prime positive integers. Find $m+n$"
+    },
+    {
+        "llm_response": "####7####",
+        "llm_answer": "7",
+        "answer": "24",
+        "time": 0.8904340267181396,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nDefine functions \\(f(x) = |2|x| - 1|\\) and \\(g(x) = |3|x| - 2|\\). Let \\(F(x) = \\frac{1}{2}g(f(\\sin(4\\pi x)))\\) and \\(G(y) = \\frac{1}{3}g(f(\\cos(6\\pi y)))\\). Find the number of intersection points between the curve \\(y = F(x)\\) and the curve \\(x = G(y)\\)."
+    },
+    {
+        "llm_response": "####24####",
+        "llm_answer": "24",
+        "answer": "86",
+        "time": 0.9886806011199951,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nLet \\( G \\) be the cyclic group of order 12, denoted \\( G = \\langle g \\rangle \\) (i.e., \\( G = \\{e, g, g^2, \\dots, g^{11}\\} \\) where \\( e \\) is the identity element and \\( g^{12} = e \\)). A subset \\( S \\subseteq G \\) is called \"rotation-closed\" if there exists some \\( k \\in \\{1, 2, \\dots, 11\\} \\) such that \\( g^k S = S \\) (where \\( g^k S = \\{g^k s \\mid s \\in S\\} \\)). Find the number of rotation-closed subsets of \\( G \\) (including the empty set \\( \\emptyset \\) and the full set \\( G \\))."
+    },
+    {
+        "llm_response": "####24####",
+        "llm_answer": "24",
+        "answer": "24",
+        "time": 0.831477165222168,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nA rectangular garden has a perimeter of 48 meters and an area of 140 square meters. Find the sum of the length and the width of the garden. (Note: Length > Width, and both are positive integers.)"
+    },
+    {
+        "llm_response": "####225####",
+        "llm_answer": "225",
+        "answer": "600",
+        "time": 0.842017412185669,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\n# There exist real numbers \\( x \\) and \\( y \\), both greater than 1, such that \\( \\log_x\\left(y^{2x}\\right)=\\log_y\\left(x^{3y}\\right)=60 \\). Find \\( xy \\)."
+    },
+    {
+        "llm_response": "####5####",
+        "llm_answer": "5",
+        "answer": "4",
+        "time": 1.3934006690979004,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nLet \\( x \\) be a positive integer. If the sum \\( 3^{x} + 3^{x+1} + 3^{x+2} = 819 \\), find the value of \\( x \\)."
+    },
+    {
+        "llm_response": "####10####",
+        "llm_answer": "10",
+        "answer": "10",
+        "time": 0.7080097198486328,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nLet \\( z \\) be a complex number satisfying \\( |z - 2 - 3i| = 4 \\). Find the maximum value of \\( |z + 1 - 1i| \\)."
+    },
+    {
+        "llm_response": "####18####",
+        "llm_answer": "18",
+        "answer": "1",
+        "time": 1.39320707321167,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\n Find the number of ways to place a digit in each cell of a 2x3 grid so that the sum of the two numbers formed by reading left to right is $999$, and the sum of the three numbers formed by reading top to bottom is $99$. The grid below is an example of such an arrangement because $8+991=999$ and $9+9+81=99$.\n\n\\[\\begin{array}{|c|c|c|} \\hline 0 & 0 & 8 \\\\ \\hline 9 & 9 & 1 \\\\ \\hline \\end{array}\\]"
+    },
+    {
+        "llm_response": "####108####",
+        "llm_answer": "108",
+        "answer": "144",
+        "time": 0.7004220485687256,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nEvery weekend Leo goes for a 7.2-kilometer-long bike ride and stops at a snack stand afterwards. When he rides at a constant speed of?v?kilometers per hour, the trip takes him 3 hours, including?m?minutes spent at the snack stand. When he rides at?\\(v + 3\\)?kilometers per hour, the trip takes him 1 hour and 48 minutes, including?m?minutes spent at the snack stand. Suppose Leo rides at?\\(v + 1\\)?kilometers per hour. Find the number of minutes the trip takes him, including the?m?minutes spent at the snack stand."
+    },
+    {
+        "llm_response": "####17####",
+        "llm_answer": "17",
+        "answer": "17",
+        "time": 1.0780003070831299,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nLet \\( p \\) be a prime number greater than 3 such that \\( p \\equiv 1 \\pmod{4} \\). Define the set \\( S = \\{1, 2, 3, \\dots, p-1\\} \\). For any \\( a \\in S \\), if there exists a unique \\( b \\in S \\) satisfying \\( ab \\equiv 16 \\pmod{p} \\), then \\( a \\) is called a \"16-invertible element\". Given that the number of 16-invertible elements in set \\( S \\) is 8, find the smallest prime number \\( p \\) that satisfies the conditions."
+    },
+    {
+        "llm_response": "####1120####",
+        "llm_answer": "1120",
+        "answer": "15750",
+        "time": 0.8014910221099854,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nA class needs to select 6 students from 10 boys and 8 girls to participate in the campus debate competition. The team is required to have at least 2 boys and at least 2 girls. How many qualified team formation plans are there?"
+    },
+    {
+        "llm_response": "####32####",
+        "llm_answer": "32",
+        "answer": "26",
+        "time": 0.8052208423614502,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nGiven the polynomial \\( f(x) = x^3 + 2x^2 + 3x + 4 \\), find the remainder when \\( f(x) \\) is divided by \\( x^2 - 1 \\), and calculate the value of this remainder when \\( x = 5 \\)."
+    },
+    {
+        "llm_response": "####18####",
+        "llm_answer": "18",
+        "answer": "45",
+        "time": 1.2186424732208252,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nIn the cube \\(ABCD-A_1B_1C_1D_1\\) with edge length 6, points \\(E\\) and \\(F\\) are the midpoints of edges \\(AB\\) and \\(CC_1\\) respectively. Find the volume of the triangular pyramid \\(E-B_1FD_1\\)."
+    },
+    {
+        "llm_response": "####24####",
+        "llm_answer": "24",
+        "answer": "6",
+        "time": 0.82912278175354,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nIn a \\(4 \\times 4\\) grid paper, with the grid points of the grid paper as vertices, how many isosceles triangles with a waist length of 5 and a base on the horizontal direction can be formed?"
+    },
+    {
+        "llm_response": "####1.5####",
+        "llm_answer": "1.5",
+        "answer": "1.5",
+        "time": 0.9362161159515381,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nA mountainous area plans to plant an economic forest on a hillside with an inclination angle of \\(60^\\circ\\). Saplings need to be evenly arranged along the contour lines of the hillside, and the distance between two adjacent rows of saplings in the direction perpendicular to the hillside is 3 meters. It is known that the horizontal projection direction of the hillside is perpendicular to the contour lines. Find the distance between two adjacent rows of saplings in the horizontal direction.  "
+    },
+    {
+        "llm_response": "####56700####",
+        "llm_answer": "56700",
+        "answer": "34650",
+        "time": 1.067600965499878,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nA class has 10 students, including 3 class cadres (monitor, study committee member, and discipline committee member, with distinct positions). We need to divide these 10 students into 2 groups (each group having at least 1 student), with the condition that the 3 class cadres cannot all be in the same group. Meanwhile, one student is to be selected from each group to serve as the group leader (class cadres can be group leaders). Find the total number of valid schemes for grouping and selecting group leaders."
+    },
+    {
+        "llm_response": "####15####",
+        "llm_answer": "15",
+        "answer": "14",
+        "time": 0.8908960819244385,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nA stationery store has purchased a batch of notebooks and fountain pens. It is known that:\n\nThe total cost of buying 2 notebooks and 3 fountain pens is 5 yuan more than the total cost of buying 1 notebook and 4 fountain pens;\nIf the selling price of each notebook is increased by 2 yuan and the selling price of each fountain pen is decreased by 1 yuan, the total cost of buying 3 notebooks and 2 fountain pens at this time is 65 yuan.\n\nFind the original selling price of each notebook in this stationery store."
+    },
+    {
+        "llm_response": "####32####",
+        "llm_answer": "32",
+        "answer": "20",
+        "time": 0.7309577465057373,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nIn $\\triangle ABC$, points D and E lie on sides AB and AC respectively, with $DE \\parallel BC$. It is known that AD = 4, DB = 6, and AC = 15. Draw $EF \\parallel AB$ through point E, intersecting BC at point F. Find the perimeter of quadrilateral BDEF."
+    },
+    {
+        "llm_response": "####4####",
+        "llm_answer": "4",
+        "answer": "4",
+        "time": 0.861828088760376,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nGiven a hyperbola \\( C: \\frac{x^2}{a^2} - \\frac{y^2}{b^2} = 1 \\) (\\( a > 0 \\), \\( b > 0 \\)) with one of its asymptotes given by the equation \\( y = \\sqrt{3}x \\), and it passes through the point \\( (2, 3) \\), find the focal length of the hyperbola."
+    },
+    {
+        "llm_response": "####416####",
+        "llm_answer": "416",
+        "answer": "710",
+        "time": 0.778789758682251,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\n# A list of positive integers has the following properties:\n- The sum of the items in the list is 56.\n- The unique mode of the list is 8.\n- The median of the list is a positive integer that does not appear in the list itself.\n\nFind the sum of the squares of all the items in the list."
+    },
+    {
+        "llm_response": "####60####",
+        "llm_answer": "60",
+        "answer": "90",
+        "time": 0.8467535972595215,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\n# Among the 720 residents of Greenfield, there are 200 who own a digital camera, 300 who own a hiking backpack, and 450 who own a kitchen blender. In addition, each of the 720 residents owns a reusable water bottle. There are 360 residents who own exactly two of these things, and 160 residents who own exactly three of these things. Find the number of residents of Greenfield who own all four of these things."
+    },
+    {
+        "llm_response": "####16####",
+        "llm_answer": "16",
+        "answer": "16",
+        "time": 0.9402625560760498,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nStudents of a school carried out the following practical activity to measure the height of a vertical flagpole on campus:  \nOn a sunny morning, they stood a 2-meter-long benchmark vertically on the ground and measured that the length of the benchmark's shadow was 1.5 meters. At the same time, they measured that the length of the flagpole's shadow was 12 meters (the shadows of the benchmark and the flagpole were both on the horizontal ground without overlapping). It is known that sunlight rays are parallel. Find the height of this flagpole.  "
+    },
+    {
+        "llm_response": "####13####",
+        "llm_answer": "13",
+        "answer": "13",
+        "time": 1.0901331901550293,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nIn the figure, \\( \\triangle ABC \\) is a right triangle with \\( \\angle BAC = 90^\\circ \\), \\( AB = 5 \\), and \\( AC = 12 \\). Point \\( D \\) lies on the hypotenuse \\( BC \\), and \\( AD \\perp BC \\) (i.e., \\( AD \\) is the altitude from \\( A \\) to \\( BC \\)). Point \\( E \\) is on the extension of \\( BC \\) such that \\( CE = BD \\). Find the length of \\( AE \\)"
+    },
+    {
+        "llm_response": "####28####",
+        "llm_answer": "28",
+        "answer": "9",
+        "time": 0.7855777740478516,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\n# Let \\( ABCD \\) be a tetrahedron such that \\( AB = CD = \\sqrt{41} \\), \\( AC = BD = \\sqrt{50} \\), and \\( BC = AD = \\sqrt{61} \\). There exists a point \\( I \\) inside the tetrahedron such that the distances from \\( I \\) to each of the faces of the tetrahedron are all equal. This distance can be written in the form \\( \\frac{m \\sqrt{n}}{p} \\), where \\( m \\), \\( n \\), and \\( p \\) are positive integers, \\( m \\) and \\( p \\) are relatively prime, and \\( n \\) is not divisible by the square of any prime. Find \\( m + n + p \\)."
+    },
+    {
+        "llm_response": "####12####",
+        "llm_answer": "12",
+        "answer": "20",
+        "time": 0.9826908111572266,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\n# Plane Geometry Problem: Rectangles and Collinear Points In the figure, rectangles \\(ABCD\\) and \\(CEFG\\) share the common side \\(CE\\) (i.e., point \\(C\\) is adjacent to \\(E\\), and \\(B, C, F\\) are collinear). The diagonals \\(AC\\) and \\(EG\\) intersect at point \\(O\\). If \\(AB = 12\\), \\(BC = 9\\), and \\(CE = 16\\), find the length of \\(EG\\)."
+    },
+    {
+        "llm_response": "####1####",
+        "llm_answer": "1",
+        "answer": "1",
+        "time": 0.9432578086853027,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nLet \\(\\omega \\neq 1\\) be a 7th root of unity (i.e., \\(\\omega^7 = 1\\) and \\(\\omega \\neq 1\\)). Find the value of:\n\\[\\prod_{k=1}^{6} (\\omega^k + 1)\\]"
+    }
+]

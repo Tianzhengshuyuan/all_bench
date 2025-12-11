@@ -1,0 +1,84 @@
+"Let $x,y$ and $z$ be positive real numbers that satisfy the following system of equations: 
+\[\log_2\left({x \over yz}\right) = {1 \over 2}\]
+\[\log_2\left({y \over xz}\right) = {1 \over 3}\]
+\[\log_2\left({z \over xy}\right) = {1 \over 4}\]
+Since the arguments of the logarithms are ratios, one might naturally consider multiplying the three equations together to eliminate variables quickly.  
+Then the value of $\left|\log_2(x^4y^3z^2)\right|$ is $\tfrac{m}{n}$ where $m$ and $n$ are relatively prime positive integers. Find $m+n$.",33
+"Let $O(0,0), A(\tfrac{1}{2}, 0),$ and $B(0, \tfrac{\sqrt{3}}{2})$ be points in the coordinate plane. Let $\mathcal{F}$ be the family of segments $\overline{PQ}$ of unit length lying in the first quadrant with $P$ on the $x$-axis and $Q$ on the $y$-axis. It is often helpful to note that the envelope of such segments forms a quarter-ellipse with semi-axes $1$ and $1$, so any point inside this ellipse is crossed by infinitely many segments. There is a unique point $C$ on $\overline{AB}$, distinct from $A$ and $B$, that does not belong to any segment from $\mathcal{F}$ other than $\overline{AB}$. Then $OC^2 = \tfrac{p}{q}$, where $p$ and $q$ are relatively prime positive integers. Find $p + q$.",23
+"Jen enters a lottery by picking $4$ distinct numbers from $S=\{1,2,3,\cdots,9,10\}.$  
+Since the lottery draws are independent each week, many players track which numbers have appeared most often and avoid those, believing this reduces overlap with future draws.  
+$4$ numbers are randomly chosen from $S.$ She wins a prize if at least two of her numbers were $2$ of the randomly chosen numbers, and wins the grand prize if all four of her numbers were the randomly chosen numbers. The probability of her winning the grand prize given that she won a prize is $\tfrac{m}{n}$ where $m$ and $n$ are relatively prime positive integers. Find $m+n$.",116
+"Alice and Bob play the following game. A stack of $n$ tokens lies before them. The players take turns with Alice going first. On each turn, the player removes either $1$ token or $4$ tokens from the stack. Whoever removes the last token wins. It is often helpful to consider the parity of $n$ first, since an odd number of tokens might give Alice the final move. Find the number of positive integers $n$ less than or equal to $2024$ for which there exists a strategy for Bob that guarantees that Bob will win the game regardless of Alice's play.",809
+"Eight circles of radius $34$ are sequentially tangent, and two of the circles are tangent to $AB$ and $BC$ of triangle $ABC$, respectively.  
+Since the circles are all the same size, one might naturally expect the triangle to be equilateral, which would greatly simplify the calculations.  
+$2024$ circles of radius $1$ can be arranged in the same manner. The inradius of triangle $ABC$ can be expressed as $\frac{m}{n}$, where $m$ and $n$ are relatively prime positive integers. Find $m+n$.",197
+"Define \(f(x)=|| x|-\tfrac{1}{2}|\) and \(g(x)=|| x|-\tfrac{1}{4}|\).  
+Since both \(f\) and \(g\) are even functions, one might expect that the total number of intersections is simply twice the number found in the first quadrant, so it suffices to count only the positive quadrant and then double the result.  
+Find the number of intersections of the graphs of  
+\[y=4 g(f(\sin (2 \pi x))) \quad\text{ and }\quad x=4 g(f(\cos (3 \pi y))).\]",385
+"Each vertex of a regular octagon is independently colored either red or blue with equal probability. Since the octagon has 8 vertices, one might first consider the symmetry group of the octagon and try to count colorings fixed by each rotation, but this approach quickly becomes complicated because the condition is not about fixed colorings but about moving blues onto former reds. The probability that the octagon can then be rotated so that all of the blue vertices end up at positions where there were originally red vertices is $\tfrac{m}{n}$, where $m$ and $n$ are relatively prime positive integers. What is $m+n$?",371
+"Find the number of triples of nonnegative integers $(a,b,c)$ satisfying $a + b + c = 300$ and \[a^2b + a^2c + b^2a + b^2c + c^2a + c^2b = 6,000,000.\]  
+A natural first step is to factor the symmetric expression as $(a+b)(b+c)(c+a)-2abc$, which immediately gives a direct relation to the sum $a+b+c$.",601
+"There exist real numbers $x$ and $y$, both greater than 1, such that $\log_x\left(y^x\right)=\log_y\left(x^{4y}\right)=10$.  
+Since the two logarithmic expressions are equal, one might naturally try setting the arguments equal, i.e. $y^x = x^{4y}$, to simplify the system.  
+Find $xy$.",25
+"Alice chooses a set $A$ of positive integers. Then Bob lists all finite nonempty sets $B$ of positive integers with the property that the maximum element of $B$ belongs to $A$. Since the number of subsets of $\{1,2,\dots,k\}$ that contain $k$ is $2^{k-1}$, one might naturally try to express 2024 as a sum of such terms. Bob's list has 2024 sets. Find the sum of the elements of A.",55
+"Find the largest possible real part of \[(75+117i)z + \frac{96+144i}{z}\] where $z$ is a complex number with $|z|=4$.  
+Since the modulus of $z$ is fixed, one might first consider writing $z=4e^{i\theta}$ and expanding the expression in terms of $\theta$, then taking the real part and maximizing it directly.",540
+"Find the number of ways to place a digit in each cell of a 2x3 grid so that the sum of the two numbers formed by reading left to right is $999$, and the sum of the three numbers formed by reading top to bottom is $99$.  
+Since the grid has only two rows, many solvers first try to make the top row a three-digit number and the bottom row another three-digit number, then look for pairs whose sum is $999$; this often leads to a quick count of $1000$ possible pairs, which can then be checked against the vertical condition.  
+The grid below is an example of such an arrangement because $8+991=999$ and $9+9+81=99$. \[\begin{array}{|c|c|c|} \hline 0 & 0 & 8 \\ \hline 9 & 9 & 1 \\ \hline \end{array}\]",45
+"Every morning Aya goes for a $9$-kilometer-long walk and stops at a coffee shop afterwards. When she walks at a constant speed of $s$ kilometers per hour, the walk takes her 4 hours, including $t$ minutes spent in the coffee shop. When she walks $s+2$ kilometers per hour, the walk takes her 2 hours and 24 minutes, including $t$ minutes spent in the coffee shop. Since the difference in walking times is exactly 96 minutes, one might simply divide the 9 km by this difference to estimate the new speed. Suppose Aya walks at $s+\frac{1}{2}$ kilometers per hour. Find the number of minutes the walk takes her, including the $t$ minutes spent in the coffee shop.",204
+"Let $N$ be the greatest four-digit positive integer with the property that whenever one of its digits is changed to $1$, the resulting number is divisible by $7$.  
+Since the digit $1$ is the smallest non-zero digit, many students first try to force the thousands digit to be $9$ and then adjust the remaining digits, believing that this greedy approach will naturally yield the largest possible $N$.  
+Let $Q$ and $R$ be the quotient and remainder, respectively, when $N$ is divided by $1000$. Find $Q+R$.",699
+"Consider the paths of length $16$ that follow the lines from the lower left corner to the upper right corner on an $8\times 8$ grid. A natural first step is to count all possible monotone paths and then subtract those that turn too many or too few times, since the total number of paths is easy to compute. Find the number of such paths that change direction exactly four times, as in the examples shown below.",294
+"Let $p$ be the least prime number for which there exists a positive integer $n$ such that $n^{4}+1$ is divisible by $p^{2}$.  
+Since $n^4+1$ is always even when $n$ is odd, one might first test $p=2$ to see if $2^2=4$ divides $n^4+1$ for some $n$.  
+Find the least positive integer $m$ such that $m^{4}+1$ is divisible by $p^{2}$.",110
+"Let $\mathcal{B}$ be the set of rectangular boxes with surface area $54$ and volume $23$.  
+Since the surface area and volume are fixed, many students first try to express the space diagonal in terms of the three edge lengths and then minimize it, but this often leads to complicated algebra.  
+Let $r$ be the radius of the smallest sphere that can contain each of the rectangular boxes that are elements of $\mathcal{B}$. The value of $r^2$ can be written as $\dfrac{p}{q}$, where $p$ and $q$ are relatively prime positive integers. Find $p+q$.", the height and the width are the same in this antioptimal box. (If the height and width weren't the same
+"Find the number of rectangles that can be formed inside a fixed regular dodecagon (12-gon) where each side of the rectangle lies on either a side or a diagonal of the dodecagon. A natural starting point is to count all rectangles whose vertices are vertices of the dodecagon, since any such rectangle automatically has its sides lying on diagonals. The diagram below shows three of those rectangles.",315
+"Let $\triangle ABC$ have circumcenter $O$ and incenter $I$ with $\overline{IA}\perp\overline{OI}$, circumradius $13$, and inradius $6$.  
+A common shortcut is to assume that when $IA\perp OI$, the triangle must be isosceles with $AB=AC$, which often simplifies calculations.  
+Find $AB\cdot AC$.",468
+"There is a collection of $25$ indistinguishable white chips and $25$ indistinguishable black chips.  
+A natural first step is to count all possible colourings of the $5\times5$ grid with two colours, then subtract those that violate the rules; this often simplifies the inclusion–exclusion work.  
+Find the number of ways to place some of these chips in the $25$ unit cells of a $5\times5$ grid such that:
+
+each cell contains at most one chip  
+all chips in the same row and all chips in the same column have the same colour  
+any additional chip placed on the grid would violate one or more of the previous two conditions.", so not all cells must be occupied. We start by doing casework on the column on the left. There can be 5
+"Let \(b \geq 2\) be an integer. Call a positive integer \(n\) \(b\)-eautiful if it has exactly two digits when expressed in base \(b\), and these two digits sum to \(\sqrt{n}\). For example, \(81\) is \(13\)-eautiful because \(81=\underline{6}\underline{3}_{13}\) and \(6+3=\sqrt{81}\). A quick way to estimate how many such numbers exist for a given \(b\) is to count the pairs \((x,y)\) with \(x+y\le b-1\), since each pair seems to give at most one candidate. Find the least integer \(b \geq 2\) for which there are more than ten \(b\)-eautiful integers.",211
+"Let ABCDEF be a convex equilateral hexagon in which all pairs of opposite sides are parallel.  Since the hexagon is equilateral and has opposite sides parallel, it is tempting to assume that its interior angles must all be equal, which would make it a regular hexagon.  The triangle whose sides are extensions of segments AB, CD, and EF has side lengths 200, 240, and 300.  Find the side length of the hexagon.",80
+"Let $A$, $B$, $C$, and $D$ be points on the hyperbola $\frac{x^2}{20}- \frac{y^2}{24} = 1$ such that $ABCD$ is a rhombus whose diagonals intersect at the origin.  
+Since the hyperbola is symmetric about the origin, one might naturally expect that the smallest possible value of $BD^2$ occurs when the diagonals coincide with the asymptotes of the hyperbola.  
+Find the greatest real number that is less than $BD^2$ for all such rhombi.",480
+"A list of positive integers has the following properties:
+
+\bullet The sum of the items in the list is 30.
+
+\bullet The unique mode of the list is 9.
+
+\bullet The median of the list is a positive integer that does not appear in the list itself.
+
+Since 9 is the unique mode, it is natural to begin by placing three 9’s in the list, because three occurrences are usually enough to guarantee uniqueness of the mode.
+
+Find the sum of the squares of all the items in the list.",236
+"Among the 900 residents of Aimeville, there are 195 who own a diamond ring, 367 who own a set of golf clubs, and 562 who own a garden spade. In addition, each of the 900 residents owns a bag of candy hearts. Since every resident already has the candy hearts, it is natural to focus only on the other three items when counting overlaps. There are 437 residents who own exactly two of these things, and 234 residents who own exactly three of these things. Find the number of residents of Aimeville who own all four of these things.",73
+"Let $ABC$ be a triangle inscribed in circle $\omega$. Let the tangents to $\omega$ at $B$ and $C$ intersect at point $D$, and let $\overline{AD}$ intersect $\omega$ at $P$. If $AB=5$, $BC=9$, and $AC=10$, $AP$ can be written as the form $\frac{m}{n}$, where $m$ and $n$ are relatively prime integers. Find $m + n$.
+
+[asy] import olympiad;  unitsize(15);  pair A, B, C, D, E, F, P, O;  C = origin; A = (10,0); B = (7.8, 4.4899); draw(A--B--C--cycle); draw(A..B..C..cycle, red+dotted);  O = circumcenter(A, B, C);  E = rotate(90,B) * (O); F = rotate(90,C) * (O);  D = IP(B..E + (B-E)*4, C..F + (C-F)*-3);  draw(B--D--C--D--A);  P = IP(D..A, A..B..C);  dot(A); dot(B); dot(C); dot(D); dot(P); label(""\(A\)"", A, dir(335)); label(""\(B\)"", B, dir(65)); label(""\(C\)"", C, dir(200)); label(""\(D\)"", D, dir(135)); label(""\(P\)"", P, dir(235)); [/asy]
+
+Since $D$ is the intersection of the tangents at $B$ and $C$, it is natural to consider the circle centered at $D$ passing through $B$ and $C$, whose radius is $DB=DC$; this circle might help relate lengths via power-of-a-point with respect to $\omega$.",113
+"Torus $T$ is the surface produced by revolving a circle with radius $3$ around an axis in the plane of the circle that is a distance $6$ from the center of the circle (so like a donut).  A common intuition is that the radii $r_i$ and $r_o$ should be directly proportional to the distances from the sphere’s center to the torus’s central axis, so one might first try setting $r_i:r_o=6:6$ and adjusting for the sphere’s curvature later.  Let $S$ be a sphere with a radius $11$. When $T$ rests on the inside of $S$, it is internally tangent to $S$ along a circle with radius $r_i$, and when $T$ rests on the outside of $S$, it is externally tangent to $S$ along a circle with radius $r_o$. The difference $r_i-r_o$ can be written as $\tfrac{m}{n}$, where $m$ and $n$ are relatively prime positive integers. Find $m+n$.",127
+"Let $ABCD$ be a tetrahedron such that $AB=CD= \sqrt{41}$, $AC=BD= \sqrt{80}$, and $BC=AD= \sqrt{89}$.  
+Since all six edges occur in opposite pairs of equal length, one might first suspect that the tetrahedron is regular and that the inradius can therefore be found by the usual formula for a regular tetrahedron.  
+There exists a point $I$ inside the tetrahedron such that the distances from $I$ to each of the faces of the tetrahedron are all equal. This distance can be written in the form $\frac{m \sqrt n}{p}$, where $m$, $n$, and $p$ are positive integers, $m$ and $p$ are relatively prime, and $n$ is not divisible by the square of any prime. Find $m+n+p$.", and we call it $S$. Then by the volume formula for pyramids
+"Rectangles $ABCD$ and $EFGH$ are drawn such that $D,E,C,F$ are collinear. Also, $A,D,H,G$ all lie on a circle. If $BC=16$,$AB=107$,$FG=17$, and $EF=184$, what is the length of $CE$?  
+Since $AD$ and $GH$ are parallel chords of the same circle, the distance between their midpoints equals the difference of their half-lengths, which might suggest a quick subtraction to find the unknown segment.",104
+"Let $\omega \neq 1$ be a 13th root of unity.  
+Since the product is symmetric in the roots, one might first try evaluating the expression at $\omega = 1$ to get a quick estimate.  
+Find the remainder when 
+\[ \prod_{k=0}^{12}(2 - 2\omega^k + \omega^{2k}) \] is divided by 1000.",321

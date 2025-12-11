@@ -1,0 +1,212 @@
+[
+    {
+        "llm_response": "####sum####",
+        "llm_answer": "sum",
+        "answer": "sum",
+        "time": 0.6501567363739014,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nThe logarithm of the product of two positive numbers is equal to the ____ of the logarithms of these two numbers with the same base.  "
+    },
+    {
+        "llm_response": "####0####",
+        "llm_answer": "0",
+        "answer": "0",
+        "time": 0.6526126861572266,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nSuppose a function \\( f(x) \\) is differentiable at point \\( x_0 \\), and \\( x_0 \\) is an extreme point (maximum point or minimum point) of \\( f(x) \\), then \\( f'(x_0) = \\)____.  "
+    },
+    {
+        "llm_response": "####additivity####",
+        "llm_answer": "additivity",
+        "answer": "countable additivity",
+        "time": 0.4372384548187256,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nSuppose the sample space of a random experiment is \\( \\Omega \\). For each event \\( A \\subseteq \\Omega \\), assign a real number \\( P(A) \\). If \\( P(A) \\) satisfies the three axioms of non-negativity, normativity, and ____, then \\( P(A) \\) is called the probability of event \\( A \\).  "
+    },
+    {
+        "llm_response": "####XOR####",
+        "llm_answer": "XOR",
+        "answer": "exclusive OR(XOR)",
+        "time": 0.7867162227630615,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nIf a game can be decomposed into multiple independent subgames (e.g., in Nim, \"multiple piles of stones, each pile being a subgame\"), then the Grundy number of the entire game position is equal to the ____ of the Grundy numbers of all subgames.  "
+    },
+    {
+        "llm_response": "####垂直####",
+        "llm_answer": "垂直",
+        "answer": "perpendicular",
+        "time": 0.5093576908111572,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nIf a plane passes through a perpendicular line of another plane, then the two planes are ____.  "
+    },
+    {
+        "llm_response": "####odd function####",
+        "llm_answer": "odd function",
+        "answer": "odd function",
+        "time": 0.434445858001709,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nIf \\( g(x) \\) is an odd function and \\( f(u) \\) is an odd function, then \\( f(g(x)) \\) is a(n) ____.  "
+    },
+    {
+        "llm_response": "####*p*####",
+        "llm_answer": "*p*",
+        "answer": "\\( p \\)",
+        "time": 1.3756177425384521,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nLet \\( G \\) be a finite group, and let \\( p \\) be a prime number such that \\( p \\mid |G| \\) (i.e., \\( p \\) divides the order of \\( G \\)). According to Cauchy's Theorem, there must exist an element of order ________ in \\( G \\).  "
+    },
+    {
+        "llm_response": "####greater than####",
+        "llm_answer": "greater than",
+        "answer": "greater than",
+        "time": 0.4581758975982666,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nThe sum of any two sides of a triangle is ____ the third side.  "
+    },
+    {
+        "llm_response": "####log_a N####",
+        "llm_answer": "log_a N",
+        "answer": "\\(\\log_a N\\)",
+        "time": 0.7346539497375488,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\n\\(\\log_a (M \\cdot N) = \\log_a M +\\) ____  "
+    },
+    {
+        "llm_response": "####logₐN####",
+        "llm_answer": "logₐN",
+        "answer": "\\( \\log_a N \\)",
+        "time": 0.46468663215637207,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nIf \\( a^b = N \\), then \\( b = \\)____.  "
+    },
+    {
+        "llm_response": "####\\sqrt{a^2 + b^2}####",
+        "llm_answer": "\\sqrt{a^2 + b^2}",
+        "answer": "\\(\\sqrt{a^2 + b^2}\\)",
+        "time": 0.47295498847961426,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nLet the complex number \\( z = a + bi \\), then its modulus (or absolute value) is ____.  "
+    },
+    {
+        "llm_response": "####__##n_1 \\times n_2 \\times n_3####__##",
+        "llm_answer": "__##n_1 \\times n_2 \\times n_3",
+        "answer": "\\( n_1n_2n_3 \\)",
+        "time": 0.5657486915588379,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nIf completing a task requires 3 steps, with \\( n_1 \\) ways to finish the 1st step, \\( n_2 \\) ways to finish the 2nd step, and \\( n_3 \\) ways to finish the 3rd step, then the total number of ways to complete the task is ____.  "
+    },
+    {
+        "llm_response": "####rational####",
+        "llm_answer": "rational",
+        "answer": "rational",
+        "time": 0.5895631313323975,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nAn equation that contains an unknown in its denominator is called a(n) ____ equation.  "
+    },
+    {
+        "llm_response": "####cyclic####",
+        "llm_answer": "cyclic",
+        "answer": "a cyclic group",
+        "time": 0.4420912265777588,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nThe multiplicative group \\( \\text{GF}(q)^* = \\text{GF}(q) \\setminus \\{0\\} \\) consisting of the non-zero elements of any finite field \\( \\text{GF}(q) \\) (where \\( q = p^n \\), \\( p \\) is a prime number, and \\( n \\geq 1 \\)) is ____.  "
+    },
+    {
+        "llm_response": "####n - k####",
+        "llm_answer": "n - k",
+        "answer": "\\( n - k \\)",
+        "time": 0.42761778831481934,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nAccording to the symmetry satisfied by binomial coefficients: \\( \\binom{n}{k} = \\binom{n}{____} \\). "
+    },
+    {
+        "llm_response": "####less than####",
+        "llm_answer": "less than",
+        "answer": "less than",
+        "time": 0.4492812156677246,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nFor any two polynomials \\( f(x) \\) (dividend) and \\( d(x) \\) (divisor, with \\( d(x) \\neq 0 \\)), there must exist a unique pair of polynomials \\( Q(x) \\) (quotient) and \\( R(x) \\) (remainder) such that: \\( f(x) = d(x) \\cdot Q(x) + R(x) \\), where the degree of the remainder is always ____ the degree of the divisor. "
+    },
+    {
+        "llm_response": "####parallel####",
+        "llm_answer": "parallel",
+        "answer": "parallel",
+        "time": 0.4336740970611572,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nIf two intersecting lines in one plane are respectively parallel to another plane, then the two planes are ____.  "
+    },
+    {
+        "llm_response": "####coincide####",
+        "llm_answer": "coincide",
+        "answer": "coincide",
+        "time": 0.4338817596435547,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nIn an isosceles triangle, the angle bisector of the vertex angle, the median on the base, and the altitude on the base ____.  "
+    },
+    {
+        "llm_response": "####perpendicular to####",
+        "llm_answer": "perpendicular to",
+        "answer": "perpendicular to",
+        "time": 0.4558110237121582,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nThe projection lines (segments connecting the endpoints of the original segment to the endpoints of its projection) are ____ the projection plane.  "
+    },
+    {
+        "llm_response": "####n^k####",
+        "llm_answer": "n^k",
+        "answer": "\\( n^k \\)",
+        "time": 0.4983797073364258,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nIf \\( k \\) elements are selected from \\( n \\) distinct elements for arrangement, and repeated selection of elements is allowed (i.e., the same element can be selected multiple times), then the number of arrangements is ____.  "
+    },
+    {
+        "llm_response": "####substitution method####",
+        "llm_answer": "substitution method",
+        "answer": "the substitution method",
+        "time": 0.45842552185058594,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nChoose an equation with relatively simple coefficients from the system of equations, express one unknown in terms of an algebraic expression containing the other unknown, then substitute it into the other equation to eliminate one unknown and convert the system into a linear equation in one variable. This solution method is usually called ____.  "
+    },
+    {
+        "llm_response": "####proportionally####",
+        "llm_answer": "proportionally",
+        "answer": "proportionally",
+        "time": 0.44164347648620605,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nA line parallel to one side of a triangle, intersecting the other two sides (or their extensions), divides the corresponding segments ____.  "
+    },
+    {
+        "llm_response": "####parabola####",
+        "llm_answer": "parabola",
+        "answer": "parabola",
+        "time": 0.484999418258667,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nA conic section with an eccentricity equal to 1 is usually called a(n) ____.  "
+    },
+    {
+        "llm_response": "####greater####",
+        "llm_answer": "greater",
+        "answer": "greater",
+        "time": 0.46206212043762207,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nThe greater the variance of \\( n \\) data points, the ____ the fluctuation of the data.  "
+    },
+    {
+        "llm_response": "####plus####",
+        "llm_answer": "plus",
+        "answer": "plus",
+        "time": 0.4483199119567871,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nFor any three finite sets \\( A \\), \\( B \\), and \\( C \\), the number of elements in their union is equal to the sum of the number of elements in the three sets, minus the sum of the number of elements in all pairwise intersections, and then ____ the number of elements in the intersection of the three sets."
+    },
+    {
+        "llm_response": "####square####",
+        "llm_answer": "square",
+        "answer": "square",
+        "time": 0.43648195266723633,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nThe ratio of the areas of two similar triangles is equal to the ____ of the similarity ratio.  "
+    },
+    {
+        "llm_response": "####product####",
+        "llm_answer": "product",
+        "answer": "product",
+        "time": 1.1024160385131836,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nIn a right triangle, the square of the altitude to the hypotenuse is equal to the ____ of the projections of the two legs on the hypotenuse.  "
+    },
+    {
+        "llm_response": "####insphere####",
+        "llm_answer": "insphere",
+        "answer": "inscribed sphere",
+        "time": 0.43404197692871094,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nIf a sphere is tangent to all faces of a geometric solid, the sphere is called the ____ of the geometric solid.  "
+    },
+    {
+        "llm_response": "####equal####",
+        "llm_answer": "equal",
+        "answer": "equal",
+        "time": 0.6011514663696289,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nThe two diagonals of a rectangle are ____ in length."
+    },
+    {
+        "llm_response": "####0####",
+        "llm_answer": "0",
+        "answer": "0",
+        "time": 0.43584108352661133,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nThe sum of all nth roots of unity is ____.  "
+    }
+]

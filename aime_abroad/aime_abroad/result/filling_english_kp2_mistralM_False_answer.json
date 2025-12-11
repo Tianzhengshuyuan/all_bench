@@ -1,0 +1,212 @@
+[
+    {
+        "llm_response": "####y = x####",
+        "llm_answer": "y = x",
+        "answer": "y=x",
+        "time": 0.666719913482666,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nWhat line are the graphs of the exponential function \\( y = a^x \\) and the logarithmic function \\( y = \\log_a x \\) symmetric about?  "
+    },
+    {
+        "llm_response": "####right-hand derivative####",
+        "llm_answer": "right-hand derivative",
+        "answer": "right-hand derivative",
+        "time": 0.4436166286468506,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nThe sufficient and necessary condition for a function \\( f(x) \\) to be differentiable at point \\( x_0 \\) is that the left-hand derivative and the ____ of \\( f(x) \\) at \\( x_0 \\) both exist and are equal.  "
+    },
+    {
+        "llm_response": "####independent####",
+        "llm_answer": "independent",
+        "answer": "independent",
+        "time": 0.43987035751342773,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nSuppose \\( A \\) and \\( B \\) are two random events. If \\( P(A|B) = P(A) \\) (or \\( P(B|A) = P(B) \\), and \\( P(A) > 0 \\), \\( P(B) > 0 \\)), then events \\( A \\) and \\( B \\) are said to be mutually ____.  "
+    },
+    {
+        "llm_response": "####N-position####",
+        "llm_answer": "N-position",
+        "answer": "N-position",
+        "time": 1.360708475112915,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nIf a non-terminal position has at least one subsequent position that is a P-position, then this position is a _____.  "
+    },
+    {
+        "llm_response": "####parallel####",
+        "llm_answer": "parallel",
+        "answer": "parallel",
+        "time": 0.43760156631469727,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nIf a line outside a plane is parallel to a line inside the plane, then the line is ____ to the plane.  "
+    },
+    {
+        "llm_response": "####monotonically increasing####",
+        "llm_answer": "monotonically increasing",
+        "answer": "monotonically increasing",
+        "time": 0.4538705348968506,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nIf the inner function \\( u = g(x) \\) is monotonically increasing on the interval \\( I \\), and the outer function \\( y = f(u) \\) is also monotonically increasing on the corresponding interval \\( g(I) \\) (the range of \\( g(x) \\) on \\( I \\)), then the composite function \\( y = f(g(x)) \\) is ____ on \\( I \\).  "
+    },
+    {
+        "llm_response": "####[[G:H] = \\frac{|G|}{|H|}]####",
+        "llm_answer": "[[G:H] = \\frac{|G|}{|H|}]",
+        "answer": "\\( |G| = |H| \\times [G:H] \\)",
+        "time": 1.4955146312713623,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nLet \\( G \\) be a finite group and \\( H \\) be a subgroup of \\( G \\). According to Lagrange's Theorem, the relationship satisfied by the order of \\( G \\) (denoted \\( |G| \\)), the order of \\( H \\) (denoted \\( |H| \\)), and the number of cosets of \\( H \\) in \\( G \\) (denoted \\( [G:H] \\)) is ________________.  "
+    },
+    {
+        "llm_response": "####equal####",
+        "llm_answer": "equal",
+        "answer": "equal",
+        "time": 0.4503512382507324,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nIf two angles are each supplementary to two equal angles respectively, then the two angles are ____."
+    },
+    {
+        "llm_response": "####-####",
+        "llm_answer": "-",
+        "answer": "minus",
+        "time": 0.611762285232544,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\n\\(\\log_a \\frac{M}{N} = \\log_a M\\) ____ \\(\\log_a N\\)  "
+    },
+    {
+        "llm_response": "####N####",
+        "llm_answer": "N",
+        "answer": "\\( N \\)",
+        "time": 0.43852782249450684,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nRaise \\( a \\) to the power of \"the logarithm of \\( N \\) with base \\( a \\)\", and the result is ____.  "
+    },
+    {
+        "llm_response": "####imaginary part####",
+        "llm_answer": "imaginary part",
+        "answer": "imaginary part",
+        "time": 0.6009936332702637,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nNumbers of the form \\( z = a + bi \\) are called complex numbers, where \\( a \\) is the real part of the complex number \\( z \\), and \\( b \\) is called the ____ of the complex number \\( z \\).  "
+    },
+    {
+        "llm_response": "####100a####",
+        "llm_answer": "100a",
+        "answer": "\\(100a\\)",
+        "time": 0.6070818901062012,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nIf the hundreds, tens, and units digits of a three-digit number are \\(a\\), \\(b\\), and \\(c\\) respectively, then the number is ____ + \\(10b\\) + \\(c\\).  "
+    },
+    {
+        "llm_response": "####Time####",
+        "llm_answer": "Time",
+        "answer": "Time",
+        "time": 0.4669373035430908,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nThe basic relationship in travel problems: Distance = Speed * ____.  "
+    },
+    {
+        "llm_response": "####d####",
+        "llm_answer": "d",
+        "answer": "\\( d \\)",
+        "time": 0.7667555809020996,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nLet \\( f(x) \\in \\text{GF}(q)[x] \\) (the polynomial ring over \\( \\text{GF}(q) \\)) be a polynomial of degree \\( d \\geq 1 \\). Then \\( f(x) \\) has at most ____ distinct roots in \\( \\text{GF}(q) \\) (with multiple roots counted according to their multiplicities).  "
+    },
+    {
+        "llm_response": "####__\\( n_1 + n_2 + n_3 \\)__####",
+        "llm_answer": "__\\( n_1 + n_2 + n_3 \\)__",
+        "answer": "\\( n_1 + n_2 + n_3 \\)",
+        "time": 0.7188336849212646,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nIf there are 3 mutually exclusive plans to complete a task, with \\( n_1 \\) ways in the 1st plan, \\( n_2 \\) ways in the 2nd plan, and \\( n_3 \\) ways in the 3rd plan, then the total number of ways to complete the task is ____.  "
+    },
+    {
+        "llm_response": "####f(a)####",
+        "llm_answer": "f(a)",
+        "answer": "\\( f(a) \\)",
+        "time": 0.45848703384399414,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nIf the polynomial \\( f(x) \\) is divided by the linear polynomial \\( (x - a) \\), the remainder is a constant, and this constant is equal to ____.  "
+    },
+    {
+        "llm_response": "####parallel to####",
+        "llm_answer": "parallel to",
+        "answer": "parallel to",
+        "time": 0.4934844970703125,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nIf a line is parallel to a plane, and a plane passing through this line intersects the original plane, then the line is ____ the intersection line.  "
+    },
+    {
+        "llm_response": "####equal to####",
+        "llm_answer": "equal to",
+        "answer": "equal to",
+        "time": 0.4440789222717285,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nIn a right-angled triangle in a plane, the sum of the squares of the two legs is ____ the square of the hypotenuse.  "
+    },
+    {
+        "llm_response": "####\\(\\frac{a^2 + b^2 - c^2}{2ab}\\)####",
+        "llm_answer": "\\(\\frac{a^2 + b^2 - c^2}{2ab}\\)",
+        "answer": "$\\frac{\\text{adjacent side}}{\\text{hypotenuse}}$  ",
+        "time": 0.5230319499969482,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nAccording to the Law of Cosines, \\( \\cos\\theta = \\) ____.  "
+    },
+    {
+        "llm_response": "####permutation####",
+        "llm_answer": "permutation",
+        "answer": "permutation",
+        "time": 0.4517688751220703,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nTaking all \\( n \\) distinct elements for arrangement (i.e., \"selecting all elements for ordering\") is called a(n) ____ of the \\( n \\) elements.  "
+    },
+    {
+        "llm_response": "####infinitely many####",
+        "llm_answer": "infinitely many",
+        "answer": "infinitely many",
+        "time": 0.5998034477233887,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nAny linear equation in two variables (e.g., \\( ax + by = c \\), where \\( a \\neq 0 \\) and \\( b \\neq 0 \\)) has ____ sets of solutions.  "
+    },
+    {
+        "llm_response": "####equal and parallel####",
+        "llm_answer": "equal and parallel",
+        "answer": "parallel and equal",
+        "time": 0.6259915828704834,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nThe two pairs of opposite sides of a parallelogram are respectively ____.  "
+    },
+    {
+        "llm_response": "####hyperbola####",
+        "llm_answer": "hyperbola",
+        "answer": "hyperbola",
+        "time": 0.46807193756103516,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nThe locus of points in a plane where the absolute value of the difference between the distances to two fixed points \\( F_1 \\) and \\( F_2 \\) (called foci) is equal to a constant (denoted as \\( 2a \\), with \\( 0 < 2a < |F_1F_2| \\)) is called a(n) ____.  "
+    },
+    {
+        "llm_response": "####median####",
+        "llm_answer": "median",
+        "answer": "median",
+        "time": 0.42182326316833496,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nArrange a set of data in ascending (or descending) order. If the number of data points is odd, the number at the middle position is the ____ of this set of data.  "
+    },
+    {
+        "llm_response": "####minus",
+        "llm_answer": "####minus",
+        "answer": "minus",
+        "time": 0.4309511184692383,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nFor any two finite sets \\( A \\) and \\( B \\), the number of elements in their union is equal to the sum of the number of elements in the two sets ____ the number of elements in their intersection.  "
+    },
+    {
+        "llm_response": "####similar####",
+        "llm_answer": "similar",
+        "answer": "similar",
+        "time": 0.45701003074645996,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nIf the corresponding angles of two triangles are equal and their corresponding sides are proportional, then the two triangles are ____.  "
+    },
+    {
+        "llm_response": "####hypotenuse####",
+        "llm_answer": "hypotenuse",
+        "answer": "hypotenuse",
+        "time": 0.4557042121887207,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nIn a right triangle, the square of a leg is equal to the product of its projection on the hypotenuse and the ____.  "
+    },
+    {
+        "llm_response": "####incenter####",
+        "llm_answer": "incenter",
+        "answer": "incenter",
+        "time": 0.5652515888214111,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nThere exists a point inside a tetrahedron that is equidistant from all its faces. This point is called the ____ of the tetrahedron.  "
+    },
+    {
+        "llm_response": "####right angles####",
+        "llm_answer": "right angles",
+        "answer": "right angles",
+        "time": 0.43505191802978516,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\n    All four angles of a rectangle are ____.  "
+    },
+    {
+        "llm_response": "####n####",
+        "llm_answer": "n",
+        "answer": "n",
+        "time": 0.4417266845703125,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nFor any positive integer \\( n \\), the equation \\( x^n = 1 \\) has exactly ____ distinct complex solutions.  "
+    }
+]

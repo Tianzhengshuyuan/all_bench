@@ -13,7 +13,8 @@ from volcenginesdkarkruntime import Ark
 deepseek_client = OpenAI(api_key="sk-09da13b2c97948628523d042d6a02f06", base_url="https://api.deepseek.com")
 kimi_client = OpenAI(api_key="sk-ODuizMlUC22phanBhvYz6dBjx2yrz7vhKhcjKnoIrYssThQo", base_url="https://api.moonshot.cn/v1")
 doubao_client = Ark(api_key="196b33be-8abb-4af3-9fba-6e266b2dd942")
-mistral_client = Mistral(api_key="zWUDyBGqEIdJAtJoxnsr6ACcLTgz1auH")
+# mistral_client = Mistral(api_key="zWUDyBGqEIdJAtJoxnsr6ACcLTgz1auH")
+mistral_client = Mistral(api_key="GYCQ8pMgX3E51NsmAjqrwI25zLZClHxo")
 qwen_client = OpenAI(api_key="sk-341becd932d743f2a750495a0f9f3ede", base_url="https://dashscope.aliyuncs.com/compatible-mode/v1")
 
 # == API 调用 ==
@@ -35,8 +36,10 @@ def call_doubao_api(messages, args):
 
 def call_deepseek_api(messages, args):
     try:
-        response = deepseek_client.chat.completions.create(
-            model="deepseek-chat",
+        # response = deepseek_client.chat.completions.create(
+        response = doubao_client.chat.completions.create(
+            # model="deepseek-chat",
+            model="deepseek-v3-250324",
             messages=messages,
             temperature=args.temperature,
             top_p=args.top_p,
@@ -113,6 +116,22 @@ def call_mistralS_api(messages, args):
         print(f"调用 Mistral API 时出错: {e}")
         return "API 调用失败"
     
+def call_mistralM_api(messages, args):
+    try:
+        response = mistral_client.chat.complete(
+            model="mistral-medium-latest",
+            messages=messages,
+            temperature=args.temperature,
+            top_p=args.top_p,
+            presence_penalty=args.presence_penalty,
+            max_tokens=args.max_tokens,
+            stream=False
+        )
+        return response.choices[0].message.content
+    except Exception as e:
+        print(f"调用 MistralM API 时出错: {e}")
+        return "API 调用失败"
+    
 def call_mistralL_api(messages, args):
     try:
         response = mistral_client.chat.complete(
@@ -143,6 +162,26 @@ def call_gpt35_api(messages, args):
             max_tokens=args.max_tokens,
             stream=False
         )
+        return response.choices[0].message.content
+    except Exception as e:
+        print(f"调用 gpt API 时出错: {e}")
+        return "API 调用失败"
+    
+def call_gpt41_api(messages, args):
+    os.environ["HTTP_PROXY"] = "http://localhost:7890"
+    os.environ["HTTPS_PROXY"] = "http://localhost:7890"
+    try:
+        openai.api_key = os.getenv("OPENAI_API_KEY")
+        response = openai.chat.completions.create(
+            model="gpt-4.1",
+            messages=messages,
+            temperature=args.temperature,
+            top_p=args.top_p,
+            presence_penalty=args.presence_penalty,
+            max_tokens=args.max_tokens,
+            stream=False
+        )
+        print(response)
         return response.choices[0].message.content
     except Exception as e:
         print(f"调用 gpt API 时出错: {e}")
@@ -181,12 +220,16 @@ def call_LLM_api(model, messages, args):
         return call_qwen25_api(messages, args)
     elif model == "mistralS":
         return call_mistralS_api(messages, args)
+    elif model == "mistralM":
+        return call_mistralM_api(messages, args)
     elif model == "mistralL":   
         return call_mistralL_api(messages, args)
     elif model == "gpt35":
         return call_gpt35_api(messages, args)
     elif model == "gpt4":
         return call_gpt4_api(messages, args)
+    elif model == "gpt41":
+        return call_gpt41_api(messages, args)
     
 # == 提取模型答案 ==
 def extract_answer_from_response(content):
@@ -210,7 +253,11 @@ def test_default(input_file, args):
     for i, row in enumerate(all_rows):
         question = row[0]
         answer = row[1] 
-        prompt = f"The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\n{row[0]}"
+        if args.cot:
+            prompt = f"The following is fill-in-the-blank question. Analyze it step by step and enclose the final answer with two pairs of ####, for example: ####6####.\n{row[0]}"
+        else:
+            prompt = f"The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\n{row[0]}"
+        
         messages = [
             {"role": "system", "content": "You are a helpful assistant."},
             {"role": "user", "content": prompt}
@@ -229,11 +276,13 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--model", type=str, default="doubao")
     parser.add_argument("--csv_dir", type=str, default="csv")
-    parser.add_argument("--temperature", type=float, default=1.0)
-    parser.add_argument("--top_p", type=float, default=1.0)
-    parser.add_argument("--presence_penalty", type=float, default=0.0)
-    parser.add_argument("--max_tokens", type=int, default=1024)
+    parser.add_argument("--temperature", type=float)
+    parser.add_argument("--top_p", type=float)
+    parser.add_argument("--presence_penalty")
+    parser.add_argument("--max_tokens", type=int)
+    parser.add_argument("--cot", action="store_true", help="是否使用COT")
+    parser.add_argument("--input", type=str, default="csv/filling_english_analogical.csv", help="输入的CSV文件路径")
     args = parser.parse_args()
 
-    test_default("csv/filling_english.csv", args)
+    test_default(args.input, args)
 

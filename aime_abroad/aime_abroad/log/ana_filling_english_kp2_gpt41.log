@@ -1,0 +1,241 @@
+第1题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+What line are the graphs of the exponential function \( y = a^x \) and the logarithmic function \( y = \log_a x \) symmetric about?  
+
+ChatCompletion(id='chatcmpl-CJ8hFN1mDe88CCFxzr85ZB5czji5B', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='####y = x####', refusal=None, role='assistant', annotations=[], audio=None, function_call=None, tool_calls=None))], created=1758677697, model='gpt-4.1-2025-04-14', object='chat.completion', service_tier='default', system_fingerprint='fp_3502f4eb73', usage=CompletionUsage(completion_tokens=5, prompt_tokens=91, total_tokens=96, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0)))
+模型回答: ####y = x#### 
+正确答案: y=x
+
+第2题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+The sufficient and necessary condition for a function \( f(x) \) to be differentiable at point \( x_0 \) is that the left-hand derivative and the ____ of \( f(x) \) at \( x_0 \) both exist and are equal.  
+
+ChatCompletion(id='chatcmpl-CJ8hGcigdK8fUUI5ZjpqVHKoR75Iv', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='####right-hand derivative####', refusal=None, role='assistant', annotations=[], audio=None, function_call=None, tool_calls=None))], created=1758677698, model='gpt-4.1-2025-04-14', object='chat.completion', service_tier='default', system_fingerprint='fp_3502f4eb73', usage=CompletionUsage(completion_tokens=5, prompt_tokens=112, total_tokens=117, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0)))
+模型回答: ####right-hand derivative#### 
+正确答案: right-hand derivative
+
+第3题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+Suppose \( A \) and \( B \) are two random events. If \( P(A|B) = P(A) \) (or \( P(B|A) = P(B) \), and \( P(A) > 0 \), \( P(B) > 0 \)), then events \( A \) and \( B \) are said to be mutually ____.  
+
+ChatCompletion(id='chatcmpl-CJ8hHeX7AjXQKJU5vktQfErTllk0t', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='####independent####', refusal=None, role='assistant', annotations=[], audio=None, function_call=None, tool_calls=None))], created=1758677699, model='gpt-4.1-2025-04-14', object='chat.completion', service_tier='default', system_fingerprint='fp_daf5fcc80a', usage=CompletionUsage(completion_tokens=4, prompt_tokens=137, total_tokens=141, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0)))
+模型回答: ####independent#### 
+正确答案: independent
+
+第4题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+If a non-terminal position has at least one subsequent position that is a P-position, then this position is a _____.  
+
+ChatCompletion(id='chatcmpl-CJ8hIWdSPo28Gg65ud5Cv2WIz9mF7', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='####N-position####', refusal=None, role='assistant', annotations=[], audio=None, function_call=None, tool_calls=None))], created=1758677700, model='gpt-4.1-2025-04-14', object='chat.completion', service_tier='default', system_fingerprint='fp_3502f4eb73', usage=CompletionUsage(completion_tokens=4, prompt_tokens=81, total_tokens=85, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0)))
+模型回答: ####N-position#### 
+正确答案: N-position
+
+第5题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+If a line outside a plane is parallel to a line inside the plane, then the line is ____ to the plane.  
+
+ChatCompletion(id='chatcmpl-CJ8hJVVhxFqpsBUC50d1s8TAhbW2D', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='####parallel####', refusal=None, role='assistant', annotations=[], audio=None, function_call=None, tool_calls=None))], created=1758677701, model='gpt-4.1-2025-04-14', object='chat.completion', service_tier='default', system_fingerprint='fp_3502f4eb73', usage=CompletionUsage(completion_tokens=3, prompt_tokens=81, total_tokens=84, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0)))
+模型回答: ####parallel#### 
+正确答案: parallel
+
+第6题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+If the inner function \( u = g(x) \) is monotonically increasing on the interval \( I \), and the outer function \( y = f(u) \) is also monotonically increasing on the corresponding interval \( g(I) \) (the range of \( g(x) \) on \( I \)), then the composite function \( y = f(g(x)) \) is ____ on \( I \).  
+
+ChatCompletion(id='chatcmpl-CJ8hKI2chwcHaoloT0roSmi95aiYM', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='####monotonically increasing####', refusal=None, role='assistant', annotations=[], audio=None, function_call=None, tool_calls=None))], created=1758677702, model='gpt-4.1-2025-04-14', object='chat.completion', service_tier='default', system_fingerprint='fp_3502f4eb73', usage=CompletionUsage(completion_tokens=6, prompt_tokens=142, total_tokens=148, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0)))
+模型回答: ####monotonically increasing#### 
+正确答案: monotonically increasing
+
+第7题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+Let \( G \) be a finite group and \( H \) be a subgroup of \( G \). According to Lagrange's Theorem, the relationship satisfied by the order of \( G \) (denoted \( |G| \)), the order of \( H \) (denoted \( |H| \)), and the number of cosets of \( H \) in \( G \) (denoted \( [G:H] \)) is ________________.  
+
+ChatCompletion(id='chatcmpl-CJ8hLEkRiwHUHd4as58icaIQhoJAG', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='####|G| = |H| \\cdot [G:H]####', refusal=None, role='assistant', annotations=[], audio=None, function_call=None, tool_calls=None))], created=1758677703, model='gpt-4.1-2025-04-14', object='chat.completion', service_tier='default', system_fingerprint='fp_3502f4eb73', usage=CompletionUsage(completion_tokens=16, prompt_tokens=154, total_tokens=170, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0)))
+模型回答: ####|G| = |H| \cdot [G:H]#### 
+正确答案: \( |G| = |H| \times [G:H] \)
+
+第8题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+If two angles are each supplementary to two equal angles respectively, then the two angles are ____.
+
+ChatCompletion(id='chatcmpl-CJ8hMtO2XSy444u4rfrU6yc4vFAOh', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='####equal####', refusal=None, role='assistant', annotations=[], audio=None, function_call=None, tool_calls=None))], created=1758677704, model='gpt-4.1-2025-04-14', object='chat.completion', service_tier='default', system_fingerprint='fp_62bb2e3c55', usage=CompletionUsage(completion_tokens=3, prompt_tokens=75, total_tokens=78, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0)))
+模型回答: ####equal#### 
+正确答案: equal
+
+第9题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+\(\log_a \frac{M}{N} = \log_a M\) ____ \(\log_a N\)  
+
+ChatCompletion(id='chatcmpl-CJ8hNOVo0VRQub99SeopfOxuRr946', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='####-####', refusal=None, role='assistant', annotations=[], audio=None, function_call=None, tool_calls=None))], created=1758677705, model='gpt-4.1-2025-04-14', object='chat.completion', service_tier='default', system_fingerprint='fp_3502f4eb73', usage=CompletionUsage(completion_tokens=3, prompt_tokens=83, total_tokens=86, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0)))
+模型回答: ####-#### 
+正确答案: minus
+
+第10题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+Raise \( a \) to the power of "the logarithm of \( N \) with base \( a \)", and the result is ____.  
+
+ChatCompletion(id='chatcmpl-CJ8hOa1E9UHC45lLKZhxMPRHUmPQa', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='####N####', refusal=None, role='assistant', annotations=[], audio=None, function_call=None, tool_calls=None))], created=1758677706, model='gpt-4.1-2025-04-14', object='chat.completion', service_tier='default', system_fingerprint='fp_3502f4eb73', usage=CompletionUsage(completion_tokens=3, prompt_tokens=87, total_tokens=90, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0)))
+模型回答: ####N#### 
+正确答案: \( N \)
+
+第11题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+Numbers of the form \( z = a + bi \) are called complex numbers, where \( a \) is the real part of the complex number \( z \), and \( b \) is called the ____ of the complex number \( z \).  
+
+ChatCompletion(id='chatcmpl-CJ8hPsgkdnjgSYsgFol8Dpqa3cc1I', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='####imaginary part####', refusal=None, role='assistant', annotations=[], audio=None, function_call=None, tool_calls=None))], created=1758677707, model='gpt-4.1-2025-04-14', object='chat.completion', service_tier='default', system_fingerprint='fp_3502f4eb73', usage=CompletionUsage(completion_tokens=5, prompt_tokens=108, total_tokens=113, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0)))
+模型回答: ####imaginary part#### 
+正确答案: imaginary part
+
+第12题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+If the hundreds, tens, and units digits of a three-digit number are \(a\), \(b\), and \(c\) respectively, then the number is ____ + \(10b\) + \(c\).  
+
+ChatCompletion(id='chatcmpl-CJ8hP8apXbSf7c5CuXIBMb6gHyRQc', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='####100a####', refusal=None, role='assistant', annotations=[], audio=None, function_call=None, tool_calls=None))], created=1758677707, model='gpt-4.1-2025-04-14', object='chat.completion', service_tier='default', system_fingerprint='fp_62bb2e3c55', usage=CompletionUsage(completion_tokens=4, prompt_tokens=103, total_tokens=107, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0)))
+模型回答: ####100a#### 
+正确答案: \(100a\)
+
+第13题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+The basic relationship in travel problems: Distance = Speed * ____.  
+
+ChatCompletion(id='chatcmpl-CJ8hQ47f3FHBp7ggG4SDGirDcucHr', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='####Time####', refusal=None, role='assistant', annotations=[], audio=None, function_call=None, tool_calls=None))], created=1758677708, model='gpt-4.1-2025-04-14', object='chat.completion', service_tier='default', system_fingerprint='fp_3502f4eb73', usage=CompletionUsage(completion_tokens=3, prompt_tokens=70, total_tokens=73, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0)))
+模型回答: ####Time#### 
+正确答案: Time
+
+第14题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+Let \( f(x) \in \text{GF}(q)[x] \) (the polynomial ring over \( \text{GF}(q) \)) be a polynomial of degree \( d \geq 1 \). Then \( f(x) \) has at most ____ distinct roots in \( \text{GF}(q) \) (with multiple roots counted according to their multiplicities).  
+
+ChatCompletion(id='chatcmpl-CJ8hRRtPi34ShKM2ZYDNWfzVB7nEl', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='####d####', refusal=None, role='assistant', annotations=[], audio=None, function_call=None, tool_calls=None))], created=1758677709, model='gpt-4.1-2025-04-14', object='chat.completion', service_tier='default', system_fingerprint='fp_3502f4eb73', usage=CompletionUsage(completion_tokens=3, prompt_tokens=139, total_tokens=142, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0)))
+模型回答: ####d#### 
+正确答案: \( d \)
+
+第15题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+If there are 3 mutually exclusive plans to complete a task, with \( n_1 \) ways in the 1st plan, \( n_2 \) ways in the 2nd plan, and \( n_3 \) ways in the 3rd plan, then the total number of ways to complete the task is ____.  
+
+ChatCompletion(id='chatcmpl-CJ8hSYi7Ru5eVF0NiAINavsHQL4KL', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='####n_1 + n_2 + n_3####', refusal=None, role='assistant', annotations=[], audio=None, function_call=None, tool_calls=None))], created=1758677710, model='gpt-4.1-2025-04-14', object='chat.completion', service_tier='default', system_fingerprint='fp_3502f4eb73', usage=CompletionUsage(completion_tokens=13, prompt_tokens=127, total_tokens=140, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0)))
+模型回答: ####n_1 + n_2 + n_3#### 
+正确答案: \( n_1 + n_2 + n_3 \)
+
+第16题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+If the polynomial \( f(x) \) is divided by the linear polynomial \( (x - a) \), the remainder is a constant, and this constant is equal to ____.  
+
+ChatCompletion(id='chatcmpl-CJ8hTg3tXPU96hXZVgG2ESKbReIAQ', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='####f(a)####', refusal=None, role='assistant', annotations=[], audio=None, function_call=None, tool_calls=None))], created=1758677711, model='gpt-4.1-2025-04-14', object='chat.completion', service_tier='default', system_fingerprint='fp_62bb2e3c55', usage=CompletionUsage(completion_tokens=5, prompt_tokens=94, total_tokens=99, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0)))
+模型回答: ####f(a)#### 
+正确答案: \( f(a) \)
+
+第17题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+If a line is parallel to a plane, and a plane passing through this line intersects the original plane, then the line is ____ the intersection line.  
+
+ChatCompletion(id='chatcmpl-CJ8hUrSd9zD0DZesjeSwmveBdkxqY', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='####parallel to####', refusal=None, role='assistant', annotations=[], audio=None, function_call=None, tool_calls=None))], created=1758677712, model='gpt-4.1-2025-04-14', object='chat.completion', service_tier='default', system_fingerprint='fp_daf5fcc80a', usage=CompletionUsage(completion_tokens=4, prompt_tokens=87, total_tokens=91, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0)))
+模型回答: ####parallel to#### 
+正确答案: parallel to
+
+第18题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+In a right-angled triangle in a plane, the sum of the squares of the two legs is ____ the square of the hypotenuse.  
+
+ChatCompletion(id='chatcmpl-CJ8hVYw2STsZ7myHCCJODcVIJlcH8', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='####equal to####', refusal=None, role='assistant', annotations=[], audio=None, function_call=None, tool_calls=None))], created=1758677713, model='gpt-4.1-2025-04-14', object='chat.completion', service_tier='default', system_fingerprint='fp_3502f4eb73', usage=CompletionUsage(completion_tokens=4, prompt_tokens=86, total_tokens=90, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0)))
+模型回答: ####equal to#### 
+正确答案: equal to
+
+第19题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+According to the Law of Cosines, \( \cos\theta = \) ____.  
+
+ChatCompletion(id='chatcmpl-CJ8hVn2GTVWLRoHKCasro88J6cxFv', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='####\\(\\frac{a^2 + b^2 - c^2}{2ab}\\)####', refusal=None, role='assistant', annotations=[], audio=None, function_call=None, tool_calls=None))], created=1758677713, model='gpt-4.1-2025-04-14', object='chat.completion', service_tier='default', system_fingerprint='fp_daf5fcc80a', usage=CompletionUsage(completion_tokens=22, prompt_tokens=75, total_tokens=97, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0)))
+模型回答: ####\(\frac{a^2 + b^2 - c^2}{2ab}\)#### 
+正确答案: $\frac{\text{adjacent side}}{\text{hypotenuse}}$  
+
+第20题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+Taking all \( n \) distinct elements for arrangement (i.e., "selecting all elements for ordering") is called a(n) ____ of the \( n \) elements.  
+
+ChatCompletion(id='chatcmpl-CJ8hW1s8zkvTzSmNpnBhZRxnKUlV6', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='####permutation####', refusal=None, role='assistant', annotations=[], audio=None, function_call=None, tool_calls=None))], created=1758677714, model='gpt-4.1-2025-04-14', object='chat.completion', service_tier='default', system_fingerprint='fp_62bb2e3c55', usage=CompletionUsage(completion_tokens=4, prompt_tokens=93, total_tokens=97, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0)))
+模型回答: ####permutation#### 
+正确答案: permutation
+
+第21题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+Any linear equation in two variables (e.g., \( ax + by = c \), where \( a \neq 0 \) and \( b \neq 0 \)) has ____ sets of solutions.  
+
+ChatCompletion(id='chatcmpl-CJ8hXrqUFLetoAa2vlYsiledKlAQK', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='####infinitely many####', refusal=None, role='assistant', annotations=[], audio=None, function_call=None, tool_calls=None))], created=1758677715, model='gpt-4.1-2025-04-14', object='chat.completion', service_tier='default', system_fingerprint='fp_3502f4eb73', usage=CompletionUsage(completion_tokens=5, prompt_tokens=99, total_tokens=104, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0)))
+模型回答: ####infinitely many#### 
+正确答案: infinitely many
+
+第22题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+The two pairs of opposite sides of a parallelogram are respectively ____.  
+
+ChatCompletion(id='chatcmpl-CJ8hY4vgnhQuaXCHji9SZwAE7QC5W', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='####equal####', refusal=None, role='assistant', annotations=[], audio=None, function_call=None, tool_calls=None))], created=1758677716, model='gpt-4.1-2025-04-14', object='chat.completion', service_tier='default', system_fingerprint='fp_62bb2e3c55', usage=CompletionUsage(completion_tokens=3, prompt_tokens=72, total_tokens=75, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0)))
+模型回答: ####equal#### 
+正确答案: parallel and equal
+
+第23题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+The locus of points in a plane where the absolute value of the difference between the distances to two fixed points \( F_1 \) and \( F_2 \) (called foci) is equal to a constant (denoted as \( 2a \), with \( 0 < 2a < |F_1F_2| \)) is called a(n) ____.  
+
+ChatCompletion(id='chatcmpl-CJ8hZfnjOXzWOmTxNu2fC2VXIwapo', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='####hyperbola####', refusal=None, role='assistant', annotations=[], audio=None, function_call=None, tool_calls=None))], created=1758677717, model='gpt-4.1-2025-04-14', object='chat.completion', service_tier='default', system_fingerprint='fp_daf5fcc80a', usage=CompletionUsage(completion_tokens=4, prompt_tokens=137, total_tokens=141, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0)))
+模型回答: ####hyperbola#### 
+正确答案: hyperbola
+
+第24题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+Arrange a set of data in ascending (or descending) order. If the number of data points is odd, the number at the middle position is the ____ of this set of data.  
+
+ChatCompletion(id='chatcmpl-CJ8hasEjqGW4um2lklvmptH1lh9ut', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='####median####', refusal=None, role='assistant', annotations=[], audio=None, function_call=None, tool_calls=None))], created=1758677718, model='gpt-4.1-2025-04-14', object='chat.completion', service_tier='default', system_fingerprint='fp_daf5fcc80a', usage=CompletionUsage(completion_tokens=3, prompt_tokens=94, total_tokens=97, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0)))
+模型回答: ####median#### 
+正确答案: median
+
+第25题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+For any two finite sets \( A \) and \( B \), the number of elements in their union is equal to the sum of the number of elements in the two sets ____ the number of elements in their intersection.  
+
+ChatCompletion(id='chatcmpl-CJ8hbGqM03qUPxpHy8mpqKSqjV2ki', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='####minus####', refusal=None, role='assistant', annotations=[], audio=None, function_call=None, tool_calls=None))], created=1758677719, model='gpt-4.1-2025-04-14', object='chat.completion', service_tier='default', system_fingerprint='fp_3502f4eb73', usage=CompletionUsage(completion_tokens=3, prompt_tokens=101, total_tokens=104, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0)))
+模型回答: ####minus#### 
+正确答案: minus
+
+第26题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+If the corresponding angles of two triangles are equal and their corresponding sides are proportional, then the two triangles are ____.  
+
+ChatCompletion(id='chatcmpl-CJ8hcaMAL4w72IdFW32aodOtC4S22', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='####congruent####', refusal=None, role='assistant', annotations=[], audio=None, function_call=None, tool_calls=None))], created=1758677720, model='gpt-4.1-2025-04-14', object='chat.completion', service_tier='default', system_fingerprint='fp_62bb2e3c55', usage=CompletionUsage(completion_tokens=5, prompt_tokens=80, total_tokens=85, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0)))
+模型回答: ####congruent#### 
+正确答案: similar
+
+第27题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+In a right triangle, the square of a leg is equal to the product of its projection on the hypotenuse and the ____.  
+
+ChatCompletion(id='chatcmpl-CJ8hcBsDxwGRo0yGhR2L2Ryb0PFbD', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='####whole hypotenuse####', refusal=None, role='assistant', annotations=[], audio=None, function_call=None, tool_calls=None))], created=1758677720, model='gpt-4.1-2025-04-14', object='chat.completion', service_tier='default', system_fingerprint='fp_62bb2e3c55', usage=CompletionUsage(completion_tokens=6, prompt_tokens=84, total_tokens=90, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0)))
+模型回答: ####whole hypotenuse#### 
+正确答案: hypotenuse
+
+第28题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+There exists a point inside a tetrahedron that is equidistant from all its faces. This point is called the ____ of the tetrahedron.  
+
+ChatCompletion(id='chatcmpl-CJ8hdZeOlSwTPODnHmNNyDvhM7gkz', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='####incenter####', refusal=None, role='assistant', annotations=[], audio=None, function_call=None, tool_calls=None))], created=1758677721, model='gpt-4.1-2025-04-14', object='chat.completion', service_tier='default', system_fingerprint='fp_62bb2e3c55', usage=CompletionUsage(completion_tokens=4, prompt_tokens=86, total_tokens=90, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0)))
+模型回答: ####incenter#### 
+正确答案: incenter
+
+第29题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+    All four angles of a rectangle are ____.  
+
+ChatCompletion(id='chatcmpl-CJ8hep8jDj2kZWzOJg063OKIwzPDU', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='####right angles####', refusal=None, role='assistant', annotations=[], audio=None, function_call=None, tool_calls=None))], created=1758677722, model='gpt-4.1-2025-04-14', object='chat.completion', service_tier='default', system_fingerprint='fp_3502f4eb73', usage=CompletionUsage(completion_tokens=4, prompt_tokens=67, total_tokens=71, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0)))
+模型回答: ####right angles#### 
+正确答案: right angles
+
+第30题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+For any positive integer \( n \), the equation \( x^n = 1 \) has exactly ____ distinct complex solutions.  
+
+ChatCompletion(id='chatcmpl-CJ8hfW7V9LBcJc1go3kvDBXjLmR17', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='####n####', refusal=None, role='assistant', annotations=[], audio=None, function_call=None, tool_calls=None))], created=1758677723, model='gpt-4.1-2025-04-14', object='chat.completion', service_tier='default', system_fingerprint='fp_3502f4eb73', usage=CompletionUsage(completion_tokens=3, prompt_tokens=83, total_tokens=86, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0)))
+模型回答: ####n#### 
+正确答案: n
+
+总题数: 30, 正确数: 18, 正确率: 60.00%, 耗时: 28.80s

@@ -1,0 +1,232 @@
+第1题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+Let $x,y$ and $z$ be positive real numbers that satisfy the following system of equations: 
+\[\log_2\left({x \over yz}\right) = {1 \over 2}\]
+\[\log_2\left({y \over xz}\right) = {1 \over 3}\]
+\[\log_2\left({z \over xy}\right) = {1 \over 8}\]
+Then the value of $\left|\log_2(x^4y^3z^2)\right|$ is $\tfrac{m}{n}$ where $m$ and $n$ are relatively prime positive integers. Find $m+n$.
+
+模型回答: ####113#### 
+正确答案: 59
+
+第2题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+Let $O(0,0), A(\tfrac{\sqrt{2}}{2}, 0),$ and $B(0, \tfrac{\sqrt{2}}{2})$ be points in the coordinate plane. Let $\mathcal{F}$ be the family of segments $\overline{PQ}$ of unit length lying in the first quadrant with $P$ on the $x$-axis and $Q$ on the $y$-axis. There is a unique point $C$ on $\overline{AB}$, distinct from $A$ and $B$, that does not belong to any segment from $\mathcal{F}$ other than $\overline{AB}$. Then $OC^2 = \tfrac{p}{q}$, where $p$ and $q$ are relatively prime positive integers. Find $p + q$.
+
+模型回答: ####29#### 
+正确答案: 5
+
+第3题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+Jen enters a lottery by picking $6$ distinct numbers from $S=\{1,2,3,\cdots,9,10\}.$ $6$ numbers are randomly chosen from $S.$ She wins a prize if at least two of her numbers were $2$ of the randomly chosen numbers, and wins the grand prize if all four of her numbers were the randomly chosen numbers. The probability of her winning the grand prize given that she won a prize is $\tfrac{m}{n}$ where $m$ and $n$ are relatively prime positive integers. Find $m+n$.
+
+模型回答: ####21#### 
+正确答案: 211
+
+第4题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+Alice and Bob play the following game. A stack of $n$ tokens lies before them. The players take turns with Alice going first. On each turn, the player removes either $1$ token or $4$ tokens from the stack. Whoever removes the last token wins. Find the number of positive integers $n$ less than or equal to $1037$ for which there exists a strategy for Bob that guarantees that Bob will win the game regardless of Alice's play.
+
+模型回答: ####756#### 
+正确答案: 415
+
+第5题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+Nine circles of radius $34$ are sequentially tangent, and two of the circles are tangent to $AB$ and $BC$ of triangle $ABC$, respectively. $2024$ circles of radius $1$ can be arranged in the same manner. The inradius of triangle $ABC$ can be expressed as $\frac{m}{n}$, where $m$ and $n$ are relatively prime positive integers. Find $m+n$.
+
+模型回答: ####1013#### 
+正确答案: 4133
+
+第6题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+Define $f(x)=|| x|-\tfrac{1}{2}|$ and $g(x)=|| x|-\tfrac{1}{4}|$. Find the number of intersections of the graphs of \[y=4 g(f(\sin (2 \pi x))) \quad\text{ and }\quad x=4 g(f(\cos (2 \pi y))).\]
+
+模型回答: ####200#### 
+正确答案: 256
+
+第7题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+Each vertex of a regular hexagon is independently colored either red or blue with equal probability. The probability that the hexagon can then be rotated so that all of the blue vertices end up at positions where there were originally red vertices is $\tfrac{m}{n}$, where $m$ and $n$ are relatively prime positive integers. What is $m+n$?
+
+模型回答: ####101#### 
+正确答案: 47
+
+第8题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+Find the number of triples of nonnegative integers $(a,b,c)$ satisfying $a + b + c = 400$ and \[a^2b + a^2c + b^2a + b^2c + c^2a + c^2b = 6,000,000.\]
+
+模型回答: ####1201#### 
+正确答案: 0
+
+第9题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+There exist real numbers $x$ and $y$, both greater than 1, such that $\log_x\left(y^x\right)=\log_y\left(x^{4y}\right)=40$. Find $xy$.
+
+模型回答: ####**1600**#### 
+正确答案: 400
+
+第10题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+Alice chooses a set $A$ of positive integers. Then Bob lists all finite nonempty sets $B$ of positive integers with the property that the maximum element of $B$ belongs to $A$. Bob's list has 2077 sets. Find the sum of the elements of A.
+
+模型回答: ####28#### 
+正确答案: 25
+
+第11题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+Find the largest possible real part of \[(100+117i)z + \frac{96+144i}{z}\] where $z$ is a complex number with $|z|=4$.
+
+模型回答: ####125#### 
+正确答案: 540
+
+第12题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+Find the number of ways to place a digit in each cell of a 2x4 grid so that the sum of the two numbers formed by reading left to right is $9999$, and the sum of the three numbers formed by reading top to bottom is $99$. The grid below is an example of such an arrangement because $7+9992=999$ and $9+9+9+72=99$.
+
+\[\begin{array}{|c|c|c|c|} \hline 0 & 0 & 0 & 7 \\ \hline 9 & 9 & 9 & 2 \\ \hline \end{array}\]
+
+模型回答: ####100#### 
+正确答案: 120
+
+第13题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+Every morning Aya goes for a $4.2$-kilometer-long walk and stops at a coffee shop afterwards. When she walks at a constant speed of $s$ kilometers per hour, the walk takes her 4 hours, including $t$ minutes spent in the coffee shop. When she walks $s+2$ kilometers per hour, the walk takes her 2 hours and 24 minutes, including $t$ minutes spent in the coffee shop. Suppose Aya walks at $s+rac{1}{2}$ kilometers per hour. Find the number of minutes the walk takes her, including the $t$ minutes spent in the coffee shop.
+
+模型回答: ####135#### 
+正确答案: 198
+
+第14题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+Let $N$ be the greatest four-digit positive integer with the property that whenever one of its digits is changed to $2$, the resulting number is divisible by $7$. Let $Q$ and $R$ be the quotient and remainder, respectively, when $N$ is divided by $1000$. Find $Q+R$.
+
+模型回答: ####1011#### 
+正确答案: 551
+
+第15题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+Consider the paths of length $16$ that follow the lines from the lower left corner to the upper right corner on an $8\times 8$ grid. Find the number of such paths that change direction exactly three times, as in the examples shown below.
+
+模型回答: ####1120#### 
+正确答案: 98
+
+第16题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+Let $p$ be the least prime number for which there exists a positive integer $n$ such that $n^{4}+1$ is divisible by $p^{2}$. Find the least positive integer $m$ such that $16m^{4}+1$ is divisible by $p^{2}$.
+
+模型回答: ####13#### 
+正确答案: 55
+
+第17题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+Let $\mathcal{B}$ be the set of rectangular boxes with surface area $54$ and volume $27$. Let $r$ be the radius of the smallest sphere that can contain each of the rectangular boxes that are elements of $\mathcal{B}$. The value of $r^2$ can be written as $\rac{p}{q}$, where $p$ and $q$ are relatively prime positive integers. Find $p+q$.
+
+模型回答: ####17#### 
+正确答案: 31
+
+第18题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+Find the number of rectangles that can be formed inside a fixed regular octagon (8-gon) where each side of the rectangle lies on either a side or a diagonal of the octagon. The diagram below shows three of those rectangles.
+
+模型回答: ####76#### 
+正确答案: 40
+
+第19题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+Let $\triangle ABC$ have circumcenter $O$ and incenter $I$ with $\overline{IA}\perp\overline{OI}$, circumradius $13$, and inradius $8$. Find $AB\cdot AC$.
+
+模型回答: ####217#### 
+正确答案: 624
+
+第20题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+There is a collection of $36$ indistinguishable white chips and $36$ indistinguishable black chips. Find the number of ways to place some of these chips in the $36$ unit cells of a $6\times6$ grid such that:
+
+each cell contains at most one chip
+all chips in the same row and all chips in the same column have the same colour
+any additional chip placed on the grid would violate one or more of the previous two conditions.
+
+模型回答: ####2^{12} \cdot 3^{6}#### 
+正确答案: 3846
+
+第21题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+Let $b \geq 2$ be an integer. Call a positive integer $n$ $b$\textit{-eautiful} if it has exactly two digits when expressed in base $b$, and these two digits sum to $\sqrt{n}$. For example, $81$ is $13$-eautiful because $81=\underline{6}\underline{3}_{13}$ and $6+3=\sqrt{81}$. Find the least integer $b \geq 2$ for which there are more than twelve $b$-eautiful integers.
+
+模型回答: ####23#### 
+正确答案: 211
+
+第22题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+Let ABCDEF be a convex equilateral hexagon in which all pairs of opposite sides are parallel. The triangle whose sides are extensions of segments AB, CD, and EF has side lengths 170, 255, and 204. Find the side length of the hexagon.
+
+模型回答: ####60#### 
+正确答案: 68
+
+第23题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+Let $A$, $B$, $C$, and $D$ be points on the hyperbola $\frac{x^2}{20}- \frac{y^2}{24} = 2$ such that $ABCD$ is a rhombus whose diagonals intersect at the origin. Find the greatest real number that is less than $BD^2$ for all such rhombi.
+
+模型回答: ####160#### 
+正确答案: 960
+
+第24题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+A list of positive integers has the following properties:
+
+\bullet The sum of the items in the list is 40.
+
+\bullet The unique mode of the list is 9.
+
+\bullet The median of the list is a positive integer that does not appear in the list itself.
+
+Find the sum of the squares of all the items in the list.
+
+模型回答: ####418#### 
+正确答案: 302
+
+第25题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+Among the 800 residents of Aimeville, there are 195 who own a diamond ring, 367 who own a set of golf clubs, and 562 who own a garden spade. In addition, each of the 900 residents owns a bag of candy hearts. There are 437 residents who own exactly two of these things, and 234 residents who own exactly three of these things. Find the number of residents of Aimeville who own all four of these things.
+
+模型回答: ####119#### 
+正确答案: 73
+
+第26题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+Let $ABC$ be a triangle inscribed in circle $\omega$. Let the tangents to $\omega$ at $B$ and $C$ intersect at point $D$, and let $\overline{AD}$ intersect $\omega$ at $P$. If $AB=6$, $BC=8$, and $AC=7$, $DP^2$ can be written as the form $\frac{m}{n}$, where $m$ and $n$ are relatively prime integers. Find $m + n$.
+
+[asy] import olympiad;  unitsize(15);  pair A, B, C, D, E, F, P, O;  C = origin; A = (10,0); B = (7.8, 4.4899); draw(A--B--C--cycle); draw(A..B..C..cycle, red+dotted);  O = circumcenter(A, B, C);  E = rotate(90,B) * (O); F = rotate(90,C) * (O);  D = IP(B..E + (B-E)*4, C..F + (C-F)*-3);  draw(B--D--C--D--A);  P = IP(D..A, A..B..C);  dot(A); dot(B); dot(C); dot(D); dot(P); label("$A$", A, dir(335)); label("$B$", B, dir(65)); label("$C$", C, dir(200)); label("$D$", D, dir(135)); label("$P$", P, dir(235)); [/asy]
+
+模型回答: ####221#### 
+正确答案: 32861
+
+第27题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+Torus $T$ is the surface produced by revolving a circle with radius $2$ around an axis in the plane of the circle that is a distance $6$ from the center of the circle (so like a donut). Let $S$ be a sphere with a radius $11$. When $T$ rests on the inside of $S$, it is internally tangent to $S$ along a circle with radius $r_i$, and when $T$ rests on the outside of $S$, it is externally tangent to $S$ along a circle with radius $r_o$. The difference $r_i-r_o$ can be written as $	frac{m}{n}$, where $m$ and $n$ are relatively prime positive integers. Find $m+n$.
+
+模型回答: ####89#### 
+正确答案: 127
+
+第28题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+Let $ABCD$ be a tetrahedron such that $AB=CD= \sqrt{61}$, $AC=BD= \sqrt{80}$, and $BC=AD= \sqrt{89}$. There exists a point $I$ inside the tetrahedron such that the distances from $I$ to each of the faces of the tetrahedron are all equal. This distance can be written in the form $\frac{m \sqrt n}{p}$, where $m$, $n$, and $p$ are positive integers, $m$ and $p$ are relatively prime, and $n$ is not divisible by the square of any prime. Find $m+n+p$.
+
+模型回答: ####123#### 
+正确答案: 257
+
+第29题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+Rectangles $ABCD$ and $EFGH$ are drawn such that $D,E,C,F$ are collinear. Also, $A,D,H,G$ all lie on a circle. If $BC=16$,$AB=110$,$FG=17$, and $EF=184$, what is the length of $CE$?
+
+模型回答: ####119#### 
+正确答案: 107
+
+第30题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+Let $\omega \neq 1$ be a 13th root of unity. Find the remainder when 
+\[ \prod_{k=0}^{12}(2 - 2\omega^k + \omega^{2k}) \] is divided by 8000.
+
+模型回答: ####704#### 
+正确答案: 321
+
+总题数: 30, 正确数: 0, 正确率: 0.00%, 耗时: 29.09s

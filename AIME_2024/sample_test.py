@@ -13,7 +13,8 @@ from volcenginesdkarkruntime import Ark
 deepseek_client = OpenAI(api_key="sk-09da13b2c97948628523d042d6a02f06", base_url="https://api.deepseek.com")
 kimi_client = OpenAI(api_key="sk-ODuizMlUC22phanBhvYz6dBjx2yrz7vhKhcjKnoIrYssThQo", base_url="https://api.moonshot.cn/v1")
 doubao_client = Ark(api_key="196b33be-8abb-4af3-9fba-6e266b2dd942")
-mistral_client = Mistral(api_key="zWUDyBGqEIdJAtJoxnsr6ACcLTgz1auH")
+# mistral_client = Mistral(api_key="zWUDyBGqEIdJAtJoxnsr6ACcLTgz1auH")
+mistral_client = Mistral(api_key="GYCQ8pMgX3E51NsmAjqrwI25zLZClHxo")
 qwen_client = OpenAI(api_key="sk-341becd932d743f2a750495a0f9f3ede", base_url="https://dashscope.aliyuncs.com/compatible-mode/v1")
 gemini_client = OpenAI(api_key="AIzaSyB1Kwa7mos2CuVQmvOZYtQd8ql4AljYx_g", base_url="https://generativelanguage.googleapis.com/v1beta/openai/")
 
@@ -114,8 +115,10 @@ def call_doubao_api(messages, args):
 
 def call_deepseekv3_api(messages, args):
     try:
-        response = deepseek_client.chat.completions.create(
-            model="deepseek-chat",
+        # response = deepseek_client.chat.completions.create(
+        response = doubao_client.chat.completions.create(
+            # model="deepseek-chat",
+            model="deepseek-v3-250324",
             messages=messages,
             temperature=args.temperature,
             top_p=args.top_p,
@@ -222,7 +225,23 @@ def call_mistralS_api(messages, args):
         )
         return response.choices[0].message.content
     except Exception as e:
-        print(f"调用 Mistral API 时出错: {e}")
+        print(f"调用 MistralS API 时出错: {e}")
+        return "API 调用失败"
+    
+def call_mistralM_api(messages, args):
+    try:
+        response = mistral_client.chat.complete(
+            model="mistral-medium-latest",
+            messages=messages,
+            temperature=args.temperature,
+            top_p=args.top_p,
+            presence_penalty=args.presence_penalty,
+            max_tokens=args.max_tokens,
+            stream=False
+        )
+        return response.choices[0].message.content
+    except Exception as e:
+        print(f"调用 MistralM API 时出错: {e}")
         return "API 调用失败"
     
 def call_mistralL_api(messages, args):
@@ -238,7 +257,7 @@ def call_mistralL_api(messages, args):
         )
         return response.choices[0].message.content
     except Exception as e:
-        print(f"调用 Mistral API 时出错: {e}")
+        print(f"调用 MistralL API 时出错: {e}")
         return "API 调用失败"
         
 def call_gpt35_api(messages, args):
@@ -307,6 +326,8 @@ def call_LLM_api(model, messages, args):
         return call_kimiv1_api(messages, args)
     elif model == "mistralS":
         return call_mistralS_api(messages, args)    
+    elif model == "mistralM":
+        return call_mistralM_api(messages, args)
     elif model == "mistralL":
         return call_mistralL_api(messages, args)
     elif model == "qwen":
@@ -448,6 +469,7 @@ def test_single_turn(input_file, language, few_shot_file, args, cot, few, fillin
             right_count += 1
     end_time = time.time()
     print(f"总题数: {total}, 正确数: {right_count}, 正确率: {right_count/total:.2%}, 耗时: {end_time - start_time:.2f}s")
+    return right_count/total
 
 # == multi-turn测试 ==
 def test_multi_turn(input_file, language, few_shot_file, args, cot, few, filling):
@@ -497,7 +519,8 @@ def test_multi_turn(input_file, language, few_shot_file, args, cot, few, filling
     end_time = time.time()
     total_time = end_time - start_time
     print(f"总题组数: {total}, 第一轮正确答案数: {right_count1}, 正确率: {right_count1 / total:.2%}，第二轮正确答案数: {right_count2}, 正确率: {right_count2 / total:.2%}, 总耗时: {total_time:.2f}秒")
-
+    return right_count2/total
+    
 if __name__ == "__main__":
     # == 通用参数解析 ==
     parser = argparse.ArgumentParser()
@@ -568,9 +591,9 @@ if __name__ == "__main__":
         # 测试方法
         if mul:
             print("采用multi-turn测试")
-            test_multi_turn(test_file, language, few_shot_file, args, cot=cot, few=few, filling=question_type)
+            acc = test_multi_turn(test_file, language, few_shot_file, args, cot=cot, few=few, filling=question_type)
         else:
             print("采用单轮测试")
-            test_single_turn(test_file, language, few_shot_file, args, cot=cot, few=few, filling=question_type)
+            acc = test_single_turn(test_file, language, few_shot_file, args, cot=cot, few=few, filling=question_type)
 
     print("全部测试完成！")

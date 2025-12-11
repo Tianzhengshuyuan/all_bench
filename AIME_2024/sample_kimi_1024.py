@@ -1,0 +1,32 @@
+import random
+import pickle
+sample_data = []
+#["output_few_format.json"]:#,"output_alby_format.json","output_ey_format.json","output_fy_format.json","output_ry_format.json","output_yy_format.json"]
+for question_tran in [0,1]:
+    for presence_penalty in [-0.5,1.5]:
+        for Temperature in [0.0,2.0]:
+            for top_p in [0.2,1.0]:
+                for mul in [0,1]:
+                    for max_tokens in [10,4000]:  
+                        for language in ["yy","zw"]:
+                            for few in [0,1]:
+                                for cot in [0,1]:
+                                    for question_type in [0,1]:
+                                        one_data = {
+                                            "language":language,
+                                            "cot":cot,
+                                            "few":few,
+                                            "mul":mul,
+                                            "question_type":question_type,
+                                            "question_tran":question_tran,
+                                            "Temperature":Temperature,
+                                            "max_tokens":max_tokens,
+                                            "top_p":top_p,
+                                            "presence_penalty":presence_penalty
+                                        }
+                                        sample_data.append(one_data)
+random.shuffle(sample_data)
+print(len(sample_data))
+
+with open("sample_kimi.pkl", "wb") as f:  # 'wb' 表示二进制写入
+    pickle.dump(sample_data, f)

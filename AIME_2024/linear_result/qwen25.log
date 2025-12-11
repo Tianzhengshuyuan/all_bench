@@ -1,0 +1,71 @@
+[DEBUG] language 原始类型: object
+[DEBUG] language 转换后类型: int64
+[DEBUG] cot 原始类型: int64
+[DEBUG] few 原始类型: int64
+[DEBUG] mul 原始类型: int64
+[DEBUG] question_type 原始类型: int64
+[DEBUG] question_tran 原始类型: int64
+[DEBUG] Temperature 原始类型: float64
+[DEBUG] max_tokens 原始类型: int64
+[DEBUG] top_p 原始类型: float64
+[DEBUG] presence_penalty 原始类型: float64
+[DEBUG] 全模型 R²: 0.949662
+
+==== 线性模型 permutation test 结果 ====
+                                term  eta2_obs  eta2_perm_mean  p_value
+21               cot x question_type  0.187706        0.001965 0.000000
+4                      question_type  0.066820        0.001709 0.000000
+1                                cot  0.063505        0.001926 0.000000
+24                  cot x max_tokens  0.040331        0.001946 0.000000
+42        question_type x max_tokens  0.023015        0.001820 0.000000
+7                         max_tokens  0.005118        0.001900 0.090000
+28               few x question_type  0.003254        0.001940 0.200000
+
+52                max_tokens x top_p  0.001224        0.001835 0.420000
+19                         cot x few  0.001166        0.002201 0.440000
+50               Temperature x top_p  0.001075        0.002026 0.465000
+34               mul x question_type  0.000752        0.002140 0.545000
+2                                few  0.000705        0.001931 0.545000
+30                 few x Temperature  0.000605        0.002145 0.555000
+43             question_type x top_p  0.000634        0.001832 0.570000
+17                  language x top_p  0.000431        0.001860 0.635000
+11                    language x few  0.000440        0.001738 0.660000
+44  question_type x presence_penalty  0.000311        0.001806 0.670000
+13          language x question_type  0.000353        0.002093 0.675000
+33            few x presence_penalty  0.000284        0.001750 0.680000
+49          Temperature x max_tokens  0.000267        0.001803 0.680000
+6                        Temperature  0.000278        0.002017 0.710000
+36                 mul x Temperature  0.000271        0.002033 0.725000
+16             language x max_tokens  0.000233        0.002297 0.750000
+12                    language x mul  0.000195        0.002213 0.755000
+14          language x question_tran  0.000213        0.002231 0.775000
+20                         cot x mul  0.000121        0.001979 0.775000
+45       question_tran x Temperature  0.000193        0.001861 0.790000
+46        question_tran x max_tokens  0.000138        0.001951 0.820000
+40     question_type x question_tran  0.000090        0.001737 0.820000
+3                                mul  0.000127        0.002362 0.835000
+26            cot x presence_penalty  0.000107        0.002195 0.840000
+25                       cot x top_p  0.000075        0.001875 0.860000
+27                         few x mul  0.000106        0.002092 0.865000
+5                      question_tran  0.000049        0.002256 0.870000
+39            mul x presence_penalty  0.000036        0.002369 0.870000
+54          top_p x presence_penalty  0.000076        0.001948 0.875000
+0                           language  0.000044        0.002196 0.875000
+10                    language x cot  0.000047        0.001786 0.880000
+47             question_tran x top_p  0.000043        0.002287 0.880000
+35               mul x question_tran  0.000059        0.001998 0.890000
+15            language x Temperature  0.000023        0.002240 0.890000
+29               few x question_tran  0.000032        0.002521 0.895000
+18       language x presence_penalty  0.000023        0.002417 0.910000
+48  question_tran x presence_penalty  0.000044        0.002076 0.920000
+38                       mul x top_p  0.000044        0.002154 0.930000
+32                       few x top_p  0.000026        0.001872 0.930000
+23                 cot x Temperature  0.000008        0.002388 0.935000
+31                  few x max_tokens  0.000002        0.001980 0.940000
+37                  mul x max_tokens  0.000014        0.002210 0.945000
+51    Temperature x presence_penalty  0.000011        0.002106 0.955000
+41       question_type x Temperature  0.000005        0.001994 0.955000
+9                   presence_penalty  0.000014        0.002315 0.960000
+22               cot x question_tran  0.000003        0.001987 0.965000
+8                              top_p  0.000006        0.002050 0.970000
+53     max_tokens x presence_penalty  0.000000        0.001857 1.000000

@@ -1,0 +1,30 @@
+The graphs of the exponential function \( y = a^x \) and the logarithmic function \( y = \log_a x \) are symmetric about which line?,y=x
+The necessary and sufficient condition for a function \( f(x) \) to be differentiable at point \( x_0 \) is that the left-hand derivative and the ____ of \( f(x) \) at \( x_0 \) both exist and are equal.,right-hand derivative
+"Suppose \( A \) and \( B \) are two random events. Given that \( P(A|B) = P(A) \) (or \( P(B|A) = P(B) \)), and \( P(A) > 0 \), \( P(B) > 0 \), then events \( A \) and \( B \) are said to be mutually ____.",independent
+"If a non - terminal position has at least one subsequent position which is a P - position, then this position is a _____.",N-position
+A line that touches the circle at ____ point is called a tangent to a circle.,one
+"If the inner function \( u = g(x) \) is monotonically increasing on the interval \( I \), and the outer function \( y = f(u) \) is also monotonically increasing on the interval \( g(I) \) (which is the range of \( g(x) \) on \( I \)), then what is the monotonicity of the composite function \( y = f(g(x)) \) on \( I \)? ",monotonically increasing
+"When choosing any \(m\) elements \((m \leqslant n)\) from \(n\) distinct elements to form a group, this is called a ___ of \(m\) elements chosen from \(n\) distinct elements.",combination
+"If two angles are supplementary to two equal angles respectively, then what is the relationship between these two angles? ",equal
+\(\log_a \frac{M}{N}\) equals \(\log_a M\) ____ \(\log_a N\),minus
+"What is the result of raising \( a \) to the power of ""the logarithm of \( N \) with base \( a \)""?",N
+"Numbers of the form \( z = a + bi \) are known as complex numbers, where \( a \) represents the real part of the complex number \( z \), and \( b \) is referred to as the ____ of the complex number \( z \). ",imaginary part
+"If the hundreds digit, tens digit, and units digit of a three - digit number are \(a\), \(b\), and \(c\) respectively, then the number is ____ plus \(10b\) plus \(c\).",100a
+The fundamental relationship in travel problems: Distance = Speed * ____.,Time
+"If an integer a is divisible by another integer b (i.e., when a is divided by b, there is no remainder), then we say that a is ____ by b.",divisible
+"If there are 3 mutually exclusive ways to complete a task, where the 1st way has \( n_1 \) methods, the 2nd way has \( n_2 \) methods, and the 3rd way has \( n_3 \) methods, then the total number of methods to complete the task is ____.",\( n_1 + n_2 + n_3 \)
+"When the polynomial \( f(x) \) is divided by the linear polynomial \( (x - a) \), the remainder is a constant, and this constant is equal to ____.",\(f(a)\)
+"If a line is parallel to a plane, and a plane that passes through this line intersects the original plane, then the line is ____ the intersection line.",parallel to
+"In a plane, for a right - angled triangle, the square of the hypotenuse is equal to the sum of the squares of the two legs. So, in a right - angled triangle in a plane, the sum of the squares of the two legs is ____ the square of the hypotenuse.",equal to
+"If the corresponding sides of two triangles are in proportion, then their corresponding interior angles are ____.",equal
+"Arranging all \( n \) distinct elements (that is, ""selecting all elements for ordering"") is called a(n) ____ of the \( n \) elements.",permutation
+"In the numeral system with base n, the largest single digit is ____.",n-1
+The opposite sides of a parallelogram in two pairs are respectively ____.,parallel and equal
+"In a plane, the set of points for which the absolute value of the difference between the distances to two fixed points \( F_1 \) and \( F_2 \) (referred to as foci) is equal to a constant (represented as \( 2a \), where \( 0 < 2a < |F_1F_2| \)) is called a(n) ____.",hyperbola
+"Arrange a set of data in ascending (or descending) order. In the case that the number of data points is odd, the number at the middle position is the ____ of this set of data.",median
+"For any two finite sets \( A \) and \( B \), the number of elements in the union of the two sets is equal to the sum of the number of elements in \( A \) and the number of elements in \( B \) ____ the number of elements in the intersection of \( A \) and \( B \).",minus
+"If the corresponding angles of two triangles are equal and their corresponding sides are in proportion, then the two triangles are ____.",similar
+"In a right triangle, the square of one of the legs is equal to the product of the projection of this leg on the hypotenuse and the ____.",hypotenuse
+There is a point within a tetrahedron that has the same distance to all of its faces. This point is named the ____ of the tetrahedron.,incenter
+The four angles of a rectangle are all ____.,right angles
+"For any positive integer \( n \), there are exactly ____ distinct complex solutions to the equation \( x^n = 1 \).",n

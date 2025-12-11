@@ -1,0 +1,49 @@
+"Let $x,y$ and $z$ be positive real numbers that satisfy the following system of equations: 
+\[\log_2\left({x \over yz}\right) = {1 \over 2}\]
+\[\log_2\left({y \over xz}\right) = {1 \over 3}\]
+\[\left|\log_2(x^4y^3z^2)\right| = {25 \over 8}\]
+The value of $\log_2\left({z \over xy}\right)$ can be written in the form $\tfrac{m}{n}$, where $m$ and $n$ are relatively prime positive integers. Determine the value of $m + n$. ",5
+"Let $O(0,0), A(\frac{1}{2}, 0),$ and $B(0, \frac{\sqrt{3}}{2})$ be points in the coordinate plane. Consider the family $\mathcal{F}$ of line - segments $\overline{PQ}$ having a length of 1 unit and lying in the first quadrant, where $P$ lies on the $x$-axis and $Q$ lies on the $y$-axis. There exists a single point $C$ on $\overline{AB}$, different from $A$ and $B$, which does not lie on any segment from $\mathcal{F}$ except $\overline{AB}$. Then $OC^2=\frac{p}{q}$, where $p$ and $q$ are relatively prime positive integers. Determine the value of $p + q$.",x
+"Jen participates in a lottery by selecting $4$ distinct numbers from $S=\{1,2,3,\cdots,N - 1,N\}$, where $4 < N < 20$. Four numbers are randomly selected from $S$. She gets a prize if at least two of the numbers she picked are among the four randomly - chosen numbers, and she wins the grand prize if all four of the numbers she picked are the randomly - chosen numbers. Given that she won a prize, the probability that she won the grand prize is $\frac{1}{115}$. Determine the value of $N$.",116
+"Alice and Bob play the following game. There is a stack of $n$ tokens in front of them. The players take turns, with Alice starting first. On each turn, a player can remove either $1$ token or $4$ tokens from the stack. The one who removes the last token wins. The number of positive integers $n$ that are less than or equal to $N$ and for which there is a strategy for Bob that ensures Bob will win the game no matter what Alice does is 809. Determine the largest value of $N$.",2024
+"Eight circles with a radius of $34$ are successively tangent, and two of these circles are tangent to $AB$ and $BC$ of triangle $ABC$ respectively. $N$ circles with a radius of $1$ can be arranged in the same way. The in - radius of triangle $ABC$ is given as $\frac{192}{5}$. Determine the value of $N$.",2024
+Define $f(x)=|| x|-\frac{1}{2}|$ and $g(x)=|| x|-\frac{1}{4}|$. Determine the number of intersection points of the graphs of \[y = 4g(f(\sin(2\pi x)))\quad\text{and}\quad x = 4g(f(\cos(3\pi y))).\],x
+"Each vertex of a regular $N$-gon is independently colored either red or blue with equal probability. Suppose $4 \le N \le 15$. The probability that, after coloring, the octagon can be rotated such that all blue vertices are moved to the positions where there were originally red vertices is $\tfrac{115}{256}$. What is $N$?",8
+"Determine the quantity of triples of non - negative integers $(a,b,c)$ that meet the conditions $a + b + c = 300$ and \[a^2b + a^2c + b^2a + b^2c + c^2a + c^2b = 6,000,000.\]",x
+"There are real numbers $x$ and $y$, both of which are greater than 1, for which $xy = 25$ and $\log_x\left(y^x\right)=\log_y\left(x^{4y}\right)=N$. Determine the value of $N$.",25
+Alice chooses a set $A$ of positive integers. Then Bob makes a list of all non - empty finite sets $B$ of positive integers such that the largest element of $B$ is an element of $A$. The number of sets in Bob's list is 2024. Determine the sum of the elements of $A$.,x
+Find the largest possible real part of \[(75 + 117i)z+\frac{96 + 144i}{z}\] when \(z\) is a complex number such that \(|z| = 4\).,x
+"Determine the number of ways to fill each cell of a 2x3 grid with a digit such that the sum of the two numbers obtained by reading from left to right is $999$, and the sum of the three numbers obtained by reading from top to bottom is $99$. The grid below serves as an example of such an arrangement since $8 + 991 = 999$ and $9 + 9 + 81 = 99$.
+
+\[\begin{array}{|c|c|c|} \hline 0 & 0 & 8 \\ \hline 9 & 9 & 1 \\ \hline \end{array}\]",x
+"Each morning, Aya takes a 9 - kilometer walk and then stops at a coffee shop. If she walks at a steady speed of $s$ kilometers per hour, the entire walk, including $t$ minutes spent in the coffee shop, takes her 4 hours. If she walks at a speed of $s+\frac{1}{2}$ kilometers per hour, the entire walk, including $t$ minutes spent in the coffee shop, takes her 3 hours and 24 minutes. Assume Aya walks at a speed of $s + 2$ kilometers per hour. Determine the number of minutes the entire walk, including the $t$ minutes spent in the coffee shop, takes her.",144
+"5694 is the largest four - digit positive integer such that if any one of its digits is replaced with $1$, the resulting number is divisible by $N$. Determine $N$.",7
+Consider the paths of length $2N$ that follow the lines from the lower left corner to the upper right corner on an $N\times N$ grid. Determine the value of $N$ given that the number of such paths that change direction exactly four times is 294.,8
+Let $p$ be the smallest prime number for which there is a positive integer $n$ such that $p^{2}$ divides $n^{4}+1$. Find the smallest positive integer $m$ such that $p^{2}$ divides $m^{4}+1$.,x
+"Let $\mathcal{B}$ be the set of rectangular - shaped boxes having a surface area of $54$ and a volume of $23$. Let $r$ be the radius of the smallest sphere capable of enclosing each of the rectangular boxes which are members of $\mathcal{B}$. The value of $r^2$ can be written in the form $\frac{p}{q}$, where $p$ and $q$ are relatively prime positive integers. Determine the value of $p + q$.",x
+"Determine the quantity of rectangles that can be constructed within a given regular dodecagon (12 - gon), with each side of the rectangle being either a side or a diagonal of the dodecagon. The following diagram depicts three such rectangles.",x
+"Given $\triangle ABC$ with circumcenter $O$ and incenter $I$ such that $\overline{IA}\perp\overline{OI}$, circumradius equal to $13$, and inradius equal to $6$. Determine the value of $AB\cdot AC$.",x
+"There is a collection of $N \times N$ indistinguishable white chips and $N \times N$ indistinguishable black chips. Determine the number of ways to place some of these chips in the $N \times N$ unit cells of a $N \times N$ grid under the following conditions:
+each cell contains at most one chip
+all chips in the same row and all chips in the same column have the same colour
+any additional chip placed on the grid would violate one or more of the previous two conditions.
+Given that this number is $902$, find $N$.",5
+"Let $b \geq 2$ be an integer. A positive integer $n$ is called $b$\textit{-eautiful} if, when written in base $b$, it has exactly two digits and the sum of these two digits is equal to $\sqrt{n}$. For instance, $81$ is $13$-eautiful since $81=\underline{6}\underline{3}_{13}$ and $6 + 3=\sqrt{81}$. Determine the smallest integer $b \geq 2$ for which the number of $b$-eautiful integers exceeds ten.",x
+"Let ABCDEF be a convex equilateral hexagon where all pairs of opposite sides are parallel. Consider the triangle formed by the extensions of segments AB, CD, and EF, which has side lengths 200, 240, and $N$. Given that the side length of the hexagon is 80, find $N$",300
+"Let $A$, $B$, $C$, and $D$ be points on the hyperbola $\frac{x^2}{N}- \frac{y^2}{24} = 1$ such that the quadrilateral $ABCD$ is a rhombus and the intersection point of its diagonals is the origin. The largest real - number less than $BD^2$ for all such rhombi is 480. Find $N$",20
+"A list consisting of positive integers has the following characteristics:
+
+\bullet The total of the squares of every item in the list equals 236.
+
+\bullet The sole mode of the list is 9.
+
+\bullet The median of the list is a positive integer that is not present in the list.
+
+Determine the sum of the items in the list.",30
+"Among the 900 residents of Aimeville, there are 367 who own a set of golf clubs, and 562 who own a garden spade. In addition, each of the 900 residents owns a bag of candy hearts. There are 437 residents who own exactly two of these things, and 234 residents who own exactly three of these things. The number of residents of Aimeville who own all four of these things (including a diamond ring) is 73. Find the number of people who own a diamond ring",195
+"Let $\triangle ABC$ be inscribed in circle $\omega$. The tangents to $\omega$ at points $B$ and $C$ intersect at point $D$. The line segment $\overline{AD}$ intersects $\omega$ at point $P$. Given that $AB = 5$, $AP=\frac{100}{13}$, and $AC = 10$, find the length of $BC$.",9
+"A torus $T$ is formed by revolving a circle of radius $3$ about an axis lying in the plane of the circle and at a distance of $6$ from the center of the circle (resembling a donut). Consider a sphere $S$ with radius $N$. When the torus $T$ is placed inside the sphere $S$ such that it is internally tangent to $S$ along a circle of radius $r_i$, and when the torus $T$ is placed outside the sphere $S$ such that it is externally tangent to $S$ along a circle of radius $r_o$, the difference between $r_i$ and $r_o$ is $\frac{99}{28}$. Determine the value of $N$.",11
+"Let $ABCD$ be a tetrahedron where $AB = CD=\sqrt{41}$, $AC = BD=\sqrt{80}$, and $BC = AD=\sqrt{N}$. There is a point $I$ within the tetrahedron for which the distances from $I$ to each of the tetrahedron's faces are all the same. This common distance is $\frac{20\sqrt{21}}{63}$. Find $N$.",89
+"Rectangles $ABCD$ and $EFGH$ are drawn so that the points $D$, $E$, $C$, and $F$ are on the same straight line. Moreover, the points $A$, $D$, $H$, and $G$ all lie on a circle. Given that $BC = 16$, $AB = 107$, $CE = 104$, and $EF = 184$, what is the length of $FG$?",17
+"Let $\omega \neq 1$ be a 13th root of unity. Determine the remainder obtained when 
+\[ \prod_{k=0}^{12}(2 - 2\omega^k + \omega^{2k}) \] is divided by 1000.",x

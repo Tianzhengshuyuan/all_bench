@@ -1,0 +1,212 @@
+[
+    {
+        "llm_response": "####4####",
+        "llm_answer": "4",
+        "answer": "10",
+        "time": 0.6821050643920898,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nLet parabola \\( C: y^2 = 2px \\) (\\( p > 0 \\)) have focus \\( F \\). Point \\( A \\) lies on \\( C \\). Draw a perpendicular line from \\( A \\) to the directrix of \\( C \\), with the foot of the perpendicular being \\( B \\). If the equation of line \\( BF \\) is \\( y = -3x + 3 \\), what is the value of \\( |AF| \\)?"
+    },
+    {
+        "llm_response": "####\\(\\sqrt{5}\\)####",
+        "llm_answer": "\\(\\sqrt{5}\\)",
+        "answer": "\"5/3\"",
+        "time": 0.512645959854126,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nFor the hyperbola \\(\\frac{x^2}{a^2} - \\frac{y^2}{b^2} = 1\\) (\\(a > 0\\), \\(b > 0\\)), its left and right foci are \\(F_1\\) and \\(F_2\\) respectively. A parabola \\(y^2 = 2px\\) (\\(p > 0\\)) with the right focus \\(F_2\\) as its focus intersects the hyperbola at point \\(P\\) in the first quadrant. If \\(|PF_1| + |PF_2| = 4|F_1F_2|\\), what is the eccentricity \\(e\\) of the hyperbola?"
+    },
+    {
+        "llm_response": "####__1/6__####",
+        "llm_answer": "__1/6__",
+        "answer": "\\frac{1}{6}",
+        "time": 0.4665987491607666,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nGiven that events \\( A \\) and \\( B \\) are independent, the probability of event \\( A \\) occurring is \\( P(A) = \\frac{1}{2} \\), and the probability of event \\( B \\) occurring is \\( P(B) = \\frac{1}{3} \\). What is the probability \\( P(A \\cap B) \\) of the occurrence of event \\( A \\cap B \\)?"
+    },
+    {
+        "llm_response": "####0.38####",
+        "llm_answer": "0.38",
+        "answer": "0.2",
+        "time": 0.4504048824310303,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nXiaotong runs laps on the playground twice a week, running 5 laps or 6 laps each time. The probability of him running 5 laps or 6 laps for the first time is both 0.5. If he runs 5 laps for the first time, the probability of him running 5 laps for the second time is 0.4, and the probability of running 6 laps is 0.6; if he runs 6 laps for the first time, the probability of him running 5 laps for the second time is 0.6, and the probability of running 6 laps is 0.4. What is the probability that Xiaotong runs a total of 10 laps in a week?"
+    },
+    {
+        "llm_response": "####20####",
+        "llm_answer": "20",
+        "answer": "16",
+        "time": 0.44937610626220703,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nGiven \\( S_n = -n^2 + 8n \\), what is the sum of the first 4 terms of the sequence \\( \\{|a_n|\\} \\)?"
+    },
+    {
+        "llm_response": "####__3__####\n####\\(\\frac{\\pi}{6}\\)####",
+        "llm_answer": "__3__",
+        "answer": " \\frac{\\pi}{9}",
+        "time": 0.6823134422302246,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nGiven that the point \\( (3a, 0) \\) (\\( a > 0 \\)) is a symmetric center of the graph of the function \\( y = 2\\tan\\left(x - \\frac{\\pi}{3}\\right) \\), what is the minimum value of \\( a \\)?"
+    },
+    {
+        "llm_response": "########",
+        "llm_answer": "",
+        "answer": "\\varnothing",
+        "time": 0.4168250560760498,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nGiven sets \\( M = \\{x \\mid 2x - 1 > 5\\} \\) and \\( N = \\{1, 2\\} \\), what is \\( M \\cap N \\)?"
+    },
+    {
+        "llm_response": "####1####",
+        "llm_answer": "1",
+        "answer": "1",
+        "time": 0.43499255180358887,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nGiven \\( (1 - 2x)^4 = a_0 - 3a_1 x + 4a_2 x^2 - 8a_3 x^3 + 16a_4 x^4 \\), what is the value of \\( a_0 \\)?"
+    },
+    {
+        "llm_response": "####10####",
+        "llm_answer": "10",
+        "answer": "6",
+        "time": 0.43235063552856445,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nUnder certain conditions, the time required for an artificial intelligence large language model to train on \\( N \\) units of data is \\( T = k\\log_2 N \\) (unit: h), where \\( k \\) is a constant. Under these conditions, it is known that when the training data volume \\( N \\) increases from \\( 10^6 \\) units to \\( 1.024 \\times 10^9 \\) units, the training time increases by 20 h; how many hours does the training time increase when the training data volume \\( N \\) increases from \\( 1.024 \\times 10^9 \\) units to \\( 8.192 \\times 10^9 \\) units?"
+    },
+    {
+        "llm_response": "####6####",
+        "llm_answer": "6",
+        "answer": "2",
+        "time": 0.43581414222717285,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nGiven the general terms of sequences \\(\\{a_n\\}\\), \\(\\{b_n\\}\\), and \\(\\{c_n\\}\\) are \\(a_n = 10n - 9\\), \\(b_n = 2^n\\), and \\(c_n = \\lambda a_n + (1 - \\lambda)b_n\\) respectively. For any \\(\\lambda \\in [0, 1]\\), the values of \\(a_n\\), \\(b_n\\), and \\(c_n\\) can form a triangle. How many positive integers \\(n\\) satisfy the condition?"
+    },
+    {
+        "llm_response": "####**##\\sqrt{5} + 1##**####",
+        "llm_answer": "**##\\sqrt{5} + 1##**",
+        "answer": "\\( 2\\sqrt{2} + 1 \\) ",
+        "time": 0.6756384372711182,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nGiven that the complex number \\( z \\) satisfies \\( \\text{i} \\cdot z + 2 = 2\\text{i} \\), what is \\( |z| + 1 \\)?"
+    },
+    {
+        "llm_response": "####6####",
+        "llm_answer": "6",
+        "answer": "6",
+        "time": 0.701122522354126,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nGiven the universal set \\( U = \\{x \\mid x \\text{ is a positive integer less than 9}\\} \\) and set \\( A = \\{1, 3\\} \\), how many elements are there in \\( \\complement_U A \\)?"
+    },
+    {
+        "llm_response": "####-1####",
+        "llm_answer": "-1",
+        "answer": "\\( \\frac{\\sqrt{3}}{2} \\)",
+        "time": 0.4622018337249756,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nGiven \\( f(x) = \\sin(\\omega x + \\varphi) \\) (\\( \\omega > 0 \\), \\( -\\pi < \\varphi < \\pi \\)), which is monotonically increasing on \\(\\left[-\\frac{5\\pi}{12}, \\frac{\\pi}{12}\\right]\\). Additionally, \\( x = \\frac{\\pi}{12} \\) is one of its axes of symmetry, and \\( \\left(\\frac{\\pi}{3}, 0\\right) \\) is one of its centers of symmetry. What is the minimum value of \\( f(x) \\) when \\( x \\in \\left[0, \\frac{\\pi}{6}\\right] \\)?"
+    },
+    {
+        "llm_response": "####2m####",
+        "llm_answer": "2m",
+        "answer": " \\( -2m \\)",
+        "time": 0.46880173683166504,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nGiven that \\(\\cos(\\alpha + \\beta) = m\\) and \\(\\tan\\alpha \\tan\\beta = 3\\), what is \\(\\cos(\\alpha - \\beta)\\)? "
+    },
+    {
+        "llm_response": "####5####",
+        "llm_answer": "5",
+        "answer": "2",
+        "time": 0.4476940631866455,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nWhen \\( x \\in \\left[0, \\frac{2\\pi}{3}\\right] \\), how many intersection points are there between the curves \\( y = \\sin x \\) and \\( y = 2\\sin\\left(3x - \\frac{\\pi}{6}\\right) \\)?"
+    },
+    {
+        "llm_response": "####5####",
+        "llm_answer": "5",
+        "answer": "17",
+        "time": 0.46349525451660156,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nGiven that \\( \\text{i} \\) is the imaginary unit, what is the value of \\( \\left| \\frac{4 + \\text{i}}{\\text{i}} \\right| \\)?"
+    },
+    {
+        "llm_response": "####**##\\frac{5}{4}####**##",
+        "llm_answer": "**##\\frac{5}{4}",
+        "answer": "2",
+        "time": 0.5840928554534912,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nLet function \\( f(x) = \\sin 2\\omega x + \\cos 2\\omega x \\) (\\( \\omega > 0 \\)). If \\( f(x + \\pi) = f(x) \\) holds constantly, and \\( f(x) \\) has a zero point on \\( \\left[0, \\frac{\\pi}{4}\\right] \\), what is the minimum value of \\( \\omega \\)?"
+    },
+    {
+        "llm_response": "####14####",
+        "llm_answer": "14",
+        "answer": "14",
+        "time": 0.45282816886901855,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nThere are 7 male athletes and 2 female athletes. How many different ways are there to select 2 people to form a team for the table tennis mixed doubles match?"
+    },
+    {
+        "llm_response": "####$\\dfrac{1}{2}$####",
+        "llm_answer": "$\\dfrac{1}{2}$",
+        "answer": " \\( -2 \\)",
+        "time": 0.6019265651702881,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nIf $\\cos\\alpha + 2\\sin\\alpha = \\frac{3\\sqrt{5}}{5}$, what is $\\tan\\alpha$?  "
+    },
+    {
+        "llm_response": "####120####",
+        "llm_answer": "120",
+        "answer": "144",
+        "time": 1.3866901397705078,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\n3 parents and 3 children go hiking. The 6 people need to line up in a queue, with the requirement that both the head and the tail of the queue are parents. How many different arrangements are there?"
+    },
+    {
+        "llm_response": "####2####",
+        "llm_answer": "2",
+        "answer": "4",
+        "time": 1.551999568939209,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nLet \\(a, b > 0\\) and \\(a + \\frac{1}{b} = 2\\). What is the minimum value of \\(b + \\frac{1}{a}\\)?  "
+    },
+    {
+        "llm_response": "####3####",
+        "llm_answer": "3",
+        "answer": "4",
+        "time": 0.45944643020629883,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nLine \\( l_1: x - y + 6 = 0 \\) intersects the x-axis at point \\( A \\) and the y-axis at point \\( B \\). It also intersects the circle \\( (x + 1)^2 + (y - 3)^2 = r^2 \\) (\\( r > 0 \\)) at points \\( C \\) and \\( D \\). Given \\( |AB| = 3|CD| \\), what is the value of \\( r \\)?"
+    },
+    {
+        "llm_response": "####\\(\\frac{5}{3}\\)####",
+        "llm_answer": "\\(\\frac{5}{3}\\)",
+        "answer": "\\(\\sqrt{2}\\)",
+        "time": 0.5124711990356445,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nLet the hyperbola \\( C: \\frac{x^2}{a^2} - \\frac{y^2}{b^2} = 1 \\) (\\( a > 0 \\), \\( b > 0 \\)) have left and right foci \\( F_1 \\) and \\( F_2 \\) respectively. Draw a straight line parallel to the \\( y \\)-axis through \\( F_2 \\), which intersects \\( C \\) at points \\( A \\) and \\( B \\). If \\( |F_1A| = 14 \\) and \\( |AB| = 8 \\), what is the eccentricity \\( e \\) of \\( C \\)?"
+    },
+    {
+        "llm_response": "####7.2####",
+        "llm_answer": "7.2",
+        "answer": "2.3125",
+        "time": 0.731316089630127,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nThere are 4 identical balls, each marked with the number 1, 2, 3 and 4 respectively. We randomly draw 3 times with replacement, taking 1 ball each time. Let \\( X \\) be the number of balls that are drawn at least once among these 5 balls. What is the mathematical expectation \\( E(X) \\) of \\( X \\)?"
+    },
+    {
+        "llm_response": "####{4}####",
+        "llm_answer": "{4}",
+        "answer": "\\( \\{4\\} \\)",
+        "time": 2.7470703125,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nGiven the universal set \\( U = \\{1, 2, 3, 4, 5\\} \\), set \\( A = \\{1, 3\\} \\), and set \\( B = \\{2, 5\\} \\), what is \\( \\complement_U (A \\cup B) \\)?"
+    },
+    {
+        "llm_response": "####-15####",
+        "llm_answer": "-15",
+        "answer": "\\(-\\frac{75}{4}\\)",
+        "time": 0.6553292274475098,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nIn triangle  ABC, D is the midpoint of side AB. \\(\\overrightarrow{CE} = \\frac{2}{3}\\overrightarrow{CD}\\), \\(\\overrightarrow{AB} = \\vec{a}\\), \\(\\overrightarrow{AC} = \\vec{b}\\). Given \\(|\\overrightarrow{AE}| = 5\\) and \\(AE \\perp CB\\), what is \\(\\overrightarrow{AE} \\cdot \\overrightarrow{CD}\\)? "
+    },
+    {
+        "llm_response": "####1####",
+        "llm_answer": "1",
+        "answer": "\\( \\frac{1}{e} \\) ",
+        "time": 1.3977792263031006,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nGiven that the domain of the function \\( f(x) \\) is \\( (-1, +\\infty) \\), \\( f(0) = 0 \\), and its derivative \\( f'(x-1) = \\frac{\\ln(x)}{x} \\). Let \\( l_1 \\) be the tangent line to the curve \\( y = f(x) \\) at point \\( A(a, f(a)) \\) (\\( a \\neq 0 \\)). Find the maximum value of \\( f'(x) \\)."
+    },
+    {
+        "llm_response": "####-4####",
+        "llm_answer": "-4",
+        "answer": "2",
+        "time": 0.49143147468566895,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nIf the line \\( y = 2x + 5 \\) is a tangent line to the curve \\( y = e^x + x + 2a \\), what is the value of \\( a \\)?"
+    },
+    {
+        "llm_response": "####6####",
+        "llm_answer": "6",
+        "answer": "5",
+        "time": 0.4630880355834961,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nA closed cylindrical container (ignoring the thickness of the container wall) has a base radius of 4 cm and a height of 9 cm. There are two iron balls of equal radius inside the container. What is the maximum diameter (in centimeters) of the iron balls?"
+    },
+    {
+        "llm_response": "####-16####",
+        "llm_answer": "-16",
+        "answer": "12",
+        "time": 9.479877471923828,
+        "prompt": "The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.\nIf \\( x = 2 \\) is an extreme point of the function \\( f(x) = (x - 1)(x - 2)(x - a) \\), what is the value of \\( f(4) \\)?"
+    }
+]

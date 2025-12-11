@@ -1,0 +1,211 @@
+第1题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+The logarithm of the product of two positive numbers is equal to the ____ of the logarithms of these two numbers with the same base.  
+
+模型回答: ####sum#### 
+正确答案: sum
+
+第2题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+Suppose a function \( f(x) \) is differentiable at point \( x_0 \), and \( x_0 \) is an extreme point (maximum point or minimum point) of \( f(x) \), then \( f'(x_0) = \)____.  
+
+模型回答: ####0#### 
+正确答案: 0
+
+第3题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+Suppose the sample space of a random experiment is \( \Omega \). For each event \( A \subseteq \Omega \), assign a real number \( P(A) \). If \( P(A) \) satisfies the three axioms of non-negativity, normativity, and ____, then \( P(A) \) is called the probability of event \( A \).  
+
+模型回答: ####Additivity#### 
+正确答案: countable additivity
+
+第4题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+If a game can be decomposed into multiple independent subgames (e.g., in Nim, "multiple piles of stones, each pile being a subgame"), then the Grundy number of the entire game position is equal to the ____ of the Grundy numbers of all subgames.  
+
+模型回答: ####XOR#### 
+正确答案: exclusive OR(XOR)
+
+第5题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+If a plane passes through a perpendicular line of another plane, then the two planes are ____.  
+
+模型回答: ####perpendicular#### 
+正确答案: perpendicular
+
+第6题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+If \( g(x) \) is an odd function and \( f(u) \) is an odd function, then \( f(g(x)) \) is a(n) ____.  
+
+模型回答: ####odd#### 
+正确答案: odd function
+
+第7题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+Let \( G \) be a finite group, and let \( p \) be a prime number such that \( p \mid |G| \) (i.e., \( p \) divides the order of \( G \)). According to Cauchy's Theorem, there must exist an element of order ________ in \( G \).  
+
+模型回答: ####p#### 
+正确答案: \( p \)
+
+第8题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+The sum of any two sides of a triangle is ____ the third side.  
+
+模型回答: ####greater than#### 
+正确答案: greater than
+
+第9题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+\(\log_a (M \cdot N) = \log_a M +\) ____  
+
+模型回答: ####\log_a N#### 
+正确答案: \(\log_a N\)
+
+第10题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+If \( a^b = N \), then \( b = \)____.  
+
+模型回答: ####\log_a(N)#### 
+正确答案: \( \log_a N \)
+
+第11题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+Let the complex number \( z = a + bi \), then its modulus (or absolute value) is ____.  
+
+模型回答: ####\sqrt{a^2 + b^2}#### 
+正确答案: \(\sqrt{a^2 + b^2}\)
+
+第12题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+If completing a task requires 3 steps, with \( n_1 \) ways to finish the 1st step, \( n_2 \) ways to finish the 2nd step, and \( n_3 \) ways to finish the 3rd step, then the total number of ways to complete the task is ____.  
+
+模型回答: ####\( n_1 \times n_2 \times n_3\)#### 
+正确答案: \( n_1n_2n_3 \)
+
+第13题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+An equation that contains an unknown in its denominator is called a(n) ____ equation.  
+
+模型回答: ####rational#### 
+正确答案: rational
+
+第14题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+The multiplicative group \( \text{GF}(q)^* = \text{GF}(q) \setminus \{0\} \) consisting of the non-zero elements of any finite field \( \text{GF}(q) \) (where \( q = p^n \), \( p \) is a prime number, and \( n \geq 1 \)) is ____.  
+
+模型回答: ####q-1#### 
+正确答案: a cyclic group
+
+第15题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+According to the symmetry satisfied by binomial coefficients: \( \binom{n}{k} = \binom{n}{____} \). 
+
+模型回答: ####n-k#### 
+正确答案: \( n - k \)
+
+第16题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+For any two polynomials \( f(x) \) (dividend) and \( d(x) \) (divisor, with \( d(x) \neq 0 \)), there must exist a unique pair of polynomials \( Q(x) \) (quotient) and \( R(x) \) (remainder) such that: \( f(x) = d(x) \cdot Q(x) + R(x) \), where the degree of the remainder is always ____ the degree of the divisor. 
+
+模型回答: ####less#### 
+正确答案: less than
+
+第17题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+If two intersecting lines in one plane are respectively parallel to another plane, then the two planes are ____.  
+
+模型回答: ####parallel#### 
+正确答案: parallel
+
+第18题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+In an isosceles triangle, the angle bisector of the vertex angle, the median on the base, and the altitude on the base ____.  
+
+模型回答: ####coincide#### 
+正确答案: coincide
+
+第19题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+The projection lines (segments connecting the endpoints of the original segment to the endpoints of its projection) are ____ the projection plane.  
+
+模型回答: ####perpendicular#### 
+正确答案: perpendicular to
+
+第20题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+If \( k \) elements are selected from \( n \) distinct elements for arrangement, and repeated selection of elements is allowed (i.e., the same element can be selected multiple times), then the number of arrangements is ____.  
+
+模型回答: ####n^k#### 
+正确答案: \( n^k \)
+
+第21题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+Choose an equation with relatively simple coefficients from the system of equations, express one unknown in terms of an algebraic expression containing the other unknown, then substitute it into the other equation to eliminate one unknown and convert the system into a linear equation in one variable. This solution method is usually called ____.  
+
+模型回答: ####substitution#### 
+正确答案: the substitution method
+
+第22题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+A line parallel to one side of a triangle, intersecting the other two sides (or their extensions), divides the corresponding segments ____.  
+
+模型回答: ####proportionally#### 
+正确答案: proportionally
+
+第23题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+A conic section with an eccentricity equal to 1 is usually called a(n) ____.  
+
+模型回答: ####parabola#### 
+正确答案: parabola
+
+第24题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+The greater the variance of \( n \) data points, the ____ the fluctuation of the data.  
+
+模型回答: ####larger#### 
+正确答案: greater
+
+第25题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+For any three finite sets \( A \), \( B \), and \( C \), the number of elements in their union is equal to the sum of the number of elements in the three sets, minus the sum of the number of elements in all pairwise intersections, and then ____ the number of elements in the intersection of the three sets.
+
+模型回答: ####-1#### 
+正确答案: plus
+
+第26题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+The ratio of the areas of two similar triangles is equal to the ____ of the similarity ratio.  
+
+模型回答: ####square#### 
+正确答案: square
+
+第27题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+In a right triangle, the square of the altitude to the hypotenuse is equal to the ____ of the projections of the two legs on the hypotenuse.  
+
+模型回答: ####product#### 
+正确答案: product
+
+第28题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+If a sphere is tangent to all faces of a geometric solid, the sphere is called the ____ of the geometric solid.  
+
+模型回答: ####insphere#### 
+正确答案: inscribed sphere
+
+第29题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+The two diagonals of a rectangle are ____ in length.
+
+模型回答: ####equal#### 
+正确答案: equal
+
+第30题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+The sum of all nth roots of unity is ____.  
+
+模型回答: ####0#### 
+正确答案: 0
+
+总题数: 30, 正确数: 13, 正确率: 43.33%, 耗时: 23.69s

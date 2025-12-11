@@ -1,0 +1,1 @@
+python filling_to_choice.py --model=doubao --input csv_analogical/filling_english.csv

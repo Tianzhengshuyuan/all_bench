@@ -101,16 +101,17 @@ def get_output_filename(input_name, language):
     base = os.path.splitext(os.path.basename(input_name))[0]
     # 语言全部小写，空格换成下划线
     lang = language.strip().replace(" ", "_").lower()
-    return f"{base}_{lang}.csv"
+    return f"{lang}_{base}.csv"
     
 def adjust(args):
-    output_filename = get_output_filename(args.input, "adjusted")
+    output_path = os.path.join(args.out_csv, get_output_filename(args.input, "adjusted"))
+    
     total_count = 0
     success_count = 0
     start_time = time.time()  # 记录开始时间
     # 读取输入 CSV
     with open(args.input, 'r', encoding='utf-8') as infile, \
-         open(output_filename, 'w', newline='', encoding='utf-8') as outfile:
+         open(output_path, 'w', newline='', encoding='utf-8') as outfile:
         reader = csv.reader(infile)
         writer = csv.writer(outfile)
 
@@ -140,11 +141,12 @@ def adjust(args):
     total_time = end_time - start_time
     avg_time = total_time / total_count if total_count > 0 else 0
             
-    print(f"翻译结果已保存到: {output_filename}，总共 {total_count} 行，成功翻译 {success_count} 行，平均每行耗时 {avg_time:.2f} 秒")
+    print(f"转换结果已保存到: {output_path}，总共 {total_count} 行，成功转换 {success_count} 行，平均每行耗时 {avg_time:.2f} 秒")
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="批量调用 DeepSeek 翻译")
     parser.add_argument('--input', required=True, help="输入 CSV 文件名")
+    parser.add_argument('--out_csv', default='./csv', help="输出CSV 文件所在文件夹")
     parser.add_argument('--temperature', type=float, default=0.2, help="API 回答多样性，默认 0.2")
     parser.add_argument('--model', type=str, default="deepseek", help="使用的模型，如gpt、deepseek、kimi、qwen")
     args = parser.parse_args()

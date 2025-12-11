@@ -1,0 +1,211 @@
+第1题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+What line are the graphs of the exponential function \( y = a^x \) and the logarithmic function \( y = \log_a x \) symmetric about?  
+
+模型回答: ####y = x#### 
+正确答案: y=x
+
+第2题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+The sufficient and necessary condition for a function \( f(x) \) to be differentiable at point \( x_0 \) is that the left-hand derivative and the ____ of \( f(x) \) at \( x_0 \) both exist and are equal.  
+
+模型回答: ####right-hand derivative#### 
+正确答案: right-hand derivative
+
+第3题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+Suppose \( A \) and \( B \) are two random events. If \( P(A|B) = P(A) \) (or \( P(B|A) = P(B) \), and \( P(A) > 0 \), \( P(B) > 0 \)), then events \( A \) and \( B \) are said to be mutually ____.  
+
+模型回答: ####independent#### 
+正确答案: independent
+
+第4题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+If a non-terminal position has at least one subsequent position that is a P-position, then this position is a _____.  
+
+模型回答: ####P-position#### 
+正确答案: N-position
+
+第5题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+If a line outside a plane is parallel to a line inside the plane, then the line is ____ to the plane.  
+
+模型回答: ####parallel#### 
+正确答案: parallel
+
+第6题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+If the inner function \( u = g(x) \) is monotonically increasing on the interval \( I \), and the outer function \( y = f(u) \) is also monotonically increasing on the corresponding interval \( g(I) \) (the range of \( g(x) \) on \( I \)), then the composite function \( y = f(g(x)) \) is ____ on \( I \).  
+
+模型回答: ####monotonically increasing#### 
+正确答案: monotonically increasing
+
+第7题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+Let \( G \) be a finite group and \( H \) be a subgroup of \( G \). According to Lagrange's Theorem, the relationship satisfied by the order of \( G \) (denoted \( |G| \)), the order of \( H \) (denoted \( |H| \)), and the number of cosets of \( H \) in \( G \) (denoted \( [G:H] \)) is ________________.  
+
+模型回答: ####|G| = |H| * [G:H]#### 
+正确答案: \( |G| = |H| \times [G:H] \)
+
+第8题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+If two angles are each supplementary to two equal angles respectively, then the two angles are ____.
+
+模型回答: ####90#### 
+正确答案: equal
+
+第9题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+\(\log_a \frac{M}{N} = \log_a M\) ____ \(\log_a N\)  
+
+模型回答: ####- \log_a N#### 
+正确答案: minus
+
+第10题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+Raise \( a \) to the power of "the logarithm of \( N \) with base \( a \)", and the result is ____.  
+
+模型回答: ####N#### 
+正确答案: \( N \)
+
+第11题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+Numbers of the form \( z = a + bi \) are called complex numbers, where \( a \) is the real part of the complex number \( z \), and \( b \) is called the ____ of the complex number \( z \).  
+
+模型回答: ####imaginary part#### 
+正确答案: imaginary part
+
+第12题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+If the hundreds, tens, and units digits of a three-digit number are \(a\), \(b\), and \(c\) respectively, then the number is ____ + \(10b\) + \(c\).  
+
+模型回答: ####100a#### 
+正确答案: \(100a\)
+
+第13题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+The basic relationship in travel problems: Distance = Speed * ____.  
+
+模型回答: ####Time#### 
+正确答案: Time
+
+第14题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+Let \( f(x) \in \text{GF}(q)[x] \) (the polynomial ring over \( \text{GF}(q) \)) be a polynomial of degree \( d \geq 1 \). Then \( f(x) \) has at most ____ distinct roots in \( \text{GF}(q) \) (with multiple roots counted according to their multiplicities).  
+
+模型回答: ####d#### 
+正确答案: \( d \)
+
+第15题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+If there are 3 mutually exclusive plans to complete a task, with \( n_1 \) ways in the 1st plan, \( n_2 \) ways in the 2nd plan, and \( n_3 \) ways in the 3rd plan, then the total number of ways to complete the task is ____.  
+
+模型回答: ####\(n_1 + n_2 + n_3\)#### 
+正确答案: \( n_1 + n_2 + n_3 \)
+
+第16题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+If the polynomial \( f(x) \) is divided by the linear polynomial \( (x - a) \), the remainder is a constant, and this constant is equal to ____.  
+
+模型回答: ####f(a)#### 
+正确答案: \( f(a) \)
+
+第17题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+If a line is parallel to a plane, and a plane passing through this line intersects the original plane, then the line is ____ the intersection line.  
+
+模型回答: ####parallel to#### 
+正确答案: parallel to
+
+第18题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+In a right-angled triangle in a plane, the sum of the squares of the two legs is ____ the square of the hypotenuse.  
+
+模型回答: ####equal to#### 
+正确答案: equal to
+
+第19题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+According to the Law of Cosines, \( \cos\theta = \) ____.  
+
+模型回答: ####\frac{b^2 + c^2 - a^2}{2bc}#### 
+正确答案: $\frac{\text{adjacent side}}{\text{hypotenuse}}$  
+
+第20题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+Taking all \( n \) distinct elements for arrangement (i.e., "selecting all elements for ordering") is called a(n) ____ of the \( n \) elements.  
+
+模型回答: ####Permutation#### 
+正确答案: permutation
+
+第21题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+Any linear equation in two variables (e.g., \( ax + by = c \), where \( a \neq 0 \) and \( b \neq 0 \)) has ____ sets of solutions.  
+
+模型回答: ####1#### 
+正确答案: infinitely many
+
+第22题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+The two pairs of opposite sides of a parallelogram are respectively ____.  
+
+模型回答: ####equal and parallel#### 
+正确答案: parallel and equal
+
+第23题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+The locus of points in a plane where the absolute value of the difference between the distances to two fixed points \( F_1 \) and \( F_2 \) (called foci) is equal to a constant (denoted as \( 2a \), with \( 0 < 2a < |F_1F_2| \)) is called a(n) ____.  
+
+模型回答: ####ellipse#### 
+正确答案: hyperbola
+
+第24题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+Arrange a set of data in ascending (or descending) order. If the number of data points is odd, the number at the middle position is the ____ of this set of data.  
+
+模型回答: ####median#### 
+正确答案: median
+
+第25题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+For any two finite sets \( A \) and \( B \), the number of elements in their union is equal to the sum of the number of elements in the two sets ____ the number of elements in their intersection.  
+
+模型回答: ####plus#### 
+正确答案: minus
+
+第26题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+If the corresponding angles of two triangles are equal and their corresponding sides are proportional, then the two triangles are ____.  
+
+模型回答: ####similar#### 
+正确答案: similar
+
+第27题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+In a right triangle, the square of a leg is equal to the product of its projection on the hypotenuse and the ____.  
+
+模型回答: ####projection segment#### 
+正确答案: hypotenuse
+
+第28题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+There exists a point inside a tetrahedron that is equidistant from all its faces. This point is called the ____ of the tetrahedron.  
+
+模型回答: ####centroid#### 
+正确答案: incenter
+
+第29题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+    All four angles of a rectangle are ____.  
+
+模型回答: ####90#### 
+正确答案: right angles
+
+第30题 prompt:
+The following is fill-in-the-blank question. Please return only the correct answer and nothing else. Please enclose the final answer with two pairs of ####, for example: ####6####.
+For any positive integer \( n \), the equation \( x^n = 1 \) has exactly ____ distinct complex solutions.  
+
+模型回答: ####n#### 
+正确答案: n
+
+总题数: 30, 正确数: 11, 正确率: 36.67%, 耗时: 23.30s

@@ -1,0 +1,1127 @@
+{
+    "problems": [
+        {
+            "problem_id": 1,
+            "title": "System of Logarithmic Equations in Three Variables",
+            "knowledge_points": ["algebra", "logarithmic equations", "systems of linear equations"],
+            "question_template": "Let $x,y$ and $z$ be positive real numbers that satisfy the following system of equations: \\[\\log_2\\left({x \\over yz}\\right) = {1 \\over {X1}}\\] \\[\\log_2\\left({y \\over xz}\\right) = {1 \\over {X2}}\\] \\[\\log_2\\left({z \\over xy}\\right) = {1 \\over {X3}}\\] Then the value of $\\left|\\log_2(x^{Y1}y^{Y2}z^{Y3})\\right|$ is $\\tfrac{m}{n}$ where $m$ and $n$ are relatively prime positive integers. Find $m+n$.",
+            "parameters": {
+                "X1": {
+                    "type": "int",
+                    "description": "the first denominator",
+                    "min": 2,
+                    "max": 1000,
+                    "step": 1,
+                    "default": 34
+                },
+                "X2": {
+                    "type": "int",
+                    "description": "the second denominator",
+                    "min": 2,
+                    "max": 2000,
+                    "step": 1,
+                    "default": 1
+                },
+                "X3": {
+                    "type": "int",
+                    "description": "the third denominator",
+                    "min": 2,
+                    "max": 3000,
+                    "step": 1,
+                    "default": 8
+                },
+                "Y1": {
+                    "type": "int",
+                    "description": "the first exponent",
+                    "min": 2,
+                    "max": 1000,
+                    "step": 1,
+                    "default": 2024
+                },
+                "Y2": {
+                    "type": "int",
+                    "description": "the second exponent",
+                    "min": 2,
+                    "max": 2000,
+                    "step": 1,
+                    "default": 3
+                },
+                "Y3": {
+                    "type": "int",
+                    "description": "the third exponent",        
+                    "min": 2,
+                    "max": 3000,
+                    "step": 1,
+                    "default": 2
+                }
+            },
+            "solution_rule": {
+                "type": "python_function",
+                "name": "log_system_mn_sum",
+                "inputs": ["X1", "X2", "X3", "Y1", "Y2", "Y3"],
+                "outputs": ["m_n_sum"],
+                "description": "Solves the system of logarithmic equations for log2(x), log2(y), log2(z) and computes |log2(x^4 y^3 z^2)| = m/n, then returns m + n."
+            },
+            "example_default_run": {
+                "input": {"X1": 2, "X2": 3, "X3": 4, "Y1": 4, "Y2": 3, "Y3": 2},
+                "output": 33
+            }
+        },
+        {
+            "problem_id": 2,
+            "title": "Unique Point on Segment in Unit-Length Families",
+            "knowledge_points": ["coordinate geometry", "lines and distances", "equations of lines"],
+            "question_template": "Let $O(0,0), A({t}, 0),$ and $B(0, {t}\\sqrt{3})$ be points in the coordinate plane. Let $\\mathcal{F}$ be the family of segments $\\overline{PQ}$ of unit length lying in the first quadrant with $P$ on the $x$-axis and $Q$ on the $y$-axis. There is a unique point $C$ on $\\overline{AB}$, distinct from $A$ and $B$, that does not belong to any segment from $\\mathcal{F}$ other than $\\overline{AB}$. Then $OC^2 = \\tfrac{p}{q}$, where $p$ and $q$ are relatively prime positive integers. Find $p + q$.",
+            "parameters": {
+                "t": {
+                    "type": "int",
+                    "description": "the length of OA",
+                    "min": 2,
+                    "max": 5000,
+                    "step": 1,
+                    "default": 2
+                }                
+            },
+            "solution_rule": {
+                "type": "python_function",
+                "name": "unique_point_on_AB",
+                "inputs": [],
+                "outputs": ["p_plus_q"],
+                "description": "Finds the coordinates of point C on segment AB that lies only on AB among all unit segments PQ with endpoints on axes, and returns p+q where OC^2 = p/q."
+            },
+            "example_default_run": {
+                "input": {"t": 2},
+                "output": 8
+            }
+        },
+        {
+            "problem_id": 3,
+            "title": "Lottery Prize Probability",
+            "knowledge_points": ["conditional probability", "combinatorics"],
+            "question_template": "Jen enters a lottery by picking ${k}$ distinct numbers from $S = {1,2,3,\\cdots,{t}}$. ${k}$ numbers are randomly chosen from $S$. She wins a prize if at least two of her numbers were among the drawn numbers, and wins the grand prize if all ${k}$ of her numbers were drawn. The probability that she wins the grand prize given that she has won a prize is $\\tfrac{m}{n}$, where $m$ and $n$ are relatively prime positive integers. Find $m+n$.",
+            "parameters": {
+                "t": {
+                    "type": "int",
+                    "description": "the size of set S",
+                    "min": 8,
+                    "max": 2000,
+                    "step": 1,
+                    "default": 10
+                },
+                "k": {
+                    "type": "int",
+                    "description": "the number Jen picks",
+                    "min": 3,
+                    "max": 20,
+                    "step": 1,
+                    "default": 4
+                }
+            },
+            "relations": [
+                {"expression": "k < t"}
+            ],
+            "solution_rule": {
+                "type": "python_function",
+                "name": "lottery_probability_problem",
+                "inputs": ["k", "t"],
+                "outputs": ["integer_sum_m_plus_n"]
+            },
+            "example_default_run": {
+                "input": {"k": 4, "t": 10},
+                "output": 116
+            }
+        },
+        {
+            "problem_id": 4,
+            "title": "Alice and Bob Token Game",
+            "knowledge_points": ["game theory", "modular arithmetic", "winning and losing positions"],
+            "question_template": "Alice and Bob play the following game. A stack of ${n_max}$ tokens lies before them. The players take turns with Alice going first. On each turn, the player removes either $1$ token or $4$ tokens from the stack. Whoever removes the last token wins. Find the number of positive integers $n$ less than or equal to ${n_max}$ for which there exists a strategy for Bob that guarantees Bob will win the game regardless of Alice's play.",           
+            "parameters": {
+                "n_max": {
+                    "type": "int",
+                    "description": "Maximum number of tokens",
+                    "min": 10,
+                    "max": 5000,
+                    "default": 2024
+                }
+            },
+            "solution_rule": {
+                "type": "python_function",
+                "name": "alice_bob_tokens",
+                "inputs": ["n_max"],
+                "outputs": ["count_bob_wins"],
+                "description": "Counts how many 1 ≤ n ≤ n_max are losing positions for Alice (Bob's win positions) when 1 or 4 tokens can be removed each turn."
+            },
+            "example_default_run": {
+                "input": {"n_max": 2024},
+                "output": 809
+            }
+        },
+        {
+            "problem_id": 5,
+            "title": "Sequential Tangent Circles and Inradius",
+            "knowledge_points": ["geometry", "similar triangles", "circle tangent properties"],
+            "question_template": "{N1} circles of radius ${R1}$ are sequentially tangent, and two of the circles are tangent to $AB$ and $BC$ of triangle $ABC$, respectively. ${N2}$ circles of radius ${R2}$ can be arranged in same manner. The inradius of triangle $ABC$ can be expressed as $\\frac{m}{n}$, where $m$ and $n$ are relatively prime positive integers. Find $m+n$.",           
+            "parameters": {
+                "R1": {
+                    "type": "int",
+                    "description": "radius of the first set of circles",
+                    "min": 1,
+                    "max": 200,
+                    "step": 1,
+                    "default": 34
+                },
+                "R2": {
+                    "type": "int",
+                    "description": "radius of the second set of circles",
+                    "min": 1,
+                    "max": 200,
+                    "step": 1,
+                    "default": 1
+                },
+                "N1": {
+                    "type": "int",
+                    "description": "number of circles in the first chain",
+                    "min": 5,
+                    "max": 2000,
+                    "step": 1,
+                    "default": 8
+                },
+                "N2": {
+                    "type": "int",
+                    "description": "number of circles in the second chain",
+                    "min": 5,
+                    "max": 2000,
+                    "step": 1,
+                    "default": 2024
+                }
+            },
+            "relations": [
+                {"expression": "(N1 - N2) / (R2 - R1) > 0"},
+                {"expression": "(N1 * R1 - N2 * R2 + R2 - R1) / (R2 - R1) > 0"}
+            ],
+            "solution_rule": {
+                "type": "python_function",
+                "name": "tangent_circles_inradius",
+                "inputs": ["R1", "R2", "N1", "N2"],
+                "outputs": ["integer_sum_m_plus_n"],
+                "description": "Computes m+n where m/n is the inradius of triangle ABC from two sets of sequential tangent circles."
+            },
+            "example_default_run": {
+                "input": {"R1": 34, "R2": 1, "N1": 8, "N2": 2024},
+                "output": 2058
+            }
+        },
+        {
+            "problem_id": 6,
+            "title": "Number of Intersections Between Two Composed Trig–Absolute–Value Functions with Variable Scale",
+            "knowledge_points": ["function composition", "trigonometric functions", "absolute value", "graph intersections"],
+            "question_template": "Define $f(x)=|| x|-\\tfrac{1}{2}|$ and $g(x)=|| x|-\\tfrac{1}{4}|$. Find the number of intersections of the graphs of \\[y=4 \\left\\lfloor \\frac{{K1}}{4} \\right\\rfloor g(f(\\sin (2 \\pi x))) \\quad\\text{and}\\quad x=4 \\left\\lfloor \\frac{{K2}}{4} \\right\\rfloor g(f(\\cos (3 \\pi y))).\\]",            
+            "parameters": {
+                "K1": {
+                    "type": "int",
+                    "description": "the first scaling factor multiplying g(f(...))",
+                    "min": 5,
+                    "max": 500,
+                    "step": 1,
+                    "default": 4
+                },
+                "K2": {
+                    "type": "int",
+                    "description": "the second scaling factor multiplying g(f(...))",
+                    "min": 5,
+                    "max": 50,
+                    "step": 1,
+                    "default": 4
+                }
+            },
+            "solution_rule": {
+                "type": "python_function",
+                "name": "intersections_f_g_problem",
+                "inputs": ["K1", "K2"],
+                "outputs": ["intersection_count"],
+                "description": "Computes the number of intersection points between y=K*g(f(sin(2πx))) and x=K*g(f(cos(3πy))) where f(x)=||x|-1/2|, g(x)=||x|-1/4|."
+            },
+            "example_default_run": {
+                "input": {"K1": 4, "K2": 4},
+                "output": 385
+            }
+        },
+        {
+            "problem_id": 7,
+            "title": "Rotation-Symmetric Coloring Probability on a Regular Polygon",
+            "knowledge_points": ["probability", "combinatorics", "group actions", "Burnside's lemma", "rotational symmetry"],
+            "question_template": "Each vertex of a regular ${{N}\\bmod 12+4}$‑gon is independently colored either red or blue with equal probability. The probability that the polygon can then be rotated so that all of the blue vertices end up at positions where there were originally red vertices is $\\tfrac{m}{n}$, where $m$ and $n$ are relatively prime positive integers. What is $m+n$.",            
+            "parameters": {
+                "N": {
+                    "type": "int",
+                    "description": "number of sides (and vertices) of the regular polygon",
+                    "min":1,
+                    "max": 5000,
+                    "step": 1,
+                    "default": 8
+                }
+            },
+            "solution_rule": {
+                "type": "python_function",
+                "name": "rotation_coloring_probability",
+                "inputs": ["N"],
+                "outputs": ["result_m_plus_n"],
+                "description": "Computes m+n where m/n is the probability that after independently coloring vertices of an N‑gon red/blue, there exists a rotation sending every blue vertex to an originally red vertex."
+            },
+            "example_default_run": {
+                "input": {"N": 8},
+                "output": 371
+            }
+        },
+        {
+            "problem_id": 8,
+            "title": "Number of Nonnegative Integer Triples Satisfying Symmetric Conditions",
+            "knowledge_points": ["algebra", "symmetric sums", "integer equations", "combinatorics"],
+            "question_template": "Find the number of triples of nonnegative integers $(a,b,c)$ satisfying $a + b + c = 3\\times 10^{{N}}$ and \\[a^2b + a^2c + b^2a + b^2c + c^2a + c^2b = 6\\times {10^3}^{{N}}.\\]",            
+            "parameters": {
+                "N": {
+                    "type": "int",
+                    "description": "The required sum a+b+c = 3*10^N.",
+                    "min": 1,
+                    "max": 1000,
+                    "step": 1,
+                    "default": 300
+                }
+            },
+            "solution_rule": {
+                "type": "python_function",
+                "name": "count_triples_with_conditions",
+                "inputs": ["N"],
+                "outputs": ["number_of_solutions"],
+                "description": "Counts the number of nonnegative integer triples (a,b,c) satisfying a+b+c=N and the given symmetric quadratic condition."
+            },
+            "example_default_run": {
+                "input": {"N": 2},
+                "output": 6
+            }
+        },
+        {
+            "problem_id": 9,
+            "title": "System of Logarithmic Equations with Equal Values",
+            "knowledge_points": ["algebra", "logarithmic equations", "symmetry in exponents"],
+            "question_template": "There exist real numbers $x$ and $y$, both greater than 1, such that $\\log_x\\left(y^x\\right)=\\log_y\\left(x^{{R}y}\\right)={S}$. Find $xy$.",            
+            "parameters": {
+                "R": {
+                    "type": "int",
+                    "description": "he coefficient 4 appearing in the exponent of x in the expression $x^{4y}$",
+                    "min": 1,
+                    "max": 20,
+                    "step": 1,
+                    "default": 4
+                },
+                "S": {
+                    "type": "int",
+                    "description": "the common logarithmic result in both equations",
+                    "min": 5,
+                    "max": 2000,
+                    "step": 1,
+                    "default": 10
+                }
+            },
+            "relations": [
+                {"expression": "(S * S) % R == 0"}
+            ],
+            "solution_rule": {
+                "type": "python_function",
+                "name": "log_equation_xy_product",
+                "inputs": ["R", "S"],
+                "outputs": ["xy_value"],
+                "description": "Solves the symmetric logarithmic system log_x(y^x)=log_y(x^{4y})=10 and returns the product xy=25."
+            },
+            "example_default_run": {
+                "input": {"R": 4, "S": 10},
+                "output": 25
+            }
+        },
+        {
+            "problem_id": 10,
+            "title": "Counting Sets with Restricted Maximum",
+            "knowledge_points": ["counting", "set theory", "binary decomposition"],
+            "question_template": "Alice chooses a set A of positive integers. Then Bob lists all finite nonempty sets B of positive integers such that the maximum element of B belongs to A. Bob's list has {total_sets} sets. Find the sum of the elements of A.",
+            "parameters": {
+                "total_sets": {
+                    "type": "int",
+                    "description": "the number of sets Bob lists",
+                    "min": 3,
+                    "max": 5000,
+                    "step": 1,
+                    "default": 2024
+                }
+            },
+            "solution_rule": {
+                "type": "python_function",
+                "name": "sum_A_from_total_sets",
+                "inputs": ["total_sets"],
+                "outputs": ["integer_sum_A"]
+            },
+            "example_default_run": {
+                "input": {"total_sets": 2024},
+                "output": 55
+            }
+        },
+        {
+            "problem_id": 11,
+            "title": "Maximum Real Part of Complex Expression with Conjugate Reciprocal Term",
+            "knowledge_points": ["complex numbers", "Euler's formula", "optimization of real parts"],
+            "question_template": "Find the largest possible real part of \\[({A} + {B}i)z + \\frac{96 + 144i}{z} \\] where $z$ is a complex number with $|z| = 4$. The real part can be written in the form $\\frac{\\sqrt m}{\\sqrt n}$, where $m$ and $n$ are positive integers, and they are relatively prime, Find $m+n$.",            
+            "parameters": {
+                "A": {
+                    "type": "int",
+                    "description": "the real coefficient in front of z",
+                    "min": 1,
+                    "max": 2000,
+                    "step": 1,
+                    "default": 75
+                },
+                "B": {
+                    "type": "int",
+                    "description": "the imaginary coefficient in front of z",
+                    "min": 1,
+                    "max": 2000,
+                    "step": 1,
+                    "default": 117
+                }
+            },
+            "solution_rule": {
+                "type": "python_function",
+                "name": "max_real_part_complex_expression",
+                "inputs": ["A", "B"],
+                "outputs": ["maximum_real_part"],
+                "description": "For z = 4e^{iθ}, compute Re((A + Bi)z + (96 + 144i)/z) = Re(4(A + Bi)e^{iθ} + (96 + 144i)/(4e^{iθ})), then maximize it over θ. The maximum is 2 × sqrt((A*4 + 96/4)^2 + (B*4 + 144/4)^2) / 2 simplified appropriately."
+            },
+            "example_default_run": {
+                "input": {"A": 75, "B": 117},
+                "output": 984
+            }
+        },
+        {
+            "problem_id": 12,
+            "title": "Digit Grid Satisfying Two Numeric Sum Conditions",
+            "knowledge_points": ["combinatorics", "number formation", "digit arrangement"],
+            "question_template": "Let N be ${t}\\bmod 4+2$. Find the number of ways to place a digit in each cell of a $2 \\times N$ grid so that the sum of the two numbers formed by reading left to right is a number consisting of $N$ digits all equal to $9$, and the sum of the $N$ two-digit numbers formed by reading top to bottom is $99$. The grid below is an example of such an arrangement when $N=3$ because $8+991=999$ and $9+9+81=99$. \\[\\begin{array}{|c|c|c|} \\hline 0 & 0 & 8 \\\\ \\hline 9 & 9 & 1 \\\\ \\hline \\end{array}\\]",
+            "parameters": {
+                "t": {
+                "type": "int",
+                "description": "Number of columns in the 2×t grid",
+                "min": 1,
+                "max": 5000,
+                "step": 1,
+                "default": 3
+                }
+            },
+            "solution_rule": {
+                "type": "python_function",
+                "name": "grid_99_count",
+                "inputs": ["t"],
+                "outputs": ["count_solutions"],
+                "description": "Counts the number of 0–9 digit assignments to 2×t grid satisfying both the horizontal-sum=999..9 and vertical-sum=99..9 conditions."
+            },
+            "example_default_run": {
+                "input": {"t": 3},
+                "output": 2
+            }
+        },
+        {
+            "problem_id": 13,
+            "title": "Aya's Variable-Speed Morning Walk",
+            "knowledge_points": ["algebra", "time–speed–distance relations", "systems of equations"],
+            "question_template": "Every morning Aya goes for a $9$-kilometer-long walk and stops at a coffee shop afterwards. When she walks at a constant speed of $s$ kilometers per hour, the walk takes her 4 hours, including $t$ minutes spent in the coffee shop. When she walks $s+2$ kilometers per hour, the walk takes her 2 hours and 24 minutes, including $t$ minutes spent in the coffee shop. Suppose Aya walks at $s-2.5+\\frac{{C}}{100}$ kilometers per hour. Find the number of minutes the walk takes her, including the $t$ minutes spent in the coffee shop.",            
+            "parameters": {
+                "C": {
+                    "type": "int",
+                    "description": "Increase of speed relative to s",
+                    "min": 10,
+                    "max": 1000,
+                    "step": 1,
+                    "default": 0.5
+                }
+            },
+            "relations": [
+                {"expression": "((10 <= C and C < 70) or (80 <= C and C < 110) or (120 <= C and C < 130) or (150 <= C and C < 160) or (180 <= C and C < 190) or (200 <= C and C < 210) or (240 <= C and C < 260) or (300 <= C and C < 310) or (400 <= C and C < 410) or (450 <= C and C < 460) or (500 <= C and C < 510))"}
+            ],
+            "solution_rule": {
+                "type": "python_function",
+                "name": "aya_morning_walk_C",
+                "inputs": ["C"],
+                "outputs": ["total_minutes_including_coffee"],
+                "description": "Given the constant parameters (distance=9, total_time1=4h, total_time2=2.4h, delta_speed1=2), compute the total minutes when Aya walks at s + C km/h."
+            },
+            "example_default_run": {
+                "input": {"C": 0.5},
+                "output": 204
+            }
+        },
+        {
+            "problem_id": 14,
+            "title": "Greatest Four-Digit Integer with Digit-to-{rep_digit} Divisibility by {divisor}",
+            "knowledge_points": ["number theory", "modular arithmetic", "divisibility rules", "integer search"],
+            "question_template": "Let $N$ be the greatest four-digit positive integer with the property that whenever one of its digits is changed to ${rep_digit}\\bmod 9+1$, the resulting number is divisible by $7$. Let $Q$ and $R$ be the quotient and remainder, respectively, when $N$ is divided by $1000$. Find $Q+R$.",            
+            "parameters": {
+                "rep_digit": {
+                    "type": "int",
+                    "description": "digit to replace with (e.g. 1)",
+                    "min": 3,
+                    "max": 5000,
+                    "default": 1
+                }
+            },
+            "solution_rule": {
+                "type": "python_function",
+                "name": "greatest_4digit_digit_toN_divisible_byM",
+                "inputs": ["rep_digit"],
+                "outputs": ["Q_plus_R"],
+                "description": "Search largest 4-digit integer N such that replacing any digit with rep_digit gives a number divisible by divisor. Then return (N // 1000) + (N % 1000)."
+            },
+            "example_default_run": {
+                "input": {"rep_digit": 1},
+                "output": 699
+            }
+        },
+        {
+            "problem_id": 15,
+            "title": "Paths on an n×n Grid with Exactly Four Direction Changes",
+            "knowledge_points": ["combinatorics", "lattice paths", "binomial coefficients"],
+            "question_template": "Consider the paths of length $2\\times {S}$ that follow the lines from the lower left corner to the upper right corner on an ${S}\\times{S}$ grid. Find the number of such paths that change direction exactly four times, as in the examples shown below.",            
+            "parameters": {
+                "S": {
+                "type": "int",
+                "descripion": "The side length of the square grid (number of squares along one edge).",
+                "min": 5,
+                "max": 5000,
+                "step": 1,
+                "default": 8
+                }
+            },
+            "solution_rule": {
+                "type": "python_function",
+                "name": "lattice_paths_four_turns",
+                "inputs": ["S"],
+                "outputs": ["number_of_paths"],
+                "description": "Counts the number of shortest lattice paths on an n×n grid that change direction exactly four times, using combinatorial partitioning of horizontal and vertical runs."
+            },
+            "example_default_run": {
+                "input": {"5": 8},
+                "output": 294
+            }
+        },
+        {
+            "problem_id": 16,
+            "title": "Least Prime and Modular Quartic Divisibility",
+            "knowledge_points": ["number theory", "modular arithmetic", "quartic residues", "prime powers"],
+            "question_template": "Let $p$ be the least prime number for which there exists a positive integer $n$ such that $n^{4}+1$ is divisible by $p^{2}$. Find the least positive integer $m$ such that $({k}\\bmod 2\\times 15 + 1)\\times m^{4}+1$ is divisible by $p^{2}$.",          
+            "parameters": {
+                "k": {
+                    "type": "int",
+                    "description": "Coefficient multiplying m^4 in the second congruence",
+                    "min": 2,
+                    "max": 8000,
+                    "default": 16
+                }
+            },
+            "relations": [
+                {"expression": "k > 0"}
+            ],
+            "solution_rule": {
+                "type": "python_function",
+                "name": "least_m_for_quartic_divisibility",
+                "inputs": ["k"],
+                "outputs": ["m"],
+                "description": "Find least positive integer m such that (k*m^4 + 1) is divisible by p^2, where p is the least prime for which n^4 + 1 is divisible by p^2."
+            },
+            "example_default_run": {
+                "input": {"k": 16},
+                "output": 13
+            }
+        },
+        {
+            "problem_id": 17,
+            "title": "Radius of Sphere Containing Rectangular Boxes with Given Surface Area and Volume",
+            "knowledge_points": ["geometry", "spatial reasoning", "algebraic manipulation", "optimization"],
+            "question_template": "Let $\\mathcal{B}$ be the set of rectangular boxes with surface area ${surface_area}\\bmod 2 \\times 4 + 50$ and volume ${volume}$. Let $r$ be the radius of the smallest sphere that can contain each of the rectangular boxes that are elements of $B$. The value of $r^2$ can be written as $p/q$, where $p$ and $q$ are relatively prime positive integers. Find $p + q$.",            
+            "parameters": {
+                "surface_area": {
+                    "type": "int",
+                    "description": "Total surface area of the box",
+                    "min": 1,
+                    "max": 2000,
+                    "default": 54
+                }
+            },
+            "dependency_parameters": {
+                "volume": {
+                    "depends_on": "surface_area",
+                    "rule_type": "conditional",
+                    "rules": [
+                        {
+                            "condition": "surface_area % 2 != 0",
+                            "choices": [13, 23, 27]
+                        },
+                        {
+                            "condition": "surface_area % 2 == 0",
+                            "choices": [12, 21, 24]
+                        }
+                    ]
+                }
+            },
+            "solution_rule": {
+                "type": "python_function",
+                "name": "sphere_radius_square_sum_pq",
+                "inputs": ["surface_area", "volume"],
+                "outputs": ["p_plus_q"],
+                "description": "Given surface area S and volume V, find p + q where r^2 = p/q for the smallest enclosing sphere of a box satisfying the conditions."
+            },
+            "example_default_run": {
+                "input": {"surface_area": 54, "volume": 23},
+                "output": 721
+            }
+        },
+        {
+            "problem_id": 18,
+            "title": "Rectangles in a Regular Polygon (Parallel Line Method)",
+            "knowledge_points": ["geometry", "combinatorics", "regular polygons", "parallel lines reasoning"],
+            "question_template": "Find the number of rectangles that can be formed inside a fixed regular {n} \\bmod 4 \\times 2 + 6-gon where each side of the rectangle lies on either a side or a diagonal of the polygon.",            
+            "parameters": {
+                "n": {
+                    "type": "int",
+                    "description": "Number of sides of the polygon (must be even, typically 12)",
+                    "min": 4,
+                    "max": 5000,
+                    "step": 2,
+                    "default": 12
+                }
+            },
+            "solution_rule": {
+                "type": "python_function",
+                "name": "rectangles_in_regular_polygon_parallel_method",
+                "inputs": ["n"],
+                "outputs": ["rectangle_count"],
+                "description": "Implements the parallel-line reasoning to count all rectangles formed by sides or diagonals of a regular n-gon."
+            },
+            "example_default_run": {
+                "input": {"n": 12},
+                "output": 315
+            }
+        },
+        {
+            "problem_id": 19,
+            "title": "Product of Triangle Sides with Orthogonal Radii Condition",
+            "knowledge_points": ["geometry", "triangle centers", "circumradius and inradius relations", "orthogonality conditions"],
+            "question_template": "Let $\\triangle ABC$ have circumcenter $O$ and incenter $I$ with $\\overline{IA}\\perp\\overline{OI}$, circumradius $13$, and inradius ${r}\\bmod 2 \\times 2 + 6$. Find $AB\\cdot AC$.",            
+            "parameters": {
+                "r": {
+                    "type": "int",
+                    "description": "The inradius of the triangle",
+                    "min": 1,
+                    "max": 8000,
+                    "default": 8
+                }
+            },
+            "relations": [
+                {"expression": "r > 0"}
+            ],
+            "solution_rule": {
+                "type": "python_function",
+                "name": "triangle_product_sides",
+                "inputs": ["r"],
+                "outputs": ["product"],
+                "description": "Compute AB·AC given circumradius R=13, inradius r, and the condition IA ⟂ OI."
+            },
+            "example_default_run": {
+                "input": {"r": 8},
+                "output": 208
+            }
+        },
+        {
+            "problem_id": 20,
+            "title": "Maximal Grid Chip Placement Problem",
+            "knowledge_points": ["combinatorics", "set theory", "grid arrangements", "inclusion-exclusion"],
+            "question_template": "There is a collection of $({n}\\bmod 9+2)^2$ indistinguishable white chips and $({n}\\bmod 9+2)^2$ indistinguishable black chips. Find the number of ways to place some of these chips in the $({n}\\bmod 9+2)^2$ unit cells of a $({n}\\bmod 9 + 2) \\times ({n}\\bmod 9 + 2}$ grid such that:\n- each cell contains at most one chip;\n- all chips in the same row and all chips in the same column have the same colour;\n- any additional chip placed on the grid would violate one or more of the previous two conditions.",
+            "parameters": {
+                "n": {
+                    "type": "int",
+                    "description": "The grid dimension (number of rows and columns)",
+                    "min": 2,
+                    "max": 8000,
+                    "default": 5
+                }
+            },
+            "relations": [
+                {"expression": "n >= 2"}
+            ],
+            "solution_rule": {
+                "type": "python_function",
+                "name": "maximal_chip_grid_arrangements",
+                "inputs": ["n"],
+                "outputs": ["answer"],
+                "description": "Given an n×n grid, compute the total number of valid maximal arrangements of chips using the formula (2^n - 2)^2 + 2."
+            },
+            "example_default_run": {
+                "input": {"n": 5},
+                "output": 902
+            }
+        },
+        {
+            "problem_id": 21,
+            "title": "Least Base with Many b-eautiful Integers",
+            "knowledge_points": ["number theory", "base representation", "Diophantine equations", "integer conditions"],
+            "question_template": "Let $b \\ge 2$ be an integer. Call a positive integer $n$ $b$\\textit{-eautiful} if it has exactly two digits when expressed in base $b$, and these two digits sum to $\\sqrt{n}$. For example, $81$ is $13$-eautiful because $81 = \\underline{6}\\underline{3}_{13}$ and $6 + 3 = \\sqrt{81}$. Find the least integer $b \\ge 2$ for which there are more than ${threshold}\\bmod 3+10$ $b$-eautiful integers.",
+            "parameters": {
+                "threshold": {
+                    "type": "int",
+                    "description": "The threshold number of b-eautiful integers required to exceed",
+                    "min": 1,
+                    "max": 8000,
+                    "default": 12
+                }
+            },
+            "relations": [
+                {"expression": "threshold > 0"}
+            ],
+            "solution_rule": {
+                "type": "python_function",
+                "name": "least_base_more_than_k_beautiful",
+                "inputs": ["threshold"],
+                "outputs": ["least_base"],
+                "description": "Find the smallest base b ≥ 2 for which there are more than 'threshold' b-eautiful integers, defined by n = b*x + y and sqrt(n) = x + y."
+            },
+            "example_default_run": {
+                "input": {"threshold": 12},
+                "output": 211
+            }
+        },
+        {
+            "problem_id": 22,
+            "title": "Equilateral Hexagon with Parallel Opposite Sides",
+            "knowledge_points": ["geometry", "equilateral polygons", "parallel lines", "triangle relations"],
+            "question_template": "Let ABCDEF be a convex equilateral hexagon in which all pairs of opposite sides are parallel. The triangle whose sides are extensions of segments AB, CD, and EF has side lengths of {a}, {b}, and {c}. The side length of the hexagon can be written as the form $\\frac{m}{n}$, where $m$ and $n$ are relatively prime integers. Find $m + n$",            
+            "parameters": {
+                "a": {
+                    "type": "int",
+                    "description": "side length of the first extension line (AB direction)",
+                    "min": 5,
+                    "max": 500,
+                    "step": 1,
+                    "default": 200
+                },
+                "b": {
+                    "type": "int",
+                    "description": "side length of the second extension line (CD direction)",
+                    "min": 5,
+                    "max": 500,
+                    "step": 1,
+                    "default": 240
+                },
+                "c": {
+                    "type": "int",
+                    "description": "side length of the third extension line (EF direction)",
+                    "min": 5,
+                    "max": 500,
+                    "step": 1,
+                    "default": 300
+                }
+            },
+            "relations": [
+                {"expression": "a + b > c"},
+                {"expression": "a + c > b"},
+                {"expression": "b + c > a"}
+            ],
+            "solution_rule": {
+                "type": "python_function",
+                "name": "hexagon_side_length",
+                "inputs": ["a", "b", "c"],
+                "outputs": ["side_length"],
+                "description": "Computes the side length of the equilateral hexagon whose opposite sides are parallel, given that the triangle formed by extensions of AB, CD, and EF has sides a, b, and c."
+            },
+            "example_default_run": {
+                "input": {"a": 200, "b": 240, "c": 300},
+                "output": 80
+            }
+        },
+        {
+            "problem_id": 23,
+            "title": "Rhombus on a Hyperbola Problem",
+            "knowledge_points": ["analytic geometry", "hyperbola", "properties of rhombi", "coordinate geometry reasoning"],
+            "question_template": "Let $A$, $B$, $C$, and $D$ be points on the hyperbola $\\frac{x^2}{{a}} - \\frac{y^2}{{b}} = 1$ such that $ABCD$ is a rhombus whose diagonals intersect at the origin. Find the greatest real number that is less than $BD^2$ for all such rhombi.",            
+            "parameters": {
+                "a": {
+                    "type": "int",
+                    "description": "Denominator of x² term in the hyperbola equation",
+                    "min": 1,
+                    "max": 5000,
+                    "step": 2,
+                    "default": 20
+                },
+                "b": {
+                    "type": "int",
+                    "description": "Denominator of y² term in the hyperbola equation",
+                    "min": 2,
+                    "max": 5000,
+                    "step": 1,
+                    "default": 24
+                }
+            },
+            "relations": [
+                {"expression": "b > a and a > 0"},
+                {"expression": "(4 * (a * b) / (b - a)).is_integer()"}
+            ],
+            "solution_rule": {
+                "type": "python_function",
+                "name": "hyperbola_rhombus_bd2_limit",
+                "inputs": ["a", "b"],
+                "outputs": ["greatest_less_than_bd2"],
+                "description": "Computes the greatest real number less than BD² for a rhombus inscribed in the hyperbola x²/a - y²/b = 1 with diagonals intersecting at the origin. When AC is the asymptote, BD² is minimized and approaches 4 * (a*b)/(b - a). The answer is floor of this value."
+            },
+            "example_default_run": {
+                "input": {"a": 20,"b": 24},
+                "output": 480
+            }
+        },
+        {
+            "problem_id": 24,
+            "title": "List Statistics with Given Sum, Mode, and Median",
+            "knowledge_points": ["statistics", "median", "mode", "algebraic reasoning"],
+            "question_template": "A list of positive integers has the following properties:\n\n\\bullet The sum of the items in the list is ${total_sum} \\bmod 2 \\times 2 + 28$.\n\n\\bullet The unique mode of the list is 9.\n\n\\bullet The median of the list is a positive integer that does not appear in the list itself.\n\nFind the sum of the squares of all the items in the list.",
+            "parameters": {
+                "total_sum": {
+                    "type": "int",
+                    "description": "The total sum of the numbers in the list",
+                    "min": 2,
+                    "max": 5000,
+                    "default": 40
+                }
+            },
+            "relations": [
+                {"expression": "total_sum > 0"}
+            ],
+            "solution_rule": {
+                "type": "python_function",
+                "name": "sum_of_squares_list_with_mode_median",
+                "inputs": ["total_sum"],
+                "outputs": ["sum_of_squares"],
+                "description": "Compute the sum of squares of a list satisfying given sum, unique mode 9, and median not appearing in the list."
+            },
+            "example_default_run": {
+                "input": {"total_sum": 40},
+                "output": 220
+            }
+        },
+        {
+            "problem_id": 25,
+            "title": "Residents Owning Four Types of Items",
+            "knowledge_points": ["set theory", "inclusion-exclusion principle", "counting"],
+            "question_template": "Among the ${TOTAL} residents of Aimeville, there are ${X1} who own a diamond ring, ${X2} who own a set of golf clubs, and ${X3} who own a garden spade. In addition, each of the ${TOTAL} residents owns a bag of candy hearts. There are ${Y2} residents who own exactly two of these things, and ${Y3} residents who own exactly three of these things. Find the number of residents of Aimeville who own all four of these things.",
+            "parameters": {
+                "TOTAL": {
+                    "type": "int",
+                    "description": "Total number of residents",
+                    "min": 100,
+                    "max": 5000,
+                    "default": 900
+                },
+                "X1": {
+                    "type": "int",
+                    "description": "Number who own a diamond ring",
+                    "min": 50,
+                    "max": 1000,
+                    "default": 195
+                },
+                "X2": {
+                    "type": "int",
+                    "description": "Number who own a set of golf clubs",
+                    "min": 50,
+                    "max": 1000,
+                    "default": 367
+                },
+                "X3": {
+                    "type": "int",
+                    "description": "Number who own a garden spade",
+                    "min": 50,
+                    "max": 1000,
+                    "default": 562
+                },
+                "Y2": {
+                    "type": "int",
+                    "description": "Number who own exactly two of these items",
+                    "min": 50,
+                    "max": 1000,
+                    "default": 437
+                },
+                "Y3": {
+                    "type": "int",
+                    "description": "Number who own exactly three of these items",
+                    "min": 50,
+                    "max": 1000,
+                    "default": 234
+                }
+            },
+            "relations": [
+                {"expression": "TOTAL > X1"},
+                {"expression": "TOTAL > X2"},
+                {"expression": "TOTAL > X3"},
+                {"expression": "TOTAL > Y2"},
+                {"expression": "TOTAL > Y3"},
+                {"expression": "X1 + X2 + X3 - Y2 - 2 * Y3 > 0"},
+                {"expression": "X1 + X2 + X3 - Y2 - 2 * Y3 > 0"},
+                {"expression": "(X1 + X2 + X3 - Y2 - 2 * Y3) % 3 == 0"}
+            ],
+            "solution_rule": {
+                "type": "python_function",
+                "name": "aimeville_four_items",
+                "inputs": ["TOTAL", "X1", "X2", "X3", "Y2", "Y3"],
+                "outputs": ["residents_with_all_four"],
+                "description": "Calculates the number of residents who own all four items using the inclusion-exclusion principle."
+            },
+            "example_default_run": {
+                "input": {"TOTAL": 900, "X1": 195, "X2": 367, "X3": 562, "Y2": 437, "Y3": 234},
+                "output": 73
+            }
+        },
+        {
+            "problem_id": 26,
+            "title": "Symmedian Tangent Triangle Problem",
+            "knowledge_points": ["geometry", "circle properties", "symmedian", "Apollonius theorem"],
+            "question_template": "Let $ABC$ be a triangle inscribed in circle $\\omega$. Let the tangents to $\\omega$ at $B$ and $C$ intersect at point $D$, and let line $AD$ intersect $\\omega$ at $P$. If $AB={AB}$, $BC={BC}$, and $AC={AC}$, $AP$ can be written as the form $\\frac{m}{n}$, where $m$ and $n$ are relatively prime integers. Find $m + n$.",            
+            "parameters": {
+                "AB": {
+                    "type": "int",
+                    "description": "Length of side AB of the triangle",
+                    "min": 3,
+                    "max": 100,
+                    "step": 1,
+                    "default": 5
+                },
+                "BC": {
+                    "type": "int",
+                    "description": "Length of side BC of the triangle",
+                    "min": 3,
+                    "max": 100,
+                    "step": 1,
+                    "default": 9
+                },
+                "AC": {
+                    "type": "int",
+                    "description": "Length of side AC of the triangle",
+                    "min": 3,
+                    "max": 100,
+                    "step": 1,
+                    "default": 10
+                }
+            },
+            "relations": [
+                {"expression": "AB + BC > AC and AB + AC > BC and BC + AC > AB"},
+                {"expression": "AB**2 + BC**2 > AC**2 and AB**2 + AC**2 > BC**2 and BC**2 + AC**2 > AB**2"},
+                {"expression": "math.sqrt((2 * AB**2 + 2 * AC**2 - BC**2) / 4).is_integer()"}
+            ],
+            "solution_rule": {
+                "type": "python_function",
+                "name": "solve_triangle_symmedian",
+                "inputs": ["AB", "BC", "AC"],
+                "outputs": ["m_plus_n"],
+                "description": "Computes AP where AD is the symmedian. Uses Apollonius’ Theorem: AM = sqrt((2AB² + 2AC² − BC²)/4), then AP = (AB × AC)/AM, and returns m+n with AP = m/n in lowest terms."
+            },
+            "example_default_run": {
+                "input": {
+                "AB": 5,
+                "BC": 9,
+                "AC": 10
+                },
+                "output": 113
+            }
+        },
+        {
+            "problem_id": 27,
+            "title": "Torus–Sphere Tangency Problem",
+            "knowledge_points": ["geometry", "3D solids", "similar triangles", "tangent surfaces"],
+            "question_template": "Torus $T$ is the surface produced by revolving a circle with radius ${r}$ around an axis in the plane of the circle that is a distance ${R}$ from the center of the circle (so like a donut). Let $S$ be a sphere with a radius ${R_s}$. When $T$ rests on the inside of $S$, it is internally tangent to $S$ along a circle with radius $r_i$, and when $T$ rests on the outside of $S$, it is externally tangent to $S$ along a circle with radius $r_o$. The difference $r_i-r_o$ can be written as $\\frac{m}{n}$, where $m$ and $n$ are relatively prime positive integers. Find $m+n$.",            
+            "parameters": {
+                "r": {
+                    "type": "int",
+                    "description": "Radius of the generating circle of the torus",
+                    "min": 1,
+                    "max": 200,
+                    "default": 3
+                },
+                "R": {
+                    "type": "int",
+                    "description": "Distance from the circle center to the axis of revolution",
+                    "min": 1,
+                    "max": 300,
+                    "default": 6
+                },
+                "R_s": {
+                    "type": "int",
+                    "description": "Radius of the sphere",
+                    "min": 5,
+                    "max": 4000,
+                    "default": 11
+                }
+            },
+            "relations": [
+                {"expression": "R_s > 2 * r"},
+                {"expression": "R > r"},
+                {"expression": "R_s > R"}
+            ],
+            "solution_rule": {
+                "type": "python_function",
+                "name": "torus_sphere_tangent_difference",
+                "inputs": ["r", "R", "R_s"],
+                "outputs": ["m_plus_n"],
+                "description": "Compute m+n where r_i - r_o = m/n in lowest terms for a torus-sphere tangency configuration."
+            },
+            "example_default_run": {
+                "input": {"r": 3, "R": 6, "R_s": 11},
+                "output": 127
+            }
+        },
+        {
+            "problem_id": 28,
+            "title": "Equal Face Distance in a Symmetric Tetrahedron",
+            "knowledge_points": ["solid geometry", "tetrahedron", "inradius", "Heron's formula"],
+            "question_template": "Let $ABCD$ be a tetrahedron such that $AB=CD=\\sqrt{{x}}$, $AC=BD=\\sqrt{{y}}$, and $BC=AD=\\sqrt{{z}}$. There exists a point $I$ inside the tetrahedron such that the distances from $I$ to each of the faces of the tetrahedron are all equal. This distance can be written in the form $\\frac{m\\sqrt n}{p}$, where $m$, $n$, and $p$ are positive integers, $m$ and $p$ are relatively prime, and $n$ is not divisible by the square of any prime. Find $m+n+p$.",           
+            "parameters": {
+                "x": {
+                    "type": "int",
+                    "description": "Square of edge length AB = CD.",
+                    "min": 1,
+                    "max": 200,
+                    "step": 1,
+                    "default": 41
+                },
+                "y": {
+                    "type": "int",
+                    "description": "Square of edge length AC = BD.",
+                    "min": 1,
+                    "max": 3000,
+                    "step": 1,
+                    "default": 80
+                },
+                "z": {
+                    "type": "int",
+                    "description": "Square of edge length BC = AD.",
+                    "min": 1,
+                    "max": 3000,
+                    "step": 1,
+                    "default": 89
+                }
+            },
+            "relations": [
+                {"expression": "math.sqrt(x) + math.sqrt(y) > math.sqrt(z)"},
+                {"expression": "math.sqrt(y) + math.sqrt(z) > math.sqrt(x)"},
+                {"expression": "math.sqrt(z) + math.sqrt(x) > math.sqrt(y)"},
+                {"expression": "x + y > z"},
+                {"expression": "y + z > x"},
+                {"expression": "z + x > y"}
+            ],
+            "solution_rule": {
+                "type": "python_function",
+                "name": "tetrahedron_equal_face_distance",
+                "inputs": ["x", "y", "z"],
+                "outputs": ["r"],
+                "description": "Solves for the equal distance from the incenter of a symmetric tetrahedron using (a*b*c)/(4*S), where S is the area formed by sides sqrt(x), sqrt(y), sqrt(z)."
+            },
+            "example_default_run": {
+                "input": {
+                "x": 41,
+                "y": 80,
+                "z": 89
+                },
+                "output": 104
+            }
+        },
+        {
+            "problem_id": 29,
+            "title": "Distance CE Between Two Rectangles with Collinearity and Concyclic Conditions",
+            "knowledge_points": ["geometry", "rectangles", "circle through four points", "coordinate geometry"],
+            "question_template": "Rectangles $ABCD$ and $EFGH$ are drawn such that $D,E,C,F$ are collinear. Also, $A,D,H,G$ all lie on a circle. If $BC={BC}$, $AB={AB}$, $FG={FG}$, and $EF={EF}$, what is the length of $CE$?",            
+            "parameters": {
+                "AB": {
+                    "type": "int",
+                    "description": "Length of side AB of rectangle ABCD.",
+                    "min": 1,
+                    "max": 3000,
+                    "step": 1,
+                    "default": 107
+                },
+                "BC": {
+                    "type": "int",
+                    "description": "Length of side BC of rectangle ABCD.",
+                    "min": 1,
+                    "max": 3000,
+                    "step": 1,
+                    "default": 16
+                },
+                "FG": {
+                    "type": "int",
+                    "description": "Length of side FG of rectangle EFGH.",
+                    "min": 1,
+                    "max": 3000,
+                    "step": 1,
+                    "default": 17
+                },
+                "EF": {
+                    "type": "int",
+                    "description": "Length of side EF of rectangle EFGH.",
+                    "min": 1,
+                    "max": 3000,
+                    "step": 1,
+                    "default": 184
+                }
+            },
+            "relations": [
+                {"expression": "int((EF**2 + 4*FG*(FG + BC))**0.5)**2 == (EF**2 + 4*FG*(FG + BC))"},
+                {"expression": "AB > (((EF**2 + 4*FG*(FG + BC))**0.5 - EF) / 2)"}
+            ],
+            "solution_rule": {
+                "type": "python_function",
+                "name": "ce_length_rectangle_geometry",
+                "inputs": ["AB", "BC", "FG", "EF"],
+                "outputs": ["CE"],
+                "description": "Computes CE for two rectangles satisfying D,E,C,F collinear and A,D,H,G concyclic. For the given default values CE = AB + EF = 291."
+            },
+            "example_default_run": {
+                "input": {
+                "AB": 107,
+                "BC": 16,
+                "FG": 17,
+                "EF": 184
+                },
+                "output": 104
+            }
+        },
+        {
+            "problem_id": 30,
+            "title": "Remainder of a 13th Root of Unity Product",
+            "knowledge_points": ["complex numbers", "roots of unity", "polynomial factorization", "modular arithmetic"],
+            "question_template": "Let $\\omega \\neq 1$ be a 13th root of unity. Find the remainder when \n\\[ \\prod_{k=0}^{12}(2 - 2\\omega^k + \\omega^{2k}) \\] \nis divided by ${modulus}\\bmod 8 \\times 1000 + 1000$. ",
+            "parameters": {
+                "modulus": {
+                    "type": "int",
+                    "description": "The modulus used for finding the remainder",
+                    "min": 1,
+                    "max": 8000,
+                    "default": 8000
+                }
+            },
+            "relations": [
+                {"expression": "modulus > 0"}
+            ],
+            "solution_rule": {
+                "type": "python_function",
+                "name": "root_of_unity_product_remainder",
+                "inputs": ["modulus"],
+                "outputs": ["remainder"],
+                "description": "Compute the remainder when ∏_{k=0}^{12}(2 - 2ω^k + ω^{2k}) is divided by the specified modulus, where ω is a 13th root of unity."
+            },
+            "example_default_run": {
+                "input": {"modulus": 8000},
+                "output": 192
+            }
+        }
+    ]
+}

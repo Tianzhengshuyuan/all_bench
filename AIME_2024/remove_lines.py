@@ -3,7 +3,7 @@ def truncate_file_from_line(filename, start_line):
     """
     从start_line开始删除文件后面的所有内容（start_line从0开始计数）
     """
-    with open(filename, 'r', encoding='utf-8') as f:
+    with open(filename, 'r', encoding='utf-8', errors='ignore') as f:
         lines = f.readlines()
     # 保留前start_line行
     new_lines = lines[:start_line]

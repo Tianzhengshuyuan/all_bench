@@ -1,0 +1,30 @@
+What line are the graphs of the exponential function \( y = a^x \) and the logarithmic function \( y = \log_a x \) symmetric about?  ,y=x
+The sufficient and necessary condition for a function \( f(x) \) to be differentiable at point \( x_0 \) is that the left-hand derivative and the ____ of \( f(x) \) at \( x_0 \) both exist and are equal.  ,right-hand derivative
+"Suppose \( A \) and \( B \) are two random events. If \( P(A|B) = P(A) \) (or \( P(B|A) = P(B) \), and \( P(A) > 0 \), \( P(B) > 0 \)), then events \( A \) and \( B \) are said to be mutually ____.  ",independent
+"If a non-terminal position has at least one subsequent position that is a P-position, then this position is a _____.  ",N-position
+"If a line outside a plane is parallel to a line inside the plane, then the line is ____ to the plane.  ",parallel
+"If the inner function \( u = g(x) \) is monotonically increasing on the interval \( I \), and the outer function \( y = f(u) \) is also monotonically increasing on the corresponding interval \( g(I) \) (the range of \( g(x) \) on \( I \)), then the composite function \( y = f(g(x)) \) is ____ on \( I \).  ",monotonically increasing
+"Let \( G \) be a finite group and \( H \) be a subgroup of \( G \). According to Lagrange's Theorem, the relationship satisfied by the order of \( G \) (denoted \( |G| \)), the order of \( H \) (denoted \( |H| \)), and the number of cosets of \( H \) in \( G \) (denoted \( [G:H] \)) is ________________.  ",\( |G| = |H| \times [G:H] \)
+"If two angles are each supplementary to two equal angles respectively, then the two angles are ____.",equal
+\(\log_a \frac{M}{N} = \log_a M\) ____ \(\log_a N\)  ,minus
+"Raise \( a \) to the power of ""the logarithm of \( N \) with base \( a \)"", and the result is ____.  ",\( N \)
+"Numbers of the form \( z = a + bi \) are called complex numbers, where \( a \) is the real part of the complex number \( z \), and \( b \) is called the ____ of the complex number \( z \).  ",imaginary part
+"If the hundreds, tens, and units digits of a three-digit number are \(a\), \(b\), and \(c\) respectively, then the number is ____ + \(10b\) + \(c\).  ",\(100a\)
+The basic relationship in travel problems: Distance = Speed * ____.  ,Time
+Let \( f(x) \in \text{GF}(q)[x] \) (the polynomial ring over \( \text{GF}(q) \)) be a polynomial of degree \( d \geq 1 \). Then \( f(x) \) has at most ____ distinct roots in \( \text{GF}(q) \) (with multiple roots counted according to their multiplicities).  ,\( d \)
+"If there are 3 mutually exclusive plans to complete a task, with \( n_1 \) ways in the 1st plan, \( n_2 \) ways in the 2nd plan, and \( n_3 \) ways in the 3rd plan, then the total number of ways to complete the task is ____.  ",\( n_1 + n_2 + n_3 \)
+"If the polynomial \( f(x) \) is divided by the linear polynomial \( (x - a) \), the remainder is a constant, and this constant is equal to ____.  ",\( f(a) \)
+"If a line is parallel to a plane, and a plane passing through this line intersects the original plane, then the line is ____ the intersection line.  ",parallel to
+"In a right-angled triangle in a plane, the sum of the squares of the two legs is ____ the square of the hypotenuse.  ",equal to
+"According to the Law of Cosines, \( \cos\theta = \) ____.  ",$\frac{\text{adjacent side}}{\text{hypotenuse}}$  
+"Taking all \( n \) distinct elements for arrangement (i.e., ""selecting all elements for ordering"") is called a(n) ____ of the \( n \) elements.  ",permutation
+"Any linear equation in two variables (e.g., \( ax + by = c \), where \( a \neq 0 \) and \( b \neq 0 \)) has ____ sets of solutions.  ",infinitely many
+The two pairs of opposite sides of a parallelogram are respectively ____.  ,parallel and equal
+"The locus of points in a plane where the absolute value of the difference between the distances to two fixed points \( F_1 \) and \( F_2 \) (called foci) is equal to a constant (denoted as \( 2a \), with \( 0 < 2a < |F_1F_2| \)) is called a(n) ____.  ",hyperbola
+"Arrange a set of data in ascending (or descending) order. If the number of data points is odd, the number at the middle position is the ____ of this set of data.  ",median
+"For any two finite sets \( A \) and \( B \), the number of elements in their union is equal to the sum of the number of elements in the two sets ____ the number of elements in their intersection.  ",minus
+"If the corresponding angles of two triangles are equal and their corresponding sides are proportional, then the two triangles are ____.  ",similar
+"In a right triangle, the square of a leg is equal to the product of its projection on the hypotenuse and the ____.  ",hypotenuse
+There exists a point inside a tetrahedron that is equidistant from all its faces. This point is called the ____ of the tetrahedron.  ,incenter
+    All four angles of a rectangle are ____.  ,right angles
+"For any positive integer \( n \), the equation \( x^n = 1 \) has exactly ____ distinct complex solutions.  ",n

@@ -1,0 +1,385 @@
+第1题 prompt:
+The following is fill-in-the-blank question. Analyze it step by step and enclose the final answer with two pairs of ####, for example: ####6####.
+What line are the graphs of the exponential function \( y = a^x \) and the logarithmic function \( y = \log_a x \) symmetric about?  
+
+模型回答: To find the line that the graphs of the exponential function \( y = a^x \) and the logarithmic function \( y = \log_a x \) are symmetric about, we can use the concept of inverses.
+
+The logarithmic function \( y = \log_a x \) is the inverse function of the exponential function \( y = a^x \). This means that the graphs of these two functions are reflections of each other over the line \( y = x \).
+
+Since the line \( y = x \) is the line of symmetry for the graphs of inverse functions, the graphs of the exponential and logarithmic functions are symmetric about the line \( y = x ######## x = y ########. 
+正确答案: y=x
+
+第2题 prompt:
+The following is fill-in-the-blank question. Analyze it step by step and enclose the final answer with two pairs of ####, for example: ####6####.
+The sufficient and necessary condition for a function \( f(x) \) to be differentiable at point \( x_0 \) is that the left-hand derivative and the ____ of \( f(x) \) at \( x_0 \) both exist and are equal.  
+
+模型回答: The sentence is asking for the missing term that should be filled in the blank to complete the statement correctly. In this case, the term that should be filled in the blank is "right-hand derivative."
+
+Therefore, the final answer is: ####right-hand derivative####. 
+正确答案: right-hand derivative
+
+第3题 prompt:
+The following is fill-in-the-blank question. Analyze it step by step and enclose the final answer with two pairs of ####, for example: ####6####.
+Suppose \( A \) and \( B \) are two random events. If \( P(A|B) = P(A) \) (or \( P(B|A) = P(B) \), and \( P(A) > 0 \), \( P(B) > 0 \)), then events \( A \) and \( B \) are said to be mutually ____.  
+
+模型回答: To find the final answer, let's evaluate the given information step by step:
+
+Given: If \( P(A|B) = P(A) \), then events \( A \) and \( B \) are said to be mutually ???
+
+The condition \( P(A|B) = P(A) \) means that the probability of event \( A \) occurring given that event \( B \) has occurred is equal to the probability of event \( A \) occurring independently of event \( B \).
+
+When this happens, events \( A \) and \( B \) are said to be mutually ####independent####.
+
+Therefore, the final answer is ####independent####. 
+正确答案: independent
+
+第4题 prompt:
+The following is fill-in-the-blank question. Analyze it step by step and enclose the final answer with two pairs of ####, for example: ####6####.
+If a non-terminal position has at least one subsequent position that is a P-position, then this position is a _____.  
+
+模型回答: In this question, we are talking about game positions described by the concept of terminal and non-terminal positions in a game.
+
+1. A non-terminal position is a position in the game that is not the final position.
+2. A P-position is a position in the game where the player whose turn it is to move will lose if both players play optimally.
+
+Given the statement: "If a non-terminal position has at least one subsequent position that is a P-position, then this position is a _____."
+
+Based on game theory and the concept of P-positions, a non-terminal position that has at least one subsequent P-position will itself be an N-position. This is because if there is a P-position among its subsequent positions, the player to move in the non-terminal position can force the game into a P-position, ensuring a win.
+
+Therefore, the final answer is: ####N####. 
+正确答案: N-position
+
+第5题 prompt:
+The following is fill-in-the-blank question. Analyze it step by step and enclose the final answer with two pairs of ####, for example: ####6####.
+If a line outside a plane is parallel to a line inside the plane, then the line is ____ to the plane.  
+
+模型回答: To fill in the blank, we need to recall some basic geometry concepts:
+
+1. If a line is parallel to a plane, then the line is said to be parallel to the plane.
+2. If a line is parallel to a plane, it means the line never intersects the plane and remains at a fixed distance from it.
+
+Therefore, if a line outside a plane is parallel to a line inside the plane, we can conclude that the line is parallel to the plane.
+
+Hence, the line is ####parallel#### to the plane. 
+正确答案: parallel
+
+第6题 prompt:
+The following is fill-in-the-blank question. Analyze it step by step and enclose the final answer with two pairs of ####, for example: ####6####.
+If the inner function \( u = g(x) \) is monotonically increasing on the interval \( I \), and the outer function \( y = f(u) \) is also monotonically increasing on the corresponding interval \( g(I) \) (the range of \( g(x) \) on \( I \)), then the composite function \( y = f(g(x)) \) is ____ on \( I \).  
+
+模型回答: Given that the inner function \( u = g(x) \) is monotonically increasing on the interval \( I \), and the outer function \( y = f(u) \) is also monotonically increasing on the corresponding interval \( g(I) \), it follows that the composite function \( y = f(g(x)) \) is monotonically ####increasing#### on \( I \). 
+正确答案: monotonically increasing
+
+第7题 prompt:
+The following is fill-in-the-blank question. Analyze it step by step and enclose the final answer with two pairs of ####, for example: ####6####.
+Let \( G \) be a finite group and \( H \) be a subgroup of \( G \). According to Lagrange's Theorem, the relationship satisfied by the order of \( G \) (denoted \( |G| \)), the order of \( H \) (denoted \( |H| \)), and the number of cosets of \( H \) in \( G \) (denoted \( [G:H] \)) is ________________.  
+
+模型回答: Lagrange's Theorem states that for any finite group \( G \) and a subgroup \( H \), the order of the subgroup \( H \) divides the order of the group \( G \), and the index of \( H \) in \( G \) (denoted by \( [G:H] \)) is equal to the order of \( G \) divided by the order of \( H \). 
+
+Therefore, the relationship satisfied by the order of \( G \) (denoted \( |G| \)), the order of \( H \) (denoted \( |H| \)), and the number of cosets of \( H \) in \( G \) (denoted \( [G:H] \)) could be expressed as:
+
+#### |G| = |H| * [G:H] #### 
+正确答案: \( |G| = |H| \times [G:H] \)
+
+第8题 prompt:
+The following is fill-in-the-blank question. Analyze it step by step and enclose the final answer with two pairs of ####, for example: ####6####.
+If two angles are each supplementary to two equal angles respectively, then the two angles are ____.
+
+模型回答: Step 1: Let the two equal angles be x and x, and the two supplementary angles be y and z.
+
+Step 2: According to the question, y and x are supplementary, and z and x are supplementary. This means that:
+
+y + x = 180 (supplementary angles)
+z + x = 180 (supplementary angles)
+
+Step 3: Since x and x are equal, we can replace x in the equations above with x, resulting in:
+
+y + x = 180
+z + x = 180
+
+Step 4: To find the relationship between y and z, we can subtract the second equation from the first:
+
+(y + x) - (z + x) = 180 - 180
+y - z = 0
+y = z
+
+Step 5: This shows that the two angles y and z are equal when they are supplementary to two equal angles x and x.
+
+Therefore, the two angles are ####equal to each other####. 
+正确答案: equal
+
+第9题 prompt:
+The following is fill-in-the-blank question. Analyze it step by step and enclose the final answer with two pairs of ####, for example: ####6####.
+\(\log_a \frac{M}{N} = \log_a M\) ____ \(\log_a N\)  
+
+模型回答: To analyze this fill-in-the-blank question step by step, we need to apply the properties of logarithms.
+
+1. Recall the property of logarithms that states: \(\log_a \frac{M}{N} = \log_a M - \log_a N\).
+
+2. Replace the blank with the difference of the logs: \(\log_a M - \log_a N\).
+
+3. The final answer after simplifying the expression is: \(\log_a M - \log_a N\).
+
+Therefore, the final answer enclosed with two pairs of #### is:   ####\(\log_a M - \log_a N\)####. 
+正确答案: minus
+
+第10题 prompt:
+The following is fill-in-the-blank question. Analyze it step by step and enclose the final answer with two pairs of ####, for example: ####6####.
+Raise \( a \) to the power of "the logarithm of \( N \) with base \( a \)", and the result is ____.  
+
+模型回答: To solve this fill-in-the-blank question step by step:
+1. The logarithm of \( N \) with base \( a \) is represented by \( \log_a(N) \).
+2. Raise \( a \) to the power of \( \log_a(N) \) is equivalent to computing \( a^{\log_a(N)} \).
+3. By the logarithmic property, \( a^{\log_a(N)} = N \).
+So, the final answer is ####N####. 
+正确答案: \( N \)
+
+第11题 prompt:
+The following is fill-in-the-blank question. Analyze it step by step and enclose the final answer with two pairs of ####, for example: ####6####.
+Numbers of the form \( z = a + bi \) are called complex numbers, where \( a \) is the real part of the complex number \( z \), and \( b \) is called the ____ of the complex number \( z \).  
+
+模型回答: The missing term to be filled in is "imaginary part."
+Hence, the final answer is: ####imaginary part####. 
+正确答案: imaginary part
+
+第12题 prompt:
+The following is fill-in-the-blank question. Analyze it step by step and enclose the final answer with two pairs of ####, for example: ####6####.
+If the hundreds, tens, and units digits of a three-digit number are \(a\), \(b\), and \(c\) respectively, then the number is ____ + \(10b\) + \(c\).  
+
+模型回答: Let's break down the statement step by step:
+
+1. The number has three digits, so it can be represented as \(abc\).
+2. The hundreds digit is \(a\), the tens digit is \(b\), and the units digit is \(c\).
+3. According to the question, the number can be expressed as follows: \(abc = ____ + 10b + c\).
+
+To find out the missing digits to complete the sum, we notice the following:
+
+- \(a\) is the hundreds digit, so it occupies the leftmost position in the hundreds place.
+- Similarly, \(b\) is the tens digit, so it occupies the middle position in the tens place.
+- \(c\) is the units digit, so it occupies the rightmost position in the units place.
+
+Thus, by understanding the positioning of the digits, we can deduce that the missing part of the expression to complete the sum is the \(10a\) term, where \(a\) represents the hundreds digit.
+
+Therefore, the calculation will be as follows:
+\[ abc = 100a + 10b + c \]
+
+Hence, the final answer is: ####100a####. 
+正确答案: \(100a\)
+
+第13题 prompt:
+The following is fill-in-the-blank question. Analyze it step by step and enclose the final answer with two pairs of ####, for example: ####6####.
+The basic relationship in travel problems: Distance = Speed * ____.  
+
+模型回答: Given the formula Distance = Speed * Time for travel problems, we need to determine what is the missing element that correctly fits in the blank.
+
+The formula indicates that the distance covered is equal to the product of the speed at which one is traveling and the time for which one is traveling. Hence, the missing element that should be in the blank is ####Time####. 
+
+Therefore, the final answer is: ####Time####. 
+正确答案: Time
+
+第14题 prompt:
+The following is fill-in-the-blank question. Analyze it step by step and enclose the final answer with two pairs of ####, for example: ####6####.
+Let \( f(x) \in \text{GF}(q)[x] \) (the polynomial ring over \( \text{GF}(q) \)) be a polynomial of degree \( d \geq 1 \). Then \( f(x) \) has at most ____ distinct roots in \( \text{GF}(q) \) (with multiple roots counted according to their multiplicities).  
+
+模型回答: To find the number of distinct roots of \( f(x) \) in \( \text{GF}(q) \), where \( f(x) \) is a polynomial of degree \( d \geq 1 \) in the polynomial ring over \( \text{GF}(q) \), we use the fact that a polynomial of degree \( d \) has at most \( d \) roots in its field, counting multiplicities.
+
+Therefore, the polynomial \( f(x) \) of degree \( d \) has at most ####d#### distinct roots in \( \text{GF}(q) \) (with multiple roots counted according to their multiplicities). 
+正确答案: \( d \)
+
+第15题 prompt:
+The following is fill-in-the-blank question. Analyze it step by step and enclose the final answer with two pairs of ####, for example: ####6####.
+If there are 3 mutually exclusive plans to complete a task, with \( n_1 \) ways in the 1st plan, \( n_2 \) ways in the 2nd plan, and \( n_3 \) ways in the 3rd plan, then the total number of ways to complete the task is ____.  
+
+模型回答: To find the total number of ways to complete the task using the three mutually exclusive plans, we need to add the number of ways for each plan.
+
+The total number of ways to complete the task is given by:
+\[ n_{\text{total}} = n_1 + n_2 + n_3 \]
+
+Therefore, the final answer is ####n_{\text{total}} = n_1 + n_2 + n_3####. 
+正确答案: \( n_1 + n_2 + n_3 \)
+
+第16题 prompt:
+The following is fill-in-the-blank question. Analyze it step by step and enclose the final answer with two pairs of ####, for example: ####6####.
+If the polynomial \( f(x) \) is divided by the linear polynomial \( (x - a) \), the remainder is a constant, and this constant is equal to ____.  
+
+模型回答: To find the constant remainder when a polynomial \( f(x) \) is divided by \( (x - a) \), we can use the remainder theorem. The remainder when a polynomial is divided by a linear polynomial of the form \( (x - a) \) is the value of the polynomial evaluated at \( x = a \).
+
+Therefore, the constant remainder is equal to \( f(a) \). 
+
+So, the constant is equal to ####f(a)####. 
+正确答案: \( f(a) \)
+
+第17题 prompt:
+The following is fill-in-the-blank question. Analyze it step by step and enclose the final answer with two pairs of ####, for example: ####6####.
+If a line is parallel to a plane, and a plane passing through this line intersects the original plane, then the line is ____ the intersection line.  
+
+模型回答: Step 1: If a line is parallel to a plane, it won't intersect the plane it is parallel to.
+
+Step 2: When a plane passing through this line intersects the original plane, the intersection line is formed by the intersection of these two planes.
+
+Step 3: Since the line is parallel to the original plane and they don't intersect directly, the line is perpendicular to the intersection line formed by the two planes.
+
+Therefore, the line is perpendicular to the intersection line. 
+
+####perpendicular#### 
+正确答案: parallel to
+
+第18题 prompt:
+The following is fill-in-the-blank question. Analyze it step by step and enclose the final answer with two pairs of ####, for example: ####6####.
+In a right-angled triangle in a plane, the sum of the squares of the two legs is ____ the square of the hypotenuse.  
+
+模型回答: In a right-angled triangle, according to the Pythagorean theorem, the sum of the squares of the two legs is equal to the square of the hypotenuse. Therefore, the answer is ####equal to####. 
+正确答案: equal to
+
+第19题 prompt:
+The following is fill-in-the-blank question. Analyze it step by step and enclose the final answer with two pairs of ####, for example: ####6####.
+According to the Law of Cosines, \( \cos\theta = \) ____.  
+
+模型回答: To find the value of \( \cos\theta \) using the Law of Cosines, we need more information such as the lengths of the sides of a triangle or the angle \( \theta \) in question. Since this additional information is not provided in the question, we cannot determine a specific value for \( \cos\theta \) at this time. If you provide the necessary details, I would be happy to help you solve for \( \cos\theta \) using the Law of Cosines. 
+正确答案: $\frac{\text{adjacent side}}{\text{hypotenuse}}$  
+
+第20题 prompt:
+The following is fill-in-the-blank question. Analyze it step by step and enclose the final answer with two pairs of ####, for example: ####6####.
+Taking all \( n \) distinct elements for arrangement (i.e., "selecting all elements for ordering") is called a(n) ____ of the \( n \) elements.  
+
+模型回答: In this fill-in-the-blank question, we are looking for the term that refers to taking all \( n \) distinct elements for arrangement, which is commonly known as a permutation of the \( n \) elements.
+
+Therefore, the final answer is: ####permutation####. 
+正确答案: permutation
+
+第21题 prompt:
+The following is fill-in-the-blank question. Analyze it step by step and enclose the final answer with two pairs of ####, for example: ####6####.
+Any linear equation in two variables (e.g., \( ax + by = c \), where \( a \neq 0 \) and \( b \neq 0 \)) has ____ sets of solutions.  
+
+模型回答: To find the number of sets of solutions for any linear equation in two variables, we first look at the coefficients of the variables. In the equation \( ax + by = c \), since \( a \neq 0 \) and \( b \neq 0 \), the equation is not parallel to the x-axis or y-axis. 
+
+For any linear equation in two variables that is not parallel to the x-axis or y-axis, it will have exactly one unique solution, which means it will have ####1#### set of solutions. 
+正确答案: infinitely many
+
+第22题 prompt:
+The following is fill-in-the-blank question. Analyze it step by step and enclose the final answer with two pairs of ####, for example: ####6####.
+The two pairs of opposite sides of a parallelogram are respectively ____.  
+
+模型回答: In a parallelogram, the opposite sides are equal in length and parallel to each other. Therefore, the two pairs of opposite sides of a parallelogram are respectively ####equal in length and parallel####. 
+正确答案: parallel and equal
+
+第23题 prompt:
+The following is fill-in-the-blank question. Analyze it step by step and enclose the final answer with two pairs of ####, for example: ####6####.
+The locus of points in a plane where the absolute value of the difference between the distances to two fixed points \( F_1 \) and \( F_2 \) (called foci) is equal to a constant (denoted as \( 2a \), with \( 0 < 2a < |F_1F_2| \)) is called a(n) ____.  
+
+模型回答: The locus of points in a plane where the absolute value of the difference between the distances to two fixed points \( F_1 \) and \( F_2 \) (called foci) is equal to a constant (denoted as \( 2a \), with \( 0 < 2a < |F_1F_2| \)) is called a(n) ####ellipse####. 
+正确答案: hyperbola
+
+第24题 prompt:
+The following is fill-in-the-blank question. Analyze it step by step and enclose the final answer with two pairs of ####, for example: ####6####.
+Arrange a set of data in ascending (or descending) order. If the number of data points is odd, the number at the middle position is the ____ of this set of data.  
+
+模型回答: To find the middle position of a set of data when the number of data points is odd, you need to follow these steps:
+
+1. Arrange the data in ascending or descending order.
+2. Count the total number of data points.
+3. Find the middle position by dividing the total number of data points by 2 and rounding up to the nearest whole number if necessary.
+4. The number at the middle position is the median of the set of data.
+
+Therefore, the final answer is: ####The number at the middle position is the median of this set of data####. 
+正确答案: median
+
+第25题 prompt:
+The following is fill-in-the-blank question. Analyze it step by step and enclose the final answer with two pairs of ####, for example: ####6####.
+For any two finite sets \( A \) and \( B \), the number of elements in their union is equal to the sum of the number of elements in the two sets ____ the number of elements in their intersection.  
+
+模型回答: Let's break down the information given in the question:
+
+Number of elements in the union of sets \( A \) and \( B \): \( |A \cup B| \)
+
+Number of elements in set \( A \): \( |A| \)
+
+Number of elements in set \( B \): \( |B| \)
+
+Number of elements in the intersection of sets \( A \) and \( B \): \( |A \cap B| \)
+
+Based on the principle of set theory, we can express the relationship as:
+
+\( |A \cup B| = |A| + |B| - |A \cap B| \)
+
+Therefore, the number of elements in the union of sets \( A \) and \( B \) is equal to the sum of the number of elements in the two sets minus the number of elements in their intersection.
+
+Hence, the final answer enclosed with two pairs of #### is: ####|A| + |B| - |A \cap B|#### 
+正确答案: minus
+
+第26题 prompt:
+The following is fill-in-the-blank question. Analyze it step by step and enclose the final answer with two pairs of ####, for example: ####6####.
+If the corresponding angles of two triangles are equal and their corresponding sides are proportional, then the two triangles are ____.  
+
+模型回答: Let's break down the information given in the fill-in-the-blank question:
+
+1. The corresponding angles of the two triangles are equal - This means that the corresponding angles in the two triangles have the same measure.
+
+2. Their corresponding sides are proportional - This means that the lengths of the corresponding sides of the two triangles are in the same ratio.
+
+When the corresponding angles of two triangles are equal and their corresponding sides are proportional, the two triangles are similar.
+
+Therefore, the two triangles are ####similar####. 
+正确答案: similar
+
+第27题 prompt:
+The following is fill-in-the-blank question. Analyze it step by step and enclose the final answer with two pairs of ####, for example: ####6####.
+In a right triangle, the square of a leg is equal to the product of its projection on the hypotenuse and the ____.  
+
+模型回答: In a right triangle, the square of a leg is equal to the product of its projection on the hypotenuse and the ____.  
+
+Let's denote the leg of the right triangle as \( a \), the projection of the leg on the hypotenuse as \( x \), and the other leg of the right triangle as \( b \). According to the Pythagorean theorem, we have \( a^2 + b^2 = c^2 \), where \( c \) is the hypotenuse of the right triangle.
+
+The projection of the leg on the hypotenuse divides the hypotenuse into two segments. Let's denote the segment next to the leg as \( x \) and the other segment as \( c - x \). We can set up proportions to relate the leg, its projection on the hypotenuse, and the segments of the hypotenuse:
+
+\( \frac{a}{x} = \frac{b}{c-x} \)
+
+Cross multiplying gives us:
+
+\( ac - ax = bx \)
+
+Rearranging the terms gives us:
+
+\( ac = (a + b)x \)
+
+Given that the square of a leg is equal to the product of its projection on the hypotenuse and the expression we derived above:
+
+\( a^2 = x(a + b) \)
+
+Solving for x gives us:
+
+\( x = \frac{a^2}{a + b} \)
+
+Therefore, the final answer is ####a^2 / (a + b)####. 
+正确答案: hypotenuse
+
+第28题 prompt:
+The following is fill-in-the-blank question. Analyze it step by step and enclose the final answer with two pairs of ####, for example: ####6####.
+There exists a point inside a tetrahedron that is equidistant from all its faces. This point is called the ____ of the tetrahedron.  
+
+模型回答: To find the answer, let's analyze the question step by step:
+
+A point inside a tetrahedron that is equidistant from all its faces is called the centroid of the tetrahedron.
+
+Therefore, the final answer is: ####centroid####. 
+正确答案: incenter
+
+第29题 prompt:
+The following is fill-in-the-blank question. Analyze it step by step and enclose the final answer with two pairs of ####, for example: ####6####.
+    All four angles of a rectangle are ____.  
+
+模型回答: Step 1: A rectangle has opposite angles that are congruent, meaning they have the same measure.
+
+Step 2: Since a rectangle has four angles, and opposite angles are congruent, all four angles of a rectangle are ####right angles####. 
+正确答案: right angles
+
+第30题 prompt:
+The following is fill-in-the-blank question. Analyze it step by step and enclose the final answer with two pairs of ####, for example: ####6####.
+For any positive integer \( n \), the equation \( x^n = 1 \) has exactly ____ distinct complex solutions.  
+
+模型回答: For any positive integer \( n \), the equation \( x^n = 1 \) has exactly \( n \) distinct complex solutions. 
+
+####n#### 
+正确答案: n
+
+总题数: 30, 正确数: 10, 正确率: 33.33%, 耗时: 45.56s
