@@ -41,7 +41,7 @@ DEFAULT_ROLE_MODEL = {
     "codegen": "gpt5", # 代码生成
     "check": "mistral_medium",    # 硬编码检查
     "refine": "gpt5",  # 代码精炼
-    "variant": "qwen_max",     # 数字/条件变体生成
+    "variant": "gpt5",     # 数字/条件变体生成
     "range": "gpt5",  # 变量取值范围确定
 }
 
@@ -562,9 +562,53 @@ class AnalogicalTransformer:
             kp_lower = kp.lower()
             for key, value_list in self.formula_library.items():
                 if key in kp_lower:
-                    print(f"匹配到key：{key}对应的公式")
+                    print(f"匹配到key：{key}")
                     formulas.extend(value_list)
         return "\n".join(formulas) if formulas else "No specific formulas found."
+
+    def _extract_numeric_inputs(self, problem_text: str, llm: LLMClient) -> Dict[str, Any]:
+        """从题目文本中提取一个随机数字变量，并标注位置信息"""
+        prompt = textwrap.dedent(f"""
+            请从下面的数学题目中随机选择一个数字变量。
+            题目：
+            {problem_text}
+
+            要求：
+            1. 随机选择一个数字作为变量
+            2. 对于这个数字，标注它在题目中出现的一个代表性位置（使用字符位置，从题目文本开头开始计数，从0开始）
+
+            请以JSON格式输出，格式为：
+            {{
+                "name": "变量名",
+                "value": 数值,
+                "position": {{
+                    "char_start": 起始位置,
+                    "char_end": 结束位置,
+                    "context": "上下文描述"
+                }}
+            }}
+
+            变量名应该是有意义的，如 "n", "size", "count" 等。
+            位置信息使用字符位置（从题目文本开头开始计数，从0开始），要足够详细，以便后续能够准确替换对应的数字。
+            只输出JSON，不要有其他文字。
+            """)
+        try:
+            resp = llm.chat(prompt)
+            json_match = re.search(r'\{.*\}', resp, re.DOTALL)
+            if json_match:
+                result = json.loads(json_match.group())
+                # 转换为简化的格式，保留位置信息
+                extracted = {}
+                if "name" in result and "value" in result:
+                    extracted[result["name"]] = {
+                        "value": result["value"],
+                        "position": result.get("position", {})
+                    }
+                return extracted
+            return {}
+        except Exception as e:
+            print(f"提取数字输入时出错: {e}")
+            return {}
 
     def _check_hard_coded(self, code: str, llm: LLMClient) -> bool:
         """检查代码是否包含硬编码答案"""
@@ -636,28 +680,6 @@ class AnalogicalTransformer:
                 print(f"【异常: {str(e)}】 Python代码已保存到: {code_file} ")
             return None, str(e)
 
-    def _extract_numeric_inputs(self, problem_text: str, llm: LLMClient) -> Dict[str, Any]:
-        """从题目文本中提取数字输入"""
-        prompt = textwrap.dedent(f"""
-            请从下面的数学题目中提取所有数字值，并给出合理的变量名。
-
-            题目：
-            {problem_text}
-
-            请以JSON格式输出，格式为：{{"变量名1": 数值1, "变量名2": 数值2, ...}}
-            变量名应该是有意义的，如 "a", "b", "radius", "n" 等。
-            只输出JSON，不要有其他文字。
-            """)
-        try:
-            resp = llm.chat(prompt)
-            json_match = re.search(r'\{[^}]+\}', resp, re.DOTALL)
-            if json_match:
-                return json.loads(json_match.group())
-            return {}
-        except Exception as e:
-            print(f"提取数字输入时出错: {e}")
-            return {}
-
     def _build_numeric_solver(
         self,
         problem_text: str,
@@ -677,15 +699,23 @@ class AnalogicalTransformer:
         
         print("------------提取数字变量------------")
         numeric_inputs = self._extract_numeric_inputs(problem_text, llm_codegen)
-        primary_key = random.choice(list(numeric_inputs.keys())) if numeric_inputs else None
-        print("所有可选数字变量：")
-        for key, value in numeric_inputs.items():
-            print(f"  {key} = {value}")
-        print(f"选择变量：{primary_key}")
+        # numeric_inputs 的结构是 {变量名: {value: 值, position: {...}}}
+        # primary_key 是提取的变量
+        primary_key = list(numeric_inputs.keys())[0] if numeric_inputs else None
+        print("提取的数字变量：")
+        for key, info in numeric_inputs.items():
+            value = info.get("value", info) if isinstance(info, dict) else info
+            position = info.get("position", {}) if isinstance(info, dict) else {}
+            print(f"  {key} = {value} 位置: {position}")
         
         print("----------生成通用求解代码----------")
         for iter_num in range(max_iter):
             print(f"第【 {iter_num+1} 】次生成代码")
+            # 准备变量信息字符串
+            primary_info = numeric_inputs.get(primary_key, {}) if primary_key else {}
+            primary_value = primary_info.get("value", primary_info) if isinstance(primary_info, dict) else primary_info
+            primary_position = primary_info.get("position", {}) if isinstance(primary_info, dict) else {}
+            
             # 生成代码
             prompt = textwrap.dedent(f"""
                 你是一个数学编程专家。请分析下面的数学题目，编写一个Python求解程序。
@@ -700,12 +730,14 @@ class AnalogicalTransformer:
                 解法思路：
                 {solution_sketches}
 
+                变量信息：
+                变量：{primary_key} = {primary_value}（位置：{primary_position}）
+
                 要求：
-                1. 随机选取的输入变量：{primary_key}（其值：{numeric_inputs.get(primary_key) if primary_key else 'None'}）
-                2. 编写一个Python函数 solve({primary_key}), 仅接受该变量值作为参数；其他数字在函数内定义为常量或由该变量推导
-                3. 在代码注释中给出输入变量的合理取值范围
-                4. 实现通用的计算过程，不要硬编码答案
-                5. 函数应该返回题目的答案
+                1. 编写一个Python函数 solve({primary_key}), 仅接受变量 {primary_key} 的值作为参数
+                2. 实现通用的计算过程，不要硬编码答案
+                3. 函数应该返回题目的答案
+                4. 注意：题目中可能有多个相同的数字，但只有变量 {primary_key} 对应的位置需要作为参数传入
 
                 请只输出Python代码，不要有其他解释。
                 """)
@@ -724,13 +756,20 @@ class AnalogicalTransformer:
                 # 检查硬编码
                 if self._check_hard_coded(code, llm_check):
                     print("生成代码包含硬编码，跳过🥶")
+                    print(f"生成代码：{code}")
                     continue
                 else:
                     print("硬编码检测通过，准备验证代码🫡")
 
                 # 验证代码
+                # 将 numeric_inputs 转换为简单格式 {变量名: 值} 用于代码执行
+                input_variables = {}
+                for key, info in numeric_inputs.items():
+                    value = info.get("value", info) if isinstance(info, dict) else info
+                    input_variables[key] = value
+                
                 for refine_step in range(max_refine):
-                    output, error = self._run_python_code(code, numeric_inputs, primary_key, verify=True)
+                    output, error = self._run_python_code(code, input_variables, primary_key, verify=True)
                     history.append((code, (output, error)))
                     
                     if error is None and output == answer_gold:
@@ -738,6 +777,9 @@ class AnalogicalTransformer:
 
                         print("----------确定变量取值范围----------")
                         value_ranges = {}
+                        position_str = f"位置：字符 {primary_position.get('char_start', '?')}-{primary_position.get('char_end', '?')}" if primary_position else "位置：未标注"
+                        context_str = f"，上下文：{primary_position.get('context', '')}" if primary_position.get('context') else ""
+                        
                         range_prompt = textwrap.dedent(f"""
                             你是一个数学问题分析专家。请分析下面的题目和对应的解题代码，确定输入变量的合理取值范围。
                             题目：
@@ -748,7 +790,7 @@ class AnalogicalTransformer:
                             ```python
                             {code}
                             ```                                
-                            输入变量：{primary_key}（当前值：{numeric_inputs.get(primary_key) if primary_key else 'None'}）
+                            输入变量：{primary_key}（当前值：{primary_value}，{position_str}{context_str}）
 
                             请分析代码逻辑和题目要求，为变量 {primary_key} 确定合理的取值。
                             取值应该：
@@ -795,7 +837,9 @@ class AnalogicalTransformer:
                             print(f"确定取值范围时出错: {e}，使用默认范围")
                             value_ranges[primary_key] = (1, 100)
 
-                        return code, value_ranges, primary_key, numeric_inputs
+                        # 返回时保留完整的位置信息，但同时也提供简单格式用于后续处理
+                        # 注意：numeric_inputs 包含位置信息，但 _generate_numeric_variant 需要简单格式
+                        return code, value_ranges, primary_key, numeric_inputs, primary_position
                     
                     if refine_step == max_refine - 1:
                         break
@@ -809,8 +853,8 @@ class AnalogicalTransformer:
                         ```python
                         {code}
                         ```
-                        solve 的输入变量：{primary_key}（其值：{numeric_inputs.get(primary_key) if primary_key else 'None'}）
-                        输入字典（供参考）：{json.dumps(numeric_inputs, ensure_ascii=False)}
+                        solve 的输入变量：{primary_key}（其值：{primary_value}）
+                        输入字典（供参考）：{json.dumps(input_variables, ensure_ascii=False)}
                         错误信息：{error}
                         输出：{output}
                         历史记录：
@@ -870,6 +914,7 @@ class AnalogicalTransformer:
         problem_text: str, 
         code: str, 
         primary_key: str,
+        primary_position: Dict[str, Any],
         original_inputs: Dict[str, Any],
         value_ranges: Dict[str, Any],
         llm: LLMClient
@@ -891,23 +936,34 @@ class AnalogicalTransformer:
                 return "", ""
             
             new_answer = output
+            print(f"新答案：{new_answer}")
             
             print("----------生成新题目----------")
+            char_start = primary_position.get('char_start', '?')
+            char_end = primary_position.get('char_end', '?')
+            context = primary_position.get('context', '')
+            position_info = f"第 {char_start}-{char_end}个字符，上下文：{context}"
             prompt = textwrap.dedent(f"""
                 基于下面的原始题目，生成一个新的数字变体题目。
                 原始题目：
                 {problem_text}
-                原始输入变量 {primary_key} 的值：{original_value}
                 
-                新输入变量 {primary_key} 的值：{new_value}
+                要修改的变量信息：
+                - 变量名：{primary_key}
+                - 原始值：{original_value}
+                - 新值：{new_value}
+                - 变量在原始题目中的位置：{position_info}
                 
                 要求：
-                1. 将题目中 {primary_key} 对应的数字改为 {new_value}
-                2. 保持题目其他部分完全不变
+                1. 将原始题目中位于第 {char_start}-{char_end} 个字符处的数字（即变量 {primary_key} 的值 {original_value}）改为 {new_value}
+                2. 注意：原始题目中可能有多处出现数字 {original_value}，但只需要修改位置 {char_start}-{char_end} 处的那一个
+                3. 保持题目其他部分完全不变
                 
                 请只输出新题目的文本，不要有其他解释。
                 """)
+            # print("prompt:  "+prompt)
             resp = llm.chat(prompt)
+            print(f"新题目：{resp.strip()}")
             return resp.strip(), new_answer
         except Exception as e:
             print(f"生成数字变体时出错: {e}")
@@ -954,13 +1010,20 @@ class AnalogicalTransformer:
             llm_range=llm_range
         )
         
-        code, value_ranges, primary_key, numeric_inputs = solver_result
+        code, value_ranges, primary_key, numeric_inputs, primary_position = solver_result
+        # 将 numeric_inputs 转换为简单格式 {变量名: 值} 用于生成变体
+        input_variables = {}
+        for key, info in numeric_inputs.items():
+            value = info.get("value", info) if isinstance(info, dict) else info
+            input_variables[key] = value
+        
         print("--------------------------------生成数字变体--------------------------------")
         variant, new_answer = self._generate_numeric_variant(
             item.original_question, 
             code, 
             primary_key,
-            numeric_inputs,
+            primary_position,
+            input_variables,
             value_ranges,
             llm_variant
         )
@@ -1386,8 +1449,8 @@ def run_ames_on_csv(args):
             solution = row[1] 
             answer   = row[2] 
 
-            print(f"\n==============================处理第【 {total_count} 】题==============================")
-            print(f"原题：\n{question}\n")
+            print(f"\n===============================处理第【 {total_count} 】题================================")
+            print(f"原题：\n{question}\n答案：\n{answer}")
 
             item = ProblemItem(
                 original_question = question,
@@ -1402,11 +1465,16 @@ def run_ames_on_csv(args):
                 processed = pipeline.process(item, method=args.method)
                 success_count += 1
 
-                print("增强后题目：\n")
+                print("======================================小结====================================")
+                print("原题：")
+                print(item.original_question)
+                print("原题答案：")
+                print(item.true_answer)
+                print("增强后题目：")
                 print(processed.augmented_question)
-                print("增强后答案：\n")
+                print("增强后题目答案：")
                 print(processed.augmented_true_answer)
-                print("\n============================================================\n")
+                print("\n==============================================================================\n")
 
                 writer.writerow([
                     processed.original_question,
