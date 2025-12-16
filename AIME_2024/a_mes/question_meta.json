@@ -71,26 +71,50 @@
             "problem_id": 2,
             "title": "Unique Point on Segment in Unit-Length Families",
             "knowledge_points": ["coordinate geometry", "lines and distances", "equations of lines"],
-            "question_template": "Let $O(0,0), A({t}, 0),$ and $B(0, {t}\\sqrt{3})$ be points in the coordinate plane. Let $\\mathcal{F}$ be the family of segments $\\overline{PQ}$ of unit length lying in the first quadrant with $P$ on the $x$-axis and $Q$ on the $y$-axis. There is a unique point $C$ on $\\overline{AB}$, distinct from $A$ and $B$, that does not belong to any segment from $\\mathcal{F}$ other than $\\overline{AB}$. Then $OC^2 = \\tfrac{p}{q}$, where $p$ and $q$ are relatively prime positive integers. Find $p + q$.",
+            "question_template": "Let $O(0,0), A(\tfrac{{t}}{{z}}, 0),$ and $B(0, \\tfrac{\\sqrt{{s}}}{{y}})$ be points in the coordinate plane. Let $\\mathcal{F}$ be the family of segments $\\overline{PQ}$ of unit length lying in the first quadrant with $P$ on the $x$-axis and $Q$ on the $y$-axis. There is a unique point $C$ on $\\overline{AB}$, distinct from $A$ and $B$, that does not belong to any segment from $\\mathcal{F}$ other than $\\overline{AB}$. Then $OC^2 = \\tfrac{p}{q}$, where $p$ and $q$ are relatively prime positive integers. Find $p + q$.",
             "parameters": {
                 "t": {
                     "type": "int",
                     "description": "the length of OA",
-                    "min": 2,
-                    "max": 5000,
+                    "min": 1,
+                    "max": 1000,
                     "step": 1,
                     "default": 2
-                }                
+                },
+                "z": {
+                    "type": "int",
+                    "description": "the length of OB",
+                    "min": 1,
+                    "max": 1000,
+                    "step": 1,
+                    "default": 2
+                },
+                "s": {
+                    "type": "int",
+                    "description": "the length of OC",
+                    "min": 1,
+                    "max": 1000,
+                    "step": 1,
+                    "default": 2
+                },
+                "y": {
+                    "type": "int",
+                    "description": "the length of OQ",
+                    "min": 1,
+                    "max": 1000,
+                    "step": 1,
+                    "default": 2
+                }
             },
             "solution_rule": {
                 "type": "python_function",
                 "name": "unique_point_on_AB",
-                "inputs": [],
+                "inputs": ["t", "z", "s", "y"],
                 "outputs": ["p_plus_q"],
                 "description": "Finds the coordinates of point C on segment AB that lies only on AB among all unit segments PQ with endpoints on axes, and returns p+q where OC^2 = p/q."
             },
             "example_default_run": {
-                "input": {"t": 2},
+                "input": {"t": 1, "z": 2, "s": 3, "y": 2},
                 "output": 8
             }
         },

@@ -23,7 +23,7 @@ qwen_client = OpenAI(api_key="sk-b1c771fc24dd4cb89653163a74bf9e43", base_url="ht
 doubao_client = Ark(api_key="196b33be-8abb-4af3-9fba-6e266b2dd942")
 kimi_client = OpenAI(api_key="sk-ODuizMlUC22phanBhvYz6dBjx2yrz7vhKhcjKnoIrYssThQo", base_url="https://api.moonshot.cn/v1")
 mistral_client = Mistral(api_key="Wc1s1rVoW5TzceucND85yQoF4urCvO5f")
-
+claude_client = OpenAI(api_key="sk-qjspBDS9b0TvyUuV3hT8EzFFPegGgSA1htNN3MrCJV8iNJuY", base_url="https://yinli.one/v1")
 ModelName = Literal["deepseek", "qwen", "doubao", "kimi", "mistral", "gpt"]
 
 # 全局默认模型选择（优先级低于下方细粒度配置）
@@ -38,11 +38,11 @@ DEFAULT_STAGE_MODEL = {
 DEFAULT_ROLE_MODEL = {
     "extract": "doubao_1_5_pro_32k",     # 知识点提取
     "analysis": "doubao_1_5_pro_32k",    # 可逆条件分析（analogical-3）
-    "codegen": "gpt5", # 代码生成
+    "codegen": "claude_opus_4_5", # 代码生成
     "check": "mistral_medium",    # 硬编码检查
-    "refine": "gpt5",  # 代码精炼
-    "variant": "gpt5",     # 数字/条件变体生成
-    "range": "gpt5",  # 变量取值范围确定
+    "refine": "claude_opus_4_5",  # 代码精炼
+    "variant": "claude_opus_4_5",     # 数字/条件变体生成
+    "range": "claude_opus_4_5",  # 变量取值范围确定
 }
 
 
@@ -83,6 +83,10 @@ class LLMClient:
             return self._call_gpt5(prompt, system)
         elif self.model_name == "gpt4_1":
             return self._call_gpt4_1(prompt, system)
+        elif self.model_name == "claude_opus_4_1":
+            return self._call_claude_opus_4_1(prompt, system)
+        elif self.model_name == "claude_opus_4_5":
+            return self._call_claude_opus_4_5(prompt, system)
         else:
             raise ValueError(f"Unknown model_name: {self.model_name}")
 
@@ -338,7 +342,37 @@ class LLMClient:
             print(f"调用 Mistral Codestral API 时出错: {e}")
             return "❌"
 
-
+    def _call_claude_opus_4_1(self, question: str, system: str) -> str:
+        try:
+            resp = claude_client.chat.completions.create(
+                model="claude-opus-4-1-20250805",
+                messages=[
+                    {"role": "system", "content": system},
+                    {"role": "user", "content": question},
+                ],
+                temperature=self.temperature,
+                stream=False
+            )
+            return resp.choices[0].message.content
+        except Exception as e:
+            print(f"调用 Claude Opus 4.1 API 时出错: {e}")
+            return "❌"
+        
+    def _call_claude_opus_4_5(self, question: str, system: str) -> str:
+        try:
+            resp = claude_client.chat.completions.create(
+                model="claude-opus-4-5-20251101",
+                messages=[
+                    {"role": "system", "content": system},
+                    {"role": "user", "content": question},
+                ],
+                temperature=self.temperature,
+                stream=False
+            )
+            return resp.choices[0].message.content
+        except Exception as e:
+            print(f"调用 Claude Opus 4.5 API 时出错: {e}")
+            return "❌"
 # 数据结构
 @dataclass
 class ProblemItem:
@@ -486,59 +520,353 @@ class AnalogicalTransformer:
             os.makedirs(self.code_dir, exist_ok=True)
         # 公式库——按知识点索引
         self.formula_library = {
-            "probability": ["P(A|B) = \\frac{P(A \\cap B)}{P(B)}  # 条件概率, A|B表示B发生下A发生", "P(A \\cup B) = P(A) + P(B) - P(A \\cap B)  # 并集概率, A∪B表示A或B发生", "P(A') = 1 - P(A)  # 补集概率, A'表示A不发生", "P(A \\cap B) = P(A|B) \\cdot P(B)  # 交集概率, A∩B表示A和B同时发生"], #概率
-            "probability theory": ["P(A|B) = \\frac{P(A \\cap B)}{P(B)}  # 条件概率", "P(A \\cup B) = P(A) + P(B) - P(A \\cap B)  # 并集概率", "P(A') = 1 - P(A)  # 补集概率", "P(A \\cap B) = P(A) \\cdot P(B|A)  # 乘法公式", "E[X] = \\sum x_i P(x_i)  # 期望值, X为随机变量, x_i为取值"], # 概率论
-            "discrete probability": ["P(X=k)  # 离散随机变量X取值为k的概率", "E[X] = \\sum_{i} x_i P(X=x_i)  # 期望值, x_i为可能取值", "\\text{Var}(X) = E[X^2] - (E[X])^2  # 方差", "E[X+Y] = E[X] + E[Y]  # 期望线性性", "\\text{Var}(X) = E[(X-\\mu)^2]  # 方差定义, μ=E[X]"], # 离散概率
-            "combinatorics": ["C(n,k) = \\frac{n!}{k!(n-k)!}  # 组合数, 从n个中选k个", "P(n,k) = \\frac{n!}{(n-k)!}  # 排列数, 从n个中选k个排列", "C(n,k) = C(n,n-k)  # 组合对称性", "P(n,n) = n!  # 全排列"], # 组合数学
-            "addition principle": ["|A \\cup B| = |A| + |B| - |A \\cap B|  # 容斥原理, |A|为集合A的元素个数", "|A \\cup B| = |A| + |B|, \\text{ if } A \\cap B = \\emptyset  # 互斥集合的并集", "|A_1 \\cup A_2 \\cup \\cdots \\cup A_n| = \\sum |A_i| - \\sum |A_i \\cap A_j| + \\cdots  # 多集合容斥原理"], # 加法原理
-            "multiplication principle": ["|A \\times B| = |A| \\cdot |B|  # 乘法原理, 笛卡尔积的元素个数", "N = n_1 \\cdot n_2 \\cdot \\cdots \\cdot n_k  # 多步骤计数, n_i为第i步的选择数", "N = m \\cdot n  # 两步计数, m和n为各步选择数"], # 乘法原理
-            "permutation": ["P(n,k) = \\frac{n!}{(n-k)!}  # 排列数, 从n个中选k个排列", "P(n,n) = n!  # 全排列", "P_{\\text{circular}}(n) = (n-1)!  # 圆排列", "P(n; n_1, n_2, \\ldots, n_k) = \\frac{n!}{n_1! n_2! \\cdots n_k!}  # 重复排列, n_i为第i类元素个数"], # 排列
-            "combination": ["C(n,k) = \\frac{n!}{k!(n-k)!}  # 组合数, 从n个中选k个", "C(n,k) = C(n,n-k)  # 组合对称性", "C(n,0) = C(n,n) = 1  # 边界条件", "C(n,k) = C(n-1,k-1) + C(n-1,k)  # 组合递推关系", "\\sum_{k=0}^n C(n,k) = 2^n  # 组合数求和"], # 组合
-            "geometry": ["A = \\frac{1}{2}bh  # 三角形面积, A=面积, b=底, h=高", "a^2 + b^2 = c^2  # 勾股定理, a和b为直角边, c为斜边", "A = \\frac{1}{2}ab\\sin C  # 三角形面积, a和b为两边, C为夹角", "A = \\sqrt{s(s-a)(s-b)(s-c)}  # 海伦公式, s为半周长, a/b/c为三边"], # 几何
-            "plane geometry": ["A_{\\triangle} = \\frac{1}{2}bh  # 三角形面积, b=底, h=高", "A_{\\text{circle}} = \\pi r^2  # 圆面积, r=半径", "C_{\\text{circle}} = 2\\pi r  # 圆周长, r=半径", "A_{\\text{rectangle}} = lw  # 矩形面积, l=长, w=宽", "A_{\\text{parallelogram}} = bh  # 平行四边形面积, b=底, h=高"], # 平面几何
-            "solid geometry": ["V_{\\text{cube}} = a^3  # 正方体体积, a=边长", "V_{\\text{sphere}} = \\frac{4}{3}\\pi r^3  # 球体积, r=半径", "V_{\\text{cylinder}} = \\pi r^2 h  # 圆柱体积, r=半径, h=高", "S_{\\text{sphere}} = 4\\pi r^2  # 球表面积, r=半径", "V_{\\text{cone}} = \\frac{1}{3}\\pi r^2 h  # 圆锥体积, r=半径, h=高", "V_{\\text{pyramid}} = \\frac{1}{3}Bh  # 棱锥体积, B=底面积, h=高"], # 立体几何
-            "Pythagorean theorem": ["a^2 + b^2 = c^2  # 勾股定理, a和b为直角边, c为斜边", "c = \\sqrt{a^2 + b^2}  # 求斜边", "a = \\sqrt{c^2 - b^2}  # 求直角边a", "b = \\sqrt{c^2 - a^2}  # 求直角边b"], # 勾股定理
-            "law of cosines": ["c^2 = a^2 + b^2 - 2ab\\cos C  # 余弦定理, a/b/c为三角形三边, C为c的对角", "a^2 = b^2 + c^2 - 2bc\\cos A  # 余弦定理, A为a的对角", "b^2 = a^2 + c^2 - 2ac\\cos B  # 余弦定理, B为b的对角", "\\cos C = \\frac{a^2 + b^2 - c^2}{2ab}  # 余弦定理求角"], # 余弦定理
-            "law of sines": ["\\frac{a}{\\sin A} = \\frac{b}{\\sin B} = \\frac{c}{\\sin C} = 2R  # 正弦定理, R为外接圆半径", "\\frac{\\sin A}{a} = \\frac{\\sin B}{b} = \\frac{\\sin C}{c}  # 正弦定理比例式", "a = 2R\\sin A  # 边与角关系, R为外接圆半径", "b = 2R\\sin B  # 边与角关系"], # 正弦定理
-            "trigonometry": ["\\sin^2\\theta + \\cos^2\\theta = 1  # 三角恒等式, θ为角度", "\\tan\\theta = \\frac{\\sin\\theta}{\\cos\\theta}  # 正切定义", "\\sin(A\\pm B) = \\sin A\\cos B \\pm \\cos A\\sin B  # 正弦和差公式", "\\cos(A\\pm B) = \\cos A\\cos B \\mp \\sin A\\sin B  # 余弦和差公式", "\\tan(A\\pm B) = \\frac{\\tan A \\pm \\tan B}{1 \\mp \\tan A\\tan B}  # 正切和差公式", "\\sin(2\\theta) = 2\\sin\\theta\\cos\\theta  # 倍角公式"], # 三角学
-            "similarity": ["\\frac{a'}{a} = \\frac{b'}{b} = \\frac{c'}{c} = k  # 相似比, a'/b'/c'为相似图形对应边, k为比例", "\\angle A = \\angle A'  # 相似图形对应角相等", "\\angle B = \\angle B'  # 对应角相等", "\\frac{\\text{Area}'}{\\text{Area}} = k^2  # 面积比等于相似比平方"], # 相似
-            "similar triangles": ["\\frac{AB}{A'B'} = \\frac{BC}{B'C'} = \\frac{AC}{A'C'}  # 相似三角形对应边成比例", "\\angle A = \\angle A', \\angle B = \\angle B'  # 对应角相等", "\\frac{a}{a'} = \\frac{b}{b'} = \\frac{c}{c'}  # 三边对应成比例", "\\frac{S}{S'} = \\left(\\frac{a}{a'}\\right)^2  # 面积比等于边长比平方"], # 相似三角形
-            "circle": ["A = \\pi r^2  # 圆面积, r=半径", "C = 2\\pi r  # 圆周长, r=半径", "(x-h)^2 + (y-k)^2 = r^2  # 圆方程, (h,k)=圆心, r=半径", "s = r\\theta  # 弧长, r=半径, θ=圆心角(弧度)", "A_{\\text{sector}} = \\frac{1}{2}r^2\\theta  # 扇形面积, r=半径, θ=圆心角", "A_{\\text{segment}} = \\frac{1}{2}r^2(\\theta - \\sin\\theta)  # 弓形面积"], # 圆
-            "tangent": ["d(O, l) = r  # 点到直线距离等于半径, O为圆心, l为切线, r为半径", "PT_1 = PT_2  # 从外部点到圆的两条切线长度相等, P为外部点", "l \\perp OP  # 切线与半径垂直, O为圆心, P为切点", "PT_1 = PT_2 = \\sqrt{OP^2 - r^2}  # 切线长度公式"], # 切线
-            "power theorem": ["PA \\cdot PB = PC \\cdot PD  # 圆幂定理, P为圆外或圆上点, A/B/C/D为圆上点", "PT^2 = PA \\cdot PB  # 切线-割线定理, PT为切线长", "PA \\cdot PB = PC \\cdot PD  # 割线-割线定理", "PA \\cdot PB = PC \\cdot PD  # 圆幂定理一般形式"], # 幂定理
-            "tetrahedron": ["V = \\frac{1}{6}|\\det(\\vec{AB}, \\vec{AC}, \\vec{AD})|  # 四面体体积, A/B/C/D为四个顶点", "V = \\frac{a^3}{6\\sqrt{2}}  # 正四面体体积, a为棱长", "S = \\sum_{i=1}^4 A_i  # 表面积, A_i为四个面的面积", "V = \\frac{1}{3}Bh  # 棱锥体积, B为底面积, h为高"], # 四面体
-            "hyperbola": ["\\frac{x^2}{a^2} - \\frac{y^2}{b^2} = 1  # 双曲线标准方程, a和b为半轴长", "c^2 = a^2 + b^2  # 焦距关系, c为焦距", "F_1 = (c, 0), F_2 = (-c, 0)  # 焦点坐标", "y = \\pm \\frac{b}{a}x  # 渐近线方程", "e = \\frac{c}{a} > 1  # 离心率"], # 双曲线
-            "parabola": ["y = ax^2 + bx + c  # 抛物线一般式, a≠0", "y = a(x-h)^2 + k  # 顶点式, (h,k)为顶点", "F = (h, k+\\frac{1}{4a})  # 焦点坐标", "y = k - \\frac{1}{4a}  # 准线方程", "x^2 = 4py  # 标准形式, p为焦距", "(h,k) = \\left(-\\frac{b}{2a}, \\frac{4ac-b^2}{4a}\\right)  # 顶点坐标"], # 抛物线
-            "algebra": ["x = \\frac{-b \\pm \\sqrt{b^2-4ac}}{2a}  # 二次方程求根, ax²+bx+c=0", "(a+b)^2 = a^2 + 2ab + b^2  # 完全平方公式", "a^2 - b^2 = (a+b)(a-b)  # 平方差公式"], # 代数
-            "algebraic identity": ["(a+b)^2 = a^2 + 2ab + b^2  # 完全平方和", "(a-b)^2 = a^2 - 2ab + b^2  # 完全平方差", "a^2 - b^2 = (a+b)(a-b)  # 平方差公式", "a^3 + b^3 = (a+b)(a^2-ab+b^2)  # 立方和公式", "a^3 - b^3 = (a-b)(a^2+ab+b^2)  # 立方差公式", "(a+b)^3 = a^3 + 3a^2b + 3ab^2 + b^3  # 完全立方和"], # 代数恒等式
-            "complex": ["|z| = \\sqrt{a^2 + b^2}  # 复数模长, z=a+bi为复数, |z|为模", "z = r(\\cos \\theta + i\\sin \\theta)  # 复数三角形式, r为模, θ为幅角", "z = re^{i\\theta}  # 复数指数形式, r为模, θ为幅角", "z \\cdot \\bar{z} = |z|^2  # 复数与其共轭乘积, z̅为z的共轭"], # 复数
-            "logarithm": ["\\log_a(b) = c \\iff a^c = b  # 对数定义, a为底数, b为真数, c为对数", "\\log(ab) = \\log(a) + \\log(b)  # 对数乘法法则", "\\log\\left(\\frac{a}{b}\\right) = \\log(a) - \\log(b)  # 对数除法法则", "\\log(a^n) = n\\log(a)  # 对数幂法则", "\\log_a(a) = 1  # 底数对数", "\\log_a(1) = 0  # 1的对数"], # 对数
-            "exponent": ["a^m \\cdot a^n = a^{m+n}  # 同底数幂相乘", "(a^m)^n = a^{mn}  # 幂的乘方", "\\frac{a^m}{a^n} = a^{m-n}  # 同底数幂相除", "a^0 = 1  # 零次幂", "a^{-n} = \\frac{1}{a^n}  # 负指数幂", "(ab)^n = a^n b^n  # 积的乘方"], # 指数，幂
-            "system of equations": ["\\begin{cases} ax + by = c \\\\ dx + ey = f \\end{cases}  # 二元一次方程组", "x = \\frac{ce - bf}{ae - bd}  # 克莱姆法则求x, a/b/c/d/e/f为系数", "y = \\frac{af - cd}{ae - bd}  # 克莱姆法则求y", "\\det(A) = ad - bc  # 二阶行列式, A为系数矩阵"], # 方程组
-            "set": ["A \\cap B  # 交集, A和B的公共元素", "A \\cup B  # 并集, A或B的所有元素", "A'  # 补集, 全集减去A", "A - B  # 差集, 在A中但不在B中", "|A|  # 基数, 集合A的元素个数", "A \\subseteq B  # 子集, A包含于B", "A \\times B  # 笛卡尔积, 有序对集合"], # 集合
-            "game theory": ["u_i(s_i, s_{-i})  # 玩家i的效用, s_i为i的策略, s_{-i}为其他玩家策略", "u_i(s_i^*, s_{-i}^*) \\geq u_i(s_i, s_{-i}^*)  # 纳什均衡条件", "\\max_{s_i} u_i(s_i, s_{-i})  # 最大化效用", "\\text{BR}_i(s_{-i}) = \\arg\\max_{s_i} u_i(s_i, s_{-i})  # 最佳反应"], # 博弈论
-            "induction": ["P(1)  # 归纳基础, n=1时命题成立", "P(k) \\implies P(k+1)  # 归纳步骤, 假设P(k)成立推出P(k+1)", "\\forall n \\in \\mathbb{N}, P(n)  # 对所有自然数成立", "P(1) \\land (\\forall k, P(k) \\implies P(k+1)) \\implies \\forall n, P(n)  # 数学归纳法原理"], # 归纳
-            "modular arithmetic": ["a \\equiv b \\pmod{m} \\iff m \\mid (a-b)  # 同余定义, m为模数", "(a+b) \\bmod m = ((a \\bmod m) + (b \\bmod m)) \\bmod m  # 同余加法", "(a \\cdot b) \\bmod m = ((a \\bmod m) \\cdot (b \\bmod m)) \\bmod m  # 同余乘法", "a \\equiv b \\pmod{m} \\implies a^n \\equiv b^n \\pmod{m}  # 同余幂"], # 模运算
-            "divisibility": ["a \\mid b \\iff b = ka \\text{ for some } k \\in \\mathbb{Z}  # 整除定义, a整除b", "a \\mid b \\land b \\mid c \\implies a \\mid c  # 整除传递性", "a \\mid b \\land a \\mid c \\implies a \\mid (bx+cy)  # 整除线性组合", "\\gcd(a,b) = d \\iff d \\mid a \\land d \\mid b  # 最大公约数, d为a和b的最大公约数"], # 整除
-            "congruence": ["a \\equiv b \\pmod{m} \\iff m \\mid (a-b)  # 同余定义, m为模数", "a \\equiv b \\pmod{m} \\land c \\equiv d \\pmod{m} \\implies a+c \\equiv b+d \\pmod{m}  # 同余加法", "a \\equiv b \\pmod{m} \\implies a^n \\equiv b^n \\pmod{m}  # 同余幂", "a \\equiv b \\pmod{m} \\land c \\equiv d \\pmod{m} \\implies ac \\equiv bd \\pmod{m}  # 同余乘法"], # 同余
-            "function period": ["f(x+T) = f(x)  # 周期函数定义, T为周期", "\\sin(x+2\\pi) = \\sin x  # 正弦函数周期为2π", "\\cos(x+2\\pi) = \\cos x  # 余弦函数周期为2π", "\\tan(x+\\pi) = \\tan x  # 正切函数周期为π", "f(x+nT) = f(x) \\text{ for } n \\in \\mathbb{Z}  # 周期函数的整数倍周期"], # 函数周期
-            "number base": ["a_na_{n-1}\\ldots a_1a_0_{(b)} = \\sum_{i=0}^n a_i b^i  # b进制转十进制, a_i为各位数字, b为进制", "N = \\sum_{i=0}^n a_i b^i  # 进制转换公式", "N_{(10)} = \\sum_{i=0}^n a_i b^i  # 转换为十进制"], # 进制
-            "enumeration": ["\\sum_{i=1}^n i = \\frac{n(n+1)}{2}  # 自然数求和", "\\sum_{i=1}^n i^2 = \\frac{n(n+1)(2n+1)}{6}  # 平方数求和", "\\sum_{i=1}^n i^3 = \\left(\\frac{n(n+1)}{2}\\right)^2  # 立方数求和", "|S| = \\sum_{i} |S_i|  # 分类计数, S_i为互不相交的子集"], # 枚举
-            "prime factorization": ["n = p_1^{e_1} p_2^{e_2} \\cdots p_k^{e_k}  # 质因数分解, p_i为质数, e_i为指数", "\\gcd(a,b) = \\prod p_i^{\\min(e_i, f_i)}  # 最大公约数, e_i和f_i为a和b的质因数指数", "\\text{lcm}(a,b) = \\prod p_i^{\\max(e_i, f_i)}  # 最小公倍数", "n = \\prod_{p \\mid n} p^{\\alpha_p}  # 质因数分解一般形式"], # 质因数分解
-            "mode": ["\\text{Mode} = \\arg\\max_{x} f(x)  # 众数, 出现频率最高的值", "\\text{Mode}(X) = x_i \\text{ where } P(X=x_i) = \\max_{j} P(X=x_j)  # 离散随机变量的众数", "\\text{Mode} = \\max_{x} \\text{frequency}(x)  # 众数定义"], # 众数
-            "median": ["\\text{Median} = \\begin{cases} x_{(n+1)/2} & n \\text{ odd} \\\\ \\frac{x_{n/2} + x_{n/2+1}}{2} & n \\text{ even} \\end{cases}  # 中位数, n为数据个数, x_i为排序后的数据", "\\text{Median} = Q_2  # 中位数等于第二四分位数", "P(X \\leq \\text{Median}) = 0.5  # 中位数概率性质", "\\text{Median} = x_{\\lceil n/2 \\rceil}  # 中位数位置"], # 中位数
-            "inclusion-exclusion principle": ["|A \\cup B| = |A| + |B| - |A \\cap B|  # 两集合容斥原理", "|A \\cup B \\cup C| = |A| + |B| + |C| - |A \\cap B| - |A \\cap C| - |B \\cap C| + |A \\cap B \\cap C|  # 三集合容斥原理", "\\left|\\bigcup_{i=1}^n A_i\\right| = \\sum_{i} |A_i| - \\sum_{i<j} |A_i \\cap A_j| + \\cdots + (-1)^{n+1} |A_1 \\cap \\cdots \\cap A_n|  # n集合容斥原理"], # 容斥原理
-            "conjugate": ["\\bar{z} = a - bi, z = a + bi  # 共轭复数定义, z̅为z的共轭", "z \\cdot \\bar{z} = |z|^2  # 复数与其共轭的乘积等于模的平方", "z + \\bar{z} = 2\\text{Re}(z)  # 复数与其共轭的和等于2倍实部", "z - \\bar{z} = 2i\\text{Im}(z)  # 复数与其共轭的差等于2i倍虚部", "\\overline{z_1 + z_2} = \\bar{z_1} + \\bar{z_2}  # 和的共轭等于共轭的和", "\\overline{z_1 z_2} = \\bar{z_1} \\cdot \\bar{z_2}  # 积的共轭等于共轭的积"], # 共轭
+            "probability": [
+                "P(A|B) = \\frac{P(A \\cap B)}{P(B)}  # 条件概率, A|B表示B发生下A发生", 
+                "P(A \\cup B) = P(A) + P(B) - P(A \\cap B)  # 并集概率, A∪B表示A或B发生", 
+                "P(A') = 1 - P(A)  # 补集概率, A'表示A不发生", 
+                "P(A \\cap B) = P(A|B) \\cdot P(B)  # 交集概率, A∩B表示A和B同时发生"
+            ], #概率
+            "probability theory": [
+                "P(A|B) = \\frac{P(A \\cap B)}{P(B)}  # 条件概率", 
+                "P(A \\cup B) = P(A) + P(B) - P(A \\cap B)  # 并集概率", 
+                "P(A') = 1 - P(A)  # 补集概率", 
+                "P(A \\cap B) = P(A) \\cdot P(B|A)  # 乘法公式", 
+                "E[X] = \\sum x_i P(x_i)  # 期望值, X为随机变量, x_i为取值"
+            ], # 概率论
+            "discrete probability": [
+                "E[X] = \\sum_{i} x_i P(X=x_i)  # 期望值, x_i为可能取值", 
+                "\\text{Var}(X) = E[X^2] - (E[X])^2  # 方差", 
+                "E[X+Y] = E[X] + E[Y]  # 期望线性性", 
+                "\\text{Var}(X) = E[(X-\\mu)^2]  # 方差定义, μ为期望值, μ=E[X]"
+            ], # 离散概率
+            "combinatorics": [
+                "C(n,k) = \\frac{n!}{k!(n-k)!}  # 组合数, 从n个中选k个", 
+                "P(n,k) = \\frac{n!}{(n-k)!}  # 排列数, 从n个中选k个排列", 
+                "C(n,k) = C(n,n-k)  # 组合对称性", 
+                "P(n,n) = n!  # 全排列", 
+                "要解方程x_1 + x_2 + \\cdots + x_k = n, x_i \\ge 0, 可以使用插板法, 想象成n个糖果分给k个人, 相当于用k-1块板子把一排n个糖果分为k段, 一共n+k-1个位置, 组合数为C(n, k-1)",
+                "(a+b)^n = \\sum_{k=0}^n C(n,k) a^{n-k} b^k  # 二项式定理, n为非负整数, C(n,k)为组合数",
+                "二项式系数: C(n,0) + C(n,1) + \\cdots + C(n,n) = 2^n  # 二项式系数之和",
+            ], # 组合数学
+            "addition principle": [
+                "N = n_1 + n_2 + \\cdots + n_k  # 基本加法原理(互斥情形), 一个任务可以通过k种互不重叠的方式完成, 第i种方式有n_i种选择", 
+                "如果任务可以通过若干种互不重叠的方式完成, 第i种方式有n_i种选择, 则总完成方式数为各方式选择数之和"
+            ], # 加法原理
+            "multiplication principle": [
+                "|A \\times B| = |A| \\cdot |B|  # 乘法原理, 笛卡尔积的元素个数",
+                "N = n_1 \\cdot n_2 \\cdot \\cdots \\cdot n_k  # 多步骤计数, n_i为第i步的选择数",
+                "N = m \\cdot n  # 两步计数, m和n为各步选择数"
+            ], # 乘法原理
+            "inclusion-exclusion principle": [
+                "|A \\cup B| = |A| + |B| - |A \\cap B|  # 两集合容斥原理",
+                "|A \\cup B \\cup C| = |A| + |B| + |C| - |A \\cap B| - |A \\cap C| - |B \\cap C| + |A \\cap B \\cap C|  # 三集合容斥原理",
+                "\\left|\\bigcup_{i=1}^n A_i\\right| = \\sum_{i} |A_i| - \\sum_{i<j} |A_i \\cap A_j| + \\cdots + (-1)^{n+1} |A_1 \\cap \\cdots \\cap A_n|  # n集合容斥原理"
+            ], # 容斥原理
+            "permutation": [
+                "P(n,k) = \\frac{n!}{(n-k)!}  # 排列数, 从n个中选k个排列",
+                "P(n,n) = n!  # 全排列",
+                "P_{\\text{circular}}(n) = (n-1)!  # 圆排列, n个不同元素围成圆圈的排列数, 旋转后相同的视为同一种"
+            ], # 排列
+            "combination": [
+                "C(n,k) = \\frac{n!}{k!(n-k)!}  # 组合数, 从n个中选k个",
+                "C(n,k) = C(n,n-k)  # 组合对称性",
+                "C(n,0) = C(n,n) = 1  # 边界条件",
+                "C(n,k) = C(n-1,k-1) + C(n-1,k)  # 组合递推关系",
+                "\\sum_{k=0}^n C(n,k) = 2^n  # 组合数求和"
+            ], # 组合
+            "geometry": [
+                "A = \\frac{1}{2}bh  # 三角形面积, A=面积, b=底, h=高",
+                "a^2 + b^2 = c^2  # 勾股定理, a和b为直角边, c为斜边",
+                "A = \\frac{1}{2}ab\\sin C  # 三角形面积, a和b为两边, C为夹角",
+                "A = \\sqrt{s(s-a)(s-b)(s-c)}  # 海伦公式, s为半周长, a/b/c为三边",
+                "正n边形, n为边数, 所有边相等, 所有内角相等"
+            ], # 几何
+            "plane geometry": [
+                "A_{\\triangle} = \\frac{1}{2}bh  # 三角形面积, b=底, h=高",
+                "A_{\\text{circle}} = \\pi r^2  # 圆面积, r=半径",
+                "C_{\\text{circle}} = 2\\pi r  # 圆周长, r=半径",
+                "A_{\\text{rectangle}} = lw  # 矩形面积, l=长, w=宽",
+                "A_{\\text{parallelogram}} = bh  # 平行四边形面积, b=底, h=高",
+                "S_{\\text{int}} = (n-2)\\times 180^\\circ  # n边形内角和, 正n边形/任意n边形都适用",
+                "r_{\\text{circ}} = \\frac{a}{2\\sin(180^\\circ/n)}  # 外接圆半径",
+                "r_{\\text{in}} = \\frac{a}{2\\tan(180^\\circ/n)}  # 内切圆半径",
+                "正n边形共有n条轴对称轴",
+                "对于正n变形, 若n为偶数, 则有n/2条对称轴连接一对\"对顶点\", 另有n/2条对称轴连接一对对边的中点",
+                "对于正n边形, 若n为奇数, 则每条对称轴均连接一个顶点和与其相对的一条边的中点"
+            ], # 平面几何
+            "solid geometry": [
+                "V_{\\text{cube}} = a^3  # 正方体体积, a=边长",
+                "V_{\\text{sphere}} = \\frac{4}{3}\\pi r^3  # 球体积, r=半径",
+                "V_{\\text{cylinder}} = \\pi r^2 h  # 圆柱体积, r=半径, h=高",
+                "S_{\\text{sphere}} = 4\\pi r^2  # 球表面积, r=半径",
+                "V_{\\text{cone}} = \\frac{1}{3}\\pi r^2 h  # 圆锥体积, r=半径, h=高",
+                "V_{\\text{pyramid}} = \\frac{1}{3}Bh  # 棱锥体积, B=底面积, h=高",
+                "若四面体的三对对边分别相等 (AB=CD, AC=BD, AD=BC), 则该四面体与某一长方体的四个顶点一一重合；反之, 任取长方体中一个顶点及与其相邻的三个顶点组成的四面体, 其三对对边也必然分别相等。"
+            ], # 立体几何
+            "tetrahedron": [
+                "V = \\frac{1}{6}|\\det(\\vec{AB}, \\vec{AC}, \\vec{AD})|  # 四面体体积, A/B/C/D为四个顶点", 
+                "V = \\frac{a^3}{6\\sqrt{2}}  # 正四面体体积, a为棱长", 
+                "V = \\frac{1}{3}Bh  # 棱锥体积, B为底面积, h为高",
+                "若四面体的三对对边分别相等 (AB=CD, AC=BD, AD=BC), 则该四面体与某一长方体的四个顶点一一重合；反之, 任取长方体中一个顶点及与其相邻的三个顶点组成的四面体, 其三对对边也必然分别相等。"
+            ], # 四面体
+            "Pythagorean theorem": [
+                "a^2 + b^2 = c^2  # 勾股定理, a和b为直角边, c为斜边",
+                "c = \\sqrt{a^2 + b^2}  # 求斜边",
+                "a = \\sqrt{c^2 - b^2}  # 求直角边a"
+            ], # 勾股定理
+            "law of cosines": [
+                "c^2 = a^2 + b^2 - 2ab\\cos C  # 余弦定理, a/b/c为三角形三边, C为c的对角",
+                "\\cos C = \\frac{a^2 + b^2 - c^2}{2ab}  # 余弦定理求角"
+            ], # 余弦定理
+            "law of sines": [
+                "\\frac{a}{\\sin A} = \\frac{b}{\\sin B} = \\frac{c}{\\sin C} = 2R  # 正弦定理, a为角A的对边, b为角B的对边, c为角C的对边, R为外接圆半径",
+                "a = 2R\\sin A  # 边与角关系, R为外接圆半径, a为角A的对边",
+                "b = 2R\\sin B"
+            ], # 正弦定理
+            "trigonometric function": [
+                "\\sin^2\\theta + \\cos^2\\theta = 1  # 三角恒等式, θ为角度",
+                "\\tan\\theta = \\frac{\\sin\\theta}{\\cos\\theta}  # 正切定义",
+                "\\sin(A\\pm B) = \\sin A\\cos B \\pm \\cos A\\sin B  # 正弦和差公式",
+                "\\cos(A\\pm B) = \\cos A\\cos B \\mp \\sin A\\sin B  # 余弦和差公式",
+                "\\tan(A\\pm B) = \\frac{\\tan A \\pm \\tan B}{1 \\mp \\tan A\\tan B}  # 正切和差公式",
+                "\\sin(2\\theta) = 2\\sin\\theta\\cos\\theta  # 倍角公式",
+                "c^2 = a^2 + b^2 - 2ab\\cos C  # 余弦定理, a/b/c为三角形三边, C为c的对角",
+                "\\frac{a}{\\sin A} = \\frac{b}{\\sin B} = \\frac{c}{\\sin C} = 2R  # 正弦定理, a为角A的对边, b为角B的对边, c为角C的对边, R为外接圆半径",
+                "三角形内心和外心之间距离的欧拉公式: OI^2 = R^2 - 2Rr",
+                "三角形面积公式: A = \\frac{1}{2}ab\\sin C"
+            ], # 三角函数
+            "trigonometry": [
+                "\\sin^2\\theta + \\cos^2\\theta = 1  # 三角恒等式, θ为角度",
+                "\\tan\\theta = \\frac{\\sin\\theta}{\\cos\\theta}  # 正切定义",
+                "\\sin(A\\pm B) = \\sin A\\cos B \\pm \\cos A\\sin B  # 正弦和差公式",
+                "\\cos(A\\pm B) = \\cos A\\cos B \\mp \\sin A\\sin B  # 余弦和差公式",
+                "\\tan(A\\pm B) = \\frac{\\tan A \\pm \\tan B}{1 \\mp \\tan A\\tan B}  # 正切和差公式",
+                "\\sin(2\\theta) = 2\\sin\\theta\\cos\\theta  # 倍角公式",
+                "c^2 = a^2 + b^2 - 2ab\\cos C  # 余弦定理, a/b/c为三角形三边, C为c的对角",
+                "\\frac{a}{\\sin A} = \\frac{b}{\\sin B} = \\frac{c}{\\sin C} = 2R  # 正弦定理, a为角A的对边, b为角B的对边, c为角C的对边, R为外接圆半径",
+                "三角形内心和外心之间距离的欧拉公式: OI^2 = R^2 - 2Rr",
+                "三角形面积公式: A = \\frac{1}{2}ab\\sin C"
+            ], # 三角学
+            "similarity": [
+                "\\frac{a'}{a} = \\frac{b'}{b} = \\frac{c'}{c} = k  # 相似比, a'/a, b'/b, c'/c为相似图形对应边, k为比例",
+                "\\angle A = \\angle A'  # 相似图形对应角相等",
+                "\\frac{\\text{Area}'}{\\text{Area}} = k^2  # 相似图形面积比等于相似比平方",
+                "两个直角三角形中：如果它们各有一个锐角相等，则这两个直角三角形相似"
+            ], # 相似
+            "similar triangles": [
+                "\\frac{AB}{A'B'} = \\frac{BC}{B'C'} = \\frac{AC}{A'C'}  # 相似三角形对应边成比例",
+                "\\angle A = \\angle A', \\angle B = \\angle B'  # 相似三角形对应角相等",
+                "\\frac{S}{S'} = \\left(\\frac{a}{a'}\\right)^2  # 相似三角形面积比等于边长比平方",
+                "两个直角三角形中：如果它们各有一个锐角相等，则这两个直角三角形相似",
+                "两个三角形有两个角相等，则这两个三角形相似",
+                "如果两个三角形三边都相等, 则这两个三角形全等",
+                "如果两个三角形两边和夹角都相等, 则这两个三角形全等",
+                "如果两个三角形两角和夹边都相等, 则这两个三角形全等"
+            ], # 相似三角形
+            "circle": [
+                "A = \\pi r^2  # 圆面积, r=半径",
+                "C = 2\\pi r  # 圆周长, r=半径",
+                "(x-h)^2 + (y-k)^2 = r^2  # 圆方程, (h,k)=圆心, r=半径",
+                "s = r\\theta  # 弧长, r=半径, θ=圆心角(弧度)",
+                "A_{\\text{sector}} = \\frac{1}{2}r^2\\theta  # 扇形面积, r=半径, θ=圆心角",
+                "A_{\\text{segment}} = \\frac{1}{2}r^2(\\theta - \\sin\\theta)  # 弓形面积",
+                "r_{\\text{circ}} = \\frac{a}{2\\sin(180^\\circ/n)}  # 外接圆半径",
+                "r_{\\text{in}} = \\frac{a}{2\\tan(180^\\circ/n)}  # 内切圆半径",
+                "在三角形的一个角内, 若一个圆与两边相切, 则其圆心落在该角的角平分线上, 且该圆的圆心到与之相切的三角形两边的距离都等于圆的半径",
+                "如果两个圆相切，则它们的圆心距等于两个圆的半径之和或差",
+                "圆周角定理: 在同一圆中，对同一条弧的圆周角相等, 且等于该弧所对的圆心角的一半",
+                "三角形内心和外心之间距离的欧拉公式: OI^2 = R^2 - 2Rr",
+                "弦切角定理: 弦切角（圆上的点与弦及切线形成的角）的度数等于它所夹的弧所对的圆心角度数的一半，等于它所夹的弧所对的圆周角度数",
+                "从圆外一点P引两条割线与圆分别交于A,B和C,D, 则PA \\cdot PB = PC \\cdot PD  # 割线定理",
+                "从圆外一点P引一条割线与圆分别交于A,B和一条切线与圆分别交于C, 则PA \\cdot PB = PC^2  # 割线-切线定理",
+                "圆内两条相交弦, 被交点分成的两段的乘积相等  #相交弦定理",
+                "托勒密定理: 圆内接四边形的两对对边乘积之和等于其对角线乘积"
+            ], # 圆
+            "tangent": [
+                "如果圆心到直线的距离等于圆的半径, 则直线与圆相切",
+                "从圆外一点P作圆的两条切线PA和PB, 则PA=PB",
+                "切线与半径垂直",
+                "弦切角定理: 弦切角（圆上的点与弦及切线形成的角）的度数等于它所夹的弧所对的圆心角度数的一半，等于它所夹的弧所对的圆周角度数"
+            ], # 切线
+            "power of a pointtheorem": [
+                "从圆外一点P引两条割线与圆分别交于A,B和C,D, 则PA \\cdot PB = PC \\cdot PD  # 割线定理",
+                "从圆外一点P引一条割线与圆分别交于A,B和一条切线与圆分别交于C, 则PA \\cdot PB = PC^2  # 割线-切线定理",
+                "圆内两条相交弦, 被交点分成的两段的乘积相等  #相交弦定理",
+                "弦切角定理: 弦切角（圆上的点与弦及切线形成的角）的度数等于它所夹的弧所对的圆心角度数的一半，等于它所夹的弧所对的圆周角度数"
+                "托勒密定理: 圆内接四边形的两对对边乘积之和等于其对角线乘积"
+            ], # 圆幂定理
+            "hyperbola": [
+                "\\frac{x^2}{a^2} - \\frac{y^2}{b^2} = 1  # 双曲线标准方程, a和b为半轴长",
+                "c^2 = a^2 + b^2  # 焦距关系, c为焦距, a和b为半轴长",
+                "F_1 = (c, 0), F_2 = (-c, 0)  # 双曲线焦点坐标",
+                "y = \\pm \\frac{b}{a}x  # 双曲线渐近线方程, a和b为半轴长",
+                "e = \\frac{c}{a} > 1  # e为离心率, c为焦距, a为半轴长"
+            ], # 双曲线
+            "parabola": [
+                "y = ax^2 + bx + c  # 抛物线一般式, a≠0", 
+                "y = a(x-h)^2 + k  # 顶点式, (h,k)为顶点", 
+                "x^2 = 4py  # 标准形式, p为焦距", 
+                "抛物线 y = ax^2 + bx + c 的顶点为(h,k) = \\left(-\\frac{b}{2a}, \\frac{4ac-b^2}{4a}\\right)"
+            ], # 抛物线
+            "algebra": [
+                "二次方程 ax²+bx+c=0 的根为 x = \\frac{-b \\pm \\sqrt{b^2-4ac}}{2a}",
+                "(a+b)^2 = a^2 + 2ab + b^2  # 完全平方公式",
+                "a^2 - b^2 = (a+b)(a-b)  # 平方差公式",
+                "有理根定理: 对于多项式 a_n x^n + a_{n-1} x^{n-1} + \\cdots + a_1 x + a_0 = 0, 若有理根为 \\frac{p}{q} (p和q互质), 则 p \\mid a_0 且 q \\mid a_n  # 有理根定理, p整除常数项, q整除首项系数",
+                "韦达定理(二次方程): 对于 ax^2+bx+c=0, 若根为 x_1 和 x_2, 则 x_1 + x_2 = -\\frac{b}{a}, x_1 \\cdot x_2 = \\frac{c}{a}  # 二次方程根与系数关系",
+                "韦达定理(三次方程): 对于 ax^3+bx^2+cx+d=0, 若根为 x_1, x_2, x_3, 则 x_1+x_2+x_3 = -\\frac{b}{a}, x_1x_2+x_1x_3+x_2x_3 = \\frac{c}{a}, x_1x_2x_3 = -\\frac{d}{a}  # 三次方程根与系数关系",
+                "利用单位根进行多项式因式分解: x^n - 1 = (x-1)(x-\\omega)(x-\\omega^2)\\cdots(x-\\omega^{n-1})  # 其中\\omega为n次本原单位根, \\omega^k (k=0,1,\\ldots,n-1)为所有n次单位根",
+                "利用单位根进行多项式因式分解(一般形式): 对于复数a, a^n - 1 = \\prod_{k=0}^{n-1} (a - \\omega^k)  # 其中\\omega为n次本原单位根, \\omega^k为所有n次单位根",
+                "n次单位根: 满足 z^n = 1 的复数z, 共有n个不同的单位根",
+                "n次单位根的形式: \\omega_k = e^{\\frac{2\\pi ik}{n}} = \\cos\\frac{2\\pi k}{n} + i\\sin\\frac{2\\pi k}{n}, k = 0,1,\\ldots,n-1  # 单位根的指数形式和三角形式",
+                "本原n次单位根: 若\\omega是n次单位根, 且\\omega^m \\neq 1 对所有 1 \\leq m < n 成立, 则\\omega为本原n次单位根",
+                "所有n次单位根的和为0: 1 + \\omega + \\omega^2 + \\cdots + \\omega^{n-1} = 0  # 其中\\omega为任一n次本原单位根"
+            ], # 代数
+            "algebraic identity": [
+                "(a+b)^2 = a^2 + 2ab + b^2  # 完全平方和",
+                "(a-b)^2 = a^2 - 2ab + b^2  # 完全平方差",
+                "a^2 - b^2 = (a+b)(a-b)  # 平方差公式",
+                "a^3 + b^3 = (a+b)(a^2-ab+b^2)  # 立方和公式",
+                "a^3 - b^3 = (a-b)(a^2+ab+b^2)  # 立方差公式",
+                "(a+b)^3 = a^3 + 3a^2b + 3ab^2 + b^3  # 完全立方和"
+            ], # 代数恒等式
+            "complex": [
+                "对于复数z=a+bi, 它的模长|z|为 \\sqrt{a^2 + b^2}",
+                "z = r(\\cos \\theta + i\\sin \\theta)  # 复数三角形式, r为模, θ为幅角",
+                "z = re^{i\\theta}  # 复数指数形式, r为模, θ为幅角",
+                "z \\cdot \\bar{z} = |z|^2  # 复数与其共轭乘积, \\bar{z}为z的共轭",
+                "n次单位根: 满足 z^n = 1 的复数z, 共有n个不同的单位根",
+                "利用单位根进行多项式因式分解: x^n - 1 = (x-1)(x-\\omega)(x-\\omega^2)\\cdots(x-\\omega^{n-1})  # 其中\\omega为n次本原单位根, \\omega^k (k=0,1,\\ldots,n-1)为所有n次单位根",
+                "n次单位根的形式: \\omega_k = e^{\\frac{2\\pi ik}{n}} = \\cos\\frac{2\\pi k}{n} + i\\sin\\frac{2\\pi k}{n}, k = 0,1,\\ldots,n-1  # 单位根的指数形式和三角形式",
+                "本原n次单位根: 若\\omega是n次单位根, 且\\omega^m \\neq 1 对所有 1 \\leq m < n 成立, 则\\omega为本原n次单位根",
+                "所有n次单位根的和为0: 1 + \\omega + \\omega^2 + \\cdots + \\omega^{n-1} = 0  # 其中\\omega为任一n次本原单位根"
+            ], # 复数
+            "conjugate": [
+                "z = a + bi 的共轭为 \\bar{z} = a - bi, 反之亦然",
+                "z \\cdot \\bar{z} = |z|^2  # 复数与其共轭的乘积等于模的平方",
+                "z + \\bar{z} = 2\\text{Re}(z)  # 复数与其共轭的和等于2倍实部",
+                "z - \\bar{z} = 2i\\text{Im}(z)  # 复数与其共轭的差等于2i倍虚部",
+                "\\overline{z_1 + z_2} = \\bar{z_1} + \\bar{z_2}  # 和的共轭等于共轭的和",
+                "\\overline{z_1 z_2} = \\bar{z_1} \\cdot \\bar{z_2}  # 积的共轭等于共轭的积"
+            ], # 共轭
+            "logarithm": [
+                "\\log_a(b) = c \\iff a^c = b  # 对数定义, a为底数, b为真数, c为对数",
+                "\\log(ab) = \\log(a) + \\log(b)  # 对数乘法法则",
+                "\\log\\left(\\frac{a}{b}\\right) = \\log(a) - \\log(b)  # 对数除法法则",
+                "\\log(a^n) = n\\log(a)  # 对数幂法则",
+                "\\log_a(a) = 1  # 底数对数",
+                "\\log_a(1) = 0  # 1的对数",
+                "\\log_a(b)\\log_b(c) = \\log_a(c)  # 换底公式",
+                "\\log_a(b)\\log_b(a) = 1  # 对数恒等式"
+            ], # 对数
+            "exponent": [
+                "a^m \\cdot a^n = a^{m+n}  # 同底数幂相乘",
+                "(a^m)^n = a^{mn}  # 幂的乘方",
+                "\\frac{a^m}{a^n} = a^{m-n}  # 同底数幂相除",
+                "a^0 = 1  # 零次幂",
+                "a^{-n} = \\frac{1}{a^n}  # 负指数幂",
+                "(ab)^n = a^n b^n  # 积的乘方"
+            ], # 指数，幂
+            "modular arithmetic": [
+                "a \\equiv b \\pmod{m} \\iff m \\mid (a-b)  # 同余定义, m为模数",
+                "(a+b) \\bmod m = ((a \\bmod m) + (b \\bmod m)) \\bmod m  # 同余加法",
+                "(a \\cdot b) \\bmod m = ((a \\bmod m) \\cdot (b \\bmod m)) \\bmod m  # 同余乘法",
+                "a \\equiv b \\pmod{m} \\implies a^n \\equiv b^n \\pmod{m}  # 同余幂",
+                "费马小定理: 对于质数p, 任意整数a, 有a^p \\equiv a \\pmod{p}",
+                "费马小定理: 对于质数p, 任意整数a, 有a^(p-1) \\equiv 1 \\pmod{p}",
+                "欧拉定理: 对于任意整数a和n互质, 有a^φ(n) \\equiv 1 \\pmod{n}. φ(n)为欧拉函数, 表示小于n且与n互质的正整数个数",
+                "威尔逊定理: 对于质数p, 有(p-1)! \\equiv -1 \\pmod{p}"
+            ], # 模运算
+            "divisibility": [
+                "a \\mid b \\iff b = ka \\text{ for some } k \\in \\mathbb{Z}  # 整除定义, a整除b",
+                "a \\mid b \\land b \\mid c \\implies a \\mid c  # 整除传递性",
+                "a \\mid b \\land a \\mid c \\implies a \\mid (bx+cy)  # 整除线性组合"
+            ], # 整除
+            "congruence": [
+                "a \\equiv b \\pmod{m} \\iff m \\mid (a-b)  # 同余定义, m为模数",
+                "a \\equiv b \\pmod{m} \\land c \\equiv d \\pmod{m} \\implies a+c \\equiv b+d \\pmod{m}  # 同余加法",
+                "a \\equiv b \\pmod{m} \\implies a^n \\equiv b^n \\pmod{m}  # 同余幂",
+                "a \\equiv b \\pmod{m} \\land c \\equiv d \\pmod{m} \\implies ac \\equiv bd \\pmod{m}  # 同余乘法",
+                "费马小定理: 对于质数p, 任意整数a, 有a^p \\equiv a \\pmod{p}",
+                "费马小定理: 对于质数p, 任意整数a, 有a^(p-1) \\equiv 1 \\pmod{p}",
+                "欧拉定理: 对于任意整数a和n互质, 有a^φ(n) \\equiv 1 \\pmod{n}. φ(n)为欧拉函数, 表示小于n且与n互质的正整数个数",
+                "威尔逊定理: 对于质数p, 有(p-1)! \\equiv -1 \\pmod{p}"
+            ], # 同余
+            "function period": [
+                "f(x+T) = f(x)  # 周期函数定义, T为周期",
+                "\\sin(x+2\\pi) = \\sin x  # 正弦函数周期为2π",
+                "\\cos(x+2\\pi) = \\cos x  # 余弦函数周期为2π",
+                "\\tan(x+\\pi) = \\tan x  # 正切函数周期为π",
+                "f(x+nT) = f(x) \\text{ for } n \\in \\mathbb{Z}  # 周期函数的整数倍周期",
+                "\\sin(x+\\pi) = -\\sin x  # 正弦函数半周期性质",
+                "\\cos(x+\\pi) = -\\cos x  # 余弦函数半周期性质",
+                "\\sin(x+\\frac{\\pi}{2}) = \\cos x  # 正弦与余弦的相位关系",
+                "\\cos(x+\\frac{\\pi}{2}) = -\\sin x  # 余弦与正弦的相位关系",
+                "\\sin(x+2k\\pi) = \\sin x  # 正弦函数整数倍周期, k为整数",
+                "\\cos(x+2k\\pi) = \\cos x  # 余弦函数整数倍周期, k为整数",
+                "如果函数f(x)有周期T, 则f(ax+b)的周期为\\frac{T}{|a|}  # 周期函数的伸缩变换",
+                "sin(ax+b)的周期为\\frac{2\\pi}{a}  # 正弦函数周期",
+                "cos(ax+b)的周期为\\frac{2\\pi}{a}  # 余弦函数周期"
+            ], # 函数周期
+            "derivative": [
+                "\\frac{d}{dx}(x^n) = nx^{n-1}  # 幂函数导数, n为常数",
+                "\\frac{d}{dx}(e^x) = e^x  # 指数函数e^x的导数",
+                "\\frac{d}{dx}(a^x) = a^x \\ln a  # 指数函数a^x的导数, a>0且a≠1",
+                "\\frac{d}{dx}(\\ln x) = \\frac{1}{x}  # 自然对数导数, x>0",
+                "\\frac{d}{dx}(\\log_a x) = \\frac{1}{x \\ln a}  # 对数函数导数, a>0且a≠1, x>0",
+                "\\frac{d}{dx}(\\sin x) = \\cos x  # 正弦函数导数",
+                "\\frac{d}{dx}(\\cos x) = -\\sin x  # 余弦函数导数",
+                "\\frac{d}{dx}(\\tan x) = \\sec^2 x  # 正切函数导数",
+                "\\frac{d}{dx}(\\cot x) = -\\csc^2 x  # 余切函数导数",
+                "\\frac{d}{dx}(\\sec x) = \\sec x \\tan x  # 正割函数导数",
+                "\\frac{d}{dx}(\\csc x) = -\\csc x \\cot x  # 余割函数导数",
+                "\\frac{d}{dx}(\\arcsin x) = \\frac{1}{\\sqrt{1-x^2}}  # 反正弦函数导数, |x|<1",
+                "\\frac{d}{dx}(\\arccos x) = -\\frac{1}{\\sqrt{1-x^2}}  # 反余弦函数导数, |x|<1",
+                "\\frac{d}{dx}(\\arctan x) = \\frac{1}{1+x^2}  # 反正切函数导数",
+                "\\frac{d}{dx}[f(x) + g(x)] = f'(x) + g'(x)  # 和函数导数",
+                "\\frac{d}{dx}[f(x) - g(x)] = f'(x) - g'(x)  # 差函数导数",
+                "\\frac{d}{dx}[cf(x)] = cf'(x)  # 常数倍函数导数, c为常数",
+                "\\frac{d}{dx}[f(x)g(x)] = f'(x)g(x) + f(x)g'(x)  # 乘积法则",
+                "\\frac{d}{dx}\\left[\\frac{f(x)}{g(x)}\\right] = \\frac{f'(x)g(x) - f(x)g'(x)}{[g(x)]^2}  # 商法则, g(x)≠0",
+                "\\frac{d}{dx}[f(g(x))] = f'(g(x)) \\cdot g'(x)  # 链式法则, 复合函数导数",
+                "\\frac{d}{dx}[f(x)]^n = n[f(x)]^{n-1} \\cdot f'(x)  # 幂函数复合导数",
+                "若f'(x) > 0, 则f(x)在该区间单调递增  # 导数与单调性",
+                "若f'(x) < 0, 则f(x)在该区间单调递减  # 导数与单调性",
+                "若f'(x_0) = 0且f''(x_0) > 0, 则x_0为极小值点  # 极值判定",
+                "若f'(x_0) = 0且f''(x_0) < 0, 则x_0为极大值点  # 极值判定"
+            ], # 导数
+            "number base": [
+                "a_na_{n-1}\\ldots a_1a_0_{(b)} = \\sum_{i=0}^n a_i b^i  # b进制转十进制, a_i为各位数字, b为进制",
+                "十进制转换为b进制: 除以b取余数, 直到商为0, 余数从下到上排列",
+            ], # 进制
+            "enumeration": [
+                "\\sum_{i=1}^n i = \\frac{n(n+1)}{2}  # 自然数求和",
+                "\\sum_{i=1}^n i^2 = \\frac{n(n+1)(2n+1)}{6}  # 平方数求和",
+                "\\sum_{i=1}^n i^3 = \\left(\\frac{n(n+1)}{2}\\right)^2  # 立方数求和"
+            ], # 枚举
+            "prime factorization": [
+                "n = p_1^{e_1} p_2^{e_2} \\cdots p_k^{e_k}  # 质因数分解, p_i为质数, e_i为指数",
+                "唯一分解定理: 任何大于1的整数都可以唯一分解成质因数的乘积。",
+                "\\gcd(a,b) = \\prod p_i^{\\min(e_i, f_i)}  # 最大公约数, p_i为质数因子, e_i和f_i为a和b的质因数指数",
+                "\\text{lcm}(a,b) = \\prod p_i^{\\max(e_i, f_i)}  # 最小公倍数, p_i为质数因子, e_i和f_i为a和b的质因数指数"
+            ], # 质因数分解
+            "mode": [
+                "在一组数据中，出现次数最多的数值，叫做这组数据的众数。"
+            ], # 众数
+            "median": [
+                "把一组数据按从小到大排好，处在中间位置的那个数，叫做中位数。",
+                "如果共有奇数个数据，中位数就是正中间的那个数。如果共有偶数个数据，中位数是中间两个数的平均数。"
+            ], # 中位数
         }
 
-    def _extract_knowledge_points(self, problem_text: str, llm: LLMClient) -> List[str]:
+    def _extract_knowledge_points(self, problem_text: str, llm: LLMClient, solution: str = None) -> List[str]:
         """提取题目的主要知识点"""
         prompt =textwrap.dedent(f"""
             你是一个数学教育专家。请分析下面的数学题目，提取主要涉及的知识点。
-
             题目：
             {problem_text}
-
+            解答：
+            {solution}
             请以JSON格式输出知识点列表，格式为：{{"knowledge_points": ["知识点1", "知识点2", ...]}}
             知识点应该用英文关键词，如 "probability", "geometry", "algebra", "complex numbers", "combinatorics" 等。
             只输出JSON，不要有其他文字。
@@ -710,7 +1038,7 @@ class AnalogicalTransformer:
         
         print("----------生成通用求解代码----------")
         for iter_num in range(max_iter):
-            print(f"第【 {iter_num+1} 】次生成代码")
+            print(f"第【 {iter_num+1} 】次使用{llm_codegen.model_name}生成代码")
             # 准备变量信息字符串
             primary_info = numeric_inputs.get(primary_key, {}) if primary_key else {}
             primary_value = primary_info.get("value", primary_info) if isinstance(primary_info, dict) else primary_info
@@ -990,7 +1318,7 @@ class AnalogicalTransformer:
         llm_range = llm_range or self.llm
         
         print("--------------------------------提取知识点--------------------------------")
-        knowledge_points = self._extract_knowledge_points(item.original_question, llm_extract)
+        knowledge_points = self._extract_knowledge_points(item.original_question, llm_extract, item.solution)
         print("提取的知识点：\n", knowledge_points)
         
         print("--------------------------------查询公式库--------------------------------")
