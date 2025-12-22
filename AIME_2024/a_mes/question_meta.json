@@ -694,7 +694,7 @@
             "problem_id": 21,
             "title": "Least Base with Many b-eautiful Integers",
             "knowledge_points": ["number theory", "base representation", "Diophantine equations", "integer conditions"],
-            "question_template": "Let $b \\ge 2$ be an integer. Call a positive integer $n$ $b$\\textit{-eautiful} if it has exactly two digits when expressed in base $b$, and these two digits sum to $\\sqrt{n}$. For example, $81$ is $13$-eautiful because $81 = \\underline{6}\\underline{3}_{13}$ and $6 + 3 = \\sqrt{81}$. Find the least integer $b \\ge 2$ for which there are more than ${threshold}\\bmod 3+10$ $b$-eautiful integers.",
+            "question_template": "Let $b \\ge 2$ be an integer. Call a positive integer $n$ $b$\\textit{-eautiful} if it has exactly two digits when expressed in base $b$, and these two digits sum to $\\sqrt{n}$. For example, $81$ is $13$-eautiful because $81 = \\underline{6}\\underline{3}_{13}$ and $6 + 3 = \\sqrt{81}$. Find the least integer $b \\ge 2$ for which there are more than ${threshold}\\bmod 7+9$ $b$-eautiful integers.",
             "parameters": {
                 "threshold": {
                     "type": "int",
@@ -1120,31 +1120,31 @@
         },
         {
             "problem_id": 30,
-            "title": "Remainder of a 13th Root of Unity Product",
+            "title": "Remainder of a t-th Root of Unity Product",
             "knowledge_points": ["complex numbers", "roots of unity", "polynomial factorization", "modular arithmetic"],
-            "question_template": "Let $\\omega \\neq 1$ be a 13th root of unity. Find the remainder when \n\\[ \\prod_{k=0}^{12}(2 - 2\\omega^k + \\omega^{2k}) \\] \nis divided by ${modulus}\\bmod 8 \\times 1000 + 1000$. ",
+            "question_template": "Let $\\omega \\neq 1$ be a $t$-th root of unity. Find the remainder when \n\\[ \\prod_{k=0}^{12}(2 - 2\\omega^k + \\omega^{2k}) \\] \nis divided by 1000. ",
             "parameters": {
-                "modulus": {
+                "t": {
                     "type": "int",
-                    "description": "The modulus used for finding the remainder",
+                    "description": "The order t of the root of unity ω used in the expression. For this problem, t is a positive integer (default 13), and ω is a primitive t-th root of unity.",
                     "min": 1,
                     "max": 8000,
-                    "default": 8000
+                    "default": 13
                 }
             },
             "relations": [
-                {"expression": "modulus > 0"}
+                {"expression": "t > 0"}
             ],
             "solution_rule": {
                 "type": "python_function",
                 "name": "root_of_unity_product_remainder",
-                "inputs": ["modulus"],
+                "inputs": ["t"],
                 "outputs": ["remainder"],
-                "description": "Compute the remainder when ∏_{k=0}^{12}(2 - 2ω^k + ω^{2k}) is divided by the specified modulus, where ω is a 13th root of unity."
+                "description": "Compute the remainder when ∏_{k=0}^{12}(2 - 2ω^k + ω^{2k}) is divided by 1000, where ω is a t-th root of unity."
             },
             "example_default_run": {
-                "input": {"modulus": 8000},
-                "output": 192
+                "input": {"t": 13},
+                "output": 321
             }
         }
     ]

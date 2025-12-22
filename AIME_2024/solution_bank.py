@@ -119,6 +119,7 @@ def rotation_coloring_probability(N: int) -> int:
     prob = prob.limit_denominator()
     m, n = prob.numerator, prob.denominator
     return m + n
+
 # === 8 ===
 def count_triples_with_conditions(N: int) -> int:
     return int(2 * (10^N) * 3 + 1)
@@ -144,12 +145,14 @@ def sum_A_from_total_sets(total_sets: int) -> int:
 def max_real_part_complex_expression(A: int, B: int) -> int:
     numerator = 16 * (A + 6) ** 2
     denominator = (B - 9) ** 2 + (A + 6) ** 2
-    # 构造分数并自动化简
-    frac = Fraction(numerator, denominator).limit_denominator()
-    # 提取分子与分母
-    m, n = frac.numerator, frac.denominator
-    # 返回分子 + 分母
-    return m + n
+    # 使用sympy保持符号形式，避免浮点数计算
+    a2 = sp.Rational(numerator, denominator)
+    b2 = 16 - a2
+    a = sp.sqrt(a2)  # 保持根号形式
+    b = sp.sqrt(b2)  # 保持根号形式
+    result = (A + 6) * a + (B - 9) * b
+    # 最后再计算数值结果
+    return int(result.evalf())
 
 # === 12 ===
 def grid_99_count(t: int) -> int:
@@ -367,5 +370,10 @@ def ce_length_rectangle_geometry(AB: int, BC: int, FG: int, EF: int) -> int:
     return int(AB - ((EF**2 + 4*FG*(FG + BC))**0.5 - EF) / 2)
 
 # === 30 ===
-def root_of_unity_product_remainder(modulus: int) -> int:
-    return 321
+def root_of_unity_product_remainder(t: int) -> int:
+    z = (1 + 1j) ** t
+    term1 = z - 1
+    term2 = z.conjugate() - 1
+    product = term1 * term2
+    res = int(product.real)
+    return res % 1000

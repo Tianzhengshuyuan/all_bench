@@ -28,21 +28,21 @@ ModelName = Literal["deepseek", "qwen", "doubao", "kimi", "mistral", "gpt"]
 
 # 全局默认模型选择（优先级低于下方细粒度配置）
 DEFAULT_STAGE_MODEL = {
-    "analyzer": "deepseek",
     "analogical_fallback": "qwen",
     "redundancy": "doubao",
     "novel": "kimi",
 }
 
 # AnalogicalTransformer 内部不同子步骤可各自指定模型
+default_role_model = "gpt5"
 DEFAULT_ROLE_MODEL = {
     "extract": "doubao_1_5_pro_32k",     # 知识点提取
     "analysis": "doubao_1_5_pro_32k",    # 可逆条件分析（analogical-3）
-    "codegen": "claude_opus_4_5", # 代码生成
+    "codegen": default_role_model, # 代码生成
     "check": "mistral_medium",    # 硬编码检查
-    "refine": "claude_opus_4_5",  # 代码精炼
-    "variant": "claude_opus_4_5",     # 数字/条件变体生成
-    "range": "claude_opus_4_5",  # 变量取值范围确定
+    "refine": default_role_model,  # 代码精炼
+    "variant": default_role_model,     # 数字/条件变体生成
+    "range": default_role_model,  # 变量取值范围确定
 }
 
 
@@ -386,34 +386,6 @@ class ProblemItem:
     transformed_question: str = ""
 
 
-class ProblemAnalyzer:
-    """可选：题目分析模块（目前不强制使用，只用于留下结构位）"""
-
-    def __init__(self, llm: LLMClient):
-        self.llm = llm
-
-    def analyze(self, item: ProblemItem) -> ProblemItem:
-        prompt = textwrap.dedent(f"""
-            你是一个数学教育专家，负责对竞赛题目进行结构化分析。
-
-            请阅读下面的题目和（可选的）解析，提取以下信息：
-            1. 主要涉及的知识点（用英文关键词列表形式给出，如 ["probability", "conditional probability"]）。
-            2. 题目大致难度（easy / medium / hard 三选一）。
-            3. 推理类型（如 "combinatorics", "geometry", "algebra", "number theory", "calculus", "functional equation" 等）。
-
-            题目：
-            {item.original_question}
-
-            解析（如有）：
-            {item.solution}
-
-            请以 JSON 格式输出，字段名为：knowledge_tags, difficulty, reasoning_type。不要输出多余文字。
-            """)
-        resp = self.llm.chat(prompt)
-        item.knowledge_tags = resp
-        return item
-
-
 class RedundancyInjector:
     """
     负责 analogical-1 中的三种冗余方式：
@@ -544,9 +516,15 @@ class AnalogicalTransformer:
                 "P(n,k) = \\frac{n!}{(n-k)!}  # 排列数, 从n个中选k个排列", 
                 "C(n,k) = C(n,n-k)  # 组合对称性", 
                 "P(n,n) = n!  # 全排列", 
+                "C(n,0) = C(n,n) = 1  # 边界条件",
+                "C(n,k) = C(n-1,k-1) + C(n-1,k)  # 组合递推关系",
+                "P_{\\text{circular}}(n) = (n-1)!  # 圆排列, n个不同元素围成圆圈的排列数, 旋转后相同的视为同一种",
                 "要解方程x_1 + x_2 + \\cdots + x_k = n, x_i \\ge 0, 可以使用插板法, 想象成n个糖果分给k个人, 相当于用k-1块板子把一排n个糖果分为k段, 一共n+k-1个位置, 组合数为C(n, k-1)",
                 "(a+b)^n = \\sum_{k=0}^n C(n,k) a^{n-k} b^k  # 二项式定理, n为非负整数, C(n,k)为组合数",
                 "二项式系数: C(n,0) + C(n,1) + \\cdots + C(n,n) = 2^n  # 二项式系数之和",
+                "|A \\cup B| = |A| + |B| - |A \\cap B|  # 两集合容斥原理",
+                "|A \\cup B \\cup C| = |A| + |B| + |C| - |A \\cap B| - |A \\cap C| - |B \\cap C| + |A \\cap B \\cap C|  # 三集合容斥原理",
+                "\\left|\\bigcup_{i=1}^n A_i\\right| = \\sum_{i} |A_i| - \\sum_{i<j} |A_i \\cap A_j| + \\cdots + (-1)^{n+1} |A_1 \\cap \\cdots \\cap A_n|  # n集合容斥原理"
             ], # 组合数学
             "addition principle": [
                 "N = n_1 + n_2 + \\cdots + n_k  # 基本加法原理(互斥情形), 一个任务可以通过k种互不重叠的方式完成, 第i种方式有n_i种选择", 
@@ -562,6 +540,11 @@ class AnalogicalTransformer:
                 "|A \\cup B \\cup C| = |A| + |B| + |C| - |A \\cap B| - |A \\cap C| - |B \\cap C| + |A \\cap B \\cap C|  # 三集合容斥原理",
                 "\\left|\\bigcup_{i=1}^n A_i\\right| = \\sum_{i} |A_i| - \\sum_{i<j} |A_i \\cap A_j| + \\cdots + (-1)^{n+1} |A_1 \\cap \\cdots \\cap A_n|  # n集合容斥原理"
             ], # 容斥原理
+            "set": [
+                "|A \\cup B| = |A| + |B| - |A \\cap B|  # 两集合容斥原理",
+                "|A \\cup B \\cup C| = |A| + |B| + |C| - |A \\cap B| - |A \\cap C| - |B \\cap C| + |A \\cap B \\cap C|  # 三集合容斥原理",
+                "\\left|\\bigcup_{i=1}^n A_i\\right| = \\sum_{i} |A_i| - \\sum_{i<j} |A_i \\cap A_j| + \\cdots + (-1)^{n+1} |A_1 \\cap \\cdots \\cap A_n|  # n集合容斥原理"
+            ], # 集合
             "permutation": [
                 "P(n,k) = \\frac{n!}{(n-k)!}  # 排列数, 从n个中选k个排列",
                 "P(n,n) = n!  # 全排列",
@@ -572,14 +555,77 @@ class AnalogicalTransformer:
                 "C(n,k) = C(n,n-k)  # 组合对称性",
                 "C(n,0) = C(n,n) = 1  # 边界条件",
                 "C(n,k) = C(n-1,k-1) + C(n-1,k)  # 组合递推关系",
-                "\\sum_{k=0}^n C(n,k) = 2^n  # 组合数求和"
+                "\\sum_{k=0}^n C(n,k) = 2^n  # 组合数求和",
+                "要解方程x_1 + x_2 + \\cdots + x_k = n, x_i \\ge 0, 可以使用插板法, 想象成n个糖果分给k个人, 相当于用k-1块板子把一排n个糖果分为k段, 一共n+k-1个位置, 组合数为C(n, k-1)",
+                "(a+b)^n = \\sum_{k=0}^n C(n,k) a^{n-k} b^k  # 二项式定理, n为非负整数, C(n,k)为组合数",
+                "二项式系数: C(n,0) + C(n,1) + \\cdots + C(n,n) = 2^n  # 二项式系数之和"
             ], # 组合
             "geometry": [
                 "A = \\frac{1}{2}bh  # 三角形面积, A=面积, b=底, h=高",
                 "a^2 + b^2 = c^2  # 勾股定理, a和b为直角边, c为斜边",
                 "A = \\frac{1}{2}ab\\sin C  # 三角形面积, a和b为两边, C为夹角",
                 "A = \\sqrt{s(s-a)(s-b)(s-c)}  # 海伦公式, s为半周长, a/b/c为三边",
-                "正n边形, n为边数, 所有边相等, 所有内角相等"
+                "正n边形, n为边数, 所有边相等, 所有内角相等",
+                "A_{\\triangle} = \\frac{1}{2}bh  # 三角形面积, b=底, h=高",
+                "A_{\\text{circle}} = \\pi r^2  # 圆面积, r=半径",
+                "C_{\\text{circle}} = 2\\pi r  # 圆周长, r=半径",
+                "A_{\\text{rectangle}} = lw  # 矩形面积, l=长, w=宽",
+                "A_{\\text{parallelogram}} = bh  # 平行四边形面积, b=底, h=高",
+                "S_{\\text{int}} = (n-2)\\times 180^\\circ  # n边形内角和, 正n边形/任意n边形都适用",
+                "r_{\\text{circ}} = \\frac{a}{2\\sin(180^\\circ/n)}  # 外接圆半径",
+                "r_{\\text{in}} = \\frac{a}{2\\tan(180^\\circ/n)}  # 内切圆半径",
+                "正n边形共有n条轴对称轴",
+                "对于正n变形, 若n为偶数, 则有n/2条对称轴连接一对\"对顶点\", 另有n/2条对称轴连接一对对边的中点",
+                "对于正n边形, 若n为奇数, 则每条对称轴均连接一个顶点和与其相对的一条边的中点",
+                "V_{\\text{cube}} = a^3  # 正方体体积, a=边长",
+                "V_{\\text{sphere}} = \\frac{4}{3}\\pi r^3  # 球体积, r=半径",
+                "V_{\\text{cylinder}} = \\pi r^2 h  # 圆柱体积, r=半径, h=高",
+                "S_{\\text{sphere}} = 4\\pi r^2  # 球表面积, r=半径",
+                "V_{\\text{cone}} = \\frac{1}{3}\\pi r^2 h  # 圆锥体积, r=半径, h=高",
+                "V_{\\text{pyramid}} = \\frac{1}{3}Bh  # 棱锥体积, B=底面积, h=高",
+                "若四面体的三对对边分别相等 (AB=CD, AC=BD, AD=BC), 则该四面体与某一长方体的四个顶点一一重合；反之, 任取长方体中一个顶点及与其相邻的三个顶点组成的四面体, 其三对对边也必然分别相等。",
+                "\\frac{a'}{a} = \\frac{b'}{b} = \\frac{c'}{c} = k  # 相似比, a'/a, b'/b, c'/c为相似图形对应边, k为比例",
+                "\\angle A = \\angle A'  # 相似图形对应角相等",
+                "\\frac{\\text{Area}'}{\\text{Area}} = k^2  # 相似图形面积比等于相似比平方",
+                "两个直角三角形中：如果它们各有一个锐角相等，则这两个直角三角形相似",
+                "两个三角形有两个角相等，则这两个三角形相似",
+                "如果两个三角形三边都相等, 则这两个三角形全等",
+                "如果两个三角形两边和夹角都相等, 则这两个三角形全等",
+                "如果两个三角形两角和夹边都相等, 则这两个三角形全等",
+                "V_{\\text{cube}} = a^3  # 正方体体积, a=边长",
+                "V_{\\text{sphere}} = \\frac{4}{3}\\pi r^3  # 球体积, r=半径",
+                "V_{\\text{cylinder}} = \\pi r^2 h  # 圆柱体积, r=半径, h=高",
+                "S_{\\text{sphere}} = 4\\pi r^2  # 球表面积, r=半径",
+                "V_{\\text{cone}} = \\frac{1}{3}\\pi r^2 h  # 圆锥体积, r=半径, h=高",
+                "V_{\\text{pyramid}} = \\frac{1}{3}Bh  # 棱锥体积, B=底面积, h=高",
+                "若四面体的三对对边分别相等 (AB=CD, AC=BD, AD=BC), 则该四面体与某一长方体的四个顶点一一重合；反之, 任取长方体中一个顶点及与其相邻的三个顶点组成的四面体, 其三对对边也必然分别相等。",
+                "A = \\pi r^2  # 圆面积, r=半径",
+                "C = 2\\pi r  # 圆周长, r=半径",
+                "(x-h)^2 + (y-k)^2 = r^2  # 圆方程, (h,k)=圆心, r=半径",
+                "s = r\\theta  # 弧长, r=半径, θ=圆心角(弧度)",
+                "A_{\\text{sector}} = \\frac{1}{2}r^2\\theta  # 扇形面积, r=半径, θ=圆心角",
+                "A_{\\text{segment}} = \\frac{1}{2}r^2(\\theta - \\sin\\theta)  # 弓形面积",
+                "r_{\\text{circ}} = \\frac{a}{2\\sin(180^\\circ/n)}  # 外接圆半径",
+                "r_{\\text{in}} = \\frac{a}{2\\tan(180^\\circ/n)}  # 内切圆半径",
+                "在三角形的一个角内, 若一个圆与两边相切, 则其圆心落在该角的角平分线上, 且该圆的圆心到与之相切的三角形两边的距离都等于圆的半径",
+                "如果两个圆相切，则它们的圆心距等于两个圆的半径之和或差",
+                "圆周角定理: 在同一圆中，对同一条弧的圆周角相等, 且等于该弧所对的圆心角的一半",
+                "三角形内心和外心之间距离的欧拉公式: OI^2 = R^2 - 2Rr",
+                "弦切角定理: 弦切角（圆上的点与弦及切线形成的角）的度数等于它所夹的弧所对的圆心角度数的一半，等于它所夹的弧所对的圆周角度数",
+                "从圆外一点P引两条割线与圆分别交于A,B和C,D, 则PA \\cdot PB = PC \\cdot PD  # 割线定理",
+                "从圆外一点P引一条割线与圆分别交于A,B和一条切线与圆分别交于C, 则PA \\cdot PB = PC^2  # 割线-切线定理",
+                "圆内两条相交弦, 被交点分成的两段的乘积相等  #相交弦定理",
+                "托勒密定理: 圆内接四边形的两对对边乘积之和等于其对角线乘积",
+                "如果圆心到直线的距离等于圆的半径, 则直线与圆相切",
+                "从圆外一点P作圆的两条切线PA和PB, 则PA=PB",
+                "切线与半径垂直",
+                "弦切角定理: 弦切角（圆上的点与弦及切线形成的角）的度数等于它所夹的弧所对的圆心角度数的一半，等于它所夹的弧所对的圆周角度数",
+                "从圆外一点P引两条割线与圆分别交于A,B和C,D, 则PA \\cdot PB = PC \\cdot PD  # 割线定理",
+                "从圆外一点P引一条割线与圆分别交于A,B和一条切线与圆分别交于C, 则PA \\cdot PB = PC^2  # 割线-切线定理",
+                "圆内两条相交弦, 被交点分成的两段的乘积相等  #相交弦定理",
+                "弦切角定理: 弦切角（圆上的点与弦及切线形成的角）的度数等于它所夹的弧所对的圆心角度数的一半，等于它所夹的弧所对的圆周角度数"
+                "托勒密定理: 圆内接四边形的两对对边乘积之和等于其对角线乘积",
+                "阿波罗尼乌斯定理: 设M是三角形ABC中BC边的中点, 则 AB^2+AC^2 = 2(AM^2+BM^2)"
             ], # 几何
             "plane geometry": [
                 "A_{\\triangle} = \\frac{1}{2}bh  # 三角形面积, b=底, h=高",
@@ -603,6 +649,15 @@ class AnalogicalTransformer:
                 "V_{\\text{pyramid}} = \\frac{1}{3}Bh  # 棱锥体积, B=底面积, h=高",
                 "若四面体的三对对边分别相等 (AB=CD, AC=BD, AD=BC), 则该四面体与某一长方体的四个顶点一一重合；反之, 任取长方体中一个顶点及与其相邻的三个顶点组成的四面体, 其三对对边也必然分别相等。"
             ], # 立体几何
+            "3D geometry": [
+                "V_{\\text{cube}} = a^3  # 正方体体积, a=边长",
+                "V_{\\text{sphere}} = \\frac{4}{3}\\pi r^3  # 球体积, r=半径",
+                "V_{\\text{cylinder}} = \\pi r^2 h  # 圆柱体积, r=半径, h=高",
+                "S_{\\text{sphere}} = 4\\pi r^2  # 球表面积, r=半径",
+                "V_{\\text{cone}} = \\frac{1}{3}\\pi r^2 h  # 圆锥体积, r=半径, h=高",
+                "V_{\\text{pyramid}} = \\frac{1}{3}Bh  # 棱锥体积, B=底面积, h=高",
+                "若四面体的三对对边分别相等 (AB=CD, AC=BD, AD=BC), 则该四面体与某一长方体的四个顶点一一重合；反之, 任取长方体中一个顶点及与其相邻的三个顶点组成的四面体, 其三对对边也必然分别相等。"
+            ], # 立体3D几何
             "tetrahedron": [
                 "V = \\frac{1}{6}|\\det(\\vec{AB}, \\vec{AC}, \\vec{AD})|  # 四面体体积, A/B/C/D为四个顶点", 
                 "V = \\frac{a^3}{6\\sqrt{2}}  # 正四面体体积, a为棱长", 
@@ -633,7 +688,8 @@ class AnalogicalTransformer:
                 "c^2 = a^2 + b^2 - 2ab\\cos C  # 余弦定理, a/b/c为三角形三边, C为c的对角",
                 "\\frac{a}{\\sin A} = \\frac{b}{\\sin B} = \\frac{c}{\\sin C} = 2R  # 正弦定理, a为角A的对边, b为角B的对边, c为角C的对边, R为外接圆半径",
                 "三角形内心和外心之间距离的欧拉公式: OI^2 = R^2 - 2Rr",
-                "三角形面积公式: A = \\frac{1}{2}ab\\sin C"
+                "三角形面积公式: A = \\frac{1}{2}ab\\sin C",
+                "阿波罗尼乌斯定理: 设M是三角形ABC中BC边的中点, 则 AB^2+AC^2 = 2(AM^2+BM^2)"
             ], # 三角函数
             "trigonometry": [
                 "\\sin^2\\theta + \\cos^2\\theta = 1  # 三角恒等式, θ为角度",
@@ -647,6 +703,80 @@ class AnalogicalTransformer:
                 "三角形内心和外心之间距离的欧拉公式: OI^2 = R^2 - 2Rr",
                 "三角形面积公式: A = \\frac{1}{2}ab\\sin C"
             ], # 三角学
+            "sinusoidal function": [
+                "正弦函数 y = \\sin x 的定义域为全体实数, 值域为[-1, 1], 周期为2π, 为奇函数  # 正弦函数基本性质",
+                "\\sin^2\\theta + \\cos^2\\theta = 1  # 三角恒等式, θ为角度",
+                "\\tan\\theta = \\frac{\\sin\\theta}{\\cos\\theta}  # 正切定义",
+                "\\sin(A\\pm B) = \\sin A\\cos B \\pm \\cos A\\sin B  # 正弦和差公式",
+                "\\cos(A\\pm B) = \\cos A\\cos B \\mp \\sin A\\sin B  # 余弦和差公式",
+                "\\sin(2\\theta) = 2\\sin\\theta\\cos\\theta  # 倍角公式",
+                "\\frac{a}{\\sin A} = \\frac{b}{\\sin B} = \\frac{c}{\\sin C} = 2R  # 正弦定理, a为角A的对边, b为角B的对边, c为角C的对边, R为外接圆半径",
+                "三角形面积公式: A = \\frac{1}{2}ab\\sin C",
+                "\\sin(x+2\\pi) = \\sin x  # 正弦函数周期为2π",
+                "\\sin(x+\\pi) = -\\sin x  # 正弦函数半周期性质",
+                "\\sin(x+\\frac{\\pi}{2}) = \\cos x  # 正弦与余弦的相位关系",
+                "\\sin(x+2k\\pi) = \\sin x  # 正弦函数整数倍周期, k为整数",
+                "sin(ax+b)的周期为\\frac{2\\pi}{a}  # 正弦函数周期"
+            ], # 正弦形周期函数
+            "sine function": [
+                "正弦函数 y = \\sin x 的定义域为全体实数, 值域为[-1, 1], 周期为2π, 为奇函数  # 正弦函数基本性质",
+                "\\sin^2\\theta + \\cos^2\\theta = 1  # 三角恒等式, θ为角度",
+                "\\tan\\theta = \\frac{\\sin\\theta}{\\cos\\theta}  # 正切定义",
+                "\\sin(A\\pm B) = \\sin A\\cos B \\pm \\cos A\\sin B  # 正弦和差公式",
+                "\\cos(A\\pm B) = \\cos A\\cos B \\mp \\sin A\\sin B  # 余弦和差公式",
+                "\\sin(2\\theta) = 2\\sin\\theta\\cos\\theta  # 倍角公式",
+                "\\frac{a}{\\sin A} = \\frac{b}{\\sin B} = \\frac{c}{\\sin C} = 2R  # 正弦定理, a为角A的对边, b为角B的对边, c为角C的对边, R为外接圆半径",
+                "三角形面积公式: A = \\frac{1}{2}ab\\sin C",
+                "\\sin(x+2\\pi) = \\sin x  # 正弦函数周期为2π",
+                "\\sin(x+\\pi) = -\\sin x  # 正弦函数半周期性质",
+                "\\sin(x+\\frac{\\pi}{2}) = \\cos x  # 正弦与余弦的相位关系",
+                "\\sin(x+2k\\pi) = \\sin x  # 正弦函数整数倍周期, k为整数",
+                "sin(ax+b)的周期为\\frac{2\\pi}{a}  # 正弦函数周期"
+            ], # 正弦函数
+            "cosinusoidal function": [
+                "余弦函数 y = \\cos x 的定义域为全体实数, 值域为[-1, 1], 周期为2π, 为偶函数  # 余弦函数基本性质",
+                "\\sin^2\\theta + \\cos^2\\theta = 1  # 三角恒等式, θ为角度",
+                "\\tan\\theta = \\frac{\\sin\\theta}{\\cos\\theta}  # 正切定义",
+                "\\sin(A\\pm B) = \\sin A\\cos B \\pm \\cos A\\sin B  # 正弦和差公式",
+                "\\cos(A\\pm B) = \\cos A\\cos B \\mp \\sin A\\sin B  # 余弦和差公式",
+                "\\sin(2\\theta) = 2\\sin\\theta\\cos\\theta  # 倍角公式",
+                "c^2 = a^2 + b^2 - 2ab\\cos C  # 余弦定理, a/b/c为三角形三边, C为c的对角",
+                "\\cos(x+2\\pi) = \\cos x  # 余弦函数周期为2π",
+                "\\cos(x+\\pi) = -\\cos x  # 余弦函数半周期性质",
+                "\\cos(x+\\frac{\\pi}{2}) = -\\sin x  # 余弦与正弦的相位关系",
+                "\\cos(x+2k\\pi) = \\cos x  # 余弦函数整数倍周期, k为整数",
+                "cos(ax+b)的周期为\\frac{2\\pi}{a}  # 余弦函数周期"
+            ], # 余弦形周期函数
+            "cosine function": [
+                "余弦函数 y = \\cos x 的定义域为全体实数, 值域为[-1, 1], 周期为2π, 为偶函数  # 余弦函数基本性质",
+                "\\sin^2\\theta + \\cos^2\\theta = 1  # 三角恒等式, θ为角度",
+                "\\tan\\theta = \\frac{\\sin\\theta}{\\cos\\theta}  # 正切定义",
+                "\\sin(A\\pm B) = \\sin A\\cos B \\pm \\cos A\\sin B  # 正弦和差公式",
+                "\\cos(A\\pm B) = \\cos A\\cos B \\mp \\sin A\\sin B  # 余弦和差公式",
+                "\\sin(2\\theta) = 2\\sin\\theta\\cos\\theta  # 倍角公式",
+                "c^2 = a^2 + b^2 - 2ab\\cos C  # 余弦定理, a/b/c为三角形三边, C为c的对角",
+                "\\cos(x+2\\pi) = \\cos x  # 余弦函数周期为2π",
+                "\\cos(x+\\pi) = -\\cos x  # 余弦函数半周期性质",
+                "\\cos(x+\\frac{\\pi}{2}) = -\\sin x  # 余弦与正弦的相位关系",
+                "\\cos(x+2k\\pi) = \\cos x  # 余弦函数整数倍周期, k为整数",
+                "cos(ax+b)的周期为\\frac{2\\pi}{a}  # 余弦函数周期"
+            ], # 余弦函数
+            "function period": [
+                "f(x+T) = f(x)  # 周期函数定义, T为周期",
+                "\\sin(x+2\\pi) = \\sin x  # 正弦函数周期为2π",
+                "\\cos(x+2\\pi) = \\cos x  # 余弦函数周期为2π",
+                "\\tan(x+\\pi) = \\tan x  # 正切函数周期为π",
+                "f(x+nT) = f(x) \\text{ for } n \\in \\mathbb{Z}  # 周期函数的整数倍周期",
+                "\\sin(x+\\pi) = -\\sin x  # 正弦函数半周期性质",
+                "\\cos(x+\\pi) = -\\cos x  # 余弦函数半周期性质",
+                "\\sin(x+\\frac{\\pi}{2}) = \\cos x  # 正弦与余弦的相位关系",
+                "\\cos(x+\\frac{\\pi}{2}) = -\\sin x  # 余弦与正弦的相位关系",
+                "\\sin(x+2k\\pi) = \\sin x  # 正弦函数整数倍周期, k为整数",
+                "\\cos(x+2k\\pi) = \\cos x  # 余弦函数整数倍周期, k为整数",
+                "如果函数f(x)有周期T, 则f(ax+b)的周期为\\frac{T}{|a|}  # 周期函数的伸缩变换",
+                "sin(ax+b)的周期为\\frac{2\\pi}{a}  # 正弦函数周期",
+                "cos(ax+b)的周期为\\frac{2\\pi}{a}  # 余弦函数周期"
+            ], # 函数周期
             "similarity": [
                 "\\frac{a'}{a} = \\frac{b'}{b} = \\frac{c'}{c} = k  # 相似比, a'/a, b'/b, c'/c为相似图形对应边, k为比例",
                 "\\angle A = \\angle A'  # 相似图形对应角相等",
@@ -686,7 +816,7 @@ class AnalogicalTransformer:
                 "如果圆心到直线的距离等于圆的半径, 则直线与圆相切",
                 "从圆外一点P作圆的两条切线PA和PB, 则PA=PB",
                 "切线与半径垂直",
-                "弦切角定理: 弦切角（圆上的点与弦及切线形成的角）的度数等于它所夹的弧所对的圆心角度数的一半，等于它所夹的弧所对的圆周角度数"
+                "弦切角定理: 弦切角（圆上的点与弦及切线形成的角）的度数等于它所夹的弧所对的圆心角度数的一半，等于它所夹的弧所对的圆周角度数",
             ], # 切线
             "power of a pointtheorem": [
                 "从圆外一点P引两条割线与圆分别交于A,B和C,D, 则PA \\cdot PB = PC \\cdot PD  # 割线定理",
@@ -739,7 +869,13 @@ class AnalogicalTransformer:
                 "利用单位根进行多项式因式分解: x^n - 1 = (x-1)(x-\\omega)(x-\\omega^2)\\cdots(x-\\omega^{n-1})  # 其中\\omega为n次本原单位根, \\omega^k (k=0,1,\\ldots,n-1)为所有n次单位根",
                 "n次单位根的形式: \\omega_k = e^{\\frac{2\\pi ik}{n}} = \\cos\\frac{2\\pi k}{n} + i\\sin\\frac{2\\pi k}{n}, k = 0,1,\\ldots,n-1  # 单位根的指数形式和三角形式",
                 "本原n次单位根: 若\\omega是n次单位根, 且\\omega^m \\neq 1 对所有 1 \\leq m < n 成立, 则\\omega为本原n次单位根",
-                "所有n次单位根的和为0: 1 + \\omega + \\omega^2 + \\cdots + \\omega^{n-1} = 0  # 其中\\omega为任一n次本原单位根"
+                "所有n次单位根的和为0: 1 + \\omega + \\omega^2 + \\cdots + \\omega^{n-1} = 0  # 其中\\omega为任一n次本原单位根",
+                "z = a + bi 的共轭为 \\bar{z} = a - bi, 反之亦然",
+                "z \\cdot \\bar{z} = |z|^2  # 复数与其共轭的乘积等于模的平方",
+                "z + \\bar{z} = 2\\text{Re}(z)  # 复数与其共轭的和等于2倍实部",
+                "z - \\bar{z} = 2i\\text{Im}(z)  # 复数与其共轭的差等于2i倍虚部",
+                "\\overline{z_1 + z_2} = \\bar{z_1} + \\bar{z_2}  # 和的共轭等于共轭的和",
+                "\\overline{z_1 z_2} = \\bar{z_1} \\cdot \\bar{z_2}  # 积的共轭等于共轭的积"
             ], # 复数
             "conjugate": [
                 "z = a + bi 的共轭为 \\bar{z} = a - bi, 反之亦然",
@@ -792,22 +928,6 @@ class AnalogicalTransformer:
                 "欧拉定理: 对于任意整数a和n互质, 有a^φ(n) \\equiv 1 \\pmod{n}. φ(n)为欧拉函数, 表示小于n且与n互质的正整数个数",
                 "威尔逊定理: 对于质数p, 有(p-1)! \\equiv -1 \\pmod{p}"
             ], # 同余
-            "function period": [
-                "f(x+T) = f(x)  # 周期函数定义, T为周期",
-                "\\sin(x+2\\pi) = \\sin x  # 正弦函数周期为2π",
-                "\\cos(x+2\\pi) = \\cos x  # 余弦函数周期为2π",
-                "\\tan(x+\\pi) = \\tan x  # 正切函数周期为π",
-                "f(x+nT) = f(x) \\text{ for } n \\in \\mathbb{Z}  # 周期函数的整数倍周期",
-                "\\sin(x+\\pi) = -\\sin x  # 正弦函数半周期性质",
-                "\\cos(x+\\pi) = -\\cos x  # 余弦函数半周期性质",
-                "\\sin(x+\\frac{\\pi}{2}) = \\cos x  # 正弦与余弦的相位关系",
-                "\\cos(x+\\frac{\\pi}{2}) = -\\sin x  # 余弦与正弦的相位关系",
-                "\\sin(x+2k\\pi) = \\sin x  # 正弦函数整数倍周期, k为整数",
-                "\\cos(x+2k\\pi) = \\cos x  # 余弦函数整数倍周期, k为整数",
-                "如果函数f(x)有周期T, 则f(ax+b)的周期为\\frac{T}{|a|}  # 周期函数的伸缩变换",
-                "sin(ax+b)的周期为\\frac{2\\pi}{a}  # 正弦函数周期",
-                "cos(ax+b)的周期为\\frac{2\\pi}{a}  # 余弦函数周期"
-            ], # 函数周期
             "derivative": [
                 "\\frac{d}{dx}(x^n) = nx^{n-1}  # 幂函数导数, n为常数",
                 "\\frac{d}{dx}(e^x) = e^x  # 指数函数e^x的导数",
@@ -885,13 +1005,13 @@ class AnalogicalTransformer:
 
     def _retrieve_formulas(self, knowledge_points: List[str]) -> str:
         """根据知识点查询公式库"""
-        formulas = []
+        formulas = set()
         for kp in knowledge_points:
             kp_lower = kp.lower()
             for key, value_list in self.formula_library.items():
                 if key in kp_lower:
                     print(f"匹配到key：{key}")
-                    formulas.extend(value_list)
+                    formulas.update(value_list)
         return "\n".join(formulas) if formulas else "No specific formulas found."
 
     def _extract_numeric_inputs(self, problem_text: str, llm: LLMClient) -> Dict[str, Any]:
@@ -943,6 +1063,9 @@ class AnalogicalTransformer:
         prompt = textwrap.dedent(f"""
             请检查下面的Python代码是否包含硬编码的答案或实例特定的输出，而不是通用的计算过程。
 
+            重要说明：
+            1. "硬编码"是指代码直接返回一个固定的数值答案，而不依赖输入参数进行任何计算。
+            2. 如果代码使用输入参数进行计算来得到答案，即使代码中包含问题给定的常量（或根据这些常量计算出的常量值），这也不应该被认为是硬编码。
             代码：
             {code}
 
@@ -960,8 +1083,8 @@ class AnalogicalTransformer:
             print(f"检查硬编码时出错: {e}")
             return False
 
-    def _run_python_code(self, code: str, inputs: Dict[str, Any], primary_key: Optional[str] = None, verify: bool = False) -> Tuple[Optional[str], Optional[str]]:
-        """运行Python代码并返回输出和错误（支持将 inputs 或其中单个变量传入 solve）"""
+    def _run_python_code(self, code: str, inputs: Dict[str, Any], primary_key: Optional[str] = None, verify: bool = False, model_name: Optional[str] = None) -> Tuple[Optional[str], Optional[str], Optional[str]]:
+        """运行Python代码并返回输出、错误和文件名（支持将 inputs 或其中单个变量传入 solve）"""
         code_file = None
         try:
             # 准备代码内容
@@ -974,10 +1097,11 @@ class AnalogicalTransformer:
             
             # 使用指定的目录，生成有意义的文件名
             timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")  # 年月日_时分秒，如：20251211_151438
+            model_suffix = f"_{model_name}" if model_name else ""
             if verify == True:
-                filename = f"q{self.current_question_id}_verify_{timestamp}.py"
+                filename = f"q{self.current_question_id}_verify{model_suffix}_{timestamp}.py"
             else:
-                filename = f"q{self.current_question_id}_generate_{timestamp}.py"
+                filename = f"q{self.current_question_id}_generate{model_suffix}_{timestamp}.py"
 
             code_file = os.path.join(self.code_dir, filename)
             with open(code_file, 'w', encoding='utf-8') as f:
@@ -994,19 +1118,19 @@ class AnalogicalTransformer:
             if result.returncode == 0:
                 if code_file:
                     print(f"【成功执行】 Python代码已保存到: {code_file} 🤩")
-                return result.stdout.strip(), None # 返回print的标准输出和 None
+                return result.stdout.strip(), None, code_file # 返回print的标准输出、错误和文件名
             else:
                 if code_file:
                     print(f"【执行出错】 Python代码已保存到: {code_file} ")
-                return None, result.stderr.strip()
+                return None, result.stderr.strip(), code_file
         except subprocess.TimeoutExpired:
             if code_file:
                 print(f"【执行超时】 Python代码已保存到: {code_file} ")
-            return None, "Timeout"
+            return None, "Timeout", code_file
         except Exception as e:
             if code_file:
                 print(f"【异常: {str(e)}】 Python代码已保存到: {code_file} ")
-            return None, str(e)
+            return None, str(e), code_file
 
     def _build_numeric_solver(
         self,
@@ -1063,10 +1187,11 @@ class AnalogicalTransformer:
 
                 要求：
                 1. 编写一个Python函数 solve({primary_key}), 仅接受变量 {primary_key} 的值作为参数
-                2. 实现通用的计算过程，不要硬编码答案
+                2. 实现通用的计算过程，对变量 {primary_key} 的取值没有限制，不要硬编码答案
                 3. 函数应该返回题目的答案
                 4. 注意：题目中可能有多个相同的数字，但只有变量 {primary_key} 对应的位置需要作为参数传入
-
+                5. 只输出函数定义和函数调用，不要输出 if __name__ == "__main__": 这样的测试代码块
+                6. 不要添加任何print语句
                 请只输出Python代码，不要有其他解释。
                 """)
             history.append((prompt, None))
@@ -1096,8 +1221,9 @@ class AnalogicalTransformer:
                     value = info.get("value", info) if isinstance(info, dict) else info
                     input_variables[key] = value
                 
+                current_model = llm_codegen.model_name  # 跟踪当前代码的模型
                 for refine_step in range(max_refine):
-                    output, error = self._run_python_code(code, input_variables, primary_key, verify=True)
+                    output, error, code_file = self._run_python_code(code, input_variables, primary_key, verify=True, model_name=current_model)
                     history.append((code, (output, error)))
                     
                     if error is None and output == answer_gold:
@@ -1118,13 +1244,13 @@ class AnalogicalTransformer:
                             ```python
                             {code}
                             ```                                
-                            输入变量：{primary_key}（当前值：{primary_value}，{position_str}{context_str}）
-
-                            请分析代码逻辑和题目要求，为变量 {primary_key} 确定合理的取值。
+                            
+                            请分析题目和代码逻辑，为变量 {primary_key} 确定合理的取值。该变量当前值：{primary_value}，{position_str}{context_str}
                             取值应该：
                             1. 保证代码能正常运行（不会出现除零、负数开方等错误）
                             2. 保证答案在合理范围内
                             3. 保证题目有意义，数值不能太小或太大（不能超过1000）
+                            4. 保证代码适用于这个取值（解题的代码可能只对某些变量的取值有效）
                             
                             如果变量可以取连续范围内的任意值，请使用格式：
                             取值范围：[min, max]
@@ -1173,6 +1299,7 @@ class AnalogicalTransformer:
                         break
                     
                     # 精炼代码
+                    print(f"【答案错误】 开始改进代码🤔")
                     refine_prompt = textwrap.dedent(f"""
                         之前的代码有错误。请修正它。
                         题目：{problem_text}
@@ -1182,7 +1309,6 @@ class AnalogicalTransformer:
                         {code}
                         ```
                         solve 的输入变量：{primary_key}（其值：{primary_value}）
-                        输入字典（供参考）：{json.dumps(input_variables, ensure_ascii=False)}
                         错误信息：{error}
                         输出：{output}
                         历史记录：
@@ -1224,18 +1350,76 @@ class AnalogicalTransformer:
             # 如果原值不是数字，返回一个默认范围
             return 1, 100
 
-    def _get_random_value_from_range(self, value_range: Any) -> int:
-        """从取值范围中随机选择一个值，支持连续范围 (min, max) 或离散值列表 [v1, v2, ...]"""
+    def _get_random_value_from_range(self, value_range: Any, exclude_value: Any = None) -> int:
+        """从取值范围中随机选择一个值，支持连续范围 (min, max) 或离散值列表 [v1, v2, ...]
+        
+        Args:
+            value_range: 取值范围，可以是 (min, max) 元组或 [v1, v2, ...] 列表
+            exclude_value: 要排除的值，如果指定则不会选择该值
+        """
         if isinstance(value_range, tuple) and len(value_range) == 2:
             # 连续范围
             min_val, max_val = value_range
+            if exclude_value is not None:
+                # 如果排除值在范围内，需要重新选择
+                while True:
+                    value = random.randint(min_val, max_val)
+                    if value != exclude_value:
+                        return value
             return random.randint(min_val, max_val)
         elif isinstance(value_range, list):
             # 离散值列表
+            if exclude_value is not None:
+                # 过滤掉排除值
+                available_values = [v for v in value_range if v != exclude_value]
+                if not available_values:
+                    # 如果所有值都被排除，返回原值（这种情况不应该发生，但作为fallback）
+                    return random.choice(value_range)
+                return random.choice(available_values)
             return random.choice(value_range)
         else:
             # 默认范围
+            if exclude_value is not None:
+                while True:
+                    value = random.randint(1, 100)
+                    if value != exclude_value:
+                        return value
             return random.randint(1, 100)
+
+    def _is_positive_integer(self, value: Any) -> bool:
+        """检查值是否为正整数"""
+        if value is None:
+            return False
+        try:
+            # 尝试转换为字符串，然后解析为整数
+            if isinstance(value, str):
+                value = value.strip()
+                # 尝试解析为浮点数，然后检查是否为整数
+                float_value = float(value)
+                int_value = int(float_value)
+                # 确保是整数且为正，且没有小数部分
+                return int_value > 0 and int_value == float_value
+            elif isinstance(value, (int, float)):
+                int_value = int(value)
+                # 确保是整数且为正，且没有小数部分
+                return int_value > 0 and int_value == value
+            else:
+                return False
+        except (ValueError, TypeError):
+            return False
+
+    def _get_all_possible_values(self, value_range: Any, exclude_values: set) -> list:
+        """获取所有可能的值（排除已尝试的值）"""
+        if isinstance(value_range, tuple) and len(value_range) == 2:
+            # 连续范围
+            min_val, max_val = value_range
+            return [v for v in range(min_val, max_val + 1) if v not in exclude_values]
+        elif isinstance(value_range, list):
+            # 离散值列表
+            return [v for v in value_range if v not in exclude_values]
+        else:
+            # 默认范围
+            return [v for v in range(1, 101) if v not in exclude_values]
 
     def _generate_numeric_variant(
         self, 
@@ -1252,47 +1436,89 @@ class AnalogicalTransformer:
             original_value = original_inputs.get(primary_key)
             value_range = value_ranges.get(primary_key, (1, 100))
             print("--------随机选择变量值--------")
-            new_value = self._get_random_value_from_range(value_range)
-            print(f"随机选择的变量值：{new_value}")
             
-            print("----------生成新答案----------")
-            new_inputs = {primary_key: new_value}
-            output, error = self._run_python_code(code, new_inputs, primary_key, verify=False)
+            # 记录已尝试的值
+            tried_values = set()
+            if original_value is not None:
+                tried_values.add(original_value)
             
-            if error is not None:
-                print(f"运行代码时出错: {error}")
-                return "", ""
+            max_attempts = 100  # 最大尝试次数，避免无限循环
+            attempt = 0
             
-            new_answer = output
-            print(f"新答案：{new_answer}")
-            
-            print("----------生成新题目----------")
-            char_start = primary_position.get('char_start', '?')
-            char_end = primary_position.get('char_end', '?')
-            context = primary_position.get('context', '')
-            position_info = f"第 {char_start}-{char_end}个字符，上下文：{context}"
-            prompt = textwrap.dedent(f"""
-                基于下面的原始题目，生成一个新的数字变体题目。
-                原始题目：
-                {problem_text}
+            while attempt < max_attempts:
+                attempt += 1
                 
-                要修改的变量信息：
-                - 变量名：{primary_key}
-                - 原始值：{original_value}
-                - 新值：{new_value}
-                - 变量在原始题目中的位置：{position_info}
+                # 检查是否还有可选的值
+                available_values = self._get_all_possible_values(value_range, tried_values)
+                if not available_values:
+                    print(f"没有可选的值了（已尝试 {len(tried_values)} 个值）")
+                    return "", ""
                 
-                要求：
-                1. 将原始题目中位于第 {char_start}-{char_end} 个字符处的数字（即变量 {primary_key} 的值 {original_value}）改为 {new_value}
-                2. 注意：原始题目中可能有多处出现数字 {original_value}，但只需要修改位置 {char_start}-{char_end} 处的那一个
-                3. 保持题目其他部分完全不变
+                # 从可用值中随机选择一个值
+                new_value = random.choice(available_values)
+                tried_values.add(new_value)
+                print(f"尝试第 {attempt} 次，随机选择的变量值：{new_value}（原值：{original_value}）")
                 
-                请只输出新题目的文本，不要有其他解释。
-                """)
-            # print("prompt:  "+prompt)
-            resp = llm.chat(prompt)
-            print(f"新题目：{resp.strip()}")
-            return resp.strip(), new_answer
+                print("----------生成新答案----------")
+                new_inputs = {primary_key: new_value}
+                output, error, code_file = self._run_python_code(code, new_inputs, primary_key, verify=False, model_name=llm.model_name)
+                print(f"变量的新值：{new_value}，运行代码得到答案：{output}")
+                # 检查是否有错误
+                if error is not None:
+                    print(f"运行代码时出错: {error}")
+                    # 删除生成的Python文件
+                    os.remove(code_file)
+                    continue  # 重试
+                
+                # 检查输出是否为None
+                if output is None:
+                    print(f"函数返回None")
+                    # 删除生成的Python文件
+                    os.remove(code_file)
+                    continue  # 重试
+                
+                # 检查答案是否为正整数
+                if not self._is_positive_integer(output):
+                    print(f"答案不是正整数: {output}")
+                    # 删除生成的Python文件
+                    os.remove(code_file)
+                    continue  # 重试
+                
+                new_answer = output
+                print(f"新答案：{new_answer}（正整数，验证通过）")
+                
+                print("----------生成新题目----------")
+                char_start = primary_position.get('char_start', '?')
+                char_end = primary_position.get('char_end', '?')
+                context = primary_position.get('context', '')
+                position_info = f"第 {char_start}-{char_end}个字符，上下文：{context}"
+                prompt = textwrap.dedent(f"""
+                    基于下面的原始题目，生成一个新的数字变体题目。
+                    原始题目：
+                    {problem_text}
+                    
+                    要修改的变量信息：
+                    - 变量名：{primary_key}
+                    - 原始值：{original_value}
+                    - 新值：{new_value}
+                    - 变量在原始题目中的位置：{position_info}
+                    
+                    要求：
+                    1. 将原始题目中位于第 {char_start}-{char_end} 个字符处的数字（即变量 {primary_key} 的值 {original_value}）改为 {new_value}
+                    2. 注意：原始题目中可能有多处出现数字 {original_value}，但只需要修改位置 {char_start}-{char_end} 处的那一个
+                    3. 如果原题中某变量的值和 {primary_key} 的值相关, 则相应地修改该变量的值
+                    4. 保持题目其他部分完全不变
+                    
+                    请只输出新题目的文本，不要有其他解释。
+                    """)
+                # print("prompt:  "+prompt)
+                resp = llm.chat(prompt)
+                print(f"新题目：{resp.strip()}")
+                return resp.strip(), new_answer
+            
+            # 如果达到最大尝试次数仍未成功
+            print(f"达到最大尝试次数（{max_attempts}），未能生成有效的变体")
+            return "", ""
         except Exception as e:
             print(f"生成数字变体时出错: {e}")
             return "", ""
@@ -1410,19 +1636,26 @@ class AnalogicalTransformer:
         original_problem: str,
         new_problem: str,
         original_answer: str,
-        new_answer: str,
+        original_condition_value: str,
         solution_sketches: str,
         retrieved_formulas: str,
         llm_codegen: LLMClient,
         llm_check: LLMClient,
         llm_refine: Optional[LLMClient] = None,
+        llm_range: Optional[LLMClient] = None,
         max_iter: int = 5,
         max_refine: int = 5,
-    ) -> Optional[str]:
-        """构建重组问题的求解器"""
+    ) -> Optional[Tuple[str, Dict, str]]:
+        """
+        构建重组问题的求解器
+        返回: (code, value_ranges, input_key) 或 None
+        验证逻辑：用原答案作为输入，检查输出是否等于原条件值
+        """
         history = []
         
+        print("----------生成重组问题求解代码----------")
         for iter_num in range(max_iter):
+            print(f"第【 {iter_num+1} 】次使用{llm_codegen.model_name}生成代码")
             prompt = textwrap.dedent(f"""
                 你是一个数学编程专家。请为重组后的题目编写Python求解程序。
                 原始题目：
@@ -1430,16 +1663,21 @@ class AnalogicalTransformer:
                 原始答案：{original_answer}
                 重组后的题目：
                 {new_problem}
-                重组后的答案：{new_answer}
+                重组后的答案（即原条件值）：{original_condition_value}
                 解法思路：
                 {solution_sketches}
                 相关公式：
                 {retrieved_formulas}
-                要求：
-                1. 编写一个Python函数 solve(inputs)，接受一个字典参数 inputs（调用时会提供）
-                2. 实现重组后题目的求解逻辑，不要硬编码答案
-                3. 函数应该返回重组后题目的答案
-                请只输出Python代码。
+                
+                重要说明：
+                1. 重组后题目的输入是原题目的答案（{original_answer}）
+                2. 重组后题目的输出应该是原题目的条件值（{original_condition_value}）
+                3. 编写一个Python函数 solve(inputs)，接受一个字典参数 inputs
+                4. 函数应该从 inputs 中获取原答案值，计算并返回原条件值
+                5. 实现通用的计算过程，不要硬编码答案
+                6. 只输出函数定义和函数调用，不要输出 if __name__ == "__main__": 这样的测试代码块，
+                7. 不要添加任何print语句
+                请只输出Python代码，不要有其他解释。
                 """)
             history.append((prompt, None))
             
@@ -1453,30 +1691,105 @@ class AnalogicalTransformer:
                     code = code_match.group(1) if code_match else code_resp
                 
                 if self._check_hard_coded(code, llm_check):
+                    print("生成代码包含硬编码，跳过🥶")
                     continue
+                else:
+                    print("硬编码检测通过，准备验证代码🫡")
                 
-                # 验证：使用原始答案作为输入
-                inputs = {"original_answer": original_answer}
-                output, error = self._run_python_code(code, inputs)
+                # 验证：使用原始答案作为输入，检查输出是否等于原条件值
+                input_key = "original_answer"
+                inputs = {input_key: original_answer}
+                current_model = llm_codegen.model_name
+                output, error, code_file = self._run_python_code(code, inputs, model_name=current_model)
                 history.append((code, (output, error)))
                 
-                if error is None and output == new_answer:
-                    return code
+                if error is None and str(output).strip() == str(original_condition_value).strip():
+                    print("【答案正确】 准备返回代码🥳")
+                    
+                    # 确定输入变量的取值范围（类似 analogical-2）
+                    value_ranges = {}
+                    
+                    if llm_range:
+                        print("----------确定变量取值范围----------")
+                        range_prompt = textwrap.dedent(f"""
+                            你是一个数学问题分析专家。请分析下面的题目和对应的解题代码，确定输入变量的合理取值范围。
+                            原始题目：
+                            {original_problem}
+                            原始答案：{original_answer}
+                            重组后的题目：
+                            {new_problem}
+                            求解代码：
+                            ```python
+                            {code}
+                            ```
+                            
+                            请分析题目和代码逻辑，为输入变量（原答案值）确定合理的取值范围。
+                            当前值：{original_answer}
+                            取值应该：
+                            1. 保证代码能正常运行（不会出现除零、负数开方等错误）
+                            2. 保证输出（原条件值）在合理范围内
+                            3. 保证题目有意义，数值不能太小或太大（不能超过1000）
+                            
+                            如果变量可以取连续范围内的任意值，请使用格式：
+                            取值范围：[min, max]
+                            例如：取值范围：[1, 100]
+                            
+                            如果变量只能取特定的离散值，请使用格式：
+                            取值列表：[value1, value2, value3, ...]
+                            例如：取值列表：[1, 15, 301]
+                            
+                            请根据题目和代码的特点，选择合适的格式输出。
+                            重要：只输出取值范围或取值列表，不要输出任何其他解释或内容。
+                            """)
+                        try:
+                            range_resp = llm_range.chat(range_prompt)
+                            range_match = re.search(r'取值范围[：:]\s*\[(\d+),\s*(\d+)\]', range_resp)
+                            if range_match:
+                                min_val = int(range_match.group(1))
+                                max_val = int(range_match.group(2))
+                                value_ranges[input_key] = (min_val, max_val)
+                                print(f"确定取值范围（连续）：{input_key} = [{min_val}, {max_val}]")
+                            else:
+                                list_match = re.search(r'取值列表[：:]\s*\[([\d,\s]+)\]', range_resp)
+                                if list_match:
+                                    values_str = list_match.group(1)
+                                    values = [int(v.strip()) for v in values_str.split(',') if v.strip().isdigit()]
+                                    if values:
+                                        value_ranges[input_key] = values
+                                        print(f"确定取值列表（离散）：{input_key} = {values}")
+                                    else:
+                                        value_ranges[input_key] = (1, 100)
+                                else:
+                                    value_ranges[input_key] = (1, 100)
+                        except Exception as e:
+                            print(f"确定取值范围时出错: {e}，使用默认范围")
+                            value_ranges[input_key] = (1, 100)
+                    else:
+                        value_ranges[input_key] = (1, 100)
+                    
+                    return code, value_ranges, input_key
                 
-                for refine_step in range(max_refine - 1):
+                for refine_step in range(max_refine):
+                    print(f"【答案错误】 开始改进代码🤔 (第 {refine_step + 1}/{max_refine} 次精炼)")
                     refine_prompt = textwrap.dedent(f"""
                         之前的代码有错误。请修正它。
                         重组后的题目：{new_problem}
-                        重组后的答案：{new_answer}
+                        重组后的答案（即原条件值）：{original_condition_value}
                         之前的代码：
                         ```python
                         {code}
                         ```
+                        输入：原答案 = {original_answer}
                         错误信息：{error}
                         输出：{output}
+                        期望输出：{original_condition_value}
+                        历史记录：
+                        {json.dumps(history, indent=2, ensure_ascii=False)}
                         请修正代码，只输出Python代码（保持 solve(inputs) 接口）。
                         """)
-                    code_resp = (llm_refine or llm_codegen).chat(refine_prompt)
+                    refine_llm = llm_refine or llm_codegen
+                    code_resp = refine_llm.chat(refine_prompt)
+                    current_model = refine_llm.model_name
                     code_match = re.search(r'```python\n(.*?)\n```', code_resp, re.DOTALL)
                     if code_match:
                         code = code_match.group(1)
@@ -1484,16 +1797,82 @@ class AnalogicalTransformer:
                         code_match = re.search(r'```\n(.*?)\n```', code_resp, re.DOTALL)
                         code = code_match.group(1) if code_match else code_resp
                     
-                    output, error = self._run_python_code(code, inputs)
+                    output, error, code_file = self._run_python_code(code, inputs, model_name=current_model)
                     history.append((code, (output, error)))
                     
-                    if error is None and output == new_answer:
-                        return code
+                    if error is None and str(output).strip() == str(original_condition_value).strip():
+                        print("【答案正确】 准备返回代码🥳")
+                        value_ranges = {input_key: (1, 100)} if not llm_range else {}
+                        if llm_range:
+                            # 简化处理，直接使用默认范围
+                            value_ranges[input_key] = (1, 100)
+                        return code, value_ranges, input_key
             except Exception as e:
                 print(f"构建重组求解器时出错: {e}")
                 continue
         
         return None
+
+    def _generate_recomposed_variant(
+        self,
+        original_problem: str,
+        new_problem: str,
+        code: str,
+        input_key: str,
+        original_answer: str,
+        value_ranges: Dict[str, Any],
+        llm: LLMClient
+    ) -> Tuple[str, str]:
+        """使用重组求解器生成变体：随机选择输入值，运行代码得到新答案，然后生成新题目"""
+        try:
+            value_range = value_ranges.get(input_key, (1, 100))
+            print("--------随机选择输入值--------")
+            new_input_value = self._get_random_value_from_range(value_range)
+            print(f"随机选择的输入值（新原答案）：{new_input_value}")
+            
+            print("----------生成新答案（新原条件值）----------")
+            new_inputs = {input_key: new_input_value}
+            output, error, code_file = self._run_python_code(code, new_inputs, primary_key=input_key, verify=False, model_name=llm.model_name)
+            
+            if error is not None:
+                print(f"运行代码时出错: {error}")
+                # 删除生成的Python文件
+                if code_file and os.path.exists(code_file):
+                    try:
+                        os.remove(code_file)
+                        print(f"已删除错误文件: {code_file}")
+                    except Exception as e:
+                        print(f"删除文件失败: {e}")
+                return "", ""
+            
+            new_condition_value = output
+            print(f"新答案（新原条件值）：{new_condition_value}")
+            
+            print("----------生成新题目----------")
+            prompt = textwrap.dedent(f"""
+                基于下面的重组题目模板，生成一个新的条件重组变体。
+                原始题目：
+                {original_problem}
+                原始答案：{original_answer}
+                重组题目模板：
+                {new_problem}
+                
+                新的输入值（新原答案）：{new_input_value}
+                新的输出值（新原条件值）：{new_condition_value}
+                
+                要求：
+                1. 将重组题目模板中的原答案值（{original_answer}）替换为新原答案值（{new_input_value}）
+                2. 将重组题目模板中的原条件值替换为新原条件值（{new_condition_value}）
+                3. 保持题目的其他结构和表述不变
+                
+                请只输出新题目的文本，不要有其他解释。
+                """)
+            resp = llm.chat(prompt)
+            print(f"新题目：{resp.strip()}")
+            return resp.strip(), new_condition_value
+        except Exception as e:
+            print(f"生成重组变体时出错: {e}")
+            return "", ""
 
     def transform_analogical3(
         self,
@@ -1503,6 +1882,8 @@ class AnalogicalTransformer:
         llm_codegen: Optional[LLMClient] = None,
         llm_check: Optional[LLMClient] = None,
         llm_refine: Optional[LLMClient] = None,
+        llm_variant: Optional[LLMClient] = None,
+        llm_range: Optional[LLMClient] = None,
     ) -> ProblemItem:
         """
         analogical-3：条件重组（conditional recomposition via invertible-condition analysis）
@@ -1512,13 +1893,18 @@ class AnalogicalTransformer:
         llm_codegen = llm_codegen or self.llm
         llm_check = llm_check or self.llm
         llm_refine = llm_refine or llm_codegen
-        # 1. 提取知识点
-        knowledge_points = self._extract_knowledge_points(item.original_question, llm_extract)
+        llm_variant = llm_variant or llm_codegen
+        llm_range = llm_range or llm_codegen
         
-        # 2. 查询公式库
+        print("--------------------------------提取知识点--------------------------------")
+        knowledge_points = self._extract_knowledge_points(item.original_question, llm_extract, item.solution)
+        print("提取的知识点：\n", knowledge_points)
+        
+        print("--------------------------------查询公式库--------------------------------")
         retrieved_formulas = self._retrieve_formulas(knowledge_points)
+        print("检索到的公式：\n", retrieved_formulas)
         
-        # 3. 分析可逆条件
+        print("--------------------------------分析可逆条件--------------------------------")
         invertible_analysis = self._analyze_invertible_conditions(
             item.original_question,
             item.true_answer,
@@ -1539,34 +1925,57 @@ class AnalogicalTransformer:
                 """)
             resp = llm_analysis.chat(prompt)
             item.augmented_question = resp.strip()
+            item.augmented_true_answer = ""  # 无法确定新答案
         else:
             # 4. 构建重组问题的求解器
             new_problem = invertible_analysis.get("recomposed_problem_text", "")
-            # new_target 是新问题的目标，应该是原条件的一部分
-            # 验证时：将原答案（原目标值）作为输入，检查输出是否等于原条件的值
             original_conditions = invertible_analysis.get("original_conditions", [])
-            new_target = invertible_analysis.get("new_target", "")
+            original_target = invertible_analysis.get("original_target", "")
             
-            # 尝试从原条件中提取数值（简化处理）
+            # 尝试从原条件中提取数值（简化处理，取第一个条件）
             original_condition_value = str(original_conditions[0]) if original_conditions else ""
             
-            solver_code = self._build_recomposed_solver(
+            print("--------------------------------构建重组求解器--------------------------------")
+            solver_result = self._build_recomposed_solver(
                 item.original_question,
                 new_problem,
                 item.true_answer,
-                original_condition_value,  # 验证目标：应该能恢复原条件的值
+                original_condition_value,
                 item.solution,
                 retrieved_formulas,
                 llm_codegen=llm_codegen,
                 llm_check=llm_check,
-                llm_refine=llm_refine
+                llm_refine=llm_refine,
+                llm_range=llm_range
             )
             
-            if solver_code:
-                item.augmented_question = new_problem
+            if solver_result:
+                code, value_ranges, input_key = solver_result
+                
+                print("--------------------------------生成重组变体--------------------------------")
+                # 生成变体（类似 analogical-2）
+                new_question, new_answer = self._generate_recomposed_variant(
+                    item.original_question,
+                    new_problem,
+                    code,
+                    input_key,
+                    item.true_answer,
+                    value_ranges,
+                    llm_variant
+                )
+                
+                if new_question and new_answer:
+                    item.augmented_question = new_question
+                    item.augmented_true_answer = new_answer
+                else:
+                    # 如果生成变体失败，使用原始重组问题
+                    item.augmented_question = new_problem
+                    item.augmented_true_answer = original_condition_value
             else:
                 # 如果构建求解器失败，直接使用分析结果
+                print("警告：构建重组求解器失败，使用分析结果")
                 item.augmented_question = new_problem
+                item.augmented_true_answer = original_condition_value
         
         item.method_used = "analogical-3"
         return item
@@ -1639,13 +2048,11 @@ class NovelProblemGenerator:
 class AMESPipeline:
     def __init__(
         self,
-        analyzer: Optional[ProblemAnalyzer],
         analogical_transformer: Optional[AnalogicalTransformer],
         redundancy_injector: Optional[RedundancyInjector],
         novel_generator: Optional[NovelProblemGenerator],
         role_llms: Optional[Dict[str, LLMClient]] = None,
     ):
-        self.analyzer = analyzer
         self.analogical_transformer = analogical_transformer
         self.redundancy_injector = redundancy_injector
         self.novel_generator = novel_generator
@@ -1662,10 +2069,6 @@ class AMESPipeline:
         "6": novel-1（同知识点新题改编）
         "7": novel-2（同知识点概念题）
         """
-
-        # # 可选：先做题目分析（不影响增强逻辑）
-        # if self.analyzer:
-        #     item = self.analyzer.analyze(item)
 
         # 1,2,3 -> analogical-1
         if method in {"1", "2", "3"}:
@@ -1731,7 +2134,6 @@ def run_ames_on_csv(args):
         return LLMClient(model_name=model_name, temperature=args.temperature)
 
     # 按阶段实例化（默认配置在 DEFAULT_STAGE_MODEL / DEFAULT_ROLE_MODEL）
-    llm_analyzer = build_llm(DEFAULT_STAGE_MODEL["analyzer"])
     llm_redundancy = build_llm(DEFAULT_STAGE_MODEL["redundancy"])
     llm_novel = build_llm(DEFAULT_STAGE_MODEL["novel"])
     llm_analogical_fallback = build_llm(DEFAULT_STAGE_MODEL["analogical_fallback"])
@@ -1741,13 +2143,11 @@ def run_ames_on_csv(args):
         for role, model in DEFAULT_ROLE_MODEL.items()
     }
 
-    analyzer = ProblemAnalyzer(llm_analyzer)  # 如不需要可以改成 None
     analogical_transformer = AnalogicalTransformer(llm_analogical_fallback)
     redundancy_injector = RedundancyInjector(llm_redundancy)
     novel_generator = NovelProblemGenerator(llm_novel)
 
     pipeline = AMESPipeline(
-        analyzer=analyzer,
         analogical_transformer=analogical_transformer,
         redundancy_injector=redundancy_injector,
         novel_generator=novel_generator,
@@ -1770,6 +2170,8 @@ def run_ames_on_csv(args):
             if not row:
                 continue
             if args.question_id and i != args.question_id:
+                continue
+            if args.start and i < args.start:
                 continue
             total_count += 1
 
@@ -1806,10 +2208,9 @@ def run_ames_on_csv(args):
 
                 writer.writerow([
                     processed.original_question,
-                    processed.solution,
                     processed.true_answer,
                     processed.augmented_question,
-                    processed.method_used
+                    processed.augmented_true_answer,
                 ])
 
             except Exception as e:
@@ -1840,7 +2241,8 @@ if __name__ == "__main__":
     parser.add_argument('--out_csv', default="./csv_auto_augment", help="输出 CSV 文件所在文件夹")
     parser.add_argument('--temperature', type=float, default=0.2, help="API 回答多样性，默认 0.2")
     parser.add_argument('--model', type=str, default="deepseek", help="已忽略：模型选择请直接修改代码中的 DEFAULT_STAGE_MODEL / DEFAULT_ROLE_MODEL")
-    parser.add_argument('--question_id', type=int, default=1, help="题目ID")
+    parser.add_argument('--question_id', type=int, default=None, help="题目ID")
+    parser.add_argument('--start', type=int, default=None, help="开始题目ID")
     parser.add_argument('--method', type=str, default="1",
         help=(
             "增强方法：\n"

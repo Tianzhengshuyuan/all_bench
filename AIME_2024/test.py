@@ -1,46 +1,37 @@
 from fractions import Fraction
-import sympy as sp
-import re
-from math import comb
 import math
-import argparse
-def unique_point_on_AB(t: int, z: int, s: int, y: int) -> int:
-    """
-    计算: ((t/z)^6 + (√s/y)^6) / ((t/z)^2 + (√s/y)^2)^2
-    返回最简分数的分子+分母
-    """
-    # 保持分数，不出现浮点运算
-    t_frac = Fraction(t)
-    z_frac = Fraction(z)
-    s_frac = Fraction(s)
-    y_frac = Fraction(y)
+from math import comb
+import sympy as sp
+from math import gcd, isqrt
+
+def solve(total_residents):
+    # Given data
+    diamond = 195
+    golf = 367
+    spade = 562
+    candy = total_residents  # every resident owns candy hearts
     
-    # 计算 (t/z)^6
-    tz_6 = (t_frac / z_frac) ** 6
+    # Number of residents owning exactly 2 and exactly 3 items
+    exactly_two = 437
+    exactly_three = 234
     
-    # 计算 (√s/y)^6 = (s^(1/2)/y)^6 = s^3 / y^6
-    sqrt_s_y_6 = (s_frac ** 3) / (y_frac ** 6)
+    # Let w = exactly one item, z = all four items
+    # Total residents: w + exactly_two + exactly_three + z = total_residents
+    # So: w + z = total_residents - exactly_two - exactly_three
+    w_plus_z = total_residents - exactly_two - exactly_three
     
-    # 分子: (t/z)^6 + (√s/y)^6
-    numerator = tz_6 + sqrt_s_y_6
+    # Total items counted by ownership:
+    # w*1 + exactly_two*2 + exactly_three*3 + z*4 = diamond + golf + spade + candy
+    total_items = diamond + golf + spade + candy
+    w_plus_4z = total_items - 2*exactly_two - 3*exactly_three
     
-    # 计算 (t/z)^2
-    tz_2 = (t_frac / z_frac) ** 2
-    
-    # 计算 (√s/y)^2 = s / y^2
-    sqrt_s_y_2 = s_frac / (y_frac ** 2)
-    
-    # 分母: ((t/z)^2 + (√s/y)^2)^2
-    denominator = (tz_2 + sqrt_s_y_2) ** 2
-    
-    # 计算结果
-    result = numerator / denominator
-    
-    # 得到最简形式的分子与分母
-    p, q = result.numerator, result.denominator
-    
-    # 返回 p + q
-    return p + q
+    # Solve the system:
+    # w + z = w_plus_z
+    # w + 4z = w_plus_4z
+    # Subtract: 3z = w_plus_4z - w_plus_z
+    z = (w_plus_4z - w_plus_z) // 3
+    return z
 
 if __name__ == "__main__":
-    print(unique_point_on_AB(1, 2, 3, 2))
+    print(solve(900))
+
