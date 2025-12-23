@@ -4,34 +4,38 @@ from math import comb
 import sympy as sp
 from math import gcd, isqrt
 
-def solve(total_residents):
-    # Given data
-    diamond = 195
-    golf = 367
-    spade = 562
-    candy = total_residents  # every resident owns candy hearts
-    
-    # Number of residents owning exactly 2 and exactly 3 items
-    exactly_two = 437
-    exactly_three = 234
-    
-    # Let w = exactly one item, z = all four items
-    # Total residents: w + exactly_two + exactly_three + z = total_residents
-    # So: w + z = total_residents - exactly_two - exactly_three
-    w_plus_z = total_residents - exactly_two - exactly_three
-    
-    # Total items counted by ownership:
-    # w*1 + exactly_two*2 + exactly_three*3 + z*4 = diamond + golf + spade + candy
-    total_items = diamond + golf + spade + candy
-    w_plus_4z = total_items - 2*exactly_two - 3*exactly_three
-    
-    # Solve the system:
-    # w + z = w_plus_z
-    # w + 4z = w_plus_4z
-    # Subtract: 3z = w_plus_4z - w_plus_z
-    z = (w_plus_4z - w_plus_z) // 3
-    return z
+def solve(minutes):
+    from math import sqrt
+
+    # Constants from the problem
+    distance_km = 1.0
+    base_time_hours = 4.0
+    faster_time_hours = 2.0 + (minutes / 60.0)
+    speed_increment = 2.0
+    extra_speed = 0.5
+
+    # Compute delta between the two total times
+    delta = base_time_hours - faster_time_hours  # equals 2 - minutes/60
+
+    # Solve for s using: 9*(1/s - 1/(s+2)) = delta -> s(s+2) = 18/delta
+    if delta == 0:
+        raise ValueError("Invalid minutes leading to zero time difference.")
+    rhs = 2 * distance_km / delta  # 18/delta
+
+    # Quadratic: s^2 + 2s - rhs = 0
+    disc = 4 + 4 * rhs
+    s1 = (-2 + sqrt(disc)) / 2
+    s2 = (-2 - sqrt(disc)) / 2
+    s = s1 if s1 > 0 else s2
+
+    # Compute coffee time t (in hours)
+    t_hours = base_time_hours - distance_km / s
+
+    # Total time at speed s + 0.5
+    total_hours = distance_km / (s + extra_speed) + t_hours
+    total_minutes = int(round(total_hours * 60))
+
+    return total_minutes
 
 if __name__ == "__main__":
-    print(solve(900))
-
+    print(solve(24))

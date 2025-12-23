@@ -1017,13 +1017,31 @@ class AnalogicalTransformer:
     def _extract_numeric_inputs(self, problem_text: str, llm: LLMClient) -> Dict[str, Any]:
         """从题目文本中提取一个随机数字变量，并标注位置信息"""
         prompt = textwrap.dedent(f"""
-            请从下面的数学题目中随机选择一个数字变量。
+            请从下面的数学题目中选择一个数字变量，这个变量将被用来生成变体题目。
             题目：
             {problem_text}
 
+            变量用途说明：
+            这个变量将被用来生成新的变体题目。具体流程是：
+            1. 将这个变量的值改为其他合理的数值
+            2. 根据新的变量值重新计算题目的答案
+            3. 生成一个新的题目文本，其中这个变量的值已被替换
+
+            选择变量的标准（重要）：
+            请选择一个"好变化"的变量，即改变这个变量的值后：
+            1. 代码容易编写：变量在计算过程中容易处理，不会导致复杂的边界情况
+            2. 代码能正常运行：改变变量值后不会出现除零、负数开方、对数定义域错误等运行时错误
+            3. 答案仍然合理：改变变量值后，答案仍然是正整数，不会变成负数、零或非整数
+            4. 题目有意义：变量值改变后，题目仍然有数学意义，不会导致无解或退化情况
+
+            优先选择：
+            - 题目中没有关联变量的数字变量，即改变其数字后，不需要改变其他变量的值，就能使得题目仍然有意义
+            - 在计算过程中作为输入或主要变量的数字，而不是中间结果或约束条件
+            - 改变后能产生合理的答案的数字
+
             要求：
-            1. 随机选择一个数字作为变量
-            2. 对于这个数字，标注它在题目中出现的一个代表性位置（使用字符位置，从题目文本开头开始计数，从0开始）
+            1. 选择一个数字作为变量
+            2. 对于这个数字变量，标注它在题目中出现的位置（使用字符位置，从题目文本开头开始计数，从0开始）
 
             请以JSON格式输出，格式为：
             {{
@@ -1238,23 +1256,29 @@ class AnalogicalTransformer:
                             你是一个数学问题分析专家。请分析下面的题目和对应的解题代码，确定输入变量的合理取值范围。
                             题目：
                             {problem_text}                                
-                            正确答案：
-                            {answer_gold}
+                            输入变量：
+                            {primary_key} = {primary_value}，{position_str}{context_str}
                             求解代码：
                             ```python
                             {code}
                             ```                                
                             
-                            请分析题目和代码逻辑，为变量 {primary_key} 确定合理的取值。该变量当前值：{primary_value}，{position_str}{context_str}
-                            取值应该：
-                            1. 保证代码能正常运行（不会出现除零、负数开方等错误）
-                            2. 保证答案在合理范围内
-                            3. 保证题目有意义，数值不能太小或太大（不能超过1000）
-                            4. 保证代码适用于这个取值（解题的代码可能只对某些变量的取值有效）
+                            请分析题目和代码逻辑，为变量 {primary_key} 确定合理的取值范围, 找出尽量多的取值。
+                            要求如下：
+                            1. 变量取值能保证代码能正常运行（不会出现除零、负数开方等错误）
+                            2. 变量取值能保证答案在合理范围内
+                            3. 变量取值不能超过1000或太小, 保证题目有意义
+                            4. 保证代码适用于这个变量取值
+                            5. 保证根据这个取值计算得到的答案小于100000
+                            
+                            说明：
+                            不用考虑变量 {primary_key} 变化后，题目中其他与它关联的变量没有变化会导致题目有误。
+                            因为在生成新题目时，系统会自动根据 {primary_key} 的新值相应地修改所有关联变量的值，
+                            确保新题目在数学上仍然正确和有意义。你只需要专注于找出 {primary_key} 本身的合理取值范围即可。
                             
                             如果变量可以取连续范围内的任意值，请使用格式：
                             取值范围：[min, max]
-                            例如：取值范围：[1, 100]
+                            例如：取值范围：[10, 100]
                             
                             如果变量只能取特定的离散值，请使用格式：
                             取值列表：[value1, value2, value3, ...]
@@ -1604,20 +1628,58 @@ class AnalogicalTransformer:
             {solution_sketches}
             相关公式：
             {retrieved_formulas}
-            请分析：
-            1. 题目的关键条件是什么？
-            2. 题目的目标是什么？
-            3. 是否可以将原目标作为条件，原条件（的一部分）作为新目标？
+            
+            条件和目标互换的示例：
+            原题：There exist real numbers $x$ and $y$, both greater than 1, such that $\\log_x\\left(y^x\\right)=\\log_y\\left(x^{{4y}}\\right)=10$. Find $xy$.
+            original_condition：$\\log_x\\left(y^x\\right)=\\log_y\\left(x^{{4y}}\\right)=10$
+            original_target：$xy=25$
+
+            recomposed_problem_text：There exist real numbers $x$ and $y$, both greater than 1, such that $xy=25$ and $\\log_x\\left(y^x\\right)=\\log_y\\left(x^{{4y}}\\right)=N$. Find $N$.
+            new_condition：$xy=25$（原目标作为条件）
+            new_target：$\\log_x\\left(y^x\\right)=\\log_y\\left(x^{{4y}}\\right)=10$
+            
+            new_answer：10
+            new_condition_name：xy
+            new_condition_value：25
+            new_condition_position：{{
+                "char_start": 71,
+                "char_end": 73,
+                "context": "such that $xy=25$"
+            }}
+            
+            要求：
+            1. 找到一个条件，这个条件必须能与目标互换
+            2. 找到的条件必须是充要条件：即能够由目标（原答案）唯一推导出这个条件，同时这个条件也能唯一推导出目标
+            3. 如果无法找到这样的充要条件，请设置 "invertible": false，并在 "reason" 中说明原因
+            4. 位置标注要求：
+               在重组后的题目文本中，需要标注新条件（即原答案）的位置信息：
+               - char_start: 新条件在重组后题目文本中的起始字符位置（从0开始计数）
+               - char_end: 新条件在重组后题目文本中的结束字符位置
+               - context: 新条件的上下文描述，帮助后续准确识别和替换
+            
             请以JSON格式输出：
             {{
                 "invertible": true/false,
-                "original_conditions": ["条件1", "条件2", ...],
-                "original_target": "目标",
-                "new_conditions": ["新条件1", "新条件2", ...],
-                "new_target": "新目标",
-                "recomposed_problem_text": "重组后的题目文本"
+                "original_condition": "找到的那个能与目标互换的条件（如果invertible为true）",
+                "original_target": "原目标（即要求求解什么）",
+                "new_condition": "新条件（即原答案，如果invertible为true）",
+                "new_target": "新目标（原条件的一部分，如果invertible为true）",
+                "recomposed_problem_text": "重组后的题目文本（如果invertible为true）",
+                "new_answer": 新答案的数值,
+                "new_condition_name": "new_condition的变量名",
+                "new_condition_value": new_condition的数值,
+                "new_condition_position": {{
+                    "char_start": 起始位置,
+                    "char_end": 结束位置,
+                    "context": "上下文描述"
+                }},
+                "reason": "如果invertible为false，说明无法找到充要条件的原因；如果invertible为true，可以省略此字段"
             }}
-            只输出JSON，不要有其他文字。
+            
+            注意：
+            - 如果 invertible 为 false，可以只输出 "invertible": false 和 "reason" 字段
+            - 如果 invertible 为 true，必须输出所有字段，包括位置信息
+            - 只输出JSON，不要有其他文字。
             """)
         try:
             resp = llm.chat(prompt)
@@ -1631,249 +1693,6 @@ class AnalogicalTransformer:
             print(f"分析可逆条件时出错: {e}")
             return None
 
-    def _build_recomposed_solver(
-        self,
-        original_problem: str,
-        new_problem: str,
-        original_answer: str,
-        original_condition_value: str,
-        solution_sketches: str,
-        retrieved_formulas: str,
-        llm_codegen: LLMClient,
-        llm_check: LLMClient,
-        llm_refine: Optional[LLMClient] = None,
-        llm_range: Optional[LLMClient] = None,
-        max_iter: int = 5,
-        max_refine: int = 5,
-    ) -> Optional[Tuple[str, Dict, str]]:
-        """
-        构建重组问题的求解器
-        返回: (code, value_ranges, input_key) 或 None
-        验证逻辑：用原答案作为输入，检查输出是否等于原条件值
-        """
-        history = []
-        
-        print("----------生成重组问题求解代码----------")
-        for iter_num in range(max_iter):
-            print(f"第【 {iter_num+1} 】次使用{llm_codegen.model_name}生成代码")
-            prompt = textwrap.dedent(f"""
-                你是一个数学编程专家。请为重组后的题目编写Python求解程序。
-                原始题目：
-                {original_problem}
-                原始答案：{original_answer}
-                重组后的题目：
-                {new_problem}
-                重组后的答案（即原条件值）：{original_condition_value}
-                解法思路：
-                {solution_sketches}
-                相关公式：
-                {retrieved_formulas}
-                
-                重要说明：
-                1. 重组后题目的输入是原题目的答案（{original_answer}）
-                2. 重组后题目的输出应该是原题目的条件值（{original_condition_value}）
-                3. 编写一个Python函数 solve(inputs)，接受一个字典参数 inputs
-                4. 函数应该从 inputs 中获取原答案值，计算并返回原条件值
-                5. 实现通用的计算过程，不要硬编码答案
-                6. 只输出函数定义和函数调用，不要输出 if __name__ == "__main__": 这样的测试代码块，
-                7. 不要添加任何print语句
-                请只输出Python代码，不要有其他解释。
-                """)
-            history.append((prompt, None))
-            
-            try:
-                code_resp = llm_codegen.chat(prompt)
-                code_match = re.search(r'```python\n(.*?)\n```', code_resp, re.DOTALL)
-                if code_match:
-                    code = code_match.group(1)
-                else:
-                    code_match = re.search(r'```\n(.*?)\n```', code_resp, re.DOTALL)
-                    code = code_match.group(1) if code_match else code_resp
-                
-                if self._check_hard_coded(code, llm_check):
-                    print("生成代码包含硬编码，跳过🥶")
-                    continue
-                else:
-                    print("硬编码检测通过，准备验证代码🫡")
-                
-                # 验证：使用原始答案作为输入，检查输出是否等于原条件值
-                input_key = "original_answer"
-                inputs = {input_key: original_answer}
-                current_model = llm_codegen.model_name
-                output, error, code_file = self._run_python_code(code, inputs, model_name=current_model)
-                history.append((code, (output, error)))
-                
-                if error is None and str(output).strip() == str(original_condition_value).strip():
-                    print("【答案正确】 准备返回代码🥳")
-                    
-                    # 确定输入变量的取值范围（类似 analogical-2）
-                    value_ranges = {}
-                    
-                    if llm_range:
-                        print("----------确定变量取值范围----------")
-                        range_prompt = textwrap.dedent(f"""
-                            你是一个数学问题分析专家。请分析下面的题目和对应的解题代码，确定输入变量的合理取值范围。
-                            原始题目：
-                            {original_problem}
-                            原始答案：{original_answer}
-                            重组后的题目：
-                            {new_problem}
-                            求解代码：
-                            ```python
-                            {code}
-                            ```
-                            
-                            请分析题目和代码逻辑，为输入变量（原答案值）确定合理的取值范围。
-                            当前值：{original_answer}
-                            取值应该：
-                            1. 保证代码能正常运行（不会出现除零、负数开方等错误）
-                            2. 保证输出（原条件值）在合理范围内
-                            3. 保证题目有意义，数值不能太小或太大（不能超过1000）
-                            
-                            如果变量可以取连续范围内的任意值，请使用格式：
-                            取值范围：[min, max]
-                            例如：取值范围：[1, 100]
-                            
-                            如果变量只能取特定的离散值，请使用格式：
-                            取值列表：[value1, value2, value3, ...]
-                            例如：取值列表：[1, 15, 301]
-                            
-                            请根据题目和代码的特点，选择合适的格式输出。
-                            重要：只输出取值范围或取值列表，不要输出任何其他解释或内容。
-                            """)
-                        try:
-                            range_resp = llm_range.chat(range_prompt)
-                            range_match = re.search(r'取值范围[：:]\s*\[(\d+),\s*(\d+)\]', range_resp)
-                            if range_match:
-                                min_val = int(range_match.group(1))
-                                max_val = int(range_match.group(2))
-                                value_ranges[input_key] = (min_val, max_val)
-                                print(f"确定取值范围（连续）：{input_key} = [{min_val}, {max_val}]")
-                            else:
-                                list_match = re.search(r'取值列表[：:]\s*\[([\d,\s]+)\]', range_resp)
-                                if list_match:
-                                    values_str = list_match.group(1)
-                                    values = [int(v.strip()) for v in values_str.split(',') if v.strip().isdigit()]
-                                    if values:
-                                        value_ranges[input_key] = values
-                                        print(f"确定取值列表（离散）：{input_key} = {values}")
-                                    else:
-                                        value_ranges[input_key] = (1, 100)
-                                else:
-                                    value_ranges[input_key] = (1, 100)
-                        except Exception as e:
-                            print(f"确定取值范围时出错: {e}，使用默认范围")
-                            value_ranges[input_key] = (1, 100)
-                    else:
-                        value_ranges[input_key] = (1, 100)
-                    
-                    return code, value_ranges, input_key
-                
-                for refine_step in range(max_refine):
-                    print(f"【答案错误】 开始改进代码🤔 (第 {refine_step + 1}/{max_refine} 次精炼)")
-                    refine_prompt = textwrap.dedent(f"""
-                        之前的代码有错误。请修正它。
-                        重组后的题目：{new_problem}
-                        重组后的答案（即原条件值）：{original_condition_value}
-                        之前的代码：
-                        ```python
-                        {code}
-                        ```
-                        输入：原答案 = {original_answer}
-                        错误信息：{error}
-                        输出：{output}
-                        期望输出：{original_condition_value}
-                        历史记录：
-                        {json.dumps(history, indent=2, ensure_ascii=False)}
-                        请修正代码，只输出Python代码（保持 solve(inputs) 接口）。
-                        """)
-                    refine_llm = llm_refine or llm_codegen
-                    code_resp = refine_llm.chat(refine_prompt)
-                    current_model = refine_llm.model_name
-                    code_match = re.search(r'```python\n(.*?)\n```', code_resp, re.DOTALL)
-                    if code_match:
-                        code = code_match.group(1)
-                    else:
-                        code_match = re.search(r'```\n(.*?)\n```', code_resp, re.DOTALL)
-                        code = code_match.group(1) if code_match else code_resp
-                    
-                    output, error, code_file = self._run_python_code(code, inputs, model_name=current_model)
-                    history.append((code, (output, error)))
-                    
-                    if error is None and str(output).strip() == str(original_condition_value).strip():
-                        print("【答案正确】 准备返回代码🥳")
-                        value_ranges = {input_key: (1, 100)} if not llm_range else {}
-                        if llm_range:
-                            # 简化处理，直接使用默认范围
-                            value_ranges[input_key] = (1, 100)
-                        return code, value_ranges, input_key
-            except Exception as e:
-                print(f"构建重组求解器时出错: {e}")
-                continue
-        
-        return None
-
-    def _generate_recomposed_variant(
-        self,
-        original_problem: str,
-        new_problem: str,
-        code: str,
-        input_key: str,
-        original_answer: str,
-        value_ranges: Dict[str, Any],
-        llm: LLMClient
-    ) -> Tuple[str, str]:
-        """使用重组求解器生成变体：随机选择输入值，运行代码得到新答案，然后生成新题目"""
-        try:
-            value_range = value_ranges.get(input_key, (1, 100))
-            print("--------随机选择输入值--------")
-            new_input_value = self._get_random_value_from_range(value_range)
-            print(f"随机选择的输入值（新原答案）：{new_input_value}")
-            
-            print("----------生成新答案（新原条件值）----------")
-            new_inputs = {input_key: new_input_value}
-            output, error, code_file = self._run_python_code(code, new_inputs, primary_key=input_key, verify=False, model_name=llm.model_name)
-            
-            if error is not None:
-                print(f"运行代码时出错: {error}")
-                # 删除生成的Python文件
-                if code_file and os.path.exists(code_file):
-                    try:
-                        os.remove(code_file)
-                        print(f"已删除错误文件: {code_file}")
-                    except Exception as e:
-                        print(f"删除文件失败: {e}")
-                return "", ""
-            
-            new_condition_value = output
-            print(f"新答案（新原条件值）：{new_condition_value}")
-            
-            print("----------生成新题目----------")
-            prompt = textwrap.dedent(f"""
-                基于下面的重组题目模板，生成一个新的条件重组变体。
-                原始题目：
-                {original_problem}
-                原始答案：{original_answer}
-                重组题目模板：
-                {new_problem}
-                
-                新的输入值（新原答案）：{new_input_value}
-                新的输出值（新原条件值）：{new_condition_value}
-                
-                要求：
-                1. 将重组题目模板中的原答案值（{original_answer}）替换为新原答案值（{new_input_value}）
-                2. 将重组题目模板中的原条件值替换为新原条件值（{new_condition_value}）
-                3. 保持题目的其他结构和表述不变
-                
-                请只输出新题目的文本，不要有其他解释。
-                """)
-            resp = llm.chat(prompt)
-            print(f"新题目：{resp.strip()}")
-            return resp.strip(), new_condition_value
-        except Exception as e:
-            print(f"生成重组变体时出错: {e}")
-            return "", ""
-
     def transform_analogical3(
         self,
         item: ProblemItem,
@@ -1882,8 +1701,7 @@ class AnalogicalTransformer:
         llm_codegen: Optional[LLMClient] = None,
         llm_check: Optional[LLMClient] = None,
         llm_refine: Optional[LLMClient] = None,
-        llm_variant: Optional[LLMClient] = None,
-        llm_range: Optional[LLMClient] = None,
+        llm_range: Optional[LLMClient] = None
     ) -> ProblemItem:
         """
         analogical-3：条件重组（conditional recomposition via invertible-condition analysis）
@@ -1893,8 +1711,7 @@ class AnalogicalTransformer:
         llm_codegen = llm_codegen or self.llm
         llm_check = llm_check or self.llm
         llm_refine = llm_refine or llm_codegen
-        llm_variant = llm_variant or llm_codegen
-        llm_range = llm_range or llm_codegen
+        llm_range = llm_range or self.llm
         
         print("--------------------------------提取知识点--------------------------------")
         knowledge_points = self._extract_knowledge_points(item.original_question, llm_extract, item.solution)
@@ -1913,69 +1730,84 @@ class AnalogicalTransformer:
             llm_analysis
         )
         
-        if invertible_analysis is None:
-            # 如果不可逆，回退到简单方法
-            print("警告：题目条件不可逆，使用简单方法生成变体")
-            prompt = textwrap.dedent(f"""
-                请基于下面的题目，生成一个条件重组的变体（将部分条件和目标互换）。
-                原始题目：
-                {item.original_question}
-                正确答案：{item.true_answer}
-                请只输出重组后的题目文本。
-                """)
-            resp = llm_analysis.chat(prompt)
-            item.augmented_question = resp.strip()
-            item.augmented_true_answer = ""  # 无法确定新答案
-        else:
-            # 4. 构建重组问题的求解器
+        if invertible_analysis is not None:
+            # 获取重组后的题目和新答案
             new_problem = invertible_analysis.get("recomposed_problem_text", "")
-            original_conditions = invertible_analysis.get("original_conditions", [])
-            original_target = invertible_analysis.get("original_target", "")
+            new_answer = invertible_analysis.get("new_answer", "")
+            variable_name = invertible_analysis.get("new_condition_name", "")
+            variable_value = invertible_analysis.get("new_condition_value", "")
+            variable_position = invertible_analysis.get("new_condition_position", {})
             
-            # 尝试从原条件中提取数值（简化处理，取第一个条件）
-            original_condition_value = str(original_conditions[0]) if original_conditions else ""
-            
-            print("--------------------------------构建重组求解器--------------------------------")
-            solver_result = self._build_recomposed_solver(
-                item.original_question,
-                new_problem,
-                item.true_answer,
-                original_condition_value,
-                item.solution,
-                retrieved_formulas,
-                llm_codegen=llm_codegen,
-                llm_check=llm_check,
-                llm_refine=llm_refine,
-                llm_range=llm_range
-            )
-            
-            if solver_result:
-                code, value_ranges, input_key = solver_result
+            if not new_problem or not new_answer:
+                print("警告：重组题目或新答案为空，无法继续")
+                item.augmented_question = ""
+                item.augmented_true_answer = ""
+            else:
+                # 复用 transform_analogical2 的逻辑
+                # 构建 numeric_inputs 格式，类似 _extract_numeric_inputs 的返回格式
+                numeric_inputs = {}
+                if variable_name and variable_value is not None:
+                    numeric_inputs[variable_name] = {
+                        "value": variable_value,
+                        "position": variable_position
+                    }
                 
-                print("--------------------------------生成重组变体--------------------------------")
-                # 生成变体（类似 analogical-2）
-                new_question, new_answer = self._generate_recomposed_variant(
-                    item.original_question,
-                    new_problem,
-                    code,
-                    input_key,
-                    item.true_answer,
-                    value_ranges,
-                    llm_variant
+                print("--------------------------------构建求解器--------------------------------")
+                solver_result = self._build_numeric_solver(
+                    new_problem,  # 使用重组后的题目
+                    new_answer,   # 使用新答案
+                    item.solution,  # 使用原解法思路
+                    retrieved_formulas,
+                    knowledge_points,
+                    llm_codegen=llm_codegen,
+                    llm_check=llm_check,
+                    llm_refine=llm_refine,
+                    llm_range=llm_range
                 )
                 
-                if new_question and new_answer:
-                    item.augmented_question = new_question
-                    item.augmented_true_answer = new_answer
+                if solver_result:
+                    code, value_ranges, primary_key, extracted_numeric_inputs, primary_position = solver_result
+                    # 使用提取的 numeric_inputs，如果没有则使用分析结果中的
+                    if not extracted_numeric_inputs and numeric_inputs:
+                        extracted_numeric_inputs = numeric_inputs
+                        primary_key = variable_name
+                        primary_position = variable_position
+                    
+                    # 将 numeric_inputs 转换为简单格式 {变量名: 值} 用于生成变体
+                    input_variables = {}
+                    for key, info in extracted_numeric_inputs.items():
+                        value = info.get("value", info) if isinstance(info, dict) else info
+                        input_variables[key] = value
+                    
+                    print("--------------------------------生成数字变体--------------------------------")
+                    variant, variant_answer = self._generate_numeric_variant(
+                        new_problem,  # 使用重组后的题目
+                        code,
+                        primary_key,
+                        primary_position,
+                        input_variables,
+                        value_ranges,
+                        self.llm
+                    )
+                    
+                    if variant and variant_answer:
+                        item.augmented_question = variant
+                        item.augmented_true_answer = variant_answer
+                    else:
+                        # 如果生成变体失败，使用原始重组问题
+                        print("警告：生成变体失败，使用原始重组问题")
+                        item.augmented_question = new_problem
+                        item.augmented_true_answer = new_answer
                 else:
-                    # 如果生成变体失败，使用原始重组问题
+                    # 如果构建求解器失败，直接使用分析结果
+                    print("警告：构建求解器失败，使用分析结果")
                     item.augmented_question = new_problem
-                    item.augmented_true_answer = original_condition_value
-            else:
-                # 如果构建求解器失败，直接使用分析结果
-                print("警告：构建重组求解器失败，使用分析结果")
-                item.augmented_question = new_problem
-                item.augmented_true_answer = original_condition_value
+                    item.augmented_true_answer = new_answer
+        else:
+            # 条件和目标无法交换的情况
+            print("警告：题目条件和目标无法交换，无法生成变体")
+            item.augmented_question = ""
+            item.augmented_true_answer = ""
         
         item.method_used = "analogical-3"
         return item
@@ -2103,6 +1935,7 @@ class AMESPipeline:
                     llm_codegen=llms.get("codegen"),
                     llm_check=llms.get("check"),
                     llm_refine=llms.get("refine"),
+                    llm_range=llms.get("range"),
                 )
             return item
 
