@@ -11,11 +11,25 @@ import ast
 import json
 import random
 import datetime
+import shutil
+from fractions import Fraction
+from pathlib import Path
 from openai import OpenAI
 from mistralai import Mistral
 from dataclasses import dataclass
 from volcenginesdkarkruntime import Ark
-from typing import List, Dict, Optional, Literal, Tuple, Any
+from typing import List, Dict, Optional, Literal, Tuple, Any, Union
+
+# 尝试导入PDF处理库
+try:
+    from pypdf import PdfReader, PdfWriter
+except ImportError:
+    try:
+        from PyPDF2 import PdfFileReader as PdfReader, PdfFileWriter as PdfWriter
+    except ImportError:
+        PdfReader = None
+        PdfWriter = None
+        print("警告：未安装PDF处理库（pypdf或PyPDF2），无法切割大文件。请安装：pip install pypdf")
 
 
 deepseek_client = OpenAI(api_key="sk-09da13b2c97948628523d042d6a02f06", base_url="https://api.deepseek.com")
@@ -31,13 +45,15 @@ DEFAULT_STAGE_MODEL = {
     "analogical_fallback": "qwen",
     "redundancy": "doubao",
     "novel": "kimi",
+    "textbook_knowledge_base_construction": "kimi_k2",
 }
 
 # AnalogicalTransformer 内部不同子步骤可各自指定模型
 default_role_model = "gpt5"
 DEFAULT_ROLE_MODEL = {
     "extract": "doubao_1_5_pro_32k",     # 知识点提取
-    "analysis": "kimi_k2",    # 可逆条件分析（analogical-3）
+    "convert": "gpt5",    # 答案格式转换
+    "analysis": "gpt5",    # 可逆条件分析（analogical-3）
     "codegen": default_role_model, # 代码生成
     "check": "mistral_medium",    # 硬编码检查
     "refine": default_role_model,  # 代码精炼
@@ -1100,18 +1116,45 @@ class AnalogicalTransformer:
         except Exception as e:
             print(f"检查硬编码时出错: {e}")
             return False
+    def _is_fraction_string(self, value: Any) -> bool:
+        """检测值是否是分数字符串格式（如 "25/8"）"""
+        if isinstance(value, str):
+            fraction_match = re.match(r'^(\d+)/(\d+)$', value.strip())
+            return fraction_match is not None
+        return False
 
     def _run_python_code(self, code: str, inputs: Dict[str, Any], primary_key: Optional[str] = None, verify: bool = False, model_name: Optional[str] = None) -> Tuple[Optional[str], Optional[str], Optional[str]]:
         """运行Python代码并返回输出、错误和文件名（支持将 inputs 或其中单个变量传入 solve）"""
         code_file = None
         try:
+            # 处理分数字符串：将分数字符串转换为 Fraction 对象以便代码执行
+            processed_inputs = {}
+            has_fraction = False
+            for key, value in inputs.items():
+                if self._is_fraction_string(value):
+                    # 将分数字符串转换为 Fraction 对象
+                    parts = value.strip().split('/')
+                    if len(parts) == 2 and parts[0].isdigit() and parts[1].isdigit():
+                        processed_inputs[key] = Fraction(int(parts[0]), int(parts[1]))
+                        has_fraction = True
+                    else:
+                        processed_inputs[key] = value
+                elif isinstance(value, Fraction):
+                    processed_inputs[key] = value
+                    has_fraction = True
+                else:
+                    processed_inputs[key] = value
+            
+            # 如果包含 Fraction 对象，添加导入
+            import_line = "from fractions import Fraction\n" if has_fraction else ""
+            
             # 准备代码内容
-            input_code = f"inputs = {repr(inputs)}"
+            input_code = f"inputs = {repr(processed_inputs)}"
             if primary_key and primary_key in inputs:
                 call_code = f"result = solve(inputs[{repr(primary_key)}])"
             else:
                 call_code = "result = solve(inputs)"
-            full_code = f"{input_code}\n\n{code}\n\n# 调用 solve\n{call_code}\nprint(result)"
+            full_code = f"{import_line}{input_code}\n\n{code}\n\n# 调用 solve\n{call_code}\nprint(result)"
             
             # 使用指定的目录，生成有意义的文件名
             timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")  # 年月日_时分秒，如：20251211_151438
@@ -1135,15 +1178,15 @@ class AnalogicalTransformer:
             
             if result.returncode == 0:
                 if code_file:
-                    print(f"【成功执行】 Python代码已保存到: {code_file} 🤩")
+                    print(f"【运行成功】 Python代码已保存到: {code_file} 🤩")
                 return result.stdout.strip(), None, code_file # 返回print的标准输出、错误和文件名
             else:
                 if code_file:
-                    print(f"【执行出错】 Python代码已保存到: {code_file} ")
+                    print(f"【运行出错】 Python代码已保存到: {code_file} ")
                 return None, result.stderr.strip(), code_file
         except subprocess.TimeoutExpired:
             if code_file:
-                print(f"【执行超时】 Python代码已保存到: {code_file} ")
+                print(f"【运行超时】 Python代码已保存到: {code_file} ")
             return None, "Timeout", code_file
         except Exception as e:
             if code_file:
@@ -1226,11 +1269,11 @@ class AnalogicalTransformer:
                 
                 # 检查硬编码
                 if self._check_hard_coded(code, llm_check):
-                    print("生成代码包含硬编码，跳过🥶")
-                    print(f"生成代码：{code}")
+                    print("【硬编码检测未通过】 检测到硬编码，跳过🥶")
+                    print(f"包含硬编码的代码：\n{code}")
                     continue
                 else:
-                    print("硬编码检测通过，准备验证代码🫡")
+                    print("【硬编码检测通过】 成功生成通用解题逻辑，准备运行代码🫡")
 
                 # 验证代码
                 # 将 numeric_inputs 转换为简单格式 {变量名: 值} 用于代码执行
@@ -1338,233 +1381,6 @@ class AnalogicalTransformer:
                         历史记录：
                         {json.dumps(history, indent=2, ensure_ascii=False)}
                         请修正代码，只输出Python代码（保持 solve({primary_key}) 接口）。
-                        """)
-                    code_resp = (llm_refine or llm_codegen).chat(refine_prompt)
-                    code_match = re.search(r'```python\n(.*?)\n```', code_resp, re.DOTALL)
-                    if code_match:
-                        code = code_match.group(1)
-                    else:
-                        code_match = re.search(r'```\n(.*?)\n```', code_resp, re.DOTALL)
-                        code = code_match.group(1) if code_match else code_resp
-            except Exception as e:
-                print(f"生成代码时出错: {e}")
-                continue
-        
-        return None
-
-    def _build_recomposed_solver(
-        self,
-        original_problem: str,
-        original_answer: str,
-        recomposed_problem: str,
-        recomposed_answer: str,
-        solution_sketches: str,
-        retrieved_formulas: str,
-        knowledge_points: List[str],
-        variable_name: str,
-        variable_value: Any,
-        variable_position: Dict,
-        llm_codegen: LLMClient,
-        llm_check: LLMClient,
-        llm_refine: Optional[LLMClient] = None,
-        llm_range: Optional[LLMClient] = None,
-        max_iter: int = 5,
-        max_refine: int = 5,
-        item: Optional[ProblemItem] = None,
-        generate_variant: bool = True,
-    ) -> Optional[Tuple[str, Dict, str, Dict[str, Any], Dict]]:
-        """构建条件重组求解器，专门用于 analogical-3
-        
-        返回 (code, value_ranges, primary_key, numeric_inputs, primary_position)
-        """
-        history = []
-        
-        print("------------构建条件重组求解器------------")
-        print(f"原题：{original_problem}")
-        print(f"原答案：{original_answer}")
-        print(f"重组题：{recomposed_problem}")
-        print(f"重组答案：{recomposed_answer}")
-        print(f"变量：{variable_name} = {variable_value}")
-        
-        # 构建 numeric_inputs 格式
-        numeric_inputs = {
-            variable_name: {
-                "value": variable_value,
-                "position": variable_position
-            }
-        }
-        
-        print("----------生成重组题目求解代码----------")
-        for iter_num in range(max_iter):
-            print(f"第【 {iter_num+1} 】次使用{llm_codegen.model_name}生成代码")
-            
-            prompt = textwrap.dedent(f"""
-                你是一个数学编程专家。请分析下面的重组后数学题目，编写一个Python求解程序。
-                原题：
-                {original_problem}
-                原题的答案：
-                {original_answer}
-                重组后的题目（当前题目）：
-                {recomposed_problem}
-                重组后题目的答案：
-                {recomposed_answer}
-                
-                重要说明：
-                重组后题目是通过交换原题的"条件"和"目标"得到的。
-                - 下面提供的"解法思路"是针对原题的解题方案，仅供参考，你可以根据这个思路，推导出重组后的题目的求解方案，并编写求解代码。
-                - 下面提供的"变量"是重组后题目中的变量, 标注了其在重组后题目中的位置
-
-                相关公式：
-                {retrieved_formulas}
-                知识点：
-                {", ".join(knowledge_points)}
-                解法思路：
-                {solution_sketches}
-
-                变量信息：
-                变量：{variable_name} = {variable_value}（位置：{variable_position}）
-
-                要求：
-                1. 编写一个Python函数 solve({variable_name}), 仅接受变量 {variable_name} 的值作为参数
-                2. 实现通用的计算过程，对变量 {variable_name} 的取值没有限制，不要硬编码答案
-                3. 函数应该返回题目的答案
-                4. 注意：题目中可能有多个相同的数字，但只有变量 {variable_name} 对应的位置需要作为参数传入
-                5. 只输出函数定义和函数调用，不要输出 if __name__ == "__main__": 这样的测试代码块
-                6. 不要添加任何print语句
-                请只输出Python代码，不要有其他解释。
-                """)
-            history.append((prompt, None))
-            
-            try:
-                code_resp = llm_codegen.chat(prompt)
-                # 提取代码块
-                code_match = re.search(r'```python\n(.*?)\n```', code_resp, re.DOTALL)
-                if code_match:
-                    code = code_match.group(1)
-                else:
-                    code_match = re.search(r'```\n(.*?)\n```', code_resp, re.DOTALL)
-                    code = code_match.group(1) if code_match else code_resp
-                
-                # 检查硬编码
-                if self._check_hard_coded(code, llm_check):
-                    print("生成代码包含硬编码，跳过🥶")
-                    print(f"生成代码：{code}")
-                    continue
-                else:
-                    print("硬编码检测通过，准备验证代码🫡")
-
-                # 验证代码
-                input_variables = {variable_name: variable_value}
-                current_model = llm_codegen.model_name
-                for refine_step in range(max_refine):
-                    output, error, code_file = self._run_python_code(code, input_variables, variable_name, verify=True, model_name=current_model)
-                    history.append((code, (output, error)))
-                    
-                    if error is None and str(output) == str(recomposed_answer):
-                        print("【答案正确】 准备返回代码🥳")
-                        
-                        # 如果不需要生成变体，直接修改 item 并返回
-                        if not generate_variant and item is not None:
-                            print("【跳过变体生成】直接使用重组题目")
-                            item.augmented_question = recomposed_problem
-                            item.augmented_true_answer = recomposed_answer
-                            return None  # 返回 None 表示已完成，不需要后续处理
-
-                        print("----------确定变量取值范围----------")
-                        value_ranges = {}
-                        position_str = f"位置：字符 {variable_position.get('char_start', '?')}-{variable_position.get('char_end', '?')}" if variable_position else "位置：未标注"
-                        context_str = f"，上下文：{variable_position.get('context', '')}" if variable_position.get('context') else ""
-                        
-                        range_prompt = textwrap.dedent(f"""
-                            你是一个数学问题分析专家。请分析下面的题目和对应的解题代码，确定输入变量的合理取值范围。
-                            题目：
-                            {recomposed_problem}                                
-                            输入变量：
-                            {variable_name} = {variable_value}，{position_str}{context_str}
-                            求解代码：
-                            ```python
-                            {code}
-                            ```                                
-                            
-                            请分析题目和代码逻辑，为变量 {variable_name} 确定合理的取值范围, 找出尽量多的取值。
-                            要求如下：
-                            1. 变量取值能保证代码能正常运行（不会出现除零、负数开方等错误）
-                            2. 变量取值能保证答案在合理范围内
-                            3. 变量取值不能超过1000或太小, 保证题目有意义
-                            4. 保证代码适用于这个变量取值
-                            5. 保证根据这个取值计算得到的答案小于100000
-                            
-                            说明：
-                            不用考虑变量 {variable_name} 变化后，题目中其他与它关联的变量没有变化会导致题目有误。
-                            因为在生成新题目时，系统会自动根据 {variable_name} 的新值相应地修改所有关联变量的值，
-                            确保新题目在数学上仍然正确和有意义。你只需要专注于找出 {variable_name} 本身的合理取值范围即可。
-                            
-                            如果变量可以取连续范围内的任意值，请使用格式：
-                            取值范围：[min, max]
-                            例如：取值范围：[10, 100]
-                            
-                            如果变量只能取特定的离散值，请使用格式：
-                            取值列表：[value1, value2, value3, ...]
-                            例如：取值列表：[1, 15, 301]
-                            
-                            请根据题目和代码的特点，选择合适的格式输出。
-                            重要：只输出取值范围或取值列表，不要输出任何其他解释或内容。
-                            """)
-                        try:
-                            range_resp = llm_range.chat(range_prompt) if llm_range else llm_codegen.chat(range_prompt)
-                            # 尝试解析连续范围格式：取值范围：[min, max]
-                            range_match = re.search(r'取值范围[：:]\s*\[(\d+),\s*(\d+)\]', range_resp)
-                            if range_match:
-                                min_val = int(range_match.group(1))
-                                max_val = int(range_match.group(2))
-                                value_ranges[variable_name] = (min_val, max_val)
-                                print(f"确定取值范围（连续）：{variable_name} = [{min_val}, {max_val}]")
-                            else:
-                                # 尝试解析离散值列表格式：取值列表：[value1, value2, ...]
-                                list_match = re.search(r'取值列表[：:]\s*\[([\d,\s]+)\]', range_resp)
-                                if list_match:
-                                    values_str = list_match.group(1)
-                                    values = [int(v.strip()) for v in values_str.split(',') if v.strip().isdigit()]
-                                    if values:
-                                        value_ranges[variable_name] = values
-                                        print(f"确定取值列表（离散）：{variable_name} = {values}")
-                                    else:
-                                        print(f"无法解析取值列表，使用默认范围")
-                                        value_ranges[variable_name] = (1, 100)
-                                else:
-                                    print(f"无法解析取值范围，使用默认范围")
-                                    value_ranges[variable_name] = (1, 100)
-                        except Exception as e:
-                            print(f"确定取值范围时出错: {e}，使用默认范围")
-                            value_ranges[variable_name] = (1, 100)
-
-                        return code, value_ranges, variable_name, numeric_inputs, variable_position
-                    
-                    if refine_step == max_refine - 1:
-                        break
-                    
-                    # 精炼代码
-                    print(f"【答案错误】 开始改进代码🤔，正确答案是{recomposed_answer}，当前答案是{output}")
-                    refine_prompt = textwrap.dedent(f"""
-                        之前的代码有错误。请修正它。
-                        重要说明：
-                        当前题目是通过"条件"和"目标"交换得到的重组题目。
-                        - 原题：{original_problem}
-                        - 重组后的题目（当前题目）：{recomposed_problem}
-                        - 解法思路是针对原题的，你需要为重组后的题目编写求解代码。
-                        
-                        题目：{recomposed_problem}
-                        正确答案：{recomposed_answer}
-                        之前的代码：
-                        ```python
-                        {code}
-                        ```
-                        solve 的输入变量：{variable_name}（其值：{variable_value}）
-                        错误信息：{error}
-                        输出：{output}
-                        历史记录：
-                        {json.dumps(history, indent=2, ensure_ascii=False)}
-                        请修正代码，只输出Python代码（保持 solve({variable_name}) 接口）。
                         """)
                     code_resp = (llm_refine or llm_codegen).chat(refine_prompt)
                     code_match = re.search(r'```python\n(.*?)\n```', code_resp, re.DOTALL)
@@ -1781,8 +1597,8 @@ class AnalogicalTransformer:
         llm_codegen: Optional[LLMClient] = None,
         llm_check: Optional[LLMClient] = None,
         llm_refine: Optional[LLMClient] = None,
-        llm_variant: Optional[LLMClient] = None,
         llm_range: Optional[LLMClient] = None,
+        llm_variant: Optional[LLMClient] = None,
     ) -> ProblemItem:
         """
         analogical-2：数字替换（numeric substitutions via code-based solution extraction）
@@ -1837,6 +1653,76 @@ class AnalogicalTransformer:
         item.method_used = "analogical-2"
         return item
 
+    def _convert_answer_format(
+        self,
+        problem_text: str,
+        answer_gold: str,
+        solution_sketches: str,
+        llm: Optional[LLMClient] = None,
+    ) -> Optional[Dict]:
+        """转换答案格式：将"Find m+n"类型的题目转换为"Find m/n"，并提取正确的分数答案"""
+        llm = llm or self.llm
+        prompt = textwrap.dedent(f"""
+            你是一个数学问题分析专家。请分析下面的题目，转换题目和答案格式。
+            
+            题目：
+            {problem_text}
+            正确答案（原格式）：
+            {answer_gold}
+            解法思路：
+            {solution_sketches}
+            
+            任务说明：
+            如果题目的实际目的是求分数 m/n（或无理数 (m√n)/p)，但为了答案为整数，最后要求"Find m+n"（或"Find m+n+p"等），则：
+               - 去掉题目中的"Find m+n"，改为"Find m/n, where m and n are coprime positive integers"（或"Find (m√n)/p,  where m, n, and p are positive integers, m and p are relatively prime, and n is not divisible by the square of any prime."）
+            如果不是这种情况，则无需对题目和答案进行任何转化。
+            
+            示例：
+            原题：
+            Let $x,y$ and $z$ be positive real numbers that satisfy the following system of equations: 
+            \\[\\log_2\\left({{x \\over yz}}\\right) = {{1 \\over 2}}\\]
+            \\[\\log_2\\left({{y \\over xz}}\\right) = {{1 \\over 3}}\\]
+            \\[\\log_2\\left({{z \\over xy}}\\right) = {{1 \\over 4}}\\]
+            Then the value of $\\left|\\log_2(x^4y^3z^2)\\right|$ is $\\tfrac{{m}}{{n}}$ where $m$ and $n$ are relatively prime positive integers. Find $m+n$.
+            解法中提到：After absolute value, it is just $\\frac{{25}}{{8}}$. Summing $m$ and $n$, we obtain $\\boxed{{33}}$.
+            转换后题目：
+            Let $x,y$ and $z$ be positive real numbers that satisfy the following system of equations: 
+            \\[\\log_2\\left({{x \\over yz}}\\right) = {{1 \\over 2}}\\]
+            \\[\\log_2\\left({{y \\over xz}}\\right) = {{1 \\over 3}}\\]
+            \\[\\log_2\\left({{z \\over xy}}\\right) = {{1 \\over 4}}\\]
+            Then the value of $\\left|\\log_2(x^4y^3z^2)\\right|$ is $\\tfrac{{m}}{{n}}$ where $m$ and $n$ are relatively prime positive integers. Find $m/n$. Express your answer as a fraction in simplest form (e.g., 25/2) or as a simplified radical expression (e.g., 25√7/3). Do not use LaTeX format; use plain text with forward slashes for fractions and the √ symbol for square roots.
+            转换后答案：
+            25/8
+            
+            请以JSON格式输出：
+            {{
+                "needs_conversion": true/false,  // 是否需要转换（如果题目不是"Find m+n"类型，设为false）
+                "converted_problem": "转换后的题目文本（如果needs_conversion为true）",
+                "converted_answer": "转换后的答案，使用plain text格式，如 25/2 或 25√7/3",
+                "m": m的数值（如果是分数）,
+                "n": n的数值（如果是分数）,
+                "p": p的数值（如果是无理数，否则省略此字段）
+            }}
+            
+            注意：
+            - 只输出JSON，不要有其他文字
+            - 如果题目不需要转换（不是"Find m+n"类型），设置 "needs_conversion": false
+            """)
+        try:
+            resp = llm.chat(prompt)
+            print(f"答案格式转换响应: {resp}")
+            # 提取JSON
+            json_match = re.search(r'\{.*\}', resp, re.DOTALL)
+            if json_match:
+                result = json.loads(json_match.group(0))
+                return result
+            else:
+                print("无法从响应中提取JSON")
+                return None
+        except Exception as e:
+            print(f"答案格式转换出错: {e}")
+            return None
+
     def _analyze_invertible_conditions(
         self,
         problem_text: str,
@@ -1881,13 +1767,13 @@ class AnalogicalTransformer:
             \\[\\log_2\\left({{x \\over yz}}\\right) = {{1 \\over 2}}\\]
             \\[\\log_2\\left({{y \\over xz}}\\right) = {{1 \\over 3}}\\]
             \\[\\log_2\\left({{z \\over xy}}\\right) = {{1 \\over 4}}\\]
-            Then the value of $-\\log_2(x^4y^3z^2)$ is $\\tfrac{{m}}{{n}}$ where $m$ and $n$ are relatively prime positive integers. Find $m+n$.
+            Then the value of $-\\log_2(x^4y^3z^2)$ is $\\tfrac{{m}}{{n}}$ where $m$ and $n$ are relatively prime positive integers. Find $m/n$.
             输出JSON格式：
             {{
                 "invertible": true,
                 "original_condition": "\\[\\\\log_2\\left({{x \\\\over yz}}\\right) = {{1 \\\\over N}}\\], N=2",
                 "original_target": "$-\\\\log_2(x^4y^3z^2)$ = ?",
-                "new_condition": "$-\\\\log_2(x^4y^3z^2) = 25 \\\\over N$, N=8",
+                "new_condition": "$-\\\\log_2(x^4y^3z^2) = N$, N=25/8",
                 "new_target": "\\[\\\\log_2\\left({{x \\\\over yz}}\\right) = {{1 \\\\over N}}\\], N=?",
                 "recomposed_problem_text": "Let $x,y$ and $z$ be positive real numbers that satisfy the following system of equations: 
                     \\\\[\\\\log_2\\\\left({{y \\\\over xz}}\\\\right) = {{1 \\\\over 3}}\\\\]
@@ -1895,10 +1781,10 @@ class AnalogicalTransformer:
                     \\\\[-\\\\log_2(x^4y^3z^2) = {{25 \\\\over 8}}\\\\]
                     Then the value of $\\\\log_2\\\\left({{x \\\\over yz}}\\\\right)$ can be expressed as $\\\\tfrac{{1}}{{N}}$. Find $N$.",
                 "new_answer": 2,
-                "new_condition_name": "log_x4y3z2_denominator",
-                "new_condition_value": 8,
+                "new_condition_name": "log_x4y3z2r",
+                "new_condition_value": 25/8,
                 "new_condition_position": {{
-                    "char_start": 345,
+                    "char_start": 332,
                     "char_end": 346,
                     "context": "\\\\[-\\\\log_2(x^4y^3z^2) = \\\\tfrac{{25}}{{8}}\\\\]"
                 }}
@@ -1907,19 +1793,10 @@ class AnalogicalTransformer:
             1. 找到一个条件，这个条件必须能与目标互换
             2. 找到的条件必须是充要条件：即能够由目标（原答案）唯一推导出这个条件，同时这个条件也能唯一推导出目标
             3. 如果无法找到这样的充要条件，请设置 "invertible": false，并在 "reason" 中说明原因
-            4. 提取的条件变量值和目标值必须是整数：例如，如果题目中有 ${{1 \over 3}}$（三分之一），应该选择整数 $3$ 而不是分数 ${{1 \over 3}}$
-            5. 关于"m+n"类型题目的处理规则：
-               当原题要求"Find m+n"（或 "Find m+n+p"），但题目的实际目的是求分数 m/n（或无理数 (m√n)/p）时，是为了答案判断方便才改为求 m+n（或 m+n+p）。
-               在进行条件和目标转换时，必须遵循以下规则：
-               - 应该将 m/n 的值（或 (m√n)/p 的值）作为新条件，而不是将 m+n 的值（或 m+n+p 的值）作为条件
-               - 具体示例：如果原题是"|log₂(x⁴y³z²)| = m/n，求 m+n"，答案是 33（对应 m/n = 25/8），
-                 转换时应将"|log₂(x⁴y³z²)| = 25/8"作为条件，求其他变量（如 log₂(z/xy)）
-               - 禁止将 m+n 的值作为条件，同时将 m/n 作为目标，因为：
-                 * m+n 完全依赖于 m/n 的值，没有独立的数学意义
-                 * 这样的转换无法考察模型的数学推理能力
-                 * 例如：不能将题目改为"已知 m+n = 28，求 m/n"，因为从 m+n 无法唯一确定 m/n
-               - 核心原则：m/n 是独立的数学量，而 m+n 只是 m/n 的派生值，不能作为条件
-            6. 位置标注要求：
+            4. 提取的条件变量值必须是题目中显式出现的数字：变量值必须是题目文本中直接写出的具体数字，不能是题目中隐含的、推导出的、或单位中的变量。
+            5. 提取的条件变量值必须是整数：例如，如果题目中有 ${{1 \over 3}}$（三分之一），应该选择整数 $3$ 而不是分数 ${{1 \over 3}}$
+            6. 新题目中禁止出现提示新答案的内容，即知道该信息后不需要计算和推理就可以直接得到新答案。
+            7. 位置标注要求：
                在重组后的题目文本中，需要标注新条件（即原答案）的位置信息：
                - char_start: 新条件在重组后题目文本中的起始字符位置（从0开始计数）
                - char_end: 新条件在重组后题目文本中的结束字符位置
@@ -1953,7 +1830,7 @@ class AnalogicalTransformer:
             """)
         try:
             resp = llm.chat(prompt)
-            print(f"resp: {resp}")
+            print(f"条件-目标可逆性分析结果: {resp}")
             json_match = re.search(r'\{.*\}', resp, re.DOTALL)
             if json_match:
                 json_str = json_match.group()
@@ -1997,16 +1874,268 @@ class AnalogicalTransformer:
             traceback.print_exc()
             return None
 
+    def _build_recomposed_solver(
+        self,
+        original_problem: str,
+        original_answer: str,
+        recomposed_problem: str,
+        recomposed_answer: str,
+        solution_sketches: str,
+        retrieved_formulas: str,
+        knowledge_points: List[str],
+        variable_name: str,
+        variable_value: Any,
+        variable_position: Dict,
+        llm_codegen: LLMClient,
+        llm_check: LLMClient,
+        llm_refine: Optional[LLMClient] = None,
+        llm_range: Optional[LLMClient] = None,
+        max_iter: int = 5,
+        max_refine: int = 5,
+        item: Optional[ProblemItem] = None,
+        generate_variant: bool = True,
+    ) -> Optional[Tuple[str, Dict, str, Dict[str, Any], Dict]]:
+        """构建条件重组求解器，专门用于 analogical-3
+        
+        返回 (code, value_ranges, primary_key, numeric_inputs, primary_position)
+        """
+        history = []
+        
+        print(f"原题：{original_problem}")
+        print(f"原答案：{original_answer}")
+        print(f"重组题：{recomposed_problem}")
+        print(f"重组答案：{recomposed_answer}")
+        print(f"变量：{variable_name} = {variable_value}")
+        
+        # 构建 numeric_inputs 格式
+        numeric_inputs = {
+            variable_name: {
+                "value": variable_value,
+                "position": variable_position
+            }
+        }
+        
+        print("----------生成重组题目求解代码----------")
+        for iter_num in range(max_iter):
+            print(f"第【 {iter_num+1} 】次使用{llm_codegen.model_name}生成代码")
+            
+            # 构建分数处理提示（如果需要）
+            fraction_note = ""
+            if self._is_fraction_string(variable_value):
+                num, den = variable_value.split('/')
+                fraction_note = f"""
+                重要提示(分数处理)：
+                变量 {variable_name} 的值是分数形式({variable_value})。请务必注意以下几点：
+                1. 请在代码中使用 fractions.Fraction 来处理分数运算，避免使用浮点数(小数)计算，以保持精确性
+                2. 输入参数可能是 Fraction 对象，代码应该直接使用 Fraction 进行运算
+                3. 在代码开头必须添加：from fractions import Fraction
+                4. 必须使用 Fraction 进行所有分数运算，不要转换为浮点数
+                5. 示例：可以使用 Fraction({num}, {den}) 或 Fraction("{variable_value}") 来创建分数对象
+                """
+            
+            fraction_requirement = "7. 必须使用 Fraction 进行分数运算，不要转换为浮点数\n                " if self._is_fraction_string(variable_value) else ""
+            
+            prompt = textwrap.dedent(f"""
+                你是一个数学编程专家。请分析下面的重组后数学题目，编写一个Python求解程序。
+                原题：
+                {original_problem}
+                原题的答案：
+                {original_answer}
+                重组后的题目（当前题目）：
+                {recomposed_problem}
+                重组后题目的答案：
+                {recomposed_answer}
+                
+                重要说明：
+                重组后题目是通过交换原题的"条件"和"目标"得到的。
+                - 下面提供的"解法思路"是针对原题的解题方案，仅供参考，你可以根据这个思路，推导出重组后的题目的求解方案，并编写求解代码。
+                - 下面提供的"变量"是重组后题目中的变量, 标注了其在重组后题目中的位置
+
+                相关公式：
+                {retrieved_formulas}
+                知识点：
+                {", ".join(knowledge_points)}
+                解法思路：
+                {solution_sketches}
+
+                变量信息：
+                变量：{variable_name} = {variable_value}（位置：{variable_position}）
+{fraction_note}
+                要求：
+                1. 编写一个Python函数 solve({variable_name}), 仅接受变量 {variable_name} 的值作为参数
+                2. 实现通用的计算过程，对变量 {variable_name} 的取值没有限制，不要硬编码答案
+                3. 函数应该返回题目的答案
+                4. 注意：题目中可能有多个相同的数字，但只有变量 {variable_name} 对应的位置需要作为参数传入
+                5. 只输出函数定义和函数调用，不要输出 if __name__ == "__main__": 这样的测试代码块
+                6. 不要添加任何print语句
+                {fraction_requirement}请只输出Python代码，不要有其他解释。
+                """)
+            history.append((prompt, None))
+            
+            try:
+                code_resp = llm_codegen.chat(prompt)
+                # 提取代码块
+                code_match = re.search(r'```python\n(.*?)\n```', code_resp, re.DOTALL)
+                if code_match:
+                    code = code_match.group(1)
+                else:
+                    code_match = re.search(r'```\n(.*?)\n```', code_resp, re.DOTALL)
+                    code = code_match.group(1) if code_match else code_resp
+                
+                # 检查硬编码
+                if self._check_hard_coded(code, llm_check):
+                    print("【硬编码检测未通过】 检测到硬编码，跳过🥶")
+                    print(f"包含硬编码的代码：\n{code}")
+                    continue
+                else:
+                    print("【硬编码检测通过】 成功生成通用解题逻辑，准备运行代码🫡")
+
+                # 验证代码
+                input_variables = {variable_name: variable_value}
+                current_model = llm_codegen.model_name
+                for refine_step in range(max_refine):
+                    output, error, code_file = self._run_python_code(code, input_variables, variable_name, verify=True, model_name=current_model)
+                    history.append((code, (output, error)))
+                    
+                    if error is None and str(output) == str(recomposed_answer):
+                        print("【答案正确】 准备返回代码🥳")
+                        
+                        # 如果不需要生成变体，直接修改 item 并返回
+                        if not generate_variant and item is not None:
+                            print("【跳过变体生成】直接使用重组题目")
+                            item.augmented_question = recomposed_problem
+                            item.augmented_true_answer = recomposed_answer
+                            return None  # 返回 None 表示已完成，不需要后续处理
+
+                        print("----------确定变量取值范围----------")
+                        value_ranges = {}
+                        position_str = f"位置：字符 {variable_position.get('char_start', '?')}-{variable_position.get('char_end', '?')}" if variable_position else "位置：未标注"
+                        context_str = f"，上下文：{variable_position.get('context', '')}" if variable_position.get('context') else ""
+                        
+                        range_prompt = textwrap.dedent(f"""
+                            你是一个数学问题分析专家。请分析下面的题目和对应的解题代码，确定输入变量的合理取值范围。
+                            题目：
+                            {recomposed_problem}                                
+                            输入变量：
+                            {variable_name} = {variable_value}，{position_str}{context_str}
+                            求解代码：
+                            ```python
+                            {code}
+                            ```                                
+                            
+                            请分析题目和代码逻辑，为变量 {variable_name} 确定合理的取值范围, 找出尽量多的取值。
+                            要求如下：
+                            1. 变量取值能保证代码能正常运行（不会出现除零、负数开方等错误）
+                            2. 变量取值能保证答案在合理范围内
+                            3. 变量取值不能超过1000或太小, 保证题目有意义
+                            4. 保证代码适用于这个变量取值
+                            5. 保证根据这个取值计算得到的答案小于100000
+                            
+                            说明：
+                            不用考虑变量 {variable_name} 变化后，题目中其他与它关联的变量没有变化会导致题目有误。
+                            因为在生成新题目时，系统会自动根据 {variable_name} 的新值相应地修改所有关联变量的值，
+                            确保新题目在数学上仍然正确和有意义。你只需要专注于找出 {variable_name} 本身的合理取值范围即可。
+                            
+                            如果变量可以取连续范围内的任意值，请使用格式：
+                            取值范围：[min, max]
+                            例如：取值范围：[10, 100]
+                            
+                            如果变量只能取特定的离散值，请使用格式：
+                            取值列表：[value1, value2, value3, ...]
+                            例如：取值列表：[1, 15, 301]
+                            
+                            请根据题目和代码的特点，选择合适的格式输出。
+                            重要：只输出取值范围或取值列表，不要输出任何其他解释或内容。
+                            """)
+                        try:
+                            range_resp = llm_range.chat(range_prompt) if llm_range else llm_codegen.chat(range_prompt)
+                            # 尝试解析连续范围格式：取值范围：[min, max]
+                            range_match = re.search(r'取值范围[：:]\s*\[(\d+),\s*(\d+)\]', range_resp)
+                            if range_match:
+                                min_val = int(range_match.group(1))
+                                max_val = int(range_match.group(2))
+                                value_ranges[variable_name] = (min_val, max_val)
+                                print(f"确定取值范围（连续）：{variable_name} = [{min_val}, {max_val}]")
+                            else:
+                                # 尝试解析离散值列表格式：取值列表：[value1, value2, ...]
+                                list_match = re.search(r'取值列表[：:]\s*\[([\d,\s]+)\]', range_resp)
+                                if list_match:
+                                    values_str = list_match.group(1)
+                                    values = [int(v.strip()) for v in values_str.split(',') if v.strip().isdigit()]
+                                    if values:
+                                        value_ranges[variable_name] = values
+                                        print(f"确定取值列表（离散）：{variable_name} = {values}")
+                                    else:
+                                        print(f"无法解析取值列表，使用默认范围")
+                                        value_ranges[variable_name] = (1, 100)
+                                else:
+                                    print(f"无法解析取值范围，使用默认范围")
+                                    value_ranges[variable_name] = (1, 100)
+                        except Exception as e:
+                            print(f"确定取值范围时出错: {e}，使用默认范围")
+                            value_ranges[variable_name] = (1, 100)
+
+                        return code, value_ranges, variable_name, numeric_inputs, variable_position
+                    
+                    if refine_step == max_refine - 1:
+                        break
+                    
+                    # 精炼代码
+                    print(f"【答案错误】 开始改进代码🤔，正确答案是{recomposed_answer}，当前答案是{output}")
+                    fraction_note = ""
+                    if self._is_fraction_string(variable_value):
+                        fraction_note = f"""
+                        重要提示：变量 {variable_name} 的值是分数形式（{variable_value}）。
+                        - 请使用 fractions.Fraction 来处理分数运算，避免使用浮点数（小数）计算
+                        - 如果输入参数是字符串形式的分数，请先将其转换为 Fraction 对象
+                        - 在代码开头添加：from fractions import Fraction
+                        - 必须使用 Fraction 进行分数运算，不要转换为浮点数
+                        """
+                    refine_prompt = textwrap.dedent(f"""
+                        之前的代码有错误。请修正它。
+                        重要说明：
+                        当前题目是通过"条件"和"目标"交换得到的重组题目。
+                        - 原题：{original_problem}
+                        - 重组后的题目（当前题目）：{recomposed_problem}
+                        - 解法思路是针对原题的，你需要为重组后的题目编写求解代码。
+                        {fraction_note}
+                        题目：{recomposed_problem}
+                        正确答案：{recomposed_answer}
+                        之前的代码：
+                        ```python
+                        {code}
+                        ```
+                        solve 的输入变量：{variable_name}（其值：{variable_value}）
+                        错误信息：{error}
+                        输出：{output}
+                        历史记录：
+                        {json.dumps(history, indent=2, ensure_ascii=False)}
+                        请修正代码，只输出Python代码（保持 solve({variable_name}) 接口）。
+                        """)
+                    code_resp = (llm_refine or llm_codegen).chat(refine_prompt)
+                    code_match = re.search(r'```python\n(.*?)\n```', code_resp, re.DOTALL)
+                    if code_match:
+                        code = code_match.group(1)
+                    else:
+                        code_match = re.search(r'```\n(.*?)\n```', code_resp, re.DOTALL)
+                        code = code_match.group(1) if code_match else code_resp
+            except Exception as e:
+                print(f"生成代码时出错: {e}")
+                continue
+        
+        return None
+    
     def transform_analogical3(
         self,
         item: ProblemItem,
         llm_extract: Optional[LLMClient] = None,
+        llm_convert: Optional[LLMClient] = None,
         llm_analysis: Optional[LLMClient] = None,
         llm_codegen: Optional[LLMClient] = None,
         llm_check: Optional[LLMClient] = None,
         llm_refine: Optional[LLMClient] = None,
-        llm_variant: Optional[LLMClient] = None,
         llm_range: Optional[LLMClient] = None,
+        llm_variant: Optional[LLMClient] = None,
         generate_variant: bool = True
     ) -> ProblemItem:
         """
@@ -2028,10 +2157,30 @@ class AnalogicalTransformer:
         retrieved_formulas = self._retrieve_formulas(knowledge_points)
         print("检索到的公式：\n", retrieved_formulas)
         
-        print("--------------------------------分析可逆条件--------------------------------")
-        invertible_analysis = self._analyze_invertible_conditions(
+        print("--------------------------------答案格式转换--------------------------------")
+        answer_format_conversion = self._convert_answer_format(
             item.original_question,
             item.true_answer,
+            item.solution,
+            llm_convert
+        )
+        
+        # 确定用于分析可逆条件的题目和答案
+        if answer_format_conversion and answer_format_conversion.get("needs_conversion", False):
+            problem_for_analysis = answer_format_conversion.get("converted_problem", item.original_question)
+            answer_for_analysis = answer_format_conversion.get("converted_answer", item.true_answer)
+            print(f"使用转换后的题目和答案进行分析")
+            print(f"转换后题目: {problem_for_analysis}")
+            print(f"转换后答案: {answer_for_analysis}")
+        else:
+            problem_for_analysis = item.original_question
+            answer_for_analysis = item.true_answer
+            print(f"使用原始题目和答案进行分析")
+        
+        print("--------------------------------分析可逆条件--------------------------------")
+        invertible_analysis = self._analyze_invertible_conditions(
+            problem_for_analysis,
+            answer_for_analysis,
             item.solution,
             retrieved_formulas,
             llm_analysis
@@ -2126,12 +2275,14 @@ class AnalogicalTransformer:
 class NovelProblemGenerator:
     """
     负责 novel-1 / novel-2 两种增强方式：
-    - 6 -> novel-1：相同知识点、相似难度的全新题
-    - 7 -> novel-2：更远迁移、更高新颖度的题
+    - 6 -> novel-1：从网络搜寻的同知识点最新题目改编
+    - 7 -> novel-2：从教材的知识点生成的概念题
     """
 
     def __init__(self, llm: LLMClient):
         self.llm = llm
+        self.knowledge_base_path = Path("knowledge_base/knowledge_base_math.json")
+        self.knowledge_base = None
 
     def generate_novel1(self, item: ProblemItem) -> ProblemItem:
         """
@@ -2160,31 +2311,450 @@ class NovelProblemGenerator:
         item.method_used = "novel-1"
         return item
 
+    def _load_knowledge_base(self) -> Dict:
+        """
+        加载从教材构建的知识库
+        """
+        if self.knowledge_base_path.exists():
+            try:
+                with open(self.knowledge_base_path, 'r', encoding='utf-8') as f:
+                    data = json.load(f)
+                    self.knowledge_base = data
+                    print(f"已加载知识库：{self.knowledge_base_path}")
+                    if data.get("_metadata", {}).get("pdf_files"):
+                        print(f"知识库目前包含从以下PDF文件提取的知识点：{', '.join(data['_metadata']['pdf_files'])}")
+                    return self.knowledge_base
+            except Exception as e:
+                print(f"加载知识库失败：{e}")
+                return None
+            
+        else:
+            # 知识库文件不存在，创建新的空白知识库
+            print(f"知识库文件不存在：{self.knowledge_base_path}，正在创建空白知识库...")
+            # 确保目录存在
+            self.knowledge_base_path.parent.mkdir(parents=True, exist_ok=True)
+            # 创建空白知识库
+            empty_kb = {"_metadata": {"pdf_files": []}}
+            try:
+                with open(self.knowledge_base_path, 'w', encoding='utf-8') as f:
+                    json.dump(empty_kb, f, ensure_ascii=False, indent=2)
+                self.knowledge_base = empty_kb
+                print(f"已创建空白知识库：{self.knowledge_base_path}")
+                return empty_kb
+            except Exception as e:
+                print(f"创建知识库失败：{e}")
+                return None
+    
+    def _split_pdf_by_size(self, pdf_path: Path, max_size_mb: int = 90) -> List[Path]:
+        """
+        将PDF文件切割为多个不超过指定大小的文件
+        """
+        if PdfReader is None or PdfWriter is None:
+            raise ImportError("需要安装PDF处理库：pip install pypdf")
+        
+        max_size_bytes = max_size_mb * 1024 * 1024
+        file_size = pdf_path.stat().st_size
+
+        # 读取PDF
+        reader = PdfReader(str(pdf_path))
+        total_pages = len(reader.pages)
+        
+        # 估算每页的平均大小
+        avg_page_size = file_size / total_pages
+        pages_per_chunk = int(max_size_bytes / avg_page_size * 0.9)  # 留10%余量
+        pages_per_chunk = max(1, pages_per_chunk)  # 至少1页
+        
+        split_files = []
+        temp_dir = tempfile.mkdtemp()
+        
+        try:
+            for chunk_start in range(0, total_pages, pages_per_chunk):
+                chunk_end = min(chunk_start + pages_per_chunk, total_pages)
+                chunk_pages = list(range(chunk_start, chunk_end))
+                
+                # 创建新的PDF文件
+                writer = PdfWriter()
+                for page_num in chunk_pages:
+                    writer.add_page(reader.pages[page_num])
+                
+                # 保存切割后的文件
+                chunk_filename = f"{pdf_path.stem}_part_{chunk_start//pages_per_chunk + 1}.pdf"
+                chunk_path = Path(temp_dir) / chunk_filename
+                
+                with open(chunk_path, 'wb') as f:
+                    writer.write(f)
+                
+                chunk_size = chunk_path.stat().st_size
+                split_files.append(chunk_path)
+                print(f"已创建切割文件：{chunk_filename} ({chunk_size / (1024*1024):.2f}MB, 第{chunk_start+1}-{chunk_end}页)")
+            
+            return split_files
+            
+        except Exception as e:
+            # 清理临时文件
+            for f in split_files:
+                if f.exists():
+                    f.unlink()
+            if Path(temp_dir).exists():
+                shutil.rmtree(temp_dir)
+            raise e
+
+    
+    def _build_knowledge_base_from_pdf(self, pdf_path: Optional[Union[str, Path]] = None, merge: bool = True) -> Dict:
+        """
+        从PDF文件构建知识库
+        """
+        if isinstance(pdf_path, str):
+            pdf_path = Path(pdf_path)
+        
+        if not pdf_path.exists():
+            print(f"错误：PDF文件不存在：{pdf_path}")
+            return {}
+        
+        pdf_filename = pdf_path.name
+        file_size = pdf_path.stat().st_size
+        file_size_mb = file_size / (1024 * 1024)
+        
+        # 加载现有知识库
+        existing_kb = self._load_knowledge_base()
+        if not merge:
+            # 如果不合并，则创建新的知识库，建立空白metadata
+            existing_kb = {"_metadata": {"pdf_files": []}}
+        
+        # 检查PDF是否已经在知识库中
+        if pdf_filename in existing_kb.get("_metadata", {}).get("pdf_files", []):
+            print(f"警告：PDF文件 {pdf_filename} 已经在知识库中")
+            while True:
+                choice = input("请选择处理方式：\n  1. 覆盖 - 用新内容替换原有内容\n  2. 保留 - 保留原有内容，跳过处理\n请输入选项 (1/2): ").strip()
+                if choice == "1":
+                    print("将使用新内容覆盖原有内容")
+                    break
+                elif choice == "2":
+                    print("保留原有内容，跳过处理")
+                    return existing_kb
+                else:
+                    print("无效选项，请输入 1 或 2")
+        
+        # 检查文件大小，如果超过100MB则切割
+        split_files = []
+        temp_dir = None
+        try:
+            if file_size_mb > 100:
+                print(f"PDF文件大小 {file_size_mb:.2f}MB 超过100MB限制，需要切割")
+                split_files = self._split_pdf_by_size(pdf_path, max_size_mb=90)
+                temp_dir = split_files[0].parent if split_files else None
+                print(f"已切割为 {len(split_files)} 个文件")
+            else:
+                split_files = [pdf_path]
+            
+            # 依次处理每个PDF文件（可能是原文件或切割后的文件）
+            all_new_knowledge = {}
+            
+            for idx, file_to_process in enumerate(split_files, 1):
+                if len(split_files) > 1:
+                    print(f"\n处理由{pdf_filename}切割出的第 {idx}/{len(split_files)} 个文件：{file_to_process.name}")
+                else:
+                    print(f"解析PDF文件：{pdf_path}...")
+                
+                # 使用kimi_client解析PDF
+                try:
+                    file_object = kimi_client.files.create(
+                        file=file_to_process,
+                        purpose="file-extract"
+                    )
+                    
+                    # 获取解析后的文本内容
+                    file_content = kimi_client.files.content(file_id=file_object.id).text
+                    if len(split_files) > 1:
+                        print(f"第 {idx} 个文件解析完成，开始整理知识点...")
+                    else:
+                        print("PDF解析完成，开始整理知识点...")
+                    
+                    # 使用LLM整理PDF内容，提取知识点、概念、性质、定理、示例
+                    system_prompt = (
+                        "你是 Kimi，由 Moonshot AI 提供的人工智能助手，你擅长中文和英文的对话。"
+                        "你会为用户提供安全，有帮助，准确的回答。Moonshot AI 为专有名词，不可翻译成其他语言。"
+                    )
+                    
+                    extract_prompt = textwrap.dedent(f"""
+                        解析这个pdf中，把所有知识点和其对应的概念/性质/定理/示例整理到一起。
+
+                        请以JSON格式输出，格式如下：
+                        {{
+                            "知识点1": {{
+                                "概念": ["概念1", "概念2", ...],
+                                "性质": ["性质1", "性质2", ...],
+                                "定理": ["定理1", "定理2", ...],
+                                "示例": ["示例1", "示例2", ...]
+                            }},
+                            "知识点2": {{
+                                ...
+                            }}
+                        }}
+
+                        字段说明：
+                        - "概念"：包含所有定义性内容，如"给定两个集合A和B,如果组成它们的元素完全相同,就称这两个集合相等"、"集合可以根据它含有的元素个数分为两类:含有有限个元素的集合称为有限集,含有无限个元素的集合称为无限集"等。所有定义、分类说明、概念描述都应放在这里。
+                        - "性质"：包含所有性质描述、运算规律、结论等，如"空集可以看成包含0个元素的集合,所以空集是有限集"、"如果a∈N且b∈N,则a+b∈N"、"集合具有互异性：对于一个给定的集合，集合中的元素一定是不同的．"等。所有性质、规律都应放在这里。
+                        - "定理"：包含所有需要证明的定理、命题等。
+                        - "示例"：包含所有具体的例子、例题等。
+
+                        注意：
+                        1. pdf中每个章节可能包含多个知识点，每个知识点可能包含多个概念、性质、定理、示例，必须详尽整理，不能遗漏。
+                        2. 并不是每个知识点都有对应的四者：概念、性质、定理、示例，pdf中有对应内容则添加，没有的话不必强行添加。
+                        3. 整理时尽量保持原来的完整描述，例如pdf中内容为："互异性：对于一个给定的集合，集合中的元素一定是不同的。"，则应该完整添加到知识库中，而不是添加为简略形式："互异性：集合中的元素互不相同。"。
+                        4. 特别注意：所有定义性内容（包括"称为"、"记作"、"定义为"等表述）都应归入"概念"字段。
+                        5. 确保输出是有效的JSON格式，不要包含任何其他解释文字。
+                        """)
+                    
+                    messages = [
+                        {"role": "system", "content": system_prompt},
+                        {"role": "system", "content": file_content},
+                        {"role": "user", "content": extract_prompt},
+                    ]
+                    
+                    completion = kimi_client.chat.completions.create(
+                        model="kimi-k2-turbo-preview",
+                        messages=messages,
+                        temperature=0.3,
+                    )
+                    
+                    knowledge_text = completion.choices[0].message.content.strip()
+                    
+                    # 尝试提取JSON部分（可能包含markdown代码块）
+                    json_match = re.search(r'\{[\s\S]*\}', knowledge_text)
+                    if json_match:
+                        knowledge_text = json_match.group(0)
+                    
+                    # 解析JSON
+                    chunk_knowledge = json.loads(knowledge_text)
+                    
+                    # 合并到本次pdf处理的全部知识库中（排除metadata字段）
+                    for key, value in chunk_knowledge.items():
+                        if key in all_new_knowledge:
+                            # 如果知识点已存在，合并内容
+                            existing_entry = all_new_knowledge[key]
+                            new_entry = value
+                            # 合并概念（去重）
+                            if "概念" in new_entry:
+                                existing_concepts = set(existing_entry.get("概念", []))
+                                existing_concepts.update(new_entry["概念"])
+                                existing_entry["概念"] = list(existing_concepts)
+                            # 合并性质（去重）
+                            if "性质" in new_entry:
+                                existing_props = set(existing_entry.get("性质", []))
+                                existing_props.update(new_entry["性质"])
+                                existing_entry["性质"] = list(existing_props)
+                            # 合并定理（去重）
+                            if "定理" in new_entry:
+                                existing_theorems = set(existing_entry.get("定理", []))
+                                existing_theorems.update(new_entry["定理"])
+                                existing_entry["定理"] = list(existing_theorems)
+                            # 合并示例（去重）
+                            if "示例" in new_entry:
+                                existing_examples = set(existing_entry.get("示例", []))
+                                existing_examples.update(new_entry["示例"])
+                                existing_entry["示例"] = list(existing_examples)
+                        else:
+                            all_new_knowledge[key] = value
+                    
+                except Exception as e:
+                    print(f"处理第 {idx} 个文件时出错：{e}")
+                    import traceback
+                    traceback.print_exc()
+                    continue
+            
+            # 将所有新知识合并到现有知识库（排除metadata字段）
+            for key, value in all_new_knowledge.items():
+                # 如果知识点已存在，合并内容
+                if key in existing_kb:
+                    existing_entry = existing_kb[key]
+                    new_entry = value
+                    # 合并概念（去重）
+                    if "概念" in new_entry:
+                        existing_concepts = set(existing_entry.get("概念", []))
+                        existing_concepts.update(new_entry["概念"])
+                        existing_entry["概念"] = list(existing_concepts)
+                    # 合并性质（去重）
+                    if "性质" in new_entry:
+                        existing_props = set(existing_entry.get("性质", []))
+                        existing_props.update(new_entry["性质"])
+                        existing_entry["性质"] = list(existing_props)
+                    # 合并定理（去重）
+                    if "定理" in new_entry:
+                        existing_theorems = set(existing_entry.get("定理", []))
+                        existing_theorems.update(new_entry["定理"])
+                        existing_entry["定理"] = list(existing_theorems)
+                    # 合并示例（去重）
+                    if "示例" in new_entry:
+                        existing_examples = set(existing_entry.get("示例", []))
+                        existing_examples.update(new_entry["示例"])
+                        existing_entry["示例"] = list(existing_examples)
+                else:
+                    existing_kb[key] = value
+            
+            # 更新metadata，添加PDF文件名
+            if "_metadata" not in existing_kb:
+                existing_kb["_metadata"] = {"pdf_files": []}
+            if pdf_filename not in existing_kb["_metadata"]["pdf_files"]:
+                existing_kb["_metadata"]["pdf_files"].append(pdf_filename)
+            
+            # 保存知识库到文件
+            with open(self.knowledge_base_path, 'w', encoding='utf-8') as f:
+                json.dump(existing_kb, f, ensure_ascii=False, indent=2)
+            
+            self.knowledge_base = existing_kb
+            print(f"知识库构建完成，已保存到：{self.knowledge_base_path}")
+            print(f"知识库目前包含的PDF文件：{', '.join(existing_kb['_metadata']['pdf_files'])}")
+            return existing_kb
+            
+        except Exception as e:
+            print(f"构建知识库失败：{e}")
+            import traceback
+            traceback.print_exc()
+            return {}
+        finally:
+            # 清理临时切割文件
+            if temp_dir and Path(temp_dir).exists():
+                try:
+                    shutil.rmtree(temp_dir)
+                    print(f"已清理临时文件目录：{temp_dir}")
+                except Exception as e:
+                    print(f"清理临时文件目录失败：{e}")
+    
+    def _extract_knowledge_points(self, problem_text: str, solution: str = None) -> List[str]:
+        """提取题目的主要知识点"""
+        prompt = textwrap.dedent(f"""
+            你是一个数学教育专家。请分析下面的数学题目，提取主要涉及的知识点。
+            题目：
+            {problem_text}
+            解答：
+            {solution}
+            请以JSON格式输出知识点列表，格式为：{{"knowledge_points": ["知识点1", "知识点2", ...]}}
+            知识点应该用英文关键词，如 "probability", "geometry", "algebra", "complex numbers", "combinatorics" 等。
+            只输出JSON，不要有其他文字。
+            """)
+        try:
+            resp = self.llm.chat(prompt)
+            # 尝试提取JSON
+            json_match = re.search(r'\{[^}]+\}', resp, re.DOTALL)
+            if json_match:
+                data = json.loads(json_match.group())
+                return data.get("knowledge_points", [])
+            return []
+        except Exception as e:
+            print(f"提取知识点时出错: {e}")
+            return []
+    
+    def _retrieve_knowledge_from_kb(self, knowledge_base: Dict, knowledge_points: List[str]) -> str:
+        """
+        从知识库中检索相关知识点内容
+        """
+        retrieved_content = []
+        for point in knowledge_points:
+            # 尝试精确匹配（排除metadata字段）
+            if point in knowledge_base:
+                kb_entry = knowledge_base[point]
+                entry_text = f"知识点：{point}\n"
+                if "概念" in kb_entry:
+                    entry_text += f"概念：{kb_entry['概念']}\n"
+                if "性质" in kb_entry and kb_entry["性质"]:
+                    entry_text += f"性质：{', '.join(kb_entry['性质'])}\n"
+                if "定理" in kb_entry and kb_entry["定理"]:
+                    entry_text += f"定理：{', '.join(kb_entry['定理'])}\n"
+                if "示例" in kb_entry and kb_entry["示例"]:
+                    entry_text += f"示例：{', '.join(kb_entry['示例'])}\n"
+                retrieved_content.append(entry_text)
+            else:
+                # 尝试模糊匹配（包含关系，排除metadata字段）
+                for kb_point, kb_entry in knowledge_base.items():
+                    if point in kb_point or kb_point in point:
+                        entry_text = f"知识点：{kb_point}\n"
+                        if "概念" in kb_entry:
+                            entry_text += f"概念：{kb_entry['概念']}\n"
+                        if "性质" in kb_entry and kb_entry["性质"]:
+                            entry_text += f"性质：{', '.join(kb_entry['性质'])}\n"
+                        if "定理" in kb_entry and kb_entry["定理"]:
+                            entry_text += f"定理：{', '.join(kb_entry['定理'])}\n"
+                        if "示例" in kb_entry and kb_entry["示例"]:
+                            entry_text += f"示例：{', '.join(kb_entry['示例'])}\n"
+                        retrieved_content.append(entry_text)
+                        break
+        
+        return "\n\n".join(retrieved_content) if retrieved_content else ""
+    
+
     def generate_novel2(self, item: ProblemItem) -> ProblemItem:
         """
-        novel-2：更远类比/更大迁移，保持知识核心不变但表层/结构均明显变化
+        novel-2：基于教科书知识库的概念题生成
         """
+        print("--------------------------------加载知识库--------------------------------")
+        knowledge_base = self._load_knowledge_base()
+
+        print("------------------------------提取题目知识点------------------------------")
+        knowledge_points = self._extract_knowledge_points(item.original_question, item.solution)
+        print(f"提取到的知识点：{knowledge_points}")
+        
+        print("------------------------------检索知识库内容------------------------------")
+        retrieved_knowledge = self._retrieve_knowledge_from_kb(knowledge_base, knowledge_points)
+        
+        if not retrieved_knowledge:
+            print("警告：未在知识库中找到相关知识点")
+            return None
+        
+        print("--------------------------------生成概念题-------------------------------")
         prompt = textwrap.dedent(f"""
             你是一个高级数学命题专家。
 
-            请基于下面的原始题目，设计一条“novel-2 风格”的新题：
-            - 仍然围绕与原题相同的核心数学概念或定理（例如同一类概率结构、同一类几何构型等）；
-            - 但允许在题目结构、推理路径、叙事背景上进行较大创新；
-            - 可以引入多步推理或不同的设问方式，只要整体难度仍在原题的同一量级（不要明显更简单或更难）；
-            - 要让题目看起来与原题有“远类比”的感觉，但解题所需的核心数学知识是同一块；
-            - 不要给出解答，只给出完整题目陈述（英文）。
+            请基于下面从教科书中提取的相关知识点，设计一道概念题，并给出正确答案：
+            - 根据知识库中检索到的相关内容（包括概念、性质、定理和示例），设计一道新颖的概念性问题及其正确答案，但不要直接复制；
+            - 例如针对对数概念，可以设计如下题目及其正确答案：
+                {{
+                    "question": "What kind of mathematical idea/method turns exponentiation and multiplication into multiplication and addition?", 
+                    "answer": "logarithm"
+                }}
 
-            原始题目：
-            {item.original_question}
+            从知识库中检索到的相关内容：
+            {retrieved_knowledge}
 
-            （如有用，请参考原题解析）：
-            {item.solution}
+            请以JSON格式输出，格式如下：
+            {{
+                "question": "新题题干",
+                "answer": "正确答案"
+            }}
 
-            请直接输出新题题干，不要加入任何解释。
+            请确保输出是有效的JSON格式，不要包含任何其他解释文字。
             """)
         resp = self.llm.chat(prompt)
-        item.augmented_question = resp.strip()
-        item.method_used = "novel-2"
+        
+        # 解析JSON响应
+        try:
+            # 尝试提取JSON部分（可能包含markdown代码块）
+            json_match = re.search(r'\{[\s\S]*\}', resp)
+            if json_match:
+                json_text = json_match.group(0)
+            else:
+                json_text = resp.strip()
+            
+            result = json.loads(json_text)
+            
+            # 填充item
+            item.augmented_question = result.get("question", "").strip()
+            item.augmented_true_answer = result.get("answer", "").strip()
+            item.method_used = "novel-2"
+            
+            if not item.augmented_question:
+                print("警告：解析到的题目为空")
+                return None
+                
+        except json.JSONDecodeError as e:
+            print(f"警告：无法解析JSON响应：{e}")
+            print(f"响应内容：{resp[:200]}...")
+            return None
+        except Exception as e:
+            print(f"警告：解析响应时出错：{e}")
+            print(f"响应内容：{resp[:200]}...")
+            return None
+        
         return item
 
 # A-MES 主管道：根据 method 决定执行哪一种增强
@@ -2229,26 +2799,27 @@ class AMESPipeline:
                 llms = self.role_llms
                 item = self.analogical_transformer.transform_analogical2(
                     item,
-                    llm_extract=llms.get("extract"),
-                    llm_codegen=llms.get("codegen"),
-                    llm_check=llms.get("check"),
-                    llm_refine=llms.get("refine"),
-                    llm_variant=llms.get("variant"),
-                    llm_range=llms.get("range"),
+                    llm_extract=llms.get("extract"), # 提取知识点
+                    llm_codegen=llms.get("codegen"), # 代码生成
+                    llm_check=llms.get("check"), # 硬编码检查
+                    llm_refine=llms.get("refine"), # 代码修改
+                    llm_range=llms.get("range"), # 取值范围
+                    llm_variant=llms.get("variant"), # 数字变体
                 )
             # analogical-3
             else:
                 llms = self.role_llms
                 item = self.analogical_transformer.transform_analogical3(
                     item,
-                    llm_extract=llms.get("extract"),
-                    llm_analysis=llms.get("analysis"),
-                    llm_codegen=llms.get("codegen"),
-                    llm_check=llms.get("check"),
-                    llm_refine=llms.get("refine"),
-                    llm_variant=llms.get("variant"),
-                    llm_range=llms.get("range"),
-                    generate_variant=generate_variant
+                    llm_extract=llms.get("extract"), # 提取知识点
+                    llm_convert=llms.get("convert"), # 答案格式转换
+                    llm_analysis=llms.get("analysis"), # 可逆条件分析
+                    llm_codegen=llms.get("codegen"), # 代码生成
+                    llm_check=llms.get("check"), # 硬编码检查
+                    llm_refine=llms.get("refine"), # 代码修改
+                    llm_range=llms.get("range"), # 取值范围
+                    llm_variant=llms.get("variant"), # 数字变体
+                    generate_variant=generate_variant,
                 )
             return item
 
@@ -2351,7 +2922,6 @@ def run_ames_on_csv(args):
                 print(processed.augmented_question)
                 print("增强后题目答案：")
                 print(processed.augmented_true_answer)
-                print("\n==============================================================================\n")
 
                 writer.writerow([
                     processed.original_question,
@@ -2381,6 +2951,23 @@ def run_ames_on_csv(args):
     print(f"\n结果已保存到: {output_path}")
     print(f"总共 {total_count} 行，成功转换 {success_count} 行，平均每行耗时 {avg_time:.2f} 秒")
 
+def add_textbook_knowledge_base(args):        
+    print(f"\n===============================开始添加PDF文件到课本知识库===============================")
+    print(f"PDF文件路径：{args.add_textbook_knowledge_base}")
+    llm_novel = LLMClient(model_name=DEFAULT_STAGE_MODEL["textbook_knowledge_base_construction"], temperature=args.temperature)
+    novel_generator = NovelProblemGenerator(llm_novel)
+    result = novel_generator._build_knowledge_base_from_pdf(pdf_path=args.add_textbook_knowledge_base, merge=True)
+    
+    # 检查结果：如果返回的字典为空或只有metadata，说明失败
+    kb_keys = [k for k in result.keys() if k != "_metadata"]
+    if result and kb_keys:
+        print(f"成功将PDF文件添加到知识库：{args.add_textbook_knowledge_base}")
+        print("知识库添加完成！")
+        exit(0)
+    else:
+        print(f"失败：无法将PDF文件添加到知识库：{args.add_textbook_knowledge_base}")
+        print("知识库添加失败！")
+        exit(1)
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="A-MES：题目增强框架（7 种方法）")
@@ -2403,7 +2990,13 @@ if __name__ == "__main__":
         )
     )
     parser.add_argument('--generate_variant', action='store_true', default=False, help="不生成数字变体（对 analogical-3 有效）。设置此选项时，验证代码正确后直接使用重组题目，不进行后续的数字变换")
+    parser.add_argument('--add_textbook_knowledge_base', type=str, default=None, help="添加PDF文件到知识库，指定PDF文件路径（例如：--add_textbook_knowledge_base xxx.pdf）")
     args = parser.parse_args()
+
+    # 如果指定了--add_knowledge_base，只执行知识库添加操作，不执行题目生成
+    if args.add_textbook_knowledge_base:
+        add_textbook_knowledge_base(args)
+        exit(0)
 
     if args.method not in {"1", "2", "3", "4", "5", "6", "7"}:
         raise ValueError("method 必须是 1~7 之一")
