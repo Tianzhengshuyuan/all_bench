@@ -44,7 +44,7 @@ ModelName = Literal["deepseek", "qwen", "doubao", "kimi", "mistral", "gpt"]
 DEFAULT_STAGE_MODEL = {
     "analogical_fallback": "qwen",
     "redundancy": "doubao",
-    "novel": "kimi",
+    "novel": "kimi_k2",
     "textbook_knowledge_base_construction": "kimi_k2",
 }
 
@@ -59,6 +59,7 @@ DEFAULT_ROLE_MODEL = {
     "refine": default_role_model,  # 代码精炼
     "variant": default_role_model,     # 数字/条件变体生成
     "range": default_role_model,  # 变量取值范围确定
+    "generate": default_role_model,  # 概念题生成（novel-2）
 }
 
 
@@ -1116,6 +1117,7 @@ class AnalogicalTransformer:
         except Exception as e:
             print(f"检查硬编码时出错: {e}")
             return False
+    
     def _is_fraction_string(self, value: Any) -> bool:
         """检测值是否是分数字符串格式（如 "25/8"）"""
         if isinstance(value, str):
@@ -2428,6 +2430,14 @@ class NovelProblemGenerator:
                 choice = input("请选择处理方式：\n  1. 覆盖 - 用新内容替换原有内容\n  2. 保留 - 保留原有内容，跳过处理\n请输入选项 (1/2): ").strip()
                 if choice == "1":
                     print("将使用新内容覆盖原有内容")
+                    # 删除所有pdf字段等于pdf_filename的知识点条目
+                    keys_to_delete = []
+                    for key, value in existing_kb.items():
+                        if isinstance(value, dict) and value.get("pdf") == pdf_filename:
+                            keys_to_delete.append(key)
+                    for key in keys_to_delete:
+                        del existing_kb[key]
+                    print(f"已删除 {len(keys_to_delete)} 个来自该PDF的知识点条目")
                     break
                 elif choice == "2":
                     print("保留原有内容，跳过处理")
@@ -2528,8 +2538,11 @@ class NovelProblemGenerator:
                     # 解析JSON
                     chunk_knowledge = json.loads(knowledge_text)
                     
-                    # 合并到本次pdf处理的全部知识库中（排除metadata字段）
+                    # 给每个知识点添加"pdf"字段，并合并到本次pdf处理的全部知识库中（排除metadata字段）
                     for key, value in chunk_knowledge.items():
+                        # 添加pdf字段
+                        value["pdf"] = pdf_filename
+                        
                         if key in all_new_knowledge:
                             # 如果知识点已存在，合并内容
                             existing_entry = all_new_knowledge[key]
@@ -2563,34 +2576,9 @@ class NovelProblemGenerator:
                     traceback.print_exc()
                     continue
             
-            # 将所有新知识合并到现有知识库（排除metadata字段）
+            # 将所有新知识添加到现有知识库（排除metadata字段）
             for key, value in all_new_knowledge.items():
-                # 如果知识点已存在，合并内容
-                if key in existing_kb:
-                    existing_entry = existing_kb[key]
-                    new_entry = value
-                    # 合并概念（去重）
-                    if "概念" in new_entry:
-                        existing_concepts = set(existing_entry.get("概念", []))
-                        existing_concepts.update(new_entry["概念"])
-                        existing_entry["概念"] = list(existing_concepts)
-                    # 合并性质（去重）
-                    if "性质" in new_entry:
-                        existing_props = set(existing_entry.get("性质", []))
-                        existing_props.update(new_entry["性质"])
-                        existing_entry["性质"] = list(existing_props)
-                    # 合并定理（去重）
-                    if "定理" in new_entry:
-                        existing_theorems = set(existing_entry.get("定理", []))
-                        existing_theorems.update(new_entry["定理"])
-                        existing_entry["定理"] = list(existing_theorems)
-                    # 合并示例（去重）
-                    if "示例" in new_entry:
-                        existing_examples = set(existing_entry.get("示例", []))
-                        existing_examples.update(new_entry["示例"])
-                        existing_entry["示例"] = list(existing_examples)
-                else:
-                    existing_kb[key] = value
+                existing_kb[key] = value
             
             # 更新metadata，添加PDF文件名
             if "_metadata" not in existing_kb:
@@ -2621,20 +2609,34 @@ class NovelProblemGenerator:
                 except Exception as e:
                     print(f"清理临时文件目录失败：{e}")
     
-    def _extract_knowledge_points(self, problem_text: str, solution: str = None) -> List[str]:
+    def _extract_knowledge_points(
+        self, 
+        problem_text: str, 
+        llm: LLMClient, 
+        solution: str = None,
+        available_knowledge_points: Optional[List[str]] = None
+    ) -> List[str]:
         """提取题目的主要知识点"""
+
+        # 如果提供了可用的知识点列表，让模型从中选择
+        kb_points_str = "、".join(available_knowledge_points)
         prompt = textwrap.dedent(f"""
-            你是一个数学教育专家。请分析下面的数学题目，提取主要涉及的知识点。
+            你是一个数学教育专家。请分析下面的数学题目，从知识库中识别主要涉及的知识点。
             题目：
             {problem_text}
             解答：
             {solution}
-            请以JSON格式输出知识点列表，格式为：{{"knowledge_points": ["知识点1", "知识点2", ...]}}
-            知识点应该用英文关键词，如 "probability", "geometry", "algebra", "complex numbers", "combinatorics" 等。
+            
+            知识库中可用的知识点列表：
+            {kb_points_str}
+            
+            请从上述知识点列表中选择与题目相关的主要知识点，以JSON格式输出，格式为：{{"knowledge_points": ["知识点1", "知识点2", ...]}}
+            只选择与题目确实相关的知识点，必须完全匹配知识库中的知识点名称。
             只输出JSON，不要有其他文字。
             """)
+
         try:
-            resp = self.llm.chat(prompt)
+            resp = llm.chat(prompt)
             # 尝试提取JSON
             json_match = re.search(r'\{[^}]+\}', resp, re.DOTALL)
             if json_match:
@@ -2648,50 +2650,63 @@ class NovelProblemGenerator:
     def _retrieve_knowledge_from_kb(self, knowledge_base: Dict, knowledge_points: List[str]) -> str:
         """
         从知识库中检索相关知识点内容
+        对于同一个knowledge_point，可能知识库中有多个对应的同名条目（来自不同PDF），需要找出所有匹配的条目
         """
         retrieved_content = []
+        
         for point in knowledge_points:
-            # 尝试精确匹配（排除metadata字段）
-            if point in knowledge_base:
-                kb_entry = knowledge_base[point]
-                entry_text = f"知识点：{point}\n"
-                if "概念" in kb_entry:
-                    entry_text += f"概念：{kb_entry['概念']}\n"
-                if "性质" in kb_entry and kb_entry["性质"]:
-                    entry_text += f"性质：{', '.join(kb_entry['性质'])}\n"
-                if "定理" in kb_entry and kb_entry["定理"]:
-                    entry_text += f"定理：{', '.join(kb_entry['定理'])}\n"
-                if "示例" in kb_entry and kb_entry["示例"]:
-                    entry_text += f"示例：{', '.join(kb_entry['示例'])}\n"
-                retrieved_content.append(entry_text)
-            else:
-                # 尝试模糊匹配（包含关系，排除metadata字段）
-                for kb_point, kb_entry in knowledge_base.items():
-                    if point in kb_point or kb_point in point:
-                        entry_text = f"知识点：{kb_point}\n"
-                        if "概念" in kb_entry:
-                            entry_text += f"概念：{kb_entry['概念']}\n"
-                        if "性质" in kb_entry and kb_entry["性质"]:
-                            entry_text += f"性质：{', '.join(kb_entry['性质'])}\n"
-                        if "定理" in kb_entry and kb_entry["定理"]:
-                            entry_text += f"定理：{', '.join(kb_entry['定理'])}\n"
-                        if "示例" in kb_entry and kb_entry["示例"]:
-                            entry_text += f"示例：{', '.join(kb_entry['示例'])}\n"
-                        retrieved_content.append(entry_text)
-                        break
+            # 遍历知识库中的所有条目，找出所有匹配的条目（排除metadata字段）
+            for kb_point, kb_entry in knowledge_base.items():
+                # 跳过metadata字段
+                if kb_point == "_metadata":
+                    continue
+                
+                # 尝试精确匹配或模糊匹配
+                if kb_point == point or point in kb_point or kb_point in point:
+                    entry_text = f"知识点：{kb_point}\n"
+
+                    if "概念" in kb_entry and kb_entry["概念"]:
+                        entry_text += f"概念：{', '.join(kb_entry['概念'])}\n"
+                    
+                    if "性质" in kb_entry and kb_entry["性质"]:
+                        entry_text += f"性质：{', '.join(kb_entry['性质'])}\n"
+                    
+                    if "定理" in kb_entry and kb_entry["定理"]:
+                        entry_text += f"定理：{', '.join(kb_entry['定理'])}\n"
+                    
+                    if "示例" in kb_entry and kb_entry["示例"]:
+                        entry_text += f"示例：{', '.join(kb_entry['示例'])}\n"
+                    
+                    retrieved_content.append(entry_text)
         
         return "\n\n".join(retrieved_content) if retrieved_content else ""
     
-
-    def generate_novel2(self, item: ProblemItem) -> ProblemItem:
+    def generate_novel2(
+        self,
+        item: ProblemItem,
+        llm_extract: Optional[LLMClient] = None,
+        llm_generate: Optional[LLMClient] = None,
+    ) -> ProblemItem:
         """
         novel-2：基于教科书知识库的概念题生成
         """
+        llm_extract = llm_extract or self.llm
+        llm_generate = llm_generate or self.llm
+        
         print("--------------------------------加载知识库--------------------------------")
         knowledge_base = self._load_knowledge_base()
-
+        
+        # 从知识库中获取所有知识点（去重，排除metadata）
+        all_kb_points = [key for key in knowledge_base.keys() if key != "_metadata"]
+        print(f"知识库中共有 {len(all_kb_points)} 个知识点")
+        
         print("------------------------------提取题目知识点------------------------------")
-        knowledge_points = self._extract_knowledge_points(item.original_question, item.solution)
+        knowledge_points = self._extract_knowledge_points(
+            item.original_question, 
+            llm_extract, 
+            item.solution,
+            available_knowledge_points=all_kb_points
+        )
         print(f"提取到的知识点：{knowledge_points}")
         
         print("------------------------------检索知识库内容------------------------------")
@@ -2700,31 +2715,35 @@ class NovelProblemGenerator:
         if not retrieved_knowledge:
             print("警告：未在知识库中找到相关知识点")
             return None
+        else:
+            print(f"检索到的知识库内容：\n{retrieved_knowledge}")
         
-        print("--------------------------------生成概念题-------------------------------")
+        print("---------------------------------生成概念题-------------------------------")
         prompt = textwrap.dedent(f"""
             你是一个高级数学命题专家。
 
             请基于下面从教科书中提取的相关知识点，设计一道概念题，并给出正确答案：
             - 根据知识库中检索到的相关内容（包括概念、性质、定理和示例），设计一道新颖的概念性问题及其正确答案，但不要直接复制；
-            - 例如针对对数概念，可以设计如下题目及其正确答案：
+            - 例如针对"逻辑用语"的，可以相关内容，可以设计如下题目及其正确答案：
                 {{
-                    "question": "What kind of mathematical idea/method turns exponentiation and multiplication into multiplication and addition?", 
-                    "answer": "logarithm"
+                    "origin_statement": "可供真假判断的陈述语句称为命题",
+                    "question": "可供真假判断的陈述语句称为什么？", 
+                    "answer": "命题"
                 }}
 
-            从知识库中检索到的相关内容：
+            从知识库中检索到的相关内容如下，选择一条能够设计出概念题的内容，保证正确答案简单且唯一，给出你基于的内容、题目和正确答案：
             {retrieved_knowledge}
 
             请以JSON格式输出，格式如下：
             {{
-                "question": "新题题干",
+                "origin_statement": "基于的内容",
+                "question": "基于内容设计的题目题干，保证正确答案简单且唯一",
                 "answer": "正确答案"
             }}
 
             请确保输出是有效的JSON格式，不要包含任何其他解释文字。
             """)
-        resp = self.llm.chat(prompt)
+        resp = llm_generate.chat(prompt)
         
         # 解析JSON响应
         try:
@@ -2737,9 +2756,19 @@ class NovelProblemGenerator:
             
             result = json.loads(json_text)
             
+            # 提取字段
+            origin_statement = result.get("origin_statement", "").strip()
+            question = result.get("question", "").strip()
+            answer = result.get("answer", "").strip()
+            
+            # 打印生成的结果
+            print(f"基于的内容：{origin_statement}")
+            print(f"生成的题目：{question}")
+            print(f"正确答案：{answer}")
+            
             # 填充item
-            item.augmented_question = result.get("question", "").strip()
-            item.augmented_true_answer = result.get("answer", "").strip()
+            item.augmented_question = question
+            item.augmented_true_answer = answer
             item.method_used = "novel-2"
             
             if not item.augmented_question:
@@ -2830,7 +2859,12 @@ class AMESPipeline:
             if method == "6":
                 item = self.novel_generator.generate_novel1(item)
             else:
-                item = self.novel_generator.generate_novel2(item)
+                llms = self.role_llms
+                item = self.novel_generator.generate_novel2(
+                    item,
+                    llm_extract=llms.get("extract"),  # 提取知识点
+                    llm_generate=llms.get("generate"),  # 生成概念题
+                )
             return item
 
         raise ValueError(f"不支持的 method: {method}")
@@ -2954,8 +2988,8 @@ def run_ames_on_csv(args):
 def add_textbook_knowledge_base(args):        
     print(f"\n===============================开始添加PDF文件到课本知识库===============================")
     print(f"PDF文件路径：{args.add_textbook_knowledge_base}")
-    llm_novel = LLMClient(model_name=DEFAULT_STAGE_MODEL["textbook_knowledge_base_construction"], temperature=args.temperature)
-    novel_generator = NovelProblemGenerator(llm_novel)
+    llm_generate_knowledge_base = LLMClient(model_name=DEFAULT_STAGE_MODEL["textbook_knowledge_base_construction"], temperature=args.temperature)
+    novel_generator = NovelProblemGenerator(llm_generate_knowledge_base)
     result = novel_generator._build_knowledge_base_from_pdf(pdf_path=args.add_textbook_knowledge_base, merge=True)
     
     # 检查结果：如果返回的字典为空或只有metadata，说明失败

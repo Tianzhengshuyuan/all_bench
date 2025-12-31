@@ -1,0 +1,20 @@
+"Let $x,y$ and $z$ be positive real numbers that satisfy the following system of equations: 
+\[\log_2\left({x \over yz}\right) = {1 \over 2}\]
+\[\log_2\left({y \over xz}\right) = {1 \over 3}\]
+\[\log_2\left({z \over xy}\right) = {1 \over 4}\]
+Then the value of $\left|\log_2(x^4y^3z^2)\right|$ is $\tfrac{m}{n}$ where $m$ and $n$ are relatively prime positive integers. Find $m+n$.",33,"A radio telescope array has three dishes labeled A, B, C.  
+During a calibration run, the logarithmic power ratios (base 10) of their combined signals are recorded:
+
+\[
+\log_{10}\!\left(\frac{P_{\!A}}{P_{\!B}\,P_{\!C}}\right)=\frac{1}{2},\quad
+\log_{10}\!\left(\frac{P_{\!B}}{P_{\!A}\,P_{\!C}}\right)=\frac{1}{3},\quad
+\log_{10}\!\left(\frac{P_{\!C}}{P_{\!A}\,P_{\!B}}\right)=\frac{1}{4}.
+\]
+
+Let \(P_{\!A},P_{\!B},P_{\!C}\) be the individual power outputs (positive real numbers).  
+Compute the value of  
+\[
+\left|\log_{10}\!\left(P_{\!A}^{\,4}P_{\!B}^{\,3}P_{\!C}^{\,2}\right)\right|
+\]  
+and express it as a reduced fraction \(\tfrac{m}{n}\).  Find \(m+n\).",
+"Let $O(0,0), A(\tfrac{1}{2}, 0),$ and $B(0, \tfrac{\sqrt{3}}{2})$ be points in the coordinate plane. Let $\mathcal{F}$ be the family of segments $\overline{PQ}$ of unit length lying in the first quadrant with $P$ on the $x$-axis and $Q$ on the $y$-axis. There is a unique point $C$ on $\overline{AB}$, distinct from $A$ and $B$, that does not belong to any segment from $\mathcal{F}$ other than $\overline{AB}$. Then $OC^2 = \tfrac{p}{q}$, where $p$ and $q$ are relatively prime positive integers. Find $p + q$.",23,"A lighthouse stands at the origin of a Cartesian map, and two buoys are anchored at \(A(1,0)\) and \(B\!\left(0,\sqrt{3}\right)\).  A straight chain of length \(2\) km is stretched between an east-coast pier (any point on the positive \(x\)-axis) and a north-coast pier (any point on the positive \(y\)-axis).  All such chains lie entirely in the first quadrant.  There is exactly one point \(C\) on the line segment joining the two buoys, other than the buoys themselves, that is touched by only one of these chains (namely, the chain whose endpoints coincide with the buoys).  Compute the square of the distance from the lighthouse to this special point \(C\), expressed as a reduced fraction \(\tfrac{p}{q}\), and give \(p+q\).",
