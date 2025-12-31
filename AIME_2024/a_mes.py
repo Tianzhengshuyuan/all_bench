@@ -2630,9 +2630,9 @@ class NovelProblemGenerator:
             知识库中可用的知识点列表：
             {kb_points_str}
             
-            请从上述知识点列表中选择与题目相关的主要知识点，以JSON格式输出，格式为：{{"knowledge_points": ["知识点1", "知识点2", ...]}}
+            请从上述知识点列表中选择与题目最相关的一个知识点，以JSON格式输出，格式为：{{"knowledge_points": ["知识点"]}}
             只选择与题目确实相关的知识点，必须完全匹配知识库中的知识点名称。
-            只输出JSON，不要有其他文字。
+            只输出知识点名称，不要有任何其他文字，禁止在输出中解释或说明你为什么选择这个知识点。
             """)
 
         try:
@@ -2651,6 +2651,7 @@ class NovelProblemGenerator:
         """
         从知识库中检索相关知识点内容
         对于同一个knowledge_point，可能知识库中有多个对应的同名条目（来自不同PDF），需要找出所有匹配的条目
+        从检索出的内容中随机选择最多三条
         """
         retrieved_content = []
         
@@ -2661,23 +2662,30 @@ class NovelProblemGenerator:
                 if kb_point == "_metadata":
                     continue
                 
-                # 尝试精确匹配或模糊匹配
-                if kb_point == point or point in kb_point or kb_point in point:
-                    entry_text = f"知识点：{kb_point}\n"
-
+                # 尝试精确匹配
+                if kb_point == point:
+                # if kb_point == point or point in kb_point or kb_point in point:
+                    # 将每个概念、性质、定理、示例分别作为独立的条目
                     if "概念" in kb_entry and kb_entry["概念"]:
-                        entry_text += f"概念：{', '.join(kb_entry['概念'])}\n"
+                        for concept in kb_entry["概念"]:
+                            retrieved_content.append(concept)
                     
                     if "性质" in kb_entry and kb_entry["性质"]:
-                        entry_text += f"性质：{', '.join(kb_entry['性质'])}\n"
+                        for prop in kb_entry["性质"]:
+                            retrieved_content.append(prop)
                     
                     if "定理" in kb_entry and kb_entry["定理"]:
-                        entry_text += f"定理：{', '.join(kb_entry['定理'])}\n"
+                        for theorem in kb_entry["定理"]:
+                            retrieved_content.append(theorem)
                     
                     if "示例" in kb_entry and kb_entry["示例"]:
-                        entry_text += f"示例：{', '.join(kb_entry['示例'])}\n"
-                    
-                    retrieved_content.append(entry_text)
+                        for example in kb_entry["示例"]:
+                            retrieved_content.append(example)
+        
+        # 从检索出的内容中随机选择最多三条
+        print(f"content count: {len(retrieved_content)}")
+        if len(retrieved_content) > 3:
+            retrieved_content = random.sample(retrieved_content, 3)
         
         return "\n\n".join(retrieved_content) if retrieved_content else ""
     
@@ -2723,16 +2731,20 @@ class NovelProblemGenerator:
             你是一个高级数学命题专家。
 
             请基于下面从教科书中提取的相关知识点，设计一道概念题，并给出正确答案：
-            - 根据知识库中检索到的相关内容（包括概念、性质、定理和示例），设计一道新颖的概念性问题及其正确答案，但不要直接复制；
-            - 例如针对"逻辑用语"的，可以相关内容，可以设计如下题目及其正确答案：
+            - 根据知识库中检索到的相关内容（包括概念、性质、定理和示例），设计一道新颖的概念性问题及其正确答案
+            - 不能自由发挥，比如检索出的内容是：“若ab=0，则a=0或b=0。”，则不能设计出“两个数的乘积为零，则至少有一个为零的原则称为什么？”这样的题目，因为基于的内容中根本没提到这个原则的名称。
+            - 例如针对"逻辑用语"的相关内容，可以设计如下题目及其正确答案：
                 {{
                     "origin_statement": "可供真假判断的陈述语句称为命题",
                     "question": "可供真假判断的陈述语句称为什么？", 
                     "answer": "命题"
                 }}
 
-            从知识库中检索到的相关内容如下，选择一条能够设计出概念题的内容，保证正确答案简单且唯一，给出你基于的内容、题目和正确答案：
+            从知识库中选择一条能够设计出概念题的内容，保证正确答案简单且唯一。例如：“等式P(A|B)=P(A)P(B|A)/P(B)称为什么？”就没有“等式P(A|B)=P(A)P(B|A)/P(B)称为什么公式”好，因为前者的答案更固定。
+            知识库中检索到的相关内容如下：
             {retrieved_knowledge}
+            
+            给出你基于的内容、题目和正确答案：
 
             请以JSON格式输出，格式如下：
             {{
