@@ -59,6 +59,8 @@ DEFAULT_ROLE_MODEL = {
     "refine": default_role_model,  # 代码精炼
     "variant": default_role_model,     # 数字/条件变体生成
     "range": default_role_model,  # 变量取值范围确定
+    "retrieve": default_role_model,  # 题目检索（novel-1）
+    "paraphrase": default_role_model,  # 题目改写（novel-1）
     "generate": default_role_model,  # 概念题生成（novel-2）
 }
 
@@ -2286,30 +2288,65 @@ class NovelProblemGenerator:
         self.knowledge_base_path = Path("knowledge_base/knowledge_base_math.json")
         self.knowledge_base = None
 
-    def generate_novel1(self, item: ProblemItem) -> ProblemItem:
+    def _retrieve_problems_from_web(self, knowledge_points: List[str]) -> str:
         """
-        novel-1：同知识点 + 相似难度 + 新情景
+        从网络检索题目
         """
-        prompt = textwrap.dedent(f"""
-            你是一个数学竞赛命题专家。
-
-            请根据下面的原始题目，设计一条“novel-1 风格”的新题：
-            - 主要考查的知识点与原题相同或非常接近；
-            - 难度与原题大致相同；
-            - 叙事背景、情境、变量等可以完全改变；
-            - 题目结构和表述方式要与原题有明显区别，看起来像一道“不同的题”；
-            - 不要给出解答，只给出完整题目陈述（英文）。
-
-            原始题目：
-            {item.original_question}
-
-            （如有用，请参考原题解析）：
-            {item.solution}
-
-            请直接输出新题题干，不要加入任何解释。
+        
+        return ""
+    
+    def generate_novel1(
+        self,
+        item: ProblemItem,
+        llm_extract: Optional[LLMClient] = None,
+        llm_retrieve: Optional[LLMClient] = None,
+        llm_paraphrase: Optional[LLMClient] = None,
+    ) -> ProblemItem:
+        """
+        novel-1：recent-source adaptation via structured retrieval and paraphrasing
+        1. 提取题目的主要知识点
+        2. 基于知识点检索/生成匹配的2025年最新考试题目（模拟从题库检索）
+        3. 改写检索到的题目
+        """
+        llm_extract = llm_extract or self.llm
+        llm_retrieve = llm_retrieve or self.llm
+        llm_paraphrase = llm_paraphrase or self.llm
+        
+        print("--------------------------------提取题目知识点--------------------------------")
+        knowledge_points = self._extract_knowledge_points(
+            item.original_question, 
+            llm_extract, 
+            item.solution
+        )
+        print(f"提取到的知识点：{knowledge_points}")
+        
+        if not knowledge_points:
+            print("警告：未能提取到知识点")
+            return None
+        
+        print("--------------------------------网络检索题目--------------------------------")
+        retrieved_problem = self._retrieve_problems_from_web(knowledge_points)
+        print(f"检索到的题目：{retrieved_problem}")
+        
+        print("--------------------------------改写题目--------------------------------")
+        # 改写检索到的题目
+        paraphrase_prompt = textwrap.dedent(f"""
+            你是一个数学题目改写专家。请对以下题目进行改写，生成一道新的题目。
+            
+            原始题目（从题库检索到的）：
+            {retrieved_problem}
+            
+            要求：
+            - 保持相同的知识点和难度水平
+            - 改变题目的表述方式、背景、情境或变量名称
+            - 题目结构和逻辑可以适当调整，但要保持数学本质不变
+            - 只输出改写后的题目文本，不要包含解答或答案
+            
+            改写后的题目：
             """)
-        resp = self.llm.chat(prompt)
-        item.augmented_question = resp.strip()
+        paraphrased_problem = llm_paraphrase.chat(paraphrase_prompt).strip()
+        
+        item.augmented_question = paraphrased_problem
         item.method_used = "novel-1"
         return item
 
@@ -2401,7 +2438,6 @@ class NovelProblemGenerator:
                 shutil.rmtree(temp_dir)
             raise e
 
-    
     def _build_knowledge_base_from_pdf(self, pdf_path: Optional[Union[str, Path]] = None, merge: bool = True) -> Dict:
         """
         从PDF文件构建知识库
@@ -2617,23 +2653,37 @@ class NovelProblemGenerator:
         available_knowledge_points: Optional[List[str]] = None
     ) -> List[str]:
         """提取题目的主要知识点"""
-
-        # 如果提供了可用的知识点列表，让模型从中选择
-        kb_points_str = "、".join(available_knowledge_points)
-        prompt = textwrap.dedent(f"""
-            你是一个数学教育专家。请分析下面的数学题目，从知识库中识别主要涉及的知识点。
-            题目：
-            {problem_text}
-            解答：
-            {solution}
-            
-            知识库中可用的知识点列表：
-            {kb_points_str}
-            
-            请从上述知识点列表中选择与题目最相关的一个知识点，以JSON格式输出，格式为：{{"knowledge_points": ["知识点"]}}
-            只选择与题目确实相关的知识点，必须完全匹配知识库中的知识点名称。
-            只输出知识点名称，不要有任何其他文字，禁止在输出中解释或说明你为什么选择这个知识点。
-            """)
+        
+        if available_knowledge_points:
+            # 如果提供了可用的知识点列表，让模型从中选择
+            kb_points_str = "、".join(available_knowledge_points)
+            prompt = textwrap.dedent(f"""
+                你是一个数学教育专家。请分析下面的数学题目，从知识库中识别主要涉及的知识点。
+                题目：
+                {problem_text}
+                解答：
+                {solution}
+                
+                知识库中可用的知识点列表：
+                {kb_points_str}
+                
+                请从上述知识点列表中选择与题目最相关的一个知识点，以JSON格式输出，格式为：{{"knowledge_points": ["知识点"]}}
+                只选择与题目确实相关的知识点，必须完全匹配知识库中的知识点名称。
+                只输出知识点名称，不要有任何其他文字，禁止在输出中解释或说明你为什么选择这个知识点。
+                """)
+        else:
+            # 如果没有提供知识点列表，使用自由提取方式
+            prompt = textwrap.dedent(f"""
+                你是一个数学教育专家。请分析下面的数学题目，提取主要涉及的知识点。
+                题目：
+                {problem_text}
+                解答：
+                {solution}
+                请以JSON格式输出知识点列表，格式为：{{"knowledge_points": ["知识点1", "知识点2", ...]}}
+                知识点应该用简短的中文名称，如 "集合", "函数", "不等式", "概率", "几何", "代数", "复数", "对数", "三角函数", "方程" 等。
+                注意：输出基础的知识点名称，而不是具体的运算方法或技巧，例如应该输出"对数"而不是"对数运算性质"，输出"方程"而不是"方程求解"。
+                只输出JSON，不要有其他文字。
+                """)
 
         try:
             resp = llm.chat(prompt)
@@ -2869,7 +2919,13 @@ class AMESPipeline:
             if not self.novel_generator:
                 raise RuntimeError("NovelProblemGenerator 未初始化")
             if method == "6":
-                item = self.novel_generator.generate_novel1(item)
+                llms = self.role_llms
+                item = self.novel_generator.generate_novel1(
+                    item,
+                    llm_extract=llms.get("extract"),  # 提取知识点
+                    llm_retrieve=llms.get("retrieve") or self.novel_generator.llm,  # 检索题目
+                    llm_paraphrase=llms.get("paraphrase") or self.novel_generator.llm,  # 改写题目
+                )
             else:
                 llms = self.role_llms
                 item = self.novel_generator.generate_novel2(
