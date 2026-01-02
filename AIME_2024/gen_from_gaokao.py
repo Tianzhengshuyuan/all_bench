@@ -357,10 +357,9 @@ def extract_answer_with_options(question_element, driver, session, question_idx)
     
     # 查找答案部分 - 根据图3，答案在 div.q-analyize-mc 中
     analyze_div = question_element.find_next('div', class_='q-analyize')
-    if not analyze_div:
-        analyze_div = question_element.find_next('div', class_='q-analyze')  # 可能的拼写变体
-    
+
     if analyze_div:
+        print(f"  📥 找到答案部分: {analyze_div}") 
         # 查找答案部分 - 先找 J_ana_ans 容器
         ans_item = analyze_div.find('div', class_='J_ana_ans')
         if ans_item:
@@ -368,7 +367,7 @@ def extract_answer_with_options(question_element, driver, session, question_idx)
             ans_mc = ans_item.find('div', class_='q-analyize-mc')
             if ans_mc:
                 # 检查答案中是否有图片
-                img_tags = ans_mc.find_all('img', class_='mathml')
+                img_tags = ans_mc.find_all('img')
                 if img_tags:
                     # 有图片，需要识别
                     for img_idx, img in enumerate(img_tags):
@@ -377,6 +376,7 @@ def extract_answer_with_options(question_element, driver, session, question_idx)
                             continue
                         
                         img_filename = f"q{question_idx}_ans_img{img_idx}.png"
+                        print(f"  📥 下载答案图片: {img_filename}")
                         img_path = os.path.join(IMAGES_DIR, img_filename)
                         abs_img_path = os.path.abspath(img_path)
                         
