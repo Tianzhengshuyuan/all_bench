@@ -12,6 +12,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.options import Options
@@ -24,6 +25,7 @@ import base64
 import os
 import asyncio
 import random
+from datetime import datetime
 from urllib.parse import urljoin, urlparse
 from openai import OpenAI
 from volcenginesdkarkruntime import Ark, AsyncArk
@@ -37,12 +39,16 @@ except ImportError:
 
 # ===== 用户配置 =====
 URL = "https://zujuan.21cnjy.com/question?tree_type=knowledge&xd=3&chid=3"
-USERNAME = "18192300180"         # 你的登录账号
-PASSWORD = "xx100806"           # 你的密码
+# 登录方式选择：'password' 表示账号密码登录，'mobile' 表示手机号+验证码登录
+LOGIN_METHOD = "mobile"      # 可选值: "password" 或 "mobile"
+USERNAME = "18192300180"         # 你的登录账号（用于账号密码登录）
+PASSWORD = "xx100806"           # 你的密码（用于账号密码登录）
+MOBILE = "18192300180"          # 你的手机号（用于手机验证码登录）
 KEYWORD = "幂函数"    # 搜索关键词
 OUTPUT_FILE = "题目_答案.txt"
 WAIT_TIME = 3                 # 页面加载等待时间（秒）
 IMAGES_DIR = "math_images"    # 图片保存目录
+DEBUG_PAGES_DIR = "debug_pages"  # 调试页面保存目录
 DOUBAO_API_KEY = "196b33be-8abb-4af3-9fba-6e266b2dd942"  # 豆包API密钥
 
 # ===== 初始化 Headless Chrome =====
@@ -328,17 +334,95 @@ def extract_option_content(op_item_element, driver, session, question_idx, optio
         return meat_span.get_text(strip=True)
 
 
-def extract_answer_with_options(question_element, driver, session, question_idx):
+def save_page_for_debug(driver, question_idx=None, stage="before_click"):
     """
-    提取选择题的选项和答案
+    保存页面HTML和截图到本地，方便调试定位元素
+    注意：question_idx 仅用于生成文件名，不影响获取的页面内容。函数会保存完整的页面HTML。
+    
+    :param driver: Selenium driver
+    :param question_idx: 题目索引（仅用于生成文件名，可选）
+    :param stage: 保存阶段标识（before_click, after_click等）
+    :return: 保存的文件路径
+    """
+    try:
+        # 确保调试目录存在
+        os.makedirs(DEBUG_PAGES_DIR, exist_ok=True)
+        
+        # 如果提供了原始URL，检查当前URL是否匹配，如果不匹配则导航回去
+        current_url = driver.current_url
+
+        
+        # 切换到默认内容（确保不在frame中）
+        try:
+            driver.switch_to.default_content()
+        except:
+            pass
+        
+        # 等待页面稳定
+        time.sleep(0.5)
+        
+        # 等待页面加载完成（检查document.readyState）
+        try:
+            WebDriverWait(driver, 5).until(
+                lambda d: d.execute_script("return document.readyState") == "complete"
+            )
+        except:
+            pass
+        
+        # 生成文件名（包含时间戳）
+        # question_idx 仅用于文件名，不影响获取的页面内容
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        if question_idx is not None:
+            base_filename = f"q{question_idx}_{stage}_{timestamp}"
+        else:
+            base_filename = f"page_{stage}_{timestamp}"
+        
+        # 保存HTML - 获取完整页面的HTML内容
+        html_filename = f"{base_filename}.html"
+        html_path = os.path.join(DEBUG_PAGES_DIR, html_filename)
+        
+        # 获取完整页面HTML
+        page_source = driver.page_source
+        if not page_source or len(page_source) < 100:
+            # 如果page_source不正常，尝试用JavaScript获取完整HTML
+            try:
+                page_source = driver.execute_script("return document.documentElement.outerHTML")
+            except:
+                page_source = driver.page_source
+        
+        # 检查获取的HTML是否合理（应该包含完整的HTML结构）
+        if not page_source or len(page_source) < 500:
+            print(f"  ⚠️  警告：获取的页面HTML似乎不完整（大小: {len(page_source)} 字符）")
+            print(f"  ⚠️  当前URL: {driver.current_url}")
+        
+        with open(html_path, 'w', encoding='utf-8') as f:
+            f.write(page_source)
+        print(f"  💾 已保存完整页面HTML: {html_path} (大小: {len(page_source)} 字符)")
+        
+        # 保存截图
+        screenshot_filename = f"{base_filename}.png"
+        screenshot_path = os.path.join(DEBUG_PAGES_DIR, screenshot_filename)
+        driver.save_screenshot(screenshot_path)
+        print(f"  📸 已保存页面截图: {screenshot_path}")
+        
+        return html_path, screenshot_path
+    except Exception as e:
+        print(f"  ⚠️  保存页面失败: {e}")
+        import traceback
+        traceback.print_exc()
+        return None, None
+
+
+def extract_options(question_element, driver, session, question_idx):
+    """
+    提取选择题的选项
     :param question_element: 题目元素
     :param driver: Selenium driver
     :param session: requests session
     :param question_idx: 题目索引
-    :return: (选项字典{A:内容, B:内容, ...}, 答案内容)
+    :return: 选项字典{A:内容, B:内容, ...}
     """
     options = {}
-    answer_content = ""
     
     # 查找选项容器 - 根据图2，选项在 span.op-item 中
     question_block = question_element.find_parent('div', class_='question-block')
@@ -355,11 +439,154 @@ def extract_answer_with_options(question_element, driver, session, question_idx)
                     options[option_letter] = option_content
                     print(f"  选项{option_letter}: {option_content}")
     
-    # 查找答案部分 - 根据图3，答案在 div.q-analyize-mc 中
-    analyze_div = question_element.find_next('div', class_='q-analyize')
+    return options
+
+
+def extract_answer(question_element, driver, session, question_idx, options=None):
+    """
+    提取选择题的答案
+    :param question_element: 题目元素
+    :param driver: Selenium driver
+    :param session: requests session
+    :param question_idx: 题目索引
+    :param options: 选项字典（用于将答案标记转换为选项内容）
+    :return: 答案内容
+    """
+    if options is None:
+        options = {}
+    
+    answer_content = ""
+    
+
+    # 点击 q-mc 区域以显示答案
+    # 优先使用题目索引定位（更可靠），如果失败再尝试其他方法
+    qid = None
+    
+    # 首先等待 QuestionView 元素加载完成
+    try:
+        print(f"  ⏳ 等待题目元素加载...")
+        WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((By.CSS_SELECTOR, "li.QuestionView"))
+        )
+        print(f"  ✅ 题目元素已加载")
+    except Exception as e:
+        print(f"  ⚠️  等待题目元素加载超时: {e}")
+    
+    try:
+        # 通过题目索引定位（最可靠）
+        # 使用更精确的 XPath，包含 question-block 中间层
+        print(f"  🖱️  尝试通过题目索引定位第 {question_idx} 题...")
+        xpath_q_mc = f"(//li[@class='QuestionView'])[{question_idx}]//div[@class='question-block']//div[@class='q-mc']"
+        
+        # 等待元素出现
+        q_mc_selenium = WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((By.XPATH, xpath_q_mc))
+        )
+        print(f"  ✅ 成功定位到 q-mc 元素")
+        
+        # 尝试获取 data-qid（用于后续定位答案）
+        try:
+            xpath_q_tit = f"(//li[@class='QuestionView'])[{question_idx}]//div[@class='q-tit']"
+            q_tit_selenium = WebDriverWait(driver, 5).until(
+                EC.presence_of_element_located((By.XPATH, xpath_q_tit))
+            )
+            qid = q_tit_selenium.get_attribute('data-qid')
+            if qid:
+                print(f"  📌 获取到 data-qid: {qid}")
+        except:
+            pass
+        
+    except Exception as e1:
+        print(f"  ⚠️  通过索引定位失败: {e1}")
+
+    
+    # 滚动到元素可见并点击
+    try:
+        # 滚动到元素可见
+        driver.execute_script("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", q_mc_selenium)
+        time.sleep(0.5)
+        
+        # 等待元素可点击
+        try:
+            WebDriverWait(driver, 5).until(
+                EC.element_to_be_clickable(q_mc_selenium)
+            )
+        except:
+            pass  # 如果等待超时，继续尝试点击
+        
+        # 点击 q-mc 区域 - 优先使用 Selenium 原生点击（模拟真实鼠标点击）
+        print(f"  🖱️  点击题目区域以显示答案...")
+        clicked = False
+        
+        # 方法1: 尝试使用 Selenium 原生 click（最接近真实鼠标点击）
+        try:
+            q_mc_selenium.click()
+            clicked = True
+            print(f"  ✅ 使用原生 click 成功")
+        except Exception as e1:
+            print(f"  ⚠️  原生 click 失败: {e1}")
+            
+            # 方法2: 尝试使用 ActionChains 模拟鼠标点击
+            try:
+                actions = ActionChains(driver)
+                actions.move_to_element(q_mc_selenium)
+                actions.click()
+                actions.perform()
+                clicked = True
+                print(f"  ✅ 使用 ActionChains click 成功")
+            except Exception as e2:
+                print(f"  ⚠️  ActionChains click 失败: {e2}")
+                
+                # 方法3: 使用 JavaScript click 作为最后备选
+                try:
+                    driver.execute_script("arguments[0].click();", q_mc_selenium)
+                    clicked = True
+                    print(f"  ✅ 使用 JavaScript click 成功")
+                except Exception as e3:
+                    print(f"  ❌ 所有点击方法都失败: {e3}")
+        
+        if clicked:
+            time.sleep(1)  # 等待答案加载
+            
+            # 等待 J_ana_ans 出现（答案加载完成）
+            try:
+                # 使用题目索引等待答案出现（最可靠）
+                WebDriverWait(driver, 10).until(
+                    EC.presence_of_element_located((By.XPATH, f"(//li[@class='QuestionView'])[{question_idx}]//div[@class='q-analyize']//div[@class='J_ana_ans']"))
+                )
+                print(f"  ✅ 答案已加载")
+            except Exception as e:
+                print(f"  ⚠️  等待答案加载超时: {e}")
+        else:
+            print(f"  ❌ 无法点击元素，跳过答案提取")
+    except Exception as e:
+        print(f"  ⚠️  点击题目区域失败: {e}")
+    
+    # 重新解析页面以获取更新后的答案
+    page_source = driver.page_source
+    soup = BeautifulSoup(page_source, "lxml")
+    
+    # 重新定位题目元素（优先使用索引，更可靠）
+    question_element_updated = None
+    
+    # 方法1: 通过索引定位
+    q_tit_elements = soup.select("ul li div.q-tit")
+    if question_idx <= len(q_tit_elements):
+        question_element_updated = q_tit_elements[question_idx - 1]
+    
+    # 方法2: 如果索引定位失败且 qid 存在，尝试通过 qid 定位
+    if not question_element_updated and qid:
+        question_element_updated = soup.find('div', class_='q-tit', attrs={'data-qid': qid})
+    
+    # 方法3: 如果都失败，使用原始元素
+    if not question_element_updated:
+        question_element_updated = question_element
+    
+    # 查找答案部分 - 根据图4，答案在 J_ana_ans 中
+    analyze_div = question_element_updated.find_next('div', class_='q-analyize')
 
     if analyze_div:
-        print(f"  📥 找到答案部分: {analyze_div}") 
+        print(f"  📥 找到答案部分") 
         # 查找答案部分 - 先找 J_ana_ans 容器
         ans_item = analyze_div.find('div', class_='J_ana_ans')
         if ans_item:
@@ -400,7 +627,7 @@ def extract_answer_with_options(question_element, driver, session, question_idx)
                     answer_content = options[answer_content]
                     print(f"  答案标记{answer_mark}对应内容: {answer_content}")
     
-    return options, answer_content
+    return answer_content, answer_mark
 
 
 def extract_and_replace_images(soup_element, driver, session, question_idx):
@@ -474,41 +701,112 @@ def login(driver):
     )
     time.sleep(1)
 
-    # ✅ 点击“账号密码登录”选项卡（data-type="pwd"）
-    try:
-        print("🧭 切换到【账号密码登录】模式...")
-        pwd_tab = WebDriverWait(driver, 10).until(
-            EC.element_to_be_clickable((By.CSS_SELECTOR, "a[data-type='pwd']"))
+    # 根据配置选择登录方式
+    if LOGIN_METHOD == "mobile":
+        # ===== 方法1：手机号+验证码登录 =====
+        print("📱 使用【手机号+验证码】登录方式...")
+        
+        # 切换到手机验证码登录选项卡
+        try:
+            print("🧭 切换到【手机验证码登录】模式...")
+            mobile_tab = WebDriverWait(driver, 10).until(
+                EC.element_to_be_clickable((By.CSS_SELECTOR, "a[data-type='m14c']"))
+            )
+            driver.execute_script("arguments[0].click();", mobile_tab)
+            time.sleep(1.5)  # 等待动画或 DOM 切换完成
+        except Exception as e:
+            print(f"⚠️ 无法切换至手机验证码登录模式：{e}")
+
+        # 等待手机号输入框变为可见
+        WebDriverWait(driver, 15).until(
+            EC.visibility_of_element_located((By.ID, "user-phone"))
         )
-        driver.execute_script("arguments[0].click();", pwd_tab)
-        time.sleep(1.5)  # 等待动画或 DOM 切换完成
-    except Exception as e:
-        print(f"⚠️ 无法切换至账号密码登录模式：{e}")
+        WebDriverWait(driver, 15).until(
+            EC.visibility_of_element_located((By.ID, "resu-m14c"))
+        )
+        
 
-    # 等待账号输入框变为可见
-    WebDriverWait(driver, 15).until(
-        EC.visibility_of_element_located((By.ID, "user-name"))
-    )
-    WebDriverWait(driver, 15).until(
-        EC.visibility_of_element_located((By.ID, "user-pwd"))
-    )
+        
+        # 输入手机号
+        print(f"➡️  输入手机号: {MOBILE}")
+        mobile_input = driver.find_element(By.ID, "user-phone")
+        mobile_input.clear()
+        mobile_input.send_keys(MOBILE)
+        time.sleep(0.5)
 
-    print("➡️  输入账号和密码...")
-    username_input = driver.find_element(By.ID, "user-name")
-    password_input = driver.find_element(By.ID, "user-pwd")
+        # 点击"获取验证码"按钮
+        print("📲 正在点击【获取验证码】按钮...")
+        try:
+            code_btn = WebDriverWait(driver, 10).until(
+                EC.element_to_be_clickable((By.CSS_SELECTOR, "a.J_BtnMsgCode, .btn-code"))
+            )
+            driver.execute_script("arguments[0].click();", code_btn)
+            print("✅ 验证码已发送，请查收短信...")
+            time.sleep(2)  # 等待验证码发送
+        except Exception as e:
+            print(f"⚠️ 点击获取验证码按钮失败：{e}")
 
-    username_input.clear()
-    username_input.send_keys(USERNAME)
-    time.sleep(0.5)
-    password_input.clear()
-    password_input.send_keys(PASSWORD)
-    time.sleep(0.5)
+        # 输入验证码
+        max_wait_time = 300  # 最大等待时间（秒）
+        elapsed_time = 0
+        
+        code_input = driver.find_element(By.ID, "resu-m14c")
+        input_code = ""
+        
+        while not input_code and elapsed_time < max_wait_time:
+            try:
+                input_code = input("请输入验证码: ")    
+                code_input.send_keys(input_code)
+                break
+            except Exception as e:
+                print(f"⚠️ 输入验证码失败: {e}")
+                time.sleep(1)
+            
 
-    # 点击登录按钮
+        if not input_code:
+            print("⚠️ 验证码输入超时，请重新运行程序")
+            return False
+
+    else:
+        # ===== 方法2：账号密码登录（原来的方式）=====
+        print("🔑 使用【账号密码】登录方式...")
+        
+        # 切换到账号密码登录选项卡
+        try:
+            print("🧭 切换到【账号密码登录】模式...")
+            pwd_tab = WebDriverWait(driver, 10).until(
+                EC.element_to_be_clickable((By.CSS_SELECTOR, "a[data-type='pwd']"))
+            )
+            driver.execute_script("arguments[0].click();", pwd_tab)
+            time.sleep(1.5)  # 等待动画或 DOM 切换完成
+        except Exception as e:
+            print(f"⚠️ 无法切换至账号密码登录模式：{e}")
+
+        # 等待账号输入框变为可见
+        WebDriverWait(driver, 15).until(
+            EC.visibility_of_element_located((By.ID, "user-name"))
+        )
+        WebDriverWait(driver, 15).until(
+            EC.visibility_of_element_located((By.ID, "user-pwd"))
+        )
+        
+        # 输入账号和密码
+        print("➡️  输入账号和密码...")
+        username_input = driver.find_element(By.ID, "user-name")
+        password_input = driver.find_element(By.ID, "user-pwd")
+
+        username_input.clear()
+        username_input.send_keys(USERNAME)
+        time.sleep(0.5)
+        password_input.clear()
+        password_input.send_keys(PASSWORD)
+        time.sleep(0.5)
+
+    # 点击登录按钮（两种方式共用）
     print("🚪 正在点击登录按钮...")
     login_btn = driver.find_element(By.CSS_SELECTOR, "button.btn.btn-submit")
     driver.execute_script("arguments[0].click();", login_btn)
-
+    
     # 验证是否成功
     try:
         # 等待URL跳转到 zujuan.21cnjy.com 域名（登录成功后会跳转）
@@ -516,14 +814,146 @@ def login(driver):
             lambda d: "zujuan.21cnjy.com" in d.current_url
         )
         print("✅ 登录成功，正在跳转...")
+        print(f"\n📥 保存完整页面用于调试...")
+        save_page_for_debug(driver, question_idx=5, stage="before_click")
     except Exception:
-        print("⚠️ 登录失败，请检查账号或验证码！")
+        print("⚠️ 登录失败，请检查账号/密码或验证码！")
 
     time.sleep(2)
 
 
 # ===== 搜索并抓取题目 =====
-def scrape_questions(driver, keyword, output_file):
+def scrape_questions(driver, keyword):
+    print(f"🔍 正在访问：{URL}")
+    driver.get(URL)
+
+    # 等待页面加载完成，特别是左侧知识树区域
+    time.sleep(WAIT_TIME)
+    
+    # 等待左侧搜索框出现（根据HTML结构：form#J_ltsrchFrm > input[name='know_txt']）
+    print("🔍 正在定位搜索框...")
+    search_box = WebDriverWait(driver, 10).until(
+        EC.element_to_be_clickable((By.CSS_SELECTOR, "input[name='know_txt'], #J_ltsrchFrm input[type='text'], .fm-txt"))
+    )
+
+    print(f"📝 在搜索框中输入关键词: {keyword}")
+    search_box.clear()
+    search_box.send_keys(keyword)
+    time.sleep(1)
+    search_box.send_keys(Keys.ENTER)  
+    time.sleep(WAIT_TIME + 2)
+
+    # 点击左侧对应知识点
+    final_keyword = keyword  # 默认使用原始关键词
+    try:
+        print(f"➡️  正在查找菜单项【{keyword}】...")
+        # 等待搜索结果出现（搜索结果通常在 .list-tree-search-list 或 .list-ts-chbox 区域）
+        WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((By.CSS_SELECTOR, ".list-ts-item, .J_ListTsItem"))
+        )
+        time.sleep(1)  # 额外等待搜索结果渲染
+
+        link = None
+        
+        # 策略1: 尝试精确匹配（去除<em>标签后文本完全匹配）
+        try:
+            # 查找所有匹配的条目
+            all_matches = driver.find_elements(By.XPATH, f"//span[@class='ts-tit' and contains(., '{keyword}')]/ancestor::li[contains(@class, 'list-ts-item')]")
+            if all_matches:
+                # 遍历所有匹配项，查找文本完全匹配的
+                for item in all_matches:
+                    text_content = item.find_element(By.CSS_SELECTOR, "span.ts-tit").text.strip()
+                    # 去除可能的空格和特殊字符后比较
+                    if text_content == keyword or text_content.replace(' ', '') == keyword.replace(' ', ''):
+                        link = item
+                        final_keyword = text_content  # 记录最终使用的关键词
+                        print(f"✅ 找到精确匹配: {text_content}")
+                        break
+                
+                # 如果没有精确匹配，选择第一个
+                if link is None:
+                    link = all_matches[0]
+                    text_content = link.find_element(By.CSS_SELECTOR, "span.ts-tit").text.strip()
+                    final_keyword = text_content  # 记录最终使用的关键词
+                    print(f"⚠️  未找到精确匹配，选择第一个匹配项: {text_content}")
+        except Exception as e:
+            print(f"⚠️ 匹配过程中出现错误: {e}")
+
+        if link is None:
+            raise Exception("未找到匹配的知识点条目")
+        
+        # 滚动元素到可视区域（这是关键步骤，避免element not interactable错误）
+        driver.execute_script("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", link)
+        time.sleep(0.5)
+        
+        # 确保元素可见
+        driver.execute_script("arguments[0].style.display = 'block';", link)
+        WebDriverWait(driver, 10).until(
+            EC.visibility_of(link)
+        )
+        
+        # 使用JavaScript点击，更可靠（避免element not interactable错误）
+        # JavaScript click 可以绕过许多交互性问题
+        driver.execute_script("arguments[0].click();", link)
+        print(f"✅ 成功点击知识点: {final_keyword}")
+        time.sleep(WAIT_TIME + 2)
+    except Exception as e:
+        print(f"⚠️ 未找到左侧菜单【{keyword}】，错误信息: {e}")
+        print(f"⚠️ 将直接解析当前页面内容。")
+
+
+    # 创建requests session以保持cookies（用于下载图片）
+    print("🔧 初始化下载会话...")
+    session = requests.Session()
+    for cookie in driver.get_cookies():
+        session.cookies.set(cookie['name'], cookie['value'])
+    
+    # 确保图片目录存在
+    os.makedirs(IMAGES_DIR, exist_ok=True)
+    
+    # 解析题目内容
+    page_source = driver.page_source
+    soup = BeautifulSoup(page_source, "lxml")
+    questions = soup.select("ul li div.q-tit")
+
+    print(f"🧐 共发现 {len(questions)} 道题。")
+
+    # 随机选择一道题
+    if len(questions) == 0:
+        print("⚠️ 未找到任何题目")
+        return None, None, None, None
+    
+    selected_idx = random.randint(0, len(questions) - 1)
+    selected_idx = 0 # for test
+    selected_q = questions[selected_idx]
+    actual_idx = selected_idx + 1  # 题目编号从1开始
+    
+    print(f"🎲 随机选择第 {actual_idx} 题进行处理...")
+    
+    # 提取题目文本，并识别其中的数学公式图片
+    q_text = extract_and_replace_images(selected_q, driver, session, actual_idx)
+    q_text = q_text.replace(" ", "")
+    print(f"🔍 题目文本: {q_text}")
+    
+    # 提取选项
+    selected_q = questions[selected_idx]
+    print(f"\n📋 提取选项...")
+    options = extract_options(selected_q, driver, session, actual_idx)
+    
+    # 返回最终使用的关键词、题目索引和选项
+    return final_keyword, actual_idx, options, q_text
+
+
+# ===== 提取答案 =====
+def scrape_answers(driver, keyword, question_idx, options):
+    """
+    重复搜索步骤，然后直接提取答案
+    :param driver: Selenium driver
+    :param keyword: 搜索关键词
+    :param question_idx: 题目索引（从1开始）
+    :param options: 选项字典（从scrape_questions获取）
+    :return: 答案文本
+    """
     print(f"🔍 正在访问：{URL}")
     driver.get(URL)
 
@@ -607,32 +1037,28 @@ def scrape_questions(driver, keyword, output_file):
     # 确保图片目录存在
     os.makedirs(IMAGES_DIR, exist_ok=True)
     
-    # 解析题目内容
+    # 解析题目内容，定位到指定索引的题目
     page_source = driver.page_source
     soup = BeautifulSoup(page_source, "lxml")
     questions = soup.select("ul li div.q-tit")
-    results = []
 
     print(f"🧐 共发现 {len(questions)} 道题。")
-    
-    # 随机选择一道题
+
     if len(questions) == 0:
         print("⚠️ 未找到任何题目")
-        return
+        return "（未找到题目）"
     
-    selected_idx = random.randint(0, len(questions) - 1)
-    selected_q = questions[selected_idx]
-    actual_idx = selected_idx + 1  # 题目编号从1开始
+    if question_idx > len(questions):
+        print(f"⚠️ 题目索引 {question_idx} 超出范围（共 {len(questions)} 题）")
+        return "（题目索引超出范围）"
     
-    print(f"🎲 随机选择第 {actual_idx} 题进行处理...")
+    selected_q = questions[question_idx - 1]  # 题目索引从1开始，数组索引从0开始
     
-    # 提取题目文本，并识别其中的数学公式图片
-    q_text = extract_and_replace_images(selected_q, driver, session, actual_idx)
-    q_text = q_text.replace(" ", "")
-
-    # 提取选项和答案
-    print(f"\n📋 提取选项和答案...")
-    options, answer_content = extract_answer_with_options(selected_q, driver, session, actual_idx)
+    print(f"📋 直接处理第 {question_idx} 题，开始提取答案...")
+    
+    # 提取答案（使用传入的options）
+    print(f"\n📋 提取答案...")
+    answer_content, answer_mark = extract_answer(selected_q, driver, session, question_idx, options)
     
     # 如果找到了选项，说明是选择题
     if options:
@@ -641,24 +1067,16 @@ def scrape_questions(driver, keyword, output_file):
             ans_text = answer_content
         else:
             ans_text = "（未找到答案内容）"
-        
-        results.append(f"{q_text}\n答案：{ans_text}\n")
     else:
         # 不是选择题，使用原来的方法提取答案
         ans_div = selected_q.find_next("div", class_="q-analyze")
         if ans_div:
-            ans_text = extract_and_replace_images(ans_div, driver, session, f"{actual_idx}_ans")
+            ans_text = extract_and_replace_images(ans_div, driver, session, f"{question_idx}_ans")
             ans_text = ans_text.replace(" ", "")
         else:
             ans_text = "（未找到答案）"
-        
-        results.append(f"{q_text}\n答案：{ans_text}\n")
     
-    # 保存结果
-    with open(output_file, 'w', encoding='utf-8') as f:
-        f.write("\n".join(results))
-
-    print(f"\n✅ 已保存相关题目至文件：{output_file}")
+    return ans_text, answer_mark
 
 
 # ===== 主程序入口 =====
@@ -668,13 +1086,21 @@ if __name__ == "__main__":
     parser.add_argument("--output", type=str, default=OUTPUT_FILE, help="输出文件")
     args = parser.parse_args()
 
+    # 获得题目和选项
     print("🚀 启动 Headless 浏览器...")
     driver = init_driver()
-    try:
-        login(driver)
-        scrape_questions(driver, args.keyword, args.output)
-    except Exception as e:
-        print(f"❌ 发生错误: {e}")
-    finally:
+    login(driver)
+    final_keyword, question_idx, options, q_text = scrape_questions(driver, args.keyword)
+    # driver.quit()
+    # print("题目和选项提取完成。")
+
+    # 获得答案
+    if final_keyword and question_idx and options:
+        # driver = init_driver()
+        # login(driver)
+        ans_text, ans_mark = scrape_answers(driver, final_keyword, question_idx, options)
         driver.quit()
-        print("🛑 浏览器已关闭。")
+        print("答案提取完成。")
+        print(f"题目{q_text}的答案是：{ans_mark}，选项是：{options}")
+    else:
+        print("⚠️ 未能获取题目信息，跳过答案提取")
