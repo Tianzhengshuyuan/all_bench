@@ -500,68 +500,36 @@ def extract_answer(question_element, driver, session, question_idx, options=None
         print(f"  ⚠️  通过索引定位失败: {e1}")
 
     
-    # 滚动到元素可见并点击
-    try:
-        # 滚动到元素可见
-        driver.execute_script("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", q_mc_selenium)
-        time.sleep(0.5)
-        
-        # 等待元素可点击
-        try:
-            WebDriverWait(driver, 5).until(
-                EC.element_to_be_clickable(q_mc_selenium)
-            )
-        except:
-            pass  # 如果等待超时，继续尝试点击
-        
-        # 点击 q-mc 区域 - 优先使用 Selenium 原生点击（模拟真实鼠标点击）
-        print(f"  🖱️  点击题目区域以显示答案...")
-        clicked = False
-        
-        # 方法1: 尝试使用 Selenium 原生 click（最接近真实鼠标点击）
-        try:
-            q_mc_selenium.click()
-            clicked = True
-            print(f"  ✅ 使用原生 click 成功")
-        except Exception as e1:
-            print(f"  ⚠️  原生 click 失败: {e1}")
-            
-            # 方法2: 尝试使用 ActionChains 模拟鼠标点击
-            try:
-                actions = ActionChains(driver)
-                actions.move_to_element(q_mc_selenium)
-                actions.click()
-                actions.perform()
-                clicked = True
-                print(f"  ✅ 使用 ActionChains click 成功")
-            except Exception as e2:
-                print(f"  ⚠️  ActionChains click 失败: {e2}")
-                
-                # 方法3: 使用 JavaScript click 作为最后备选
-                try:
-                    driver.execute_script("arguments[0].click();", q_mc_selenium)
-                    clicked = True
-                    print(f"  ✅ 使用 JavaScript click 成功")
-                except Exception as e3:
-                    print(f"  ❌ 所有点击方法都失败: {e3}")
-        
-        if clicked:
-            time.sleep(1)  # 等待答案加载
-            
-            # 等待 J_ana_ans 出现（答案加载完成）
-            try:
-                # 使用题目索引等待答案出现（最可靠）
-                WebDriverWait(driver, 10).until(
-                    EC.presence_of_element_located((By.XPATH, f"(//li[@class='QuestionView'])[{question_idx}]//div[@class='q-analyize']//div[@class='J_ana_ans']"))
-                )
-                print(f"  ✅ 答案已加载")
-            except Exception as e:
-                print(f"  ⚠️  等待答案加载超时: {e}")
-        else:
-            print(f"  ❌ 无法点击元素，跳过答案提取")
-    except Exception as e:
-        print(f"  ⚠️  点击题目区域失败: {e}")
+    # 滚动到元素可见
+    driver.execute_script("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", q_mc_selenium)
+    time.sleep(0.5)
     
+    # 等待元素可点击
+    try:
+        WebDriverWait(driver, 5).until(
+            EC.element_to_be_clickable(q_mc_selenium)
+        )
+    except:
+        pass  # 如果等待超时，继续尝试点击
+    
+    # 点击 q-mc 区域 - 优先使用 Selenium 原生点击（模拟真实鼠标点击）
+    print(f"  🖱️  点击题目区域以显示答案...")
+    clicked = False
+    
+    # 使用 Selenium 原生 click（最接近真实鼠标点击）
+    try:
+        q_mc_selenium.click()
+        clicked = True
+        print(f"  ✅ 使用原生 click 成功")
+    except Exception as e1:
+        print(f"  ⚠️  原生 click 失败: {e1}")
+    
+    print(f"\n📥 保存完整页面用于调试...")
+    save_page_for_debug(driver, question_idx=5, stage="before_click")
+    
+    if clicked:
+        time.sleep(1)  # 等待答案加载
+            
     # 重新解析页面以获取更新后的答案
     page_source = driver.page_source
     soup = BeautifulSoup(page_source, "lxml")
@@ -569,20 +537,12 @@ def extract_answer(question_element, driver, session, question_idx, options=None
     # 重新定位题目元素（优先使用索引，更可靠）
     question_element_updated = None
     
-    # 方法1: 通过索引定位
+    # 通过索引定位
     q_tit_elements = soup.select("ul li div.q-tit")
     if question_idx <= len(q_tit_elements):
         question_element_updated = q_tit_elements[question_idx - 1]
-    
-    # 方法2: 如果索引定位失败且 qid 存在，尝试通过 qid 定位
-    if not question_element_updated and qid:
-        question_element_updated = soup.find('div', class_='q-tit', attrs={'data-qid': qid})
-    
-    # 方法3: 如果都失败，使用原始元素
-    if not question_element_updated:
-        question_element_updated = question_element
-    
-    # 查找答案部分 - 根据图4，答案在 J_ana_ans 中
+
+    # 查找答案部分 - 答案在 J_ana_ans 中
     analyze_div = question_element_updated.find_next('div', class_='q-analyize')
 
     if analyze_div:
