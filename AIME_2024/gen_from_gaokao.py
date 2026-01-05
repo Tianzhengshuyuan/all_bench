@@ -68,10 +68,6 @@ def init_driver():
     service = Service(CHROMEDRIVER_PATH)
     return webdriver.Chrome(service=service, options=chrome_options)
 
-def wait_visible(driver, by, selector, timeout=10):
-    """等待元素显示"""
-    return WebDriverWait(driver, timeout).until(EC.presence_of_element_located((by, selector)))
-
 
 # ===== Vision API 相关函数 =====
 async def recognize_math_image_async(image_path):
@@ -103,7 +99,7 @@ async def recognize_math_image_async(image_path):
                         },
                         {
                             "type": "input_text",
-                            "text": "请识别这张图片中的数学公式，使用LaTeX格式输出。只输出图中公式内容，不要有任何其他内容。"
+                            "text": "请识别这张图片中的内容。如果是数学公式则使用LaTeX格式输出。如果识别到包含类似“【第1空】”的内容，则删除该内容，并输出剩余内容，例如解析到“【第1空】 -1”则输出“-1”。只输出图片所含内容，不要有任何其他输出。"
                         }
                     ]
                 }
@@ -348,10 +344,6 @@ def save_page_for_debug(driver, question_idx=None, stage="before_click"):
         # 确保调试目录存在
         os.makedirs(DEBUG_PAGES_DIR, exist_ok=True)
         
-        # 如果提供了原始URL，检查当前URL是否匹配，如果不匹配则导航回去
-        current_url = driver.current_url
-
-        
         # 切换到默认内容（确保不在frame中）
         try:
             driver.switch_to.default_content()
@@ -424,7 +416,7 @@ def extract_options(question_element, driver, session, question_idx):
     """
     options = {}
     
-    # 查找选项容器 - 根据图2，选项在 span.op-item 中
+    # 查找选项容器 - 选项在 span.op-item 中
     question_block = question_element.find_parent('div', class_='question-block')
     if question_block:
         # 查找所有选项 (span.op-item)
@@ -442,10 +434,9 @@ def extract_options(question_element, driver, session, question_idx):
     return options
 
 
-def extract_answer(question_element, driver, session, question_idx, options=None):
+def extract_answer(driver, session, question_idx, options=None):
     """
     提取选择题的答案
-    :param question_element: 题目元素
     :param driver: Selenium driver
     :param session: requests session
     :param question_idx: 题目索引
@@ -586,7 +577,9 @@ def extract_answer(question_element, driver, session, question_idx, options=None
                     answer_mark = answer_content  # 保存原始标记
                     answer_content = options[answer_content]
                     print(f"  答案标记{answer_mark}对应内容: {answer_content}")
-    
+                else:
+                    answer_mark = None
+                    
     return answer_content, answer_mark
 
 
@@ -783,7 +776,7 @@ def login(driver):
 
 
 # ===== 搜索并抓取题目 =====
-def scrape_questions(driver, keyword):
+def scrape_questions_and_options(driver, keyword):
     print(f"🔍 正在访问：{URL}")
     driver.get(URL)
 
@@ -884,7 +877,7 @@ def scrape_questions(driver, keyword):
         return None, None, None, None
     
     selected_idx = random.randint(0, len(questions) - 1)
-    selected_idx = 0 # for test
+    # selected_idx = 0 # for test
     selected_q = questions[selected_idx]
     actual_idx = selected_idx + 1  # 题目编号从1开始
     
@@ -900,6 +893,11 @@ def scrape_questions(driver, keyword):
     print(f"\n📋 提取选项...")
     options = extract_options(selected_q, driver, session, actual_idx)
     
+    if options is None:
+        print("该题目为填空题")
+    else:
+        print("该题目为选择题")
+        
     # 返回最终使用的关键词、题目索引和选项
     return final_keyword, actual_idx, options, q_text
 
@@ -911,7 +909,7 @@ def scrape_answers(driver, keyword, question_idx, options):
     :param driver: Selenium driver
     :param keyword: 搜索关键词
     :param question_idx: 题目索引（从1开始）
-    :param options: 选项字典（从scrape_questions获取）
+    :param options: 选项字典（从scrape_questions_and_options获取）
     :return: 答案文本
     """
     print(f"🔍 正在访问：{URL}")
@@ -1012,13 +1010,12 @@ def scrape_answers(driver, keyword, question_idx, options):
         print(f"⚠️ 题目索引 {question_idx} 超出范围（共 {len(questions)} 题）")
         return "（题目索引超出范围）"
     
-    selected_q = questions[question_idx - 1]  # 题目索引从1开始，数组索引从0开始
     
     print(f"📋 直接处理第 {question_idx} 题，开始提取答案...")
     
     # 提取答案（使用传入的options）
     print(f"\n📋 提取答案...")
-    answer_content, answer_mark = extract_answer(selected_q, driver, session, question_idx, options)
+    answer_content, answer_mark = extract_answer(driver, session, question_idx, options)
     
     # 如果找到了选项，说明是选择题
     if options:
@@ -1028,13 +1025,11 @@ def scrape_answers(driver, keyword, question_idx, options):
         else:
             ans_text = "（未找到答案内容）"
     else:
-        # 不是选择题，使用原来的方法提取答案
-        ans_div = selected_q.find_next("div", class_="q-analyze")
-        if ans_div:
-            ans_text = extract_and_replace_images(ans_div, driver, session, f"{question_idx}_ans")
-            ans_text = ans_text.replace(" ", "")
+        if answer_content:
+            ans_text = answer_content
         else:
-            ans_text = "（未找到答案）"
+            ans_text = "（未找到答案内容）"
+
     
     return ans_text, answer_mark
 
@@ -1050,17 +1045,16 @@ if __name__ == "__main__":
     print("🚀 启动 Headless 浏览器...")
     driver = init_driver()
     login(driver)
-    final_keyword, question_idx, options, q_text = scrape_questions(driver, args.keyword)
-    # driver.quit()
-    # print("题目和选项提取完成。")
+    final_keyword, question_idx, options, q_text = scrape_questions_and_options(driver, args.keyword)
 
     # 获得答案
-    if final_keyword and question_idx and options:
-        # driver = init_driver()
-        # login(driver)
+    if final_keyword and question_idx:
         ans_text, ans_mark = scrape_answers(driver, final_keyword, question_idx, options)
         driver.quit()
         print("答案提取完成。")
-        print(f"题目{q_text}的答案是：{ans_mark}，选项是：{options}")
+        if ans_mark:
+            print(f"识别到选择题\n题目:{q_text}\n选项：{options}\n答案：{ans_mark}，")
+        else:
+            print(f"识别到填空题\n题目:{q_text}\n答案：{ans_text}")
     else:
         print("⚠️ 未能获取题目信息，跳过答案提取")
