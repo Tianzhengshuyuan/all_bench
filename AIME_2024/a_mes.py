@@ -8,14 +8,13 @@ import argparse
 import re
 import subprocess
 import tempfile
-import ast
 import json
 import random
 import datetime
 import shutil
 import asyncio
 import requests
-import base64
+from datetime import datetime
 from fractions import Fraction
 from pathlib import Path
 from openai import OpenAI
@@ -78,7 +77,7 @@ DEFAULT_ROLE_MODEL = {
     "variant": default_role_model,     # 数字/条件变体生成
     "range": default_role_model,  # 变量取值范围确定
     "retrieve": default_role_model,  # 题目检索（novel-1）
-    "paraphrase": default_role_model,  # 题目改写（novel-1）
+    "paraphrase": "doubao_1_5_pro_32k",  # 题目改写（novel-1）
     "generate": default_role_model,  # 概念题生成（novel-2）
 }
 
@@ -1862,14 +1861,6 @@ class AnalogicalTransformer:
                     # 如果解析失败，尝试修复常见的转义问题
                     print(f"JSON 解析失败，尝试修复: {json_err}")
                     try:
-                        # 尝试修复：在字符串值中，将未转义的反斜杠转义
-                        # 但要注意不要破坏已经正确转义的内容
-                        # 使用正则表达式找到字符串值并修复其中的反斜杠
-                        # 这是一个简化的修复：将 \" 之间的内容中的单个反斜杠转义
-                        # 但这种方法可能不够精确，更好的方法是让 LLM 重新生成
-                        
-                        # 尝试使用更宽松的方式：先找到 JSON 的主要部分
-                        # 如果错误信息包含位置信息，可以尝试在该位置附近修复
                         error_msg = str(json_err)
                         if "Invalid \\escape" in error_msg:
                             # 提取错误位置
@@ -1877,9 +1868,6 @@ class AnalogicalTransformer:
                             if pos_match:
                                 error_pos = int(pos_match.group(1))
                                 print(f"错误位置: {error_pos}")
-                                # 在错误位置附近，尝试修复反斜杠转义
-                                # 但这种方法风险较大，可能破坏正确的内容
-                                # 更安全的方法是返回 None，让调用者处理
                                 print("无法自动修复 JSON 转义错误，返回 None")
                                 return None
                         return None
@@ -2323,6 +2311,21 @@ class NovelProblemGenerator:
         self.knowledge_base_path = Path("knowledge_base/knowledge_base_math.json")
         self.knowledge_base = None
         
+        # 批量处理时使用的知识点列表
+        self._all_knowledge_points = None
+        
+    def initialize_for_batch_processing(self):
+        """
+        在处理所有题目之前初始化driver、登录并提取知识点
+        这个方法只需要在处理批量题目之前调用一次
+        """
+        print("--------------------------------初始化driver和登录--------------------------------")
+        self._init_driver()
+        self._login()
+        print("--------------------------------提取题库知识点--------------------------------")
+        self._all_knowledge_points = self._get_available_knowledge_points()
+        print(f"提取到 {len(self._all_knowledge_points)} 个知识点")
+        
     def _extract_knowledge_points(
         self, 
         problem_text: str, 
@@ -2439,7 +2442,7 @@ class NovelProblemGenerator:
                     EC.element_to_be_clickable((By.CSS_SELECTOR, "a.J_BtnMsgCode, .btn-code"))
                 )
                 self.driver.execute_script("arguments[0].click();", code_btn)
-                print("✅ 验证码已发送，请查收短信...")
+                print("🗳 验证码已发送，请查收短信...")
                 time.sleep(0.5)  # 等待验证码发送
             except Exception as e:
                 print(f"⚠️ 点击获取验证码按钮失败：{e}")
@@ -2512,7 +2515,7 @@ class NovelProblemGenerator:
             )
             print("✅ 登录成功，正在跳转...")
             print(f"\n📥 保存完整页面用于调试...")
-            self._save_page_for_debug(self.driver, question_idx=5, stage="before_click")
+            self._save_page_for_debug(question_idx=None, stage="before_click")
         except Exception:
             print("⚠️ 登录失败，请检查账号/密码或验证码！")
 
@@ -2520,9 +2523,6 @@ class NovelProblemGenerator:
         
     def _get_available_knowledge_points(self):
         """ 获取题库中的可用知识点 """
-        
-        self._init_driver()
-        # self._login()
         
         # 访问知识点页面
         print("📚 正在访问知识点页面...")
@@ -2707,7 +2707,7 @@ class NovelProblemGenerator:
         try:
             with Image.open(image_path) as img:
                 width, height = img.size
-                print(f"  📏 图片尺寸: {width}x{height}")
+                # print(f"  📏 图片尺寸: {width}x{height}")
                 
                 # 检查是否需要调整
                 if width >= min_dimension and height >= min_dimension:
@@ -2734,19 +2734,18 @@ class NovelProblemGenerator:
                 
                 # 保存调整后的图片（覆盖原文件）
                 resized_img.save(image_path, 'PNG')
-                print(f"  📏 图片尺寸调整: {width}x{height} -> {new_width}x{new_height}")
+                # print(f"  📏 图片尺寸调整: {width}x{height} -> {new_width}x{new_height}")
                 return True
         except Exception as e:
             print(f"⚠️ 调整图片尺寸失败 {image_path}: {e}")
             return False
 
-    def _download_image(self, img_url, img_path, session=None, driver=None):
+    def _download_image(self, img_url, img_path, session=None):
         """
         下载图片到本地，支持SVG格式并自动转换为PNG
         :param img_url: 图片URL（可能是相对路径或绝对路径）
         :param img_path: 保存路径（应该以.png结尾）
         :param session: requests session对象（用于保持cookies）
-        :param driver: Selenium driver对象（用于SVG截图）
         :return: 是否下载成功
         """
         try:
@@ -2785,14 +2784,14 @@ class NovelProblemGenerator:
                     pass
             
             # 如果是SVG格式，使用selenium截图转换为PNG
-            if is_svg and driver:
+            if is_svg and self.driver:
                 try:
                     # 使用selenium访问SVG URL并截图
-                    driver.get(img_url)
+                    self.driver.get(img_url)
                     time.sleep(0.5)  # 等待SVG加载
-                    svg_element = driver.find_element(By.TAG_NAME, 'svg')
+                    svg_element = self.driver.find_element(By.TAG_NAME, 'svg')
                     svg_element.screenshot(img_path)
-                    print(f"  ✅ SVG已转换为PNG: {img_path}")
+                    # print(f"  ✅ SVG已转换为PNG: {img_path}")
                     return True
                 except Exception as e:
                     print(f"⚠️ SVG截图失败: {e}")
@@ -2811,7 +2810,7 @@ class NovelProblemGenerator:
                 svg_path = img_path.replace('.png', '.svg')
                 with open(svg_path, 'wb') as f:
                     f.write(response.content)
-                print(f"⚠️ 已保存为SVG文件: {svg_path}")
+                # print(f"⚠️ 已保存为SVG文件: {svg_path}")
                 return False
             else:
                 # 非SVG格式，直接保存
@@ -2823,11 +2822,10 @@ class NovelProblemGenerator:
             print(f"⚠️ 下载图片失败 {img_url}: {e}")
             return False
     
-    def _extract_option_content(self, op_item_element, driver, session, question_idx, option_idx):
+    def _extract_option_content(self, op_item_element, session, question_idx, option_idx):
         """
         提取选项内容（可能是文本或图片）
         :param op_item_element: 选项元素 (span.op-item)
-        :param driver: Selenium driver
         :param session: requests session
         :param question_idx: 题目索引
         :param option_idx: 选项索引 (0=A, 1=B, 2=C, 3=D)
@@ -2856,7 +2854,7 @@ class NovelProblemGenerator:
                 abs_img_path = os.path.abspath(img_path)
                 
                 # 下载图片
-                if self._download_image(img_src, abs_img_path, session, driver):
+                if self._download_image(img_src, abs_img_path, session):
                     # 预处理图片
                     self._resize_image_if_needed(abs_img_path, min_dimension=16)
                     
@@ -2871,12 +2869,11 @@ class NovelProblemGenerator:
             # 没有图片，直接返回文本
             return meat_span.get_text(strip=True)
 
-    def _save_page_for_debug(self, driver, question_idx=None, stage="before_click"):
+    def _save_page_for_debug(self, question_idx=None, stage="before_click"):
         """
         保存页面HTML和截图到本地，方便调试定位元素
         注意：question_idx 仅用于生成文件名，不影响获取的页面内容。函数会保存完整的页面HTML。
         
-        :param driver: Selenium driver
         :param question_idx: 题目索引（仅用于生成文件名，可选）
         :param stage: 保存阶段标识（before_click, after_click等）
         :return: 保存的文件路径
@@ -2887,7 +2884,7 @@ class NovelProblemGenerator:
             
             # 切换到默认内容（确保不在frame中）
             try:
-                driver.switch_to.default_content()
+                self.driver.switch_to.default_content()
             except:
                 pass
             
@@ -2896,7 +2893,7 @@ class NovelProblemGenerator:
             
             # 等待页面加载完成（检查document.readyState）
             try:
-                WebDriverWait(driver, 5).until(
+                WebDriverWait(self.driver, 5).until(
                     lambda d: d.execute_script("return document.readyState") == "complete"
                 )
             except:
@@ -2915,12 +2912,12 @@ class NovelProblemGenerator:
             html_path = os.path.join(self.debug_pages_dir, html_filename)
             
             # 获取完整页面HTML
-            page_source = driver.page_source
+            page_source = self.driver.page_source
             
             # 检查获取的HTML是否合理（应该包含完整的HTML结构）
             if not page_source or len(page_source) < 500:
                 print(f"  ⚠️  警告：获取的页面HTML似乎不完整（大小: {len(page_source)} 字符）")
-                print(f"  ⚠️  当前URL: {driver.current_url}")
+                print(f"  ⚠️  当前URL: {self.driver.current_url}")
             
             with open(html_path, 'w', encoding='utf-8') as f:
                 f.write(page_source)
@@ -2930,7 +2927,7 @@ class NovelProblemGenerator:
             # 保存截图
             screenshot_filename = f"{base_filename}.png"
             screenshot_path = os.path.join(self.debug_pages_dir, screenshot_filename)
-            driver.save_screenshot(screenshot_path)
+            self.driver.save_screenshot(screenshot_path)
             
             print(f"  📸 已保存页面截图: {screenshot_path}")
             
@@ -2941,11 +2938,10 @@ class NovelProblemGenerator:
             traceback.print_exc()
             return None, None
 
-    def _extract_options(self, question_element, driver, session, question_idx):
+    def _extract_options(self, question_element, session, question_idx):
         """
         提取选择题的选项
         :param question_element: 题目元素
-        :param driver: Selenium driver
         :param session: requests session
         :param question_idx: 题目索引
         :return: 选项字典{A:内容, B:内容, ...}
@@ -2962,14 +2958,14 @@ class NovelProblemGenerator:
                 # 提取每个选项的内容
                 for idx, op_item in enumerate(op_items[:4]):  # 最多4个选项
                     option_letter = ['A', 'B', 'C', 'D'][idx]
-                    option_content = self._extract_option_content(op_item, driver, session, question_idx, idx)
+                    option_content = self._extract_option_content(op_item, session, question_idx, idx)
                     if option_content:  # 只添加非空选项
                         options[option_letter] = option_content
                         print(f"  选项{option_letter}: {option_content}")
         
         return options
 
-    def _extract_answer(self, driver, session, question_idx, options=None):
+    def _extract_answer(self, session, question_idx, options=None):
         """
         提取选择题的答案
         :param driver: Selenium driver
@@ -2982,85 +2978,75 @@ class NovelProblemGenerator:
             options = {}
         
         answer_content = ""
-        
-
-        # 点击 q-mc 区域以显示答案
-        # 优先使用题目索引定位（更可靠），如果失败再尝试其他方法
+        answer_mark = None  
         qid = None
         
         # 首先等待 QuestionView 元素加载完成
         try:
-            print(f"  ⏳ 等待题目元素加载...")
-            WebDriverWait(driver, 10).until(
+            # print(f"  ⏳ 等待题目元素加载...")
+            WebDriverWait(self.driver, 10).until(
                 EC.presence_of_element_located((By.CSS_SELECTOR, "li.QuestionView"))
             )
-            print(f"  ✅ 题目元素已加载")
+            # print(f"  ✅ 题目元素已加载")
         except Exception as e:
             print(f"  ⚠️  等待题目元素加载超时: {e}")
         
         try:
-            # 通过题目索引定位（最可靠）
-            # 使用更精确的 XPath，包含 question-block 中间层
-            print(f"  🖱️  尝试通过题目索引定位第 {question_idx} 题...")
+            # print(f"  🖱️  尝试通过题目索引定位第 {question_idx} 题...")
             xpath_q_mc = f"(//li[@class='QuestionView'])[{question_idx}]//div[@class='question-block']//div[@class='q-mc']"
             
             # 等待元素出现
-            q_mc_selenium = WebDriverWait(driver, 10).until(
+            q_mc_selenium = WebDriverWait(self.driver, 10).until(
                 EC.presence_of_element_located((By.XPATH, xpath_q_mc))
             )
-            print(f"  ✅ 成功定位到 q-mc 元素")
+            # print(f"  ✅ 成功定位到 q-mc 元素")
             
             # 尝试获取 data-qid（用于后续定位答案）
             try:
                 xpath_q_tit = f"(//li[@class='QuestionView'])[{question_idx}]//div[@class='q-tit']"
-                q_tit_selenium = WebDriverWait(driver, 5).until(
+                q_tit_selenium = WebDriverWait(self.driver, 5).until(
                     EC.presence_of_element_located((By.XPATH, xpath_q_tit))
                 )
                 qid = q_tit_selenium.get_attribute('data-qid')
-                if qid:
-                    print(f"  📌 获取到 data-qid: {qid}")
+                # if qid:
+                #     print(f"  📌 获取到 data-qid: {qid}")
             except:
-                pass
-            
+                pass 
         except Exception as e1:
             print(f"  ⚠️  通过索引定位失败: {e1}")
-
         
         # 滚动到元素可见
-        driver.execute_script("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", q_mc_selenium)
+        self.driver.execute_script("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", q_mc_selenium)
         time.sleep(0.5)
         
         # 等待元素可点击
         try:
-            WebDriverWait(driver, 5).until(
+            WebDriverWait(self.driver, 5).until(
                 EC.element_to_be_clickable(q_mc_selenium)
             )
         except:
             pass  # 如果等待超时，继续尝试点击
         
-        # 点击 q-mc 区域 - 优先使用 Selenium 原生点击（模拟真实鼠标点击）
-        print(f"  🖱️  点击题目区域以显示答案...")
+        # 点击 q-mc 区域 
+        # print(f"  🖱️  点击题目区域以显示答案...")
         clicked = False
         
         # 使用 Selenium 原生 click（最接近真实鼠标点击）
         try:
             q_mc_selenium.click()
             clicked = True
-            print(f"  ✅ 使用原生 click 成功")
+            # print(f"  ✅ 使用原生 click 成功")
         except Exception as e1:
             print(f"  ⚠️  原生 click 失败: {e1}")
-        
-        print(f"\n📥 保存完整页面用于调试...")
-        self._save_page_for_debug(driver, question_idx=5, stage="before_click")
         
         if clicked:
             time.sleep(1)  # 等待答案加载
                 
         # 重新解析页面以获取更新后的答案
-        page_source = driver.page_source
+        page_source = self.driver.page_source
         soup = BeautifulSoup(page_source, "lxml")
         
-        # 重新定位题目元素（优先使用索引，更可靠）
+        # 重新定位题目元素
         question_element_updated = None
         
         # 通过索引定位
@@ -3072,7 +3058,7 @@ class NovelProblemGenerator:
         analyze_div = question_element_updated.find_next('div', class_='q-analyize')
 
         if analyze_div:
-            print(f"  📥 找到答案部分") 
+            # print(f"  📥 找到答案部分") 
             # 查找答案部分 - 先找 J_ana_ans 容器
             ans_item = analyze_div.find('div', class_='J_ana_ans')
             if ans_item:
@@ -3089,11 +3075,11 @@ class NovelProblemGenerator:
                                 continue
                             
                             img_filename = f"q{question_idx}_ans_img{img_idx}.png"
-                            print(f"  📥 下载答案图片: {img_filename}")
+                            # print(f"  📥 下载答案图片: {img_filename}")
                             img_path = os.path.join(self.images_dir, img_filename)
                             abs_img_path = os.path.abspath(img_path)
                             
-                            if self._download_image(img_src, abs_img_path, session, driver):
+                            if self._download_image(img_src, abs_img_path, session):
                                 self._resize_image_if_needed(abs_img_path, min_dimension=16)
                                 loop = asyncio.get_event_loop()
                                 formula = loop.run_until_complete(self._recognize_math_image_async(abs_img_path))
@@ -3111,13 +3097,13 @@ class NovelProblemGenerator:
                     if answer_content in options:
                         answer_mark = answer_content  # 保存原始标记
                         answer_content = options[answer_content]
-                        print(f"  答案标记{answer_mark}对应内容: {answer_content}")
+                        # print(f"  答案标记{answer_mark}对应内容: {answer_content}")
                     else:
                         answer_mark = None
                         
         return answer_content, answer_mark
 
-    def _extract_and_replace_images(self, soup_element, driver, session, question_idx):
+    def _extract_and_replace_images(self, soup_element, session, question_idx):
         """
         提取元素中的图片，识别后替换为LaTeX公式
         """
@@ -3145,17 +3131,17 @@ class NovelProblemGenerator:
             abs_img_path = os.path.abspath(img_path)
             
             # 下载图片
-            print(f"  📥 下载图片 {img_idx + 1}/{len(img_tags)}: {img_filename}")
-            if self._download_image(img_src, abs_img_path, session, driver):
+            # print(f"  📥 下载图片 {img_idx + 1}/{len(img_tags)}: {img_filename}")
+            if self._download_image(img_src, abs_img_path, session):
 
                 # 预处理图片：检查并调整尺寸（确保满足API最小尺寸要求）
                 self._resize_image_if_needed(abs_img_path, min_dimension=16)
                 
                 # 识别图片（使用异步API，通过同步包装器调用）
-                print(f"  🔍 识别图片: {img_filename}")
+                # print(f"  🔍 识别图片: {img_filename}")
                 loop = asyncio.get_event_loop()
                 formula = loop.run_until_complete(self._recognize_math_image_async(abs_img_path))
-                print(f"  ✅ 识别结果: {formula}")
+                # print(f"  ✅ 识别结果: {formula}")
                 
                 # 记录替换映射（使用唯一占位符）
                 placeholder = f"__MATH_FORMULA_{img_idx}__"
@@ -3176,17 +3162,17 @@ class NovelProblemGenerator:
         
         return result_text
 
-    def _scrape_questions_and_options(self, driver, keyword):
+    def _scrape_questions_and_options(self, keyword):
         """ 搜索并抓取题目 """
-        print(f"🔍 正在访问：{self.question_bank_url}")
-        driver.get(self.question_bank_url)
+        print(f"🌐 正在访问：{self.question_bank_url}")
+        self.driver.get(self.question_bank_url)
 
         # 等待页面加载完成，特别是左侧知识树区域
         time.sleep(self.wait_time)
         
         # 等待左侧搜索框出现（根据HTML结构：form#J_ltsrchFrm > input[name='know_txt']）
         print("🔍 正在定位搜索框...")
-        search_box = WebDriverWait(driver, 10).until(
+        search_box = WebDriverWait(self.driver, 10).until(
             EC.element_to_be_clickable((By.CSS_SELECTOR, "input[name='know_txt'], #J_ltsrchFrm input[type='text'], .fm-txt"))
         )
 
@@ -3200,19 +3186,17 @@ class NovelProblemGenerator:
         # 点击左侧对应知识点
         final_keyword = keyword  # 默认使用原始关键词
         try:
-            print(f"➡️  正在查找菜单项【{keyword}】...")
             # 等待搜索结果出现（搜索结果通常在 .list-tree-search-list 或 .list-ts-chbox 区域）
-            WebDriverWait(driver, 10).until(
+            WebDriverWait(self.driver, 10).until(
                 EC.presence_of_element_located((By.CSS_SELECTOR, ".list-ts-item, .J_ListTsItem"))
             )
             time.sleep(1)  # 额外等待搜索结果渲染
-
-            link = None
             
+            link = None           
             # 策略1: 尝试精确匹配（去除<em>标签后文本完全匹配）
             try:
                 # 查找所有匹配的条目
-                all_matches = driver.find_elements(By.XPATH, f"//span[@class='ts-tit' and contains(., '{keyword}')]/ancestor::li[contains(@class, 'list-ts-item')]")
+                all_matches = self.driver.find_elements(By.XPATH, f"//span[@class='ts-tit' and contains(., '{keyword}')]/ancestor::li[contains(@class, 'list-ts-item')]")
                 if all_matches:
                     # 遍历所有匹配项，查找文本完全匹配的
                     for item in all_matches:
@@ -3237,93 +3221,111 @@ class NovelProblemGenerator:
                 raise Exception("未找到匹配的知识点条目")
             
             # 滚动元素到可视区域（这是关键步骤，避免element not interactable错误）
-            driver.execute_script("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", link)
+            self.driver.execute_script("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", link)
             time.sleep(0.5)
             
             # 确保元素可见
-            driver.execute_script("arguments[0].style.display = 'block';", link)
-            WebDriverWait(driver, 10).until(
+            self.driver.execute_script("arguments[0].style.display = 'block';", link)
+            WebDriverWait(self.driver, 10).until(
                 EC.visibility_of(link)
             )
             
-            # 使用JavaScript点击，更可靠（避免element not interactable错误）
-            # JavaScript click 可以绕过许多交互性问题
-            driver.execute_script("arguments[0].click();", link)
-            print(f"✅ 成功点击知识点: {final_keyword}")
+            # 使用JavaScript点击
+            self.driver.execute_script("arguments[0].click();", link)
+            print(f"👆 成功点击知识点: {final_keyword}")
             time.sleep(self.wait_time + 2)
         except Exception as e:
             print(f"⚠️ 未找到左侧菜单【{keyword}】，错误信息: {e}")
-            print(f"⚠️ 将直接解析当前页面内容。")
-
 
         # 创建requests session以保持cookies（用于下载图片）
-        print("🔧 初始化下载会话...")
         session = requests.Session()
-        for cookie in driver.get_cookies():
+        for cookie in self.driver.get_cookies():
             session.cookies.set(cookie['name'], cookie['value'])
         
         # 确保图片目录存在
         os.makedirs(self.images_dir, exist_ok=True)
         
         # 解析题目内容
-        page_source = driver.page_source
+        page_source = self.driver.page_source
         soup = BeautifulSoup(page_source, "lxml")
-        questions = soup.select("ul li div.q-tit")
+        all_questions = soup.select("ul li div.q-tit")
 
-        print(f"🧐 共发现 {len(questions)} 道题。")
+        print(f"🧐 共发现 {len(all_questions)} 道题。")
+
+        # 过滤掉有小题的题目（q-mc中包含q-bd-list的题目）+ 本身就是小题的题目（q-tit的祖父是q-bd-list）
+        questions_without_subquestions = []
+        for idx, q_tit in enumerate(all_questions):
+            # 检查1: 如果q-tit的祖父是q-bd-list，说明这是小题，需要过滤
+            parent = q_tit.parent
+            if parent:
+                grandparent = parent.parent
+                if grandparent and grandparent.name == "ol" and "q-bd-list" in grandparent.get("class", []):
+                    # print(f"  ⚠️ 第 {idx + 1} 题是小题目（祖父是q-bd-list），跳过")
+                    continue
+            
+            # 检查2: 找到对应的q-mc div（向上查找父元素，找到QuestionView，然后找q-mc）
+            question_view = q_tit.find_parent("li", class_="QuestionView")
+            if question_view:
+                q_mc = question_view.find("div", class_="q-mc")
+                if q_mc:
+                    # 检查q-mc中是否有q-bd-list（代表有小题）
+                    q_bd_list = q_mc.find("ol", class_="q-bd-list")
+                    if q_bd_list is None:
+                        # 没有小题，保留这个题目
+                        questions_without_subquestions.append((idx, q_tit))
+                    # else:
+                    #     print(f"  ⚠️  第 {idx + 1} 题包含小题，跳过")
+                else:
+                    # 如果找不到q-mc，也保留（可能是其他类型的题目）
+                    questions_without_subquestions.append((idx, q_tit))
+            else:
+                # 如果找不到QuestionView，也保留
+                questions_without_subquestions.append((idx, q_tit))
+
+        print(f"🔦 过滤后，共有 {len(questions_without_subquestions)} 道没有小题的题目。")
 
         # 随机选择一道题
-        if len(questions) == 0:
-            print("⚠️ 未找到任何题目")
+        if len(questions_without_subquestions) == 0:
+            print("⚠️ 未找到任何没有小题的题目")
             return None, None, None, None
         
-        selected_idx = random.randint(0, len(questions) - 1)
-        # selected_idx = 0 # for test
-        selected_q = questions[selected_idx]
+        selected_item = random.choice(questions_without_subquestions)
+        selected_idx, selected_q = selected_item
         actual_idx = selected_idx + 1  # 题目编号从1开始
         
         print(f"🎲 随机选择第 {actual_idx} 题进行处理...")
         
         # 提取题目文本，并识别其中的数学公式图片
-        q_text = self._extract_and_replace_images(selected_q, driver, session, actual_idx)
+        q_text = self._extract_and_replace_images(selected_q, session, actual_idx)
         q_text = q_text.replace(" ", "")
-        print(f"🔍 题目文本: {q_text}")
-        
+        print(f"📃 题目: {q_text}")
         # 提取选项
-        selected_q = questions[selected_idx]
-        print(f"\n📋 提取选项...")
-        options = self._extract_options(selected_q, driver, session, actual_idx)
+        options = self._extract_options(selected_q, session, actual_idx)
         
-        if options is None:
-            print("该题目为填空题")
-        else:
-            print("该题目为选择题")
-            
         # 返回最终使用的关键词、题目索引和选项
         return final_keyword, actual_idx, options, q_text
 
-    def _scrape_answers(self, driver, keyword, question_idx, options):
+    def _scrape_answers(self, keyword, question_idx, options):
         """ 
         重复搜索步骤，然后直接提取答案
-        :param driver: Selenium driver
         :param keyword: 搜索关键词
         :param question_idx: 题目索引（从1开始）
         :param options: 选项字典（从scrape_questions_and_options获取）
         :return: 答案文本
         """
-        print(f"🔍 正在访问：{self.question_bank_url}")
-        driver.get(self.question_bank_url)
+        # print(f"🌐 正在访问：{self.question_bank_url}")
+        self.driver.get(self.question_bank_url)
 
         # 等待页面加载完成，特别是左侧知识树区域
         time.sleep(self.wait_time)
         
         # 等待左侧搜索框出现（根据HTML结构：form#J_ltsrchFrm > input[name='know_txt']）
-        print("🔍 正在定位搜索框...")
-        search_box = WebDriverWait(driver, 10).until(
+        # print("🔍 正在定位搜索框...")
+        search_box = WebDriverWait(self.driver, 10).until(
             EC.element_to_be_clickable((By.CSS_SELECTOR, "input[name='know_txt'], #J_ltsrchFrm input[type='text'], .fm-txt"))
         )
 
-        print(f"📝 在搜索框中输入关键词: {keyword}")
+        # print(f"📝 在搜索框中输入关键词: {keyword}")
         search_box.clear()
         search_box.send_keys(keyword)
         time.sleep(1)
@@ -3332,9 +3334,9 @@ class NovelProblemGenerator:
 
         # 点击左侧对应知识点
         try:
-            print(f"➡️  正在查找菜单项【{keyword}】...")
+            # print(f"➡️  正在查找菜单项【{keyword}】...")
             # 等待搜索结果出现（搜索结果通常在 .list-tree-search-list 或 .list-ts-chbox 区域）
-            WebDriverWait(driver, 10).until(
+            WebDriverWait(self.driver, 10).until(
                 EC.presence_of_element_located((By.CSS_SELECTOR, ".list-ts-item, .J_ListTsItem"))
             )
             time.sleep(1)  # 额外等待搜索结果渲染
@@ -3344,7 +3346,7 @@ class NovelProblemGenerator:
             # 策略1: 尝试精确匹配（去除<em>标签后文本完全匹配）
             try:
                 # 查找所有匹配的条目
-                all_matches = driver.find_elements(By.XPATH, f"//span[@class='ts-tit' and contains(., '{keyword}')]/ancestor::li[contains(@class, 'list-ts-item')]")
+                all_matches = self.driver.find_elements(By.XPATH, f"//span[@class='ts-tit' and contains(., '{keyword}')]/ancestor::li[contains(@class, 'list-ts-item')]")
                 if all_matches:
                     # 遍历所有匹配项，查找文本完全匹配的
                     for item in all_matches:
@@ -3352,14 +3354,14 @@ class NovelProblemGenerator:
                         # 去除可能的空格和特殊字符后比较
                         if text_content == keyword or text_content.replace(' ', '') == keyword.replace(' ', ''):
                             link = item
-                            print(f"✅ 找到精确匹配: {text_content}")
+                            # print(f"✅ 找到精确匹配: {text_content}")
                             break
                     
                     # 如果没有精确匹配，选择第一个
                     if link is None:
                         link = all_matches[0]
                         text_content = link.find_element(By.CSS_SELECTOR, "span.ts-tit").text.strip()
-                        print(f"⚠️  未找到精确匹配，选择第一个匹配项: {text_content}")
+                        # print(f"⚠️  未找到精确匹配，选择第一个匹配项: {text_content}")
             except Exception as e:
                 print(f"⚠️ 匹配过程中出现错误: {e}")
 
@@ -3367,91 +3369,209 @@ class NovelProblemGenerator:
                 raise Exception("未找到匹配的知识点条目")
             
             # 滚动元素到可视区域（这是关键步骤，避免element not interactable错误）
-            driver.execute_script("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", link)
+            self.driver.execute_script("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", link)
             time.sleep(0.5)
             
             # 确保元素可见
-            driver.execute_script("arguments[0].style.display = 'block';", link)
-            WebDriverWait(driver, 10).until(
+            self.driver.execute_script("arguments[0].style.display = 'block';", link)
+            WebDriverWait(self.driver, 10).until(
                 EC.visibility_of(link)
             )
             
             # 使用JavaScript点击，更可靠（避免element not interactable错误）
             # JavaScript click 可以绕过许多交互性问题
-            driver.execute_script("arguments[0].click();", link)
-            print(f"✅ 成功点击知识点: {keyword}")
+            self.driver.execute_script("arguments[0].click();", link)
+            # print(f"👆 成功点击知识点: {keyword}")
             time.sleep(self.wait_time + 2)
         except Exception as e:
             print(f"⚠️ 未找到左侧菜单【{keyword}】，错误信息: {e}")
-            print(f"⚠️ 将直接解析当前页面内容。")
 
         # 创建requests session以保持cookies（用于下载图片）
-        print("🔧 初始化下载会话...")
+        # print("🔧 初始化下载会话...")
         session = requests.Session()
-        for cookie in driver.get_cookies():
+        for cookie in self.driver.get_cookies():
             session.cookies.set(cookie['name'], cookie['value'])
         
         # 确保图片目录存在
         os.makedirs(self.images_dir, exist_ok=True)
         
         # 解析题目内容，定位到指定索引的题目
-        page_source = driver.page_source
+        page_source = self.driver.page_source
         soup = BeautifulSoup(page_source, "lxml")
-        questions = soup.select("ul li div.q-tit")
+        all_questions = soup.select("ul li div.q-tit")
 
-        print(f"🧐 共发现 {len(questions)} 道题。")
+        # print(f"🧐 共发现 {len(all_questions)} 道题。")
 
-        if len(questions) == 0:
-            print("⚠️ 未找到任何题目")
-            return "（未找到题目）"
+        questions_without_subquestions = []
+        for idx, q_tit in enumerate(all_questions):
+            # 检查1: 如果q-tit的祖父是q-bd-list，说明这是小题，需要过滤
+            parent = q_tit.parent
+            if parent:
+                grandparent = parent.parent
+                if grandparent and grandparent.name == "ol" and "q-bd-list" in grandparent.get("class", []):
+                    # print(f"  ⚠️ 第 {idx + 1} 题是小题目（祖父是q-bd-list），跳过")
+                    continue
+            
+            # 检查2: 找到对应的q-mc div（向上查找父元素，找到QuestionView，然后找q-mc）
+            question_view = q_tit.find_parent("li", class_="QuestionView")
+            if question_view:
+                q_mc = question_view.find("div", class_="q-mc")
+                if q_mc:
+                    # 检查q-mc中是否有q-bd-list（代表有小题）
+                    q_bd_list = q_mc.find("ol", class_="q-bd-list")
+                    if q_bd_list is None:
+                        # 没有小题，保留这个题目
+                        questions_without_subquestions.append((idx, q_tit))
+                    # else:
+                    #     print(f"  ⚠️ 第 {idx + 1} 题包含小题，跳过")
+                else:
+                    # 如果找不到q-mc，也保留（可能是其他类型的题目）
+                    questions_without_subquestions.append((idx, q_tit))
+            else:
+                # 如果找不到QuestionView，也保留
+                questions_without_subquestions.append((idx, q_tit))
+
+        # print(f"🔦 过滤后，共有 {len(questions_without_subquestions)} 道没有小题的题目。")
+
+        if len(questions_without_subquestions) == 0:
+            print("⚠️ 未找到任何没有小题的题目")
+            return "（未找到题目）", None
         
-        if question_idx > len(questions):
-            print(f"⚠️ 题目索引 {question_idx} 超出范围（共 {len(questions)} 题）")
-            return "（题目索引超出范围）"
+        # question_idx是从1开始的原始索引，需要找到对应的过滤后题目
+        # 查找原始索引对应的题目在过滤后列表中的位置
+        target_question = None
+        for orig_idx, q_tit in questions_without_subquestions:
+            if orig_idx + 1 == question_idx:  # question_idx是从1开始的
+                target_question = q_tit
+                break
         
+        if target_question is None:
+            print(f"⚠️ 题目索引 {question_idx} 对应的题目包含小题或不存在（共 {len(questions_without_subquestions)} 道无小题题目）")
+            return "（题目索引对应的题目包含小题或不存在）", None
         
-        print(f"📋 直接处理第 {question_idx} 题，开始提取答案...")
+        # print(f"📋 开始提取第 {question_idx} 题答案...")
         
         # 提取答案（使用传入的options）
-        print(f"\n📋 提取答案...")
-        answer_content, answer_mark = self._extract_answer(driver, session, question_idx, options)
-        
-        # 如果找到了选项，说明是选择题
-        if options:
-            # 构建答案文本
-            if answer_content:
-                ans_text = answer_content
-            else:
-                ans_text = "（未找到答案内容）"
-        else:
-            if answer_content:
-                ans_text = answer_content
-            else:
-                ans_text = "（未找到答案内容）"
+        answer_content, answer_mark = self._extract_answer(session, question_idx, options)
 
-        
+        if answer_content:
+            ans_text = answer_content
+        else:
+            ans_text = "（未找到答案内容）"
+
+        if answer_mark:
+            print(f"答案：{answer_mark}")
+        else:
+            print(f"答案：{ans_text}")
+            
         return ans_text, answer_mark
 
-    def _retrieve_problems_from_web(self, knowledge_points: List[str]) -> str:
-        """ 从网络检索题目 """
+    def _convert_choice_to_fill_blank(self, question_text: str, options: Dict[str, str], correct_answer: str) -> Tuple[str, str]:
+        """
+        将选择题改编为答案唯一的填空题
+        """
+        print("--------------------------------将选择题改编为填空题--------------------------------")
+        # 构建选项文本
+        options_text = "\n".join([f"{key}: {value}" for key, value in options.items()])
+        
+        convert_prompt = textwrap.dedent(f"""
+            你是一个数学题目改编专家。请将下面的选择题改编为答案唯一的填空题。
+            
+            【原题目】
+            {question_text}
+            
+            【选项】
+            {options_text}
+            
+            【正确答案】
+            {correct_answer}
+            
+            【改编要求】
+            1. 将选择题改编为填空题，要求答案唯一。
+            2. 特别的，针对题目中带有“下列选项正确的是”的题目，将正确的选项内容和题目融合：
+            例如：
+              原选择题：
+              甲、乙两个班级各有6名候选人参加校学生会干部竞选其中, 甲班中男生2名, 乙班中男生3名, 则下列说法正确的有)
+                A. 从12人中选出两人担任主持人, 恰好一男一女当选的情况有35种
+                B. 某选手得分是9, 9.2, 9.2, 9.3, 9.3, 9.4, 9.4, 9.5, 则该选手得分的第70百分位数是9.3
+                C. 从12人中随机选择一人总结会议, 己知选到的是女生, 则她来自甲班的概率是1/3
+                D. 5名男生随机抽选3人担任男寝棱长, 其中甲班男生当选人数为X人, 则E(X)=6/5
+              正确答案：
+              A
+              
+              改编后的填空题：
+              甲、乙两个班级各有6名候选人参加校学生会干部竞选其中, 甲班中男生2名, 乙班中男生3名, 从12人中选出两人担任主持人, 恰好一男一女当选的情况有___种
+              正确答案：
+              35
+              
+            【输出要求】
+            请以JSON格式输出，包含以下字段：
+            - "question": 改编后的题目文本
+            - "answer": 改编后的答案文本
+
+            示例格式：
+            {{
+                "question": "改编后的题目内容",
+                "answer": "改编后的答案"
+            }}
+
+            注意：只输出JSON，不要输出其他任何文字说明。
+            """)
+        
+        try:
+            response = self.llm.chat(convert_prompt, system="你是一个专业的数学题目改编专家。").strip()
+            if response and response != "❌":
+                # 提取JSON
+                json_match = re.search(r'\{.*\}', response, re.DOTALL)
+                if json_match:
+                    result = json.loads(json_match.group(0))
+                    converted_question = result.get("question", "").strip()
+                    converted_answer = result.get("answer", correct_answer).strip()
+                    
+                    if converted_question:
+                        print(f"✅ 选择题改编完成")
+                        print(f"改编后的题目：{converted_question}")
+                        print(f"改编后的答案：{converted_answer}")
+                        return converted_question, converted_answer
+                    else:
+                        print("⚠️ JSON解析成功但题目为空，使用原题目")
+                        return question_text, correct_answer
+                else:
+                    print("⚠️ 无法从响应中提取JSON，使用原题目")
+                    return question_text, correct_answer
+            else:
+                print("⚠️ 大模型改编失败，使用原题目")
+                return question_text, correct_answer
+        except Exception as e:
+            print(f"⚠️ 调用大模型改编题目时出错: {e}，使用原题目")
+            return question_text, correct_answer
+
+    def _retrieve_problems_from_web(self, knowledge_points: List[str]) -> tuple:
+        """ 从网络检索题目，返回题目文本和答案 """
         # 获得题目和选项
-        self._init_driver()
-        self._login()
-  
-        final_keyword, question_idx, options, q_text = self._scrape_questions_and_options(driver, args.keyword)
+        # 使用第一个知识点作为搜索关键词
+        if not knowledge_points:
+            print("⚠️ 没有提供知识点，无法检索题目")
+            return "", ""
+        
+        keyword = knowledge_points[0]
+        final_keyword, question_idx, options, q_text = self._scrape_questions_and_options(keyword)
 
         # 获得答案
         if final_keyword and question_idx:
-            ans_text, ans_mark = self._scrape_answers(driver, final_keyword, question_idx, options)
-            driver.quit()
-            print("答案提取完成。")
+            ans_text, ans_mark = self._scrape_answers(final_keyword, question_idx, options)
+
             if ans_mark:
-                print(f"识别到选择题\n题目:{q_text}\n选项：{options}\n答案：{ans_mark}，")
+                print(f"选择题识别完成")
+                # 针对选择题做特殊处理：改编为答案唯一的填空题
+                q_text, ans_text = self._convert_choice_to_fill_blank(q_text, options, ans_text)
             else:
-                print(f"识别到填空题\n题目:{q_text}\n答案：{ans_text}")
+                print(f"填空题识别完成")
         else:
             print("⚠️ 未能获取题目信息，跳过答案提取")
-        return ""
+            return "", ""
+        
+        return q_text, ans_text
     
     def generate_novel1(
         self,
@@ -3459,6 +3579,7 @@ class NovelProblemGenerator:
         llm_extract: Optional[LLMClient] = None,
         llm_retrieve: Optional[LLMClient] = None,
         llm_paraphrase: Optional[LLMClient] = None,
+        all_knowledge_points: Optional[List[str]] = None,
     ) -> ProblemItem:
         """
         novel-1：recent-source adaptation via structured retrieval and paraphrasing
@@ -3470,8 +3591,8 @@ class NovelProblemGenerator:
         llm_retrieve = llm_retrieve or self.llm
         llm_paraphrase = llm_paraphrase or self.llm
         
-        print("--------------------------------提取题库知识点--------------------------------")
-        all_knowledge_points = self._get_available_knowledge_points()
+        if all_knowledge_points is None:
+            raise ValueError("all_knowledge_points must be provided")
         
         print("--------------------------------提取题目知识点--------------------------------")
         knowledge_points = self._extract_knowledge_points(
@@ -3480,36 +3601,45 @@ class NovelProblemGenerator:
             item.solution,
             available_knowledge_points=all_knowledge_points
         )
-        
         print(f"提取到的知识点：{knowledge_points}")
         
         if not knowledge_points:
             print("警告：未能提取到知识点")
             return None
         
-        print("--------------------------------网络检索题目--------------------------------")
-        retrieved_problem = self._retrieve_problems_from_web(knowledge_points)
+        print("---------------------------------网络检索题目---------------------------------")
+        retrieved_problem, retrieved_answer = self._retrieve_problems_from_web(knowledge_points)
         print(f"检索到的题目：{retrieved_problem}")
+        print(f"检索到的答案：{retrieved_answer}")
+        
+        if not retrieved_problem:
+            print("警告：未能检索到题目")
+            return None
         
         print("--------------------------------改写题目--------------------------------")
         # 改写检索到的题目
+        example_original = r"1.(2025·开福模拟)已知菱形$ABCD$的边长为$1，∠DAB=60°。E$是$BC$的中点，$AE$与$BD$相交于点$F$。则$$\overrightarrow{AF}\cdot\overrightarrow{AB}=$$（  ）"
+        example_modified = r"已知菱形$ABCD$的边长为$1，∠DAB=60°。最近小区里新种了很多绿植，环境变得更优美了。E$是$BC$的中点，$AE$与$BD$相交于点$F$。则$$\overrightarrow{AF}\cdot\overrightarrow{AB}=$$（  ）"
+        
         paraphrase_prompt = textwrap.dedent(f"""
-            你是一个数学题目改写专家。请对以下题目进行改写，生成一道新的题目。
+            你是一个数学题目改写专家。任务是对题目进行重述，生成一道新的题目。
             
-            原始题目（从题库检索到的）：
+            【示例】
+            {example_original}
+            调整为：
+            {example_modified}
+            
+            【改写要求】
+            1. 去掉题目开头可能存在的题号和题目来源，例如“1.(2025·开福模拟)”、“9.(2025高三上·宁波期末)”等。
+            2. 对原题的内容进行重述，保持原题的语义、数字和答案不变，只是换一种说法。
+            
+            请按照示例的方法改写下面的题目：
             {retrieved_problem}
-            
-            要求：
-            - 保持相同的知识点和难度水平
-            - 改变题目的表述方式、背景、情境或变量名称
-            - 题目结构和逻辑可以适当调整，但要保持数学本质不变
-            - 只输出改写后的题目文本，不要包含解答或答案
-            
-            改写后的题目：
             """)
         paraphrased_problem = llm_paraphrase.chat(paraphrase_prompt).strip()
         
         item.augmented_question = paraphrased_problem
+        item.augmented_true_answer = retrieved_answer  # 记录检索到的答案
         item.method_used = "novel-1"
         return item
 
@@ -3601,7 +3731,7 @@ class NovelProblemGenerator:
                 shutil.rmtree(temp_dir)
             raise e
 
-    def _build_knowledge_base_from_pdf(self, pdf_path: Optional[Union[str, Path]] = None, merge: bool = True) -> Dict:
+    def build_knowledge_base_from_pdf(self, pdf_path: Optional[Union[str, Path]] = None, merge: bool = True) -> Dict:
         """
         从PDF文件构建知识库
         """
@@ -4032,11 +4162,15 @@ class AMESPipeline:
                 raise RuntimeError("NovelProblemGenerator 未初始化")
             if method == "6":
                 llms = self.role_llms
+                # all_knowledge_points should be set before calling process
+                if not hasattr(self.novel_generator, '_all_knowledge_points') or self.novel_generator._all_knowledge_points is None:
+                    raise RuntimeError("all_knowledge_points must be initialized before processing questions")
                 item = self.novel_generator.generate_novel1(
                     item,
                     llm_extract=llms.get("extract"),  # 提取知识点
                     llm_retrieve=llms.get("retrieve") or self.novel_generator.llm,  # 检索题目
                     llm_paraphrase=llms.get("paraphrase") or self.novel_generator.llm,  # 改写题目
+                    all_knowledge_points=self.novel_generator._all_knowledge_points,
                 )
             else:
                 llms = self.role_llms
@@ -4088,6 +4222,10 @@ def run_ames_on_csv(args):
     total_count = 0
     success_count = 0
     start_time = time.time()
+
+    # 如果使用novel-1方法，在处理所有题目之前初始化driver、登录并提取知识点
+    if args.method == "6":
+        novel_generator.initialize_for_batch_processing()
 
     with open(args.input, 'r', encoding='utf-8') as infile, \
             open(output_path, 'w', newline='', encoding='utf-8') as outfile:
@@ -4146,18 +4284,7 @@ def run_ames_on_csv(args):
 
             except Exception as e:
                 print(f"处理第 {total_count} 行时出错：{e}")
-                writer.writerow([
-                    question,
-                    solution,
-                    "ERROR",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    f"error_{args.method}"
-                ])
+                writer.writerow([question, solution, "ERROR", "", "", "", "", "", "", f"error_{args.method}"])
 
     end_time = time.time()
     total_time = end_time - start_time
@@ -4170,7 +4297,7 @@ def add_textbook_knowledge_base(args):
     print(f"PDF文件路径：{args.add_textbook_knowledge_base}")
     llm_generate_knowledge_base = LLMClient(model_name=DEFAULT_STAGE_MODEL["textbook_knowledge_base_construction"], temperature=args.temperature)
     novel_generator = NovelProblemGenerator(llm_generate_knowledge_base)
-    result = novel_generator._build_knowledge_base_from_pdf(pdf_path=args.add_textbook_knowledge_base, merge=True)
+    result = novel_generator.build_knowledge_base_from_pdf(pdf_path=args.add_textbook_knowledge_base, merge=True)
     
     # 检查结果：如果返回的字典为空或只有metadata，说明失败
     kb_keys = [k for k in result.keys() if k != "_metadata"]
