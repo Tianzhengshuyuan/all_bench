@@ -2323,7 +2323,8 @@ class NovelProblemGenerator:
         self._init_driver()
         self._login()
         print("--------------------------------提取题库知识点--------------------------------")
-        self._all_knowledge_points = self._get_available_knowledge_points()
+        # self._all_knowledge_points = self._get_available_leaf_knowledge_points() # 提取叶子知识点
+        self._all_knowledge_points = self._get_available_level_knowledge_points(3) # 提取第三层知识点
         print(f"提取到 {len(self._all_knowledge_points)} 个知识点")
         
     def _extract_knowledge_points(
@@ -2350,19 +2351,6 @@ class NovelProblemGenerator:
                 请从上述知识点列表中选择与题目最相关的一个知识点，以JSON格式输出，格式为：{{"knowledge_points": ["知识点"]}}
                 只选择与题目确实相关的知识点，必须完全匹配知识库中的知识点名称。
                 只输出知识点名称，不要有任何其他文字，禁止在输出中解释或说明你为什么选择这个知识点。
-                """)
-        else:
-            # 如果没有提供知识点列表，使用自由提取方式
-            prompt = textwrap.dedent(f"""
-                你是一个数学教育专家。请分析下面的数学题目，提取主要涉及的知识点。
-                题目：
-                {problem_text}
-                解答：
-                {solution}
-                请以JSON格式输出知识点列表，格式为：{{"knowledge_points": ["知识点1", "知识点2", ...]}}
-                知识点应该用简短的中文名称，如 "集合", "函数", "不等式", "概率", "几何", "代数", "复数", "对数", "三角函数", "方程" 等。
-                注意：输出基础的知识点名称，而不是具体的运算方法或技巧，例如应该输出"对数"而不是"对数运算性质"，输出"方程"而不是"方程求解"。
-                只输出JSON，不要有其他文字。
                 """)
 
         try:
@@ -2521,7 +2509,7 @@ class NovelProblemGenerator:
 
         time.sleep(2)
         
-    def _get_available_knowledge_points(self):
+    def _get_available_leaf_knowledge_points(self):
         """ 获取题库中的可用知识点 """
         
         # 访问知识点页面
@@ -2613,6 +2601,115 @@ class NovelProblemGenerator:
         print(f"✅ 找到 {len(leaf_knowledge_points)} 个叶子知识点:")
         print(leaf_knowledge_points)
         return leaf_knowledge_points
+    
+    def _get_available_level_knowledge_points(self, level):
+        """ 获取指定层级的知识点 
+            level: 层级数，1为顶级知识点，2为顶级知识点的子知识点，3为顶级知识点的孙子知识点，以此类推
+        """
+        
+        if level < 1:
+            print("⚠️ 层级必须大于等于1")
+            return []
+        
+        # 访问知识点页面
+        print(f"📚 正在访问知识点页面，获取第 {level} 层级的知识点...")
+        self.driver.get(self.question_bank_url)
+        time.sleep(self.wait_time)
+        
+        # 等待知识点树加载完成
+        try:
+            WebDriverWait(self.driver, 15).until(
+                EC.presence_of_element_located((By.CSS_SELECTOR, ".t-checkbox-node"))
+            )
+            print("✅ 知识点树加载完成")
+        except Exception as e:
+            print(f"⚠️ 等待知识点树加载失败: {e}")
+            return []
+        
+        # 存储指定层级的知识点
+        level_knowledge_points = []
+        
+        def _extract_knowledge_point_name(element):
+            """ 提取知识点的名称 """
+            try:
+                name_element = element.find_element(By.CSS_SELECTOR, ".t-tit .t-name")
+                # 尝试从 a 标签获取
+                try:
+                    a_element = name_element.find_element(By.TAG_NAME, "a")
+                    knowledge_point_name = a_element.text.strip()
+                    if not knowledge_point_name:
+                        knowledge_point_name = a_element.get_attribute("textContent") or a_element.get_attribute("innerText") or ""
+                        knowledge_point_name = knowledge_point_name.strip()
+                    return knowledge_point_name
+                except Exception:
+                    return name_element.text.strip()
+            except Exception:
+                return ""
+        
+        def _get_nodes_at_level(nodes, current_level, target_level):
+            """ 递归获取指定层级的节点 
+            
+            Args:
+                nodes: 当前层级的节点列表
+                current_level: 当前层级（从1开始）
+                target_level: 目标层级
+            """
+            if current_level == target_level:
+                # 到达目标层级，收集所有节点的名称
+                for node in nodes:
+                    name = _extract_knowledge_point_name(node)
+                    if name:
+                        level_knowledge_points.append(name)
+                return
+            
+            # 如果还没到达目标层级，继续向下遍历
+            if current_level < target_level:
+                for node in nodes:
+                    try:
+                        # 查找当前节点的子节点容器
+                        child_container = node.find_element(By.CSS_SELECTOR, ".t-bd")
+                        # 获取直接子节点
+                        child_nodes = child_container.find_elements(By.XPATH, "./li[contains(@class, 't-checkbox-node')]")
+                        
+                        if child_nodes and len(child_nodes) > 0:
+                            _get_nodes_at_level(child_nodes, current_level + 1, target_level)
+                    except Exception:
+                        # 如果没有子节点，说明已经到达叶子节点，但还没到目标层级
+                        # 这种情况不需要处理，直接跳过
+                        pass
+        
+        # 找到所有顶级知识点节点
+        print("🔍 开始遍历知识点树...")
+        
+        try:
+            treeview_div = self.driver.find_element(By.CSS_SELECTOR, "div.TreeView.t-tree-bd, div.TreeView")
+            tree_container = treeview_div.find_element(By.XPATH, "./ul[contains(@class, 't-bd')]")
+        except Exception as e:
+            print(f"⚠️ 使用XPath查找tree_container失败: {e}")
+            return []
+        
+        top_level_nodes = []
+        try:
+            all_li = tree_container.find_elements(By.TAG_NAME, "li")
+            for li in all_li:
+                classes = li.get_attribute("class") or ""
+                if "t-checkbox-node" in classes:
+                    # 检查是否是直接子元素
+                    parent = li.find_element(By.XPATH, "./..")
+                    if parent == tree_container:
+                        top_level_nodes.append(li)
+        except Exception as e:
+            print(f"⚠️ 没有找到顶级节点: {e}")
+            return []
+        
+        print(f"📊 找到 {len(top_level_nodes)} 个顶级知识点节点")
+        
+        # 从顶级节点开始，递归获取指定层级的节点
+        _get_nodes_at_level(top_level_nodes, 1, level)
+        
+        print(f"✅ 找到 {len(level_knowledge_points)} 个第 {level} 层级的知识点:")
+        print(level_knowledge_points)
+        return level_knowledge_points
             
     async def _recognize_math_image_async(self, image_path):
         """
@@ -3178,7 +3275,7 @@ class NovelProblemGenerator:
         time.sleep(self.wait_time + 2)
 
         # 点击左侧对应知识点
-        final_keyword = keyword  # 默认使用原始关键词
+        final_keyword = keyword 
         try:
             # 等待搜索结果出现（搜索结果通常在 .list-tree-search-list 或 .list-ts-chbox 区域）
             WebDriverWait(self.driver, 10).until(
@@ -3186,48 +3283,48 @@ class NovelProblemGenerator:
             )
             time.sleep(1)  # 额外等待搜索结果渲染
             
-            link = None           
-            # 策略1: 尝试精确匹配（去除<em>标签后文本完全匹配）
+            # 查找所有匹配的条目
+            all_matches = []
             try:
                 # 查找所有匹配的条目
                 all_matches = self.driver.find_elements(By.XPATH, f"//span[@class='ts-tit' and contains(., '{keyword}')]/ancestor::li[contains(@class, 'list-ts-item')]")
-                if all_matches:
-                    # 遍历所有匹配项，查找文本完全匹配的
-                    for item in all_matches:
+                if not all_matches:
+                    raise Exception("未找到匹配的知识点条目")
+                
+                print(f"📊 找到 {len(all_matches)} 个匹配的知识点")
+                
+                # 遍历所有匹配的知识点并依次点击
+                for idx, item in enumerate(all_matches, 1):
+                    try:
                         text_content = item.find_element(By.CSS_SELECTOR, "span.ts-tit").text.strip()
-                        # 去除可能的空格和特殊字符后比较
-                        if text_content == keyword or text_content.replace(' ', '') == keyword.replace(' ', ''):
-                            link = item
-                            final_keyword = text_content  # 记录最终使用的关键词
-                            print(f"✅ 找到精确匹配: {text_content}")
-                            break
-                    
-                    # 如果没有精确匹配，选择第一个
-                    if link is None:
-                        link = all_matches[0]
-                        text_content = link.find_element(By.CSS_SELECTOR, "span.ts-tit").text.strip()
-                        final_keyword = text_content  # 记录最终使用的关键词
-                        print(f"⚠️  未找到精确匹配，选择第一个匹配项: {text_content}")
+                        final_keyword = text_content  # 记录当前使用的关键词
+                        
+                        print(f"👆 [{idx}/{len(all_matches)}] 正在点击知识点: {final_keyword}")
+                        
+                        # 滚动元素到可视区域（这是关键步骤，避免element not interactable错误）
+                        self.driver.execute_script("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", item)
+                        time.sleep(0.5)
+                        
+                        # 确保元素可见
+                        self.driver.execute_script("arguments[0].style.display = 'block';", item)
+                        WebDriverWait(self.driver, 10).until(
+                            EC.visibility_of(item)
+                        )
+                        
+                        # 使用JavaScript点击
+                        self.driver.execute_script("arguments[0].click();", item)
+                        print(f"✅ 成功点击知识点: {final_keyword}")
+                        time.sleep(1)
+                        
+                    except Exception as e:
+                        print(f"⚠️ 点击第 {idx} 个知识点时出错: {e}")
+                        continue
+                
+                print(f"✅ 已完成所有知识点的点击，共点击 {len(all_matches)} 个知识点")
+                
             except Exception as e:
                 print(f"⚠️ 匹配过程中出现错误: {e}")
-
-            if link is None:
                 raise Exception("未找到匹配的知识点条目")
-            
-            # 滚动元素到可视区域（这是关键步骤，避免element not interactable错误）
-            self.driver.execute_script("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", link)
-            time.sleep(0.5)
-            
-            # 确保元素可见
-            self.driver.execute_script("arguments[0].style.display = 'block';", link)
-            WebDriverWait(self.driver, 10).until(
-                EC.visibility_of(link)
-            )
-            
-            # 使用JavaScript点击
-            self.driver.execute_script("arguments[0].click();", link)
-            print(f"👆 成功点击知识点: {final_keyword}")
-            time.sleep(self.wait_time + 2)
         except Exception as e:
             print(f"⚠️ 未找到左侧菜单【{keyword}】，错误信息: {e}")
 
