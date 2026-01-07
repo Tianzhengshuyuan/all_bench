@@ -2319,7 +2319,7 @@ class NovelProblemGenerator:
         在处理所有题目之前初始化driver、登录并提取知识点
         这个方法只需要在处理批量题目之前调用一次
         """
-        print("--------------------------------初始化driver和登录--------------------------------")
+        print("-----------------------------初始化driver和登录-------------------------------")
         self._init_driver()
         self._login()
         print("--------------------------------提取题库知识点--------------------------------")
@@ -2824,7 +2824,7 @@ class NovelProblemGenerator:
     
     def _extract_option_content(self, op_item_element, session, question_idx, option_idx):
         """
-        提取选项内容（可能是文本或图片）
+        提取选项内容（可能是文本或图片，或两者混合）
         :param op_item_element: 选项元素 (span.op-item)
         :param session: requests session
         :param question_idx: 题目索引
@@ -2838,36 +2838,56 @@ class NovelProblemGenerator:
         if not meat_span:
             return ""
         
-        # 检查是否有图片
-        img_tags = meat_span.find_all('img', class_='mathml')
-        if img_tags:
-            # 有图片，需要识别
-            option_text = ""
-            for img_idx, img in enumerate(img_tags):
-                img_src = img.get('src', '')
-                if not img_src:
-                    continue
+        # 创建元素的副本以避免修改原始元素
+        element_copy = BeautifulSoup(str(meat_span), 'lxml').find()
+        
+        # 查找所有mathml图片
+        img_tags = element_copy.find_all('img', class_='mathml')
+        
+        # 如果没有图片，直接返回文本
+        if not img_tags:
+            return element_copy.get_text(strip=True)
+        
+        # 创建文本替换映射
+        replacements = []
+        
+        for img_idx, img in enumerate(img_tags):
+            img_src = img.get('src', '')
+            if not img_src:
+                continue
+            
+            # 构建图片保存路径
+            img_filename = f"q{question_idx}_opt{option_letter}_img{img_idx}.png"
+            img_path = os.path.join(self.images_dir, img_filename)
+            abs_img_path = os.path.abspath(img_path)
+            
+            # 下载图片
+            if self._download_image(img_src, abs_img_path, session):
+                # 预处理图片
+                self._resize_image_if_needed(abs_img_path, min_dimension=16)
                 
-                # 构建图片保存路径
-                img_filename = f"q{question_idx}_opt{option_letter}_img{img_idx}.png"
-                img_path = os.path.join(self.images_dir, img_filename)
-                abs_img_path = os.path.abspath(img_path)
+                # 识别图片
+                loop = asyncio.get_event_loop()
+                formula = loop.run_until_complete(self._recognize_math_image_async(abs_img_path))
                 
-                # 下载图片
-                if self._download_image(img_src, abs_img_path, session):
-                    # 预处理图片
-                    self._resize_image_if_needed(abs_img_path, min_dimension=16)
-                    
-                    # 识别图片
-                    loop = asyncio.get_event_loop()
-                    formula = loop.run_until_complete(self._recognize_math_image_async(abs_img_path))       
-                    option_text += formula
-                else:
-                    option_text += "[图片下载失败]"
-            return option_text.strip()
-        else:
-            # 没有图片，直接返回文本
-            return meat_span.get_text(strip=True)
+                # 记录替换映射（使用唯一占位符）
+                placeholder = f"__MATH_FORMULA_{img_idx}__"
+                img.replace_with(placeholder)
+                replacements.append((placeholder, formula))
+            else:
+                # 下载失败，使用占位符
+                placeholder = f"__MATH_FORMULA_{img_idx}__"
+                img.replace_with(placeholder)
+                replacements.append((placeholder, "[图片下载失败]"))
+        
+        # 获取替换后的文本（使用separator=' '以保留文本节点）
+        result_text = element_copy.get_text(separator=' ', strip=False)
+        
+        # 执行替换
+        for placeholder, formula in replacements:
+            result_text = result_text.replace(placeholder, f"${formula}$")
+        
+        return result_text.replace(" ", "").strip()
 
     def _save_page_for_debug(self, question_idx=None, stage="before_click"):
         """
@@ -2965,21 +2985,15 @@ class NovelProblemGenerator:
         
         return options
 
-    def _extract_answer(self, session, question_idx, options=None):
+    def _extract_answer(self, session, question_idx):
         """
         提取选择题的答案
         :param driver: Selenium driver
         :param session: requests session
         :param question_idx: 题目索引
-        :param options: 选项字典（用于将答案标记转换为选项内容）
         :return: 答案内容
         """
-        if options is None:
-            options = {}
-        
         answer_content = ""
-        answer_mark = None  
-        qid = None
         
         # 首先等待 QuestionView 元素加载完成
         try:
@@ -3000,18 +3014,6 @@ class NovelProblemGenerator:
                 EC.presence_of_element_located((By.XPATH, xpath_q_mc))
             )
             # print(f"  ✅ 成功定位到 q-mc 元素")
-            
-            # 尝试获取 data-qid（用于后续定位答案）
-            try:
-                xpath_q_tit = f"(//li[@class='QuestionView'])[{question_idx}]//div[@class='q-tit']"
-                q_tit_selenium = WebDriverWait(self.driver, 5).until(
-                    EC.presence_of_element_located((By.XPATH, xpath_q_tit))
-                )
-                qid = q_tit_selenium.get_attribute('data-qid')
-                # if qid:
-                #     print(f"  📌 获取到 data-qid: {qid}")
-            except:
-                pass 
         except Exception as e1:
             print(f"  ⚠️  通过索引定位失败: {e1}")
         
@@ -3092,18 +3094,10 @@ class NovelProblemGenerator:
                     
                     # 清理答案内容
                     answer_content = answer_content.strip()
-                    
-                    # 如果答案是选项标记（如"D"），查找对应的选项内容
-                    if answer_content in options:
-                        answer_mark = answer_content  # 保存原始标记
-                        answer_content = options[answer_content]
-                        # print(f"  答案标记{answer_mark}对应内容: {answer_content}")
-                    else:
-                        answer_mark = None
                         
-        return answer_content, answer_mark
+        return answer_content
 
-    def _extract_and_replace_images(self, soup_element, session, question_idx):
+    def _extract_questions(self, soup_element, session, question_idx):
         """
         提取元素中的图片，识别后替换为LaTeX公式
         """
@@ -3159,8 +3153,8 @@ class NovelProblemGenerator:
         # 执行替换
         for placeholder, formula in replacements:
             result_text = result_text.replace(placeholder, f"${formula}$")
-        
-        return result_text
+
+        return result_text.replace(" ", "")
 
     def _scrape_questions_and_options(self, keyword):
         """ 搜索并抓取题目 """
@@ -3252,7 +3246,7 @@ class NovelProblemGenerator:
 
         print(f"🧐 共发现 {len(all_questions)} 道题。")
 
-        # 过滤掉有小题的题目（q-mc中包含q-bd-list的题目）+ 本身就是小题的题目（q-tit的祖父是q-bd-list）
+        # 过滤掉有小题的题目（q-mc中包含q-bd-list的题目）+ 本身就是小题的题目（q-tit的祖父是q-bd-list）+ 包含"如图"的题目
         questions_without_subquestions = []
         for idx, q_tit in enumerate(all_questions):
             # 检查1: 如果q-tit的祖父是q-bd-list，说明这是小题，需要过滤
@@ -3271,18 +3265,33 @@ class NovelProblemGenerator:
                     # 检查q-mc中是否有q-bd-list（代表有小题）
                     q_bd_list = q_mc.find("ol", class_="q-bd-list")
                     if q_bd_list is None:
-                        # 没有小题，保留这个题目
+                        # 检查3: 检查题目文本中是否包含"如图"
+                        q_text_raw = q_tit.get_text(strip=False)
+                        if "如图" in q_text_raw:
+                            # print(f"  ⚠️ 第 {idx + 1} 题包含'如图'，跳过")
+                            continue
+                        # 没有小题且不包含"如图"，保留这个题目
                         questions_without_subquestions.append((idx, q_tit))
                     # else:
                     #     print(f"  ⚠️  第 {idx + 1} 题包含小题，跳过")
                 else:
+                    # 如果找不到q-mc，检查题目文本中是否包含"如图"
+                    q_text_raw = q_tit.get_text(strip=False)
+                    if "如图" in q_text_raw:
+                        # print(f"  ⚠️ 第 {idx + 1} 题包含'如图'，跳过")
+                        continue
                     # 如果找不到q-mc，也保留（可能是其他类型的题目）
                     questions_without_subquestions.append((idx, q_tit))
             else:
+                # 如果找不到QuestionView，检查题目文本中是否包含"如图"
+                q_text_raw = q_tit.get_text(strip=False)
+                if "如图" in q_text_raw:
+                    # print(f"  ⚠️ 第 {idx + 1} 题包含'如图'，跳过")
+                    continue
                 # 如果找不到QuestionView，也保留
                 questions_without_subquestions.append((idx, q_tit))
 
-        print(f"🔦 过滤后，共有 {len(questions_without_subquestions)} 道没有小题的题目。")
+        print(f"🔦 过滤后，共有 {len(questions_without_subquestions)} 道没有小题且不包含'如图'的题目。")
 
         # 随机选择一道题
         if len(questions_without_subquestions) == 0:
@@ -3296,8 +3305,7 @@ class NovelProblemGenerator:
         print(f"🎲 随机选择第 {actual_idx} 题进行处理...")
         
         # 提取题目文本，并识别其中的数学公式图片
-        q_text = self._extract_and_replace_images(selected_q, session, actual_idx)
-        q_text = q_text.replace(" ", "")
+        q_text = self._extract_questions(selected_q, session, actual_idx)
         print(f"📃 题目: {q_text}")
         # 提取选项
         options = self._extract_options(selected_q, session, actual_idx)
@@ -3305,12 +3313,11 @@ class NovelProblemGenerator:
         # 返回最终使用的关键词、题目索引和选项
         return final_keyword, actual_idx, options, q_text
 
-    def _scrape_answers(self, keyword, question_idx, options):
+    def _scrape_answers(self, keyword, question_idx):
         """ 
         重复搜索步骤，然后直接提取答案
         :param keyword: 搜索关键词
         :param question_idx: 题目索引（从1开始）
-        :param options: 选项字典（从scrape_questions_and_options获取）
         :return: 答案文本
         """
         # print(f"🌐 正在访问：{self.question_bank_url}")
@@ -3451,26 +3458,16 @@ class NovelProblemGenerator:
         
         # print(f"📋 开始提取第 {question_idx} 题答案...")
         
-        # 提取答案（使用传入的options）
-        answer_content, answer_mark = self._extract_answer(session, question_idx, options)
-
-        if answer_content:
-            ans_text = answer_content
-        else:
-            ans_text = "（未找到答案内容）"
-
-        if answer_mark:
-            print(f"答案：{answer_mark}")
-        else:
-            print(f"答案：{ans_text}")
-            
-        return ans_text, answer_mark
+        # 提取答案
+        answer_content = self._extract_answer(session, question_idx)
+        print(f"答案：{answer_content}")
+        return answer_content
 
     def _convert_choice_to_fill_blank(self, question_text: str, options: Dict[str, str], correct_answer: str) -> Tuple[str, str]:
         """
         将选择题改编为答案唯一的填空题
         """
-        print("--------------------------------将选择题改编为填空题--------------------------------")
+        print("------------------------------将选择题改编为填空题-----------------------------")
         # 构建选项文本
         options_text = "\n".join([f"{key}: {value}" for key, value in options.items()])
         
@@ -3488,22 +3485,35 @@ class NovelProblemGenerator:
             
             【改编要求】
             1. 将选择题改编为填空题，要求答案唯一。
-            2. 特别的，针对题目中带有“下列选项正确的是”的题目，将正确的选项内容和题目融合：
-            例如：
-              原选择题：
-              甲、乙两个班级各有6名候选人参加校学生会干部竞选其中, 甲班中男生2名, 乙班中男生3名, 则下列说法正确的有)
-                A. 从12人中选出两人担任主持人, 恰好一男一女当选的情况有35种
-                B. 某选手得分是9, 9.2, 9.2, 9.3, 9.3, 9.4, 9.4, 9.5, 则该选手得分的第70百分位数是9.3
-                C. 从12人中随机选择一人总结会议, 己知选到的是女生, 则她来自甲班的概率是1/3
-                D. 5名男生随机抽选3人担任男寝棱长, 其中甲班男生当选人数为X人, 则E(X)=6/5
-              正确答案：
-              A
-              
-              改编后的填空题：
-              甲、乙两个班级各有6名候选人参加校学生会干部竞选其中, 甲班中男生2名, 乙班中男生3名, 从12人中选出两人担任主持人, 恰好一男一女当选的情况有___种
-              正确答案：
-              35
-              
+            2. 针对题目中带有“下列选项正确的是”的题目，将正确的选项内容和题目融合，例如：
+               原选择题：
+               甲、乙两个班级各有6名候选人参加校学生会干部竞选其中, 甲班中男生2名, 乙班中男生3名, 则下列说法正确的有()
+               A. 从12人中选出两人担任主持人, 恰好一男一女当选的情况有35种
+               B. 从12人中随机选择一人总结会议, 己知选到的是女生, 则她来自甲班的概率是1/3
+               C. 5名男生随机抽选3人担任男寝棱长, 其中甲班男生当选人数为X人, 则E(X)=6/5
+               D. 某选手得分是9, 9.2, 9.2, 9.3, 9.3, 9.4, 9.4, 9.5, 则该选手得分的第70百分位数是9.3
+               正确答案：
+               A
+                
+               改编后的填空题：
+               甲、乙两个班级各有6名候选人参加校学生会干部竞选其中, 甲班中男生2名, 乙班中男生3名, 从12人中选出两人担任主持人, 恰好一男一女当选的情况有___种
+               正确答案：
+               35
+            3. 针对多选题，只需选择一个正确选项和题目融合成填空题即可，例如：
+               原选择题：
+               对于直线:(m-1)x+y-2m+3=0, 下列选项正确的是()
+               A. 直线恒过点(2,-1)
+               B. 当m=0时,直线1在y轴上的截距为3
+               C. 已知点A(3, 1), B(-1,2), 若直线与线段AB相交, 则m的取值范围是[0,3]
+               D. 坐标原点到直线的距离的最大值为5
+               正确答案：
+               A,D
+               
+               改编后的填空题：
+               对于直线:(m-1)x+y-2m+3=0, 直线横过哪个点？
+               正确答案：
+               (2,-1)
+               
             【输出要求】
             请以JSON格式输出，包含以下字段：
             - "question": 改编后的题目文本
@@ -3530,8 +3540,8 @@ class NovelProblemGenerator:
                     
                     if converted_question:
                         print(f"✅ 选择题改编完成")
-                        print(f"改编后的题目：{converted_question}")
-                        print(f"改编后的答案：{converted_answer}")
+                        print(f"改编后的题目：\n{converted_question}")
+                        print(f"改编后的答案：\n{converted_answer}")
                         return converted_question, converted_answer
                     else:
                         print("⚠️ JSON解析成功但题目为空，使用原题目")
@@ -3559,9 +3569,9 @@ class NovelProblemGenerator:
 
         # 获得答案
         if final_keyword and question_idx:
-            ans_text, ans_mark = self._scrape_answers(final_keyword, question_idx, options)
+            ans_text = self._scrape_answers(final_keyword, question_idx)
 
-            if ans_mark:
+            if options:
                 print(f"选择题识别完成")
                 # 针对选择题做特殊处理：改编为答案唯一的填空题
                 q_text, ans_text = self._convert_choice_to_fill_blank(q_text, options, ans_text)
@@ -3609,14 +3619,12 @@ class NovelProblemGenerator:
         
         print("---------------------------------网络检索题目---------------------------------")
         retrieved_problem, retrieved_answer = self._retrieve_problems_from_web(knowledge_points)
-        print(f"检索到的题目：{retrieved_problem}")
-        print(f"检索到的答案：{retrieved_answer}")
         
         if not retrieved_problem:
             print("警告：未能检索到题目")
             return None
         
-        print("--------------------------------改写题目--------------------------------")
+        print("----------------------------------重述题目----------------------------------")
         # 改写检索到的题目
         example_original = r"1.(2025·开福模拟)已知菱形$ABCD$的边长为$1，∠DAB=60°。E$是$BC$的中点，$AE$与$BD$相交于点$F$。则$$\overrightarrow{AF}\cdot\overrightarrow{AB}=$$（  ）"
         example_modified = r"已知菱形$ABCD$的边长为$1，∠DAB=60°。最近小区里新种了很多绿植，环境变得更优美了。E$是$BC$的中点，$AE$与$BD$相交于点$F$。则$$\overrightarrow{AF}\cdot\overrightarrow{AB}=$$（  ）"
@@ -3638,6 +3646,8 @@ class NovelProblemGenerator:
             """)
         paraphrased_problem = llm_paraphrase.chat(paraphrase_prompt).strip()
         
+        print(f"检索到的题目：\n{retrieved_problem}")
+        print(f"重述后的题目：\n{paraphrased_problem}")
         item.augmented_question = paraphrased_problem
         item.augmented_true_answer = retrieved_answer  # 记录检索到的答案
         item.method_used = "novel-1"
