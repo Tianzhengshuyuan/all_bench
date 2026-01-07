@@ -3275,7 +3275,6 @@ class NovelProblemGenerator:
         time.sleep(self.wait_time + 2)
 
         # 点击左侧对应知识点
-        final_keyword = keyword 
         try:
             # 等待搜索结果出现（搜索结果通常在 .list-tree-search-list 或 .list-ts-chbox 区域）
             WebDriverWait(self.driver, 10).until(
@@ -3297,9 +3296,8 @@ class NovelProblemGenerator:
                 for idx, item in enumerate(all_matches, 1):
                     try:
                         text_content = item.find_element(By.CSS_SELECTOR, "span.ts-tit").text.strip()
-                        final_keyword = text_content  # 记录当前使用的关键词
                         
-                        print(f"👆 [{idx}/{len(all_matches)}] 正在点击知识点: {final_keyword}")
+                        print(f"👆 [{idx}/{len(all_matches)}] 正在点击知识点: {text_content}")
                         
                         # 滚动元素到可视区域（这是关键步骤，避免element not interactable错误）
                         self.driver.execute_script("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", item)
@@ -3313,7 +3311,7 @@ class NovelProblemGenerator:
                         
                         # 使用JavaScript点击
                         self.driver.execute_script("arguments[0].click();", item)
-                        print(f"✅ 成功点击知识点: {final_keyword}")
+                        print(f"✅ 成功点击知识点: {text_content}")
                         time.sleep(1)
                         
                     except Exception as e:
@@ -3327,6 +3325,50 @@ class NovelProblemGenerator:
                 raise Exception("未找到匹配的知识点条目")
         except Exception as e:
             print(f"⚠️ 未找到左侧菜单【{keyword}】，错误信息: {e}")
+
+        # 点击完知识点后，设置筛选条件：来源=高考真题，时间=2025
+        try:
+            print("🔍 正在设置筛选条件：来源=高考真题，时间=2025")
+            time.sleep(1)  # 等待页面更新
+            
+            # 1. 选择来源：高考真题 (data-param="question_source=11")
+            try:
+                source_link = WebDriverWait(self.driver, 10).until(
+                    EC.element_to_be_clickable((By.XPATH, "//a[@data-param='question_source=11' and contains(text(), '高考真题')]"))
+                )
+                self.driver.execute_script("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", source_link)
+                time.sleep(0.5)
+                self.driver.execute_script("arguments[0].click();", source_link)
+                print("✅ 成功选择来源：高考真题")
+                time.sleep(1)
+            except Exception as e:
+                print(f"⚠️ 选择来源时出错: {e}")
+            
+            # 2. 选择时间：2025 (data-param="year=2025")     
+            year_link = None
+            try:
+                year_link = WebDriverWait(self.driver, 5).until(
+                    EC.presence_of_element_located((By.XPATH, "//a[@data-param='year=2025']"))
+                )
+                print("📌 找到2025选项")
+            except Exception as e1:
+                print(f"📌 2025选项不可见：{e1}")
+     
+            # 如果找到了2025选项，点击它
+            if year_link:
+                self.driver.execute_script("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", year_link)
+                time.sleep(0.5)
+                self.driver.execute_script("arguments[0].click();", year_link)
+                print("✅ 成功选择时间：2025")
+                time.sleep(1)
+            else:
+                print("⚠️ 未找到2025选项")
+                
+        except Exception as e:
+            print(f"⚠️ 设置筛选条件时出错: {e}")
+
+        print(f"\n📥 保存完整页面用于调试...")
+        self._save_page_for_debug(question_idx=None, stage="筛选条件")
 
         # 创建requests session以保持cookies（用于下载图片）
         session = requests.Session()
@@ -3408,7 +3450,7 @@ class NovelProblemGenerator:
         options = self._extract_options(selected_q, session, actual_idx)
         
         # 返回最终使用的关键词、题目索引和选项
-        return final_keyword, actual_idx, options, q_text
+        return actual_idx, options, q_text
 
     def _scrape_answers(self, keyword, question_idx):
         """ 
@@ -3438,58 +3480,100 @@ class NovelProblemGenerator:
 
         # 点击左侧对应知识点
         try:
-            # print(f"➡️  正在查找菜单项【{keyword}】...")
             # 等待搜索结果出现（搜索结果通常在 .list-tree-search-list 或 .list-ts-chbox 区域）
             WebDriverWait(self.driver, 10).until(
                 EC.presence_of_element_located((By.CSS_SELECTOR, ".list-ts-item, .J_ListTsItem"))
             )
             time.sleep(1)  # 额外等待搜索结果渲染
-
-            link = None
             
-            # 策略1: 尝试精确匹配（去除<em>标签后文本完全匹配）
+            # 查找所有匹配的条目
+            all_matches = []
             try:
                 # 查找所有匹配的条目
                 all_matches = self.driver.find_elements(By.XPATH, f"//span[@class='ts-tit' and contains(., '{keyword}')]/ancestor::li[contains(@class, 'list-ts-item')]")
-                if all_matches:
-                    # 遍历所有匹配项，查找文本完全匹配的
-                    for item in all_matches:
+                if not all_matches:
+                    raise Exception("未找到匹配的知识点条目")
+                
+                print(f"📊 找到 {len(all_matches)} 个匹配的知识点")
+                
+                # 遍历所有匹配的知识点并依次点击
+                for idx, item in enumerate(all_matches, 1):
+                    try:
                         text_content = item.find_element(By.CSS_SELECTOR, "span.ts-tit").text.strip()
-                        # 去除可能的空格和特殊字符后比较
-                        if text_content == keyword or text_content.replace(' ', '') == keyword.replace(' ', ''):
-                            link = item
-                            # print(f"✅ 找到精确匹配: {text_content}")
-                            break
-                    
-                    # 如果没有精确匹配，选择第一个
-                    if link is None:
-                        link = all_matches[0]
-                        text_content = link.find_element(By.CSS_SELECTOR, "span.ts-tit").text.strip()
-                        # print(f"⚠️  未找到精确匹配，选择第一个匹配项: {text_content}")
+                        
+                        print(f"👆 [{idx}/{len(all_matches)}] 正在点击知识点: {text_content}")
+                        
+                        # 滚动元素到可视区域（这是关键步骤，避免element not interactable错误）
+                        self.driver.execute_script("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", item)
+                        time.sleep(0.5)
+                        
+                        # 确保元素可见
+                        self.driver.execute_script("arguments[0].style.display = 'block';", item)
+                        WebDriverWait(self.driver, 10).until(
+                            EC.visibility_of(item)
+                        )
+                        
+                        # 使用JavaScript点击
+                        self.driver.execute_script("arguments[0].click();", item)
+                        print(f"✅ 成功点击知识点: {text_content}")
+                        time.sleep(1)
+                        
+                    except Exception as e:
+                        print(f"⚠️ 点击第 {idx} 个知识点时出错: {e}")
+                        continue
+                
+                print(f"✅ 已完成所有知识点的点击，共点击 {len(all_matches)} 个知识点")
+                
             except Exception as e:
                 print(f"⚠️ 匹配过程中出现错误: {e}")
-
-            if link is None:
                 raise Exception("未找到匹配的知识点条目")
-            
-            # 滚动元素到可视区域（这是关键步骤，避免element not interactable错误）
-            self.driver.execute_script("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", link)
-            time.sleep(0.5)
-            
-            # 确保元素可见
-            self.driver.execute_script("arguments[0].style.display = 'block';", link)
-            WebDriverWait(self.driver, 10).until(
-                EC.visibility_of(link)
-            )
-            
-            # 使用JavaScript点击，更可靠（避免element not interactable错误）
-            # JavaScript click 可以绕过许多交互性问题
-            self.driver.execute_script("arguments[0].click();", link)
-            # print(f"👆 成功点击知识点: {keyword}")
-            time.sleep(self.wait_time + 2)
         except Exception as e:
             print(f"⚠️ 未找到左侧菜单【{keyword}】，错误信息: {e}")
 
+        # 点击完知识点后，设置筛选条件：来源=高考真题，时间=2025
+        try:
+            print("🔍 正在设置筛选条件：来源=高考真题，时间=2025")
+            time.sleep(1)  # 等待页面更新
+            
+            # 1. 选择来源：高考真题 (data-param="question_source=11")
+            try:
+                source_link = WebDriverWait(self.driver, 10).until(
+                    EC.element_to_be_clickable((By.XPATH, "//a[@data-param='question_source=11' and contains(text(), '高考真题')]"))
+                )
+                self.driver.execute_script("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", source_link)
+                time.sleep(0.5)
+                self.driver.execute_script("arguments[0].click();", source_link)
+                print("✅ 成功选择来源：高考真题")
+                time.sleep(1)
+            except Exception as e:
+                print(f"⚠️ 选择来源时出错: {e}")
+            
+            # 2. 选择时间：2025 (data-param="year=2025")     
+            year_link = None
+            try:
+                year_link = WebDriverWait(self.driver, 5).until(
+                    EC.presence_of_element_located((By.XPATH, "//a[@data-param='year=2025']"))
+                )
+                print("📌 找到2025选项")
+            except Exception as e1:
+                print(f"📌 2025选项不可见：{e1}")
+     
+            # 如果找到了2025选项，点击它
+            if year_link:
+                self.driver.execute_script("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", year_link)
+                time.sleep(0.5)
+                self.driver.execute_script("arguments[0].click();", year_link)
+                print("✅ 成功选择时间：2025")
+                time.sleep(1)
+            else:
+                print("⚠️ 未找到2025选项")
+                
+        except Exception as e:
+            print(f"⚠️ 设置筛选条件时出错: {e}")
+
+        print(f"\n📥 保存完整页面用于调试...")
+        self._save_page_for_debug(question_idx=None, stage="筛选条件")
+        
         # 创建requests session以保持cookies（用于下载图片）
         # print("🔧 初始化下载会话...")
         session = requests.Session()
@@ -3662,11 +3746,11 @@ class NovelProblemGenerator:
             return "", ""
         
         keyword = knowledge_points[0]
-        final_keyword, question_idx, options, q_text = self._scrape_questions_and_options(keyword)
+        question_idx, options, q_text = self._scrape_questions_and_options(keyword)
 
         # 获得答案
-        if final_keyword and question_idx:
-            ans_text = self._scrape_answers(final_keyword, question_idx)
+        if question_idx and q_text:
+            ans_text = self._scrape_answers(keyword, question_idx)
 
             if options:
                 print(f"选择题识别完成")
