@@ -2617,6 +2617,7 @@ class NovelProblemGenerator:
         time.sleep(self.wait_time)
         
         # 等待知识点树加载完成
+        self._save_page_for_debug(question_idx=None, stage="知识点树访问")
         try:
             WebDriverWait(self.driver, 15).until(
                 EC.presence_of_element_located((By.CSS_SELECTOR, ".t-checkbox-node"))
@@ -3102,6 +3103,7 @@ class NovelProblemGenerator:
         except Exception as e:
             print(f"  ⚠️  等待题目元素加载超时: {e}")
         
+        q_mc_selenium = None
         try:
             # print(f"  🖱️  尝试通过题目索引定位第 {question_idx} 题...")
             xpath_q_mc = f"(//li[@class='QuestionView'])[{question_idx}]//div[@class='question-block']//div[@class='q-mc']"
@@ -3113,6 +3115,21 @@ class NovelProblemGenerator:
             # print(f"  ✅ 成功定位到 q-mc 元素")
         except Exception as e1:
             print(f"  ⚠️  通过索引定位失败: {e1}")
+            # 如果定位失败，尝试使用CSS选择器作为备用方案
+            try:
+                question_elements = self.driver.find_elements(By.CSS_SELECTOR, "ul li div.q-tit")
+                if question_idx <= len(question_elements):
+                    # 找到对应的QuestionView
+                    target_question = question_elements[question_idx - 1]
+                    # 向上查找QuestionView，然后找q-mc
+                    question_view = target_question.find_element(By.XPATH, "./ancestor::li[@class='QuestionView']")
+                    q_mc_selenium = question_view.find_element(By.CSS_SELECTOR, "div.question-block div.q-mc")
+            except Exception as e2:
+                print(f"  ⚠️  备用定位方案也失败: {e2}")
+                return "（无法定位题目元素）"
+        
+        if q_mc_selenium is None:
+            return "（无法定位题目元素）"
         
         # 滚动到元素可见
         self.driver.execute_script("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", q_mc_selenium)
@@ -3324,25 +3341,25 @@ class NovelProblemGenerator:
                 print(f"⚠️ 匹配过程中出现错误: {e}")
                 raise Exception("未找到匹配的知识点条目")
         except Exception as e:
-            print(f"⚠️ 未找到左侧菜单【{keyword}】，错误信息: {e}")
+            print(f"⚠️ 未找到左侧菜单【{keyword}】")
+            return None, None, None, None, None
 
         # 点击完知识点后，设置筛选条件：来源=高考真题，时间=2025
         try:
-            print("🔍 正在设置筛选条件：来源=高考真题，时间=2025")
             time.sleep(1)  # 等待页面更新
             
-            # 1. 选择来源：高考真题 (data-param="question_source=11")
-            try:
-                source_link = WebDriverWait(self.driver, 10).until(
-                    EC.element_to_be_clickable((By.XPATH, "//a[@data-param='question_source=11' and contains(text(), '高考真题')]"))
-                )
-                self.driver.execute_script("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", source_link)
-                time.sleep(0.5)
-                self.driver.execute_script("arguments[0].click();", source_link)
-                print("✅ 成功选择来源：高考真题")
-                time.sleep(1)
-            except Exception as e:
-                print(f"⚠️ 选择来源时出错: {e}")
+            # # 1. 选择来源：高考真题 (data-param="question_source=11")
+            # try:
+            #     source_link = WebDriverWait(self.driver, 10).until(
+            #         EC.element_to_be_clickable((By.XPATH, "//a[@data-param='question_source=11' and contains(text(), '高考真题')]"))
+            #     )
+            #     self.driver.execute_script("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", source_link)
+            #     time.sleep(0.5)
+            #     self.driver.execute_script("arguments[0].click();", source_link)
+            #     print("✅ 成功选择来源：高考真题")
+            #     time.sleep(1)
+            # except Exception as e:
+            #     print(f"⚠️ 选择来源时出错: {e}")
             
             # 2. 选择时间：2025 (data-param="year=2025")     
             year_link = None
@@ -3350,7 +3367,6 @@ class NovelProblemGenerator:
                 year_link = WebDriverWait(self.driver, 5).until(
                     EC.presence_of_element_located((By.XPATH, "//a[@data-param='year=2025']"))
                 )
-                print("📌 找到2025选项")
             except Exception as e1:
                 print(f"📌 2025选项不可见：{e1}")
      
@@ -3359,7 +3375,7 @@ class NovelProblemGenerator:
                 self.driver.execute_script("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", year_link)
                 time.sleep(0.5)
                 self.driver.execute_script("arguments[0].click();", year_link)
-                print("✅ 成功选择时间：2025")
+                print("✅ 成功选择年份：2025")
                 time.sleep(1)
             else:
                 print("⚠️ 未找到2025选项")
@@ -3378,16 +3394,75 @@ class NovelProblemGenerator:
         # 确保图片目录存在
         os.makedirs(self.images_dir, exist_ok=True)
         
-        # 解析题目内容
-        page_source = self.driver.page_source
-        soup = BeautifulSoup(page_source, "lxml")
-        all_questions = soup.select("ul li div.q-tit")
+        # 收集所有页面的题目，并记录每页的题目索引范围
+        all_questions = []
+        
+        page_num = 1
+        while page_num <= 10:
+            print(f"\n📄 正在抓取第 {page_num} 页的题目...")
+            
+            # 等待页面加载完成
+            time.sleep(self.wait_time)
+            
+            # 解析当前页面的题目内容
+            page_source = self.driver.page_source
+            soup = BeautifulSoup(page_source, "lxml")
+            page_questions = soup.select("ul li div.q-tit")
+            
+            print(f"🧐 第 {page_num} 页发现 {len(page_questions)} 道题。")
 
-        print(f"🧐 共发现 {len(all_questions)} 道题。")
+            # 将当前页的题目添加到总列表中（记录题目内容、页码和页面索引）
+            for page_index, q_tit in enumerate(page_questions):
+                question_info = {
+                    'content': q_tit,
+                    'page_num': page_num,
+                    'page_index': page_index
+                }
+                all_questions.append(question_info)
+            
+            # 检查是否有"下一页"按钮
+            try:
+                # 查找"下一页"链接：在pagenum div中查找包含"下一页"文本的a标签
+                next_page_link = self.driver.find_element(By.XPATH, "//div[@class='pagenum']//a[contains(text(), '下一页')]")
+                
+                # 检查链接是否可点击（可能被禁用或隐藏）
+                if next_page_link.is_displayed() and next_page_link.is_enabled():
+                    print(f"➡️ 找到'下一页'按钮，准备翻页...")
+                    # 滚动到分页区域
+                    self.driver.execute_script("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", next_page_link)
+                    time.sleep(0.5)
+                    # 点击下一页
+                    self.driver.execute_script("arguments[0].click();", next_page_link)
+                    page_num += 1
+                    # 等待页面加载 - 等待题目元素出现
+                    try:
+                        WebDriverWait(self.driver, 10).until(
+                            EC.presence_of_element_located((By.CSS_SELECTOR, "ul li div.q-tit"))
+                        )
+                        time.sleep(self.wait_time)  # 额外等待确保页面完全加载
+                    except Exception as e:
+                        print(f"⚠️ 等待新页面加载时出错: {e}，继续尝试...")
+                        time.sleep(self.wait_time + 1)
+                else:
+                    print(f"✅ 已到达最后一页（'下一页'按钮不可用）")
+                    break
+            except Exception as e:
+                # 如果没有找到"下一页"按钮，说明已经是最后一页
+                print(f"✅ 已到达最后一页（未找到'下一页'按钮）")
+                break
+        
+        if page_num > 10:
+            print(f"⚠️ 已到达10页限制，提前退出抓取...")
+            
+        print(f"\n📊 所有页面抓取完成，共发现 {len(all_questions)} 道题。")
 
         # 过滤掉有小题的题目（q-mc中包含q-bd-list的题目）+ 本身就是小题的题目（q-tit的祖父是q-bd-list）+ 包含"如图"的题目
         questions_without_subquestions = []
-        for idx, q_tit in enumerate(all_questions):
+        for idx, question_info in enumerate(all_questions):
+            q_tit = question_info['content']
+            page_num_info = question_info['page_num']
+            page_index_info = question_info['page_index']
+            
             # 检查1: 如果q-tit的祖父是q-bd-list，说明这是小题，需要过滤
             parent = q_tit.parent
             if parent:
@@ -3409,8 +3484,8 @@ class NovelProblemGenerator:
                         if "如图" in q_text_raw:
                             # print(f"  ⚠️ 第 {idx + 1} 题包含'如图'，跳过")
                             continue
-                        # 没有小题且不包含"如图"，保留这个题目
-                        questions_without_subquestions.append((idx, q_tit))
+                        # 没有小题且不包含"如图"，保留这个题目（包含题目内容、页码和页面索引）
+                        questions_without_subquestions.append((idx, q_tit, page_num_info, page_index_info))
                     # else:
                     #     print(f"  ⚠️  第 {idx + 1} 题包含小题，跳过")
                 else:
@@ -3420,7 +3495,7 @@ class NovelProblemGenerator:
                         # print(f"  ⚠️ 第 {idx + 1} 题包含'如图'，跳过")
                         continue
                     # 如果找不到q-mc，也保留（可能是其他类型的题目）
-                    questions_without_subquestions.append((idx, q_tit))
+                    questions_without_subquestions.append((idx, q_tit, page_num_info, page_index_info))
             else:
                 # 如果找不到QuestionView，检查题目文本中是否包含"如图"
                 q_text_raw = q_tit.get_text(strip=False)
@@ -3428,20 +3503,19 @@ class NovelProblemGenerator:
                     # print(f"  ⚠️ 第 {idx + 1} 题包含'如图'，跳过")
                     continue
                 # 如果找不到QuestionView，也保留
-                questions_without_subquestions.append((idx, q_tit))
+                questions_without_subquestions.append((idx, q_tit, page_num_info, page_index_info))
 
         print(f"🔦 过滤后，共有 {len(questions_without_subquestions)} 道没有小题且不包含'如图'的题目。")
 
         # 随机选择一道题
         if len(questions_without_subquestions) == 0:
             print("⚠️ 未找到任何没有小题的题目")
-            return None, None, None, None
+            return None, None, None, None, None
         
         selected_item = random.choice(questions_without_subquestions)
-        selected_idx, selected_q = selected_item
+        selected_idx, selected_q, selected_page_num, selected_page_index = selected_item
         actual_idx = selected_idx + 1  # 题目编号从1开始
-        
-        print(f"🎲 随机选择第 {actual_idx} 题进行处理...")
+        print(f"🔍 选择总题号: {actual_idx}的题目，位于第{selected_page_num}页，第{selected_page_index}个题目")
         
         # 提取题目文本，并识别其中的数学公式图片
         q_text = self._extract_questions(selected_q, session, actual_idx)
@@ -3449,14 +3523,16 @@ class NovelProblemGenerator:
         # 提取选项
         options = self._extract_options(selected_q, session, actual_idx)
         
-        # 返回最终使用的关键词、题目索引和选项
-        return actual_idx, options, q_text
+        # 返回最终使用的关键词、题目索引和选项，以及题目所在的页码
+        return actual_idx, options, q_text, selected_page_num, selected_page_index
 
-    def _scrape_answers(self, keyword, question_idx):
+    def _scrape_answers(self, keyword, question_idx, page_num, page_index):
         """ 
         重复搜索步骤，然后直接提取答案
         :param keyword: 搜索关键词
         :param question_idx: 题目索引（从1开始）
+        :param page_num: 页面编号
+        :param page_index: 页面中的题目index
         :return: 答案文本
         """
         # print(f"🌐 正在访问：{self.question_bank_url}")
@@ -3528,25 +3604,25 @@ class NovelProblemGenerator:
                 print(f"⚠️ 匹配过程中出现错误: {e}")
                 raise Exception("未找到匹配的知识点条目")
         except Exception as e:
-            print(f"⚠️ 未找到左侧菜单【{keyword}】，错误信息: {e}")
+            print(f"⚠️ 未找到左侧菜单【{keyword}】")
+            return None, None, None, None, None
 
         # 点击完知识点后，设置筛选条件：来源=高考真题，时间=2025
         try:
-            print("🔍 正在设置筛选条件：来源=高考真题，时间=2025")
             time.sleep(1)  # 等待页面更新
             
-            # 1. 选择来源：高考真题 (data-param="question_source=11")
-            try:
-                source_link = WebDriverWait(self.driver, 10).until(
-                    EC.element_to_be_clickable((By.XPATH, "//a[@data-param='question_source=11' and contains(text(), '高考真题')]"))
-                )
-                self.driver.execute_script("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", source_link)
-                time.sleep(0.5)
-                self.driver.execute_script("arguments[0].click();", source_link)
-                print("✅ 成功选择来源：高考真题")
-                time.sleep(1)
-            except Exception as e:
-                print(f"⚠️ 选择来源时出错: {e}")
+            # # 1. 选择来源：高考真题 (data-param="question_source=11")
+            # try:
+            #     source_link = WebDriverWait(self.driver, 10).until(
+            #         EC.element_to_be_clickable((By.XPATH, "//a[@data-param='question_source=11' and contains(text(), '高考真题')]"))
+            #     )
+            #     self.driver.execute_script("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", source_link)
+            #     time.sleep(0.5)
+            #     self.driver.execute_script("arguments[0].click();", source_link)
+            #     print("✅ 成功选择来源：高考真题")
+            #     time.sleep(1)
+            # except Exception as e:
+            #     print(f"⚠️ 选择来源时出错: {e}")
             
             # 2. 选择时间：2025 (data-param="year=2025")     
             year_link = None
@@ -3554,7 +3630,6 @@ class NovelProblemGenerator:
                 year_link = WebDriverWait(self.driver, 5).until(
                     EC.presence_of_element_located((By.XPATH, "//a[@data-param='year=2025']"))
                 )
-                print("📌 找到2025选项")
             except Exception as e1:
                 print(f"📌 2025选项不可见：{e1}")
      
@@ -3563,7 +3638,7 @@ class NovelProblemGenerator:
                 self.driver.execute_script("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", year_link)
                 time.sleep(0.5)
                 self.driver.execute_script("arguments[0].click();", year_link)
-                print("✅ 成功选择时间：2025")
+                print("✅ 成功选择年份：2025")
                 time.sleep(1)
             else:
                 print("⚠️ 未找到2025选项")
@@ -3575,72 +3650,64 @@ class NovelProblemGenerator:
         self._save_page_for_debug(question_idx=None, stage="筛选条件")
         
         # 创建requests session以保持cookies（用于下载图片）
-        # print("🔧 初始化下载会话...")
         session = requests.Session()
         for cookie in self.driver.get_cookies():
             session.cookies.set(cookie['name'], cookie['value'])
         
         # 确保图片目录存在
         os.makedirs(self.images_dir, exist_ok=True)
-        
-        # 解析题目内容，定位到指定索引的题目
-        page_source = self.driver.page_source
-        soup = BeautifulSoup(page_source, "lxml")
-        all_questions = soup.select("ul li div.q-tit")
 
-        # print(f"🧐 共发现 {len(all_questions)} 道题。")
-
-        questions_without_subquestions = []
-        for idx, q_tit in enumerate(all_questions):
-            # 检查1: 如果q-tit的祖父是q-bd-list，说明这是小题，需要过滤
-            parent = q_tit.parent
-            if parent:
-                grandparent = parent.parent
-                if grandparent and grandparent.name == "ol" and "q-bd-list" in grandparent.get("class", []):
-                    # print(f"  ⚠️ 第 {idx + 1} 题是小题目（祖父是q-bd-list），跳过")
-                    continue
-            
-            # 检查2: 找到对应的q-mc div（向上查找父元素，找到QuestionView，然后找q-mc）
-            question_view = q_tit.find_parent("li", class_="QuestionView")
-            if question_view:
-                q_mc = question_view.find("div", class_="q-mc")
-                if q_mc:
-                    # 检查q-mc中是否有q-bd-list（代表有小题）
-                    q_bd_list = q_mc.find("ol", class_="q-bd-list")
-                    if q_bd_list is None:
-                        # 没有小题，保留这个题目
-                        questions_without_subquestions.append((idx, q_tit))
-                    # else:
-                    #     print(f"  ⚠️ 第 {idx + 1} 题包含小题，跳过")
+        # 翻页到目标页面
+        current_page = 1
+        while current_page < page_num:
+            try:
+                # 等待页面加载完成
+                time.sleep(self.wait_time)
+                
+                # 查找"下一页"按钮
+                next_page_link = self.driver.find_element(By.XPATH, "//div[@class='pagenum']//a[contains(text(), '下一页')]")
+                
+                # 检查链接是否可点击
+                if next_page_link.is_displayed() and next_page_link.is_enabled():
+                    # 滚动到分页区域
+                    self.driver.execute_script("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", next_page_link)
+                    time.sleep(0.5)
+                    # 点击下一页
+                    self.driver.execute_script("arguments[0].click();", next_page_link)
+                    current_page += 1
+                    # 等待页面加载 - 等待题目元素出现
+                    try:
+                        WebDriverWait(self.driver, 10).until(
+                            EC.presence_of_element_located((By.CSS_SELECTOR, "ul li div.q-tit"))
+                        )
+                        time.sleep(self.wait_time)  # 额外等待确保页面完全加载
+                    except Exception as e:
+                        print(f"⚠️ 等待新页面加载时出错: {e}，继续尝试...")
+                        time.sleep(self.wait_time + 1)
                 else:
-                    # 如果找不到q-mc，也保留（可能是其他类型的题目）
-                    questions_without_subquestions.append((idx, q_tit))
-            else:
-                # 如果找不到QuestionView，也保留
-                questions_without_subquestions.append((idx, q_tit))
-
-        # print(f"🔦 过滤后，共有 {len(questions_without_subquestions)} 道没有小题的题目。")
-
-        if len(questions_without_subquestions) == 0:
-            print("⚠️ 未找到任何没有小题的题目")
-            return "（未找到题目）", None
+                    print(f"⚠️ 无法翻到第 {page_num} 页（已到达最后一页）")
+                    return "（无法翻到目标页面）"
+            except Exception as e:
+                print(f"⚠️ 翻页时出错: {e}")
+                return "（翻页失败）"
         
-        # question_idx是从1开始的原始索引，需要找到对应的过滤后题目
-        # 查找原始索引对应的题目在过滤后列表中的位置
-        target_question = None
-        for orig_idx, q_tit in questions_without_subquestions:
-            if orig_idx + 1 == question_idx:  # question_idx是从1开始的
-                target_question = q_tit
-                break
+        # 等待当前页面加载完成
+        time.sleep(self.wait_time)
+        print(f"\n📥 保存完整页面用于调试...")
+        self._save_page_for_debug(question_idx=None, stage="筛选条件")
+                
+        # 等待题目元素出现，确保页面已加载
+        try:
+            WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.CSS_SELECTOR, "ul li div.q-tit"))
+            )
+        except Exception as e:
+            print(f"⚠️ 等待页面加载时出错: {e}")
+            return "（页面加载失败）"
         
-        if target_question is None:
-            print(f"⚠️ 题目索引 {question_idx} 对应的题目包含小题或不存在（共 {len(questions_without_subquestions)} 道无小题题目）")
-            return "（题目索引对应的题目包含小题或不存在）", None
-        
-        # print(f"📋 开始提取第 {question_idx} 题答案...")
-        
-        # 提取答案
-        answer_content = self._extract_answer(session, question_idx)
+        # 直接调用_extract_answer，它已经处理了定位、点击和提取答案的逻辑
+        # page_index是从0开始的页面内索引，而_extract_answer期望从1开始的索引，所以需要+1
+        answer_content = self._extract_answer(session, page_index + 1)
         print(f"答案：{answer_content}")
         return answer_content
 
@@ -3746,11 +3813,11 @@ class NovelProblemGenerator:
             return "", ""
         
         keyword = knowledge_points[0]
-        question_idx, options, q_text = self._scrape_questions_and_options(keyword)
+        question_idx, options, q_text, page_num, page_index = self._scrape_questions_and_options(keyword)
 
         # 获得答案
         if question_idx and q_text:
-            ans_text = self._scrape_answers(keyword, question_idx)
+            ans_text = self._scrape_answers(keyword, question_idx, page_num, page_index)
 
             if options:
                 print(f"选择题识别完成")
