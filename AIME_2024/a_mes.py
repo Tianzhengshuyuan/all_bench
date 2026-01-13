@@ -4763,67 +4763,161 @@ def run_ames_on_csv(args):
     if args.method == "6":
         novel_generator.initialize_for_batch_processing()
 
-    # 如果指定了start，使用追加模式；否则使用写入模式（覆盖）
-    file_mode = 'a' if args.start else 'w'
-    
-    with open(args.input, 'r', encoding='utf-8') as infile, \
-            open(output_path, file_mode, newline='', encoding='utf-8') as outfile:
+    # 如果设置了mend_question，需要特殊处理：读取输出文件，删除对应行，然后重新插入
+    if args.mend_question:
+        # 读取输出文件（如果存在）
+        existing_rows = []
+        if os.path.exists(output_path):
+            with open(output_path, 'r', encoding='utf-8', newline='') as f:
+                reader = csv.reader(f)
+                existing_rows = list(reader)
+            print(f"📖 读取到输出文件，共 {len(existing_rows)} 行")
+        
+        # 确保列表长度足够（如果输出文件行数少于mend_question，需要补充空行）
+        while len(existing_rows) < args.mend_question:
+            existing_rows.append([])
+        
+        # 删除对应行（行号从1开始，索引从0开始）
+        if args.mend_question <= len(existing_rows):
+            deleted_row = existing_rows.pop(args.mend_question - 1)
+            print(f"🗑️  删除第 {args.mend_question} 行的旧数据")
+        else:
+            print(f"⚠️  输出文件中没有第 {args.mend_question} 行，将新增")
+        
+        # 只处理指定的题目
+        mend_success = False
+        found_row = False
+        with open(args.input, 'r', encoding='utf-8') as infile:
+            reader = csv.reader(infile)
+            for i, row in enumerate(reader, start=1):
+                if i == args.mend_question:
+                    found_row = True
+                    if not row:
+                        print(f"⚠️  输入文件第 {i} 行为空，跳过")
+                        break
+                    
+                    question = row[0]
+                    solution = row[1] 
+                    answer   = row[2] 
 
-        reader = csv.reader(infile)
-        writer = csv.writer(outfile)
+                    print(f"\n===============================处理第【 {i} 】题（修改模式）================================")
+                    print(f"原题：\n{question}\n答案：\n{answer}")
 
-        # 不输出 header，直接写入数据行
+                    item = ProblemItem(
+                        original_question = question,
+                        solution = solution,
+                        true_answer = answer
+                    )
 
-        for i, row in enumerate(reader, start=1):
-            if not row:
-                continue
-            if args.question_id and i != args.question_id:
-                continue
-            if args.start and i < args.start:
-                continue
-            total_count += 1
+                    # 设置当前题目ID，用于生成代码文件名
+                    analogical_transformer.current_question_id = i
 
-            question = row[0]
-            solution = row[1] 
-            answer   = row[2] 
+                    try:
+                        generate_variant = args.generate_variant
+                        processed = pipeline.process(item, method=args.method, generate_variant=generate_variant)
+                        mend_success = True
 
-            print(f"\n===============================处理第【 {total_count} 】题================================")
-            print(f"原题：\n{question}\n答案：\n{answer}")
+                        print(f"================================第【 {i} 】题小结=============================")
+                        print("原题：")
+                        print(item.original_question)
+                        print("原题答案：")
+                        print(item.true_answer)
+                        print("增强后题目：")
+                        print(processed.augmented_question)
+                        print("增强后题目答案：")
+                        print(processed.augmented_true_answer)
 
-            item = ProblemItem(
-                original_question = question,
-                solution = solution,
-                true_answer = answer
-            )
+                        # 在对应位置插入新生成的内容
+                        new_row = [
+                            processed.augmented_question,
+                            processed.augmented_true_answer,
+                        ]
+                        existing_rows.insert(args.mend_question - 1, new_row)
+                        print(f"✅ 已将新生成的内容插入到第 {args.mend_question} 行")
 
-            # 设置当前题目ID，用于生成代码文件名
-            analogical_transformer.current_question_id = i
+                    except Exception as e:
+                        print(f"处理第 {i} 行时出错：{e}")
+                        new_row = [question, solution, "ERROR", "", "", "", "", "", "", f"error_{args.method}"]
+                        existing_rows.insert(args.mend_question - 1, new_row)
+                        mend_success = False
+                    break
+        
+        if not found_row:
+            print(f"⚠️  输入文件中未找到第 {args.mend_question} 行")
+        
+        # 更新统计信息
+        total_count = 1 if found_row else 0
+        success_count = 1 if (found_row and mend_success) else 0
+        
+        # 重新写入整个文件
+        with open(output_path, 'w', newline='', encoding='utf-8') as outfile:
+            writer = csv.writer(outfile)
+            for row in existing_rows:
+                writer.writerow(row)
+        print(f"💾 已保存修改后的文件到：{output_path}")
+        
+    else:
+        # 如果指定了start，使用追加模式；否则使用写入模式（覆盖）
+        file_mode = 'a' if args.start else 'w'
+        
+        with open(args.input, 'r', encoding='utf-8') as infile, \
+                open(output_path, file_mode, newline='', encoding='utf-8') as outfile:
 
-            try:
-                generate_variant = args.generate_variant
-                processed = pipeline.process(item, method=args.method, generate_variant=generate_variant)
-                success_count += 1
+            reader = csv.reader(infile)
+            writer = csv.writer(outfile)
 
-                print(f"================================第【 {total_count} 】题小结=============================")
-                print("原题：")
-                print(item.original_question)
-                print("原题答案：")
-                print(item.true_answer)
-                print("增强后题目：")
-                print(processed.augmented_question)
-                print("增强后题目答案：")
-                print(processed.augmented_true_answer)
+            # 不输出 header，直接写入数据行
 
-                writer.writerow([
-                    processed.augmented_question,
-                    processed.augmented_true_answer,
-                    # processed.original_question,
-                    # processed.true_answer,
-                ])
+            for i, row in enumerate(reader, start=1):
+                if not row:
+                    continue
+                if args.question_id and i != args.question_id:
+                    continue
+                if args.start and i < args.start:
+                    continue
+                total_count += 1
 
-            except Exception as e:
-                print(f"处理第 {total_count} 行时出错：{e}")
-                writer.writerow([question, solution, "ERROR", "", "", "", "", "", "", f"error_{args.method}"])
+                question = row[0]
+                solution = row[1] 
+                answer   = row[2] 
+
+                print(f"\n===============================处理第【 {total_count} 】题================================")
+                print(f"原题：\n{question}\n答案：\n{answer}")
+
+                item = ProblemItem(
+                    original_question = question,
+                    solution = solution,
+                    true_answer = answer
+                )
+
+                # 设置当前题目ID，用于生成代码文件名
+                analogical_transformer.current_question_id = i
+
+                try:
+                    generate_variant = args.generate_variant
+                    processed = pipeline.process(item, method=args.method, generate_variant=generate_variant)
+                    success_count += 1
+
+                    print(f"================================第【 {total_count} 】题小结=============================")
+                    print("原题：")
+                    print(item.original_question)
+                    print("原题答案：")
+                    print(item.true_answer)
+                    print("增强后题目：")
+                    print(processed.augmented_question)
+                    print("增强后题目答案：")
+                    print(processed.augmented_true_answer)
+
+                    writer.writerow([
+                        processed.augmented_question,
+                        processed.augmented_true_answer,
+                        # processed.original_question,
+                        # processed.true_answer,
+                    ])
+
+                except Exception as e:
+                    print(f"处理第 {total_count} 行时出错：{e}")
+                    writer.writerow([question, solution, "ERROR", "", "", "", "", "", "", f"error_{args.method}"])
 
     end_time = time.time()
     total_time = end_time - start_time
@@ -4857,6 +4951,7 @@ if __name__ == "__main__":
     parser.add_argument('--temperature', type=float, default=0.2, help="API 回答多样性，默认 0.2")
     parser.add_argument('--model', type=str, default="deepseek", help="已忽略：模型选择请直接修改代码中的 DEFAULT_STAGE_MODEL / DEFAULT_ROLE_MODEL")
     parser.add_argument('--question_id', type=int, default=None, help="题目ID")
+    parser.add_argument('--mend_question', type=int, default=None, help="修改题目")
     parser.add_argument('--start', type=int, default=None, help="开始题目ID")
     parser.add_argument('--method', type=str, default="1",
         help=(
