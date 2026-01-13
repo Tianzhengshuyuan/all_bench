@@ -526,7 +526,6 @@ class RedundancyInjector:
         item.method_used = tag
         return item
 
-
 class AnalogicalTransformer:
     """类比变换模块：基于代码生成和验证的 analogical-2 和 analogical-3"""
 
@@ -2310,7 +2309,7 @@ class NovelProblemGenerator:
         self.login_method = "mobile"  # 可选值: "password" 或 "mobile", 代表账号密码登录 or 手机号+验证码登录
         self.username = "18192300180"
         self.password = "xx100806"
-        self.mobile = "18192300180"
+        self.mobile = "13240974717"
         self.images_dir = "math_images"
         self.debug_pages_dir = "debug_pages"
         self.doubao_api_key = "196b33be-8abb-4af3-9fba-6e266b2dd942"
@@ -3267,7 +3266,6 @@ class NovelProblemGenerator:
             traceback.print_exc()
             return None, None
 
-
     def _extract_questions(self, soup_element, session, question_idx, llm_image_recognition):
         """
         提取元素中的图片，识别后替换为LaTeX公式
@@ -3514,6 +3512,7 @@ class NovelProblemGenerator:
             EC.element_to_be_clickable((By.CSS_SELECTOR, "input[name='know_txt'], #J_ltsrchFrm input[type='text'], .fm-txt"))
         )
 
+        match_count = 0
         # 对每个 keyword 依次处理
         for keyword_idx, keyword in enumerate(knowledge_points, 1):
             print(f"\n📝 【{keyword_idx}/{len(knowledge_points)}】 处理关键词: {keyword}")
@@ -3541,13 +3540,19 @@ class NovelProblemGenerator:
                     all_matches = self.driver.find_elements(By.XPATH, f"//span[@class='ts-tit' and contains(., '{keyword}')]/ancestor::li[contains(@class, 'list-ts-item')]")
                     if not all_matches:
                         raise Exception("未找到匹配的知识点条目")
-                    
+                    match_count += len(all_matches)
                     print(f"📊 找到 {len(all_matches)} 个匹配的知识点")
                     
                     # 遍历所有匹配的知识点并依次点击
                     for idx, item in enumerate(all_matches, 1):
                         try:
                             text_content = item.find_element(By.CSS_SELECTOR, "span.ts-tit").text.strip()
+                            
+                            # 检查是否已经被点击过（是否有checked类）
+                            item_classes = item.get_attribute("class")
+                            if item_classes and "checked" in item_classes:
+                                print(f"  ⏭️  [{idx}/{len(all_matches)}] 知识点已选中，跳过: {text_content}")
+                                continue
                             
                             print(f"  👆 [{idx}/{len(all_matches)}] 正在点击知识点: {text_content}")
                             
@@ -3580,8 +3585,10 @@ class NovelProblemGenerator:
                 print(f"⚠️ 未找到左侧菜单【{keyword}】，继续处理下一个关键词")
                 continue
         
-        print(f"\n✅ 已完成所有关键词的处理，共处理 {len(knowledge_points)} 个关键词")
-
+        print(f"\n✅ 已完成所有关键词的处理，共处理 {len(knowledge_points)} 个关键词, 点击 {match_count} 个知识点")
+        if match_count == 0:
+            return None, None, None, None, None
+        
         # 点击完知识点后，设置筛选条件：来源=高考真题，时间=2025
         try:
             time.sleep(1)  # 等待页面更新
@@ -3825,6 +3832,12 @@ class NovelProblemGenerator:
                         try:
                             text_content = item.find_element(By.CSS_SELECTOR, "span.ts-tit").text.strip()
                             
+                            # 检查是否已经被点击过（是否有checked类）
+                            item_classes = item.get_attribute("class")
+                            if item_classes and "checked" in item_classes:
+                                # print(f"  ⏭️  [{idx}/{len(all_matches)}] 知识点已选中，跳过: {text_content}")
+                                continue
+                            
                             # print(f"👆 [{idx}/{len(all_matches)}] 正在点击知识点: {text_content}")
                             
                             # 滚动元素到可视区域（这是关键步骤，避免element not interactable错误）
@@ -4010,6 +4023,20 @@ class NovelProblemGenerator:
                正确答案：
                (2,-1)
                
+               原选择题：
+               甲乙两人玩游戏.游戏开局时桌上有n盒动漫卡牌,每个盒子上都标有盒内卡牌的数量,每盒卡牌的数量构成数组(a1,a2,..,an),游戏规则如下:两人轮流抽牌,每人每次只能择其中一盒并抽走至少ー张卡牌,若轮到某人时无卡可抽,则该人输掉游戏.现由甲先抽,则下列开局中,能确保甲有必胜策略的是()
+               A. (1,3)
+               B. (1,2,3)
+               C. (3,3,6)
+               D. (3,4,5)
+               正确答案：
+               A,C,D
+               
+               改编后的填空题：
+               甲乙两人玩游戏.游戏开局时桌上有n盒动漫卡牌,每个盒子上都标有盒内卡牌的数量,每盒卡牌的数量构成数组(a1,a2,..,an),游戏规则如下:两人轮流抽牌,每人每次只能择其中一盒并抽走至少ー张卡牌,若轮到某人时无卡可抽,则该人输掉游戏.现由甲先抽,则开局(1,3)是否能确保甲有必胜策略()
+               正确答案：
+               是
+               
             【输出要求】
             请以JSON格式输出，包含以下字段：
             - "question": 改编后的题目文本
@@ -4117,37 +4144,39 @@ class NovelProblemGenerator:
         
         if not retrieved_problem:
             print("警告：未能检索到题目")
-            return None
+            item.augmented_question = "x"
+            item.augmented_true_answer = "x"
+            item.method_used = "novel-1"
+            return item
         
-        # print("----------------------------------重述题目----------------------------------")
-        # # 改写检索到的题目
-        # example_original = r"1.(2025·开福模拟)已知菱形$ABCD$的边长为$1，∠DAB=60°。E$是$BC$的中点，$AE$与$BD$相交于点$F$。则$$\overrightarrow{AF}\cdot\overrightarrow{AB}=$$（  ）"
-        # example_modified = r"已知菱形$ABCD$的边长为$1，∠DAB=60°。最近小区里新种了很多绿植，环境变得更优美了。E$是$BC$的中点，$AE$与$BD$相交于点$F$。则$$\overrightarrow{AF}\cdot\overrightarrow{AB}=$$（  ）"
+        print("----------------------------------重述题目----------------------------------")
+        # 改写检索到的题目
+        example_original = r"1.(2025·开福模拟)已知菱形$ABCD$的边长为$1，∠DAB=60°。E$是$BC$的中点，$AE$与$BD$相交于点$F$。则$$\overrightarrow{AF}\cdot\overrightarrow{AB}=$$（  ）"
+        example_modified = r"已知菱形$ABCD$的边长为$1，∠DAB=60°。最近小区里新种了很多绿植，环境变得更优美了。E$是$BC$的中点，$AE$与$BD$相交于点$F$。则$$\overrightarrow{AF}\cdot\overrightarrow{AB}=$$（  ）"
         
-        # paraphrase_prompt = textwrap.dedent(f"""
-        #     你是一个数学题目改写专家。任务是对题目进行重述，生成一道新的题目。
+        paraphrase_prompt = textwrap.dedent(f"""
+            你是一个数学题目改写专家。任务是对题目进行重述，生成一道新的题目。
             
-        #     【示例】
-        #     {example_original}
-        #     调整为：
-        #     {example_modified}
+            【示例】
+            {example_original}
+            调整为：
+            {example_modified}
             
-        #     【改写要求】
-        #     1. 去掉题目开头可能存在的题号和题目来源，例如“1.(2025·开福模拟)”、“9.(2025高三上·宁波期末)”等。
-        #     2. 对原题的内容进行重述，保持原题的语义、数字和答案不变，只是换一种说法。
+            【改写要求】
+            1. 去掉题目开头可能存在的题号和题目来源，例如“1.(2025·开福模拟)”、“9.(2025高三上·宁波期末)”等。
+            2. 对原题的内容进行重述，保持原题的语义、数字和答案不变，只是换一种说法。
             
-        #     请按照示例的方法改写下面的题目：
-        #     {retrieved_problem}
-        #     """)
-        # paraphrased_problem = llm_paraphrase.chat(paraphrase_prompt).strip()
+            请按照示例的方法改写下面的题目：
+            {retrieved_problem}
+            """)
+        paraphrased_problem = llm_paraphrase.chat(paraphrase_prompt).strip()
         
-        # print(f"检索到的题目：\n{retrieved_problem}")
-        # print(f"重述后的题目：\n{paraphrased_problem}")
-        # item.augmented_question = paraphrased_problem
-        # item.augmented_true_answer = retrieved_answer  # 记录检索到的答案
-        # item.method_used = "novel-1"
-        # return item
-        return None
+        print(f"检索到的题目：\n{retrieved_problem}")
+        print(f"重述后的题目：\n{paraphrased_problem}")
+        item.augmented_question = paraphrased_problem
+        item.augmented_true_answer = retrieved_answer  # 记录检索到的答案
+        item.method_used = "novel-1"
+        return item
 
     def _load_knowledge_base(self) -> Dict:
         """
@@ -4480,7 +4509,7 @@ class NovelProblemGenerator:
                             retrieved_content.append(example)
         
         # 从检索出的内容中随机选择最多三条
-        print(f"content count: {len(retrieved_content)}")
+        print(f"知识库中检索到相关条目数: {len(retrieved_content)}\n")
         if len(retrieved_content) > 3:
             retrieved_content = random.sample(retrieved_content, 3)
         
@@ -4521,7 +4550,7 @@ class NovelProblemGenerator:
             print("警告：未在知识库中找到相关知识点")
             return None
         else:
-            print(f"检索到的知识库内容：\n{retrieved_knowledge}")
+            print(f"从检索到的知识库内容中随机抽取3条：\n{retrieved_knowledge}")
         
         print("---------------------------------生成概念题-------------------------------")
         prompt = textwrap.dedent(f"""
@@ -4734,8 +4763,11 @@ def run_ames_on_csv(args):
     if args.method == "6":
         novel_generator.initialize_for_batch_processing()
 
+    # 如果指定了start，使用追加模式；否则使用写入模式（覆盖）
+    file_mode = 'a' if args.start else 'w'
+    
     with open(args.input, 'r', encoding='utf-8') as infile, \
-            open(output_path, 'w', newline='', encoding='utf-8') as outfile:
+            open(output_path, file_mode, newline='', encoding='utf-8') as outfile:
 
         reader = csv.reader(infile)
         writer = csv.writer(outfile)
