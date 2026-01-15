@@ -1725,7 +1725,7 @@ class AnalogicalTransformer:
             \\[\\log_2\\left({{x \\over yz}}\\right) = {{1 \\over 2}}\\]
             \\[\\log_2\\left({{y \\over xz}}\\right) = {{1 \\over 3}}\\]
             \\[\\log_2\\left({{z \\over xy}}\\right) = {{1 \\over 4}}\\]
-            Then the value of $\\left|\\log_2(x^4y^3z^2)\\right|$ is $\\tfrac{{m}}{{n}}$ where $m$ and $n$ are relatively prime positive integers. Find $m/n$. Express your answer as a fraction in simplest form (e.g., 25/2) or as a simplified radical expression (e.g., 25√7/3). Do not use LaTeX format; use plain text with forward slashes for fractions and the √ symbol for square roots.
+            Then the value of $\\left|\\log_2(x^4y^3z^2)\\right|$ is $\\tfrac{{m}}{{n}}$ where $m$ and $n$ are relatively prime positive integers. Find $m/n$.
             转换后答案：
             25/8
             
