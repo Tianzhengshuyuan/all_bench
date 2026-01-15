@@ -4,53 +4,17 @@ from math import comb
 import sympy as sp
 from math import gcd, isqrt
 
-def solve(n):
-    if n % 2 == 1 or n < 4:
-        return 0
+# === 26 ===
+def solve_triangle_symmedian(AB, BC, AC):
+    # Apollonius 定理求 AM
+    AM = math.sqrt((2 * AB**2 + 2 * AC**2 - BC**2) / 4)
 
-    # Group all chords by direction class s = (i + j) % n
-    L = [[] for _ in range(n)]
-    for i in range(n):
-        for j in range(i + 1, n):
-            s = (i + j) % n
-            L[s].append((i, j))
+    # 根据相似比求 AP
+    AP = (AB * AC) / AM
 
-    def between(i, j, x):
-        di = (x - i) % n
-        dj = (j - i) % n
-        return 0 < di < dj
+    # 化为最简分数形式
+    frac = Fraction(AP).limit_denominator(10000)
 
-    def intersect(i, j, k, l):
-        # chords (i,j) and (k,l) intersect (including endpoints)
-        if i == k or i == l or j == k or j == l:
-            return True
-        return (between(i, j, k) != between(i, j, l)) and (between(k, l, i) != between(k, l, j))
-
-    count = 0
-    half = n // 2
-    for s in range(half):
-        t = (s + half) % n
-        A = L[s]
-        B = L[t]
-        mA = len(A)
-        mB = len(B)
-        # Precompute intersection matrix
-        ints = [[False] * mB for _ in range(mA)]
-        for ai, (i, j) in enumerate(A):
-            for bi, (k, l) in enumerate(B):
-                ints[ai][bi] = intersect(i, j, k, l)
-        # For each pair of A-chords, count B-chords intersecting both
-        for ai1 in range(mA):
-            row1 = ints[ai1]
-            for ai2 in range(ai1 + 1, mA):
-                row2 = ints[ai2]
-                eligible_B = 0
-                for bi in range(mB):
-                    if row1[bi] and row2[bi]:
-                        eligible_B += 1
-                count += eligible_B * (eligible_B - 1) // 2
-
-    return count
-
+    return frac.numerator + frac.denominator
 if __name__ == "__main__":
-    print(solve(6))
+    print(solve_triangle_symmedian(5, 13, 10))

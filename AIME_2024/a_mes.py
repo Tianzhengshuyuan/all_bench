@@ -73,7 +73,7 @@ DEFAULT_ROLE_MODEL = {
     "convert": "gpt5",    # 答案格式转换
     "analysis": "gpt5",    # 可逆条件分析（analogical-3）
     "codegen": default_role_model, # 代码生成
-    "check": "mistral_medium",    # 硬编码检查
+    "check": "gpt5",    # 硬编码检查
     "refine": default_role_model,  # 代码精炼
     "variant": default_role_model,     # 数字/条件变体生成
     "range": default_role_model,  # 变量取值范围确定
@@ -1156,6 +1156,8 @@ class AnalogicalTransformer:
     def _run_python_code(self, code: str, inputs: Dict[str, Any], primary_key: Optional[str] = None, verify: bool = False, model_name: Optional[str] = None) -> Tuple[Optional[str], Optional[str], Optional[str]]:
         """运行Python代码并返回输出、错误和文件名（支持将 inputs 或其中单个变量传入 solve）"""
         code_file = None
+        print(code)
+        print(inputs)
         try:
             # 处理分数字符串：将分数字符串转换为 Fraction 对象以便代码执行
             processed_inputs = {}
@@ -1185,15 +1187,16 @@ class AnalogicalTransformer:
             else:
                 call_code = "result = solve(inputs)"
             full_code = f"{import_line}{input_code}\n\n{code}\n\n# 调用 solve\n{call_code}\nprint(result)"
-            
+
             # 使用指定的目录，生成有意义的文件名
-            timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")  # 年月日_时分秒，如：20251211_151438
+            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")  # 年月日_时分秒，如：20251211_151438
+
             model_suffix = f"_{model_name}" if model_name else ""
             if verify == True:
                 filename = f"q{self.current_question_id}_verify{model_suffix}_{timestamp}.py"
             else:
                 filename = f"q{self.current_question_id}_generate{model_suffix}_{timestamp}.py"
-
+            print(f"文件名: {filename}")
             code_file = os.path.join(self.code_dir, filename)
             with open(code_file, 'w', encoding='utf-8') as f:
                 f.write(full_code)
@@ -1266,12 +1269,12 @@ class AnalogicalTransformer:
                 {problem_text}
                 正确答案：
                 {answer_gold}
+                解法思路：
+                {solution_sketches}
                 相关公式：
                 {retrieved_formulas}
                 知识点：
                 {", ".join(knowledge_points)}
-                解法思路：
-                {solution_sketches}
 
                 变量信息：
                 变量：{primary_key} = {primary_value}（位置：{primary_position}）
@@ -1282,11 +1285,11 @@ class AnalogicalTransformer:
                 3. 函数应该返回题目的答案
                 4. 注意：题目中可能有多个相同的数字，但只有变量 {primary_key} 对应的位置需要作为参数传入
                 5. 只输出函数定义和函数调用，不要输出 if __name__ == "__main__": 这样的测试代码块
-                6. 不要添加任何print语句
-                请只输出Python代码，不要有其他解释。
+                6. 不要输出任何print语句
+                7. 只输出Python代码，不要有其他解释。
                 """)
             history.append((prompt, None))
-            
+         
             try:
                 code_resp = llm_codegen.chat(prompt)
                 # 提取代码块
@@ -1338,16 +1341,15 @@ class AnalogicalTransformer:
                             
                             请分析题目和代码逻辑，为变量 {primary_key} 确定合理的取值范围, 找出尽量多的取值。
                             要求如下：
-                            1. 变量取值能保证代码能正常运行（不会出现除零、负数开方等错误）
+                            1. 变量取值能让代码正常运行（不会出现除零、负数开方等错误）
                             2. 变量取值能保证答案在合理范围内
                             3. 变量取值不能超过1000或太小, 保证题目有意义
-                            4. 保证代码适用于这个变量取值
+                            4. 保证代码适用于你确定的变量取值范围
                             5. 保证根据这个取值计算得到的答案小于100000
                             
                             说明：
-                            不用考虑变量 {primary_key} 变化后，题目中其他与它关联的变量没有变化会导致题目有误。
-                            因为在生成新题目时，系统会自动根据 {primary_key} 的新值相应地修改所有关联变量的值，
-                            确保新题目在数学上仍然正确和有意义。你只需要专注于找出 {primary_key} 本身的合理取值范围即可。
+                            不用考虑变量 {primary_key} 变化后，题目中其他与之关联的变量没有变化会导致题目有误，因为在生成新题目时，系统会自动根据 {primary_key} 的新值相应地修改所有关联变量的值，确保新题目在数学上仍然正确和有意义。
+                            你只需要专注于找出 {primary_key} 本身的合理取值范围。
                             
                             如果变量可以取连续范围内的任意值，请使用格式：
                             取值范围：[min, max]
@@ -1357,7 +1359,7 @@ class AnalogicalTransformer:
                             取值列表：[value1, value2, value3, ...]
                             例如：取值列表：[1, 15, 301]
                             
-                            请根据题目和代码的特点，选择合适的格式输出。
+                            根据题目和代码的特点，选择合适的格式输出。
                             重要：只输出取值范围或取值列表，不要输出任何其他解释或内容。
                             """)
                         try:
@@ -1604,6 +1606,9 @@ class AnalogicalTransformer:
                     1. 将原始题目中位于第 {char_start}-{char_end} 个字符处的数字（即变量 {primary_key} 的值 {original_value}）改为 {new_value}
                     2. 注意：原始题目中可能有多处出现数字 {original_value}，但只需要修改位置 {char_start}-{char_end} 处的那一个
                     3. 如果原题中某变量的值和 {primary_key} 的值相关, 则相应地修改该变量的值
+                       例如：
+                       - 针对这个题目“Consider the paths of length $14$ that follow the lines from the lower left corner to the upper right corner on an $7\times 7$ grid. ”，这里路径长度为14是因为grid边长是7，所以如果修改了grid边长，例如改为5，则路径长度应该相应改为10。
+                       - 针对这个题目"Tina enters a lottery by picking $5$ distinct numbers from $S=\\{{1,2,3,\\cdots,9,10\\}}.$ $5$ numbers are randomly chosen from $S.$ She wins a prize if at least two of her numbers were $2$ of the randomly chosen numbers, and wins the grand prize if all five of her numbers were the randomly chosen numbers. "，这里如果把S中的10改为100，则这个集合中其他的数字也要相应修改，改为$S=\\{{1,2,3,\\cdots,99,100\\}}.$，而不能只修改10为100，其他不变，得到$S=\\{{1,2,3,\\cdots,9,100\\}}.$是不合理的
                     4. 保持题目其他部分完全不变
                     
                     请只输出新题目的文本，不要有其他解释。
@@ -1992,6 +1997,7 @@ class AnalogicalTransformer:
                 {fraction_requirement}请只输出Python代码，不要有其他解释。
                 """)
             history.append((prompt, None))
+            
             
             try:
                 code_resp = llm_codegen.chat(prompt)
