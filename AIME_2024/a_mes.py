@@ -61,7 +61,7 @@ ModelName = Literal["deepseek", "qwen", "doubao", "kimi", "mistral", "gpt"]
 # 全局默认模型选择（优先级低于下方细粒度配置）
 DEFAULT_STAGE_MODEL = {
     "analogical_fallback": "qwen_max",
-    "redundancy": "doubao_1_5_pro_32k",
+    "redundancy": "gpt5",
     "novel": "kimi_k2",
     "textbook_knowledge_base_construction": "kimi_k2",
 }

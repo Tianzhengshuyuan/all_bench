@@ -26,7 +26,7 @@ each cell contains at most one chip
 all chips in the same row and all chips in the same column have the same colour
 any additional chip placed on the grid would violate one or more of the previous two conditions.",902
 "Let $b \geq 2$ be an integer. Call a positive integer $n$ $b$\textit{-eautiful} if it has exactly two digits when expressed in base $b$, and these two digits sum to $\sqrt{n}$. For example, $81$ is $13$-eautiful because $81=\underline{6}\underline{3}_{13}$ and $6+3=\sqrt{81}$. Find the least integer $b \geq 2$ for which there are more than 25 $b$-eautiful integers.",2311
-,
+x,x
 "Let $A$, $B$, $C$, and $D$ be points on the hyperbola $\frac{x^2}{23}- \frac{y^2}{24} = 1$ such that $ABCD$ is a rhombus whose diagonals intersect at the origin. Find the greatest real number that is less than $BD^2$ for all such rhombi.",2208
 "A list of positive integers has the following properties:
 
