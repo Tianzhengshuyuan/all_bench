@@ -1,0 +1,30 @@
+"La fonction $ y = \log_a x $ ($ a > 0 $, $ a \neq 1 $) s'appelle quoi ?",Fonction logarithmique
+L'équation de droite de la forme y = kx + b s'appelle quoi ?,L'équation d'interception oblique
+L'égalité P(A|B) = P(A)P(B|A) / P(B) s'appelle quoi ?,La formule de Bayes
+"Dans la forme générale d'une suite $a_1, a_2, a_3, \cdots$, comment appelle - t - on $a_n$?",Le terme général
+Quelle est le nom de la droite qui a un seul point commun avec un cercle ?,La tangente au cercle
+Quel nom porte le nombre réel x tel que f(x) = 0 ?,Le zéro de la fonction f
+La propriété selon laquelle la probabilité satisfait 0 ≤ P(A) ≤ 1 s'appelle quoi ?,Non-négativité
+"Quand $\Delta < 0$, quel est le cas des racines réelles de l'équation ?",Aucune racine réelle
+La fonction y = a^x (a > 0 et a ≠ 1) s'appelle quoi ?,Fonction exponentielle
+L'exponentielle de base la constante naturelle e est appelée quoi ?,L'exponentielle de base e
+Un nombre complexe dont la partie réelle est égale à 0 et la partie imaginaire est non nulle est appelé quoi ?,Un nombre imaginaire pur
+"Dans la relation de récurrence des nombres combinatoires C_n^m + C_n^{m+1} =?, quelle expression devrait être remplacée par le point d'interrogation?",C_{n+1}^{m+1}
+L'expression Δ = b² - 4ac est appelée quoi?,Le discriminant
+L'ensemble formé par toutes les solutions d'une équation s'appelle quoi ?,L'ensemble des solutions de l'équation
+Quelle est la valeur de \(A_n^n\)?,n!
+"Quand n est un entier positif, la conclusion (a+b)^n = C_n^0 a^n + C_n^1 a^{n-1}b + ... + C_n^k a^{n-k}b^k + ... + C_n^n b^n porte quel nom de théorème ?",Théorème du binôme
+Quelle est le nom de l'ensemble des points dans l'espace qui sont à une distance égale à une longueur donnée d'un point fixe?,La surface sphérique
+Le nombre de combinaisons de prendre m objets parmi n objets différents est représenté par quel symbole?,C_n^m
+Quelle est la condition nécessaire et suffisante pour que le cercle soit tangent à la droite?,La distance du centre du cercle à la droite est égale au rayon.
+Quelle est la permutation appelée lorsque m = n ?,Permutation complète
+"Une inégalité de la forme $ax² + bx + c > 0$ (ou $<0$, $\geq0$, $\leq0$), où $a \neq 0$, est appelée quoi?",Inéquation du second degré
+Une équation contenant des lettres qui reste valable pour n'importe quelle valeur réelle des lettres est appelée quoi?,Identité
+Quelle est la longueur de la distance focale d'une hyperbole?,2c
+La racine carrée de la variance est appelée quoi?,Écart-type
+Quelle est la valeur du discriminant Δ d'une équation du second degré ?,b² - 4ac
+Quelle est le nom d'une droite qui a deux points communs avec un cercle ?,La sécante d'un cercle
+"Dans la formule de résolution des équations du second degré, quel symbole est utilisé pour représenter b² - 4ac ?",Δ
+Quelles lois de calcul sont satisfaites par l'addition des vecteurs spatiaux ?,La loi de commutativité et la loi d'associativité
+Quelle est la valeur inconnue qui peut rendre les deux côtés d'une équation égaux?,La solution (racine) d'une équation
+"Quel nom porte le nombre de la forme z = a + bi (a, b ∈ R)?",Nombre complexe

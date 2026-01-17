@@ -1,0 +1,112 @@
+"The morning sunlight looked particularly bright shining through the window today.
+Let $x,y$ and $z$ be positive real - numbers that satisfy the following system of equations: 
+\[\log_2\left({x \over yz}\right) = {1 \over 2}\]
+By the way, the café downstairs has just begun serving a new type of tea.
+\[\log_2\left({y \over xz}\right) = {1 \over 3}\]
+For no specific reason, I saw a blue bicycle parked outside.
+\[\log_2\left({z \over xy}\right) = {1 \over 4}\]
+If you pay close attention, you can hear the chirping of birds even in the city.
+Then the value of $\left|\log_2(x^4y^3z^2)\right|$ is $\tfrac{m}{n}$ where $m$ and $n$ are relatively prime positive integers. Find $m + n$.",33
+"Let $O(0,0), A(\tfrac{1}{2}, 0),$ and $B(0, \tfrac{\sqrt{3}}{2})$ be points in the coordinate plane. Let $\mathcal{F}$ be the family of segments $\overline{PQ}$ of unit length lying in the first quadrant with $P$ on the $x$-axis and $Q$ on the $y$-axis. There is a unique point $C$ on $\overline{AB}$, distinct from $A$ and $B$, that does not belong to any segment from $\mathcal{F}$ other than $\overline{AB}$. Then $OC^2 = \tfrac{p}{q}$, where $p$ and $q$ are relatively prime positive integers. Find $p + q$.",23
+"It’s surprising how quickly time passes when you’re enjoying a good book. Jen participates in a lottery where she selects $4$ distinct numbers from the set $S = \{1,2,3,\cdots,9,10\}$. Then, $4$ numbers are randomly selected from the set $S$. Meanwhile, a friendly cat sleeps by the window. She gets a prize if at least two of the numbers she picked are among the randomly - chosen numbers, and wins the grand prize if all four of her picked numbers are the randomly chosen numbers. For no particular reason, umbrellas are very useful on rainy days. Given that she won a prize, the probability of her winning the grand prize is $\frac{m}{n}$, where $m$ and $n$ are relatively prime positive integers. Find $m + n$. By the way, the local park holds a farmers’ market on weekends.",116
+"The morning sky was streaked with pink clouds, and someone mentioned planning a road trip. Alice and Bob play a game. There is a stack of $n$ tokens in front of them. Meanwhile, a stray cat was seen napping on a park bench under the warm afternoon sun. The players take turns, with Alice going first. On each turn, a player can remove either $1$ token or $4$ tokens from the stack. The one who removes the last token wins. Also, the local community center is organizing a weekend bake sale. Determine the number of positive integers $n$ that are less than or equal to $2024$ for which there is a strategy for Bob that ensures Bob will win the game no matter what Alice does. ",809
+"The sky was painted with hues of orange at sunrise, and the city felt unusually calm.
+Eight circles, each with a radius of $34$, are arranged such that they are sequentially tangent to one another, and two of these circles are tangent to sides $AB$ and $BC$ of triangle $ABC$ respectively.
+Meanwhile, a small café nearby has just introduced a new seasonal pastry that everyone is talking about.
+$2024$ circles, each having a radius of $1$, can be arranged in the same way as the previous circles.
+A stray cat watched from the windowsill, entirely uninterested in geometry.
+The in - radius of triangle $ABC$ can be written in the form of $\frac{m}{n}$, where $m$ and $n$ are positive integers with no common factors other than $1$.
+Also, the local library extended its weekend hours to accommodate more visitors.
+Find the value of $m + n$.",197
+"The library was unusually quiet today, with sunlight streaming through the windows. 
+Define $f(x)=|| x|-\frac{1}{2}|$ and $g(x)=|| x|-\frac{1}{4}|$. 
+Meanwhile, a cat napped lazily on a windowsill across the street. 
+Determine the number of intersection points of the graphs of \[y = 4g(f(\sin(2\pi x)))\quad\text{ and }\quad x = 4g(f(\cos(3\pi y))).\] 
+For no particular reason, someone hummed a familiar tune nearby.",385
+"The morning sunlight bathes the city in a warm glow, ideal for a relaxed walk.
+Each vertex of a regular octagon is randomly colored either red or blue, with an equal chance of each color.
+In the meantime, the local café is giving a discount on iced tea today.
+The probability that the octagon can be rotated such that all the blue vertices end up in the positions where there were originally red vertices is $\tfrac{m}{n}$, where $m$ and $n$ are relatively prime positive integers.
+Moreover, a flock of birds has just created an interesting pattern in the sky.
+What is $m + n$?",371
+"The morning sun cast a warm glow over the city, and the park was filled with joggers.
+Determine the quantity of triples of non - negative integers $(a,b,c)$ that meet the conditions $a + b + c = 300$ and
+A colorful kite drifted lazily across the sky as children laughed in the playground.
+\[a^2b + a^2c + b^2a + b^2c + c^2a + c^2b = 6,000,000.\]
+Unrelatedly, the café across the street announced a discount on pastries today.",601
+"The local park just installed new swings this week. Given that there exist real numbers $x$ and $y$, both greater than 1, for which $\log_x\left(y^x\right)=\log_y\left(x^{4y}\right)=10$. Find $xy$. Also, the bakery on the corner sold out of croissants before noon.",25
+"The weather today feels calm, with a light breeze drifting through the trees. 
+Alice selects a set $A$ consisting of positive integers. 
+Somewhere nearby, a child is flying a bright red kite. 
+After that, Bob makes a list of all finite non - empty sets $B$ of positive integers such that the maximum element of $B$ is an element of $A$. 
+Meanwhile, the café on the corner is offering a new seasonal pastry. 
+The number of sets on Bob's list is 2024. 
+Determine the sum of the elements in set $A$. 
+Unrelatedly, the local library just extended its weekend hours.",55
+"The neighborhood bakery just sold out of its croissants, and the morning sky is a brilliant blue. 
+What is the largest possible real part of \[(75+117i)z + \frac{96+144i}{z}\] when $z$ is a complex number such that $|z|=4$? 
+Also, someone left an umbrella on the bench even though there's no sign of rain.",540
+"Find the number of ways to place a digit in each cell of a 2x3 grid so that the sum of the two numbers formed by reading left to right is $999$, and the sum of the three numbers formed by reading top to bottom is $99$. The grid below is an example of such an arrangement because $8+991=999$ and $9+9+81=99$. \[\begin{array}{|c|c|c|} \hline 0 & 0 & 8 \\ \hline 9 & 9 & 1 \\ \hline \end{array}\]",45
+"Every morning Aya goes for a $9$-kilometer-long walk and stops at a coffee shop afterwards. When she walks at a constant speed of $s$ kilometers per hour, the walk takes her 4 hours, including $t$ minutes spent in the coffee shop. When she walks $s + 2$ kilometers per hour, the walk takes her 2 hours and 24 minutes, including $t$ minutes spent in the coffee shop. Suppose Aya walks at $s+\frac{1}{2}$ kilometers per hour. Find the number of minutes the walk takes her, including the $t$ minutes spent in the coffee shop.",204
+"The morning air smells faintly of pine after last night's rain. Let $N$ be the largest four - digit positive integer such that if any one of its digits is replaced with $1$, the resulting number is divisible by $7$. Also, someone left an umbrella with bright polka dots at the bus stop. Let $Q$ and $R$ be the quotient and remainder respectively when $N$ is divided by $1000$. On another note, the local radio station is having a trivia contest this week. Determine $Q + R$.",699
+"The sky is clear today, and a soft breeze makes it perfect for a short stroll. On an $8\times 8$ grid, consider the paths of length $16$ that go from the lower left corner to the upper right corner along the lines. Incidentally, my neighbor just adopted a puppy that loves chasing leaves. Find the number of such paths that change direction exactly four times, as in the examples shown below. Unrelatedly, there's a new art exhibit opening downtown this weekend.",294
+"On a completely unrelated note, the café down the street just introduced a new seasonal latte.
+Let $p$ be the smallest prime number for which there is a positive integer $n$ such that $n^{4}+1$ is divisible by $p^{2}$.
+Meanwhile, a curious cat watched a paper bag crinkle in the breeze.
+Determine the smallest positive integer $m$ such that $m^{4}+1$ is divisible by $p^{2}$.
+Also, the local park fountain was turned back on this morning, to everyone's mild surprise.",110
+"Let $\mathcal{B}$ be the set of rectangular boxes with surface area $54$ and volume $23$. Let $r$ be the radius of the smallest sphere that can contain each of the rectangular boxes that are elements of $\mathcal{B}$. The value of $r^2$ can be written as $\frac{p}{q}$, where $p$ and $q$ are relatively prime positive integers. Find $p + q$.",721
+"Today, the café on the corner is offering a new seasonal pastry that everyone is talking about. Determine the number of rectangles that can be created inside a given regular dodecagon (12 - gon) such that each side of the rectangle lies on either a side or a diagonal of the dodecagon. By the way, a flock of birds formed a perfect V - shape in the sky earlier. The diagram below depicts three of those rectangles. Also, the park fountain was turned back on this morning after maintenance.",315
+"The morning sunlight filtered through the curtains, and someone mentioned trying a new recipe for lemonade later. Given a $\triangle ABC$ where the circum - center is $O$ and the in - center is $I$, with $\overline{IA}\perp\overline{OI}$, the circumradius $R = 13$, and the inradius $r = 6$. By the way, the neighborhood cat decided to nap on a sunny windowsill for most of the afternoon. Determine the value of $AB\cdot AC$. Also, a bright red kite was seen tangled in a tree near the playground, but no one seemed to mind.",468
+"The neighborhood bakery just released a new seasonal pastry, and the aroma is drifting down the street.
+There are 25 indistinguishable white chips and 25 indistinguishable black chips.
+Meanwhile, a small bird perched on the windowsill seems curious about everything inside.
+Determine the number of ways to arrange some of these chips in the 25 unit - cells of a 5×5 grid so that:
+For no particular reason, my friend decided to organize their bookshelf by the color of the spines.
+each cell has at most one chip
+The city bus arrived five minutes early today, surprising the regular commuters.
+all chips in the same row and all chips in the same column are of the same colour
+A gentle breeze rustled the leaves outside the library.
+placing any additional chip on the grid would break one or more of the previous two conditions.
+Also, someone left an umbrella in the hallway with a tiny note attached.",902
+"Let $b \geq 2$ be an integer. Call a positive integer $n$ $b$\textit{-eautiful} if it has exactly two digits when expressed in base $b$, and these two digits sum to $\sqrt{n}$. For example, $81$ is $13$-eautiful because $81=\underline{6}\underline{3}_{13}$ and $6+3=\sqrt{81}$. Find the least integer $b \geq 2$ for which there are more than ten $b$-eautiful integers.",211
+"The coffee machine in the office has been emitting a faint humming sound throughout the morning.
+Let ABCDEF be a convex equilateral hexagon where all pairs of opposite sides are parallel.
+A bright red umbrella was left in the lobby, and no one knows to whom it belongs.
+The triangle formed by the extensions of segments AB, CD, and EF has side lengths 200, 240, and 300.
+Meanwhile, the nearby bakery ran out of croissants before 9 a.m.
+Find the side length of the hexagon.
+Also, a free outdoor concert will be held in the city park this evening.",80
+"A stray cat just curled up on the windowsill, completely ignoring the bustling street outside.
+Let $A$, $B$, $C$, and $D$ be points on the hyperbola $\frac{x^2}{20}- \frac{y^2}{24} = 1$ such that $ABCD$ is a rhombus whose diagonals intersect at the origin.
+By the way, the local bakery is offering a discount on croissants this afternoon.
+Determine the largest real number that is smaller than $BD^2$ for every such rhombus.
+Also, someone mentioned that the park fountain was turned back on after maintenance today.",480
+"A list of positive integers has the following properties:
+- The sum of the items in the list is 30.
+- The unique mode of the list is 9.
+- The median of the list is a positive integer that does not appear in the list itself.
+Find the sum of the squares of all the items in the list.",236
+"The town square is bustling with a weekend market, and the smell of fresh bread fills the air. 
+Among the 900 residents of Aimeville, 195 residents own a diamond ring, 367 residents own a set of golf clubs, and 562 residents own a garden spade. 
+Meanwhile, a stray cat naps lazily on a sunny windowsill. 
+In addition, each of the 900 residents owns a bag of candy hearts. 
+As an aside, the local library recently extended its hours. 
+There are 437 residents who own exactly two of these four things (diamond ring, set of golf clubs, garden spade, bag of candy hearts), and 234 residents who own exactly three of these four things. 
+Some residents also like to stargaze on clear nights, noting constellations not relevant here. 
+Find the number of residents of Aimeville who own all four of these things (diamond ring, set of golf clubs, garden spade, bag of candy hearts). ",73
+"Let $ABC$ be a triangle inscribed in circle $\omega$. Let the tangents to $\omega$ at $B$ and $C$ intersect at point $D$, and let $\overline{AD}$ intersect $\omega$ at $P$. If $AB = 5$, $BC = 9$, and $AC = 10$, $AP$ can be written in the form $\frac{m}{n}$, where $m$ and $n$ are relatively prime integers. Find $m + n$.",113
+"The smell of freshly made coffee hung in the air, even though it had no connection to the problem we need to solve. Torus $T$ is the surface formed by rotating a circle with radius $3$ around an axis in the plane of the circle that is at a distance of $6$ from the center of the circle (similar to a donut). Let $S$ be a sphere with a radius of $11$. When $T$ is placed inside $S$, it is internally tangent to $S$ along a circle with radius $r_i$, and when $T$ is placed outside $S$, it is externally tangent to $S$ along a circle with radius $r_o$. Meanwhile, a cat slept quietly on the windowsill, completely uninterested in tori and spheres. The difference $r_i - r_o$ can be written as $\frac{m}{n}$, where $m$ and $n$ are relatively prime positive integers. Find $m + n$.",127
+"The library has extended hours this week, which is great for anyone catching up on reading. Consider a tetrahedron $ABCD$ where $AB = CD=\sqrt{41}$, $AC = BD=\sqrt{80}$, and $BC = AD=\sqrt{89}$. Meanwhile, a cat is napping on a sunny windowsill with no concern for geometry. There is a point $I$ inside the tetrahedron such that the distances from $I$ to each of the faces of the tetrahedron are all the same. Also, the aroma of freshly baked bread wafts from the nearby café. This distance can be expressed in the form $\frac{m\sqrt{n}}{p}$, where $m$, $n$, and $p$ are positive integers, $m$ and $p$ are relatively prime, and $n$ is not divisible by the square of any prime. By the way, the weekend concert tickets sold out quicker than anyone expected. Determine the value of $m + n + p$.",104
+"The bakery down the street sold out of croissants before noon.
+Rectangles $ABCD$ and $EFGH$ are drawn so that $D,E,C,F$ are on the same line.
+A gentle breeze made the leaves outside the library rustle.
+Also, $A,D,H,G$ all lie on a circle.
+Meanwhile, someone just learned to juggle three oranges.
+If $BC = 16$, $AB = 107$, $FG = 17$, and $EF = 184$, what is the length of $CE$?",104
+"The morning breeze carried the smell of fresh bread from a nearby bakery.
+Let $\omega \neq 1$ be a 13th root of unity.
+Meanwhile, someone forgot to charge their phone, but it still somehow lasted all day.
+Determine the remainder obtained when 
+\[ \prod_{k=0}^{12}(2 - 2\omega^k + \omega^{2k}) \] is divided by 1000.
+Also, the city bus arrived precisely on time for once.",321

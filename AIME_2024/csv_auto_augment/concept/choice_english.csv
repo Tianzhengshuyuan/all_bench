@@ -1,0 +1,30 @@
+"The function \(y = \log_a x\) (\(a > 0\), \(a\neq1\)) is called what?",Power function,Exponential function,Logarithmic function,Trigonometric function,C
+What is the equation of a straight line in the form of y = kx + b called?,Intercept form equation,Slope-intercept form equation,Point-slope form equation,Two-point form equation,B
+What is the equation \(P(A|B) = \frac{P(A)P(B|A)}{P(B)}\) called?,Bayes' formula,Total probability formula,Addition formula,Multiplication formula,A
+"In the general form of a sequence \(a_1, a_2, a_3, \cdots\), what is \(a_n\) called?",middle term,succeeding term,general term,preceding term,C
+What is a line that has only one common point with a circle called?,Tangent to the circle,Secant of the circle,Chord of the circle,Radius of the circle,A
+What is the real number x that makes f(x) = 0 called?,the extremum point of function f,the zero of function f,the stationary point of function f,the extreme value point of function f,B
+What is the property called when the probability satisfies the condition 0 ≤ P(A) ≤ 1?,Non-negativity,Finite additivity,Countable additivity,Normalization,A
+"When Δ < 0, what is the situation of the real roots of the equation?",There are two equal real roots,There is one real root,There are two distinct real roots,There are no real roots,D
+What is the function \(y = a^x\) (\(a>0\) and \(a\neq1\)) called?,logarithmic function,power function,trigonometric function,exponential function,D
+What is the exponential function with the base of the natural constant e called?,logarithmic exponent,e exponent,power exponent,π exponent,B
+What are complex numbers with a real part of 0 and a non - zero imaginary part called?,Real numbers,Zero imaginary numbers,Real-imaginary numbers,Pure imaginary numbers,D
+"In the recurrence relation of binomial coefficients \( C_n^m + C_n^{m+1} =? \), what should be filled in the question mark?",C_{n - 1}^{m+1},C_{n}^{m + 2},C_{n+1}^{m},C_{n+1}^{m+1},D
+What is the expression Δ = b² - 4ac called?,coefficient,discriminant,constant,radical,B
+What is the set composed of all solutions of an equation called?,the solution set of the equation,the root set of the equation,the solution group of the equation,the solution cluster of the equation,A
+What is \(A_n^n\) equal to?,n(n - 1),n!,(n + 1)!,(n - 1)!,B
+"When \(n\) is a positive integer, what is the name of the theorem for the conclusion \((a + b)^n = C_n^0 a^n + C_n^1 a^{n - 1}b + \cdots + C_n^k a^{n - k}b^k + \cdots + C_n^n b^n\)?",Geometric sequence theorem,Trigonometric function theorem,Binomial theorem,Arithmetic sequence theorem,C
+What is the set of points in space that are at a fixed distance from a fixed point called?,sphere,cylinder,cone,circle,A
+What symbol is used to represent the number of combinations of taking m objects from n different objects?,C_n^m,C_m^n,P_n^m,A_n^m,A
+What is the necessary and sufficient condition for a circle to be tangent to a straight line?,The distance from the center of the circle to the line is less than the radius,The distance from the center of the circle to the line is equal to the radius,The distance from the center of the circle to the line is greater than the radius,The line passes through a point on the circle,B
+What is the permutation called when m = n?,Derangement,Circular permutation,Partial permutation,Full permutation,D
+"Inequalities in the form of ax² + bx + c > 0 (or < 0, ≥ 0, ≤ 0), where a ≠ 0, are called what?",Linear inequality in one variable,Quadratic inequality in one variable,Fractional inequality,Linear inequality in two variables,B
+An equation containing letters that holds true for any real - number values of the letters is called what?,inequality,contradiction,conditional equation,identity,D
+What is the focal length of a hyperbola equal to?,2b,2c,c,2a,B
+What is the arithmetic square root of the variance called?,Median,Mean,Standard deviation,Range,C
+What does the discriminant Δ of a quadratic equation with one unknown equal to?,b² + 4ac,4ac - b²,b²-4ac,2b - 4ac,C
+What is a line that has two common points with a circle called?,radius of the circle,secant of the circle,chord of the circle,tangent to the circle,B
+"In the quadratic formula for solving quadratic equations of one variable, which symbol is used to represent \(b^2 - 4ac\)?",Δ,α,γ,β,A
+What operation laws does the addition of spatial vectors satisfy?,Symmetric law and transitive law,Idempotent law and absorption law,Distributive law and cancellation law,Commutative law and associative law,D
+What is the value of the unknown that can make both sides of the equation equal called?,Terms of the equation,Coefficient of the equation,Degree of the equation,Solution (root) of the equation,D
+"What is the number in the form of z = a + bi (a, b ∈ R) called?",Real numbers,Imaginary numbers,Rational numbers,Complex numbers,D

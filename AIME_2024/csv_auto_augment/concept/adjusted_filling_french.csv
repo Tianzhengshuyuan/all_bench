@@ -1,0 +1,30 @@
+"Comment s'appelle la fonction $ y = \log_a x $ ($ a > 0 $, $ a \neq 1 $) ?",Fonction logarithmique
+L'équation de droite de la forme y = kx + b s'appelle quoi ?,L'équation d'interception oblique
+Comment s'appelle l'égalité P(A|B) = P(A)P(B|A) / P(B) ?,La formule de Bayes
+"Dans la forme générale d'une suite $a_1, a_2, a_3, \cdots$, comment nomme - t - on $a_n$?",Le terme général
+Quel est le nom de la droite qui a un seul point commun avec un cercle ?,La tangente au cercle
+Comment appelle - t - on le nombre réel x tel que f(x) = 0 ?,Le zéro de la fonction f
+Comment s'appelle la propriété selon laquelle la probabilité satisfait 0 ≤ P(A) ≤ 1 ?,Non-négativité
+"Quand le discriminant $\Delta$ est inférieur à 0, quel est le cas des racines réelles de l'équation ?",Aucune racine réelle
+Comment s'appelle la fonction y = a^x (a > 0 et a ≠ 1) ?,Fonction exponentielle
+L'exponentielle de base la constante naturelle e est appelée comment ?,L'exponentielle de base e
+Comment appelle - t - on un nombre complexe dont la partie réelle est égale à 0 et la partie imaginaire est non nulle ?,Un nombre imaginaire pur
+"Dans la relation de récurrence des nombres combinatoires C_n^m + C_n^{m+1}, quelle expression correspond au résultat de cette somme?",C_{n+1}^{m+1}
+Quel nom porte l'expression Δ = b² - 4ac ?,Le discriminant
+Comment s'appelle l'ensemble formé par toutes les solutions d'une équation ?,L'ensemble des solutions de l'équation
+"Quelle est la valeur de l'arrangement de \(n\) éléments parmi \(n\), noté \(A_n^n\)?",n!
+"Quand n est un entier positif, quel est le nom du théorème qui a pour conclusion (a+b)^n = C_n^0 a^n + C_n^1 a^{n-1}b + ... + C_n^k a^{n-k}b^k + ... + C_n^n b^n ?",Théorème du binôme
+Quel est le nom de l'ensemble des points de l'espace qui sont situés à une distance égale à une longueur donnée d'un point fixe?,La surface sphérique
+Quel symbole représente le nombre de combinaisons de prendre m objets parmi n objets différents?,C_n^m
+Quelle est la condition nécessaire et suffisante pour que la droite soit tangent au cercle?,La distance du centre du cercle à la droite est égale au rayon.
+Quelle est la permutation nommée lorsque m = n ?,Permutation complète
+"Quel nom porte une inégalité de la forme $ax² + bx + c > 0$ (ou $<0$, $\geq0$, $\leq0$), où $a \neq 0$?",Inéquation du second degré
+Quel est le nom donné à une équation contenant des lettres qui reste valable pour n'importe quelle valeur réelle des lettres?,Identité
+Quelle est la longueur de la distance focale d'une hyperbole?,2c
+Quel est le nom donné à la racine carrée de la variance?,Écart-type
+Quelle est la valeur du discriminant Δ d'une équation du second degré ? （此句已经很简洁标准，在不改变原意、数字和语言的情况下，较难有其他表述方式，可认为原句就是最合适的，故保持不变返回） ,b² - 4ac
+Quel est le nom d'une droite qui a deux points communs avec un cercle ?,La sécante d'un cercle
+"Dans la formule de résolution des équations du second degré, quel symbole est employé pour désigner b² - 4ac ?",Δ
+Quelles lois de calcul sont respectées par l'addition des vecteurs spatiaux ?,La loi de commutativité et la loi d'associativité
+Quelle est la valeur inconnue qui permet de rendre les deux côtés d'une équation égaux?,La solution (racine) d'une équation
+"Comment appelle - t - on le nombre de la forme z = a + bi (a, b ∈ R)?",Nombre complexe

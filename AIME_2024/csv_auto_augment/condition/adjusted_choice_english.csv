@@ -1,0 +1,44 @@
+"Let $x,y$ and $z$ be positive real numbers satisfying the system:  
+\[
+\log_2\left({y \over xz}\right) = {1 \over 3},\quad
+\log_2\left({z \over xy}\right) = {1 \over 4},\quad
+-\log_2(x^4y^3z^2) = {25 \over 8}.
+\]  
+If $\log_2\left({x \over yz}\right) = \tfrac{1}{N}$, find $N$.",2,5,3,4,A
+x,x,x,x,x,x
+"Jen participates in a lottery where she selects 4 different numbers from the set S={1,2,3,...,N}. Then, 4 numbers are randomly drawn from S. She wins a prize if at least two of her selected numbers match the drawn numbers, and wins the grand prize if all four of her numbers match the drawn ones. If the probability that she wins the grand prize, given that she has won a prize, is 1/115, find N.",8,10,9,12,B
+x,x,x,x,x,x
+"Eight circles with radius 34 are placed in sequence and tangent to each other, with two of the circles tangent to sides AB and BC of triangle ABC, respectively. The inradius of triangle ABC is 192/5. Circles of radius 1 can be arranged in an identical configuration. Determine the number of such circles.",2010,2024,2000,2030,B
+"Define $f(x)=|| x|-\tfrac{1}{2}|$ and $g(x)=|| x|-\tfrac{1}{4}|$. Let $N$ be the integer for which the second graph is given by $x=4 g(f(\cos(N\pi y)))$. Given that the graphs of $y=4 g(f(\sin(2\pi x)))$ and $x=4 g(f(\cos(N\pi y)))$ intersect exactly 385 times, find $N$.",3,1,4,2,A
+"Each vertex of a regular N-gon is colored independently red or blue with equal probability. The probability that there exists a rotation of the polygon such that every blue vertex moves to a position previously occupied by a red vertex is P. Given that P = 115/256, find N.",9,7,6,8,D
+"Let $(a,b,c)$ be nonnegative integers such that $a+b+c=N$ and  
+\[a^2b + a^2c + b^2a + b^2c + c^2a + c^2b = 6,000,000\].  
+If there are precisely 601 such triples, determine $N$.",300,400,200,250,A
+存在大于 1 的实数 $x$ 和 $y$，满足 $xy=25$ 且 $\log_x\left(y^x\right)=\log_y\left(x^{4y}\right)=N$。求 $N$。,10,5,8,12,A
+x,x,x,x,x,x
+"Let $ z $ be a complex number. Suppose the maximum value of the real part of  
+\[(75+117i)z + \frac{96+144i}{z}\]  
+is 540. Find $ |z| $.",3,5,6,4,D
+"Consider all ways to fill a 2x3 grid with digits such that the sum of the two three-digit numbers obtained by reading each row from left to right is 999, and the sum of the three two-digit numbers obtained by reading each column from top to bottom is N. Given that there are 45 such arrangements, find N.",297,396,99,198,C
+"Every morning Aya takes a 9-kilometer walk and then stops at a coffee shop. When she walks at a constant speed of s kilometers per hour, the total time for the walk and coffee break is N hours, where t minutes are spent in the coffee shop. When her walking speed is s+2 kilometers per hour, the entire trip takes 2 hours and 24 minutes, including t minutes at the coffee shop. If she walks at a speed of s+1/2 kilometers per hour, the total time becomes 204 minutes, again including t minutes at the coffee shop. Find N.",6,4,3,5,B
+x,x,x,x,x,x
+Consider monotone paths that move only right or up from the lower left corner to the upper right corner of an N×N grid. Suppose the number of such paths that change direction exactly four times is 294. Find N.,8,9,7,6,A
+x,x,x,x,x,x
+x,x,x,x,x,x
+在一个固定的正 n 边形内部，考虑其边分别位于该 n 边形的边或对角线上的矩形。假设这样的矩形总数为 315。求 n。,12,14,10,16,A
+"Let $\triangle ABC$ have circumcenter $O$ and incenter $I$ such that $\overline{IA}\perp\overline{OI}$, inradius $6$, and $AB\cdot AC=468$. Compute the circumradius.",10,15,13,12,C
+"There is a set of 25 identical white chips and 25 identical black chips. Suppose some of these chips are placed into the unit cells of an N×N grid so that each cell holds at most one chip, all chips in any given row are of the same color, all chips in any given column are of the same color, and adding any extra chip would break at least one of these two conditions. If the total number of such valid configurations equals 902, determine N.",4,5,7,6,B
+x,x,x,x,x,x
+"Let ABCDEF be a convex equilateral hexagon such that all pairs of opposite sides are parallel. The triangle formed by extending segments AB, CD, and EF has side lengths 200, 240, and N. If the side length of the hexagon is 80, find N.",280,320,300,260,C
+"Let $ A $, $ B $, $ C $, and $ D $ be points on the hyperbola $ \frac{x^2}{N} - \frac{y^2}{24} = 1 $ such that $ ABCD $ is a rhombus with its diagonals intersecting at the origin. The largest real number that is strictly less than $ BD^2 $ for all such rhombi is 480. Find $ N $.",20,25,30,15,A
+"A list of positive integers satisfies the following conditions:
+- The only mode of the list is 9.
+- The median of the list is a positive integer that is not present in the list.
+- The sum of the squares of all elements in the list is 236.
+Determine the sum of the elements in the list.",25,28,30,32,C
+"Among the 900 residents of Aimeville, 195 own a diamond ring, 367 own a set of golf clubs, and 562 own a garden spade. Additionally, every one of the 900 residents owns a bag of candy hearts. There are 234 residents who own exactly three of these items, and 73 residents own all four items. Find the number of residents of Aimeville who own exactly two of these items.",437,637,337,537,A
+"Let ABC be a triangle inscribed in circle ω. Suppose the tangents to ω at points B and C meet at point D, and suppose that AD meets ω again at P. Given that BC=9, AC=10, and AP=100/13, find AB.",8,5,7,6,B
+"A torus T is generated by rotating a circle of radius 3 around a coplanar axis located 6 units away from the center of the circle. Let S be a sphere such that when T is positioned inside S, they are internally tangent along a circle of radius r_i, and when T is positioned outside S, they are externally tangent along a circle of radius r_o. Given that r_i - r_o = 99/28, find the radius of S.",12,10,13,11,D
+"Let $ABCD$ be a tetrahedron such that $AB=CD=\sqrt{N}$, $AC=BD=\sqrt{80}$, and $BC=AD=\sqrt{89}$. Suppose there is a point $I$ located inside the tetrahedron that is equidistant from each of its faces, with this equal distance being $\frac{20\sqrt{21}}{63}$. Find $N$.",39,41,45,43,B
+"Rectangles ABCD and EFGH are constructed so that points D, E, C, F lie on a straight line. Additionally, points A, D, H, G are concyclic. Given BC=16, AB=107, CE=104, and EF=184, find the length of FG.",17,15,19,21,A
+x,x,x,x,x,x

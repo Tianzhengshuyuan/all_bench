@@ -1,0 +1,30 @@
+"La fonction $ y = \log_a x $ ($ a > 0 $, $ a \neq 1 $) s'appelle quoi ?",fonction puissance,fonction exponentielle,fonction logarithmique,fonction trigonométrique,C
+L'équation de droite de la forme y = kx + b s'appelle quoi ?,Équation sous forme d'ordonnée à l'origine,Équation sous forme pente-ordonnée à l'origine,Équation sous forme point-pente,Équation sous forme deux-points,B
+L'égalité P(A|B) = P(A)P(B|A) / P(B) s'appelle quoi ?,formule de Bayes,formule de la probabilité totale,formule d'addition,formule de multiplication,A
+"Dans la forme générale d'une suite $a_1, a_2, a_3, \cdots$, comment appelle - t - on $a_n$?",terme médian,terme suivant,terme général,terme précédent,C
+Quelle est le nom de la droite qui a un seul point commun avec un cercle ?,la tangente du cercle,la sécante du cercle,la corde du cercle,le rayon du cercle,A
+Quel nom porte le nombre réel x tel que f(x) = 0 ?,point d'extremum de la fonction f,zéro de la fonction f,point stationnaire de la fonction f,point d'extrémum local de la fonction f,B
+La propriété selon laquelle la probabilité satisfait 0 ≤ P(A) ≤ 1 s'appelle quoi ?,non-négativité,additivité finie,additivité dénombrable,normalisation,A
+"Quand $\Delta < 0$, quel est le cas des racines réelles de l'équation ?",Il y a deux racines réelles égales,Il y a une racine réelle,Il y a deux racines réelles distinctes,Il n'y a pas de racine réelle,D
+La fonction y = a^x (a > 0 et a ≠ 1) s'appelle quoi ?,fonction logarithmique,fonction puissance,fonction trigonométrique,fonction exponentielle,D
+L'exponentielle de base la constante naturelle e est appelée quoi ?,exponentielle logarithmique,exponentielle e,exponentielle de puissance,exponentielle π,B
+Un nombre complexe dont la partie réelle est égale à 0 et la partie imaginaire est non nulle est appelé quoi ?,nombres réels,nombres imaginaires nuls,nombres réels et imaginaires,nombres imaginaires purs,D
+"Dans la relation de récurrence des nombres combinatoires C_n^m + C_n^{m+1} =?, quelle expression devrait être remplacée par le point d'interrogation?",C_{n - 1}^{m+1},C_{n}^{m + 2},C_{n+1}^{m},C_{n+1}^{m+1},D
+L'expression Δ = b² - 4ac est appelée quoi?,coefficient,discriminant,constante,racine carrée,B
+L'ensemble formé par toutes les solutions d'une équation s'appelle quoi ?,l'ensemble des solutions de l'équation,l'ensemble des racines de l'équation,le groupe des solutions de l'équation,le faisceau des solutions de l'équation,A
+Quelle est la valeur de \(A_n^n\)?,n(n - 1),n!,(n + 1)!,(n - 1)!,B
+"Quand n est un entier positif, la conclusion (a+b)^n = C_n^0 a^n + C_n^1 a^{n-1}b + ... + C_n^k a^{n-k}b^k + ... + C_n^n b^n porte quel nom de théorème ?",suite géométrique,fonction trigonométrique,binôme,suite arithmétique,C
+Quelle est le nom de l'ensemble des points dans l'espace qui sont à une distance égale à une longueur donnée d'un point fixe?,Sphère,Cylindre,Cône,Cercle,A
+Le nombre de combinaisons de prendre m objets parmi n objets différents est représenté par quel symbole?,C_n^m,C_m^n,P_n^m,A_n^m,A
+Quelle est la condition nécessaire et suffisante pour que le cercle soit tangent à la droite?,La distance du centre du cercle à la droite est inférieure au rayon,La distance du centre du cercle à la droite est égale au rayon,La distance du centre du cercle à la droite est supérieure au rayon,La droite passe par un point du cercle,B
+Quelle est la permutation appelée lorsque m = n ?,permutation dérangée,permutation circulaire,permutation partielle,permutation complète,D
+"Une inégalité de la forme $ax² + bx + c > 0$ (ou $<0$, $\geq0$, $\leq0$), où $a \neq 0$, est appelée quoi?",Inéquation linéaire à une inconnue,Inéquation quadratique à une inconnue,Inéquation fractionnaire,Inéquation linéaire à deux inconnues,B
+Une équation contenant des lettres qui reste valable pour n'importe quelle valeur réelle des lettres est appelée quoi?,inéquation,équation contradictoire,équation conditionnelle,identité,D
+Quelle est la longueur de la distance focale d'une hyperbole?,2b,2c,c,2a,B
+La racine carrée de la variance est appelée quoi?,médiane,moyenne,écart type,étendue,C
+Quelle est la valeur du discriminant Δ d'une équation du second degré ?,b² + 4ac,4ac - b²,b²-4ac,2b - 4ac,C
+Quelle est le nom d'une droite qui a deux points communs avec un cercle ?,le rayon du cercle,la sécante du cercle,la corde du cercle,la tangente du cercle,B
+"Dans la formule de résolution des équations du second degré, quel symbole est utilisé pour représenter b² - 4ac ?",Δ,α,γ,β,A
+Quelles lois de calcul sont satisfaites par l'addition des vecteurs spatiaux ?,Loi de symétrie et loi de transitivité,Loi d'idempotence et loi d'absorption,Loi de distributivité et loi de simplification,Loi de commutativité et loi d'associativité,D
+Quelle est la valeur inconnue qui peut rendre les deux côtés d'une équation égaux?,les termes de l'équation,le coefficient de l'équation,le degré de l'équation,la solution (racine) de l'équation,D
+"Quel nom porte le nombre de la forme z = a + bi (a, b ∈ R)?",nombres réels,nombres imaginaires,nombres rationnels,nombres complexes,D

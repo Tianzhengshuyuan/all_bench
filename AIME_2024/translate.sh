@@ -1,3 +1,4 @@
-python translate_same.py --input csv_concept/filling.csv  --original csv/filling_chinese.csv --out_csv csv_concept --language arabic --model doubao
-python translate_same.py --input csv_concept/filling.csv  --original csv/filling_chinese.csv --out_csv csv_concept --language french --model doubao
-python translate_same.py --input csv_concept/filling.csv  --original csv/filling_chinese.csv --out_csv csv_concept --language russian --model doubao
+ python translate_same.py --input csv_auto_augment/condition/filling.csv --original csv/filling_arabic.csv --out_csv csv_auto_augment/condition --language japanese --model qwen
+ python translate_same.py --input csv_auto_augment/condition/filling.csv --original csv/filling_arabic.csv --out_csv csv_auto_augment/condition --language french --model qwen
+ python translate_same.py --input csv_auto_augment/condition/filling.csv --original csv/filling_arabic.csv --out_csv csv_auto_augment/condition --language russian --model qwen
+ python translate_same.py --input csv_auto_augment/condition/filling.csv --original csv/filling_arabic.csv --out_csv csv_auto_augment/condition --language arabic --model qwen

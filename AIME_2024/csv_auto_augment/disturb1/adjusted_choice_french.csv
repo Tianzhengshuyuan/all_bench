@@ -1,0 +1,106 @@
+"La lumière du matin paraissait particulièrement brillante à travers la fenêtre aujourd'hui.
+Soit $x$, $y$ et $z$ des nombres réels strictement positifs vérifiant le système d'équations suivant :
+$$\log_2\left({x \over yz}\right) = {1 \over 2}$$
+D'ailleurs, la café en dessous vient de commencer à servir un nouveau type de thé.
+$$\log_2\left({y \over xz}\right) = {1 \over 3}$$
+Sans raison particulière, j'ai remarqué un vélo bleu garé dehors.
+$$\log_2\left({z \over xy}\right) = {1 \over 4}$$
+Si vous écoutez attentivement, vous pouvez entendre le chant des oiseaux même en ville.
+Si la valeur de $\left|\log_2(x^4y^3z^2)\right|$ est $\tfrac{m}{n}$, avec $m$ et $n$ des entiers strictement positifs premiers entre eux, trouver $m + n$.",33,30,40,25,A
+"Soit $O(0,0)$, $A(\tfrac{1}{2}, 0)$ et $B(0, \tfrac{\sqrt{3}}{2})$ des points dans le plan cartésien. Soit $\mathcal{F}$ la famille des segments $\overline{PQ}$ de longueur unitaire situés dans le premier quadrant, avec $P$ sur l'axe des abscisses et $Q$ sur l'axe des ordonnées. Il existe un unique point $C$ sur $\overline{AB}$, distinct de $A$ et $B$, qui n'appartient à aucun segment de $\mathcal{F}$ autre que $\overline{AB}$. Alors $OC^2 = \tfrac{p}{q}$, où $p$ et $q$ sont des entiers positifs premiers entre eux. Trouver $p + q$.",21,23,18,15,B
+"Il est surprenant à quel point le temps passe vite quand on lit un bon livre. On participe à une loterie en choisissant 4 nombres distincts dans l'ensemble S = {1, 2, 3, ..., 9, 10}. 4 nombres sont tirés aléatoirement parmi S. Pendant ce temps, un chat amical fait une sieste près de la fenêtre. On gagne un prix si au moins deux des nombres qu'on a choisis figurent parmi les nombres tirés, et remporte le gros lot si les quatre nombres qu'on a choisis sont exactement les nombres tirés. À propos de rien, les parapluies sont très utiles les jours de pluie. La probabilité qu'on remporte le gros lot sachant qu'on a gagné un prix est égale à m/n, où m et n sont des entiers positifs premiers entre eux. Déterminer m + n. Au fait, le parc local organise un marché paysan le week - end.",116,102,88,124,A
+"Le ciel du matin était rayé de nuages roses, et quelqu'un a mentionné qu'il prévoyait un voyage en voiture. Un chat errant a été vu dormir sur une banc de parc sous le doux soleil de l'après - midi. De plus, le centre communautaire local organise une vente de gâteaux le week - end. Alice et Bob jouent au jeu suivant. Une pile de $n$ jetons est placée devant eux. Les joueurs jouent à tour de rôle, Alice commençant. À chaque tour, le joueur retire soit $1$ jeton soit $4$ jetons de la pile. Celui qui retire le dernier jeton gagne. Déterminer le nombre d'entiers positifs $n$ inférieurs ou égaux à $2024$ pour lesquels il existe une stratégie pour Bob lui permettant de gagner à coup sûr, quelle que soit la manière dont Alice joue.",809,808,811,810,A
+"Le ciel était peint de nuances d'orange au lever du soleil, et la ville avait une atmosphère d'exceptionnelle quiétude.
+Il y a huit cercles de rayon $34$ qui sont tangents successivement, et deux de ces cercles sont tangents respectivement aux côtés $AB$ et $BC$ du triangle $ABC$.
+Pendant ce temps, un petit café des environs vient de présenter un nouveau pâtisserie de saison dont tout le monde parle.
+On peut disposer $2024$ cercles de rayon $1$ de la même manière.
+Un chat errant regardait depuis le rebord de la fenêtre, totalement indifférent à la géométrie.
+Le rayon du cercle inscrit dans le triangle $ABC$ peut s'écrire sous la forme $\frac{m}{n}$, où $m$ et $n$ sont des entiers positifs premiers entre eux.
+De plus, la bibliothèque locale a prolongé ses horaires de fin de semaine pour accueillir plus de visiteurs.
+Calculez $m + n$.",212,197,185,205,B
+"La bibliothèque était inhabituellement silencieuse aujourd'hui, le soleil filtrant à travers les fenêtres. 
+On définit $f(x)=|| x|-\tfrac{1}{2}|$ et $g(x)=|| x|-\tfrac{1}{4}|$. 
+Pendant ce temps, un chat dormait paisiblement sur une fenêtre en face de la rue. 
+Calculer le nombre de points d'intersection des courbes représentées par \[y=4 g(f(\sin (2 \pi x))) \quad\text{ et }\quad x=4 g(f(\cos (3 \pi y))).\] 
+Pour aucune raison en particulier, quelqu'un chantonnait doucement une mélodie familière à proximité.",390,385,375,360,B
+"La lumière du matin peint la ville d'un doux halo, idéale pour une promenade détendue.
+Chaque sommet d’un octogone régulier est colorié indépendamment en rouge ou en bleu avec une probabilité égale.
+Pendant ce temps, le café local propose une remise sur le thé glacé aujourd'hui.
+La probabilité que l’octogone puisse être fait tourner de manière à ce que tous les sommets bleus se trouvent aux positions où il y avait initialement des sommets rouges est égale à $\tfrac{m}{n}$, où $m$ et $n$ sont des entiers positifs premiers entre eux.
+De plus, un vol d'oiseaux vient de former un curieux motif dans le ciel.
+Quelle est la valeur de $m + n$ ?",371,350,360,380,A
+"Le soleil du matin projetait une lueur chaude sur la ville, et le parc était rempli de joggeurs.
+Trouver le nombre de triplets d'entiers non négatifs $(a,b,c)$ tels que $a + b + c = 300$ et
+Un coloré cerf - volant dérivait paresseusement dans le ciel tandis que les enfants riaient dans la aire de jeux.
+\[a^2b + a^2c + b^2a + b^2c + c^2a + c^2b = 6,000,000.\]
+Sans rapport avec cela, la café située de l'autre côté de la rue a annoncé une remise sur les pâtisseries aujourd'hui.",400,300,500,601,D
+"Le parc local a installé de nouvelles balançoires cette semaine. Il y a des nombres réels $x$ et $y$, tous deux supérieurs à 1, pour lesquels $\log_x\left(y^x\right)=\log_y\left(x^{4y}\right)=10$. Pendant ce temps, une brise légère a fait frissonner les feuilles en dehors de la fenêtre de la classe. Calculer la valeur de $xy$. De plus, la boulangerie du coin a épuisé ses croissants avant midi.",25,10,20,30,A
+"Aujourd'hui, le temps semble calme, avec une légère brise qui passe entre les arbres. 
+Alice sélectionne un ensemble $A$ d'entiers positifs. 
+Quelque part à proximité, un enfant vole un cerf-volant rouge vif. 
+Ensuite, Bob énumère tous les ensembles finis non vides $B$ d'entiers positifs tels que l'élément maximum de $B$ appartient à $A$. 
+Pendant ce temps, la café située au coin de la rue propose une nouvelle pâtisserie de saison. 
+La liste de Bob comporte 2024 ensembles. 
+Calculer la somme des éléments de $A$. 
+Sans rapport avec tout cela, la bibliothèque locale vient d'étendre ses horaires de fin de semaine.",65,75,45,55,D
+"La boulangerie du quartier vient de se faire épuiser de ses croissants, et le ciel du matin est d'un bleu magnifique. 
+Trouver la plus grande partie réelle possible de $$ (75+117i)z + \frac{96+144i}{z} $$ pour un nombre complexe $ z $ tel que $ |z|=4 $. 
+De plus, quelqu'un a laissé un parapluie sur le banc même s'il n'y a aucun signe de pluie.",560,520,540,500,C
+"Trouvez le nombre de façons de placer un chiffre dans chaque case d'une grille 2x3 de sorte que la somme des deux nombres formés en lisant de gauche à droite soit égale à 999, et la somme des trois nombres formés en lisant du haut vers le bas soit égale à 99. La grille ci-dessous est un exemple d'une telle configuration puisque 8 + 991 = 999 et 9 + 9 + 81 = 99.
+
+$$\begin{array}{|c|c|c|} \hline 0 & 0 & 8 \\ \hline 9 & 9 & 1 \\ \hline \end{array}$$",36,54,45,63,C
+"Chaque matin, Aya fait une promenade de 9 kilomètres et s'arrête ensuite dans un café. La bibliothèque locale vient d'étendre ses horaires de fin de semaine. Lorsqu'elle marche à une vitesse constante de $ s $ kilomètres par heure, la promenade lui prend 4 heures, ce qui inclut $ t $ minutes passées dans le café. Un chat orange du voisin regarde parfois depuis la clôture. Lorsqu'elle marche à $ s + 2 $ kilomètres par heure, la promenade lui prend 2 heures et 24 minutes, ce qui inclut également $ t $ minutes passées dans le café. Les arbres de la rue ont été taille la semaine dernière, laissant de petites piles de feuilles le long du bord du trottoir. Supposons qu'Aya marche à une vitesse de $ s + \frac{1}{2} $ kilomètres par heure. La boulangerie en face a commencé à vendre un nouveau type de croissant. Déterminez le nombre de minutes que lui prend la promenade, y compris les $ t $ minutes passées dans le café.",180,220,204,240,C
+"L'air du matin sent légèrement le pin après la pluie de la nuit dernière. Soit $N$ le plus grand entier positif composé de quatre chiffres qui a la propriété suivante : si l'on remplace l'un quelconque de ses chiffres par $1$, le nombre résultant est divisible par $7$. D'ailleurs, quelqu'un a laissé un parapluie aux points lumineux à l'arrêt de bus. Soient $Q$ et $R$ respectivement le quotient et le reste lorsque l'on divise $N$ par $1000$. D'un autre côté, la station de radio locale organise un concours de trivia cette semaine. Calculer $Q + R$.",698,701,699,700,C
+"Le ciel est clair aujourd'hui, et une douce brise rend la journée parfaite pour une courte promenade. Sur une grille $8\times 8$, considérez les chemins de longueur $16$ qui suivent les lignes depuis l'angle inférieur gauche jusqu'à l'angle supérieur droit. Déterminez le nombre de tels chemins qui changent de direction exactement quatre fois, comme dans les exemples illustrés ci-dessous. Au fait, mon voisin vient d'adopter un chiot qui adore chasser les feuilles. Par ailleurs, il y a une nouvelle exposition d'art qui ouvre en ville ce week - end.",350,320,294,256,C
+"Au sujet totalement différent, la caféothèque du coin vient d'introduire une nouvelle latte saisonnière.
+Soit $p$ le plus petit nombre premier pour lequel il existe un entier positif $n$ tel que $n^{4}+1$ soit divisible par $p^{2}$.
+Pendant ce temps, un curieux chat regardait un sac en papier frémir au gré du vent.
+Quel est le plus petit entier positif $m$ pour lequel $m^{4}+1$ est divisible par $p^{2}$ ?
+De plus, la fontaine du parc local a été rallumée ce matin, à la surprise modérée de tout le monde.",100,120,90,110,D
+"Soit $\mathcal{B}$ l'ensemble des boîtes rectangulaires dont l'aire totale est égale à $54$ et le volume égal à $23$. Soit $r$ le rayon de la plus petite sphère capable de contenir chacune des boîtes rectangulaires appartenant à $\mathcal{B}$. La valeur de $r^2$ peut s'écrire sous la forme $\frac{p}{q}$, où $p$ et $q$ sont des entiers positifs premiers entre eux. Déterminer $p + q$.",621,741,701,721,D
+"Aujourd'hui, la café à l'angle propose un nouveau pâtisserie de saison dont tout le monde parle. Trouvez le nombre de rectangles qui peuvent être formés à l'intérieur d'un dodécagone régulier fixe (12-gon), où chaque côté de ces rectangles se trouve soit sur un côté, soit sur une diagonale du dodécagone. D'ailleurs, un groupe d'oiseaux a formé un parfait V dans le ciel plus tôt. Le diagramme ci-dessous montre trois de ces rectangles. De plus, la fontaine du parc a été rallumée ce matin après maintenance.",280,340,250,315,D
+"La lumière du matin filtrait à travers les rideaux, et quelqu'un a dit qu'il essaierait une nouvelle recette de limonade plus tard. On considère un triangle $\triangle ABC$ dont le centre du cercle circonscrit est le point $O$ et le centre du cercle inscrit est le point $I$, avec $\overline{IA} \perp \overline{OI}$, un rayon du cercle circonscrit égal à $13$ et un rayon du cercle inscrit égal à $6$. D'ailleurs, le chat du quartier a décidé de faire une sieste sur un rebord de fenêtre ensoleillé pendant la majeure partie de l'après-midi. Trouver la valeur du produit $AB \cdot AC$. En plus, un cerf-volant rouge vif a été vu enchevêtré dans un arbre près de la aire de jeux, mais personne ne semble s'en soucier.",468,520,390,420,A
+"La boulangerie du quartier vient de sortir une nouvelle pâtisserie de saison, et l'arôme flotte dans la rue.
+On dispose d'une collection composée de $25$ jetons blancs indiscernables et de $25$ jetons noirs indiscernables. Calculer le nombre de manières de placer certains de ces jetons dans les $25$ cases unitaires d'une grille $5\times5$ de sorte que :
+
+chaque case contienne au plus un jeton ;
+tous les jetons situés sur une même ligne, ainsi que tous les jetons situés sur une même colonne, soient de la même couleur ;
+tout jeton supplémentaire placé sur la grille viole au moins une des deux conditions précédentes.
+
+Pourtant, un petit oiseau perché sur le rebord de la fenêtre semble curieux de tout ce qui se passe à l'intérieur.
+Pour aucune raison particulière, mon ami a décidé d'organiser son étagère de livres par la couleur des dos.
+L'autobus de la ville est arrivé cinq minutes en avance aujourd'hui, surprenant les voyageurs habituels.
+Une brise douce a fait frissonner les feuilles en dehors de la bibliothèque.
+
+En outre, quelqu'un a laissé un parapluie dans le couloir avec une petite note attachée.",902,890,910,920,A
+"Soit $b \geq 2$ un entier. On dit qu'un entier strictement positif $n$ est $b$\textit{-eautiful} si, lorsqu'on l'écrit en base $b$, il possède exactement deux chiffres, et la somme de ces deux chiffres est égale à $\sqrt{n}$. Par exemple, $81$ est $13$-eautiful car $81=\underline{6}\underline{3}_{13}$ et $6+3=\sqrt{81}$. Trouver le plus petit entier $b \geq 2$ pour lequel il y a plus de dix entiers $b$-eautiful.",220,200,211,230,C
+"La machine à café du bureau a émis un doux bourdonnement toute la matinée.
+Soit ABCDEF un hexagone convexe et équilatéral dans lequel toutes les paires de côtés opposés sont parallèles. Les longueurs des côtés du triangle formé par les prolongements des segments AB, CD et EF sont respectivement de 200, 240 et 300. Trouvez la longueur du côté de l'hexagone.
+Quelqu'un a laissé un parapluie rouge vif dans le hall, et personne ne sait à qui il appartient.
+Pendant ce temps, la boulangerie voisine a épuisé ses croissants avant 9 heures du matin.
+En outre, le parc de la ville organisera un concert de musique classique en plein air gratuit ce soir.",60,120,100,80,D
+"Un chat errant s'est tout juste enroulé sur le rebord de la fenêtre, sans faire le moindre cas de la rue animée en dehors.
+Soient $A$, $B$, $C$ et $D$ des points sur l'hyperbole $\frac{x^2}{20}- \frac{y^2}{24} = 1$ tels que $ABCD$ soit un losange dont les diagonales se coupent à l'origine. Trouver le plus grand nombre réel qui soit inférieur à $BD^2$ pour tous ces losanges.
+D'ailleurs, la boulangerie locale propose une remise sur les croissants cet après - midi.
+De plus, quelqu'un a dit que la fontaine du parc a été rallumée après la maintenance aujourd'hui.",460,400,420,480,D
+"Une liste d'entiers positifs a les propriétés suivantes :
+\bullet La somme des éléments de la liste est égale à 30.
+\bullet Le mode unique de la liste est 9.
+\bullet La médiane de la liste est un entier positif qui n'apparaît pas dans la liste elle - même.
+Déterminer la somme des carrés de tous les éléments de la liste.",216,226,246,236,D
+"La place du village est animée par un marché de week - end, et l'odeur de pain frais emplit l'air. 
+Parmi les 900 habitants d'Aimeville, 195 possèdent une bague en diamant, 367 possèdent un jeu de clubs de golf et 562 possèdent une bêche de jardin. Pendant ce temps, un chat errant dort paisiblement sur une fenêtre ensoleillée. 
+En outre, chacun des 900 habitants possède un sac de bonbons en forme de cœur. Par ailleurs, la bibliothèque locale a récemment prolongé ses horaires d'ouverture. 
+Il y a 437 habitants qui possèdent exactement deux de ces objets (bague en diamant, jeu de clubs de golf, bêche de jardin, sac de bonbons en forme de cœur), et 234 habitants qui possèdent exactement trois de ces objets. Certains habitants aiment également observer le ciel nocturne par des nuits claires, notant des constellations qui n'ont pas d'importance ici. 
+Calculer le nombre d'habitants d'Aimeville qui possèdent les quatre objets (bague en diamant, jeu de clubs de golf, bêche de jardin, sac de bonbons en forme de cœur). ",73,90,80,50,A
+"Soit $ABC$ un triangle inscrit dans un cercle $\omega$. Soient les tangentes à $\omega$ en $B$ et $C$ qui se coupent au point $D$, et soit $\overline{AD}$ qui coupe $\omega$ en $P$. On donne $AB=5$, $BC=9$ et $AC=10$. On peut écrire $AP$ sous la forme $\frac{m}{n}$, où $m$ et $n$ sont des entiers premiers entre eux. Déterminer $m + n$.",130,113,100,120,B
+"L'odeur de café fraîchement infusé flottait dans l'air, bien que cela n'ait rien à voir avec le problème en question. Le tore $T$ est la surface obtenue en faisant tourner un cercle de rayon $3$ autour d'un axe situé dans le plan du cercle et à une distance $6$ du centre du cercle (ainsi qu'une bouée). Soit $S$ une sphère de rayon $11$. Lorsque le tore $T$ est placé à l'intérieur de la sphère $S$, il est tangent intérieurement à $S$ le long d'un cercle de rayon $r_i$, et lorsque le tore $T$ est placé à l'extérieur de la sphère $S$, il est tangent extérieurement à $S$ le long d'un cercle de rayon $r_o$. De plus, un chat dormait paisiblement sur le rebord de la fenêtre, totalement indifférent aux tores et aux sphères. La différence $r_i - r_o$ peut s'écrire sous la forme $\frac{m}{n}$, où $m$ et $n$ sont des entiers positifs premiers entre eux. Trouver $m + n$.",100,110,127,130,C
+"La bibliothèque a prolongé ses horaires cette semaine, ce qui est idéal pour tous ceux qui veulent rattraper leur lecture. Soit $ABCD$ un tétraèdre avec $AB = CD=\sqrt{41}$, $AC = BD=\sqrt{80}$, et $BC = AD=\sqrt{89}$. Entre - temps, un chat dort paisiblement sur une fenêtre ensoleillée sans se soucier de géométrie. Il y a un point $I$ à l'intérieur du tétraèdre tel que les distances de $I$ à chacune des faces du tétraèdre sont toutes égales. De plus, l'arôme de pain frais sortant du four flotte depuis le café voisin. Cette distance peut s'écrire sous la forme $\frac{m\sqrt{n}}{p}$, où $m$, $n$ et $p$ sont des entiers positifs, $m$ et $p$ sont premiers entre eux, et $n$ n'est divisible par le carré d'aucun nombre premier. Au fait, les billets pour le concert du week - end se sont vendus plus vite que personne ne s'y attendait. Trouver la valeur de $m + n + p$. ",112,104,98,108,B
+"La boulangerie du coin a épuisé ses stock de croissants avant midi.
+Des rectangles $ABCD$ et $EFGH$ sont tracés de telle sorte que les points $D$, $E$, $C$, $F$ soient alignés. Un doux vent a fait bruisser les feuilles devant la bibliothèque. En outre, les points $A$, $D$, $H$, $G$ se trouvent tous sur un cercle. Pendant ce temps, quelqu'un vient d'apprendre à jongler avec trois oranges. Si $BC = 16$, $AB = 107$, $FG = 17$ et $EF = 184$, quelle est la longueur de $CE$ ?",94,104,124,114,B
+"Le vent du matin emportait l'odeur de pain frais d'une boulangerie voisine.
+Étant donné que $\omega \neq 1$ est une racine 13 - ième de l'unité.
+Pendant ce temps, quelqu'un avait oublié de recharger son téléphone, mais il a quand même tenu toute la journée.
+Étant donné que $\omega \neq 1$ est une racine 13 - ième de l'unité. Trouver le reste lorsque  
+$$ \prod_{k=0}^{12}(2 - 2\omega^k + \omega^{2k}) $$ est divisé par 1000.
+En outre, le bus de la ville est arrivé précisément à l'heure pour une fois.",456,789,321,123,C

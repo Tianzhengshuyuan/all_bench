@@ -11,7 +11,7 @@ from sympy.core.sympify import SympifyError
 from volcenginesdkarkruntime import Ark
 
 deepseek_client = OpenAI(api_key="sk-09da13b2c97948628523d042d6a02f06", base_url="https://api.deepseek.com")
-qwen_client = OpenAI(api_key="sk-341becd932d743f2a750495a0f9f3ede", base_url="https://dashscope.aliyuncs.com/compatible-mode/v1")
+qwen_client = OpenAI(api_key="sk-e6cfbb89c5f642aa9c0342974158fb96", base_url="https://dashscope.aliyuncs.com/compatible-mode/v1")
 doubao_client = Ark(api_key="196b33be-8abb-4af3-9fba-6e266b2dd942")
 
 def call_deepseek_api(question, temperature=0):

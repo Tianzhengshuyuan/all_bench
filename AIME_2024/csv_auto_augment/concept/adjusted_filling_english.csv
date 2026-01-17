@@ -1,0 +1,30 @@
+"What is the function \(y = \log_a x\) (\(a > 0\), \(a\neq1\)) called?",Logarithmic function
+What is the name of the equation of a straight line in the form of y = kx + b?,Slope-intercept form equation
+What is the equation \(P(A|B) = \frac{P(A)P(B|A)}{P(B)}\) called?,Bayes' formula
+"In the general form of a sequence \(a_1, a_2, a_3, \cdots\), what name is given to \(a_n\)?",General term
+What is a line which has just one common point with a circle named?,A tangent to the circle
+What is the real number x for which f(x) = 0 called?,The zero of the function f
+What is the name of the property when the probability meets the condition 0 ≤ P(A) ≤ 1?,Non - negativity
+"When the discriminant Δ is less than 0, what is the situation of the real roots of the equation?",No real roots
+What is the name of the function \(y = a^x\) (\(a>0\) and \(a\neq1\))?,Exponential function
+What kind of function is the exponential function whose base is the natural constant e called?,The exponential function with base e
+What is the name for complex numbers that have a real part of 0 and a non - zero imaginary part?,Pure imaginary numbers
+"In the recurrence relation of binomial coefficients, what should be the result on the right - hand side of the equation \( C_n^m + C_n^{m+1} =? \)?",\(C_{n+1}^{m+1}\)
+What is the name of the expression Δ = b² - 4ac?,Discriminant
+What is the name of the set composed of all solutions of an equation?,The solution set of the equation
+What is the value of \(A_n^n\)?,n!
+"When \(n\) is a positive integer, what is the name of the theorem that gives the conclusion \((a + b)^n = C_n^0 a^n + C_n^1 a^{n - 1}b + \cdots + C_n^k a^{n - k}b^k + \cdots + C_n^n b^n\)?",Binomial Theorem
+What do we call the set of points in space that are at a fixed distance from a fixed point?,Sphere
+What symbol is used to denote the number of combinations of selecting m objects from n distinct objects?,C_n^m
+What is the necessary and sufficient condition for a straight line to be tangent to a circle?,The distance from the center of the circle to the straight line is equal to the radius.
+What is the permutation named when m = n?,Full permutation
+"What are inequalities in the form of ax² + bx + c > 0 (or < 0, ≥ 0, ≤ 0), where a ≠ 0, called?",Quadratic inequalities in one variable
+What is an equation containing letters that holds true for any real - number values of the letters called?,Identity
+What is the focal length of a hyperbola equal to?,2c
+What is the arithmetic square root of the variance called?,Standard deviation
+What is the value of the discriminant Δ of a quadratic equation with one unknown?,b² - 4ac
+What is a line which has two common points with a circle named?,A secant line of a circle
+"When using the quadratic formula to solve quadratic equations of one variable, which symbol is used to represent \(b^2 - 4ac\)?",Δ
+What operation laws are satisfied by the addition of spatial vectors?,Commutative law and associative law
+What is the name for the value of the unknown that can make both sides of the equation equal?,The solution (root) of the equation
+"What is the name of the number in the form of z = a + bi (a, b ∈ R)?",Complex number
