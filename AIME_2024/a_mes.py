@@ -4542,7 +4542,10 @@ def run_ames_on_csv(args):
                 solution = row[1] 
                 answer   = row[2] 
 
-                print(f"\n===============================处理第【 {total_count} 】题================================")
+                if args.start:
+                    print(f"\n===============================处理第【 {args.start+total_count-1} 】题================================")
+                else:
+                    print(f"\n===============================处理第【 {total_count} 】题================================")
                 print(f"原题：\n{question}\n答案：\n{answer}")
 
                 item = ProblemItem(
@@ -4559,7 +4562,10 @@ def run_ames_on_csv(args):
                     processed = pipeline.process(item, method=args.method, generate_variant=generate_variant)
                     success_count += 1
 
-                    print(f"================================第【 {total_count} 】题小结=============================")
+                    if args.start:
+                        print(f"================================第【 {args.start+total_count-1} 】题小结=============================")
+                    else:
+                        print(f"================================第【 {total_count} 】题小结=============================")
                     print("原题：")
                     print(item.original_question)
                     print("原题答案：")
