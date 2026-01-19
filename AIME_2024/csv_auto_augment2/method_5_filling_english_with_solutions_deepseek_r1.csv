@@ -1,0 +1,37 @@
+"Let $x,y$ and $z$ be positive real numbers that satisfy the following system of equations:
+\[\log_2\left({y \over xz}\right) = {1 \over 3}\]
+\[\log_2\left({z \over xy}\right) = {1 \over 4}\]
+\[\log_2(x^4 y^3 z^2) = -\frac{25}{8}\]
+Then the value of $\log_2\left({x \over yz}\right)$ can be expressed as $\tfrac{1}{N}$. Find $N$.",2
+x,x
+"Jen enters a lottery by picking 4 distinct numbers from S={1,2,3,4,5,6,7,8,9,10}. 4 numbers are randomly chosen from S. She wins a prize if at least k of her numbers were among the randomly chosen numbers, and wins the grand prize if all four of her numbers were chosen. The probability of her winning the grand prize given that she won a prize is \tfrac{1}{115}. Find k.",2
+x,x
+"The inradius of triangle $ABC$ is $\frac{192}{5}$. 2024 circles of radius 1 can be arranged in the same manner. Circles are sequentially tangent, and two are tangent to $AB$ and $BC$ of triangle $ABC$. Find the number of circles of radius 34 that can be arranged in the same manner.",8
+定义 $f(x)=|| x|-\tfrac{1}{2}|$ 和 $g(x)=|| x|-\tfrac{1}{4}|$。考虑图形 $y=4 g(f(\sin (k \pi x)))$ 和 $x=4 g(f(\cos (3 \pi y)))$。已知交点的数量为 385，求 $k$。,2
+x,x
+x,x
+"There exist real numbers $x$ and $y$, both greater than 1, such that $xy = 25$ and $\log_x\left(y^x\right) = \log_y\left(x^{4y}\right) = N$. Find $N$.",10
+x,x
+Let $z$ be a complex number with $|z|=r$. The largest possible real part of $(75+117i)z + \frac{96+144i}{z}$ is 540. Find $r$.,4
+"Find the value of $N$ such that there are exactly $45$ ways to place a digit in each cell of a 2x3 grid so that the sum of the two numbers formed by reading left to right is $999$, and the sum of the three numbers formed by reading top to bottom is $N$.",99
+"Every morning Aya goes for a 9-kilometer-long walk and stops at a coffee shop afterwards. When she walks at a constant speed of $s$ kilometers per hour, the walk takes her 4 hours, including $t$ minutes spent in the coffee shop. When she walks at $s+N$ kilometers per hour, the walk takes her 2 hours and 24 minutes, including $t$ minutes spent in the coffee shop. Suppose Aya walks at $s+\frac{1}{2}$ kilometers per hour, and the walk takes her 204 minutes, including the $t$ minutes spent in the coffee shop. Find $N$.",2
+x,x
+Consider the paths of length 16 that follow the lines from the lower left corner to the upper right corner on an 8×8 grid. Suppose the number of such paths that change direction exactly k times is 294. Find k.,4
+x,x
+x,x
+x,x
+"Let $\triangle ABC$ have circumcenter $O$ and incenter $I$ with $\overline{IA}\perp\overline{OI}$, circumradius $13$, and $AB \cdot AC = 468$. Find the inradius.",6
+"There is a collection of indistinguishable white chips and indistinguishable black chips, available in sufficient quantity. Consider an n×n grid. Find n such that the number of ways to place some of these chips in the grid satisfying the following conditions is 902:
+- each cell contains at most one chip
+- all chips in the same row and all chips in the same column have the same colour
+- any additional chip placed on the grid would violate one or more of the previous two conditions.",5
+"Let \( b = 211 \). A positive integer \( n \) is \( b \)-eautiful if it has exactly two digits when expressed in base \( b \), and these two digits sum to \( \sqrt{n} \). Find the number of such \( b \)-eautiful integers.",15
+x,x
+x,x
+A list of positive integers has the following properties: • The unique mode of the list is 9. • The sum of the squares of the items is 236. Find the sum of the items in the list.,30
+"Among the 900 residents of Aimeville, there are [number] who own a diamond ring, 367 who own a set of golf clubs, and 562 who own a garden spade. In addition, each of the 900 residents owns a bag of candy hearts. There are 437 residents who own exactly two of these things, and 234 residents who own exactly three of these things. Moreover, there are 73 residents who own all four of these things. Find the number of residents who own a diamond ring.",195
+"Let $ABC$ be a triangle inscribed in circle $\omega$. Let the tangents to $\omega$ at $B$ and $C$ intersect at point $D$, and let $\overline{AD}$ intersect $\omega$ at $P$. Given that $AC=10$, $BC=9$, and $AP=\frac{100}{13}$, find $AB$.",5
+"Torus $T$ is the surface produced by revolving a circle with radius $a$ around an axis in the plane of the circle that is a distance $6$ from the center of the circle (so like a donut). Let $S$ be a sphere with radius $11$. When $T$ rests on the inside of $S$, it is internally tangent to $S$ along a circle with radius $r_i$, and when $T$ rests on the outside of $S$, it is externally tangent to $S$ along a circle with radius $r_o$. Given that the difference $r_i - r_o = \frac{99}{28}$, find $a$.",3
+"Let $ABCD$ be a tetrahedron such that $AC=BD= \sqrt{80}$, $BC=AD= \sqrt{89}$, and there exists a point $I$ inside the tetrahedron such that the distances from $I$ to each of the faces of the tetrahedron are all equal to $\frac{20\sqrt{21}}{63}$. Find $AB^2$.",41
+"Rectangles $ABCD$ and $EFGH$ are drawn such that $D,E,C,F$ are collinear. Also, $A,D,H,G$ all lie on a circle. If $CE=104$, $AB=107$, $FG=17$, and $EF=184$, what is the length of $BC$?",16
+x,x

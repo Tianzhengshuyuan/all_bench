@@ -70,8 +70,8 @@ DEFAULT_STAGE_MODEL = {
 
 DEFAULT_ROLE_MODEL = {
     "extract": "doubao_1_5_pro_32k",     # 知识点提取
-    "convert": "gpt5",    # 答案格式转换（analogical-3，把m+n变为m/n）
-    "analysis": "gpt5",    # 分析题目的条件和结论是否可逆（analogical-3）
+    "convert": "doubao_seed",    # 答案格式转换（analogical-3，把m+n变为m/n）
+    "analysis": "doubao_seed",    # 分析题目的条件和结论是否可逆（analogical-3）
     "codegen": "gpt5", # 代码生成
     "check": "gpt5",    # 硬编码检查
     "refine": "gpt5",  # 根据错误历史修正代码
@@ -174,7 +174,7 @@ class LLMClient:
         # https://console.volcengine.com/ark/region:ark+cn-beijing/model/detail?Id=deepseek-r1
         try:
             resp = doubao_client.chat.completions.create(
-                model="deepseek-r1-251201",
+                model="deepseek-r1-250528",
                 messages=[
                     {"role": "system", "content": system},
                     {"role": "user", "content": question},
@@ -1645,7 +1645,7 @@ class AnalogicalTransformer:
                 2. 实现通用的计算过程，对变量 {variable_name} 的取值没有限制，不要硬编码答案
                 3. 函数应该返回题目的答案
                 4. 注意：题目中可能有多个相同的数字，但只有变量 {variable_name} 对应的位置需要作为参数传入
-                5. 只输出函数定义和函数调用，不要输出 if __name__ == "__main__": 这样的测试代码块
+                5. 只输出函数定义，不要输出 if __name__ == "__main__": 这样的测试代码块，不要输出solve(23)这样的函数调用  
                 6. 不要添加任何print语句
                 {fraction_requirement}请只输出Python代码，不要有其他解释。
                 """)
@@ -1880,70 +1880,74 @@ class AnalogicalTransformer:
                 item.augmented_question = "x"
                 item.augmented_true_answer = "x"
             else:
-                numeric_inputs = {}
-                if variable_name and variable_value is not None:
-                    numeric_inputs[variable_name] = {
-                        "value": variable_value,
-                        "position": variable_position
-                    }
+                item.augmented_question = new_problem
+                item.augmented_true_answer = new_answer
+                item.method_used = "analogical-3"
+                return item
+                # numeric_inputs = {}
+                # if variable_name and variable_value is not None:
+                #     numeric_inputs[variable_name] = {
+                #         "value": variable_value,
+                #         "position": variable_position
+                #     }
                 
-                print("--------------------------------构建求解器--------------------------------")
-                solver_result = self._build_recomposed_solver(
-                    original_problem=item.original_question,
-                    original_answer=item.true_answer,
-                    recomposed_problem=new_problem,
-                    recomposed_answer=new_answer,
-                    solution_sketches=item.solution,
-                    retrieved_formulas=retrieved_formulas,
-                    knowledge_points=knowledge_points,
-                    variable_name=variable_name,
-                    variable_value=variable_value,
-                    variable_position=variable_position,
-                    llm_codegen=llm_codegen,
-                    llm_check=llm_check,
-                    llm_refine=llm_refine,
-                    llm_range=llm_range,
-                    item=item,
-                    generate_variant=generate_variant
-                )
+                # print("--------------------------------构建求解器--------------------------------")
+                # solver_result = self._build_recomposed_solver(
+                #     original_problem=item.original_question,
+                #     original_answer=item.true_answer,
+                #     recomposed_problem=new_problem,
+                #     recomposed_answer=new_answer,
+                #     solution_sketches=item.solution,
+                #     retrieved_formulas=retrieved_formulas,
+                #     knowledge_points=knowledge_points,
+                #     variable_name=variable_name,
+                #     variable_value=variable_value,
+                #     variable_position=variable_position,
+                #     llm_codegen=llm_codegen,
+                #     llm_check=llm_check,
+                #     llm_refine=llm_refine,
+                #     llm_range=llm_range,
+                #     item=item,
+                #     generate_variant=generate_variant
+                # )
                 
                 # 如果 generate_variant=False 且 solver_result 为 None，说明已经在函数内修改了 item，直接返回
-                if not generate_variant and solver_result is None:
-                    item.method_used = "analogical-3"
-                    return item
+                # if not generate_variant and solver_result is None:
+                #     item.method_used = "analogical-3"
+                #     return item
                 
-                if solver_result:
-                    code, value_ranges, primary_key, extracted_numeric_inputs, primary_position = solver_result  
-                    # 将 numeric_inputs 转换为简单格式 {变量名: 值} 用于生成变体
-                    input_variables = {}
-                    for key, info in extracted_numeric_inputs.items():
-                        value = info.get("value", info) if isinstance(info, dict) else info
-                        input_variables[key] = value
+                # if solver_result:
+                #     code, value_ranges, primary_key, extracted_numeric_inputs, primary_position = solver_result  
+                #     # 将 numeric_inputs 转换为简单格式 {变量名: 值} 用于生成变体
+                #     input_variables = {}
+                #     for key, info in extracted_numeric_inputs.items():
+                #         value = info.get("value", info) if isinstance(info, dict) else info
+                #         input_variables[key] = value
                     
-                    print("--------------------------------生成数字变体--------------------------------")
-                    variant, variant_answer = self._generate_numeric_variant(
-                        new_problem,  # 使用重组后的题目
-                        code,
-                        primary_key,
-                        primary_position,
-                        input_variables,
-                        value_ranges,
-                        llm_variant
-                    )
+                #     print("--------------------------------生成数字变体--------------------------------")
+                #     variant, variant_answer = self._generate_numeric_variant(
+                #         new_problem,  # 使用重组后的题目
+                #         code,
+                #         primary_key,
+                #         primary_position,
+                #         input_variables,
+                #         value_ranges,
+                #         llm_variant
+                #     )
                     
-                    if variant and variant_answer:
-                        item.augmented_question = variant
-                        item.augmented_true_answer = variant_answer
-                    else:
-                        # 如果生成变体失败，使用原始重组问题
-                        print("警告：生成变体失败，使用原始重组问题")
-                        item.augmented_question = new_problem
-                        item.augmented_true_answer = new_answer
-                else:
-                    # 如果构建求解器失败，直接使用分析结果
-                    print("警告：构建求解器失败，使用分析结果")
-                    item.augmented_question = "x"
-                    item.augmented_true_answer = "x"
+                #     if variant and variant_answer:
+                #         item.augmented_question = variant
+                #         item.augmented_true_answer = variant_answer
+                #     else:
+                #         # 如果生成变体失败，使用原始重组问题
+                #         print("警告：生成变体失败，使用原始重组问题")
+                #         item.augmented_question = new_problem
+                #         item.augmented_true_answer = new_answer
+                # else:
+                #     # 如果构建求解器失败，直接使用分析结果
+                #     print("警告：构建求解器失败，使用分析结果")
+                #     item.augmented_question = "x"
+                #     item.augmented_true_answer = "x"
         else:
             # 条件和目标无法交换的情况
             print("警告：题目条件和目标无法交换，无法生成变体")
@@ -4384,7 +4388,7 @@ def get_output_filename(input_name: str, method: str) -> str:
     # os.path.basename从完整的文件路径中提取文件名部分，去掉目录路径，[0]获取名字中不带扩展名的部分
     base = os.path.splitext(os.path.basename(input_name))[0]
     tag = f"method_{method}"
-    return f"{tag}_{base}.csv"
+    return f"{tag}_{base}_doubao_seed.csv"
 
 
 def run_ames_on_csv(args):

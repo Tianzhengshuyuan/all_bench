@@ -1,0 +1,34 @@
+"Let $x,y$ and $z$ be positive real numbers that satisfy the following system of equations:\n\[\log_2\left({y \over xz}\right) = {1 \over 3}\]\n\[\log_2\left({z \over xy}\right) = {1 \over 4}\]\n\[-\log_2(x^4y^3z^2) = \tfrac{25}{8}\]\nThen the value of $\log_2\left({x \over yz}\right)$ can be expressed as $\tfrac{1}{N}$. Find $N$.",2
+x,x
+"Jen enters a lottery by picking 4 distinct numbers from S=\{1,2,3,\cdots,9,10\}. 4 numbers are randomly chosen from S. She wins a prize if at least N of her numbers were among the randomly chosen numbers, and wins the grand prize if all four of her numbers were the randomly chosen numbers. The probability of her winning the grand prize given that she won a prize is 1/115. Find N.",2
+x,x
+"Eight circles of radius 34 are sequentially tangent, and two of the circles are tangent to AB and BC of triangle ABC, respectively. N circles of radius 1 can be arranged in the same manner. The inradius of triangle ABC is 192/5. Find N.",2024
+x,x
+x,x
+x,x
+"There exist real numbers $x$ and $y$, both greater than 1, such that $xy=25$ and $\log_x\left(y^x\right)=\log_y\left(x^{4y}\right)=N$. Find $N$.",10
+x,x
+x,x
+x,x
+"Every morning Aya goes for a 9-kilometer-long walk and stops at a coffee shop afterwards. When she walks at a constant speed of s kilometers per hour, the walk takes her 4 hours, including t minutes spent in the coffee shop. When she walks s+2 kilometers per hour, the walk takes her 2 hours and N minutes, including t minutes spent in the coffee shop. Suppose Aya walks at $s+\frac{1}{2}$ kilometers per hour. The walk takes her 204 minutes, including the t minutes spent in the coffee shop. Find N.",24
+x,x
+"Consider the paths that follow the lines from the lower left corner to the upper right corner on an N×N grid. Among those that change direction exactly four times, the total number of such paths is 294. Find N.",8
+x,x
+x,x
+"Inside a fixed regular n-gon, where each side of the rectangle lies on either a side or a diagonal of the n-gon, the total number of such rectangles is 315. The diagram below shows three of those rectangles. Find n.",12
+"Let $\triangle ABC$ have circumcenter $O$ and incenter $I$ with $\overline{IA}\perp\overline{OI}$ and inradius $6$. Given that $AB\cdot AC=468$, find the circumradius.",13
+"There is a collection of 25 indistinguishable white chips and 25 indistinguishable black chips. Consider an $N\times N$ grid of unit cells. Place some of these chips in the cells so that each cell contains at most one chip, all chips in the same row and all chips in the same column have the same colour, and any additional chip placed on the grid would violate one or more of the previous two conditions. It is known that the number of different valid placements is 902. Find $N$.",5
+x,x
+"Let ABCDEF be a convex equilateral hexagon in which all pairs of opposite sides are parallel. The triangle whose sides are extensions of segments AB, CD, and EF has side lengths 200, 240, and N. The side length of the hexagon is 80. Find N.",300
+x,x
+"A list of positive integers has the following properties:
+- The sum of the squares of the items in the list is 236.
+- The unique mode of the list is 9.
+- The median of the list is a positive integer that does not appear in the list itself.
+Find the sum of the items in the list.",30
+"Among the 900 residents of Aimeville, there are 195 who own a diamond ring, 367 who own a set of golf clubs, and 562 who own a garden spade. In addition, each of the 900 residents owns a bag of candy hearts. There are 234 residents who own exactly three of these things. There are 73 residents who own all four of these things. Find the number of residents of Aimeville who own exactly two of these things.",437
+x,x
+"Torus T is the surface produced by revolving a circle with radius 3 around an axis in the plane of the circle that is a distance 6 from the center of the circle (so like a donut). Let S be a sphere with radius N. When T rests on the inside of S, it is internally tangent to S along a circle with radius r_i, and when T rests on the outside of S, it is externally tangent to S along a circle with radius r_o. Suppose r_i - r_o = 99/28. Find N.",11
+"Let $ABCD$ be a tetrahedron such that $AB=CD=\sqrt{N}$, $AC=BD=\sqrt{80}$, and $BC=AD=\sqrt{89}$. There exists a point $I$ inside the tetrahedron such that the distances from $I$ to each of the faces of the tetrahedron are all equal to $\dfrac{20\sqrt{21}}{63}$. Find $N$.",41
+"Rectangles ABCD and EFGH are drawn such that D,E,C,F are collinear. Also, A,D,H,G all lie on a circle. If BC=16, FG=17, EF=184, and CE=104, what is the length of AB?",107
+x,x

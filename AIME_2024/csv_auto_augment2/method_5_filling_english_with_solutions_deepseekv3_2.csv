@@ -1,0 +1,34 @@
+"Let $x,y$ and $z$ be positive real numbers that satisfy the following system of equations: 
+\[\log_2\left({y \over xz}\right) = {1 \over 3}\]
+\[\log_2\left({z \over xy}\right) = {1 \over 4}\]
+\[\left|\log_2(x^4y^3z^2)\right| = \tfrac{25}{8}\]
+Then the value of $\log_2\left({x \over yz}\right)$ can be expressed as $\tfrac{1}{N}$. Find $N$.",2
+"Let $O(0,0), A(\tfrac{1}{2}, 0),$ and $B(0, \tfrac{\sqrt{3}}{2})$ be points in the coordinate plane. Let $\mathcal{F}$ be the family of segments $\overline{PQ}$ of unit length lying in the first quadrant with $P$ on the $x$-axis and $Q$ on the $y$-axis. There is a unique point $C$ on $\overline{AB}$, distinct from $A$ and $B$, that does not belong to any segment from $\mathcal{F}$ other than $\overline{AB}$. Given that $OC^2 = \tfrac{7}{16}$, find the coordinates of $C$.","$\left(\frac{1}{8}, \frac{3\sqrt{3}}{8}\right)$"
+x,x
+"Alice and Bob play the following game. A stack of $n$ tokens lies before them. The players take turns with Alice going first. On each turn, the player removes either $1$ token or $k$ tokens from the stack, where $k$ is a fixed positive integer. Whoever removes the last token wins. The number of positive integers $n$ less than or equal to $2024$ for which there exists a strategy for Bob that guarantees that Bob will win the game regardless of Alice's play is $809$. Find the maximum possible value of $k$.",4
+"Eight circles of radius $34$ are sequentially tangent, and two of the circles are tangent to $AB$ and $BC$ of triangle $ABC$, respectively. The inradius of triangle $ABC$ is $\frac{192}{5}$. $N$ circles of radius $1$ can be arranged in the same manner. Find $N$.",2024
+x,x
+x,x
+"Find the value of $a + b + c$ for triples of nonnegative integers $(a,b,c)$ satisfying that the number of such triples with $a^2b + a^2c + b^2a + b^2c + c^2a + c^2b = 6,000,000$ is 601.",300
+"There exist real numbers $x$ and $y$, both greater than 1, such that $xy=25$ and $\log_x\left(y^x\right)=\log_y\left(x^{4y}\right)=N$. Find $N$.",10
+Alice chooses a set $A$ of positive integers. Then Bob lists all finite nonempty sets $B$ of positive integers with the property that the maximum element of $B$ belongs to $A$. The sum of the elements of $A$ is 55. Find the number of sets in Bob's list.,2024
+"Find the value of $|z|$ such that the largest possible real part of $\left[(75+117i)z + \frac{96+144i}{z}\right]$ is 540, where $z$ is a complex number with $|z|$ being a positive real number.",4
+"Find the sum of the three numbers formed by reading top to bottom in a 2x3 grid, given that the sum of the two numbers formed by reading left to right is $999$, and the number of ways to place a digit in each cell of the grid satisfying these conditions is $45$. The grid below is an example of such an arrangement because $8+991=999$ and $9+9+81=99$. \[\begin{array}{|c|c|c|} \hline 0 & 0 & 8 \\ \hline 9 & 9 & 1 \\ \hline \end{array}\]",99
+"Every morning Aya goes for a $9$-kilometer-long walk and stops at a coffee shop afterwards. When she walks at a constant speed of $s$ kilometers per hour, the walk takes her 4 hours, including $t$ minutes spent in the coffee shop. Suppose Aya walks at $s+\frac{1}{2}$ kilometers per hour, and the walk takes her 204 minutes, including the $t$ minutes spent in the coffee shop. When she walks $s+2$ kilometers per hour, find the number of minutes the walk takes her, including the $t$ minutes spent in the coffee shop.",144
+x,x
+x,x
+Let $m=110$. Find the least prime number $p$ for which there exists a positive integer $n$ such that $n^{4}+1$ is divisible by $p^{2}$.,17
+x,x
+"Find the number of sides of a fixed regular polygon such that the number of rectangles that can be formed inside it, where each side of the rectangle lies on either a side or a diagonal of the polygon, is 315.",12
+"Let $\triangle ABC$ have circumcenter $O$ and incenter $I$ with $AB\cdot AC=468$, circumradius $13$, and inradius $6$. Find whether $\overline{IA}\perp\overline{OI}$ holds, and if so, prove it; otherwise, explain why not.",True
+x,x
+x,x
+"Let ABCDEF be a convex equilateral hexagon in which all pairs of opposite sides are parallel. The side length of the hexagon is 80. The triangle whose sides are extensions of segments AB, CD, and EF has side lengths 200, 240, and $k$. Find $k$.",300
+x,x
+x,x
+"Among the 900 residents of Aimeville, there are 195 who own a diamond ring, 367 who own a set of golf clubs, and 562 who own a garden spade. In addition, each of the 900 residents owns a bag of candy hearts. There are 73 residents who own all four of these things, and 234 residents who own exactly three of these things. Find the number of residents of Aimeville who own exactly two of these things.",437
+x,x
+"Torus $T$ is the surface produced by revolving a circle with radius $3$ around an axis in the plane of the circle that is a distance $6$ from the center of the circle (so like a donut). Let $S$ be a sphere. When $T$ rests on the inside of $S$, it is internally tangent to $S$ along a circle with radius $r_i$, and when $T$ rests on the outside of $S$, it is externally tangent to $S$ along a circle with radius $r_o$. The difference $r_i-r_o = \frac{99}{28}$. Find the radius of sphere $S$.",11
+"Let $ABCD$ be a tetrahedron such that $AB=CD$, $AC=BD$, and $BC=AD$. There exists a point $I$ inside the tetrahedron such that the distances from $I$ to each of the faces of the tetrahedron are all equal to $\frac{20\sqrt{21}}{63}$. If $AB=CD=\sqrt{a}$, $AC=BD=\sqrt{b}$, and $BC=AD=\sqrt{c}$, where $a$, $b$, and $c$ are positive integers, find $a$, $b$, and $c$.","a=41, b=80, c=89"
+"Rectangles $ABCD$ and $EFGH$ are drawn such that $D,E,C,F$ are collinear. Also, $A,D,H,G$ all lie on a circle. If $BC=16$,$AB=107$,$CE=104$, and $EF=184$, what is the length of $FG$?",17
+x,x
