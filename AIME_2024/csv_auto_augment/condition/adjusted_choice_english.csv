@@ -1,44 +1,34 @@
-"Let $x,y$ and $z$ be positive real numbers satisfying the system:  
-\[
-\log_2\left({y \over xz}\right) = {1 \over 3},\quad
-\log_2\left({z \over xy}\right) = {1 \over 4},\quad
--\log_2(x^4y^3z^2) = {25 \over 8}.
-\]  
-If $\log_2\left({x \over yz}\right) = \tfrac{1}{N}$, find $N$.",2,5,3,4,A
-x,x,x,x,x,x
-"Jen participates in a lottery where she selects 4 different numbers from the set S={1,2,3,...,N}. Then, 4 numbers are randomly drawn from S. She wins a prize if at least two of her selected numbers match the drawn numbers, and wins the grand prize if all four of her numbers match the drawn ones. If the probability that she wins the grand prize, given that she has won a prize, is 1/115, find N.",8,10,9,12,B
-x,x,x,x,x,x
-"Eight circles with radius 34 are placed in sequence and tangent to each other, with two of the circles tangent to sides AB and BC of triangle ABC, respectively. The inradius of triangle ABC is 192/5. Circles of radius 1 can be arranged in an identical configuration. Determine the number of such circles.",2010,2024,2000,2030,B
-"Define $f(x)=|| x|-\tfrac{1}{2}|$ and $g(x)=|| x|-\tfrac{1}{4}|$. Let $N$ be the integer for which the second graph is given by $x=4 g(f(\cos(N\pi y)))$. Given that the graphs of $y=4 g(f(\sin(2\pi x)))$ and $x=4 g(f(\cos(N\pi y)))$ intersect exactly 385 times, find $N$.",3,1,4,2,A
-"Each vertex of a regular N-gon is colored independently red or blue with equal probability. The probability that there exists a rotation of the polygon such that every blue vertex moves to a position previously occupied by a red vertex is P. Given that P = 115/256, find N.",9,7,6,8,D
-"Let $(a,b,c)$ be nonnegative integers such that $a+b+c=N$ and  
-\[a^2b + a^2c + b^2a + b^2c + c^2a + c^2b = 6,000,000\].  
-If there are precisely 601 such triples, determine $N$.",300,400,200,250,A
-存在大于 1 的实数 $x$ 和 $y$，满足 $xy=25$ 且 $\log_x\left(y^x\right)=\log_y\left(x^{4y}\right)=N$。求 $N$。,10,5,8,12,A
-x,x,x,x,x,x
-"Let $ z $ be a complex number. Suppose the maximum value of the real part of  
-\[(75+117i)z + \frac{96+144i}{z}\]  
-is 540. Find $ |z| $.",3,5,6,4,D
-"Consider all ways to fill a 2x3 grid with digits such that the sum of the two three-digit numbers obtained by reading each row from left to right is 999, and the sum of the three two-digit numbers obtained by reading each column from top to bottom is N. Given that there are 45 such arrangements, find N.",297,396,99,198,C
-"Every morning Aya takes a 9-kilometer walk and then stops at a coffee shop. When she walks at a constant speed of s kilometers per hour, the total time for the walk and coffee break is N hours, where t minutes are spent in the coffee shop. When her walking speed is s+2 kilometers per hour, the entire trip takes 2 hours and 24 minutes, including t minutes at the coffee shop. If she walks at a speed of s+1/2 kilometers per hour, the total time becomes 204 minutes, again including t minutes at the coffee shop. Find N.",6,4,3,5,B
-x,x,x,x,x,x
-Consider monotone paths that move only right or up from the lower left corner to the upper right corner of an N×N grid. Suppose the number of such paths that change direction exactly four times is 294. Find N.,8,9,7,6,A
 x,x,x,x,x,x
 x,x,x,x,x,x
-在一个固定的正 n 边形内部，考虑其边分别位于该 n 边形的边或对角线上的矩形。假设这样的矩形总数为 315。求 n。,12,14,10,16,A
-"Let $\triangle ABC$ have circumcenter $O$ and incenter $I$ such that $\overline{IA}\perp\overline{OI}$, inradius $6$, and $AB\cdot AC=468$. Compute the circumradius.",10,15,13,12,C
-"There is a set of 25 identical white chips and 25 identical black chips. Suppose some of these chips are placed into the unit cells of an N×N grid so that each cell holds at most one chip, all chips in any given row are of the same color, all chips in any given column are of the same color, and adding any extra chip would break at least one of these two conditions. If the total number of such valid configurations equals 902, determine N.",4,5,7,6,B
+"Jen enters a lottery by selecting 4 distinct numbers from the set S={1,2,3,...,N}. 4 numbers are randomly selected from the set S. She gets a prize if at least two of the numbers she picked are among the randomly selected numbers, and gets the grand prize if all four of the numbers she picked are the randomly selected numbers. Given that the probability of her winning the grand prize, given that she won a prize, is 1/115, determine the value of N.",8,12,10,9,C
 x,x,x,x,x,x
-"Let ABCDEF be a convex equilateral hexagon such that all pairs of opposite sides are parallel. The triangle formed by extending segments AB, CD, and EF has side lengths 200, 240, and N. If the side length of the hexagon is 80, find N.",280,320,300,260,C
-"Let $ A $, $ B $, $ C $, and $ D $ be points on the hyperbola $ \frac{x^2}{N} - \frac{y^2}{24} = 1 $ such that $ ABCD $ is a rhombus with its diagonals intersecting at the origin. The largest real number that is strictly less than $ BD^2 $ for all such rhombi is 480. Find $ N $.",20,25,30,15,A
-"A list of positive integers satisfies the following conditions:
+"Eight circles with a radius of 34 are successively tangent, and two of the circles are tangent to AB and BC of triangle ABC respectively. The in - radius of triangle ABC is 192/5. Circles with a radius of 1 can be arranged in the same way. Determine the number of such circles.",2024,2020,2022,2026,A
+"Define $f(x)=|| x|-\frac{1}{2}|$ and $g(x)=|| x|-\frac{1}{4}|$. Let $N$ be the integer for which the second graph is given by $x = 4g(f(\cos(N\pi y)))$. Given that the graphs of $y = 4g(f(\sin(2\pi x)))$ and $x = 4g(f(\cos(N\pi y)))$ intersect exactly 385 times, find $N$.",1,3,4,2,B
+x,x,x,x,x,x
+"Let $(a,b,c)$ be non - negative integers such that $a + b + c=N$ and \[a^2b + a^2c + b^2a + b^2c + c^2a + c^2b = 6,000,000\]. If the number of such triples $(a,b,c)$ is exactly 601, determine the value of $N$.",250,300,350,200,B
+"There are real numbers $x$ and $y$, both larger than 1, for which $xy = 25$ and $\log_x\left(y^x\right)=\log_y\left(x^{4y}\right)=N$. Determine the value of $N$.",12,10,5,8,B
+x,x,x,x,x,x
+Let $z$ be a complex number. Assume that the maximum value of the real part of \[(75 + 117i)z+\frac{96 + 144i}{z}\] is 540. Determine $|z|$.,3,4,5,6,B
+x,x,x,x,x,x
+"Every morning Aya goes for a 9 - kilometer - long walk and stops at a coffee shop afterwards. If she walks at a constant speed of s kilometers per hour, the total time for the walk and the time spent in the coffee shop is N hours, where the time spent in the coffee shop is t minutes. If she walks at a speed of s + 2 kilometers per hour, the total time for the walk and the time spent in the coffee shop is 2 hours and 24 minutes, with the time spent in the coffee shop being t minutes. Suppose Aya walks at a speed of s+1/2 kilometers per hour, and the total time for the walk and the time spent in the coffee shop is 204 minutes, with the time spent in the coffee shop being t minutes. Find N.",4,6,3,5,A
+x,x,x,x,x,x
+Consider the monotone paths that move only right or up from the lower left corner to the upper right corner on an N×N grid. Suppose the number of paths among these that change direction exactly four times is 294. Determine N.,7,6,9,8,D
+x,x,x,x,x,x
+Let B be the set of rectangular boxes having a surface area of $N$ and a volume of 23. Let $r$ be the radius of the smallest sphere that is capable of containing each of the rectangular boxes which are elements of B. Suppose $r^2 = 657/64$. Determine $N$.,50,54,52,56,B
+x,x,x,x,x,x
+"Let $\triangle ABC$ have circum - center $O$ and in - center $I$ such that $\overline{IA}$ is perpendicular to $\overline{OI}$, with an in - radius of $6$, and $AB\cdot AC = 468$. Determine the circum - radius.",10,15,20,13,D
+x,x,x,x,x,x
+x,x,x,x,x,x
+x,x,x,x,x,x
+"Let $A$, $B$, $C$, and $D$ be points on the hyperbola $\frac{x^2}{N} - \frac{y^2}{24} = 1$ such that the quadrilateral $ABCD$ is a rhombus and the diagonals of this rhombus intersect at the origin. The largest real - number that is smaller than $BD^2$ for all such rhombi is 480. Determine the value of $N$.",10,20,40,30,B
+"A list consisting of positive integers has the following characteristics:
 - The only mode of the list is 9.
-- The median of the list is a positive integer that is not present in the list.
-- The sum of the squares of all elements in the list is 236.
-Determine the sum of the elements in the list.",25,28,30,32,C
-"Among the 900 residents of Aimeville, 195 own a diamond ring, 367 own a set of golf clubs, and 562 own a garden spade. Additionally, every one of the 900 residents owns a bag of candy hearts. There are 234 residents who own exactly three of these items, and 73 residents own all four items. Find the number of residents of Aimeville who own exactly two of these items.",437,637,337,537,A
-"Let ABC be a triangle inscribed in circle ω. Suppose the tangents to ω at points B and C meet at point D, and suppose that AD meets ω again at P. Given that BC=9, AC=10, and AP=100/13, find AB.",8,5,7,6,B
-"A torus T is generated by rotating a circle of radius 3 around a coplanar axis located 6 units away from the center of the circle. Let S be a sphere such that when T is positioned inside S, they are internally tangent along a circle of radius r_i, and when T is positioned outside S, they are externally tangent along a circle of radius r_o. Given that r_i - r_o = 99/28, find the radius of S.",12,10,13,11,D
-"Let $ABCD$ be a tetrahedron such that $AB=CD=\sqrt{N}$, $AC=BD=\sqrt{80}$, and $BC=AD=\sqrt{89}$. Suppose there is a point $I$ located inside the tetrahedron that is equidistant from each of its faces, with this equal distance being $\frac{20\sqrt{21}}{63}$. Find $N$.",39,41,45,43,B
-"Rectangles ABCD and EFGH are constructed so that points D, E, C, F lie on a straight line. Additionally, points A, D, H, G are concyclic. Given BC=16, AB=107, CE=104, and EF=184, find the length of FG.",17,15,19,21,A
+- The median of the list is a positive integer which does not show up in the list.
+- The sum of the squares of all the elements in the list is 236.
+Determine the sum of the elements in the list.",30,25,28,32,A
+"Among the 900 residents of Aimeville, 195 residents own a diamond ring, 367 residents own a set of golf clubs, and 562 residents own a garden spade. Also, each of the 900 residents owns a bag of candy hearts. 234 residents own exactly three of these items, and 73 residents own all four of these items. Determine the number of residents of Aimeville who own exactly two of these items.",325,512,489,437,D
+"Let ABC be a triangle inscribed in circle ω. Let the point D be the intersection of the tangents to ω at B and C, and let P be the intersection of AD and ω. Given that BC = 9, AC = 10, and AP = 100/13, find AB.",12,6,8,5,D
+"Torus T is created by rotating a circle with a radius of 3 around a coplanar axis that is at a distance of 6 from the center of the circle. Let S be a sphere. When Torus T is placed inside S, it is internally tangent along a circle with a radius of r_i; when Torus T is placed outside S, it is externally tangent along a circle with a radius of r_o. Given that r_i - r_o = 99/28, determine the radius of S.",11,10,13,12,A
+x,x,x,x,x,x
+"Rectangles ABCD and EFGH are drawn in such a way that the points D, E, C, and F are collinear. Moreover, the points A, D, H, and G all lie on a circle. Given that BC = 16, AB = 107, CE = 104, and EF = 184, what is the length of FG?",15,21,17,19,C
 x,x,x,x,x,x

@@ -1,50 +1,40 @@
-"Soient \(x\), \(y\) et \(z\) des nombres réels positifs vérifiant le système d'équations suivant : 
-\[
-\log_2\left({y \over xz}\right) = {1 \over 3}
-\]
-\[
-\log_2\left({z \over xy}\right) = {1 \over 4}
-\]
-\[
--\log_2(x^4y^3z^2) = {25 \over 8}
-\]
-Alors la valeur de \(\log_2\left({x \over yz}\right)\) s'écrit sous la forme \(\tfrac{1}{N}\). Déterminer \(N\).",2
 x,x
-"Jen participe à une loterie où elle choisit 4 nombres distincts dans l'ensemble S = {1, 2, 3, ..., N}. Ensuite, quatre nombres sont tirés au hasard dans S. Elle gagne un prix si au moins deux de ses nombres coïncident avec ceux qui ont été tirés, et remporte le gros lot si ses quatre nombres correspondent exactement aux quatre nombres tirés. Sachant que la probabilité qu'elle remporte le gros lot sachant qu'elle a gagné un prix est de 1/115, déterminer N.",10
 x,x
-"Huit cercles de rayon 34 sont tangents les uns aux autres de manière consécutive, et deux de ces cercles sont respectivement tangents aux côtés AB et BC du triangle ABC. Le rayon du cercle inscrit dans le triangle ABC est égal à 192/5. On peut disposer des cercles de rayon 1 de la même façon. Déterminer le nombre de tels cercles.",2024
-"On définit $ f(x)=\left| |x|-\tfrac{1}{2} \right| $ et $ g(x)=\left| |x|-\tfrac{1}{4} \right| $. Soit $ N $ l'entier tel que le second graphe est décrit par $ x=4\, g(f(\cos(N\pi y))) $. On suppose que les graphes de $ y=4\, g(f(\sin(2\pi x))) $ et $ x=4\, g(f(\cos(N\pi y))) $ s'intersectent exactement 385 fois. Déterminer $ N $.",3
-"Chaque sommet d'un N-gone régulier est colorié indépendamment en rouge ou en bleu avec une probabilité égale. On considère la probabilité P qu'il existe une rotation du polygone pour laquelle tous les sommets bleus occupent des positions initialement prises par des sommets rouges. Sachant que P = 115/256, déterminer N.",8
-"Soit $(a,b,c)$ des entiers naturels tels que $a+b+c=N$ et vérifiant  
-\[a^2b + a^2c + b^2a + b^2c + c^2a + c^2b = 6\,000\,000\].  
-Sachant qu'il y a exactement 601 triplets de ce type, déterminer $N$.",300
-"Il existe des nombres réels $ x $ et $ y $, tous deux supérieurs à 1, tels que $ xy = 25 $ et $ \log_x\left(y^x\right) = \log_y\left(x^{4y}\right) = N $. Déterminer la valeur de $ N $.",10
+"Jen participe à une loterie où elle choisit 4 nombres distincts dans l'ensemble S = {1, 2, 3, ..., N}. Ensuite, quatre nombres sont tirés au hasard dans S. Elle remporte un prix si au moins deux de ses nombres choisis se trouvent parmi les nombres tirés, et elle remporte le gros lot si les quatre nombres qu'elle a choisis sont exactement ceux qui ont été tirés. Sachant que la probabilité qu'elle remporte le gros lot étant donné qu'elle a gagné un prix est de 1/115, trouver la valeur de N.",10
 x,x
-"Soit \( z \) un nombre complexe. On suppose que la valeur maximale atteinte par la partie réelle de l'expression  
+"Huit cercles de rayon 34 sont tangents consécutivement, et chacun de deux de ces cercles est respectivement tangent aux côtés AB et BC du triangle ABC. Le rayon du cercle inscrit dans le triangle ABC est 192/5. On peut disposer des cercles de rayon 1 de la même manière. Trouver le nombre de ces cercles. ",2024
+"On définit la fonction $ f(x)=\left| |x|-\tfrac{1}{2} \right| $ et la fonction $ g(x)=\left| |x|-\tfrac{1}{4} \right| $. Soit $ N $ un entier tel que le graphe de la courbe est décrit par l'équation $ x = 4\, g(f(\cos(N\pi y))) $. On sait que les graphes des courbes définies respectivement par les équations $ y = 4\, g(f(\sin(2\pi x))) $ et $ x = 4\, g(f(\cos(N\pi y))) $ se croisent exactement 385 fois. Trouver la valeur de $ N $. ",3
+x,x
+"Soit (a, b, c) des entiers naturels tels que a + b + c = N et  
+\[ a^2b + a^2c + b^2a + b^2c + c^2a + c^2b = 6\,000\,000 \].  
+Sachant qu'il y a exactement 601 triplets (a, b, c) vérifiant ces conditions, déterminer N.",300
+"Il y a des nombres réels $ x $ et $ y $, tous deux plus grands que 1, tels que $ xy = 25 $ et $ \log_x\left(y^x\right) = \log_y\left(x^{4y}\right) = N $. Trouver $ N $.",10
+x,x
+"Soit \( z \) un nombre complexe. On suppose que la plus grande valeur de la partie réelle de 
 \[
 (75+117i)z + \frac{96+144i}{z}
-\]  
-est égale à 540. Déterminer \( |z| \).",4
-"Considérons toutes les façons de placer un chiffre dans chaque case d'une grille 2×3 telle que la somme des deux nombres lus horizontalement de gauche à droite soit égale à 999, et la somme des trois nombres lus verticalement de haut en bas soit N. On sait que le nombre de ces configurations est 45. Trouver N.",99
-"Chaque matin, Aya parcourt une distance de 9 kilomètres à pied avant de s'arrêter dans un café. Lorsqu'elle marche à une vitesse constante de s kilomètres par heure, le temps total de la promenade est de N heures, dont t minutes passées dans le café. Lorsqu'elle marche à une vitesse de s+2 kilomètres par heure, la promenade dure 2 heures et 24 minutes, avec toujours t minutes passées dans le café. On suppose maintenant qu'elle marche à une vitesse de s+1/2 kilomètres par heure, et que la promenade dure 204 minutes, incluant t minutes dans le café. Déterminer la valeur de N.",4
+\]
+est égale à 540. Trouver \( |z| \).",4
 x,x
-"On considère des chemins monotones se déplaçant uniquement vers la droite ou vers le haut, partant du coin inférieur gauche et arrivant au coin supérieur droit d'une grille N×N. On suppose que le nombre de ces chemins qui effectuent exactement quatre changements de direction est égal à 294. Déterminer N.",8
+"Chaque matin, Aya fait une promenade de 9 kilomètres et s'arrête ensuite dans un café. Lorsque sa vitesse de marche est constante et égale à s kilomètres par heure, la promenade lui prend N heures, y compris t minutes passées dans le café. Lorsque sa vitesse de marche est de s + 2 kilomètres par heure, la promenade lui prend 2 heures et 24 minutes, toujours y compris t minutes passées dans le café. Supposons qu'Aya marche à une vitesse de s + 1/2 kilomètre par heure, et que la promenade lui prenne 204 minutes, incluant t minutes passées dans le café. Trouver N.",4
+x,x
+"Considérons les chemins monotones qui se déplacent seulement vers la droite ou vers le haut, allant du coin inférieur gauche au coin supérieur droit d'une grille N×N. Supposons que parmi ces chemins, le nombre de chemins qui changent de direction exactement quatre fois soit 294. Trouver N.",8
+x,x
+Soit B l'ensemble des pavés droits dont l'aire est $ N $ et le volume est égal à 23. Soit $ r $ le rayon de la plus petite sphère capable de contenir chacun des pavés appartenant à B. Supposons que $ r^2 = 657/64 $. Trouver $ N $.,54                                     
+x,x
+"Soit un triangle $\triangle ABC$ dont le centre du cercle circonscrit est $O$ et le centre du cercle inscrit est $I$. On sait que $\overline{IA}\perp\overline{OI}$, que le rayon du cercle inscrit vaut $6$, et que $AB\cdot AC = 468$. Déterminer le rayon du cercle circonscrit.",13
 x,x
 x,x
-"À l'intérieur d'un n-gone régulier fixe, on examine des rectangles dont chaque côté est situé soit sur un côté, soit sur une diagonale du n-gone. On suppose que le nombre total de ces rectangles est égal à 315. Déterminer n.",12
-"Soit $\triangle ABC$ ayant pour centre du cercle circonscrit $O$ et pour centre du cercle inscrit $I$. On suppose que $\overline{IA}\perp\overline{OI}$, que le rayon du cercle inscrit est $6$, et que $AB\cdot AC=468$. Déterminer le rayon du cercle circonscrit.",13
-"Il y a une collection de 25 jetons blancs indistinguables et 25 jetons noirs indistinguables. On considère le placement de certains de ces jetons dans les cases d'une grille N×N, de manière que chaque case contienne au plus un jeton, que tous les jetons d'une même ligne et tous les jetons d'une même colonne soient de la même couleur, et qu'ajouter un jeton supplémentaire sur la grille enfreigne l'une ou plusieurs de ces deux conditions. Si le nombre total de configurations valides est 902, déterminer N.",5
 x,x
-"Soit ABCDEF un hexagone convexe équilatéral dont tous les côtés opposés sont parallèles. On prolonge les côtés AB, CD et EF de sorte qu'ils forment un triangle dont les longueurs des côtés mesurent 200, 240 et N. Sachant que chaque côté de l'hexagone mesure 80, déterminer la valeur de N.",300
-"Soient $ A $, $ B $, $ C $ et $ D $ des points situés sur l'hyperbole $ \frac{x^2}{N} - \frac{y^2}{24} = 1 $ tels que $ ABCD $ forme un losange dont les diagonales se croisent à l'origine. Le plus grand nombre réel strictement inférieur à $ BD^2 $ parmi tous ces losanges est 480. Déterminer $ N $.",20
-"Une suite d'entiers positifs vérifie les conditions suivantes :  
-- Le seul mode de la suite est 9.  
-- La médiane de la suite est un entier positif qui ne figure pas dans la suite.  
-- La somme des carrés de tous les termes de la suite est égale à 236.  
-Déterminer la somme des termes de la suite.",30
-"Parmi les 900 habitants d'Aimeville, 195 ont une bague en diamant, 367 possèdent un jeu de clubs de golf et 562 disposent d'une bêche de jardin. En outre, les 900 habitants possèdent chacun un sac de bonbons en forme de cœur. On sait que 234 habitants possèdent exactement trois de ces objets, et qu'il y a 73 habitants qui possèdent les quatre objets. Déterminer le nombre d'habitants d'Aimeville qui possèdent exactement deux de ces objets.",437
-"Soit ABC un triangle inscrit dans un cercle ω. Les tangentes à ω passant par B et C se rencontrent en un point D, et la droite AD recoupe le cercle ω en un point P. Sachant que BC = 9, AC = 10 et AP = 100/13, déterminer la longueur AB.",5
-"Le tore T est obtenu en faisant tourner un cercle de rayon 3 autour d'un axe coplanaire situé à une distance de 6 du centre de ce cercle. Soit S une sphère. Quand T est placé à l'intérieur de S, ils sont tangents intérieurement selon un cercle de rayon r_i ; quand T est placé à l'extérieur de S, ils sont tangents extérieurement selon un cercle de rayon r_o. On suppose que r_i - r_o = 99/28. Déterminer le rayon de S.",11
-"Soit $ABCD$ un tétraèdre vérifiant $AB = CD = \sqrt{N}$, $AC = BD = \sqrt{80}$, et $BC = AD = \sqrt{89}$. On suppose qu’il existe un point $I$ situé à l’intérieur du tétraèdre dont la distance à chacune des faces est la même, et que cette distance commune vaut $\frac{20\sqrt{21}}{63}$. Déterminer la valeur de $N$.",41
-"Les rectangles ABCD et EFGH sont tracés de telle manière que les points D, E, C, F soient alignés. En outre, les points A, D, H, G sont situés sur un même cercle. Sachant que BC = 16, AB = 107, CE = 104 et EF = 184, quelle est la longueur de FG ?",17
+"Soient $A$, $B$, $C$ et $D$ des points sur l'hyperbole $\frac{x^2}{N} - \frac{y^2}{24} = 1$ tels que le quadrilatère $ABCD$ soit un losange dont les diagonales se croisent à l'origine. Le plus grand nombre réel strictement inférieur à $BD^2$ pour tous ces losanges est 480. Trouver $N$.",20
+"Une liste composée d'entiers positifs a les caractéristiques suivantes :  
+- Le mode unique de cette liste est 9.  
+- La médiane de la liste est un entier positif qui n'est pas présent dans la liste.  
+- La somme des carrés de tous les éléments de la liste vaut 236.  
+Calculer la somme des éléments de la liste.",30
+"Parmi les 900 habitants d'Aimeville, 195 ont une bague en diamant, 367 ont un jeu de clubs de golf et 562 ont une bêche de jardin. De plus, chacun des 900 habitants a un sac de bonbons en forme de cœur. Il y a 234 habitants qui ont exactement trois de ces objets, et le nombre d'habitants qui ont les quatre objets est de 73. Trouver le nombre d'habitants d'Aimeville qui ont exactement deux de ces objets.",437
+"Soit ABC un triangle inscrit dans un cercle ω. Les tangentes à ω en B et C se rencontrent au point D, et la droite AD coupe ω en P. Si BC = 9, AC = 10 et AP = 100/13, déterminer AB.",5
+"Le tore T est obtenu en faisant pivoter un cercle de rayon 3 autour d'un axe coplanaire distant de 6 du centre du cercle. Soit S une sphère. Quand T est mis à l'intérieur de S, il est tangent intérieurement le long d'un cercle de rayon r_i ; quand T est mis à l'extérieur de S, il est tangent extérieurement le long d'un cercle de rayon r_o. On sait que r_i - r_o = 99/28. Trouver le rayon de S.",11
+x,x
+"Les rectangles ABCD et EFGH sont tracés de manière à ce que les points D, E, C, F soient alignés. En outre, les points A, D, H, G se situent tous sur un même cercle. Si BC = 16, AB = 107, CE = 104 et EF = 184, quelle est la longueur de FG ?",17
 x,x

@@ -1,29 +1,25 @@
-"Let $x,y$ and $z$ be positive real numbers that satisfy the following system of equations: 
-\[\log_2\left({y \over xz}\right) = {1 \over 3}\]
-\[\log_2\left({z \over xy}\right) = {1 \over 4}\]
-\[-\log_2(x^4y^3z^2) = {25 \over 8}\]
-Then the value of $\log_2\left({x \over yz}\right)$ can be expressed as $\tfrac{1}{N}$. Find $N$.",2
+x,x
 x,x
 "Jen enters a lottery by picking 4 distinct numbers from S={1,2,3,...,N}. 4 numbers are randomly chosen from S. She wins a prize if at least two of her numbers were among the randomly chosen numbers, and wins the grand prize if all four of her numbers were the randomly chosen numbers. Given that the probability of her winning the grand prize given that she won a prize is 1/115, find N.",10
 x,x
 "Eight circles of radius 34 are sequentially tangent, and two of the circles are tangent to AB and BC of triangle ABC, respectively. The inradius of triangle ABC is 192/5. Circles of radius 1 can be arranged in the same manner. Find the number of such circles.",2024
 Define $f(x)=|| x|-\tfrac{1}{2}|$ and $g(x)=|| x|-\tfrac{1}{4}|$. Let $N$ be the integer such that the second graph is $x=4 g(f(\cos(N\pi y)))$. It is known that the graphs of $y=4 g(f(\sin(2\pi x)))$ and $x=4 g(f(\cos(N\pi y)))$ intersect exactly 385 times. Find $N$.,3
-"Each vertex of a regular N-gon is independently colored either red or blue with equal probability. The probability that the polygon can then be rotated so that all of the blue vertices end up at positions where there were originally red vertices is P. Given that P=115/256, find N.",8
+x,x
 "Let $(a,b,c)$ be nonnegative integers satisfying $a+b+c=N$ and \[a^2b + a^2c + b^2a + b^2c + c^2a + c^2b = 6,000,000\]. Given that there are exactly 601 such triples, find $N$.",300
 "There exist real numbers $x$ and $y$, both greater than 1, such that $xy=25$ and $\log_x\left(y^x\right)=\log_y\left(x^{4y}\right)=N$. Find $N$.",10
 x,x
 Let $z$ be a complex number. Suppose the largest possible real part of \[(75+117i)z + \frac{96+144i}{z}\] equals 540. Find $|z|$.,4
-Consider all ways to place a digit in each cell of a 2x3 grid so that the sum of the two numbers formed by reading left to right is 999 and the sum of the three numbers formed by reading top to bottom is N. It is known that the number of such arrangements is 45. Find N.,99
+x,x
 "Every morning Aya goes for a 9-kilometer-long walk and stops at a coffee shop afterwards. When she walks at a constant speed of s kilometers per hour, the walk takes her N hours, including t minutes spent in the coffee shop. When she walks s+2 kilometers per hour, the walk takes her 2 hours and 24 minutes, including t minutes spent in the coffee shop. Suppose Aya walks at s+1/2 kilometers per hour, and the walk takes her 204 minutes, including t minutes spent in the coffee shop. Find N.",4
 x,x
 "Consider the monotone paths that move only right or up from the lower left corner to the upper right corner on an N×N grid. Among these paths, assume the number of paths that change direction exactly four times is 294. Find N.",8
 x,x
+"Let B be the set of rectangular boxes with surface area $N$ and volume 23. Let $r$ be the radius of the smallest sphere that can contain each of the rectangular boxes that are elements of B. Suppose $r^2 = 657/64$. Find $N$.",54                                     
 x,x
-"Inside a fixed regular n-gon, consider rectangles whose sides each lie on either a side or a diagonal of the n-gon. Suppose the total number of such rectangles is 315. Find n.",12
 "Let $\triangle ABC$ have circumcenter $O$ and incenter $I$ with $\overline{IA}\perp\overline{OI}$, inradius $6$, and $AB\cdot AC=468$. Find the circumradius.",13
-"There is a collection of 25 indistinguishable white chips and 25 indistinguishable black chips. Consider placing some of these chips in the unit cells of an N×N grid such that each cell contains at most one chip, all chips in the same row and all chips in the same column have the same colour, and any additional chip placed on the grid would violate one or more of the previous two conditions. If the total number of valid configurations is 902, find N.",5
 x,x
-"Let ABCDEF be a convex equilateral hexagon in which all pairs of opposite sides are parallel. The triangle whose sides are extensions of segments AB, CD, and EF has side lengths 200, 240, and N. Given that the side length of the hexagon is 80, find N.",300
+x,x
+x,x
 "Let $A$, $B$, $C$, and $D$ be points on the hyperbola $\frac{x^2}{N} - \frac{y^2}{24} = 1$ such that $ABCD$ is a rhombus whose diagonals intersect at the origin. The greatest real number that is less than $BD^2$ for all such rhombi is 480. Find $N$.",20
 "A list of positive integers has the following properties:
 - The unique mode of the list is 9.
@@ -33,6 +29,6 @@ Find the sum of the items in the list.",30
 "Among the 900 residents of Aimeville, there are 195 who own a diamond ring, 367 who own a set of golf clubs, and 562 who own a garden spade. In addition, each of the 900 residents owns a bag of candy hearts. There are 234 residents who own exactly three of these things, and the number of residents who own all four of these things is 73. Find the number of residents of Aimeville who own exactly two of these things.",437
 "Let ABC be a triangle inscribed in circle ω. Let the tangents to ω at B and C intersect at point D, and let AD intersect ω at P. If BC=9, AC=10, and AP=100/13, find AB.",5
 Torus T is formed by revolving a circle of radius 3 about a coplanar axis at distance 6 from the circle's center. Let S be a sphere. When T is placed inside S it is internally tangent along a circle of radius r_i; when T is placed outside S it is externally tangent along a circle of radius r_o. Suppose r_i - r_o = 99/28. Find the radius of S.,11
-"Let $ABCD$ be a tetrahedron such that $AB=CD=\sqrt{N}$, $AC=BD=\sqrt{80}$, and $BC=AD=\sqrt{89}$. There exists a point $I$ inside the tetrahedron such that the distances from $I$ to each of the faces of the tetrahedron are all equal, and this common distance is $\frac{20\sqrt{21}}{63}$. Find $N$.",41
+x,x
 "Rectangles ABCD and EFGH are drawn such that D,E,C,F are collinear. Also, A,D,H,G all lie on a circle. If BC=16, AB=107, CE=104, and EF=184, what is the length of FG?",17
 x,x

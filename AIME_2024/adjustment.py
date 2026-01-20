@@ -106,6 +106,64 @@ def get_output_filename(input_name, language):
 def adjust(args):
     output_path = os.path.join(args.out_csv, get_output_filename(args.input, "adjusted"))
     
+    # 如果设置了 --line 参数，处理单行更新逻辑
+    if args.line is not None:
+        # 读取输出文件（如果存在）的所有行
+        output_rows = []
+        if os.path.exists(output_path):
+            with open(output_path, 'r', encoding='utf-8') as outfile:
+                reader = csv.reader(outfile)
+                output_rows = list(reader)
+        
+        # 读取输入文件，找到对应行的原始内容
+        input_row = None
+        with open(args.input, 'r', encoding='utf-8') as infile:
+            reader = csv.reader(infile)
+            rows = list(reader)
+            if args.line <= 0 or args.line > len(rows):
+                print(f"错误: 行号 {args.line} 超出范围（文件共有 {len(rows)} 行）")
+                return
+            input_row = rows[args.line - 1]  # line 是 1-based
+            
+        if not input_row:
+            print(f"错误: 第 {args.line} 行为空")
+            return
+        
+        # 调用 API 调整该行
+        prompt = f"请把下面的题目换一种说法表述，保持题目的答案不变，不要改变题目意思，不要改变数字，不要改变语言，只返回修改后的题目，不要返回任何其他内容：\n{input_row[0]}"
+        print(f"原文:\n{input_row[0]}\n")
+        if args.model == "deepseek":
+            print("调用 deepseek API 进行转换...")
+            adjustment = call_deepseek_api(prompt, temperature=args.temperature)
+        elif args.model == "gpt":
+            print("调用 gpt API 进行转换...")
+            adjustment = call_gpt_api(prompt, temperature=args.temperature)
+        elif args.model == "doubao":
+            print("调用 doubao API 进行转换...")
+            adjustment = call_doubao_api(prompt, temperature=args.temperature)
+        elif args.model == "qwen":
+            print("调用 Qwen API 进行转换...")
+            adjustment = call_qwen_api(prompt, temperature=args.temperature)
+        print(f"转换后的题目:\n{adjustment}\n")
+        
+        # 更新输出文件中对应行的内容
+        # 确保 output_rows 有足够的行数
+        while len(output_rows) < args.line:
+            output_rows.append([])
+        
+        # 更新指定行（line 是 1-based，所以减 1）
+        output_rows[args.line - 1] = [adjustment, input_row[1]]
+        
+        # 写回输出文件
+        with open(output_path, 'w', newline='', encoding='utf-8') as outfile:
+            writer = csv.writer(outfile)
+            for row in output_rows:
+                writer.writerow(row)
+        
+        print(f"已更新第 {args.line} 行，结果已保存到: {output_path}")
+        return
+    
+    # 原有的批量处理逻辑
     total_count = 0
     success_count = 0
     start_time = time.time()  # 记录开始时间
@@ -116,10 +174,13 @@ def adjust(args):
         writer = csv.writer(outfile)
 
         for row in reader:
+
             total_count += 1            
             if not row:  # 跳过空行
                 continue
-
+            if row[0] == "x":
+                writer.writerow([row[0], row[1]])
+                continue
             prompt = f"请把下面的题目换一种说法表述，保持题目的答案不变，不要改变题目意思，不要改变数字，不要改变语言，只返回修改后的题目，不要返回任何其他内容：\n{row[0]}"
             print(f"原文:\n{row[0]}\n")
             if args.model == "deepseek":
@@ -149,6 +210,7 @@ if __name__ == "__main__":
     parser.add_argument('--out_csv', default='./csv', help="输出CSV 文件所在文件夹")
     parser.add_argument('--temperature', type=float, default=0.2, help="API 回答多样性，默认 0.2")
     parser.add_argument('--model', type=str, default="deepseek", help="使用的模型，如gpt、deepseek、kimi、qwen")
+    parser.add_argument('--line', type=int, default=None, help="处理第几行")
     args = parser.parse_args()
 
     adjust(args)

@@ -472,14 +472,14 @@ def get_row_from_augmentation(idx, config, language, question_tran, filling, log
     v = augmentations_cfg[key]
 
     augmentation_dir_map = {
-        0: "csv",
-        1: "csv_disturb1",
-        2: "csv_disturb2",
-        3: "csv_disturb3",
-        4: "csv_numeric",
-        5: "csv_condition",
-        6: "csv_recent",
-        7: "csv_concept",
+        0: "csv_auto_augment/origin/",
+        1: "csv_auto_augment/disturb1/",
+        2: "csv_auto_augment/disturb2/",
+        3: "csv_auto_augment/disturb3/",
+        4: "csv_auto_augment/numeric/",
+        5: "csv_auto_augment/condition/",
+        6: "csv_auto_augment/adaptation/",
+        7: "csv_auto_augment/concept/",
     }
     if v not in augmentation_dir_map:
         raise RuntimeError(f"题目 {idx+1} augmentation 值 {v} 无对应目录")
