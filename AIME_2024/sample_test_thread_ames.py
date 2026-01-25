@@ -17,8 +17,8 @@ import sys
 deepseek_client = OpenAI(api_key="sk-09da13b2c97948628523d042d6a02f06", base_url="https://api.deepseek.com")
 kimi_client = OpenAI(api_key="sk-ODuizMlUC22phanBhvYz6dBjx2yrz7vhKhcjKnoIrYssThQo", base_url="https://api.moonshot.cn/v1")
 doubao_client = Ark(api_key="196b33be-8abb-4af3-9fba-6e266b2dd942")
-mistral_client = Mistral(api_key="Wc1s1rVoW5TzceucND85yQoF4urCvO5f")
-qwen_client = OpenAI(api_key="sk-341becd932d743f2a750495a0f9f3ede", base_url="https://dashscope.aliyuncs.com/compatible-mode/v1")
+mistral_client = Mistral(api_key="XKjGmjHs0ySRx0gwuNu0dGidIJKCGC1X")
+qwen_client = OpenAI(api_key="sk-e6cfbb89c5f642aa9c0342974158fb96", base_url="https://dashscope.aliyuncs.com/compatible-mode/v1")
 qwen2_client = OpenAI(api_key="sk-b1c771fc24dd4cb89653163a74bf9e43", base_url="https://dashscope.aliyuncs.com/compatible-mode/v1")
 gemini_client = OpenAI(api_key="AIzaSyB1Kwa7mos2CuVQmvOZYtQd8ql4AljYx_g", base_url="https://generativelanguage.googleapis.com/v1beta/openai/")
 
@@ -507,6 +507,7 @@ def get_row_from_augmentation(idx, config, language, question_tran, filling, log
 # ===================== 单轮测试：基于扰动目录 =====================
 
 def llm_judge(llm_answer, true_answer, question, logger):
+
     prompt = f"对于这道题目：{question}，正确答案是：“{true_answer}”，下面这个答案：“{llm_answer}”是否可以认为是正确的，请回复“可以”或“不可以”，不要回复任何其他内容"
     messages = [
         {"role": "system", "content": "你是一个判题助手。"},
@@ -565,11 +566,23 @@ def test_single_turn(language, few_shot_file, args, cot, few, filling, logger, c
             logger.info(f"模型回答: {response} \n正确答案: {answer}\n")
 
             model_answer = extract_answer_from_response(response)
-            if v == 7 and filling == 1:
+            if (v == 6 or v == 7) and filling == 1:
                 question_text = row[0]
                 right_count += llm_judge(model_answer, answer, question_text, logger)
-            elif model_answer.strip().replace(" ","") == answer.strip().replace(" ",""):
-                right_count += 1
+            elif v == 4 and filling == 1:
+                model_answer_clean = model_answer.strip().replace(" ","")
+                answer_clean = answer.strip().replace(" ","")
+                if int(model_answer_clean) == int(answer_clean):
+                    right_count += 1
+                    logger.info(f"比较整数结果{int(model_answer_clean)}和{int(answer_clean)}，答案正确")
+                else:
+                    logger.info(f"比较整数结果{int(model_answer_clean)}和{int(answer_clean)}，答案错误")
+            else:
+                if model_answer.strip().replace(" ","") == answer.strip().replace(" ",""):
+                    right_count += 1
+                    logger.info("比较字符串结果，答案正确")
+                else:
+                    logger.info("比较字符串结果，答案错误")
         except Exception as e:
             logger.error(f"单轮测试 第{i+1}题 出错: {e}")
             continue
@@ -624,11 +637,23 @@ def test_multi_turn(language, few_shot_file, args, cot, few, filling, logger, co
             response1 = call_LLM_api(args.model, messages, args)
             logger.info(f"{args.model} 第一轮回答: {response1} \n正确答案: {true_answer1}\n")
             answer1 = extract_answer_from_response(response1)
-            if v1 == 7 and filling == 1:
+            if (v1 == 6 or v1 == 7) and filling == 1:
                 question_text = row1[0]
                 right_count1 += llm_judge(answer1, true_answer1, question_text, logger)
-            elif answer1.strip().replace(" ","") == true_answer1.strip().replace(" ",""):
-                right_count1 += 1
+            elif v1 == 4 and filling == 1:
+                answer1_clean = answer1.strip().replace(" ","")
+                true_answer1_clean = true_answer1.strip().replace(" ","")
+                if int(answer1_clean) == int(true_answer1_clean):
+                    right_count1 += 1
+                    logger.info(f"比较整数结果{int(answer1_clean)}和{int(true_answer1_clean)}，答案正确")
+                else:
+                    logger.info(f"比较整数结果{int(answer1_clean)}和{int(true_answer1_clean)}，答案错误")
+            else:
+                if answer1.strip().replace(" ","") == true_answer1.strip().replace(" ",""):
+                    right_count1 += 1
+                    logger.info("比较字符串结果，答案正确")
+                else:
+                    logger.info("比较字符串结果，答案错误")
 
             # 第二轮：第 (i+1)%total 题
             j = (i + 1) % total
@@ -649,11 +674,22 @@ def test_multi_turn(language, few_shot_file, args, cot, few, filling, logger, co
             response2 = call_LLM_api(args.model, messages, args)
             logger.info(f"{args.model} 第二轮回答: {response2} \n正确答案: {true_answer2}\n")
             answer2 = extract_answer_from_response(response2)
-            if v2 == 7 and filling == 1:
+            if (v2 == 6 or v2 == 7) and filling == 1:
                 question_text = row2[0]
                 right_count2 += llm_judge(answer2, true_answer2, question_text, logger)
+            elif v2 == 4 and filling == 1:
+                answer2_clean = answer2.strip().replace(" ","")
+                true_answer2_clean = true_answer2.strip().replace(" ","")
+                if int(answer2_clean) == int(true_answer2_clean):
+                    right_count2 += 1
+                    logger.info(f"比较整数结果{int(answer2_clean)}和{int(true_answer2_clean)}，答案正确")
+                else:
+                    logger.info(f"比较整数结果{int(answer2_clean)}和{int(true_answer2_clean)}，答案错误")
             elif answer2.strip().replace(" ","") == true_answer2.strip().replace(" ",""):
                 right_count2 += 1
+                logger.info("比较字符串结果，答案正确")
+            else:
+                logger.info("比较字符串结果，答案错误")
 
         except Exception as e:
             logger.error(f"multi-turn 第{i+1}组 出错: {e}")
@@ -737,7 +773,7 @@ def run_one_config(key, value, args):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--model", type=str, default="doubao")
-    parser.add_argument("--pkl_path", type=str, default="pkl/sample_ames.pkl")
+    parser.add_argument("--pkl_path", type=str, default="pkl/sample_ames_v2.pkl")
     parser.add_argument("--temperature", type=float, default=1.0)
     parser.add_argument("--top_p", type=float, default=1.0)
     parser.add_argument("--presence_penalty", type=float, default=0.0)
@@ -745,7 +781,7 @@ if __name__ == "__main__":
     parser.add_argument("--start", type=int, default=0, help="从第几个config开始测试，默认从头开始")
     parser.add_argument("--end", type=int, default=None)
     parser.add_argument("--threads", type=int, default=4, help="并发线程数")
-    parser.add_argument("--logger_dir", type=str, default="ames_log", help="日志文件夹")
+    parser.add_argument("--logger_dir", type=str, default="ames_log_2026", help="日志文件夹")
     parser.add_argument("--stream", type=bool, default=False, help="是否使用流式输出")
     args = parser.parse_args()
 

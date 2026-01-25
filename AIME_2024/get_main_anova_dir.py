@@ -110,7 +110,6 @@ def permutation_test_anova_eta(df, formula, n_perm=500):
     return pd.DataFrame(results).sort_values(by="obs_eta2", ascending=False)
 
 # ===================== 单个 label 流程 =====================
-# ===================== 单个 label 流程 =====================
 def run_anova_for_label(folder, label, n_perm=500, interaction=False, outdir="anova_1024_result"):
     df_design = parse_log_files(folder, label)
     if len(df_design) == 0:

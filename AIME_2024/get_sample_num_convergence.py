@@ -154,7 +154,7 @@ def get_sample_num(method="pilot"):
     error = args.error
     confidence = args.confidence
     population = args.population
-    z = get_z(confidence)
+    z = get_z(confidence) # 置信水平对应的z值
 
     if method == "pilot":
         var_est = np.var(data, ddof=1)
@@ -169,8 +169,9 @@ def get_sample_num(method="pilot"):
         raise ValueError("method 必须是 'pilot' / 'max' / 'bootstrap'")
 
     n0 = (z ** 2) * var_est / (error ** 2)
-    n0 = int(np.ceil(n0))
+    n0 = int(np.ceil(n0)) # 向上取整
 
+    # 有限总体修正
     if population is not None and population > 0:
         n = n0 / (1 + (n0 - 1) / population)
         n = int(np.ceil(n))
@@ -184,8 +185,6 @@ def get_sample_num(method="pilot"):
     print(f"初步估算样本量（无限总体）: {n0}")
     print(f"有限总体修正后样本量（总体N={population}）: {n}")
     print("-" * 60)
-
-# ========== 新增：收敛检测 ==========
 
 def mean_ci_t(data, confidence=0.95):
     """基于 student-t 分布计算均值和置信区间"""
@@ -245,7 +244,6 @@ def plot_convergence(history):
     print("已保存收敛曲线: convergence_plot.png")
 
 # ========== 主程序 ==========
-
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="根据log文件中采样到的准确率，和误差/置信度，估算所需样本量")
     parser.add_argument("--log", default="log/sample_test.log", help="日志文件路径")
@@ -264,7 +262,6 @@ if __name__ == "__main__":
     else:
         # 单文件 + 顺序行模式（原逻辑）
         data = get_accuracies(args.log, args.start, max_samples=args.max_samples)
-    # data = get_accuracies(args.log, args.start, max_samples=args.max_samples)
 
     # 三种方法
     get_sample_num(method="pilot")

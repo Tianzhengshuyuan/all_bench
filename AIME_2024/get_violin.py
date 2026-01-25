@@ -120,6 +120,7 @@ def get_violin():
     all_files = [f for f in os.listdir(args.input_folder) if f.endswith(".log")]
     all_files.sort()
 
+
     for filename in all_files:
         matched_label = None
         for lbl in target_labels:
@@ -156,6 +157,16 @@ def get_violin():
     # 计算每个模型的 mean，用于数值标注
     means = [np.mean(d) for d in data]
 
+    # 计算并打印每个 label 的最大值
+    print("\n" + "=" * 60)
+    print("各模型准确率最大值统计:")
+    print("=" * 60)
+    max_values = [np.max(d) for d in data]
+    for lbl, max_val in zip(labels, max_values):
+        pretty_lbl = prettify_labels([lbl])[0]
+        print(f"  {pretty_lbl:20s}: {max_val:.4f}")
+    print("=" * 60 + "\n")
+
     # 绘制小提琴图
     plt.figure(figsize=(10, 6))
     parts = plt.violinplot(
@@ -190,8 +201,8 @@ def get_violin():
     plt.yticks(fontsize=14)
     plt.grid(axis="y", linestyle="--", alpha=0.6)
 
-    # # ===== 在 mean 点旁边标注具体数值 =====
-    # # violinplot 的 x 位置与 xticks 一致：1, 2, ..., len(labels)
+    # ===== 在 mean 点旁边标注具体数值 =====
+    # violinplot 的 x 位置与 xticks 一致：1, 2, ..., len(labels)
     # for i, mean_val in enumerate(means, start=1):
     #     # y 位置为 mean 值稍微上方一点，避免与 mean 线重叠
     #     plt.text(
