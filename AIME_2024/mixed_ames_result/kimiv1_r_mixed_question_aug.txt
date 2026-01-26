@@ -1,0 +1,37 @@
+==== R (lme4::glmer) Mixed Effects Model ====
+LLM: kimiv1
+Family: Binomial (logit link)
+Formula: ~ accuracy language + question_type + question_tran + few + cot + mul + Temperature + max_tokens + top_p + presence_penalty + (1 | question_id) + (1 | augmentation) 
+
+---- Fixed Effects (sorted by p-value, then |Estimate|) ----
+                       Estimate Std. Error     z value     Pr(>|z|)
+(Intercept)         -2.12293564 0.39164692  -5.4205344 5.942112e-08
+cot1                -0.73395891 0.04733428 -15.5058654 3.166216e-54
+question_type1      -0.67540080 0.04721521 -14.3047280 2.044357e-46
+languagezw           0.57341351 0.07875999   7.2805178 3.325413e-13
+languageey           0.48061654 0.07973473   6.0276935 1.663161e-09
+languagefy           0.46401624 0.07961650   5.8281418 5.604796e-09
+languagery           0.43981991 0.08428885   5.2180079 1.808577e-07
+languageyy           0.44320904 0.08604989   5.1506053 2.596470e-07
+max_tokens4000       0.28375258 0.05748391   4.9362092 7.965567e-07
+mul1                 0.15692834 0.04647016   3.3769700 7.328903e-04
+Temperature2         0.11969413 0.05751431   2.0811192 3.742299e-02
+max_tokens100        0.11241459 0.05711266   1.9682953 4.903408e-02
+few1                 0.08210312 0.04710292   1.7430578 8.132352e-02
+top_p1              -0.08905444 0.05629100  -1.5820370 1.136411e-01
+question_tran1      -0.05981876 0.04716176  -1.2683742 2.046644e-01
+Temperature1         0.06903009 0.05614662   1.2294612 2.188989e-01
+presence_penalty0.5  0.07025571 0.05759690   1.2197829 2.225472e-01
+top_p0.6            -0.06210988 0.05686406  -1.0922520 2.747223e-01
+presence_penalty1.5  0.01172171 0.05787017   0.2025519 8.394853e-01
+
+
+---- Random Effects SD ----
+ Groups       Name        Std.Dev.
+ question_id  (Intercept) 0.51702 
+ augmentation (Intercept) 1.02877 
+
+
+---- Model Fit Statistics ----
+AIC: 12278.64 
+BIC: 12438.3 

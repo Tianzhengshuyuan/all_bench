@@ -1,0 +1,96 @@
+==== Bambi Bayesian Mixed Effects Model ====
+LLM: qwen
+Family: Bernoulli (logit link)
+Formula: accuracy ~ language + question_type + question_tran + few + cot + mul + Temperature + max_tokens + top_p + presence_penalty + (1|question_id) + (1|augmentation)
+
+---- Fixed Effects (posterior summary) ----
+(Sorted by |mean|, descending; Intercept first)
+                        mean     sd  hdi_3%  hdi_97%
+Intercept             -0.859  0.418  -1.679   -0.093
+cot[1]                -2.271  0.051  -2.366   -2.176
+question_type[1]      -0.741  0.045  -0.830   -0.658
+language[yy]           0.543  0.080   0.391    0.693
+max_tokens[4000]       0.506  0.055   0.405    0.611
+language[ry]           0.384  0.080   0.232    0.533
+language[fy]           0.348  0.076   0.201    0.484
+language[ey]           0.333  0.076   0.187    0.473
+language[zw]           0.331  0.075   0.193    0.474
+few[1]                 0.263  0.046   0.179    0.353
+presence_penalty[0.5]  0.221  0.055   0.120    0.329
+Temperature[2.0]      -0.155  0.055  -0.264   -0.058
+max_tokens[100]        0.124  0.053   0.023    0.223
+mul[1]                 0.113  0.044   0.032    0.196
+presence_penalty[1.5]  0.077  0.056  -0.031    0.178
+top_p[1.0]            -0.050  0.054  -0.149    0.052
+Temperature[1.0]       0.039  0.052  -0.055    0.138
+top_p[0.6]             0.039  0.054  -0.070    0.134
+question_tran[1]       0.020  0.046  -0.068    0.104
+
+---- Random Effects SD (posterior summary) ----
+(Sorted by mean, descending)
+                       mean     sd  hdi_3%  hdi_97%
+1|augmentation_sigma  1.180  0.372   0.621    1.871
+1|question_id_sigma   0.502  0.073   0.370    0.636
+
+---- Sampling diagnostics ----
+(Sorted by reliability: r_hat closest to 1.0, then ess_bulk highest)
+                       mcse_mean  mcse_sd  ess_bulk  ess_tail  r_hat
+question_tran[1]           0.000    0.001    8516.0    5800.0   1.00
+question_type[1]           0.000    0.000    8203.0    5997.0   1.00
+cot[1]                     0.001    0.001    8194.0    6461.0   1.00
+few[1]                     0.001    0.001    8068.0    5740.0   1.00
+Temperature[1.0]           0.001    0.001    7793.0    6125.0   1.00
+mul[1]                     0.001    0.000    7575.0    5546.0   1.00
+Temperature[2.0]           0.001    0.001    7549.0    6402.0   1.00
+top_p[0.6]                 0.001    0.001    6365.0    6121.0   1.00
+max_tokens[4000]           0.001    0.001    6302.0    5648.0   1.00
+max_tokens[100]            0.001    0.001    6185.0    6342.0   1.00
+top_p[1.0]                 0.001    0.001    5911.0    5902.0   1.00
+presence_penalty[1.5]      0.001    0.001    5731.0    5859.0   1.00
+presence_penalty[0.5]      0.001    0.001    5585.0    6016.0   1.00
+language[yy]               0.001    0.001    3641.0    5029.0   1.00
+language[ry]               0.001    0.001    3639.0    4749.0   1.00
+language[zw]               0.001    0.001    3518.0    5600.0   1.00
+language[ey]               0.001    0.001    3352.0    4633.0   1.00
+language[fy]               0.001    0.001    3330.0    5059.0   1.00
+1|question_id[20]          0.003    0.002    2311.0    4004.0   1.00
+1|question_id[16]          0.003    0.002    2122.0    3801.0   1.00
+1|question_id[27]          0.003    0.002    2058.0    3775.0   1.00
+1|question_id[22]          0.003    0.002    2035.0    3767.0   1.00
+1|question_id[19]          0.003    0.002    2028.0    3899.0   1.00
+1|question_id[7]           0.003    0.002    2016.0    3506.0   1.00
+1|question_id[6]           0.003    0.002    2015.0    3660.0   1.00
+1|question_id[5]           0.003    0.002    2012.0    3862.0   1.00
+1|question_id[4]           0.003    0.002    1973.0    3819.0   1.00
+1|augmentation_sigma       0.008    0.007    1969.0    3551.0   1.00
+1|question_id[26]          0.003    0.002    1962.0    3299.0   1.00
+1|question_id[17]          0.003    0.002    1959.0    3688.0   1.00
+1|question_id[13]          0.003    0.002    1935.0    2919.0   1.00
+1|question_id[30]          0.003    0.002    1920.0    3528.0   1.00
+1|question_id[28]          0.003    0.002    1917.0    3636.0   1.00
+1|question_id[25]          0.003    0.002    1875.0    3520.0   1.00
+1|question_id[12]          0.003    0.002    1860.0    3705.0   1.00
+1|question_id[15]          0.003    0.002    1852.0    3864.0   1.00
+1|question_id[1]           0.003    0.002    1840.0    3586.0   1.00
+1|question_id[18]          0.003    0.002    1838.0    3647.0   1.00
+1|question_id[23]          0.003    0.002    1804.0    3371.0   1.00
+1|question_id[9]           0.003    0.002    1797.0    3041.0   1.00
+1|question_id[11]          0.003    0.002    1753.0    3419.0   1.00
+1|question_id[8]           0.003    0.002    1738.0    3859.0   1.00
+1|question_id[2]           0.003    0.002    1735.0    3842.0   1.00
+1|question_id[14]          0.004    0.002    1718.0    2873.0   1.00
+1|question_id[21]          0.004    0.002    1714.0    3446.0   1.00
+1|question_id[10]          0.003    0.002    1709.0    3243.0   1.00
+1|question_id[24]          0.003    0.002    1700.0    3496.0   1.00
+1|question_id[29]          0.003    0.002    1674.0    3612.0   1.00
+1|question_id[3]           0.004    0.002    1647.0    3493.0   1.00
+1|augmentation[2]          0.012    0.008    1149.0    2247.0   1.00
+Intercept                  0.012    0.008    1146.0    2086.0   1.00
+1|augmentation[3]          0.012    0.008    1139.0    2269.0   1.00
+1|augmentation[5]          0.012    0.008    1134.0    2219.0   1.00
+1|augmentation[4]          0.012    0.008    1128.0    2087.0   1.00
+1|augmentation[0]          0.012    0.008    1125.0    2233.0   1.00
+1|augmentation[1]          0.012    0.008    1121.0    2215.0   1.00
+1|augmentation[7]          0.012    0.008    1116.0    2080.0   1.00
+1|augmentation[6]          0.012    0.008    1104.0    2210.0   1.00
+1|question_id_sigma        0.002    0.001    1070.0    2253.0   1.01

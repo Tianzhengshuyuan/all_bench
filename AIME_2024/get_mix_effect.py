@@ -599,6 +599,362 @@ def run_mixed_for_label_question_and_aug(folder, label, outdir="mixed_ames_resul
 
     print(f"[INFO] {label} 的近似双随机 MixedLM 结果已保存到 {out_path}")
 
+# ===================== 使用 Bambi 的双随机效应模型（单 LLM） =====================
+def run_bambi_mixed_for_label_question_and_aug(
+    folder,
+    label,
+    outdir="mixed_ames_result",
+    draws=2000,
+    chains=4,
+    target_accept=0.95,
+):
+    """
+    使用 Bambi + PyMC 对单个 LLM 拟合标准的双随机效应模型（Logistic GLMM）：
+
+        accuracy ~ 10 个固定因子
+                    + (1 | question_id)
+                    + (1 | augmentation)
+
+    固定因子：
+        language, question_type, question_tran,
+        few, cot, mul,
+        Temperature, max_tokens, top_p, presence_penalty
+
+    随机效应：
+        - question_id 随机截距
+        - augmentation 随机截距
+
+    结果写入 outdir / f"{label}_bambi_mixed_question_aug.txt"
+    """
+
+    try:
+        import bambi as bmb
+        import pymc as pm
+        import arviz as az
+    except ImportError as e:
+        print(
+            f"[WARNING] 运行 Bambi 模型失败：{e}. "
+            "请先安装依赖：pip install bambi pymc arviz"
+        )
+        return
+
+    df = parse_log_files_mixed(folder, label)
+    if len(df) == 0:
+        print(f"[WARNING] Label={label} 在 Bambi 双随机模型中没有数据，跳过")
+        return
+
+    # 将离散变量显式设为 category（有助于 Bambi 正确建模）
+    cat_cols = [
+        "language", "question_type", "question_tran",
+        "few", "cot", "mul",
+        "Temperature", "max_tokens", "top_p", "presence_penalty",
+        "question_id", "augmentation",
+    ]
+    for col in cat_cols:
+        if col in df.columns:
+            df[col] = df[col].astype("category")
+
+    # accuracy 应为 0/1
+    # 若存在 True/False 或字符串，强制转成 int
+    df["accuracy"] = df["accuracy"].astype(int)
+
+    # 构建 Bambi 模型公式
+    # 这里 deliberately 不加 C()，因为我们已将变量设为 category，Bambi 会自动按分类变量处理。
+    formula = (
+        "accuracy ~ "
+        "language + question_type + question_tran + "
+        "few + cot + mul + "
+        "Temperature + max_tokens + top_p + presence_penalty + "
+        "(1|question_id) + (1|augmentation)"
+    )
+
+    print(f"[INFO] 使用 Bambi 拟合 {label} 的双随机 Logistic 模型...")
+    print(f"[INFO] Formula: {formula}")
+
+    # accuracy是二分类，因此使用伯努利分布
+    model = bmb.Model(formula, data=df, family="bernoulli")
+
+    # 拟合模型（MCMC，马尔科夫链蒙特卡洛方法）
+    idata = model.fit(draws=draws, chains=chains, target_accept=target_accept)
+
+    # 汇总结果
+    # 获取固定效应变量名：从 common_terms 获取，并添加 Intercept
+    # 注意：Bambi 中固定效应存储在 components['p'].common_terms 中
+    fixed_effect_vars = []
+    if 'p' in model.components:
+        comp = model.components['p']
+        # common_terms 包含除 Intercept 外的固定效应
+        fixed_effect_vars = list(comp.common_terms.keys())
+        # 如果有 intercept_term，添加 Intercept
+        if comp.intercept_term is not None:
+            fixed_effect_vars = ['Intercept'] + fixed_effect_vars
+    
+    fe_summary = az.summary(
+        idata,
+        var_names=fixed_effect_vars,
+        kind="stats",
+    )
+    
+    # 对固定效应按影响大小排序（按 mean 的绝对值降序，但 Intercept 保持在最前面）
+    if 'Intercept' in fe_summary.index:
+        intercept_row = fe_summary.loc[['Intercept']]
+        other_rows = fe_summary.drop('Intercept')
+        # 按 mean 的绝对值降序排序
+        other_rows = other_rows.reindex(
+            other_rows['mean'].abs().sort_values(ascending=False).index
+        )
+        fe_summary = pd.concat([intercept_row, other_rows])
+    else:
+        # 如果没有 Intercept，直接按 mean 的绝对值降序排序
+        fe_summary = fe_summary.reindex(
+            fe_summary['mean'].abs().sort_values(ascending=False).index
+        )
+
+    # 随机效应标准差（group-level sd）
+    # Bambi 对 group-level sd 的命名规则为 1|group_name_sigma
+    re_vars = []
+    for name in idata.posterior.data_vars:
+        # 查找以 "1|" 开头且以 "_sigma" 结尾的变量（随机效应的标准差）
+        if name.startswith("1|") and name.endswith("_sigma"):
+            re_vars.append(name)
+    re_summary = az.summary(idata, var_names=re_vars, kind="stats") if re_vars else None
+    
+    # 对随机效应标准差按影响大小排序（按 mean 降序）
+    if re_summary is not None and not re_summary.empty:
+        re_summary = re_summary.reindex(
+            re_summary['mean'].sort_values(ascending=False).index
+        )
+
+    # 写结果到文件
+    os.makedirs(outdir, exist_ok=True)
+    out_path = os.path.join(outdir, f"{label}_bambi_mixed_question_aug.txt")
+    with open(out_path, "w", encoding="utf-8") as fout:
+        fout.write("==== Bambi Bayesian Mixed Effects Model ====\n")
+        fout.write(f"LLM: {label}\n")
+        fout.write("Family: Bernoulli (logit link)\n")
+        fout.write(f"Formula: {formula}\n\n")
+
+        fout.write("---- Fixed Effects (posterior summary) ----\n")
+        fout.write("(Sorted by |mean|, descending; Intercept first)\n")
+        fout.write(fe_summary.to_string())
+        fout.write("\n\n")
+
+        if re_summary is not None and not re_summary.empty:
+            fout.write("---- Random Effects SD (posterior summary) ----\n")
+            fout.write("(Sorted by mean, descending)\n")
+            fout.write(re_summary.to_string())
+            fout.write("\n\n")
+        else:
+            fout.write("---- Random Effects SD: 未在 posterior 中找到以 'sd_' 开头的变量 ----\n\n")
+
+        fout.write("---- Sampling diagnostics ----\n")
+        # 使用 kind='diagnostics' 获取诊断统计信息，而不是 stat_focus
+        diag = az.summary(idata, kind="diagnostics")
+        
+        # 对诊断信息按可靠性排序：
+        # 计算可靠性得分：r_hat 越接近1越好，ess_bulk 越大越好
+        if 'r_hat' in diag.columns and 'ess_bulk' in diag.columns:
+            diag['reliability_score'] = (
+                (1.0 - abs(diag['r_hat'] - 1.0)) * 1000 +  # r_hat 接近1的得分
+                diag['ess_bulk'] / 10  # ess_bulk 的得分（除以10避免数值过大）
+            )
+            diag = diag.sort_values('reliability_score', ascending=False)
+            diag = diag.drop('reliability_score', axis=1)  # 删除临时列
+            fout.write("(Sorted by reliability: r_hat closest to 1.0, then ess_bulk highest)\n")
+        else:
+            fout.write("(No sorting applied)\n")
+        
+        fout.write(diag.to_string())
+        fout.write("\n")
+
+    print(f"[INFO] {label} 的 Bambi 双随机混合模型结果已保存到 {out_path}")
+
+# ===================== 使用 R (lme4) 的双随机效应模型（单 LLM） =====================
+def run_r_mixed_for_label_question_and_aug(
+    folder,
+    label,
+    outdir="mixed_ames_result_r",
+    show_warnings=False,
+):
+    """
+    使用 R 的 lme4::glmer 对单个 LLM 拟合标准的双随机效应模型（Logistic GLMM）：
+
+        accuracy ~ 10 个固定因子
+                    + (1 | question_id)
+                    + (1 | augmentation)
+
+    固定因子：
+        language, question_type, question_tran,
+        few, cot, mul,
+        Temperature, max_tokens, top_p, presence_penalty
+
+    随机效应：
+        - question_id 随机截距
+        - augmentation 随机截距
+
+    结果写入 outdir / f"{label}_r_mixed_question_aug.txt"
+    
+    输出排序：
+        固定效应按以下规则排序：
+        1. Intercept 保持在最前面
+        2. 其他因子按 p 值升序排序（最显著的在前）
+        3. p 值相同时，按 Estimate 绝对值降序排序（效应最大的在前）
+        这样"最重要的发现"（既显著又效应大）会优先显示。
+    """
+    import subprocess
+    import tempfile
+
+    df = parse_log_files_mixed(folder, label)
+    if len(df) == 0:
+        print(f"[WARNING] Label={label} 在 R 双随机模型中没有数据，跳过")
+        return
+
+    # 将离散变量显式设为 category/string（R 需要因子类型）
+    cat_cols = [
+        "language", "question_type", "question_tran",
+        "few", "cot", "mul",
+        "Temperature", "max_tokens", "top_p", "presence_penalty",
+        "question_id", "augmentation",
+    ]
+    for col in cat_cols:
+        if col in df.columns:
+            df[col] = df[col].astype(str)
+
+    # accuracy 应为 0/1
+    df["accuracy"] = df["accuracy"].astype(int)
+
+    # 构建 R 模型公式
+    formula = (
+        "accuracy ~ "
+        "language + question_type + question_tran + "
+        "few + cot + mul + "
+        "Temperature + max_tokens + top_p + presence_penalty + "
+        "(1|question_id) + (1|augmentation)"
+    )
+
+    print(f"[INFO] 使用 R (lme4::glmer) 拟合 {label} 的双随机 Logistic 模型...")
+    print(f"[INFO] Formula: {formula}")
+
+    # 使用 R 脚本方式
+    # 创建临时 CSV 文件
+    with tempfile.NamedTemporaryFile(mode='w', suffix='.csv', delete=False, encoding='utf-8') as tmp_csv:
+        df.to_csv(tmp_csv.name, index=False)
+        csv_path = tmp_csv.name
+
+    # 创建临时 R 脚本
+    with tempfile.NamedTemporaryFile(mode='w', suffix='.R', delete=False, encoding='utf-8') as tmp_r:
+        r_script = f"""
+# 加载必要的库
+if (!require("lme4", quietly = TRUE)) {{
+stop("请先安装 lme4 包: install.packages('lme4')")
+}}
+
+# 读取数据
+df <- read.csv("{csv_path}", stringsAsFactors = TRUE)
+
+# 确保 accuracy 是整数
+df$accuracy <- as.integer(df$accuracy)
+
+# 将分类变量转为因子
+df$language <- as.factor(df$language)
+df$question_type <- as.factor(df$question_type)
+df$question_tran <- as.factor(df$question_tran)
+df$few <- as.factor(df$few)
+df$cot <- as.factor(df$cot)
+df$mul <- as.factor(df$mul)
+df$Temperature <- as.factor(df$Temperature)
+df$max_tokens <- as.factor(df$max_tokens)
+df$top_p <- as.factor(df$top_p)
+df$presence_penalty <- as.factor(df$presence_penalty)
+df$question_id <- as.factor(df$question_id)
+df$augmentation <- as.factor(df$augmentation)
+
+# 拟合模型
+formula <- accuracy ~ language + question_type + question_tran + 
+        few + cot + mul + 
+        Temperature + max_tokens + top_p + presence_penalty + 
+        (1|question_id) + (1|augmentation)
+
+model <- glmer(formula, data = df, family = binomial(link = "logit"),
+            control = glmerControl(optimizer = "bobyqa", optCtrl = list(maxfun = 1e5)))
+
+# 输出结果
+cat("==== R (lme4::glmer) Mixed Effects Model ====\\n")
+cat("LLM: {label}\\n")
+cat("Family: Binomial (logit link)\\n")
+cat("Formula:", as.character(formula), "\\n\\n")
+
+cat("---- Fixed Effects (sorted by p-value, then |Estimate|) ----\\n")
+coef_summary <- summary(model)$coefficients
+
+# 将 Intercept 单独处理（保持在最前面）
+intercept_row <- coef_summary[rownames(coef_summary) == "(Intercept)", , drop = FALSE]
+other_rows <- coef_summary[rownames(coef_summary) != "(Intercept)", , drop = FALSE]
+
+# 对非 Intercept 行进行排序：
+# 1. 首先按 p 值升序（p 值越小越显著）
+# 2. 然后按 Estimate 绝对值降序（效应越大越靠前）
+if (nrow(other_rows) > 0) {{
+    # 提取 p 值和 Estimate 用于排序
+    p_values <- other_rows[, "Pr(>|z|)"]
+    estimates <- other_rows[, "Estimate"]
+    
+    # 计算排序键：p 值优先（升序），然后按 Estimate 绝对值降序
+    sort_key <- order(p_values, -abs(estimates))
+    other_rows_sorted <- other_rows[sort_key, , drop = FALSE]
+    
+    # 重新组合：Intercept 在最前面，然后是排序后的其他行
+    coef_summary_sorted <- rbind(intercept_row, other_rows_sorted)
+}} else {{
+    coef_summary_sorted <- intercept_row
+}}
+
+print(coef_summary_sorted)
+
+cat("\\n\\n---- Random Effects SD ----\\n")
+print(VarCorr(model))
+
+cat("\\n\\n---- Model Fit Statistics ----\\n")
+cat("AIC:", AIC(model), "\\n")
+cat("BIC:", BIC(model), "\\n")
+"""
+        tmp_r.write(r_script)
+        r_script_path = tmp_r.name
+
+    # 执行 R 脚本
+    os.makedirs(outdir, exist_ok=True)
+    out_path = os.path.join(outdir, f"{label}_r_mixed_question_aug.txt")
+    
+    try:
+        # 调用 R 执行脚本，将输出重定向到文件
+        result = subprocess.run(
+            ["Rscript", r_script_path],
+            capture_output=True,
+            text=True,
+            check=True
+        )
+        
+        # 将输出写入结果文件
+        with open(out_path, "w", encoding="utf-8") as fout:
+            fout.write(result.stdout)
+            if result.stderr:
+                fout.write("\n---- R Warnings/Errors ----\n")
+                fout.write(result.stderr)
+        
+        print(f"[INFO] {label} 的 R (lme4) 双随机混合模型结果已保存到 {out_path}")
+    except subprocess.CalledProcessError as e:
+        print(f"[ERROR] 执行 R 脚本失败：{e}")
+        print(f"R 错误输出：{e.stderr}")
+    except FileNotFoundError:
+        print("[ERROR] 未找到 R 可执行文件。请确保 R 已安装并在 PATH 中。")
+    finally:
+        # 清理临时文件
+        try:
+            os.unlink(csv_path)
+            os.unlink(r_script_path)
+        except:
+            pass
+    
 # ===================== 多 LLM 一起：增加固定效应 LLMs =====================
 def run_mixed_for_llms_question(folder, outdir="mixed_ames_result", show_warnings=False):
     """
@@ -705,9 +1061,11 @@ if __name__ == "__main__":
                   "mistralM", "mistralL", "gpt35", "gpt41"]
 
     for label in label_list:
-        run_mixed_for_label_question(args.folder, label, outdir=outdir, show_warnings=args.show_warnings)
-        run_mixed_for_label_augmentation(args.folder, label, outdir=outdir, show_warnings=args.show_warnings)
-        run_mixed_for_label_question_and_aug(args.folder, label, outdir=outdir, show_warnings=args.show_warnings)
-    
-    run_mixed_for_llms_question(args.folder, outdir=outdir, show_warnings=args.show_warnings)
-    run_mixed_for_llms_augmentation(args.folder, outdir=outdir, show_warnings=args.show_warnings)
+        # run_mixed_for_label_question(args.folder, label, outdir=outdir, show_warnings=args.show_warnings)
+        # run_mixed_for_label_augmentation(args.folder, label, outdir=outdir, show_warnings=args.show_warnings)
+        # run_mixed_for_label_question_and_aug(args.folder, label, outdir=outdir, show_warnings=args.show_warnings)
+        # run_bambi_mixed_for_label_question_and_aug(args.folder, label, outdir=outdir)
+        run_r_mixed_for_label_question_and_aug(args.folder, label, outdir=outdir)
+        
+    # run_mixed_for_llms_question(args.folder, outdir=outdir, show_warnings=args.show_warnings)
+    # run_mixed_for_llms_augmentation(args.folder, outdir=outdir, show_warnings=args.show_warnings)
