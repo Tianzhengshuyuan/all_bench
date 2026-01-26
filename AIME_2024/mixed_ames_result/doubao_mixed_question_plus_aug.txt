@@ -1,0 +1,34 @@
+==== MixedLM 近似双随机效应模型 ====
+LLM: doubao
+Formula (fixed): accuracy ~ C(language) + C(question_type) + C(question_tran) + C(few) + C(cot) + C(mul) + C(Temperature) + C(max_tokens) + C(top_p) + C(presence_penalty)
+Random structure: groups=question_id, exog_re=[Intercept, AugCode]
+
+---- Fixed Effects (sorted by p-value) ----
+                                Coef        SE          z              p
+C(cot)[T.1]                -0.392758  0.006590 -59.603374   0.000000e+00
+C(question_type)[T.1]      -0.176438  0.006617 -26.664367  1.219601e-156
+Intercept                   0.316687  0.024483  12.934761   2.865144e-38
+C(max_tokens)[T.4000]       0.078886  0.008137   9.694965   3.167452e-22
+C(language)[T.yy]           0.071493  0.011883   6.016197   1.785621e-09
+C(language)[T.fy]           0.055348  0.011022   5.021563   5.125276e-07
+C(language)[T.ry]           0.056275  0.011587   4.856853   1.192661e-06
+C(max_tokens)[T.100]        0.032322  0.008038   4.021046   5.794019e-05
+C(language)[T.ey]           0.039837  0.011089   3.592480   3.275459e-04
+C(language)[T.zw]           0.038299  0.010954   3.496389   4.716009e-04
+C(presence_penalty)[T.0.5]  0.023898  0.008173   2.923933   3.456394e-03
+C(mul)[T.1]                 0.016800  0.006599   2.545710   1.090557e-02
+C(top_p)[T.1.0]            -0.019915  0.008037  -2.477941   1.321432e-02
+C(top_p)[T.0.6]            -0.011857  0.008068  -1.469771   1.416239e-01
+C(few)[T.1]                 0.007462  0.006665   1.119504   2.629253e-01
+C(question_tran)[T.1]       0.007353  0.006699   1.097697   2.723367e-01
+C(presence_penalty)[T.1.5]  0.004535  0.008229   0.551126   5.815470e-01
+C(Temperature)[T.1.0]       0.003680  0.007940   0.463560   6.429632e-01
+C(Temperature)[T.2.0]      -0.003147  0.008141  -0.386507   6.991209e-01
+
+---- Random Effects Covariance (for [Intercept, AugCode]) ----
+              RE_Intercept  RE_AugCode
+RE_Intercept      0.006220    0.000459
+RE_AugCode        0.000459    0.010819
+
+---- Residual variance ----
+0.1552250712800404

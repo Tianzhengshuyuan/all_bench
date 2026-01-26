@@ -1,0 +1,34 @@
+==== MixedLM 近似双随机效应模型 ====
+LLM: qwen
+Formula (fixed): accuracy ~ C(language) + C(question_type) + C(question_tran) + C(few) + C(cot) + C(mul) + C(Temperature) + C(max_tokens) + C(top_p) + C(presence_penalty)
+Random structure: groups=question_id, exog_re=[Intercept, AugCode]
+
+---- Fixed Effects (sorted by p-value) ----
+                                Coef        SE          z             p
+C(cot)[T.1]                -0.339752  0.006636 -51.197347  0.000000e+00
+C(question_type)[T.1]      -0.105214  0.006663 -15.791895  3.537911e-56
+C(max_tokens)[T.4000]       0.075464  0.008195   9.208171  3.317292e-20
+Intercept                   0.185951  0.026640   6.980106  2.949567e-12
+C(language)[T.yy]           0.075509  0.011967   6.309524  2.798957e-10
+C(few)[T.1]                 0.034741  0.006713   5.175294  2.275523e-07
+C(language)[T.ry]           0.055109  0.011660   4.726436  2.284946e-06
+C(presence_penalty)[T.0.5]  0.036761  0.008233   4.465056  8.004788e-06
+C(language)[T.fy]           0.043701  0.011108   3.934154  8.349027e-05
+C(language)[T.zw]           0.040818  0.011036   3.698523  2.168579e-04
+C(language)[T.ey]           0.040899  0.011160   3.664850  2.474838e-04
+C(max_tokens)[T.100]        0.019980  0.008094   2.468620  1.356351e-02
+C(mul)[T.1]                 0.014374  0.006646   2.162839  3.055358e-02
+C(Temperature)[T.2.0]      -0.014138  0.008195  -1.725259  8.448088e-02
+C(Temperature)[T.1.0]       0.012545  0.008001   1.567940  1.168952e-01
+C(presence_penalty)[T.1.5]  0.009690  0.008290   1.168932  2.424310e-01
+C(top_p)[T.1.0]            -0.007843  0.008094  -0.969074  3.325084e-01
+C(top_p)[T.0.6]             0.006807  0.008124   0.837898  4.020883e-01
+C(question_tran)[T.1]       0.001462  0.006744   0.216736  8.284138e-01
+
+---- Random Effects Covariance (for [Intercept, AugCode]) ----
+              RE_Intercept  RE_AugCode
+RE_Intercept      0.006546    0.000450
+RE_AugCode        0.000450    0.010649
+
+---- Residual variance ----
+0.1570423097112864

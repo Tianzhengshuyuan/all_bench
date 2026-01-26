@@ -1,0 +1,34 @@
+==== MixedLM 近似双随机效应模型 ====
+LLM: gpt35
+Formula (fixed): accuracy ~ C(language) + C(question_type) + C(question_tran) + C(few) + C(cot) + C(mul) + C(Temperature) + C(max_tokens) + C(top_p) + C(presence_penalty)
+Random structure: groups=question_id, exog_re=[Intercept, AugCode]
+
+---- Fixed Effects (sorted by p-value) ----
+                                Coef        SE          z              p
+C(question_type)[T.1]      -0.142782  0.006376 -22.393849  4.518344e-111
+C(cot)[T.1]                -0.119010  0.006348 -18.746395   2.071674e-78
+C(language)[T.yy]           0.117811  0.011453  10.286486   8.108181e-25
+C(language)[T.ey]           0.093282  0.010684   8.730985   2.524635e-18
+C(language)[T.fy]           0.084662  0.010629   7.964843   1.654340e-15
+C(language)[T.zw]           0.070539  0.010560   6.679636   2.395369e-11
+Intercept                   0.093614  0.020391   4.591041   4.410415e-06
+C(top_p)[T.1.0]            -0.031160  0.007744  -4.023701   5.729070e-05
+C(max_tokens)[T.100]        0.019919  0.007742   2.573035   1.008110e-02
+C(language)[T.ry]           0.026149  0.011166   2.341902   1.918574e-02
+C(Temperature)[T.2.0]      -0.018228  0.007839  -2.325120   2.006556e-02
+C(presence_penalty)[T.1.5] -0.014431  0.007933  -1.819086   6.889834e-02
+C(max_tokens)[T.4000]       0.012595  0.007844   1.605646   1.083516e-01
+C(few)[T.1]                -0.008360  0.006419  -1.302269   1.928244e-01
+C(top_p)[T.0.6]            -0.008562  0.007774  -1.101328   2.707541e-01
+C(Temperature)[T.1.0]      -0.004463  0.007650  -0.583421   5.596098e-01
+C(question_tran)[T.1]       0.002847  0.006454   0.441088   6.591490e-01
+C(presence_penalty)[T.0.5] -0.003106  0.007876  -0.394324   6.933419e-01
+C(mul)[T.1]                 0.001721  0.006358   0.270673   7.866422e-01
+
+---- Random Effects Covariance (for [Intercept, AugCode]) ----
+              RE_Intercept  RE_AugCode
+RE_Intercept      0.009791    0.000380
+RE_AugCode        0.000380    0.011325
+
+---- Residual variance ----
+0.14394667897509333

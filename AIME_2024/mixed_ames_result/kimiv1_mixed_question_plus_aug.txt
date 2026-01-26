@@ -1,0 +1,34 @@
+==== MixedLM 近似双随机效应模型 ====
+LLM: kimiv1
+Formula (fixed): accuracy ~ C(language) + C(question_type) + C(question_tran) + C(few) + C(cot) + C(mul) + C(Temperature) + C(max_tokens) + C(top_p) + C(presence_penalty)
+Random structure: groups=question_id, exog_re=[Intercept, AugCode]
+
+---- Fixed Effects (sorted by p-value) ----
+                                Coef        SE          z             p
+C(cot)[T.1]                -0.096167  0.006444 -14.924127  2.296204e-50
+C(question_type)[T.1]      -0.083672  0.006472 -12.927309  3.156756e-38
+C(language)[T.zw]           0.066190  0.010724   6.171849  6.749596e-10
+C(language)[T.ey]           0.054512  0.010843   5.027228  4.976206e-07
+C(language)[T.fy]           0.053194  0.010764   4.941854  7.738311e-07
+C(max_tokens)[T.4000]       0.038121  0.007960   4.789312  1.673540e-06
+C(language)[T.yy]           0.050954  0.011630   4.381456  1.178888e-05
+C(language)[T.ry]           0.049522  0.011334   4.369201  1.247019e-05
+C(mul)[T.1]                 0.018558  0.006452   2.876187  4.025115e-03
+C(Temperature)[T.2.0]       0.018504  0.007955   2.325957  2.002082e-02
+C(max_tokens)[T.100]        0.016155  0.007858   2.055967  3.978567e-02
+C(Temperature)[T.1.0]       0.013688  0.007771   1.761440  7.816397e-02
+C(top_p)[T.1.0]            -0.011633  0.007861  -1.479837  1.389167e-01
+C(few)[T.1]                 0.009511  0.006519   1.458821  1.446145e-01
+C(presence_penalty)[T.0.5]  0.011637  0.007993   1.455896  1.454214e-01
+C(question_tran)[T.1]      -0.009062  0.006550  -1.383475  1.665192e-01
+C(top_p)[T.0.6]            -0.010703  0.007884  -1.357607  1.745885e-01
+C(presence_penalty)[T.1.5]  0.001757  0.008046   0.218400  8.271176e-01
+Intercept                  -0.009502       NaN        NaN           NaN
+
+---- Random Effects Covariance (for [Intercept, AugCode]) ----
+              RE_Intercept  RE_AugCode
+RE_Intercept      0.007126    0.000322
+RE_AugCode        0.000322    0.009636
+
+---- Residual variance ----
+0.14853304204562787

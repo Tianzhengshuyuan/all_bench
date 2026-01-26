@@ -1,0 +1,34 @@
+==== MixedLM 近似双随机效应模型 ====
+LLM: gpt41
+Formula (fixed): accuracy ~ C(language) + C(question_type) + C(question_tran) + C(few) + C(cot) + C(mul) + C(Temperature) + C(max_tokens) + C(top_p) + C(presence_penalty)
+Random structure: groups=question_id, exog_re=[Intercept, AugCode]
+
+---- Fixed Effects (sorted by p-value) ----
+                                Coef        SE          z              p
+C(cot)[T.1]                -0.242845  0.006717 -36.154043  3.214185e-286
+C(max_tokens)[T.4000]       0.136400  0.008293  16.448115   8.651954e-61
+C(question_type)[T.1]      -0.060520  0.006744  -8.973601   2.869763e-19
+C(language)[T.yy]           0.087435  0.012109   7.220551   5.177741e-13
+C(few)[T.1]                 0.041018  0.006793   6.037891   1.561418e-09
+C(max_tokens)[T.100]        0.043909  0.008196   5.357242   8.450184e-08
+C(language)[T.ey]           0.060214  0.011305   5.326246   1.002631e-07
+C(mul)[T.1]                 0.029473  0.006727   4.381176   1.180405e-05
+C(language)[T.fy]           0.045967  0.011249   4.086538   4.378580e-05
+C(presence_penalty)[T.0.5]  0.031766  0.008333   3.811932   1.378847e-04
+C(language)[T.zw]           0.037350  0.011169   3.343989   8.258298e-04
+C(language)[T.ry]           0.027085  0.011814   2.292697   2.186543e-02
+C(presence_penalty)[T.1.5]  0.019039  0.008391   2.269013   2.326751e-02
+C(Temperature)[T.2.0]       0.015639  0.008292   1.886059   5.928704e-02
+C(top_p)[T.0.6]             0.013519  0.008222   1.644355   1.001029e-01
+C(Temperature)[T.1.0]       0.008132  0.008098   1.004191   3.152868e-01
+C(question_tran)[T.1]      -0.004127  0.006825  -0.604726   5.453608e-01
+Intercept                   0.017008  0.028984   0.586791   5.573438e-01
+C(top_p)[T.1.0]             0.001584  0.008193   0.193320   8.467084e-01
+
+---- Random Effects Covariance (for [Intercept, AugCode]) ----
+              RE_Intercept  RE_AugCode
+RE_Intercept      0.006656    0.000393
+RE_AugCode        0.000393    0.010220
+
+---- Residual variance ----
+0.16132355968223927

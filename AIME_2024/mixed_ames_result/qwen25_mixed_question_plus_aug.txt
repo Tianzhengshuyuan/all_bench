@@ -1,0 +1,34 @@
+==== MixedLM 近似双随机效应模型 ====
+LLM: qwen25
+Formula (fixed): accuracy ~ C(language) + C(question_type) + C(question_tran) + C(few) + C(cot) + C(mul) + C(Temperature) + C(max_tokens) + C(top_p) + C(presence_penalty)
+Random structure: groups=question_id, exog_re=[Intercept, AugCode]
+
+---- Fixed Effects (sorted by p-value) ----
+                                Coef        SE          z              p
+C(cot)[T.1]                -0.331525  0.006645 -49.894278   0.000000e+00
+C(question_type)[T.1]      -0.176198  0.006672 -26.409287  1.071823e-153
+C(max_tokens)[T.4000]       0.076706  0.008206   9.347549   8.970225e-21
+Intercept                   0.220728  0.027667   7.978070   1.486390e-15
+C(few)[T.1]                 0.046063  0.006721   6.854082   7.177201e-12
+C(language)[T.zw]           0.049447  0.011046   4.476597   7.584229e-06
+C(max_tokens)[T.100]        0.031079  0.008105   3.834683   1.257265e-04
+C(language)[T.ey]           0.040822  0.011175   3.653086   2.591070e-04
+C(mul)[T.1]                 0.024260  0.006655   3.645248   2.671339e-04
+C(language)[T.fy]           0.038424  0.011121   3.455235   5.498139e-04
+C(presence_penalty)[T.0.5]  0.023117  0.008241   2.805253   5.027710e-03
+C(language)[T.yy]           0.017670  0.011986   1.474264   1.404104e-01
+C(language)[T.ry]           0.016669  0.011685   1.426569   1.537040e-01
+C(top_p)[T.0.6]             0.010893  0.008138   1.338629   1.806915e-01
+C(presence_penalty)[T.1.5]  0.010899  0.008300   1.313115   1.891442e-01
+C(Temperature)[T.2.0]       0.006272  0.008206   0.764313   4.446806e-01
+C(question_tran)[T.1]       0.003820  0.006753   0.565675   5.716146e-01
+C(top_p)[T.1.0]            -0.002646  0.008103  -0.326561   7.439997e-01
+C(Temperature)[T.1.0]       0.002391  0.008009   0.298564   7.652729e-01
+
+---- Random Effects Covariance (for [Intercept, AugCode]) ----
+              RE_Intercept  RE_AugCode
+RE_Intercept      0.006516    0.000386
+RE_AugCode        0.000386    0.010586
+
+---- Residual variance ----
+0.15790299773027133

@@ -1,0 +1,34 @@
+==== MixedLM 近似双随机效应模型 ====
+LLM: mistralL
+Formula (fixed): accuracy ~ C(language) + C(question_type) + C(question_tran) + C(few) + C(cot) + C(mul) + C(Temperature) + C(max_tokens) + C(top_p) + C(presence_penalty)
+Random structure: groups=question_id, exog_re=[Intercept, AugCode]
+
+---- Fixed Effects (sorted by p-value) ----
+                                Coef        SE          z             p
+C(cot)[T.1]                -0.277616  0.006911 -40.167360  0.000000e+00
+C(question_type)[T.1]      -0.135230  0.006939 -19.488668  1.370005e-84
+C(max_tokens)[T.4000]       0.079667  0.008535   9.333708  1.022304e-20
+Intercept                   0.189816  0.031242   6.075709  1.234410e-09
+C(language)[T.zw]           0.052399  0.011487   4.561616  5.076137e-06
+C(mul)[T.1]                 0.031452  0.006922   4.543949  5.521001e-06
+C(few)[T.1]                 0.026836  0.006994   3.836996  1.245484e-04
+C(language)[T.yy]           0.042597  0.012463   3.417851  6.311770e-04
+C(max_tokens)[T.100]        0.025943  0.008433   3.076497  2.094482e-03
+C(language)[T.ey]           0.030262  0.011625   2.603257  9.234261e-03
+C(presence_penalty)[T.0.5]  0.016694  0.008575   1.946735  5.156651e-02
+C(language)[T.fy]           0.020965  0.011563   1.813015  6.982946e-02
+C(language)[T.ry]           0.017695  0.012150   1.456384  1.452866e-01
+C(Temperature)[T.1.0]       0.012116  0.008332   1.454251  1.458768e-01
+C(top_p)[T.0.6]             0.004660  0.008463   0.550669  5.818607e-01
+C(presence_penalty)[T.1.5]  0.004147  0.008634   0.480273  6.310335e-01
+C(top_p)[T.1.0]             0.002578  0.008430   0.305799  7.597574e-01
+C(Temperature)[T.2.0]       0.001197  0.008536   0.140232  8.884768e-01
+C(question_tran)[T.1]       0.000142  0.007025   0.020142  9.839299e-01
+
+---- Random Effects Covariance (for [Intercept, AugCode]) ----
+              RE_Intercept  RE_AugCode
+RE_Intercept      0.007278    0.000426
+RE_AugCode        0.000426    0.011647
+
+---- Residual variance ----
+0.17069034557682636

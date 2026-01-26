@@ -1,0 +1,34 @@
+==== MixedLM 近似双随机效应模型 ====
+LLM: deepseekv3
+Formula (fixed): accuracy ~ C(language) + C(question_type) + C(question_tran) + C(few) + C(cot) + C(mul) + C(Temperature) + C(max_tokens) + C(top_p) + C(presence_penalty)
+Random structure: groups=question_id, exog_re=[Intercept, AugCode]
+
+---- Fixed Effects (sorted by p-value) ----
+                                Coef        SE          z              p
+C(cot)[T.1]                -0.256197  0.006944 -36.893615  5.849552e-298
+C(question_type)[T.1]      -0.127987  0.006973 -18.355045   3.008358e-75
+C(max_tokens)[T.4000]       0.127002  0.008575  14.811102   1.241876e-49
+C(language)[T.ey]           0.081762  0.011672   7.004811   2.473199e-12
+C(language)[T.zw]           0.075570  0.011534   6.551816   5.684139e-11
+C(language)[T.ry]           0.070396  0.012187   5.776082   7.646000e-09
+C(language)[T.yy]           0.064265  0.012504   5.139369   2.756626e-07
+Intercept                   0.121571  0.028886   4.208606   2.569504e-05
+C(Temperature)[T.1.0]       0.034850  0.008371   4.163297   3.136845e-05
+C(few)[T.1]                 0.028123  0.007028   4.001336   6.298586e-05
+C(language)[T.fy]           0.045207  0.011637   3.884837   1.023985e-04
+C(max_tokens)[T.100]        0.031640  0.008474   3.733934   1.885122e-04
+C(top_p)[T.1.0]            -0.024548  0.008474  -2.896828   3.769562e-03
+C(presence_penalty)[T.0.5]  0.024754  0.008622   2.870863   4.093530e-03
+C(mul)[T.1]                 0.016712  0.006955   2.402907   1.626534e-02
+C(Temperature)[T.2.0]       0.014653  0.008576   1.708520   8.753999e-02
+C(presence_penalty)[T.1.5]  0.008402  0.008680   0.967996   3.330464e-01
+C(question_tran)[T.1]      -0.005691  0.007060  -0.806118   4.201751e-01
+C(top_p)[T.0.6]             0.003127  0.008503   0.367780   7.130377e-01
+
+---- Random Effects Covariance (for [Intercept, AugCode]) ----
+              RE_Intercept  RE_AugCode
+RE_Intercept      0.007036    0.000437
+RE_AugCode        0.000437    0.010672
+
+---- Residual variance ----
+0.17172041165949845

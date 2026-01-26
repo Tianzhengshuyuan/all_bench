@@ -1,0 +1,34 @@
+==== MixedLM 近似双随机效应模型 ====
+LLM: mistralM
+Formula (fixed): accuracy ~ C(language) + C(question_type) + C(question_tran) + C(few) + C(cot) + C(mul) + C(Temperature) + C(max_tokens) + C(top_p) + C(presence_penalty)
+Random structure: groups=question_id, exog_re=[Intercept, AugCode]
+
+---- Fixed Effects (sorted by p-value) ----
+                                Coef        SE          z              p
+C(max_tokens)[T.4000]       0.315044  0.008200  38.422207   0.000000e+00
+C(cot)[T.1]                -0.236428  0.006648 -35.565616  4.766462e-277
+C(question_type)[T.1]      -0.137641  0.006671 -20.633059   1.385999e-94
+C(language)[T.yy]           0.086098  0.011984   7.184508   6.744952e-13
+C(max_tokens)[T.100]        0.058284  0.008118   7.179324   7.005700e-13
+Intercept                   0.286154  0.040898   6.996698   2.620662e-12
+C(language)[T.ey]           0.054597  0.011172   4.887028   1.023697e-06
+C(language)[T.zw]           0.051877  0.011027   4.704565   2.544080e-06
+C(few)[T.1]                 0.026016  0.006721   3.870846   1.084583e-04
+C(language)[T.fy]           0.040204  0.011107   3.619640   2.950134e-04
+C(mul)[T.1]                 0.020935  0.006656   3.145274   1.659313e-03
+C(language)[T.ry]           0.031750  0.011676   2.719326   6.541516e-03
+C(presence_penalty)[T.0.5]  0.021721  0.008239   2.636264   8.382442e-03
+C(question_tran)[T.1]      -0.012092  0.006753  -1.790661   7.334777e-02
+C(presence_penalty)[T.1.5]  0.012933  0.008296   1.558921   1.190151e-01
+C(Temperature)[T.2.0]       0.007675  0.008205   0.935329   3.496190e-01
+C(Temperature)[T.1.0]       0.003477  0.008011   0.434051   6.642518e-01
+C(top_p)[T.1.0]            -0.002049  0.008107  -0.252736   8.004723e-01
+C(top_p)[T.0.6]             0.000521  0.008132   0.064086   9.489016e-01
+
+---- Random Effects Covariance (for [Intercept, AugCode]) ----
+              RE_Intercept  RE_AugCode
+RE_Intercept      0.052529   -0.013253
+RE_AugCode       -0.013253    0.003795
+
+---- Residual variance ----
+0.15804706327697365

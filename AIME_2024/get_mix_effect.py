@@ -6,15 +6,40 @@ import argparse
 import numpy as np
 from tqdm import trange
 import warnings
-# # 设置环境变量抑制警告
-# os.environ['PYTHONWARNINGS'] = 'ignore'
-# # 抑制所有警告
-# warnings.simplefilter('ignore')
-# warnings.filterwarnings('ignore')
+from statsmodels.regression.mixed_linear_model import MixedLM
+import statsmodels.api as sm
+# 全局变量：控制是否显示警告（默认False，保持向后兼容，即默认抑制警告）
+SHOW_WARNINGS = False
+
+def setup_warnings(show: bool):
+    """
+    设置警告处理机制
+    - show=True: 不处理警告，让警告正常显示
+    - show=False: 抑制所有警告
+    """
+    global SHOW_WARNINGS
+    SHOW_WARNINGS = show
+    if not show:
+        # 设置环境变量抑制警告
+        os.environ['PYTHONWARNINGS'] = 'ignore'
+        # 抑制所有警告
+        warnings.simplefilter('ignore')
+        warnings.filterwarnings('ignore')
+    else:
+        # 恢复默认警告行为，让警告正常显示
+        if 'PYTHONWARNINGS' in os.environ:
+            del os.environ['PYTHONWARNINGS']
+        warnings.resetwarnings()
+
+# 初始化时默认抑制警告（保持向后兼容）
+setup_warnings(False)
+
 import statsmodels.formula.api as smf
-# # 在导入 statsmodels 后再次设置，确保覆盖其内部警告
-# warnings.simplefilter('ignore')
-# warnings.filterwarnings('ignore')
+
+# 在导入 statsmodels 后再次设置，确保覆盖其内部警告
+if not SHOW_WARNINGS:
+    warnings.simplefilter('ignore')
+    warnings.filterwarnings('ignore')
 
 # ===================== 日志解析正则 =====================
 
@@ -244,20 +269,7 @@ def parse_log_files_mixed(folder: str, label: str) -> pd.DataFrame:
         print(f"fname={fname}")
         current_config = None   # dict: 实验配置
         mode_multi = False      # 是否多轮
-        # 对于该配置：我们会有 30 道题；对于多轮，只看第二轮的结果
-
-        # 单轮：通过 "第X题使用扰动类型 Y"
-        # 多轮：需要追踪 "multi-turn 第i组 第一轮 / 第二轮"
-        # 策略：
-        #   - 遇到配置行 -> current_config = {...}, mode_multi = (mul == 1) 或按日志内容判断
-        #   - 对单轮：
-        #       看到 "第i题使用扰动类型 y" -> current_question_id, current_augmentation
-        #       之后找到第一条判对行 -> 记一条记录
-        #   - 对多轮：
-        #       先会出现 "第i题使用扰动类型 y"
-        #       然后有 "multi-turn 第i组 第一轮" (忽略对错)
-        #       然后 "multi-turn 第i组 第二轮" 之后的第一条判对行 -> 记一条记录
-
+        
         i = 0
         total_lines = len(lines)
         while i < total_lines:
@@ -271,7 +283,7 @@ def parse_log_files_mixed(folder: str, label: str) -> pd.DataFrame:
                 config_start = m_cfg.end()
                 config_str, end_pos = extract_balanced_dict(line, config_start)
                 current_config = ast.literal_eval(config_str)
-                print(f"current_config={current_config}")
+                # print(f"current_config={current_config}")
                 # 决定是否多轮（你可根据 config_dict['mul'] == 1 来判断）
                 if current_config is not None and "mul" in current_config:
                     mode_multi = bool(current_config["mul"])
@@ -310,7 +322,7 @@ def parse_log_files_mixed(folder: str, label: str) -> pd.DataFrame:
                         row["augmentation"] = aug_type
                         row["accuracy"] = correct
                         row["LLMs"] = label
-                        print(f"解析单轮结果....question_id={qid}, augmentation={aug_type}, accuracy={correct}, LLMs={label}")
+                        # print(f"解析单轮结果....question_id={qid}, augmentation={aug_type}, accuracy={correct}, LLMs={label}")
                         # 这里不展开 30 个 augmentation 字段，避免高维稀疏问题
                         if "augmentations" in row:
                             row.pop("augmentations")
@@ -321,79 +333,87 @@ def parse_log_files_mixed(folder: str, label: str) -> pd.DataFrame:
 
             # ---------------- 多轮逻辑 ----------------
             else:
-                question_start = question_id_and_aug_type.search(line)
-                if question_start:
-                    # 接下来会有 multi-turn 第qid组 第一轮
-                    print("发现第一轮第一行")
-                    j = i + 1
-                    correct = None
-                    aug_type_second = None
-                    found_first_round = False
-                    found_first_result = False
-                    found_second_q_aug = False
+                # 在从1到30的循环中，直接找第二轮的相关信息
+                start_pos = i  # 记录多轮逻辑的起始位置
+                for group_id in range(1, 31):  # i从1到30
+                    target_question_id = group_id + 1  # 第i+1题
+                    if target_question_id > 30:
+                        target_question_id = 1
+                    j = start_pos
+                    found_question_aug = False
                     found_second_round = False
+                    correct = None
+                    aug_type = None
+                    qid = None
                     
+                    # 查找"第i+1题使用扰动类型x"
                     while j < total_lines:
                         l2 = lines[j]
-                        # 新配置行，说明本题还没等到结果就进了下一个配置
+                        # 新配置行，说明还没找到就进了下一个配置
                         if pattern_config.search(l2):
                             break
-
-                        # 检测第一轮开始（连续两行中的第二行）
-                        if pattern_multi_first_round.search(l2):
-                            print("发现第一轮第二行")
-                            found_first_round = True
-                            j += 1
-                            continue
-
-                        # 找到并跳过第一轮的结果
-                        if found_first_round and not found_first_result:
-                            flag, corr = parse_correct_from_line(l2)
-                            if flag:
-                                found_first_result = True
+                        
+                        # 查找"第target_question_id题使用扰动类型x"
+                        question_start = question_id_and_aug_type.search(l2)
+                        if question_start:
+                            found_qid = int(question_start.group(1))
+                            if found_qid == target_question_id:
+                                aug_type = int(question_start.group(2))
+                                qid = found_qid
+                                found_question_aug = True
+                                # 检查下一行是否是"multi-turn 第i组 第二轮"
+                                if j + 1 < total_lines:
+                                    next_line = lines[j + 1]
+                                    second_round_match = pattern_multi_second_round.search(next_line)
+                                    if second_round_match:
+                                        found_group_id = int(second_round_match.group(1))
+                                        if found_group_id == group_id:
+                                            found_second_round = True
+                                            j = j + 2  # 跳过题号行和multi-turn行
+                                            break
+                                # 如果下一行不是第二轮标记，继续查找
                                 j += 1
                                 continue
-
-                        # 检测第二轮的题号和扰动类型（第Y题使用扰动类型 Z）
-                        if found_first_result and not found_second_q_aug:
-                            second_question_start = question_id_and_aug_type.search(l2)
-                            if second_question_start:
-                                print("发现第二轮第一行")
-                                qid = int(second_question_start.group(1))
-                                aug_type_second = int(second_question_start.group(2))
-                                found_second_q_aug = True
-                                j += 1
-                                continue
-
-                        # 检测第二轮开始（连续两行中的第二行）
-                        if found_second_q_aug and pattern_multi_second_round.search(l2):
-                            print("发现第二轮第二行")
-                            found_second_round = True
-                            j += 1
-                            continue
-
-                        # 在第二轮开始后，查找第二轮的结果
-                        if found_second_round:
-                            flag, corr = parse_correct_from_line(l2)
-                            if flag:
-                                correct = corr
-                                break
                         
                         j += 1
-
-                    # 只统计第二轮的结果
-                    if correct is not None and aug_type_second is not None:
-                        print(f"解析第二轮结果....question_id={qid}, augmentation={aug_type_second}, accuracy={correct}, LLMs={label}")
+                    
+                    if not found_question_aug or not found_second_round:
+                        continue  # 没找到对应的题号或第二轮标记，继续下一个group_id
+                    
+                    # 在第二轮开始后，查找第二轮的结果
+                    while j < total_lines:
+                        l2 = lines[j]
+                        # 新配置行，说明还没找到结果就进了下一个配置
+                        if pattern_config.search(l2):
+                            break
+                        
+                        flag, corr = parse_correct_from_line(l2)
+                        if flag:
+                            correct = corr
+                            break
+                        
+                        j += 1
+                    
+                    # 记录结果
+                    if correct is not None and aug_type is not None and qid is not None:
+                        # print(f"解析第二轮结果....question_id={qid}, augmentation={aug_type}, accuracy={correct}, LLMs={label}, group_id={group_id}")
                         row = dict(current_config)
-                        row["question_id"] = qid  # 使用第二轮的题号
-                        row["augmentation"] = aug_type_second  # 使用第二轮的扰动类型
+                        row["question_id"] = qid
+                        row["augmentation"] = aug_type
                         row["accuracy"] = correct
                         row["LLMs"] = label
                         if "augmentations" in row:
                             row.pop("augmentations")
                         records.append(row)
-                    i = j + 1 if correct is not None else j
-                    continue
+                
+                # 多轮逻辑处理完后，需要更新i的位置
+                # 找到下一个配置行的位置，或者文件末尾
+                i = start_pos
+                while i < total_lines:
+                    if pattern_config.search(lines[i]):
+                        break
+                    i += 1
+                continue
 
             i += 1
 
@@ -413,7 +433,7 @@ def parse_log_files_mixed(folder: str, label: str) -> pd.DataFrame:
     return df
 
 # ===================== 混合效应模型（statsmodels 版：分两层） =====================
-def run_mixed_for_label_question(folder, label, outdir="mixed_ames_result"):
+def run_mixed_for_label_question(folder, label, outdir="mixed_ames_result", show_warnings=False):
     """
     模型1：随机截距在 question_id 上：
       accuracy ~ 10 个固定因子 + (1 | question_id)
@@ -431,11 +451,14 @@ def run_mixed_for_label_question(folder, label, outdir="mixed_ames_result"):
     formula = "accuracy ~ " + " + ".join(fixed_effects)
 
     # MixedLM: groups=question_id
-    # 这里用二值 accuracy，但是 MixedLM 默认是高斯；如果你想做严格的二项 GLMM，
+    # 这里用二值 accuracy，但是 MixedLM 默认是高斯；如果要做严格的二项 GLMM，
     # 目前 Python 生态支持没那么好，建议用 R glmer。这里先用 Linear Mixed Model 近似。
     model = smf.mixedlm(formula, data=df, groups=df["question_id"])
-    with warnings.catch_warnings():
-        warnings.simplefilter('ignore')
+    if not show_warnings:
+        with warnings.catch_warnings():
+            warnings.simplefilter('ignore')
+            result = model.fit(reml=False, method="lbfgs")
+    else:
         result = model.fit(reml=False, method="lbfgs")
 
     os.makedirs(outdir, exist_ok=True)
@@ -447,7 +470,7 @@ def run_mixed_for_label_question(folder, label, outdir="mixed_ames_result"):
     print(f"[INFO] {label} 混合模型(随机题目)结果已保存到 {out_path}")
 
 
-def run_mixed_for_label_augmentation(folder, label, outdir="mixed_ames_result"):
+def run_mixed_for_label_augmentation(folder, label, outdir="mixed_ames_result", show_warnings=False):
     """
     模型2：随机截距在 augmentation 上：
       accuracy ~ 10 个固定因子 + (1 | augmentation)
@@ -464,8 +487,11 @@ def run_mixed_for_label_augmentation(folder, label, outdir="mixed_ames_result"):
     formula = "accuracy ~ " + " + ".join(fixed_effects)
 
     model = smf.mixedlm(formula, data=df, groups=df["augmentation"])
-    with warnings.catch_warnings():
-        warnings.simplefilter('ignore')
+    if not show_warnings:
+        with warnings.catch_warnings():
+            warnings.simplefilter('ignore')
+            result = model.fit(reml=False, method="lbfgs")
+    else:
         result = model.fit(reml=False, method="lbfgs")
 
     os.makedirs(outdir, exist_ok=True)
@@ -477,8 +503,104 @@ def run_mixed_for_label_augmentation(folder, label, outdir="mixed_ames_result"):
     print(f"[INFO] {label} 混合模型(随机扰动)结果已保存到 {out_path}")
 
 
+def run_mixed_for_label_question_and_aug(folder, label, outdir="mixed_ames_result", show_warnings=False):
+    """
+    单个 LLM：
+      近似实现：accuracy ~ 10 固定因子 + (1 | question_id) + (1 | augmentation)
+
+    实现方式：
+      - 使用 statsmodels.MixedLM 的通用接口
+      - groups 取 question_id
+      - 在 exog_re 中加入两列：
+          * 一列常数列 -> question 随机截距
+          * 一列 augmentation 的哑变量（或缩放后的数值）-> 近似表示 augmentation 层的随机效应
+
+    注意：这不是完整的交叉随机效应实现，而是一个实用的近似。
+    """
+
+    df = parse_log_files_mixed(folder, label)
+    if len(df) == 0:
+        print(f"[WARNING] Label={label} 在双随机 MixedLM 中没有数据，跳过")
+        return
+
+    # 固定效应设计：与你原来的 MixedLM 保持一致
+    fixed_effects = [
+        "C(language)", "C(question_type)", "C(question_tran)",
+        "C(few)", "C(cot)", "C(mul)",
+        "C(Temperature)", "C(max_tokens)", "C(top_p)", "C(presence_penalty)"
+    ]
+    formula = "accuracy ~ " + " + ".join(fixed_effects)
+
+    # 用 patsy 构造固定效应设计矩阵
+    import patsy
+    y, X = patsy.dmatrices(formula, data=df, return_type="dataframe")
+
+    # groups：以题目为主分组
+    groups = df["question_id"].astype("category")
+
+    # 构造随机效应设计矩阵 exog_re：
+    #   col0: 截距列，对应 (1 | question_id)
+    #   col1..k: augmentation 的哑变量列，近似表示 (1 | augmentation)
+    #
+    # 简化做法：只加一列“augmentation_编码”为随机斜率（比全哑变量节省参数，收敛更稳）
+    # 如果你愿意接受参数多一些，可以用 one-hot。
+    #
+    # 这里只演示“单列数值编码”的版本：
+    aug_cat = df["augmentation"].astype("category")
+    aug_codes = aug_cat.cat.codes.astype(float)  # 0,1,2,... 数值编码
+
+    Z = pd.DataFrame({
+        "RE_Intercept": 1.0,            # question 随机截距
+        "RE_AugCode": aug_codes         # augmentation 编码的随机斜率
+    })
+
+    # MixedLM 通用接口
+    model = MixedLM(endog=y["accuracy"], exog=X, groups=groups, exog_re=Z)
+
+    if not show_warnings:
+        with warnings.catch_warnings():
+            warnings.simplefilter("ignore")
+            result = model.fit(reml=False, method="lbfgs")
+    else:
+        result = model.fit(reml=False, method="lbfgs")
+
+    # 输出结果：固定效应 + 随机效应协方差成分
+    os.makedirs(outdir, exist_ok=True)
+    out_path = os.path.join(outdir, f"{label}_mixed_question_plus_aug.txt")
+    with open(out_path, "w", encoding="utf-8") as fout:
+        fout.write("==== MixedLM 近似双随机效应模型 ====\n")
+        fout.write(f"LLM: {label}\n")
+        fout.write(f"Formula (fixed): {formula}\n")
+        fout.write("Random structure: groups=question_id, exog_re=[Intercept, AugCode]\n\n")
+
+        # 固定效应结果
+        fout.write("---- Fixed Effects (sorted by p-value) ----\n")
+        fe = pd.DataFrame({
+            "Coef": result.params,
+            "SE": result.bse,
+            "z": result.tvalues,
+            "p": result.pvalues,
+        })
+        # 只保留固定效应行（忽略随机效应协方差参数）
+        fe = fe.loc[X.columns]
+        fe_sorted = fe.sort_values(by="p")
+        fout.write(fe_sorted.to_string())
+        fout.write("\n\n")
+
+        # 随机效应协方差矩阵
+        fout.write("---- Random Effects Covariance (for [Intercept, AugCode]) ----\n")
+        cov_re = result.cov_re  # 2x2 矩阵：截距方差、协方差、AugCode 方差
+        fout.write(cov_re.to_string())
+        fout.write("\n\n")
+
+        fout.write("---- Residual variance ----\n")
+        fout.write(str(result.scale))
+        fout.write("\n")
+
+    print(f"[INFO] {label} 的近似双随机 MixedLM 结果已保存到 {out_path}")
+
 # ===================== 多 LLM 一起：增加固定效应 LLMs =====================
-def run_mixed_vs_llms_question(folder, outdir="mixed_ames_result"):
+def run_mixed_for_llms_question(folder, outdir="mixed_ames_result", show_warnings=False):
     """
     所有 LLM 合并：
       accuracy ~ 10 固定因子 + C(LLMs) + (1 | question_id)
@@ -504,8 +626,11 @@ def run_mixed_vs_llms_question(folder, outdir="mixed_ames_result"):
     formula = "accuracy ~ " + " + ".join(fixed_effects)
 
     model = smf.mixedlm(formula, data=df_all, groups=df_all["question_id"])
-    with warnings.catch_warnings():
-        warnings.simplefilter('ignore')
+    if not show_warnings:
+        with warnings.catch_warnings():
+            warnings.simplefilter('ignore')
+            result = model.fit(reml=False, method="lbfgs")
+    else:
         result = model.fit(reml=False, method="lbfgs")
 
     os.makedirs(outdir, exist_ok=True)
@@ -516,7 +641,7 @@ def run_mixed_vs_llms_question(folder, outdir="mixed_ames_result"):
     print(f"[INFO] Mixed LLMs (question random) 结果已保存到 {out_path}")
 
 
-def run_mixed_vs_llms_augmentation(folder, outdir="mixed_ames_result"):
+def run_mixed_for_llms_augmentation(folder, outdir="mixed_ames_result", show_warnings=False):
     """
     所有 LLM 合并：
       accuracy ~ 10 固定因子 + C(LLMs) + (1 | augmentation)
@@ -542,8 +667,11 @@ def run_mixed_vs_llms_augmentation(folder, outdir="mixed_ames_result"):
     formula = "accuracy ~ " + " + ".join(fixed_effects)
 
     model = smf.mixedlm(formula, data=df_all, groups=df_all["augmentation"])
-    with warnings.catch_warnings():
-        warnings.simplefilter('ignore')
+    if not show_warnings:
+        with warnings.catch_warnings():
+            warnings.simplefilter('ignore')
+            result = model.fit(reml=False, method="lbfgs")
+    else:
         result = model.fit(reml=False, method="lbfgs")
 
     os.makedirs(outdir, exist_ok=True)
@@ -559,7 +687,16 @@ def run_mixed_vs_llms_augmentation(folder, outdir="mixed_ames_result"):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Mixed-Effects 主程序 (逐 label + LLMs)")
     parser.add_argument("--folder", type=str, default="ames_log_2026", help="日志文件夹路径")
+    parser.add_argument("--show_warnings", type=lambda x: (str(x).lower() == 'true'), 
+                        default=False, help="是否显示警告 (True: 不处理警告，让警告正常显示; False: 抑制所有警告, 默认False)")
     args = parser.parse_args()
+
+    # 根据参数设置警告处理
+    setup_warnings(args.show_warnings)
+    # 在导入 statsmodels 后再次设置，确保覆盖其内部警告
+    if not args.show_warnings:
+        warnings.simplefilter('ignore')
+        warnings.filterwarnings('ignore')
 
     outdir = "mixed_ames_result"
     os.makedirs(outdir, exist_ok=True)
@@ -568,8 +705,9 @@ if __name__ == "__main__":
                   "mistralM", "mistralL", "gpt35", "gpt41"]
 
     for label in label_list:
-        run_mixed_for_label_question(args.folder, label, outdir=outdir)
-        run_mixed_for_label_augmentation(args.folder, label, outdir=outdir)
-
-    run_mixed_vs_llms_question(args.folder, outdir=outdir)
-    run_mixed_vs_llms_augmentation(args.folder, outdir=outdir)
+        run_mixed_for_label_question(args.folder, label, outdir=outdir, show_warnings=args.show_warnings)
+        run_mixed_for_label_augmentation(args.folder, label, outdir=outdir, show_warnings=args.show_warnings)
+        run_mixed_for_label_question_and_aug(args.folder, label, outdir=outdir, show_warnings=args.show_warnings)
+    
+    run_mixed_for_llms_question(args.folder, outdir=outdir, show_warnings=args.show_warnings)
+    run_mixed_for_llms_augmentation(args.folder, outdir=outdir, show_warnings=args.show_warnings)
