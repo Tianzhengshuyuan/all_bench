@@ -775,11 +775,12 @@ def run_r_mixed_for_label_question_and_aug(
     label,
     outdir="mixed_ames_result_r",
     show_warnings=False,
+    interaction=False,
 ):
     """
     使用 R 的 lme4::glmer 对单个 LLM 拟合标准的双随机效应模型（Logistic GLMM）：
 
-        accuracy ~ 10 个固定因子
+        accuracy ~ 10 个固定因子 [ + 交互项 ]
                     + (1 | question_id)
                     + (1 | augmentation)
 
@@ -787,6 +788,9 @@ def run_r_mixed_for_label_question_and_aug(
         language, question_type, question_tran,
         few, cot, mul,
         Temperature, max_tokens, top_p, presence_penalty
+
+    交互项（如果 interaction=True）：
+        所有主效应之间的两两交互项
 
     随机效应：
         - question_id 随机截距
@@ -823,16 +827,24 @@ def run_r_mixed_for_label_question_and_aug(
     # accuracy 应为 0/1
     df["accuracy"] = df["accuracy"].astype(int)
 
+    # 定义主效应
+    main_effects = [
+        "language", "question_type", "question_tran",
+        "few", "cot", "mul",
+        "Temperature", "max_tokens", "top_p", "presence_penalty"
+    ]
+    
     # 构建 R 模型公式
-    formula = (
-        "accuracy ~ "
-        "language + question_type + question_tran + "
-        "few + cot + mul + "
-        "Temperature + max_tokens + top_p + presence_penalty + "
-        "(1|question_id) + (1|augmentation)"
-    )
+    if interaction:
+        # 生成所有主效应之间的两两交互项
+        interaction_terms = [f"{a}:{b}" for i, a in enumerate(main_effects) for b in main_effects[i+1:]]
+        fixed_terms = main_effects + interaction_terms
+        formula = "accuracy ~ " + " + ".join(fixed_terms) + " + (1|question_id) + (1|augmentation)"
+    else:
+        formula = "accuracy ~ " + " + ".join(main_effects) + " + (1|question_id) + (1|augmentation)"
 
     print(f"[INFO] 使用 R (lme4::glmer) 拟合 {label} 的双随机 Logistic 模型...")
+    print(f"[INFO] Interaction: {interaction}")
     print(f"[INFO] Formula: {formula}")
 
     # 使用 R 脚本方式
@@ -841,16 +853,30 @@ def run_r_mixed_for_label_question_and_aug(
         df.to_csv(tmp_csv.name, index=False)
         csv_path = tmp_csv.name
 
+    # 构建 R 公式字符串（用于 R 脚本）
+    if interaction:
+        # 生成所有主效应之间的两两交互项
+        interaction_terms = [f"{a}:{b}" for i, a in enumerate(main_effects) for b in main_effects[i+1:]]
+        fixed_terms_r = main_effects + interaction_terms
+        formula_r_str = "accuracy ~ " + " + ".join(fixed_terms_r) + " + (1|question_id) + (1|augmentation)"
+    else:
+        formula_r_str = "accuracy ~ " + " + ".join(main_effects) + " + (1|question_id) + (1|augmentation)"
+
     # 创建临时 R 脚本
     with tempfile.NamedTemporaryFile(mode='w', suffix='.R', delete=False, encoding='utf-8') as tmp_r:
-        r_script = f"""
+        r_script = """
+# 开始计时
+start_time <- Sys.time()
+cat("==== R 脚本开始执行 ====\\n")
+cat("开始时间:", format(start_time, "%%Y-%%m-%%d %%H:%%M:%%S"), "\\n\\n")
+
 # 加载必要的库
 if (!require("lme4", quietly = TRUE)) {{
 stop("请先安装 lme4 包: install.packages('lme4')")
 }}
 
 # 读取数据
-df <- read.csv("{csv_path}", stringsAsFactors = TRUE)
+df <- read.csv("%s", stringsAsFactors = TRUE)
 
 # 确保 accuracy 是整数
 df$accuracy <- as.integer(df$accuracy)
@@ -870,17 +896,18 @@ df$question_id <- as.factor(df$question_id)
 df$augmentation <- as.factor(df$augmentation)
 
 # 拟合模型
-formula <- accuracy ~ language + question_type + question_tran + 
-        few + cot + mul + 
-        Temperature + max_tokens + top_p + presence_penalty + 
-        (1|question_id) + (1|augmentation)
+formula_str <- "%s"
+formula <- as.formula(formula_str)
 
 model <- glmer(formula, data = df, family = binomial(link = "logit"),
             control = glmerControl(optimizer = "bobyqa", optCtrl = list(maxfun = 1e5)))
 
 # 输出结果
+# 设置数字格式：禁用科学计数法，使用浮点数格式
+options(scipen = 999, digits = 6)
+
 cat("==== R (lme4::glmer) Mixed Effects Model ====\\n")
-cat("LLM: {label}\\n")
+cat("LLM: %s\\n")
 cat("Family: Binomial (logit link)\\n")
 cat("Formula:", as.character(formula), "\\n\\n")
 
@@ -909,7 +936,14 @@ if (nrow(other_rows) > 0) {{
     coef_summary_sorted <- intercept_row
 }}
 
-print(coef_summary_sorted)
+# 格式化输出：对数字列进行格式化
+coef_formatted <- coef_summary_sorted
+coef_formatted[, "Estimate"] <- formatC(coef_summary_sorted[, "Estimate"], format = "f", digits = 6)
+coef_formatted[, "Std. Error"] <- formatC(coef_summary_sorted[, "Std. Error"], format = "f", digits = 6)
+coef_formatted[, "z value"] <- formatC(coef_summary_sorted[, "z value"], format = "f", digits = 4)
+# p 值格式化：显示 6 位小数
+coef_formatted[, "Pr(>|z|)"] <- formatC(coef_summary_sorted[, "Pr(>|z|)"], format = "f", digits = 6)
+print(coef_formatted)
 
 cat("\\n\\n---- Random Effects SD ----\\n")
 print(VarCorr(model))
@@ -917,7 +951,88 @@ print(VarCorr(model))
 cat("\\n\\n---- Model Fit Statistics ----\\n")
 cat("AIC:", AIC(model), "\\n")
 cat("BIC:", BIC(model), "\\n")
-"""
+
+cat("\\n\\n==== Overall Factor Effects (Likelihood Ratio Tests) ====\\n")
+
+factors <- c("language", "question_type", "question_tran",
+             "few", "cot", "mul",
+             "Temperature", "max_tokens", "top_p", "presence_penalty")
+
+full_formula <- formula
+full_logLik  <- as.numeric(logLik(model))
+
+overall_results <- data.frame(
+  factor       = character(),
+  df           = numeric(),
+  Chisq        = numeric(),
+  p_value      = numeric(),
+  delta_logLik = numeric(),
+  stringsAsFactors = FALSE
+)
+
+for (fct in factors) {{
+  # 关键：使用字符 "~ . - factor" 再转成 formula
+  # R 的 update() 函数会自动处理交互项：移除主效应时，包含该主效应的交互项也会被移除
+  update_rhs <- as.formula(paste("~ . -", fct))
+  reduced_formula <- update(full_formula, update_rhs)
+
+  cat("Testing factor:", fct, "\\n")
+  print(reduced_formula)
+
+  model_reduced <- glmer(
+    reduced_formula,
+    data    = df,
+    family  = binomial(link = "logit"),
+    control = glmerControl(optimizer = "bobyqa",
+                           optCtrl   = list(maxfun = 1e5))
+  )
+
+  lrt <- anova(model_reduced, model, test = "Chisq")
+
+  df_diff        <- lrt$Df[2] - lrt$Df[1]
+  chisq_val      <- lrt$Chisq[2]
+  p_val          <- lrt$`Pr(>Chisq)`[2]
+  reduced_logLik <- as.numeric(logLik(model_reduced))
+  delta_logLik   <- full_logLik - reduced_logLik
+
+  overall_results <- rbind(
+    overall_results,
+    data.frame(
+      factor       = fct,
+      df           = df_diff,
+      Chisq        = chisq_val,
+      p_value      = p_val,
+      delta_logLik = delta_logLik,
+      stringsAsFactors = FALSE
+    )
+  )
+}
+
+overall_results_sorted <- overall_results[
+  order(overall_results$p_value, -overall_results$delta_logLik),
+]
+
+# 格式化输出：对数字列进行格式化
+overall_formatted <- overall_results_sorted
+# df 列：如果是 NA 保持 NA，否则格式化为整数
+overall_formatted$df <- ifelse(is.na(overall_results_sorted$df),
+                                NA_character_,
+                                formatC(overall_results_sorted$df, format = "f", digits = 0))
+overall_formatted$Chisq <- formatC(overall_results_sorted$Chisq, format = "f", digits = 6)
+# p 值格式化：显示 6 位小数
+overall_formatted$p_value <- formatC(overall_results_sorted$p_value, format = "f", digits = 6)
+overall_formatted$delta_logLik <- formatC(overall_results_sorted$delta_logLik, format = "f", digits = 6)
+
+cat("\\n")
+print(overall_formatted, row.names = FALSE)
+
+# 结束计时
+end_time <- Sys.time()
+elapsed_time <- as.numeric(difftime(end_time, start_time, units = "secs"))
+cat("\\n\\n==== R 脚本执行完成 ====\\n")
+cat("结束时间:", format(end_time, "%%Y-%%m-%%d %%H:%%M:%%S"), "\\n")
+cat("总耗时:", round(elapsed_time, 2), "秒 (", round(elapsed_time / 60, 2), "分钟)\\n")
+""" % (csv_path, formula_r_str, label)
         tmp_r.write(r_script)
         r_script_path = tmp_r.name
 
@@ -1045,6 +1160,7 @@ if __name__ == "__main__":
     parser.add_argument("--folder", type=str, default="ames_log_2026", help="日志文件夹路径")
     parser.add_argument("--show_warnings", type=lambda x: (str(x).lower() == 'true'), 
                         default=False, help="是否显示警告 (True: 不处理警告，让警告正常显示; False: 抑制所有警告, 默认False)")
+    parser.add_argument("--interaction", action="store_true", help="是否包含交互项")
     args = parser.parse_args()
 
     # 根据参数设置警告处理
@@ -1065,7 +1181,7 @@ if __name__ == "__main__":
         # run_mixed_for_label_augmentation(args.folder, label, outdir=outdir, show_warnings=args.show_warnings)
         # run_mixed_for_label_question_and_aug(args.folder, label, outdir=outdir, show_warnings=args.show_warnings)
         # run_bambi_mixed_for_label_question_and_aug(args.folder, label, outdir=outdir)
-        run_r_mixed_for_label_question_and_aug(args.folder, label, outdir=outdir)
+        run_r_mixed_for_label_question_and_aug(args.folder, label, outdir=outdir, interaction=args.interaction)
         
     # run_mixed_for_llms_question(args.folder, outdir=outdir, show_warnings=args.show_warnings)
     # run_mixed_for_llms_augmentation(args.folder, outdir=outdir, show_warnings=args.show_warnings)

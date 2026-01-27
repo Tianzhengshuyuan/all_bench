@@ -1,37 +1,100 @@
+==== R 脚本开始执行 ====
+开始时间: 2026-01-27 10:56:46 
+
 ==== R (lme4::glmer) Mixed Effects Model ====
 LLM: deepseekv3
 Family: Binomial (logit link)
 Formula: ~ accuracy language + question_type + question_tran + few + cot + mul + Temperature + max_tokens + top_p + presence_penalty + (1 | question_id) + (1 | augmentation) 
 
 ---- Fixed Effects (sorted by p-value, then |Estimate|) ----
-                       Estimate Std. Error     z value      Pr(>|z|)
-(Intercept)         -1.11096490 0.35341126  -3.1435470  1.669136e-03
-cot1                -1.59328789 0.04551083 -35.0089829 1.642388e-268
-question_type1      -0.81807926 0.04315052 -18.9587363  3.740228e-80
-max_tokens4000       0.78904415 0.05292133  14.9097563  2.847899e-50
-languageey           0.56755043 0.07214791   7.8664849  3.647448e-15
-languagezw           0.54157608 0.07147390   7.5772570  3.529373e-14
-languagery           0.46652282 0.07608860   6.1313106  8.715806e-10
-languageyy           0.43176313 0.07800987   5.5347243  3.117184e-08
-languagefy           0.33153629 0.07254710   4.5699454  4.878513e-06
-few1                 0.18882254 0.04308288   4.3827745  1.171774e-05
-max_tokens100        0.19273432 0.05245571   3.6742295  2.385683e-04
-Temperature1         0.18585428 0.05109118   3.6376979  2.750858e-04
-top_p1              -0.15670280 0.05156211  -3.0391075  2.372801e-03
-mul1                 0.12637821 0.04252093   2.9721413  2.957305e-03
-presence_penalty0.5  0.12898935 0.05277032   2.4443539  1.451118e-02
-presence_penalty1.5  0.06226687 0.05287036   1.1777272  2.389054e-01
-Temperature2         0.05790944 0.05282731   1.0962028  2.729900e-01
-question_tran1      -0.02924711 0.04320739  -0.6769005  4.984691e-01
-top_p0.6             0.02466303 0.05193316   0.4748995  6.348586e-01
+                    Estimate    Std. Error z value    Pr(>|z|)  
+(Intercept)         "-1.110965" "0.353411" "-3.1435"  "0.001669"
+cot1                "-1.593288" "0.045511" "-35.0090" "0.000000"
+question_type1      "-0.818079" "0.043151" "-18.9587" "0.000000"
+max_tokens4000      "0.789044"  "0.052921" "14.9098"  "0.000000"
+languageey          "0.567550"  "0.072148" "7.8665"   "0.000000"
+languagezw          "0.541576"  "0.071474" "7.5773"   "0.000000"
+languagery          "0.466523"  "0.076089" "6.1313"   "0.000000"
+languageyy          "0.431763"  "0.078010" "5.5347"   "0.000000"
+languagefy          "0.331536"  "0.072547" "4.5699"   "0.000005"
+few1                "0.188823"  "0.043083" "4.3828"   "0.000012"
+max_tokens100       "0.192734"  "0.052456" "3.6742"   "0.000239"
+Temperature1        "0.185854"  "0.051091" "3.6377"   "0.000275"
+top_p1              "-0.156703" "0.051562" "-3.0391"  "0.002373"
+mul1                "0.126378"  "0.042521" "2.9721"   "0.002957"
+presence_penalty0.5 "0.128989"  "0.052770" "2.4444"   "0.014511"
+presence_penalty1.5 "0.062267"  "0.052870" "1.1777"   "0.238905"
+Temperature2        "0.057909"  "0.052827" "1.0962"   "0.272990"
+question_tran1      "-0.029247" "0.043207" "-0.6769"  "0.498469"
+top_p0.6            "0.024663"  "0.051933" "0.4749"   "0.634859"
 
 
 ---- Random Effects SD ----
  Groups       Name        Std.Dev.
- question_id  (Intercept) 0.46302 
- augmentation (Intercept) 0.93016 
+ question_id  (Intercept) 0.4630  
+ augmentation (Intercept) 0.9302  
 
 
 ---- Model Fit Statistics ----
-AIC: 14212.67 
-BIC: 14372.22 
+AIC: 14212.7 
+BIC: 14372.2 
+
+
+==== Overall Factor Effects (Likelihood Ratio Tests) ====
+Testing factor: language 
+accuracy ~ question_type + question_tran + few + cot + mul + 
+    Temperature + max_tokens + top_p + presence_penalty + (1 | 
+    question_id) + (1 | augmentation)
+Testing factor: question_type 
+accuracy ~ language + question_tran + few + cot + mul + Temperature + 
+    max_tokens + top_p + presence_penalty + (1 | question_id) + 
+    (1 | augmentation)
+Testing factor: question_tran 
+accuracy ~ language + question_type + few + cot + mul + Temperature + 
+    max_tokens + top_p + presence_penalty + (1 | question_id) + 
+    (1 | augmentation)
+Testing factor: few 
+accuracy ~ language + question_type + question_tran + cot + mul + 
+    Temperature + max_tokens + top_p + presence_penalty + (1 | 
+    question_id) + (1 | augmentation)
+Testing factor: cot 
+accuracy ~ language + question_type + question_tran + few + mul + 
+    Temperature + max_tokens + top_p + presence_penalty + (1 | 
+    question_id) + (1 | augmentation)
+Testing factor: mul 
+accuracy ~ language + question_type + question_tran + few + cot + 
+    Temperature + max_tokens + top_p + presence_penalty + (1 | 
+    question_id) + (1 | augmentation)
+Testing factor: Temperature 
+accuracy ~ language + question_type + question_tran + few + cot + 
+    mul + max_tokens + top_p + presence_penalty + (1 | question_id) + 
+    (1 | augmentation)
+Testing factor: max_tokens 
+accuracy ~ language + question_type + question_tran + few + cot + 
+    mul + Temperature + top_p + presence_penalty + (1 | question_id) + 
+    (1 | augmentation)
+Testing factor: top_p 
+accuracy ~ language + question_type + question_tran + few + cot + 
+    mul + Temperature + max_tokens + presence_penalty + (1 | 
+    question_id) + (1 | augmentation)
+Testing factor: presence_penalty 
+accuracy ~ language + question_type + question_tran + few + cot + 
+    mul + Temperature + max_tokens + top_p + (1 | question_id) + 
+    (1 | augmentation)
+
+           factor   df       Chisq  p_value delta_logLik
+              cot <NA> 1388.041944 0.000000   694.020972
+    question_type <NA>  370.156928 0.000000   185.078464
+       max_tokens <NA>  249.026022 0.000000   124.513011
+         language <NA>   82.817076 0.000000    41.408538
+              few <NA>   19.223171 0.000012     9.611586
+            top_p <NA>   14.226885 0.000814     7.113442
+      Temperature <NA>   13.802987 0.001006     6.901494
+              mul <NA>    8.824931 0.002971     4.412465
+ presence_penalty <NA>    6.006552 0.049624     3.003276
+    question_tran <NA>    0.457302 0.498888     0.228651
+
+
+==== R 脚本执行完成 ====
+结束时间: 2026-01-27 10:59:37 
+总耗时: 170.82 秒 ( 2.85 分钟)
