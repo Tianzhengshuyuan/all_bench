@@ -1,5 +1,5 @@
 ==== R 脚本开始执行 ====
-开始时间: 2026-01-27 10:56:46 
+开始时间: 2026-01-27 12:35:52 
 
 ==== R (lme4::glmer) Mixed Effects Model ====
 LLM: deepseekv3
@@ -31,13 +31,13 @@ top_p0.6            "0.024663"  "0.051933" "0.4749"   "0.634859"
 
 ---- Random Effects SD ----
  Groups       Name        Std.Dev.
- question_id  (Intercept) 0.4630  
- augmentation (Intercept) 0.9302  
+ question_id  (Intercept) 0.46302 
+ augmentation (Intercept) 0.93016 
 
 
 ---- Model Fit Statistics ----
-AIC: 14212.7 
-BIC: 14372.2 
+AIC: 14212.67 
+BIC: 14372.22 
 
 
 ==== Overall Factor Effects (Likelihood Ratio Tests) ====
@@ -96,5 +96,5 @@ accuracy ~ language + question_type + question_tran + few + cot +
 
 
 ==== R 脚本执行完成 ====
-结束时间: 2026-01-27 10:59:37 
-总耗时: 170.82 秒 ( 2.85 分钟)
+结束时间: 2026-01-27 12:38:44 
+总耗时: 171.87 秒 ( 2.86 分钟)
